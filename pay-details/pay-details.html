@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!--<link rel="stylesheet" type="text/css" href="table.css" />-->
+		<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+	</head>
+	<style type="text/css">
+		/*
+	 * 
+	 * 洋葱网络工作室提供技术支持（http://yhtml5.com）
+	 * 
+	 */
+	
+	
+	/*table style*/
+	
+	.y-table-div {
+		margin-top: 10%;
+		left: 20%;
+		right: 20%;
+		min-width: 600px;
+		max-width: 880px;
+		background: #AAAAAA;
+		box-shadow: 1px 1px 10px 1px #888888;
+		position: fixed;
+		z-index: 99;
+		display: none;
+	}
+	
+	#y-table {
+		width: 100%;
+		font-family: verdana, arial, sans-serif;
+		font-size: 14px;
+		font-family: "微软雅黑";
+		color: #666666;
+		border-width: 1px;
+		border-color: #999999;
+		border-collapse: collapse;
+		background-color: #f6f6f6;
+	}
+	
+	#y-td {
+		border-width: 1px;
+		padding: 8px;
+		border-style: solid;
+		border-color: #e9e9e9;
+		font-size: 1em;
+	}
+	
+	
+	/*blue style*/
+	
+	#y-tr-blue {
+		background-color: #f6f6f6;
+	}
+	
+	#y-th-blue {
+		border-width: 1px;
+		padding: 1% 2%;
+		background-color: #52beeb;
+		border-style: solid;
+		border-color: #a9c6c9;
+		color: #FFFFFF;
+		font-size: 22px;
+		text-align: left;
+		font-family: "微软雅黑";
+	}
+	
+	#y-tr-blue2 {
+		background-color: #fbfbfb;
+	}
+	
+	#y-tr-blue2:nth-of-type(odd) {
+		background-color: #f6f6f6;
+	}
+	
+	
+	/*class*/
+	
+	.y-tac {
+		text-align: center;
+	}
+	
+	.y-tal {
+		text-align: left;
+	}
+	
+	.y-tar {
+		text-align: right;
+	}
+	
+	.y-fr {
+		float: right;
+	}
+	
+	.fa-exclamation-circle {
+		color: #808080;
+	}
+	
+	.font-2 {
+		font-size: 2em;
+	}
+	
+	
+	/*font*/
+	</style>
+
+	<body>
+		<!--test-->
+		<button id="y-click" class="y-click" style="background: #E1E1E1;">查看详情</button>
+
+		<!--放在原来弹层下面-->
+		<div class="y-table-div">
+			<table id="y-table" class="y-tac">
+				<tr id="y-tr-blue">
+					<th colspan="4" rowspan="0" id="y-th-blue">交易详情
+						<i class="fa fa-lg fa-times y-fr" onmouseover="this.style.color='#fff82c';" onmouseout="this.style.color='#ffffff';"></i></th>
+				</tr>
+				<tr id="y-tr-blue2" onmouseover="this.style.backgroundColor='#dbeef9';" onmouseout="this.style.backgroundColor='#fbfbfb';">
+					<td id="y-td" class="y-tar">创建时间：</td>
+					<td id="y-td" class="y-tal">2016-01-18&nbsp;&nbsp;18:22:11</td>
+					<td id="y-td" class="y-tar">完成时间：</td>
+					<td id="y-td" class="y-tal">2016-01-18&nbsp;&nbsp;18:22:49</td>
+				</tr>
+				<tr id="y-tr-blue2" onmouseover="this.style.backgroundColor='#dbeef9';" onmouseout="this.style.backgroundColor='#f6f6f6';">
+					<td id="y-td" class="y-tar">流水号：</td>
+					<td id="y-td" class="y-tal">16011818222098471141</td>
+					<td id="y-td" class="y-tar">商户订单号：</td>
+					<td id="y-td" class="y-tal">----</td>
+				</tr>
+				<tr id="y-tr-blue2" onmouseover="this.style.backgroundColor='#dbeef9';" onmouseout="this.style.backgroundColor='#fbfbfb';">
+					<td id="y-td" class="y-tar">支付状态：</td>
+					<td id="y-td" class="y-tal">支付成功</td>
+					<td id="y-td" class="y-tar">交易类型：</td>
+					<td id="y-td" class="y-tal">提现</td>
+				</tr>
+				<tr id="y-tr-blue2" onmouseover="this.style.backgroundColor='#dbeef9';" onmouseout="this.style.backgroundColor='#f6f6f6';">
+					<td id="y-td" class="y-tar">收款方：</td>
+					<td id="y-td" class="y-tal">张三</td>
+					<td id="y-td" class="y-tar">支付方式：</td>
+					<td id="y-td" class="y-tal">----</td>
+				</tr>
+				<tr id="y-tr-blue2" onmouseover="this.style.backgroundColor='#dbeef9';" onmouseout="this.style.backgroundColor='#fbfbfb';">
+					<td id="y-td" class="y-tar">提现金额：</td>
+					<td id="y-td" class="y-tal" colspan="3">-1,000.00</td>
+				</tr>
+				<tr id="y-tr-blue2" onmouseover="this.style.backgroundColor='#dbeef9';" onmouseout="this.style.backgroundColor='#f6f6f6';">
+					<td id="y-td" class="y-tar">备注：</td>
+					<td id="y-td" class="y-tal" colspan="3">显示退款原因（数据来自于OA后台人工录入），如果为空，则用“----”表示</td>
+
+				</tr>
+			</table>
+		</div>
+	</body>
+	<!--链接为自己jquery地址-->
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.y-click').click(function() {
+				$('.y-table-div').show();
+			});
+			$('.fa-times').click(function() {
+				$('.y-table-div').hide();
+			});
+		});
+	</script>
+
+</html>
