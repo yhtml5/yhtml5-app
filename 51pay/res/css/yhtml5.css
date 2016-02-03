@@ -1,0 +1,33 @@
+/*
+ * 
+ * 洋葱网络工作室提供技术支持（yhtml5.com）
+ * 
+ */
+
+/*51代充覆盖样式*/
+.form-group {
+	margin-bottom: 0;
+}
+
+
+/*51代充定制样式*/
+
+.fw-t80 {
+	top: 80px;
+}
+
+.fw-logo {
+	float: left;
+	display: block;
+}
+
+.fw-logo img {
+	width: 100%;
+}
+
+.fw-search {
+	float: right;
+	margin-right: 10%;
+	padding: 1%;
+}
+
