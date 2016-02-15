@@ -4,30 +4,202 @@
  * 
  */
 
-/*51代充覆盖样式*/
-.form-group {
-	margin-bottom: 0;
-}
-
 
 /*51代充定制样式*/
 
-.fw-t80 {
-	top: 80px;
-}
-
-.fw-logo {
-	float: left;
-	display: block;
-}
-
-.fw-logo img {
+.fw-wt100 {
 	width: 100%;
 }
 
-.fw-search {
-	float: right;
-	margin-right: 10%;
-	padding: 1%;
+.fw-pd0 {
+	padding: 0;
 }
 
+.fw-pd5 {
+	padding: 5%;
+}
+
+.fw-pt18 {
+	padding-top: 18px;
+}
+
+.fw-pt5 {
+	padding-top: 5%;
+}
+
+.fw-pb5 {
+	padding-bottom: 5%;
+}
+
+.fw-pr0 {
+	padding-right: 0;
+}
+
+.fw-pbt3b3 {
+	padding-top: 3%;
+	padding-bottom: 3%;
+}
+
+.fw-mt20 {
+	margin-top: 20px;
+}
+
+.fw-mtb2 {
+	margin-top: 2%;
+}
+
+.fw-mtb3 {
+	margin-top: 3%;
+}
+
+.fw-mtb4 {
+	margin-top: 4%;
+}
+
+.fw-mt-20 {
+	margin-top: -20px;
+}
+
+.fw-top-bar-logo {
+	display: block;
+	padding-top: 22px;
+	padding-bottom: 22px;
+	max-width: 360px;
+}
+
+.fw-top-bar-search {
+	margin-top: 8%;
+	text-align: center;
+}
+.fw-top-bar-search .glyphicon-search{
+	margin-left: -30px;
+}
+
+.fw-top-bar-search input {
+	width: 80% !important;
+}
+
+.fw-top-bar-login {
+	margin-top: 30%;
+}
+
+.fw-container-slide {
+	background-color: #ffffff;
+	margin-top: -20px;
+}
+
+.fw-slide-border {
+	border-color: #E6E6E6;
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}
+
+.fw-slide-border-right {
+	border-color: #E6E6E6;
+	border-right-style: solid;
+	border-right-width: 1px;
+}
+
+.fw-slide-hot {
+	padding-top: 2%;
+	padding-bottom: 5%;
+	padding-left: 2%;
+}
+
+.fw-container-star {
+	margin-top: 20px;
+}
+
+.fw-container-goods {
+	background-color: #ffffff;
+}
+
+
+/*覆盖bootstrap样式*/
+
+.row img {
+	width: 100%;
+}
+
+body {
+	background-color: #e6e6e6;
+}
+
+header {
+	background-color: #fbfbfb;
+}
+
+
+/*
+ * 新增bootstrap样式 
+ */
+
+.fw-ts000 {
+	text-shadow: black 5px 3px 3px;
+}
+
+
+/*新增按钮*/
+
+.fw-btn-default {
+	color: #333;
+	background-color: #dadada;
+}
+
+.fw-btn-default:focus,
+.fw-btn-default.focus {
+	color: #333;
+	background-color: #ffffff;
+}
+
+.fw-btn-default:active,
+.fw-btn-default.active,
+.open > .dropdown-toggle.fw-btn-default {
+	color: #333;
+	background-color: #FFFFFF;
+}
+
+.fw-btn-default:active:hover,
+.fw-btn-default.active:hover,
+.open > .dropdown-toggle.fw-btn-default:hover,
+.fw-btn-default:active:focus,
+.fw-btn-default.active:focus,
+.open > .dropdown-toggle.fw-btn-default:focus,
+.fw-btn-default:active.focus,
+.fw-btn-default.active.focus,
+.open > .dropdown-toggle.fw-btn-default.focus {
+	color: #333;
+	background-color: #d4d4d4;
+}
+
+.fw-btn-default:active,
+.fw-btn-default.active,
+.open > .dropdown-toggle.fw-btn-default {
+	background-image: none;
+}
+
+.fw-btn-default.disabled:hover,
+.fw-btn-default[disabled]:hover,
+fieldset[disabled] .fw-btn-default:hover,
+.fw-btn-default.disabled:focus,
+.fw-btn-default[disabled]:focus,
+fieldset[disabled] .fw-btn-default:focus,
+.fw-btn-default.disabled.focus,
+.fw-btn-default[disabled].focus,
+fieldset[disabled] .fw-btn-default.focus {
+	background-color: #fff;
+}
+
+.fw-btn-default .badge {
+	color: #fff;
+	background-color: #333;
+}
+
+.fw-bgcfff {
+	background-color: #FFFFFF;
+}
+
+
+/*js移除 颜色*/
