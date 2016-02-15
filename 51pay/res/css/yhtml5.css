@@ -7,8 +7,8 @@
 
 /*51代充定制样式*/
 
-.fw-wt100 {
-	width: 100%;
+.fw-bgcfff {
+	background-color: #FFFFFF;
 }
 
 .fw-pd0 {
@@ -40,6 +40,10 @@
 	padding-bottom: 3%;
 }
 
+.fw-ts000 {
+	text-shadow: black 5px 3px 3px;
+}
+
 .fw-mt20 {
 	margin-top: 20px;
 }
@@ -60,6 +64,10 @@
 	margin-top: -20px;
 }
 
+.fw-wt100 {
+	width: 100%;
+}
+
 .fw-top-bar-logo {
 	display: block;
 	padding-top: 22px;
@@ -71,7 +79,8 @@
 	margin-top: 8%;
 	text-align: center;
 }
-.fw-top-bar-search .glyphicon-search{
+
+.fw-top-bar-search .glyphicon-search {
 	margin-left: -30px;
 }
 
@@ -110,10 +119,46 @@
 
 .fw-container-star {
 	margin-top: 20px;
+	padding: 0;
 }
 
-.fw-container-goods {
-	background-color: #ffffff;
+.fw-star {
+	background-color: #FFFFFF;
+}
+
+.fw-show {
+	border: solid 2px #dadada;
+	margin-top: 10px;
+}
+
+.fw-show:hover {
+	border: solid 2px #f31818;
+}
+
+.fw-sale {
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-bottom: 20px;
+}
+
+.fw-container-main {
+	margin-bottom: 52px;
+}
+
+footer {
+	background-color: #3f3f3f;
+	padding-top: 3%;
+	padding-bottom: 8%;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+footer a {
+	color: #ffffff;
+}
+
+.fw-about {
+	margin-bottom: 5%;
 }
 
 
@@ -135,10 +180,6 @@ header {
 /*
  * 新增bootstrap样式 
  */
-
-.fw-ts000 {
-	text-shadow: black 5px 3px 3px;
-}
 
 
 /*新增按钮*/
@@ -197,8 +238,8 @@ fieldset[disabled] .fw-btn-default.focus {
 	background-color: #333;
 }
 
-.fw-bgcfff {
-	background-color: #FFFFFF;
+.fw-js-fff {
+	background: #fff;
 }
 
 
