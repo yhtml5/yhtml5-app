@@ -11,6 +11,37 @@
 	background-color: #FFFFFF;
 }
 
+.fw-bgcffc785 {
+	background-color: #ffc785;
+}
+
+.fw-bgcffaeac {
+	background-color: #ffaeac;
+}
+
+.fw-bgca3f2bf {
+	background-color: #a3f2bf;
+}
+
+.fw-bgc8ac9ea {
+	background-color: #8ac9ea;
+}
+
+.fw-bgc9989e8 {
+	background-color: #9989e8;
+}
+
+.fw-bgcece273 {
+	background-color: #ece273;
+}
+
+.fw-font-price {
+	font-family: "微软雅黑";
+	font-size: 20px;
+	color: #d63535;
+	line-height: 35px;
+}
+
 .fw-pd0 {
 	padding: 0;
 }
@@ -70,8 +101,8 @@
 
 .fw-top-bar-logo {
 	display: block;
-	padding-top: 22px;
-	padding-bottom: 22px;
+	padding-top: 18px;
+	padding-bottom: 10px;
 	max-width: 360px;
 }
 
@@ -141,11 +172,69 @@
 .fw-sale {
 	padding-left: 5%;
 	padding-right: 5%;
+	padding-top: 20px;
 	padding-bottom: 20px;
 }
 
 .fw-container-main {
+	margin-top: 24px;
 	margin-bottom: 52px;
+	background-color: #FFFFFF;
+	padding: 30px 35px;
+}
+
+
+/*.fw-container-main .row > div {
+	text-align: center;
+	border: 1px solid #efefef;
+	border-right: none;
+	margin-top: -1px;
+	font-size: 16px;
+}*/
+
+
+/*.fw-main-iconfont {
+	font-size: 100px;
+	color: #ffffff;
+}*/
+
+.fw-container-main > .row .icon {
+	font-size: 100px;
+	margin-top: 20%;
+	color: #ffffff;
+}
+
+.fw-main-show-all {
+	border-right: solid 1px #dadada;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	padding-top: 1px;
+	margin-bottom: 44px;
+}
+
+.fw-main-show-title {
+	text-align: center;
+	margin-top: -1px;
+}
+
+.fw-main-show {
+	padding: 15px 10px;
+	border: solid 1px #dadada;
+	margin-top: -1px;
+	border-right: none;
+	background-color: #FFFFFF;
+}
+
+.fw-main-h1 {
+	background: #ffffff;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10%;
+	padding: 10px;
+	border-radius: 10px;
+	font-family: "微软雅黑";
+	font-size: 18px;
 }
 
 footer {
@@ -162,6 +251,29 @@ footer a {
 
 .fw-about {
 	margin-bottom: 5%;
+}
+
+
+/*引入字体图标*/
+
+@font-face {
+	font-family: 'iconfont';
+	src: url('//at.alicdn.com/t/font_1454317613_6726978.eot');
+	/* IE9*/
+	src: url('//at.alicdn.com/t/font_1454317613_6726978.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('//at.alicdn.com/t/font_1454317613_6726978.woff') format('woff'), /* chrome、firefox */
+	url('//at.alicdn.com/t/font_1454317613_6726978.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+	url('//at.alicdn.com/t/font_1454317613_6726978.svg#iconfont') format('svg');
+	/* iOS 4.1- */
+}
+
+.iconfont {
+	font-family: "iconfont" !important;
+	font-size: 16px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: 0.2px;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 
