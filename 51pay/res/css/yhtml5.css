@@ -35,11 +35,31 @@
 	background-color: #ece273;
 }
 
+.fw-bd0 {
+	border-radius: 0px;
+	border: 0px;
+}
+
+.fw-nav-tab {
+	border-right: none !important;
+	border-left: none !important;
+	border-top: none !important;
+	background-color: #DADADA;
+}
+
 .fw-font-price {
 	font-family: "微软雅黑";
 	font-size: 20px;
 	color: #d63535;
 	line-height: 35px;
+}
+
+.fw-font-goods {
+	font-family: "宋体";
+	font-size: 16px;
+	color: #3F3F3F;
+	display: block;
+	margin-top: 20px;
 }
 
 .fw-pd0 {
@@ -83,6 +103,10 @@
 	margin-top: 2%;
 }
 
+.fw-mt50 {
+	margin-top: 50px;
+}
+
 .fw-mtb3 {
 	margin-top: 3%;
 }
@@ -97,6 +121,29 @@
 
 .fw-wt100 {
 	width: 100%;
+}
+
+.fw-wt80 {
+	width: 80%;
+}
+
+.fw-wt40 {
+	width: 40%;
+}
+
+.fw-user-nav {}
+
+.fw-user-nav li {
+	float: left;
+	line-height: 50px;
+	height: 50px;
+}
+
+.fw-user-nav .nav>li a {
+	padding: 0px 5px;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #d9534f;
 }
 
 .fw-top-bar-logo {
@@ -206,8 +253,6 @@
 
 .fw-main-show-all {
 	border-right: solid 1px #dadada;
-	border-top-left-radius: 15px;
-	border-bottom-left-radius: 15px;
 	padding-top: 1px;
 	margin-bottom: 44px;
 }
@@ -291,71 +336,12 @@ header {
 	background-color: #fbfbfb;
 }
 
+.thumbnail {
+	padding-bottom: 20px;
+	margin-top: 5px;
+}
+
 
 /*
  * 新增bootstrap样式 
  */
-
-
-/*新增按钮*/
-
-.fw-btn-default {
-	color: #333;
-	background-color: #dadada;
-}
-
-.fw-btn-default:focus,
-.fw-btn-default.focus {
-	color: #333;
-	background-color: #ffffff;
-}
-
-.fw-btn-default:active,
-.fw-btn-default.active,
-.open > .dropdown-toggle.fw-btn-default {
-	color: #333;
-	background-color: #FFFFFF;
-}
-
-.fw-btn-default:active:hover,
-.fw-btn-default.active:hover,
-.open > .dropdown-toggle.fw-btn-default:hover,
-.fw-btn-default:active:focus,
-.fw-btn-default.active:focus,
-.open > .dropdown-toggle.fw-btn-default:focus,
-.fw-btn-default:active.focus,
-.fw-btn-default.active.focus,
-.open > .dropdown-toggle.fw-btn-default.focus {
-	color: #333;
-	background-color: #d4d4d4;
-}
-
-.fw-btn-default:active,
-.fw-btn-default.active,
-.open > .dropdown-toggle.fw-btn-default {
-	background-image: none;
-}
-
-.fw-btn-default.disabled:hover,
-.fw-btn-default[disabled]:hover,
-fieldset[disabled] .fw-btn-default:hover,
-.fw-btn-default.disabled:focus,
-.fw-btn-default[disabled]:focus,
-fieldset[disabled] .fw-btn-default:focus,
-.fw-btn-default.disabled.focus,
-.fw-btn-default[disabled].focus,
-fieldset[disabled] .fw-btn-default.focus {
-	background-color: #fff;
-}
-
-.fw-btn-default .badge {
-	color: #fff;
-	background-color: #333;
-}
-
-.fw-js-fff {
-	background: #fff;
-}
-
-
-/*js移除 颜色*/
