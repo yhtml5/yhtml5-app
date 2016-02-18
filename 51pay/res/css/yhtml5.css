@@ -40,11 +40,8 @@
 	border: 0px;
 }
 
-.fw-nav-tab {
-	border-right: none !important;
-	border-left: none !important;
-	border-top: none !important;
-	background-color: #DADADA;
+.fw-displayn {
+	display: none;
 }
 
 .fw-font-price {
@@ -60,6 +57,10 @@
 	color: #3F3F3F;
 	display: block;
 	margin-top: 20px;
+}
+
+.fw-height {
+	500px
 }
 
 .fw-pd0 {
@@ -119,6 +120,10 @@
 	margin-top: -20px;
 }
 
+.fw-userterms p {
+	text-indent: 2em;
+}
+
 .fw-wt100 {
 	width: 100%;
 }
@@ -131,7 +136,9 @@
 	width: 40%;
 }
 
-.fw-user-nav {}
+.fw-user-nav {
+	/*margin-right:5%;*/
+}
 
 .fw-user-nav li {
 	float: left;
@@ -142,8 +149,8 @@
 .fw-user-nav .nav>li a {
 	padding: 0px 5px;
 	font-family: "微软雅黑";
-	font-size: 14px;
-	color: #d9534f;
+	font-size: 16px;
+	color: #ffffff
 }
 
 .fw-top-bar-logo {
@@ -151,6 +158,11 @@
 	padding-top: 18px;
 	padding-bottom: 10px;
 	max-width: 360px;
+}
+
+.fw-logo2 {
+	width: 140px;
+	float: left;
 }
 
 .fw-top-bar-search {
@@ -198,6 +210,13 @@
 .fw-container-star {
 	margin-top: 20px;
 	padding: 0;
+}
+
+.fw-nav-tab {
+	border-right: none !important;
+	border-left: none !important;
+	border-top: none !important;
+	background-color: #DADADA;
 }
 
 .fw-star {
@@ -275,7 +294,7 @@
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 10%;
+	margin-top: 30%;
 	padding: 10px;
 	border-radius: 10px;
 	font-family: "微软雅黑";
@@ -296,6 +315,41 @@ footer a {
 
 .fw-about {
 	margin-bottom: 5%;
+}
+
+.fw-fixed-bar {
+	position: fixed;
+	top: 50%;
+	right: 10%;
+}
+
+.fw-fixed-bar li {
+	list-style-type: none;
+}
+
+.fw-fixed-bar a {
+	text-decoration: none;
+	color: #3F3F3F;
+}
+
+.fw-fixed-bar a :hover {
+	color: #337ab7;
+}
+
+.fw-fixed-bar i {
+	font-size: 50px;
+}
+
+.fw-qq-detail {
+	background: #3498DB;
+	margin-right: 60px;
+	margin-top: 30px;
+}
+
+.fw-call-detail {
+	background: #3498DB;
+	margin-right: 60px;
+	margin-top: 50px;
 }
 
 
@@ -343,5 +397,69 @@ header {
 
 
 /*
- * 新增bootstrap样式 
+ * sign
  */
+
+.fw-sign-img {
+	max-width: 300px;
+	margin: 60px auto 80px auto;
+}
+
+.fw-form-signin {
+	max-width: 330px;
+	padding: 25px 25px 30px 25px;
+	margin: 50px auto;
+	box-shadow: 2px 2px 15px #bbb;
+}
+
+.fw-form-signin-heading {
+	font-size: 24px;
+	float: left;
+	margin-bottom: 20px;
+}
+
+.fw-signin-go {
+	font-size: 18px;
+	float: right;
+	color: #15c288;
+	font-family: "微软雅黑";
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.fw-form-signin .form-signin .checkbox {
+	margin-bottom: 10px;
+}
+
+.fw-form-signin .checkbox {
+	font-weight: normal;
+}
+
+.fw-form-signin .form-control {
+	position: relative;
+	height: auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 10px;
+	font-size: 16px;
+}
+
+.fw-form-signin .form-control:focus {
+	z-index: 2;
+}
+
+.fw-form-signin input[type="text"] {
+	margin-top: 20px;
+	/*border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;*/
+}
+
+.fw-form-signin input {
+	margin-bottom: 20px;
+	/*border-top-left-radius: 0;
+	border-top-right-radius: 0;*/
+}
+
+
+/*login*/
