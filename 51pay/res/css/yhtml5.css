@@ -95,6 +95,9 @@
 .fw-ts000 {
 	text-shadow: black 5px 3px 3px;
 }
+.fw-mg20{
+	margin: 40px auto 20px auto;
+}
 
 .fw-mt20 {
 	margin-top: 20px;
