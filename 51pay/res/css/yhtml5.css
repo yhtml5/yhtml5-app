@@ -120,6 +120,10 @@
 	margin-top: -20px;
 }
 
+.fw-mh500 {
+	min-height: 500px;
+}
+
 .fw-userterms p {
 	text-indent: 2em;
 }
@@ -313,14 +317,31 @@ footer a {
 	color: #ffffff;
 }
 
-.fw-about {
-	margin-bottom: 5%;
+.fw-about,
+.fw-copyright {
+	margin-bottom: 20px;
 }
+
+.fw-certified div {
+	width: 20%;
+	min-width: 70px;
+	max-width: 130px;
+	margin-left: 10px;
+	margin-right: 10px;
+	display: inline-block;
+}
+
+.fw-certified img {
+	width: 100%;
+}
+
+.fw-certified img {}
 
 .fw-fixed-bar {
 	position: fixed;
-	top: 50%;
-	right: 10%;
+	top: 40%;
+	right: 1%;
+	z-index: 9;
 }
 
 .fw-fixed-bar li {
