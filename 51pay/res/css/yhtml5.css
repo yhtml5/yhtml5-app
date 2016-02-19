@@ -1,11 +1,11 @@
 /*
  * 
- * 洋葱网络工作室提供技术支持（yhtml5.com）
+ * æ´‹è‘±ç½‘ç»œå·¥ä½œå®¤æä¾›æŠ€æœ¯æ”¯æŒï¼ˆyhtml5.comï¼‰
  * 
  */
 
 
-/*51代充定制样式*/
+/*51ä»£å……å®šåˆ¶æ ·å¼*/
 
 .fw-bgcfff {
 	background-color: #FFFFFF;
@@ -40,19 +40,23 @@
 	border: 0px;
 }
 
+.fw-colorFF5151 {
+	color: #FF5151;
+}
+
 .fw-displayn {
 	display: none;
 }
 
 .fw-font-price {
-	font-family: "微软雅黑";
+	font-family: "å¾®è½¯é›…é»‘";
 	font-size: 20px;
 	color: #d63535;
 	line-height: 35px;
 }
 
 .fw-font-goods {
-	font-family: "宋体";
+	font-family: "å®‹ä½“";
 	font-size: 16px;
 	color: #3F3F3F;
 	display: block;
@@ -95,7 +99,12 @@
 .fw-ts000 {
 	text-shadow: black 5px 3px 3px;
 }
-.fw-mg20{
+
+.fw-ti2 {
+	text-indent: 2em;
+}
+
+.fw-mg20 {
 	margin: 40px auto 20px auto;
 }
 
@@ -155,7 +164,7 @@
 
 .fw-user-nav .nav>li a {
 	padding: 0px 5px;
-	font-family: "微软雅黑";
+	font-family: "å¾®è½¯é›…é»‘";
 	font-size: 16px;
 	color: #ffffff
 }
@@ -304,7 +313,7 @@
 	margin-top: 30%;
 	padding: 10px;
 	border-radius: 10px;
-	font-family: "微软雅黑";
+	font-family: "å¾®è½¯é›…é»‘";
 	font-size: 18px;
 }
 
@@ -377,15 +386,15 @@ footer a {
 }
 
 
-/*引入字体图标*/
+/*å¼•å…¥å­—ä½“å›¾æ ‡*/
 
 @font-face {
 	font-family: 'iconfont';
 	src: url('//at.alicdn.com/t/font_1454317613_6726978.eot');
 	/* IE9*/
 	src: url('//at.alicdn.com/t/font_1454317613_6726978.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-	url('//at.alicdn.com/t/font_1454317613_6726978.woff') format('woff'), /* chrome、firefox */
-	url('//at.alicdn.com/t/font_1454317613_6726978.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+	url('//at.alicdn.com/t/font_1454317613_6726978.woff') format('woff'), /* chromeã€firefox */
+	url('//at.alicdn.com/t/font_1454317613_6726978.ttf') format('truetype'), /* chromeã€firefoxã€operaã€Safari, Android, iOS 4.2+*/
 	url('//at.alicdn.com/t/font_1454317613_6726978.svg#iconfont') format('svg');
 	/* iOS 4.1- */
 }
@@ -400,7 +409,7 @@ footer a {
 }
 
 
-/*覆盖bootstrap样式*/
+/*è¦†ç›–bootstrapæ ·å¼*/
 
 .row img {
 	width: 100%;
@@ -446,7 +455,7 @@ header {
 	font-size: 18px;
 	float: right;
 	color: #15c288;
-	font-family: "微软雅黑";
+	font-family: "å¾®è½¯é›…é»‘";
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
@@ -486,4 +495,37 @@ header {
 }
 
 
-/*login*/
+/*fw-pay-info*/
+
+.fw-pay-info {
+	width: 90%;
+	max-width: 600px;
+	min-width: 300px;
+	margin: 40px auto 20px auto;
+}
+
+.fw-pay-info .panel-footer {
+	height: 50px;
+	padding: 20px 30px 60px 30px;
+}
+
+.fw-pay-info .panel-heading {
+	padding: 20px 30px 10px 30px;
+}
+
+.fw-pay-info-price {
+	float: right;
+}
+
+.fw-pay-info .panel-heading h3 {
+	color: #3F3F3F;
+	margin-top: 0px;
+	margin-bottom: 7px;
+}
+
+.fw-pay-info .panel-body {
+	padding: 30px 20px 20px 30px;
+}
+
+
+/*test*/
