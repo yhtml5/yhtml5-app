@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	    
+	    
+	    <div>123</div>
+	    
+	    
+	    
+	    <script src="scripts/jquery-1.7.2.min.js">
+	        
+	        你根据你的需要填写到对应的位置就可以了。
+ $(window).load(function(){   
+    $.getJSON("<a href="http://query.yahooapis.com/v1/public/yql?callback=?"" target="_blank">http://query.yahooapis.com/v1/public/yql?callback=?"</a>, {   
+    q: "select * from json where url='<a href="http://www.cainiu.com/adminstock/appVersion/158/appVersions?page=1&rows=20'" " target="_blank">www.cainiu.com/adminstock/appVersion/158/appVersions?page=1&rows=20'" </a>,//这里是你的跨域地址，参数可以动态传入的。
+    format: "json" 
+        }, function(data) {   
+            if (data.query.results) {  
+                var result = JSON.stringify(data.query.results); //这个一定要有，不能动
+                alert(result);//这个弹出你可以看到外层有个大概就是这种结构{json：{}}；
+                var obj = eval('('+result+')'); //转成json  
+                var obj = eval('('+result+')'); 
+        alert("footer:"+obj.json.footer);//这里给你举个第一层的例子，其他rows，total同理。
+        var rowsLen = obj.json.rows.length;
+        alert("rows的数量:"+rowsLen);//不知道total是不是总行数，如果是直接取他就可以了，即var rowsLen = obj.json.total;
+        for(var i=0;i<rowsLen;i++){
+            alert(obj.json.rows[i].appDesc);//访问行里的变量，这里给你举一个例子其他同理。 
+        }              
+            } else {   
+                alert("未能获取到信息请稍候再试！");//或者写你的其他逻辑，比如重新加载啥的。
+            }   
+        });   
+ });
+	    </script>
+	</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="Acathur" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit">
+<title>推广途径</title>
+<link rel="stylesheet" type="text/css" href="../css/base.css">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="../css/banner.css">
+<!--[if lt IE 9]>
+            <script type="text/javascript" src="../js/html5.js"></script>
+        <![endif]-->
+</head>
+<body>
+<iframe src="top.html " width="100%" height="80"
+                marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="No" allowtransparency="true"></iframe>
+<!------ summary nav --------->
+<div class="summary">
+	<div class="summary-nav">
+    	<div class="summary_angle"></div>
+    	<ul class="sum_ul">
+        	<li><a href="summarydata.html">汇总数据</a></li>
+            <li><a href="userinfo.html">账户信息</a></li>
+            <li><a class="sum_ulclick" href="extension.html">推广途径</a></li>
+            <li><a href="addusers.html">新增用户</a></li>
+            <li><a href="consumeruser.html">消费用户</a></li>
+            <li><a href="usercontent.html">用户详情</a></li>
+        </ul>
+    </div>
+</div>
+<!------ user info ------->
+<div class="ext-content">
+    <div class="ext-updown">
+        <p>以下应用市场均可下载</p>
+        <a href="#"><img src="../images/section_img38.png"></a>
+        <a href="#"><img src="../images/section_img39.png"></a>
+        <a href="#"><img src="../images/section_img40.png"></a>
+        <a href="#"><img src="../images/section_img41.png"></a>
+        <a href="#"><img src="../images/section_img42.png"></a>
+        <a href="#"><img src="../images/section_img43.png"></a>
+        <a href="#"><img src="../images/section_img44.png"></a>
+    </div>
+  <div class="updown-url">
+    	<p>
+        <a href="http://www.cainiu.com/pro/p?c=10dbf9">推广链接地址:
+        	<input id="input_url" type="text" value="http://www.cainiu.com/pro/p?c=10dbf9">
+        </a>
+        </p>
+    </div>
+    <div class="ext-action">
+    	<div class="copy-prompt">
+        	<div class="copy-prompt-text"></div>
+        </div>
+        <div class="action action-copy"><a id="copy_url" href="#">复制下载地址</a></div>
+        <div class="action action-code"><a onClick="codeimg()" href="#">生成推广的二维码</a></div>
+    </div>
+    <div class="code-img" style="display:none;">
+    	<img src="../images/section_img24.png">
+    </div>
+    <div class="ext-way">
+    	<div class="user-line"></div>
+    		<div class="way-half">
+            <h1>什么是专属推广安装包？</h1>	
+            <p>1.推广员可以复制、下载链接，或生成二维码发送给好友进行推广。<br>2.推广员也可以通过邀请好友送红包、微博、微信。贴吧等方式进行推广。</p>
+            <h1>专属推广包支持手机吗？</h1>	
+            <p>不支持。专属安装吧是安卓系统包，只支持安卓手机</p> 
+        </div>
+        <div class="way-half">
+        	 <h1>如何使用专属安装包？</h1>	
+            <p>方式一、下载链接，或生成二维码发送给好友进行推广。<br>方式二、也可以通过邀请好友送红包、微博、微信。贴吧等方式进行推广。</p>
+            <h1>可以在那些平台推广？</h1>	
+            <p>可以在QQ群、微博、微信朋友圈、百度贴吧等社交平台进行推广</p> 
+        </div>   
+    </div>
+</div>
+
+<!------ copy --------->
+<iframe class="bottom-iframe" style=" margin-top:50px;" src="bottom.html " width="100%" height="210"
+                marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="No" allowtransparency="true"></iframe>
+
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/main.js"></script>
+<script type="text/javascript" language="javascript">
+//二维码显示
+function codeimg(){
+	$(".code-img").show(100);
+}
+//复制操作
+$("#copy_url").click(function(){
+	var s="http://www.cainiu.com/pro/p?c=10dbf9";
+	copy_code(s);	
+})
+function prompthide(){
+	$(".copy-prompt-text").hide(100);
+}
+function promptshow(){
+	$(".copy-prompt-text").show(100);
+	window.setTimeout("prompthide()",5000);
+}
+function copy_code(copyText){
+	if (window.clipboardData){
+		window.clipboardData.setData("Text", copyText);
+		$(".copy-prompt-text").html("复制成功！可以直接ctrl+v粘贴了");
+        promptshow();
+	}else{
+	    $(".copy-prompt-text").html("您的浏览器不支持复制功能，文字已选中请直接ctrl+v或者右击复制");
+        promptshow();
+		$("#input_url").select();
+	}
+}
+       
+</script>
+</body>
+</html>

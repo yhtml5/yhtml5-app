@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="Acathur" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit">
+<title>财牛登录</title>
+<link rel="stylesheet" type="text/css" href="../css/base.css">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="../css/banner.css">
+<!--[if lt IE 9]>
+            <script type="text/javascript" src="../js/html5.js"></script>
+        <![endif]-->
+</head>
+<body>
+<iframe src="top.html " width="100%" height="80" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="No" allowtransparency="true"></iframe>
+
+<div class="banner">
+    <div id='glume'>
+      <ul class="Limg">
+        <li class="bg_1"> <a href="#" target="_blank">&nbsp;</a> </li>
+        <li class="bg_2"> <a href="#" target="_blank">&nbsp;</a> </li>
+      </ul>
+      <div class="Nubbt"> <span class="on"></span> <span></span> </div>
+    </div>
+    <!---- box ---->
+    <div class="box">
+    	<div class="box_title"><h1>登录财牛</h1></div>
+        <div class="login_input">
+        	<input type="text" value="" id="tel" placeholder="手机号码">
+        </div>
+        <div class="login-layer-info" id="tel_prompt">
+            <p id="phone_error" style="display:none">请输入正确的手机号码</p>
+        </div>
+        <div class="clear login_input login-notop">
+        	<input type="password" value="" placeholder="密码" id="password">
+        </div>
+        <div class="clear login-layer-info" id="pwd_prompt">
+            <p id="pwd_error" style="display:none">密码输入错误</p>
+        </div>
+        <div class="clear">
+        	<a href="javascript:;" id="login_btn"><div class="btn login-notop"><p>登录</p></div></a>
+        </div>
+        <div class="clear login-layer-info">
+          <p><a href="#"></a></p></div>
+      <div class="clear login_input bgwhite">
+        	<p>还不是推广员？<span><a href="notregistered.html">立即申请</a></span></p>
+      </div>
+    </div>
+</div>
+
+<div class="join_bg">
+	<div class="join_title"><img src="../images/join.png"></div>
+    <div class="join_list">
+    	<ul>
+        	<li class="join_leftIcon">
+            	<a href="#"><img src="../images/login_icon1.png"></a>
+                <p><a href="#">申请成为会员</a></p>
+                <span>下载app注册账户</span>
+          </li>
+            <li class="join_leftIcon">
+                <a href="#"><img src="../images/login_icon2.png"></a>
+                <p><a href="#">获取代码</a></p>
+                <span>获取广告代码粘贴在您的网站</span>
+            </li>
+            <li class="join_leftIcon">
+                <a href="#"><img src="../images/login_icon3.png"></a>
+                <p><a href="#">用户注册并消费</a></p>
+                <span>用户通过你的推广链接下载APP并注册消费</span>
+            </li>
+            <li>
+               <a href="#"><img src="../images/login_icon4.png"></a>
+                <p><a href="#">结算佣金</a></p>
+                <span>每日日结，满100元起结算</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<iframe class="bottom-iframe" src="bottom.html " width="100%" height="210" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="No" allowtransparency="true"></iframe>
+<script src="../js/sea.js"></script>
+<script>
+seajs.config({
+  alias: {
+    "jquery": "jquery-1.8.3.min.js"
+  }
+});
+</script>
+
+<script>
+seajs.use(['jquery','../js/tool','../js/main'], function ($,tool,main) {
+      $("#tel").on('blur',function(){
+            var v=$(this).val();
+            tool.checkPhone(v)
+       });
+        $("#password").on('blur',function(){
+            var v=$(this).val();
+            tool.checkPwd(v)
+       });
+        //点击登陆事件
+        $("#login_btn").on('click',function(){
+            main.loginIn();
+        });
+        $('body').bind('keyup', function(event) {
+            if (event.keyCode == "13") {
+                //回车执行登陆
+                $('#login_btn').click();
+                return false;
+            }
+        });
+});
+   
+</script>
+</body>
+</html>

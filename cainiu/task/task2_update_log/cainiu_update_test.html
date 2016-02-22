@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>财牛，更新日志</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/css.css"/>
+<style type="text/css">
+html { overflow-y:auto;}
+.footer{position: static;}
+</style>
+</head>
+<body>
+
+<div class="fixed_box head_bg" id="nav">
+    <h3 class="head_logo"><img src="images/head_logo.png" /></h3>
+    <ul>
+        <li><a href="index.html">首页</a></li>
+        <li  class="on"><a href="javascript:;">更新日志</a></li>
+        <li><a href="aboutus.html">关于我们</a></li>
+        <li><a href="hr.html">加入财牛</a></li>
+    </ul>
+</div>
+<div class="update_content">
+   <div class="lky_img_box"><img src="images/background_update_log.png" /></div>
+    <div class="container">
+      <div class="main">
+        <ul class="lky_tmtimeline">
+          <li>
+            <div class="lky_tmicon" style="width: 60px ;height: 60px;left: 19%;"><div class="lky_2015">2015</div>
+            </div>
+            <div class="lky_space"></div>
+          </li>
+          <li>
+            <div class="lky_tmicon">
+            </div>
+            <div class="lky_tmlabel">
+              <h3 class="appVersion1"></h3>
+              <ol class="ol1"></ol>
+            </div>
+          </li>
+          <li>
+            <div class="lky_tmicon">
+            </div>
+            <div class="lky_tmlabel">
+              <h3 class="appVersion2"></h3>
+              <ol class="ol2"></ol>
+            </div>
+          </li>
+          <li>
+            <div class="lky_tmicon">
+            </div>
+            <div class="lky_tmlabel">
+              <h3 class="appVersion3"></h3>
+              <ol class="ol3"></ol>
+            </div>
+          </li>
+          <li>
+            <div class="lky_tmicon">
+            </div>
+            <div class="lky_tmlabel">
+              <h3 class="appVersion4"></h3>
+              <ol class="ol4"></ol>
+            </div>
+          </li>
+          <li>
+            <div class="lky_tmicon">
+            </div>
+            <div class="lky_tmlabel">
+              <h3 class="appVersion5"></h3>
+              <ol class="ol5"></ol>
+            </div>
+          </li>
+          <li>
+            <div class="lky_tmicon">
+            </div>
+            <div class="lky_tmlabel">
+              <h3 class="appVersion6"></h3>
+              <ol class="ol6"></ol>
+             </div>
+          </li>
+          <li>
+            <div class="lky_tmicon">
+            </div>
+            <div class="lky_tmlabel">
+              <h3 class="appVersion"></h3>
+              <ol class="ol7"></ol>
+             </div>
+          </li>
+          <li>
+            <div class="lky_tmicon">
+            </div>
+            <div class="lky_tmlabel">
+              <h3 class="appVersion8"></h3>
+              <ol class="ol8"></ol>
+             </div>
+          </li>
+          <li>
+            <div class="lky_tmicon">
+            </div>
+            <div class="lky_tmlabel">
+              <h3 class="appVersion9"></h3>
+              <ol class="ol9"></ol>
+             </div>
+          </li>
+          <li>
+            <div class="lky_tmicon">
+            </div>
+            <div class="lky_tmlabel">
+              <h3 class="appVersion10"></h3>
+              <ol class="ol10"></ol>
+             </div>
+          </li>
+          <li>
+            <div class="lky_tmicon"></div>
+            <div class="lky_space2">   
+              
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer_con">
+      <ul class="clearfix">
+          <li class="show_fliter" id="qq"><a href="javascript:;"><img src="images/qq.png" /></a><div class="qq_num"><span>QQ：467141772</span></div></li>
+          <li><a href="http://weibo.com/u/5649014149" target="_blank"><img src="images/weibo.png" /></a></li>
+          <li class="show_fliter" id="weixin"><a href="javascript:;"><img src="images/weixin.png" /></a><div class="wx_ewm"><img src="images/weixin_ewm.jpg"></div></li>
+      </ul>
+      <p class="f18">400-6666-801 </p>
+      <p class="f12">（服务时间：9：00~22：00）</p>
+      <p class="f12 m20">Copyright （C）  cainiu.com  版权所有 All Rights Reserved  增值电信业务经营许可证：浙B2-20150121 浙ICP备15001715号-1</p>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery-1.7.2.min.js" ></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$.ajax({
+            type:'get',
+            url:'http://www.cainiu.com/adminstock/appVersion/158/appVersions?page=1&rows=20',
+            dataType:'json',
+            //data:{type:t},
+            success:function(data) { 
+              var rowsLen = data.rows.length;
+                for (var i=0; i < rowsLen; i++) {
+                    var version=data.rows[i].appDesc
+                    var appDesc=data.rows[i].appDesc.split('\r\n')
+                    for(j=0;j<appDesc.length;j++){
+                        $(".ol"+i).append("<li>"+appDesc[j]+"</li>")
+                    }
+                   $(".appVersion"+i).html("<h2>"+data.rows[i].createDate.substring(0,10)+"</h2>"+"<br>"+"版本号："+data.rows[i].appVersion)
+                   //class循环                                                         访问json行里的变量，截取字符串长度  
+               }}})})
+ </script>
+</body>
+</html>

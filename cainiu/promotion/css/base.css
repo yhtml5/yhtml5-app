@@ -1,0 +1,138 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+	font-size:12px;
+	text-decoration:none;
+	font-family:  Microsoft YaHei;
+	color:#000
+}
+a{
+	font-size:12px;
+	text-decoration:none;
+	font-family:  Microsoft YaHei;
+	color:#000
+}
+img,ul,li,ul, li, dl, dt, dd{
+	list-style:none; border:0px;
+}
+.clear{
+	 clear:both;
+}
+.none{
+	display:none;
+}
+.bgwhite{
+	background:#FFF;
+}
+.bodybg{
+	width:100%;
+	height:100%;
+	background-image:url("../images/bodybg.png");
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-size:cover;	
+	-moz-background-size:cover;
+	-webkit-background-size:cover;	
+	background-size:contain;
+	-moz-background-size:contain;
+	-webkit-background-size:contain;
+	z-index:-111;
+}
+.bodybg-appliction{	
+	background-image:url("../images/bodybgs.png");
+}
+.noborder{
+	border:none !important;
+}
+.input_tel{
+	background:url(../images/inputstra.png) no-repeat 10px 12px !important;
+}
+.content{
+	width:1003px;
+	min-height:100px;
+	margin:0 auto;
+	margin-bottom:5%;
+	z-index:1;
+}
+.bigcontent{
+	width:1173px;
+	min-height:100px;
+	margin:0 auto;
+	margin-bottom:2%;
+	z-index:1;
+}
+.layer{
+	width:25%;
+	float:left;
+}
+
+.usercontent{
+	width:915px;
+	min-height:100px;
+	margin:0 auto;
+	margin-bottom:5%;
+	z-index:1;
+}
+.border{
+	border:1px solid;
+}
+.allwidth{
+	width:100%;
+}
+.ext-content{
+	width:1048px;
+	min-height:100px;
+	margin:0 auto;
+	margin-bottom:5%;
+	z-index:1;
+}
+/***** layer *******/
+.layer{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	_position: absolute;
+	top: -50px;
+	left: 0;
+	right: 0;
+	padding-bottom:100px;
+	background-color:rgba(0,0,0,0.5);
+}
+.sunm-content{
+	width:100%;
+	min-height:100px;
+	position:relative;
+}
+.layer-bomb{
+	width:400px;
+	height:200px;
+	margin:0 auto;
+	background:#fff;
+	border-radius:5px;
+}
+.layer-bomb a img{
+	float:right;
+	margin:3px 10px 0 0;
+}
+.layer-bomb img{
+	margin:-20px 140px 0;
+}
+.layer-bomb p{
+	color:#383838;
+	font-size:18px;
+	text-align:center;
+	line-height:160%;
+}
+.full-body{
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+.iframe-bottom{
+	position:absolute;
+	bottom:0px;
+}

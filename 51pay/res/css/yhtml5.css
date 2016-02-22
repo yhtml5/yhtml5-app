@@ -423,7 +423,12 @@ header {
 	background-color: #fbfbfb;
 }
 
-.thumbnail {
+.fw-header{
+	width: 100%;
+	overflow: hidden;
+}
+
+.fw-star .thumbnail {
 	padding-bottom: 20px;
 	margin-top: 5px;
 }

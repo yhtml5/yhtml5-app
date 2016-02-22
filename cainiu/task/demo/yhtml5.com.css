@@ -1,0 +1,69 @@
+html {
+    font-size: 62.5%
+}
+body {
+    font-size: 16px;
+    font-size: 1.6 rem;
+    background-color: #FFFFFF
+}/*考虑IE兼容,万恶的IE6*/
+.lky-ol0 {
+    margin-left: 0px;
+}
+.lky-font-left {
+    text-align: left;
+    text-indent: 3rem;
+}/*首行缩进1.6rem*/
+.lky-center {
+    text-align: center;
+}
+.lky-center-all {
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+}/*上下垂直居中*/
+.lky {
+    width: 90%;
+    margin: 0 auto
+}
+.lky-content {
+    padding-top: 30px;
+}
+.lky-float-left {
+    float: left;
+}
+.lky-dashed-line {
+    padding: 6px;
+    border-bottom: 1px dashed #000000;
+    color: #dedddd;
+}
+.lky-qa {
+    color: #e94714
+}
+.lky-1rem {
+    font-size: 1rem;
+    font-size: 10px;
+}
+.lky-2rem {
+    font-size: 1.8 rem;
+    font-size: 18px;
+}
+.lky-3rem {
+    font-size: 3rem
+}
+.lky-6rem {
+    font-size: 6rem
+}
+.lky-mgr {
+    margin-right: 10px
+}
+.lky-mgl {
+    margin-left: 20px
+}
+.lky-mgt30 {
+    margin-top: 30px
+}
+.lky-mp0 {
+    margin: 0;
+    padding: 0;
+}

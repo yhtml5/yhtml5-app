@@ -1,0 +1,26 @@
+﻿ul, li, a, dd, dt, dl, i, em{ margin:0px;padding:0px;list-style:none;text-decoration:none;list-style:none;font-style:normal;font-style:normal;}
+
+/* calendar */
+.calendar{width:210px;position:absolute;background-color:#f9f9f9;border:1px solid #f5d2ba;color:#333!important;font-size:12px;}
+.calendar_head{line-height:25px;width:100%;float:left;margin-top:3px;position:relative;}
+.calendar_head input{width:35%;border:0px;font-family:Arial;background-color:#fff;margin-left:5%;text-align:center;line-height:18px;}
+.calendaremL{float:left;font-family:Arial;font-weight:bold;margin-top:-2px;padding:0 5px;cursor:pointer;}
+.calendaremR{float:right;font-family:Arial;font-weight:bold;margin-top:-2px;padding:0 5px;cursor:pointer;}
+.calendar_boy{float:left;position:relative;width:100%;}
+.calendar_boy i{position:absolute;left:0;top:25px;right:0px;bottom:0;text-align:center;font-size:150px;font-family:Arial;color:#eee;z-index:0;}
+._caltable{border-collapse:collapse;width:100%;float:left;position:relative;}
+._caltable tr td{line-height:25px;width:25px;text-align:center;font-family:Arial;cursor:pointer;border-bottom:1px solid #f1f1f1;border-right:1px solid #f1f1f1;}
+._caltable tr:first-child td{border-bottom:1px solid #ddd;cursor:default;border-bottom:1px solid #eee;border-right:0;}
+._caltable tr td:last-child{border-right:0;}
+._sday{color:#ff6a00;font-family:'Microsoft YaHei';}
+.festival{color:#ff6a00!important;}
+._selDay{background-color:#ff9900;color:#fff;font-family:'Microsoft YaHei';}
+
+.calYear{border:1px solid #f5d2ba;width:50px;width:80%;position:absolute;z-index:2000;left:5%;background-color:#eee;border-collapse:collapse;}
+.calYear td{text-align:center;cursor:pointer;}
+.calYear td:hover{color:#ff6a00;}
+.calMonth{border:1px solid #f5d2ba;width:50px;width:70%;position:absolute;z-index:2000;right:10%;background-color:#eee;border-collapse:collapse;}
+.calMonth td{text-align:center;cursor:pointer;}
+.calMonth td:hover{color:#ff6a00;}
+.disDay{color:#999;cursor:text!important;}
+._calcolse{position:relative;border-radius:10px;width:10px;height:10px;color:red;}

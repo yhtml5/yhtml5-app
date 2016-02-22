@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>优惠券使用规则</title>
+        <meta charset="utf-8">
+        <meta http-equiv="pragma" content="no-cache">
+        <meta http-equiv="cache-control" content="no-cache">
+        <meta http-equiv="expires" content="0">
+        <!-- <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"> -->
+    
+    <style type="text/css">
+        html {
+            font-size: 62.5%
+        }
+        body {
+            font-size: 1.2 rem;
+            font-size: 12px;
+            background-color: #FFFFFF;
+            font-family: Microsoft YaHei;
+        }/*考虑IE兼容,万恶的IE6*/
+        li, p {
+            font-size: 1.2 rem;
+            font-size: 12px;
+            line-height: 21px;
+            color: #999999;
+        }
+
+        b {
+            color: #494a4a;
+        }
+        ol {
+            list-style: none;
+        }
+
+        .lky-ol2 {
+            margin-left: 5px;
+            padding-left: 0px;
+        }
+        .lky-ol3 {
+            margin-left: 0px;
+            padding-left: 0px;
+        }
+        .lky-font-left {
+            text-align: left;
+            text-indent: 3rem;
+        }/*首行缩进1.6rem*/
+        .lky-center {
+            text-align: center;
+        }
+        .lky-center-all {
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+            overflow: hidden;
+        }/*上下垂直居中*/
+        .lky {
+            width: 96%;
+            margin: 0 auto
+        }
+        .lky-content {
+
+            padding-top: 10px;
+        }
+        .lky-content2 {
+            margin-bottom: -12px;
+        }
+        .lky-content3 {
+            color: #494a4a;
+        }
+        .lky-float-left {
+            float: left;
+            display: inline;
+        }
+        .lky-dashed-line {
+            margin-top: -2px;
+            margin-bottom: -12px;
+            border-bottom: 1px dashed #f3f3f3;/*虚线色值*/
+            color: #dedddd;
+        }
+        .lky-qa {
+            font-family: Arial;
+            color: #e94714;
+            margin: 0px;
+        }
+        .lky-1rem {
+            font-size: 1rem;
+            font-size: 10px;
+        }
+        .lky-2rem {
+            font-size: 1.6 rem;
+            font-size: 16px;
+        }
+        .lky-3rem {
+            font-size: 3rem
+        }
+        .lky-6rem {
+            font-size: 6rem
+        }
+        .lky-mgr {
+            margin-right: 11px
+        }
+        .lky-mgr2 {
+            margin-right: 0px
+        }
+        .lky-mgl {
+            margin-left: 24px
+        }
+        .lky-mgl2 {
+            margin-left: 23px
+        }
+        .lky-mgt30 {
+            margin-top: 30px
+        }
+        .lky-mp0 {
+            margin: 0;
+            padding: 0;
+        }
+        .lky-clear {
+            clear: both
+        }
+        .lky-tbtx {
+            margin-top: -13px;
+            margin-bottom: -10px;
+        }
+    </style>
+    </head>
+    <body ontouchstart>
+        <!--
+        20151125丨根据psd文档将文件改成H5界面
+        20151126丨根据陈偲需求:将页面字体改小、问题答案间距调小、字体虚线调灰、列表靠齐
+        20151127丨根据陈偲需求:将布局间距调小、字体样式修改等等-->
+        <div class="lky">
+            <div class="lky-content">
+                <div class="lky-content2">
+                    <div class="lky-float-left">
+                        <p class="lky-qa lky-2rem">Q</p>
+                    </div>
+                    <div class="lky-mgl2">
+                        <p class="lky-2rem lky-content3">
+                            什么是优惠券？
+                        </p>
+                    </div>
+
+                </div>
+                <div>
+                    <div class="lky-float-left">
+                        <p class="lky-qa lky-2rem lky-mgr">A</p>
+                    </div>
+                    <div class="lky-mgl">
+                        <p>
+                            优惠券是财牛投资发放给用户的，用于抵扣白糖、沪镍、沪银、沪金、沪铜、螺纹钢、天然橡胶、石油沥青等品种的交易手续费。
+                        </p>
+                    </div>
+                </div>
+                <div class="lky-dashed-line"></div>
+            </div>
+            <div class="lky-content">
+                <div class="lky-content2">
+                    <div class="lky-float-left">
+                        <p class="lky-qa lky-2rem">Q</p>
+                    </div>
+                    <div class="lky-mgl2">
+                        <p class="lky-2rem lky-content3">
+                            什么条件下使用优惠券？
+                        </p>
+
+                    </div>
+                </div>
+                <div>
+                    <div class="lky-float-left">
+                        <p class="lky-qa lky-2rem lky-mgr">A</p>
+                    </div>
+                    <div class="lky-mgl2">
+                        <ol class="lky-ol2">
+                            <li>
+                                1）优惠券只限用于在同一品种中抵扣单笔交易的交易综合费。
+                            </li>
+                            <li>
+                                2）一手交易最多只能使用一张优惠券。
+                            </li>
+                            <li>
+                                3）优惠券不可以找零，不能兑换现金。
+                            </li>
+                            <li>
+                                4）优惠券上会注明“有效期”，该优惠券只能在注明的有效期内使用。
+                            </li>
+                            <li>
+                                5）每张优惠券仅限使用一次，不能和其他优惠同时享受。
+                            </li>
+                            <li>
+                                6）如发现恶意盗刷优惠券等行为，财牛投资有权收回该行为涉及的优惠券，并取消所购产品。
+                            </li>
+                            <li>
+                                7）最终解释权归财牛投资所有。
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="lky-dashed-line"></div>
+            </div>
+            <div class="lky-content">
+                <div class="lky-content2">
+                    <div class="lky-float-left">
+                        <p class="lky-qa lky-2rem">Q</p>
+                    </div>
+                    <div class="lky-mgl2">
+                        <p class="lky-2rem lky-content3">
+                            一个订单最多能够使用几张优惠券？
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="lky-float-left">
+                        <p class="lky-qa lky-2rem lky-mgr">A</p>
+                    </div>
+                    <div class="lky-mgl">
+                        <p>
+                            一个订单使用的优惠券不超过下单手数。如：下单5手，就可使用≤5张优惠券。
+                        </p>
+                    </div>
+                </div>
+                <div class="lky-dashed-line"></div>
+            </div>
+            <div class="lky-content">
+                <div class="lky-content2">
+                    <div class="lky-float-left">
+                        <p class="lky-qa lky-2rem">Q</p>
+                    </div>
+                    <div class="lky-mgl2">
+                        <p class="lky-2rem lky-content3">
+                            用户一天内最多能够使用几张优惠券?
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="lky-float-left">
+                        <p class="lky-qa lky-2rem lky-mgr">A</p>
+                    </div>
+                    <div class="lky-mgl">
+                        <p>
+                            用户一天内使用的优惠券数量不得超过拥有优惠券的数量。同一个财牛投资帐号、同一个手机号、同一个手机设备号均属于同一用户。
+                        </p>
+                    </div>
+                </div>
+                <div class="lky-dashed-line"></div>
+            </div>
+            <div class="lky-content">
+                <div class="lky-content2">
+                    <div class="lky-float-left">
+                        <p class="lky-qa lky-2rem">Q</p>
+                    </div>
+                    <div class="lky-mgl2">
+                        <p class="lky-2rem lky-content3">
+                            优惠券可以找零或兑换吗？
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="lky-float-left">
+                        <p class="lky-qa lky-2rem lky-mgr">A</p>
+                    </div>
+                    <div class="lky-mgl">
+                        <p>
+                            不可以。用户选择是有优惠券支付交易综合费，优惠券金额高于交易综合费，差额部分不找零不兑换；交易综合费高于优惠券金额，差额部分由用户支付。
+                        </p>
+                    </div>
+                </div>
+                <div class="lky-dashed-line"></div>
+            </div>
+            <div class="lky-content">
+                <div class="lky-content2">
+                    <div class="lky-float-left">
+                        <p class="lky-qa lky-2rem">Q</p>
+                    </div>
+                    <div class="lky-mgl2">
+                        <p class="lky-2rem lky-content3">
+                            可以用一个帐号内的优惠券为其他帐号内的订单进行支付吗？
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="lky-float-left">
+                        <p class="lky-qa lky-2rem lky-mgr">A</p>
+                    </div>
+                    <div class="lky-mgl">
+                        <p>
+                            不可以。一个帐号的优惠券仅可用于支付该帐号内的交易综合费。
+                        </p>
+                    </div>
+                </div>
+                <div class="lky-dashed-line"></div>
+            </div>
+            <div class="lky-content">
+                <div class="lky-content2">
+                    <div class="lky-float-left">
+                        <p class="lky-qa lky-2rem">Q</p>
+                    </div>
+                    <div class="lky-mgl2">
+                        <p class="lky-2rem lky-content3">
+                            什么是优惠券的有效期？
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="lky-float-left">
+                        <p class="lky-qa lky-2rem lky-mgr">A</p>
+                    </div>
+                    <div class="lky-mgl">
+                        <p>
+                            优惠券上会注明“有效期”，该优惠券仅能在注明的有效期内使用。凡在注明的有效期内，都可用该优惠券。
+                        </p>
+                    </div>
+                </div>
+                <div class="lky-dashed-line"></div>
+            </div>
+            <div class="lky-content">
+                <div class="lky-content2">
+                    <div class="lky-float-left">
+                        <p class="lky-qa lky-2rem">Q</p>
+                    </div>
+                    <div class="lky-mgl2">
+                        <p class="lky-2rem lky-content3">
+                            订单下单失败，优惠券可以重新使用吗？
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="lky-float-left">
+                        <p class="lky-qa lky-2rem lky-mgr">A</p>
+                    </div>
+                    <div class="lky-mgl">
+                        <p>
+                            若交易不成功，没有产生实际金额消费，优惠券返回账户中，下次交易可重新使用。
+                        </p>
+                    </div>
+                </div>
+                <div class="lky-dashed-line"></div>
+            </div>
+            <div class="lky-content">
+                <div class="lky-content2">
+                    <div class="lky-float-left">
+                        <p class="lky-qa lky-2rem">Q</p>
+                    </div>
+                    <div class="lky-mgl2">
+                        <p class="lky-2rem lky-content3">
+                            怎样才能获得优惠券？
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="lky-float-left">
+                        <p class="lky-qa lky-2rem lky-mgr">A</p>
+                    </div>
+                    <div class="lky-mgl">
+                        <p>
+                            请关注财牛投资新浪官方微博帐号@财牛官方微博或者财牛投资微信公众号“财牛小伙伴”，财牛投资会在官方微博和微信公众号发布关于活动优惠券的相关活动。
+                        </p>
+                    </div>
+                </div>
+                <div class="lky-dashed-line"></div>
+            </div>
+            <div>
+                <div class="lky-mgt30">
+                    <p class="lky-qa lky-tptx">
+                        特别提醒：
+                    </p>
+                </div>
+                <div>
+                    <ol class="lky-ol3">
+                        <li>
+                            1.&nbsp;财牛投资将不定时地通过在本页面发布更新版本的方式修改使用规则。请用户定期访问本页面并查看最新版本。这些规则对用户均具有约束力。
+                        </li>
+                        <li>
+                            2.&nbsp;如果用户对使用规则或者在使用财牛投资软件/或相关服务过程中有任何疑问或需要任何帮助，请及时与财牛投资客服联系，联系电话：400-6666-801
+                        </li>
+                        <li>
+                            3.&nbsp;最终解释权归财牛投资所有。
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

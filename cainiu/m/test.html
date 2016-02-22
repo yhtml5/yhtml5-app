@@ -1,0 +1,170 @@
+<!doctype>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="配资炒股,财牛炒股,财牛投资,炒股APP,期货配资,股票配资,黄金白银,白银配资,融资杠杆,配资APP">
+   	<meta name="description" content="下载就送50元现金，股票期货产品丰富，A50、黄金白银、镍、原油等，手续费全行业最低。">
+    <meta property="og:description" content="下载就送50元现金，股票期货产品丰富，A50、黄金白银、镍、原油等，手续费全行业最低。" />
+	<meta property="og:image" content="http://www.cainiu.com/m/images/cainiu_logo.png" />
+	<title>财牛投资，如此简单!</title>
+	<style type="text/css">
+	*{margin: 0;padding: 0;font-size: 12px;}
+	.wrap{width: 100%;}
+	.section{width: 100%;max-width: 1080px;margin: 0 auto;position: relative;}
+	.section img{display: block;width: 100%;}
+	.button{position: absolute;width: 100%;height: 100%; }
+	.button a{display: block;width: 90%;margin: 0 auto;margin-top: 4.2%;}
+	.tele{width: 72%;min-height:35px;height: 20%;margin-left: 21%;margin-top:5%; border: 0;font-size: 18px;    z-index: 999;color:#333;}
+	.mark{padding: 30px 0;background-color: rgba(0,0,0,0.6);position: fixed;z-index: 99;width: 100%;top:0;display: none;height: 100%;}
+	.mark p{color: #fff;padding-left:20px;line-height: 25px;font-size: 16px; }
+	.mark img{display: block;position: absolute;top:20px;right: 10px;}
+	</style>
+</head>
+<body>
+	<p style="display:none"><img src="https://mmbiz.qlogo.cn/mmbiz/vB5dickM4Wl8HSup9crf7LN4uYs0aL4LlEa8DpSEdEE5YPKkAB3ueCG7uQl4hheXr6mtMY37chKnwVVbZsqdFjg/0?wx_fmt=jpeg">下载就送50元现金，股票期货产品丰富，A50、黄金白银、镍、原油等，手续费全行业最低。</p>
+	<div class="mark" id="marker">
+		<p>点击右上角菜单</p>
+		<p>在默认浏览器中打开并安装应用</p>
+		<img src="http://m.cainiu.com/images/jt.png" />
+	</div>
+	<div id="fullpage" class="wrap">
+		<div class="section section1">
+			<img src="images/hd0922_01.png">
+		</div>
+		<div class="section section2">
+			<div class="button">
+				<input type="tel" name="tele" placeholder="请输入手机号赢取大礼"  class="tele">
+				<a style="display:none" class="btn" href="javascript:;" onclick="sub()" ><img src="images/hd0922_btn.png"></a>
+			</div>
+			<img src="images/hd0922_02.png">
+		</div>
+		<div class="section section3">
+			<img src="images/hd0922_03.png">
+		</div>
+	</div>
+	<a style="display:none" key ="55eb8fc0efbfb0241247da95"  logo_size="124x47"  logo_type="enterprise"  href="http://www.anquan.org" ><script src="http://static.anquan.org/static/outer/js/aq_auth.js"></script></a>
+</body>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?9986aebce56271038e12c66cc4ae26ac";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="js/share.js"></script>
+<script type="text/javascript">
+	var oAget = navigator.userAgent.toLowerCase();	
+	var timer;
+	var parm=getQueryString('c');
+	// if(oAget.indexOf('mac') > -1 && is_weixn()){
+	// 	showMarker();
+	// }
+	$(function(){
+		$.ajax({
+			url:'/pro/ps',
+			type:'get',
+			data:{c:parm},
+			success:function(d){
+				//记录IP
+			}
+		});
+		
+		$('.tele').on('keyup',function(){
+			var len=$(this).val().length;
+			if(len==11){
+				$('.btn').show();
+			}else{
+				$('.btn').hide();
+			}
+		});
+	});
+
+	function toDownLoad(){
+      	    
+        if(oAget.indexOf('mac') > -1){
+            //ios系统
+            if(is_weixn()){
+            	//location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.luckin.magnifier&g_f=991653";
+            	window.location.hash=$('.tele').val();
+            	showMarker();
+            }else{
+            	 location.href = "http://www.cainiu.com/download.html";
+            }
+           
+        }else{
+              //安卓系统
+			if(is_weixn()){
+                location.href = "http://app.qq.com/#id=detail&appid=1104729543";
+            }else if(getQueryString('c')=='10dbfd'){
+				location.href = "http://www.cainiu.com/Cainiu_10dbfd.apk";
+			}else if(getQueryString('c')=='10d4b1'){
+				location.href = "http://www.cainiu.com/Cainiu_10d4b1.apk";
+			}else if(getQueryString('c')=='10d4ca'){
+				location.href = "http://www.cainiu.com/Cainiu_10d4ca.apk";
+			}else if(getQueryString('c')=='10d4e7'){
+				location.href = "http://www.cainiu.com/Cainiu_10d4e7.apk";
+			}else if(getQueryString('c')=='10d9e9'){
+				location.href = "http://www.cainiu.com/Cainiu_10d9e9.apk";
+			}else if(getQueryString('c')=='10db02'){
+				location.href = "http://www.cainiu.com/Cainiu_10db02.apk";
+			}else if(getQueryString('c')=='10dbd6'){
+				location.href = "http://www.cainiu.com/Cainiu_10dbd6.apk";
+			}else if(getQueryString('c')=='10dbe0'){
+				location.href = "http://www.cainiu.com/Cainiu_10dbe0.apk";
+			}else if(getQueryString('c')=='10dc68'){
+				location.href = "http://www.cainiu.com/Cainiu_10dc68.apk";
+			}else if(getQueryString('c')=='10dc69'){
+				location.href = "http://www.cainiu.com/Cainiu_10dc69.apk";
+			}else{		    		
+                location.href = "http://www.cainiu.com/download.html";
+            }
+
+
+        }
+        return false;
+
+	}
+	function is_weixn() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    
+	function sub(){
+		var t=$('input[name="tele"]').val();
+		$.ajax({
+			url:'/pro/ps',
+			type:'get',
+			data:{tele:t,c:parm},
+			success:function(d){
+				toDownLoad();
+			}
+		})
+	};
+
+//获取url参数
+function getQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]); return null;
+} 
+
+
+function showMarker(){
+	window.scrollTo(0,0);
+	$('#marker').show();
+}
+
+</script>
+</html>

@@ -1,0 +1,648 @@
+stock后台管理接口
+
+添加推广渠道
+http://stockm.cainiu.com/promote/324/addChannel
+参数：
+name        渠道名称
+company     公司名称
+tell        电话
+返回值：
+{"code":200,"msg":""}
+
+渠道列表
+http://stockm.cainiu.com/promote/325/getChannels
+参数：
+id          渠道ID
+name        渠道名称
+code        渠道编码
+createTimeBegin     创建时间范围开始
+createTimeEnd       创建时间范围结束
+page            页码
+rows            返回行数
+返回值：
+{
+"total":10,
+"rows":[{
+"id":"" //渠道ID
+"name":""   //渠道名称
+"code":""   //渠道编码
+"registCount":15 //注册用户数
+"bankCount":10 //绑定银行卡用户数
+"storeCount":10 //充值用户数
+"storeSum":200 //总充值金额
+"borrowCount":10 //配资人数
+"borrowSum":2000 //总配资金额
+"ratioOneDay":10 //用户次日留存数量
+"ratioThereDay":10 //3日留存数量
+"ratioSevenDay":10 //7日留存数量
+"ratioMouth":10 //1月留存数量
+"createDate":"2015-06-06 10:00:00"
+}]
+}
+
+渠道统计详细，按天统计数据
+http://stockm.cainiu.com/promote/326/channelStatisticsDetail
+参数：
+channelId  渠道ID  必须
+startTime   创建时间范围开始
+endTime     创建时间范围结束
+page        页码
+rows        返回行数
+返回值：
+{
+"total":10,
+"rows":[{
+"channelId":10
+"statisticsDate":"2015-06-06" //统计日期
+"registCount":10 //新注册用户数
+"loginCount":10 //登陆用户数，包含新注册用户
+"storeCount":10 //充值用户数
+"storeSum":10 //总充值金额
+"borrowCount":10 //配资人数
+"borrowSum":10 //总配资金额
+"retainOneDay":10 //用户次日留存数量
+"retainThereDay":10 //3日留存数量
+"retainSevenDay":10 //7日留存数量
+"retainMouth":10 //1月留存数量
+}]
+}
+
+
+合作商户列表
+http://stockm.cainiu.com/promote/327/getPromoteCompanys
+参数：
+id       ID
+name        商户名称
+type        合作类型
+status      商户状态
+startTime   创建时间范围开始
+endTime     创建时间范围结束
+page        页码
+rows        返回行数
+返回值：
+{
+"total":10,
+"rows":[{
+id;
+name;
+type; //CPD CPM等
+promoteId; //推广员ID
+validity; //有效期，单位：天
+status; //状态，0未审核  1已通过  9未通过
+regsCount;  //注册个数
+storeCount;// 充值人数
+storeAmt;//总充值
+borrowAmtSum;//总配资
+borrowAmtCount;//总配资人数
+userBankCount;//绑定银行卡人个数
+retainCountFor1Day;//用户存留个数 次日
+retainCountFor3Day;//用户存留个数 3天
+retainCountFor7Day;//用户存留个数 7天
+retainCountFor30Day;// 用户存留个数 当月天数
+}]
+}
+
+添加合作商户
+http://stockm.cainiu.com/promote/328/createCompany
+参数：
+companyName     商户名称
+type            合作类型
+validity        有效期，单位：天
+startTime       生效时间
+返回值：
+{"code":200,"msg":""}
+{"code":500,"msg":"商户名称不能为空"}
+
+
+商户审核
+http://stockm.cainiu.com/promote/330/reviewCompany
+参数：
+companyId
+status    审核状态 0未审核  1已通过  9未通过
+返回值：
+{"code":200,"msg":""}
+{"code":500,"msg":"商户ID不能为空"}
+
+推广员推广信息列表
+http://stockm.cainiu.com/promote/329/promoteStatistics
+参数：
+promoteId 推广员ID
+promoteNick 推广员昵称
+page        页码
+rows        返回行数
+返回值：
+{
+"total":10,
+"rows":[{
+promoteId;//推广员ID
+promoteNick;    //推广员名称
+regsCount;  //注册个数
+borrowAmtSum;   //总配资
+borrowAmtCount; //总配资人数
+storeAmtCount;  //充值人数
+storeAmtSum;    //总充值
+userBankCount;  // 绑定银行卡人个数
+retainCountFor1Day; //用户存留个数 次日
+retainCountFor3Day; //用户存留个数 3天
+retainCountFor7Day; //用户存留个数 7天
+retainCountFor30Day;    //用户存留个数 当月天数
+retainRate; //用户存留率
+}]
+}
+
+
+推广员推广信息详细
+http://stockm.cainiu.com/promote/331/promoteDetails
+参数：
+promoteId
+userId
+userNick
+registStartTime
+registEndTime
+返回值：
+{
+"total":10,
+"rows":[{
+id;
+userId; //用户ID
+promoteId; //推广员ID
+promoteNick; //推广员昵称，显示方便使用
+channelId; //渠道ID
+createDate;
+modifyDate;
+private Double borrowAmt;总配资
+private Double storeAmt;    //总充值
+private String nickName;//被邀请用户昵称
+}]
+}
+
+
+
+股票市场列表
+http://192.168.1.88:8080/adminstock/market/{authid}/markets
+参数：
+marketId    市场ID
+code        市场编码
+name        市场名称
+page        页码
+rows        返回行数
+返回值：
+{
+"rows": [{
+"createDate": "2015-07-02 15:27:42",    //创建时间
+"id": 1,
+"marketCode": "XSHG",                   //市场编码
+"marketName": "上海证券交易所",            //市场名称
+"modifyDate": "2015-07-02 20:30:24",
+"statusDesc": "未开市"
+},
+{
+"createDate": "2015-07-02 15:27:42",
+"id": 2,
+"marketCode": "XSHE",
+"marketName": "深圳证券交易所",
+"modifyDate": "2015-07-02 20:30:24",
+"statusDesc": "未开市"
+}],
+"total": 2
+}
+
+股票市场详情
+http://192.168.1.88:8080/adminstock/market/{authid}/marketInfo
+参数：
+marketId 市场ID
+返回值：
+成功  {
+"createDate": "2015-07-02 15:27:42",
+"id": 1,
+"marketCode": "XSHG",
+"marketName": "上海证券交易所",
+"modifyDate": "2015-07-02 20:30:24",
+"status": "{\"data\":[{\"desc\":\"未开市\",\"status\":0,\"end_time\":\"09:15:00\",\"start_time\":\"00:00:00\"},{\"desc\":\"集合竞价\",\"status\":0,\"end_time\":\"09:30:00\",\"start_time\":\"09:15:00\"},{\"desc\":\"开市\",\"status\":3,\"end_time\":\"11:29:30\",\"start_time\":\"09:30:00\"},{\"desc\":\"午休\",\"status\":0,\"end_time\":\"13:00:00\",\"start_time\":\"11:29:30\"},{\"desc\":\"开市\",\"status\":3,\"end_time\":\"14:50:00\",\"start_time\":\"13:00:00\"},{\"desc\":\"开市\",\"status\":1,\"end_time\":\"14:56:30\",\"start_time\":\"14:50:00\"},{\"desc\":\"闭市\",\"status\":0,\"end_time\":\"23:59:59\",\"start_time\":\"14:56:30\"}],\"date\":\"2015-07-02\"}",
+"statusOfTimeStamp": "{\"data\":[{\"desc\":\"未开市\",\"end_time\":1435799700000,\"status\":0,\"start_time\":1435766400000},{\"desc\":\"集合竞价\",\"end_time\":1435800600000,\"status\":0,\"start_time\":1435799700000},{\"desc\":\"开市\",\"end_time\":1435807770000,\"status\":3,\"start_time\":1435800600000},{\"desc\":\"午休\",\"end_time\":1435813200000,\"status\":0,\"start_time\":1435807770000},{\"desc\":\"开市\",\"end_time\":1435819800000,\"status\":3,\"start_time\":1435813200000},{\"desc\":\"开市\",\"end_time\":1435820190000,\"status\":1,\"start_time\":1435819800000},{\"desc\":\"闭市\",\"end_time\":1435885199000,\"status\":0,\"start_time\":1435820190000}],\"date\":\"2015-07-02\"}"
+}
+
+失败：{"total":0,"code":500,"msg":"市场ID不能为空","rows":[]}
+
+
+股票市场更改
+http://192.168.1.88:8080/adminstock/market/{authid}/updateMarketInfo
+参数：
+marketId        市场ID
+marketName      市场名称
+marketCode      市场编码
+status          0标示禁售（当天），1为可售（当天）
+返回值：
+{"total":0,"code":500,"msg":"市场ID不能为空","rows":[]}
+{"total":0,"code":200,"msg":"","rows":[]}
+
+
+
+股票市场添加
+http://192.168.1.88:8080/adminstock/market/{authid}/addMarket
+参数：
+marketName      市场名称
+marketCode      市场编码
+status          0标示禁售（当天），1为可售（当天）
+返回值：
+{"total":0,"code":500,"msg":"市场名称和市场代码必须","rows":[]}
+{"total":0,"code":200,"msg":"","rows":[]}
+
+
+
+股票产品 列表
+http://192.168.1.88:8080/adminstock/market/{authid}/stockInfos
+参数：搜索用，可空
+stockId     股票ID
+stockCode   股票代码
+stockName   股票名称
+status      状态
+createStartTime 创建时间段开始
+createEndTime   创建时间段结束
+page        页码
+rows        行数
+返回值：
+{
+"rows": [{
+"createDate": "2015-07-02 19:37:11",    //创建时间
+"id": 768,                  //ID
+"jianPin": null,
+"marketId": 2,              //所属市场
+"modifyDate": "2015-07-02 19:37:11",
+"openPrice": null,
+"preClosePrice": null,
+"quanPin": null,
+"status": 0,                //股票状态
+"stockCode": "000001",      //股票代码
+"stockName": "平安银行",    //股票名称
+"typeCode": "XSHE.ESA.M"    //股票类型
+}......],
+"total": 1232
+}
+股票状态说明：
+0   可售
+1   黑名单
+2   名称过滤
+3   涨跌幅过滤
+4   失效（被管理员删除）
+5   停牌
+6   触及涨停
+7   非可买股中
+8   连续涨停
+
+
+股票详细
+http://192.168.1.88:8080/adminstock/market/{authid}/stockInfo
+参数：
+stockId 股票ID
+返回值：
+{
+"createDate": "2015-07-02 19:37:12",
+"id": 774,
+"jianPin": null,
+"marketId": 2,
+"modifyDate": "2015-07-02 19:37:12",
+"openPrice": null,
+"preClosePrice": null,
+"quanPin": null,
+"status": 0,
+"stockCode": "000008",
+"stockName": "神州高铁",
+"typeCode": "XSHE.ESA.M"
+}
+
+
+修改股票信息，主要是修改股票状态
+http://192.168.1.88:8080/adminstock/market/{authid}/updateStockInfo
+参数：
+id      股票ID
+stockName       股票名称
+preClosePrice   昨收价
+openPrice       今开价
+status          状态 0 可售 1 黑名单 2 名称过滤 3 涨跌幅过滤 4 失效（被管理员删除） 5 停牌 6 触及涨停 7 非可买股中 8 连续涨停
+返回值：
+{"total":0,"code":500,"msg":"市场ID不能为空","rows":[]}
+{"total":0,"code":200,"msg":"修改成功","rows":[]}
+
+添加到黑名单，按查询条件添加
+http://192.168.1.88:8080/adminstock/market/{authid}/addBlakBySeach
+参数：搜索用，可空
+stockId     股票ID
+stockCode   股票代码
+stockName   股票名称
+status      状态
+createStartTime 创建时间段开始
+createEndTime   创建时间段结束
+返回值：
+{"total":0,"code":200,"msg":"添加黑名单成功","rows":[]}
+
+
+添加到黑名单，按列表添加
+http://192.168.1.88:8080/adminstock/market/{authid}/addBlack
+参数：
+stockIds  股票ID列表，用,分隔
+返回值：
+{"total":0,"code":200,"msg":"添加黑名单成功","rows":[]}
+
+
+
+
+重置市场节假日
+http://192.168.1.88:8080/adminstock/market/{authid}/resetLimitDate
+参数：
+marketId 市场ID
+返回值：
+{"total":0,"code":200,"msg":"市场节日重置成功","rows":[]}
+
+
+
+节假日列表
+http://192.168.1.88:8080/adminstock/market/{authid}/tradeLimits
+参数：
+marketId
+startTime
+endTime
+page
+rows
+返回值：
+{
+"rows": [{
+"createDate": "2015-07-02 19:52:06",
+"endLimitTime": "2015-01-01 23:59:59",      //限制结束时间
+"id": 1,
+"marketId": 1,
+"marketName": "上海证券交易所",
+"modifyDate": "2015-07-02 19:52:06",
+"startLimitTime": "2015-01-01 00:00:00" //限制开始时间
+},
+.....],
+"total": 52
+}
+
+
+删除市场
+http://192.168.1.88:8080/adminstock/market/{authid}/deleteMarket
+参数：
+marketIds  多个用,分隔
+返回值：
+{"total":0,"code":200,"msg":"删除市场成功","rows":[]}
+
+
+添加股票
+http://192.168.1.88:8080/adminstock/market/{authid}/addStockInfo
+参数：
+typeCode    股票类型代码
+stockName   股票名称
+stockCode   股票代码，有重复时添加失败
+返回值：
+{"total":0,"code":200,"msg":"添加股票成功","rows":[]}
+备注
+股票类型代码
+上海A股  XSHG.ESA.M
+深圳A股     XSHE.ESA.M
+暂时只支持这两种股票的添加
+
+移出黑名单
+http://192.168.1.88:8080/adminstock/market/{authid}/removeBlack
+参数：
+stockIds  股票ID列表，用,分隔
+返回值：
+{"total":0,"code":200,"msg":"移出黑名单成功","rows":[]}
+
+添加节假日
+http://192.168.1.88:8080/adminstock/market/350/addTradeLimit
+参数：
+marketId
+limitStartDate 精确到天 yyyy-MM-dd
+limitEndDate    精确到天 yyyy-MM-dd 添加一天时 limitEndDate与limitStartDate相同
+返回值：
+{"total":0,"code":200,"msg":"添加限定时间成功","rows":[]}
+
+删除节假日
+http://192.168.1.88:8080/adminstock/market/350/deleteTradeLimit
+参数：
+id
+返回值：
+{"total":0,"code":200,"msg":"删除成功","rows":[]}
+
+股票预警
+http://192.168.1.88:8080/adminstock/market//{authid}/warnList
+参数：搜索用，可空
+stockId     股票ID
+stockCode   股票代码
+stockName   股票名称
+createStartTime 创建时间段开始
+createEndTime   创建时间段结束
+page        页码
+rows        行数
+返回值：
+{
+"rows": [{
+"createDate": "2015-07-02 19:37:11",    //创建时间
+"id": 768,                  //ID
+"jianPin": null,
+"marketId": 2,              //所属市场
+"modifyDate": "2015-07-02 19:37:11",
+"openPrice": null,
+"preClosePrice": null,
+"quanPin": null,
+"status": 0,                //股票状态
+"stockCode": "000001",      //股票代码
+"stockName": "平安银行",    //股票名称
+"typeCode": "XSHE.ESA.M"    //股票类型
+}......],
+"total": 1232
+}
+
+
+
+
+
+期货列表
+/adminstock/market//452/futuresInfos
+参数：搜索用，可空
+marketId        市场ID
+futuresId       期货ID
+futuresCode     期货合约
+futuresType     期货类型   黄金au  白银ag  股指IF
+futuresName     期货名称
+status          状态 0 正常  1不可交易
+createStartTime 创建时间段开始
+createEndTime   创建时间段结束
+page        页码
+rows        行数
+返回值：
+{
+"rows": [{
+"code": "au1512",
+"createDate": "2015-07-23 16:36:32",
+"id": 1,
+"marketId": 3,
+"marketName": "上海期货交易所",
+"modifyDate": "2015-07-23 16:36:33",
+"name": "黄金",
+"status": 0,
+"type": "au"
+}.......],
+"total": 5
+}
+
+
+添加期货产品到黑名单
+/adminstock/market//452/addFuturesBlack
+参数：
+futuresIds   期货产品ID，多个使用,分隔
+返回值：
+{"total":0,"code":200,"msg":"设置期货不可买成功","rows":[]}
+
+
+期货产品从黑名单中移出（设置为可交易）
+/adminstock/market//452/removeFuturesBlack
+参数：
+futuresIds   期货产品ID，多个使用,分隔
+返回值：
+{"total":0,"code":200,"msg":"设置期货可买成功","rows":[]}
+
+期货详情
+/adminstock/market//452/futuresInfo
+参数：
+futuresId   期货产品ID，不可控
+返回值：
+{
+"code": "au1512",
+"createDate": "2015-07-23 16:36:32",
+"id": 1,
+"marketId": 3,
+"marketName": "上海期货交易所",
+"modifyDate": "2015-07-23 16:36:33",
+"name": "黄金",
+"status": 0,
+"type": "au"
+}
+
+
+更新期货——暂时只有更新期货状态
+/adminstock/market//452/updateFuturesInfo
+参数：
+futuresId   期货产品ID
+status      0可交易 1不可交易
+返回值：
+{"total":0,"code":200,"msg":"更新期货状态成功","rows":[]}
+
+
+
+添加期货
+/adminstock/market//452/addFuturesInfo
+参数：
+futureName   期货产品名称
+futuresType  期货类型
+futuresCode  合约代码
+marketId     市场ID
+返回值：
+{"total":0,"code":200,"msg":"添加期货成功","rows":[]}
+
+
+
+
+删除期货产品
+/adminstock/market//452/deleteFuturesInfos
+参数：
+futuresIds  期货产品ID，多个使用,分隔
+返回值：
+{"total":0,"code":200,"msg":"删除期货成功","rows":[]}
+
+
+
+
+
+
+版本上传
+/adminstock/appVersion/125/upload
+参数：
+file    上传文件
+name    文件名
+desc    版本说明
+version 版本号
+返回值：
+{"total":0,"code":200,"msg":"新版本上传成功","rows":[]}
+
+
+
+历史版本列表
+/adminstock/appVersion/158/appVersions
+参数：
+page
+rows
+返回值：
+{
+"rows": [{
+"appDesc": "测试1111",
+"appVersion": "1.0.0_test_alpha",
+"createDate": "2015-07-29 11:52:03",
+"id": "2",
+"modifyDate": "2015-07-29 11:52:03"
+}],
+"total": 1
+}
+
+删除历史版本
+/adminstock/appVersion/158/delete
+参数：
+id
+返回值：
+{"total":0,"code":200,"msg":"删除成功","rows":[]}
+
+
+
+
+
+
+
+推广员用户详细信息
+/adminstock/promote/123/promoteUserDetail?userId=
+参数：userId    必须
+返回值：
+失败：{"total":0,"code":403,"msg":"用户不是推广员","rows":[]}
+成功
+{
+"commissions": 10.8,        //一层佣金
+"commissionsTotal": 10.8,   //总佣金
+"consumerCount": 3,         //消费用户数
+"consumerHands": 329,       //消费手数
+"consumerSum": null,
+"drawCommissions": 0,       //提现金额
+"monitorDate": "2015-11-25 11:03:00",   //升级时间
+"promoteLevel": 1,          //推广等级
+"rates": {                  //佣金比例
+"al": 0,
+"stock": 0,
+"if": 0,
+"ru": 0.6,
+"ni": 0.4,
+"ag": 1,
+"cu": 0.5,
+"SR": 0,
+"bu": 1,
+"rb": 0,
+"au": 2,
+},
+"registCount": 16,      //下线人数
+"subCommissions": 0,    //二级佣金
+"subConsumerCount": 1,  //二级消费人数
+"subConsumerHands": 299,    //二级消费手数
+"subRates": {               //二级佣金比例
+"al": 1,
+"stock": 0,
+"if": 0,
+"ru": 0.3,
+"ni": 0.2,
+"ag": 0.5,
+"cu": 0.3,
+"SR": 0,
+"bu": 0.5,
+"rb": 1.5,
+"au": 1
+},
+"subRegistCount": 5,        //二级下线人数
+"userId": 1000498
+}
