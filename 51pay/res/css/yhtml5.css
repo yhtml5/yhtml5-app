@@ -41,6 +41,10 @@
 	border: 0px;
 }
 
+.fw-bd1 {
+	border: solid 1px #337ab7;
+}
+
 .fw-colorFF5151 {
 	color: #FF5151;
 }

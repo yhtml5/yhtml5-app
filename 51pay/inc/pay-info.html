@@ -165,11 +165,12 @@
 				</div>
 				<div class="panel-footer">
 					<button class="btn btn-default pull-left">&larr;上一步</button>
-					<button class="btn btn-danger pull-right">提交订单</button>
+					<button class="btn btn-danger pull-right js-pay-detail">提交订单</button>
 				</div>
 			</div>
 		</div>
-		<div id="fw-pay-game" class="container fw-pay-info">
+
+		<div id="fw-pay-game" class="container fw-pay-info fw-displayn">
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h3 class="pull-left">植物大战僵尸充值</h3>
@@ -202,7 +203,7 @@
 					</form>
 				</div>
 				<div class="panel-footer">
-					<button class="btn btn-default pull-left">&larr;上一步</button>
+					<button class="btn btn-default pull-left js-pay-info">&larr;上一步</button>
 					<button class="btn btn-danger pull-right">提交订单</button>
 				</div>
 			</div>
@@ -339,6 +340,22 @@
 				</div>
 			</div>
 		</footer>
+		<script>
+			$(function() {
+				$(".js-pay-detail").click(function() {
+					$("#fw-pay-overseas").fadeOut(500)
+					setTimeout(function() {
+						$("#fw-pay-game").fadeIn(500)
+					}, 600);
+				})
+				$(".js-pay-info").click(function() {
+					$("#fw-pay-game").fadeOut(500)
+					setTimeout(function() {
+						$("#fw-pay-overseas").fadeIn(500)
+					}, 600);
+				})
+			})
+		</script>
 	</body>
 
 </html>
