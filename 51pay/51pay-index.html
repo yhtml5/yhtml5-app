@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 
 	<head>
 
@@ -22,17 +22,12 @@
 		<meta name="format-detection" content="telephone=no">
 		<link rel="shortcut icon" href="http://static.jubaobar.cn/res/img/logo/logo2.png" type="image/x-icon" />
 		<link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
-		<!--<link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">-->
-		<!--<link rel="stylesheet" type="text/css" href="http://static.jubaobar.cn/res/css/yhtml5.css" />-->
-		<!--线上css-->
-		<link rel="stylesheet" type="text/css" href="res/css/yhtml5.css" />
-		<!--<link rel="stylesheet" type="text/css" href="res/css/index.css" />-->
-		<!--本地css-->
+		<link rel="stylesheet" type="text/css" href="http://static.jubaobar.cn/res/css/yhtml5.css" />
+		<link rel="stylesheet" type="text/css" href="http://static.jubaobar.cn/res/css/yhtml15.css" />
+		<link rel="stylesheet" type="text/css" href="res/css/yht1ml5.css" />
+		<!--本地css,测试后删除-->
 		<script src="https://cdn.bootcss.com/jquery/1.12.0/jquery.min.js"></script>
 		<script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-		<!--<script src="res/js/yhtml5.js"></script>
-		<script src="res/js/index.js"></script>
-		<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>-->
 		<!--[if lt IE 9]>
         <script src="js/html5shiv.min.js"></script>
         <script src="js/respond.min.js"></script>
@@ -116,12 +111,18 @@
 					</div>
 				</div>
 			</nav>
+			<script type="text/javascript">
+				$(function() {
+					$("[data-toggle='popover']").popover();
+				});
+			</script>
 			<ul class="fw-fixed-bar">
 				<li class="fw-qq">
 					<a><i class="iconfont">&#xe606;</i></a>
 				</li>
-				<li class="fw-call">
-					<a><i class="iconfont">&#xe607;</i></a>
+				<li class="fw-call" data-toggle="popover" data-placement="left" data-trigger="hover" data-content="123456789">
+					<a href="#">
+						<i class="iconfont">&#xe607;</i></a>
 				</li>
 				<li class="go-top">
 					<a class="" href="#header-top">
