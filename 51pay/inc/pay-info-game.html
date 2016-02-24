@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 
 	<head>
 
@@ -11,8 +11,8 @@
 		<meta http-equiv="expires" content="0">
 		<meta http-equiv="cache-control" content="no-cache">
 		<!-- 永不缓存，测试结束后将上面3个meta删除  -->
-		<meta http-equiv="Cache-Control" content="no-transform" />
-		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta http-equiv="Cache-Control" content="no-transform">
+		<meta http-equiv="Cache-Control" content="no-siteapp">
 		<title>51代充官网</title>
 		<meta name="author" content="yhtml5.com" />
 		<meta name="keywords" content="代充、官网">
@@ -20,23 +20,18 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="default">
 		<meta name="format-detection" content="telephone=no">
-		<link rel="shortcut icon" href="http://static.jubaobar.cn/res/img/logo/logo2.png" type="image/x-icon" />
-		<link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
-		<!--<link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">-->
-		<!--<link rel="stylesheet" type="text/css" href="http://static.jubaobar.cn/res/css/yhtml5.css" />-->
-		<!--线上css-->
-		<link rel="stylesheet" type="text/css" href="../res/css/yhtml5.css" />
-		<!--<link rel="stylesheet" type="text/css" href="res/css/index.css" />-->
-		<!--本地css-->
-		<script src="https://cdn.bootcss.com/jquery/1.12.0/jquery.min.js"></script>
-		<script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-		<!--<script src="http://static.jubaobar.cn/res/js/pay-info.js"></script>-->
-		<!--线上js-->
-		<script src="../res/js/pay-info.js"></script>
-		<!--本地js-->
-		<!--<script src="res/js/yhtml5.js"></script>
-		<script src="res/js/index.js"></script>
-		<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>-->
+		<link rel="shortcut icon" href="http://static.jubaobar.cn/res/img/logo/logo2.png" type="image/x-icon">
+		<link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+		<!--<link href="http://static.jubaobar.cn/framework/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">-->
+		<!--浏览器同源策略,正式环境开启,同时删除上一条link-->
+		<link rel="stylesheet" type="text/css" href="http://static.jubaobar.cn/res/css/yhtml5.css">
+		<link rel="stylesheet" type="text/css" href="../res/css/yhtml5.css">
+		<!--本地css,测试后删除-->
+		<script src="http://static.jubaobar.cn/framework/jquery/jquery-1.11.3.min.js"></script>
+		<script src="http://static.jubaobar.cn/framework/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="http://static.jubaobar.cn/res/js/yhtml5.js"></script>
+		<script src="../res/js/yhtml5.js"></script>
+		<!--本地js,测试后删除-->
 		<!--[if lt IE 9]>
         <script src="js/html5shiv.min.js"></script>
         <script src="js/respond.min.js"></script>
@@ -52,7 +47,7 @@
 			<div class="container hidden-xs">
 				<div class="row">
 					<div class="col-sm-4 col-xs-12">
-						<a href="../51pay-index.html" class="fw-top-bar-logo center-block" onclick="">
+						<a href="51pay-index.html" class="fw-top-bar-logo center-block" onclick="">
 							<img src="http://static.jubaobar.cn/res/img/logo/51logoHD.png" class="fw-wt80" alt="51代充" title="51代充">
 						</a>
 					</div>
@@ -67,8 +62,13 @@
 						</div>
 					</div>
 					<div class="col-sm-2">
-						<div class="fw-top-bar-login">
-							<a href="login.html">[登录</a>&nbsp;/&nbsp;<a href="http://jubaobar.cn">注册]</a>
+						<div class="tab-content">
+							<div class="fw-top-bar-login tab-pane fade in active" id="sign-up">
+								<a href="#sign-in" data-toggle="tab">[登录</a>&nbsp;/&nbsp;<a href="inc/login.html">注册]</a>
+							</div>
+							<div class="fw-top-bar-login tab-pane fade" id="sign-in">
+								<a href="inc/login.html">[叶叶叶</a>&nbsp;/&nbsp;<a href="#sign-up" data-toggle="tab">登出]</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -84,16 +84,15 @@
 						</button>
 						<div class="pull-right fw-user-nav clearfix visible-xs">
 							<ul class="nav nav-login">
-								<li><a href="login.html">登陆</a></li>
+								<li><a href="inc/login.html">登陆</a></li>
 								<li><a href="">注册</a></li>
 							</ul>
 						</div>
 						<div class="navbar-brand visible-xs fw-logo2">
-							<a href="../51pay-index.html">
+							<a href="51pay-index.html">
 								<img src="http://static.jubaobar.cn/res/img/logo/51logo2.png" class="fw-wt100" alt="51代充" title="51代充">
 							</a>
 						</div>
-						<!--<a class="navbar-brand visible-xs text-primary" href="#">51代充官网</a>-->
 					</div>
 				</div>
 				<div class="collapse navbar-collapse" id="navbarCollapse">
@@ -121,8 +120,9 @@
 				<li class="fw-qq">
 					<a><i class="iconfont">&#xe606;</i></a>
 				</li>
-				<li class="fw-call">
-					<a><i class="iconfont">&#xe607;</i></a>
+				<li class="fw-call" data-toggle="popover" data-placement="left" data-trigger="hover" data-content="123456789">
+					<a href="#">
+						<i class="iconfont">&#xe607;</i></a>
 				</li>
 				<li class="go-top">
 					<a class="" href="#header-top">
@@ -130,10 +130,6 @@
 					</a>
 				</li>
 			</ul>
-			<!--<ul class="fw-fixed-bar">
-			<div class="fw-qq-detail">11</div>
-			<div class="fw-call-detail">11</div>
-		</ul>-->
 		</header>
 		<div class="container fw-pay-info fw-mh500">
 			<div id="fw-pay-game" class="panel panel-default js-pay-info">
@@ -197,7 +193,7 @@
 						<div class="tab-pane fade" id="alipay">
 							<br />
 							<div class="">
-								<input type="checkbox">
+								<input type="checkbox" checked="checked">
 								<img src="http://static.jubaobar.cn/res/img/logo/alipaylogo1.png" />
 							</div>
 						</div>
@@ -213,7 +209,7 @@
 		<footer class="footer">
 			<div class="container">
 				<div class="fw-about">
-					<span><a href="http://jubaobar.cn" target="_blank">关于我们</a></span>丨
+					<span><a href="inc/about-us.html" target="_blank">关于我们</a></span>丨
 					<span><a href="http://jubaobar.cn" target="_blank">联系我们</a></span>丨
 					<span><a href="http://jubaobar.cn" target="_blank">加入我们</a></span>丨
 					<span><a href="http://jubaobar.cn" target="_blank">隐私条款</a></span>丨

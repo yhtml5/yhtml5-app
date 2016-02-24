@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 
 	<head>
 
@@ -11,8 +11,8 @@
 		<meta http-equiv="expires" content="0">
 		<meta http-equiv="cache-control" content="no-cache">
 		<!-- 永不缓存，测试结束后将上面3个meta删除  -->
-		<meta http-equiv="Cache-Control" content="no-transform" />
-		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta http-equiv="Cache-Control" content="no-transform">
+		<meta http-equiv="Cache-Control" content="no-siteapp">
 		<title>51代充官网</title>
 		<meta name="author" content="yhtml5.com" />
 		<meta name="keywords" content="代充、官网">
@@ -20,18 +20,18 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="default">
 		<meta name="format-detection" content="telephone=no">
-		<link rel="shortcut icon" href="http://static.jubaobar.cn/res/img/logo/logo2.png" type="image/x-icon" />
-		<link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
-		<!--<link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">-->
-		<!--<link rel="stylesheet" type="text/css" href="http://static.jubaobar.cn/res/css/yhtml5.css" />-->
-		<!--线上css-->
-		<link rel="stylesheet" type="text/css" href="../res/css/yhtml5.css" />
-		<!--本地css-->
-		<script src="https://cdn.bootcss.com/jquery/1.12.0/jquery.min.js"></script>
-		<script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-		<!--<script src="res/js/yhtml5.js"></script>
-		<script src="res/js/index.js"></script>
-		<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>-->
+		<link rel="shortcut icon" href="http://static.jubaobar.cn/res/img/logo/logo2.png" type="image/x-icon">
+		<link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+		<!--<link href="http://static.jubaobar.cn/framework/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">-->
+		<!--浏览器同源策略,正式环境开启,同时删除上一条link-->
+		<link rel="stylesheet" type="text/css" href="http://static.jubaobar.cn/res/css/yhtml5.css">
+		<link rel="stylesheet" type="text/css" href="../res/css/yhtml5.css">
+		<!--本地css,测试后删除-->
+		<script src="http://static.jubaobar.cn/framework/jquery/jquery-1.11.3.min.js"></script>
+		<script src="http://static.jubaobar.cn/framework/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="http://static.jubaobar.cn/res/js/yhtml5.js"></script>
+		<script src="../res/js/yhtml5.js"></script>
+		<!--本地js,测试后删除-->
 		<!--[if lt IE 9]>
         <script src="js/html5shiv.min.js"></script>
         <script src="js/respond.min.js"></script>
@@ -62,8 +62,13 @@
 						</div>
 					</div>
 					<div class="col-sm-2">
-						<div class="fw-top-bar-login">
-							<a href="inc/login.html">[登录</a>&nbsp;/&nbsp;<a href="http://jubaobar.cn">注册]</a>
+						<div class="tab-content">
+							<div class="fw-top-bar-login tab-pane fade in active" id="sign-up">
+								<a href="#sign-in" data-toggle="tab">[登录</a>&nbsp;/&nbsp;<a href="inc/login.html">注册]</a>
+							</div>
+							<div class="fw-top-bar-login tab-pane fade" id="sign-in">
+								<a href="inc/login.html">[叶叶叶</a>&nbsp;/&nbsp;<a href="#sign-up" data-toggle="tab">登出]</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -88,7 +93,6 @@
 								<img src="http://static.jubaobar.cn/res/img/logo/51logo2.png" class="fw-wt100" alt="51代充" title="51代充">
 							</a>
 						</div>
-						<!--<a class="navbar-brand visible-xs text-primary" href="#">51代充官网</a>-->
 					</div>
 				</div>
 				<div class="collapse navbar-collapse" id="navbarCollapse">
@@ -101,9 +105,9 @@
 									</div>
 								</form>
 							</li>
-							<li><a href="http://jubaobar.cn" target="_blank" onclick="">首页</a></li>
+							<li class="active"><a href="http://jubaobar.cn" target="_blank" onclick="">首页</a></li>
 							<li><a href="http://jubaobar.cn" target="_blank" onclick="">海外购代充</a></li>
-							<li class="active"><a href="http://jubaobar.cn" target="_blank" onclick="">游戏代充</a></li>
+							<li><a href="http://jubaobar.cn" target="_blank" onclick="">游戏代充</a></li>
 							<li><a href="http://jubaobar.cn" target="_blank" onclick="">苹果代充</a></li>
 							<li><a href="http://jubaobar.cn" target="_blank" onclick="">话费代充</a></li>
 							<li><a href="http://jubaobar.cn" target="_blank" onclick="">QQ代充</a></li>
@@ -112,6 +116,20 @@
 					</div>
 				</div>
 			</nav>
+			<ul class="fw-fixed-bar">
+				<li class="fw-qq">
+					<a><i class="iconfont">&#xe606;</i></a>
+				</li>
+				<li class="fw-call" data-toggle="popover" data-placement="left" data-trigger="hover" data-content="123456789">
+					<a href="#">
+						<i class="iconfont">&#xe607;</i></a>
+				</li>
+				<li class="go-top">
+					<a class="" href="#header-top">
+						<i class="iconfont">&#xe604;</i>
+					</a>
+				</li>
+			</ul>
 		</header>
 		<div class="container fw-mg20">
 			<div class="panel panel-default">
@@ -135,184 +153,216 @@
 					</ul>
 				</div>
 			</div>
-
-			<div class="container fw-container-main tab-content">
-				<div class="row fw-main-show-all tab-pane fade in active" id="brandall">
-					<div class="col-sm-3 col-xs-6 fw-main-show">
-						<img src="http://static.jubaobar.cn/res/img/show/daigoupic2.jpg" class="img-responsive " alt="剑灵">
-						<a href="http://jubaobar.cn" class="fw-font-goods">【剑灵】游戏金币充值，44金金币金币</a>
-						<div class="fw-sale">
-							<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
-							<button type="button" class="btn btn-danger pull-right">抢购</button>
+		</div>
+		<div class="container">
+			<div class="fw-body2 tab-content">
+				<div class="row tab-pane fade in active" id="brandall">
+					<div class="col-sm-4 col-md-3 col-xs-12">
+						<div class="thumbnail">
+							<img src="http://static.jubaobar.cn/res/img/show/daigoupic2.jpg" class="img-responsive " alt="剑灵">
+							<a href="http://jubaobar.cn" class="fw-font-goods">剑灵游戏金币充值，44金金币金币44金金币金币44金金币金币44金金币金币44金金币金币44金金币金币44金金币金币44金金币金币</a>
+							<div class="fw-sale">
+								<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
+								<a href="inc/pay-info.html" type="button" class="btn btn-danger pull-right">抢购</a>
+							</div>
 						</div>
 					</div>
-					<div class="col-sm-3 col-xs-6 fw-main-show">
-						<img src="http://static.jubaobar.cn/res/img/show/daigoupic2.jpg" class="img-responsive " alt="剑灵">
-						<a href="http://jubaobar.cn" class="fw-font-goods">【剑灵】游戏金币充值，44金金币金币</a>
-						<div class="fw-sale">
-							<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
-							<button type="button" class="btn btn-danger pull-right">抢购</button>
+					<div class="col-sm-4 col-md-3 col-xs-12">
+						<div class="thumbnail">
+							<img src="http://static.jubaobar.cn/res/img/show/daigoupic2.jpg" class="img-responsive " alt="剑灵">
+							<a href="http://jubaobar.cn" class="fw-font-goods">游戏金币充值，44金金币金币</a>
+							<div class="fw-sale">
+								<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
+								<button type="button" class="btn btn-danger pull-right">抢购</button>
+							</div>
 						</div>
 					</div>
-					<div class="col-sm-3 col-xs-6 fw-main-show">
-						<img src="http://static.jubaobar.cn/res/img/show/daigoupic2.jpg" class="img-responsive " alt="剑灵">
-						<a href="http://jubaobar.cn" class="fw-font-goods">【剑灵】游戏金币充值，44金金币金币</a>
-						<div class="fw-sale">
-							<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
-							<button type="button" class="btn btn-danger pull-right">抢购</button>
+					<div class="col-sm-4 col-md-3 col-xs-12">
+						<div class="thumbnail">
+							<img src="http://static.jubaobar.cn/res/img/show/daigoupic2.jpg" class="img-responsive " alt="剑灵">
+							<a href="http://jubaobar.cn" class="fw-font-goods">【剑灵】游戏金币充值，44金金币金币</a>
+							<div class="fw-sale">
+								<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
+								<button type="button" class="btn btn-danger pull-right">抢购</button>
+							</div>
 						</div>
 					</div>
-					<div class="col-sm-3 col-xs-6 fw-main-show">
-						<img src="http://static.jubaobar.cn/res/img/show/daigoupic2.jpg" class="img-responsive " alt="剑灵">
-						<a href="http://jubaobar.cn" class="fw-font-goods">【剑灵】游戏金币充值，44金金币金币</a>
-						<div class="fw-sale">
-							<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
-							<button type="button" class="btn btn-danger pull-right">抢购</button>
+					<div class="col-sm-4 col-md-3 col-xs-12">
+						<div class="thumbnail">
+							<img src="http://static.jubaobar.cn/res/img/show/daigoupic2.jpg" class="img-responsive " alt="剑灵">
+							<a href="http://jubaobar.cn" class="fw-font-goods">【剑灵】游戏金币充值，44金金币金币</a>
+							<div class="fw-sale">
+								<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
+								<button type="button" class="btn btn-danger pull-right">抢购</button>
+							</div>
 						</div>
 					</div>
-					<div class="col-sm-3 col-xs-6 fw-main-show">
-						<img src="http://static.jubaobar.cn/res/img/show/daigoupic17.jpg" class="img-responsive " alt="剑灵">
-						<a href="http://jubaobar.cn" class="fw-font-goods">【剑灵】游戏金币充值，44金金币金币</a>
-						<div class="fw-sale">
-							<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
-							<button type="button" class="btn btn-danger pull-right">抢购</button>
+					<div class="col-sm-4 col-md-3 col-xs-12">
+						<div class="thumbnail">
+							<img src="http://static.jubaobar.cn/res/img/show/daigoupic2.jpg" class="img-responsive " alt="剑灵">
+							<a href="http://jubaobar.cn" class="fw-font-goods">【剑灵】游戏金币充值，44金金币金币</a>
+							<div class="fw-sale">
+								<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
+								<button type="button" class="btn btn-danger pull-right">抢购</button>
+							</div>
 						</div>
 					</div>
-					<div class="col-sm-3 col-xs-6 fw-main-show">
-						<img src="http://static.jubaobar.cn/res/img/show/daigoupic17.jpg" class="img-responsive " alt="剑灵">
-						<a href="http://jubaobar.cn" class="fw-font-goods">【剑灵】游戏金币充值，44金金币金币</a>
-						<div class="fw-sale">
-							<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
-							<button type="button" class="btn btn-danger pull-right">抢购</button>
+					<div class="col-sm-4 col-md-3 col-xs-12">
+						<div class="thumbnail">
+							<img src="http://static.jubaobar.cn/res/img/show/daigoupic2.jpg" class="img-responsive " alt="剑灵">
+							<a href="http://jubaobar.cn" class="fw-font-goods">【剑灵】游戏金币充值，44金金币金币</a>
+							<div class="fw-sale">
+								<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
+								<button type="button" class="btn btn-danger pull-right">抢购</button>
+							</div>
 						</div>
 					</div>
-					<div class="col-sm-3 col-xs-6 fw-main-show">
-						<img src="http://static.jubaobar.cn/res/img/show/daigoupic17.jpg" class="img-responsive " alt="剑灵">
-						<a href="http://jubaobar.cn" class="fw-font-goods">【剑灵】游戏金币充值，44金金币金币</a>
-						<div class="fw-sale">
-							<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
-							<button type="button" class="btn btn-danger pull-right">抢购</button>
+					<div class="col-sm-4 col-md-3 col-xs-12">
+						<div class="thumbnail">
+							<img src="http://static.jubaobar.cn/res/img/show/daigoupic2.jpg" class="img-responsive " alt="剑灵">
+							<a href="http://jubaobar.cn" class="fw-font-goods">【剑灵】游戏金币充值，44金金币金币</a>
+							<div class="fw-sale">
+								<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
+								<button type="button" class="btn btn-danger pull-right">抢购</button>
+							</div>
 						</div>
 					</div>
-					<div class="col-sm-3 col-xs-6 fw-main-show">
-						<img src="http://static.jubaobar.cn/res/img/show/daigoupic17.jpg" class="img-responsive " alt="剑灵">
-						<a href="http://jubaobar.cn" class="fw-font-goods">【剑灵】游戏金币充值，44金金币金币</a>
-						<div class="fw-sale">
-							<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
-							<button type="button" class="btn btn-danger pull-right">抢购</button>
-						</div>
-					</div>
-				</div>
-				<div class="row fw-main-show-all tab-pane fade" id="brand1">
-					<div class="col-sm-3 col-xs-6 fw-main-show">
-						<img src="http://static.jubaobar.cn/res/img/show/daigoupic17.jpg" class="img-responsive " alt="剑灵">
-						<a href="http://jubaobar.cn" class="fw-font-goods">【剑灵】游戏金币充值，44金金币金币</a>
-						<div class="fw-sale">
-							<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
-							<button type="button" class="btn btn-danger pull-right">抢购</button>
-						</div>
-					</div>
-					<div class="col-sm-3 col-xs-6 fw-main-show">
-						<img src="http://static.jubaobar.cn/res/img/show/daigoupic17.jpg" class="img-responsive " alt="剑灵">
-						<a href="http://jubaobar.cn" class="fw-font-goods">【剑灵】游戏金币充值，44金金币金币</a>
-						<div class="fw-sale">
-							<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
-							<button type="button" class="btn btn-danger pull-right">抢购</button>
-						</div>
-					</div>
-					<div class="col-sm-3 col-xs-6 fw-main-show">
-						<img src="http://static.jubaobar.cn/res/img/show/daigoupic17.jpg" class="img-responsive " alt="剑灵">
-						<a href="http://jubaobar.cn" class="fw-font-goods">【剑灵】游戏金币充值，44金金币金币</a>
-						<div class="fw-sale">
-							<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
-							<button type="button" class="btn btn-danger pull-right">抢购</button>
-						</div>
-					</div>
-					<div class="col-sm-3 col-xs-6 fw-main-show">
-						<img src="http://static.jubaobar.cn/res/img/show/daigoupic17.jpg" class="img-responsive " alt="剑灵">
-						<a href="http://jubaobar.cn" class="fw-font-goods">【剑灵】游戏金币充值，44金金币金币</a>
-						<div class="fw-sale">
-							<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
-							<button type="button" class="btn btn-danger pull-right">抢购</button>
+					<div class="col-sm-4 col-md-3 col-xs-12">
+						<div class="thumbnail">
+							<img src="http://static.jubaobar.cn/res/img/show/daigoupic2.jpg" class="img-responsive " alt="剑灵">
+							<a href="http://jubaobar.cn" class="fw-font-goods">【剑灵】游戏金币充值，44金金币金币</a>
+							<div class="fw-sale">
+								<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
+								<button type="button" class="btn btn-danger pull-right">抢购</button>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="row fw-main-show-all tab-pane fade" id="brand2">
-					<div class="col-sm-3 col-xs-6 fw-main-show">
-						<img src="http://static.jubaobar.cn/res/img/show/daigoupic8.jpg" class="img-responsive " alt="剑灵">
-						<a href="http://jubaobar.cn" class="fw-font-goods">【剑灵】游戏金币充值，44金金币金币</a>
-						<div class="fw-sale">
-							<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
-							<button type="button" class="btn btn-danger pull-right">抢购</button>
+				<div class="row tab-pane fade" id="brand1">
+					<div class="col-sm-4 col-md-3 col-xs-12">
+						<div class="thumbnail">
+							<img src="http://static.jubaobar.cn/res/img/show/daigoupic2.jpg" class="img-responsive " alt="剑灵">
+							<a href="http://jubaobar.cn" class="fw-font-goods">【剑灵】游戏金币充值，44金金币金币</a>
+							<div class="fw-sale">
+								<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
+								<a href="inc/pay-info.html" type="button" class="btn btn-danger pull-right">抢购</a>
+							</div>
 						</div>
 					</div>
-					<div class="col-sm-3 col-xs-6 fw-main-show">
-						<img src="http://static.jubaobar.cn/res/img/show/daigoupic8.jpg" class="img-responsive " alt="剑灵">
-						<a href="http://jubaobar.cn" class="fw-font-goods">【剑灵】游戏金币充值，44金金币金币</a>
-						<div class="fw-sale">
-							<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
-							<button type="button" class="btn btn-danger pull-right">抢购</button>
+					<div class="col-sm-4 col-md-3 col-xs-12">
+						<div class="thumbnail">
+							<img src="http://static.jubaobar.cn/res/img/show/daigoupic2.jpg" class="img-responsive " alt="剑灵">
+							<a href="http://jubaobar.cn" class="fw-font-goods">【剑灵】游戏金币充值，44金金币金币</a>
+							<div class="fw-sale">
+								<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
+								<button type="button" class="btn btn-danger pull-right">抢购</button>
+							</div>
 						</div>
 					</div>
-					<div class="col-sm-3 col-xs-6 fw-main-show">
-						<img src="http://static.jubaobar.cn/res/img/show/daigoupic8.jpg" class="img-responsive " alt="剑灵">
-						<a href="http://jubaobar.cn" class="fw-font-goods">【剑灵】游戏金币充值，44金金币金币</a>
-						<div class="fw-sale">
-							<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
-							<button type="button" class="btn btn-danger pull-right">抢购</button>
+					<div class="col-sm-4 col-md-3 col-xs-12">
+						<div class="thumbnail">
+							<img src="http://static.jubaobar.cn/res/img/show/daigoupic2.jpg" class="img-responsive " alt="剑灵">
+							<a href="http://jubaobar.cn" class="fw-font-goods">2222游戏金币充值，44金金币金币</a>
+							<div class="fw-sale">
+								<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
+								<button type="button" class="btn btn-danger pull-right">抢购</button>
+							</div>
 						</div>
 					</div>
-					<div class="col-sm-3 col-xs-6 fw-main-show">
-						<img src="http://static.jubaobar.cn/res/img/show/daigoupic8.jpg" class="img-responsive " alt="剑灵">
-						<a href="http://jubaobar.cn" class="fw-font-goods">【剑灵】游戏金币充值，44金金币金币</a>
-						<div class="fw-sale">
-							<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
-							<button type="button" class="btn btn-danger pull-right">抢购</button>
+					<div class="col-sm-4 col-md-3 col-xs-12">
+						<div class="thumbnail">
+							<img src="http://static.jubaobar.cn/res/img/show/daigoupic2.jpg" class="img-responsive " alt="剑灵">
+							<a href="http://jubaobar.cn" class="fw-font-goods">【剑灵】游戏金币充值，44金金币金币</a>
+							<div class="fw-sale">
+								<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
+								<button type="button" class="btn btn-danger pull-right">抢购</button>
+							</div>
 						</div>
+					</div>
+					<div class="col-sm-4 col-md-3 col-xs-12">
+						<div class="thumbnail">
+							<img src="http://static.jubaobar.cn/res/img/show/daigoupic2.jpg" class="img-responsive " alt="剑灵">
+							<a href="http://jubaobar.cn" class="fw-font-goods">【剑灵】游戏金币充值，44金金币金币</a>
+							<div class="fw-sale">
+								<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
+								<button type="button" class="btn btn-danger pull-right">抢购</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 col-md-3 col-xs-12">
+						<div class="thumbnail">
+							<img src="http://static.jubaobar.cn/res/img/show/daigoupic2.jpg" class="img-responsive " alt="剑灵">
+							<a href="http://jubaobar.cn" class="fw-font-goods">【剑灵】游戏金币充值，44金金币金币</a>
+							<div class="fw-sale">
+								<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
+								<button type="button" class="btn btn-danger pull-right">抢购</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 col-md-3 col-xs-12">
+						<div class="thumbnail">
+							<img src="http://static.jubaobar.cn/res/img/show/daigoupic2.jpg" class="img-responsive " alt="剑灵">
+							<a href="http://jubaobar.cn" class="fw-font-goods">【剑灵】游戏金币充值，44金金币金币</a>
+							<div class="fw-sale">
+								<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
+								<button type="button" class="btn btn-danger pull-right">抢购</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 col-md-3 col-xs-12">
+						<div class="thumbnail">
+							<img src="http://static.jubaobar.cn/res/img/show/daigoupic2.jpg" class="img-responsive " alt="剑灵">
+							<a href="http://jubaobar.cn" class="fw-font-goods">【剑灵】游戏金币充值，44金金币金币</a>
+							<div class="fw-sale">
+								<span class="fw-font-price" href="http://jubaobar.cn">￥30.00</span>
+								<button type="button" class="btn btn-danger pull-right">抢购</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="text-center">
+					<ul class="pagination">
+						<li><a href="#">&laquo;&nbsp;上一页</a></li>
+						<li class="active"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">...</a></li>
+						<li><a href="#">下一页&nbsp;&raquo;</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container">
+				<div class="fw-about">
+					<span><a href="inc/about-us.html" target="_blank">关于我们</a></span>丨
+					<span><a href="http://jubaobar.cn" target="_blank">联系我们</a></span>丨
+					<span><a href="http://jubaobar.cn" target="_blank">加入我们</a></span>丨
+					<span><a href="http://jubaobar.cn" target="_blank">隐私条款</a></span>丨
+					<span><a href="http://jubaobar.cn" target="_blank">发货须知</a></span>丨
+					<span><a href="http://jubaobar.cn" target="_blank">退货须知</a></span>
+				</div>
+				<div class="fw-copyright">
+					<span>©&nbsp;2005-2016&nbsp;</span>
+					<span>51综合代充平台&nbsp;&nbsp;</span>
+					<span><a href="http://jubaobar.cn" target="_blank">衢州华创</a></span>
+					<span>&nbsp;版权所有，并保留所有权利&nbsp;</span>
+					<span><a href="http://jubaobar.cn" target="_blank">站长统计</a></span>
+				</div>
+				<div class="fw-certified center-block">
+					<div>
+						<a href=""><img src="http://static.jubaobar.cn/res/img/icon/certified-icon1.png" /></a>
+					</div>
+					<div>
+						<a href=""><img src="http://static.jubaobar.cn/res/img/icon/certified-icon3.png" /></a>
+					</div>
+					<div>
+						<a href=""><img src="http://static.jubaobar.cn/res/img/icon/certified-icon2.png" /></a>
 					</div>
 				</div>
 			</div>
-
-			<footer class="footer">
-				<div class="container">
-					<div class="fw-about">
-						<span><a href="http://jubaobar.cn" target="_blank">关于我们</a></span>丨
-						<span><a href="http://jubaobar.cn" target="_blank">联系我们</a></span>丨
-						<span><a href="http://jubaobar.cn" target="_blank">加入我们</a></span>丨
-						<span><a href="http://jubaobar.cn" target="_blank">隐私条款</a></span>丨
-						<span><a href="http://jubaobar.cn" target="_blank">发货须知</a></span>丨
-						<span><a href="http://jubaobar.cn" target="_blank">退货须知</a></span>
-					</div>
-					<div class="fw-copyright">
-						<span>©&nbsp;2005-2016&nbsp;</span>
-						<span>51综合代充平台&nbsp;&nbsp;</span>
-						<span><a href="http://jubaobar.cn" target="_blank">衢州华创</a></span>
-						<span>&nbsp;版权所有，并保留所有权利&nbsp;</span>
-						<span><a href="http://jubaobar.cn" target="_blank">站长统计</a></span>
-					</div>
-					<div class="fw-certified center-block">
-						<div>
-							<a href=""><img src="http://static.jubaobar.cn/res/img/icon/certified-icon1.png" /></a>
-						</div>
-						<div>
-							<a href=""><img src="http://static.jubaobar.cn/res/img/icon/certified-icon3.png" /></a>
-						</div>
-						<div>
-							<a href=""><img src="http://static.jubaobar.cn/res/img/icon/certified-icon2.png" /></a>
-						</div>
-					</div>
-				</div>
-			</footer>
-			<script>
-				$(function() {
-					$('.pagination li').click(function(e) {
-						e.preventDefault();
-						$('.pagination li').removeClass('active');
-						$(this).addClass('active');
-					});
-					$
-				});
-			</script>
+		</footer>
 	</body>
 
 </html>

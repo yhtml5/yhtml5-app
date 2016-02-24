@@ -1,12 +1,13 @@
-/*
+/*=========================================================================================
  * Author:Kyle|张大漾
  * Author Website:http://yhtml5.com
  * Author Gihub:https://github.com/yhtml5
  * Description: A Website disgned by boostrap and Jquery.Do something awesome and have fun !
- */
+ *==========================================================================================*/
 
 
-/*ali-font-icon*/
+/* ali-font-icon
+ * ============== */
 
 @font-face {
 	font-family: 'iconfont';
@@ -29,7 +30,8 @@
 }
 
 
-/*Cover bootstrap*/
+/* cover bootstrap
+ * =============== */
 
 .row img {
 	width: 100%;
@@ -63,7 +65,8 @@ header {
 }
 
 
-/*51pay customized*/
+/* 51pay customized
+ * ================ */
 
 .fw-bgcfff {
 	background-color: #FFFFFF;
@@ -102,6 +105,12 @@ header {
 	border: solid 1px #337ab7;
 }
 
+.fw-body2 {
+	background-color: #FFFFFF;
+	padding: 30px 20px;
+	margin-bottom: 40px;
+}
+
 .fw-colorFF5151 {
 	color: #FF5151;
 }
@@ -111,18 +120,23 @@ header {
 }
 
 .fw-font-price {
-	font-family: "微软雅黑";
+	font-family: "microsoft yahei";
 	font-size: 20px;
 	color: #d63535;
 	line-height: 35px;
 }
 
 .fw-font-goods {
-	font-family: "微软雅黑";
+	font-family: "microsoft yahei";
 	font-size: 16px;
 	color: #3F3F3F;
 	display: block;
 	margin-top: 20px;
+	width: 100%;
+	text-indent: 1em;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 
 .fw-font-customer1 {
@@ -132,7 +146,7 @@ header {
 
 .fw-font-customer2 {
 	font-size: 24px;
-	font-family: "微软雅黑";
+	font-family: "microsoft yahei";
 }
 
 .fw-height {
@@ -380,6 +394,7 @@ footer {
 	padding-bottom: 8%;
 	text-align: center;
 	color: #FFFFFF;
+	max-height: 250px;
 }
 
 footer a {
@@ -443,7 +458,8 @@ footer a {
 }
 
 
-/*login.html*/
+/* login.html
+ * ========== */
 
 .fw-sign-img {
 	max-width: 300px;
@@ -467,7 +483,7 @@ footer a {
 	font-size: 18px;
 	float: right;
 	color: #15c288;
-	font-family: "å¾®è½¯é›…é»‘";
+	font-family: "microsoft yahei";
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
@@ -496,18 +512,15 @@ footer a {
 
 .fw-form-signin input[type="text"] {
 	margin-top: 20px;
-	/*border-bottom-right-radius: 0;
-	border-bottom-left-radius: 0;*/
 }
 
 .fw-form-signin input {
 	margin-bottom: 20px;
-	/*border-top-left-radius: 0;
-	border-top-right-radius: 0;*/
 }
 
 
-/*pay-info.html*/
+/* pay-info.html
+ * ============= */
 
 .fw-pay-info {
 	width: 90%;
@@ -540,7 +553,8 @@ footer a {
 }
 
 
-/*user-center.html*/
+/* user-center.html
+ * ================ */
 
 .fw-uc-p {
 	margin-right: 70px;
