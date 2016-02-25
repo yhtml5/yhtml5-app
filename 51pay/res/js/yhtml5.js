@@ -9,18 +9,15 @@
 /* General
  * ======= */
 $(function() {
-	$('.navbar-nav li').click(function(e) {
-		e.preventDefault();
-		$('.nav li').removeClass('active');
+	$('.navbar-nav li').click(function() {
+		$('.navbar-nav li').removeClass('active');
 		$(this).addClass('active');
 	});
-	$('.pagination li').click(function(e) {
-		e.preventDefault();
+	$('.pagination li').click(function() {
 		$('.pagination li').removeClass('active');
 		$(this).addClass('active');
 	});
-	$('.list-group > a').click(function(e) {
-		e.preventDefault();
+	$('.list-group > a').click(function() {
 		$('.list-group > a').removeClass('active');
 		$(this).addClass('active');
 	});
@@ -38,6 +35,15 @@ $(function() {
 			$(".js-front").fadeIn(500)
 		}, 600);
 	});
+
+	function headerNavActive() {
+		navId = $(".js-header-nav-active").html();
+		if (navId >= 0) {
+			$('.js-header-nav').removeClass('active')
+			$('.js-header-nav:eq(' + navId + ')').addClass('active')
+		}
+	}
+	headerNavActive();
 	/* pay-info.html
 	 * ============= */
 	$(".js-goto-detail").click(function() {

@@ -64,6 +64,30 @@ header {
 	border-color: #d9524e;
 }
 
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+	background-color: #d9524e;
+	border-color: #d9524e;
+}
+
+.pagination>li>a,
+.pagination>li>span {
+	color: #d9524e;
+}
+
+a {
+	color: #d9524e;
+}
+
+a:hover,
+a:focus {
+	color: #23527c;
+}
+
 
 /* 51pay customized
  * ================ */
@@ -457,6 +481,14 @@ footer a {
 	margin-top: 50px;
 }
 
+.js-header-nav-active {
+	position: absolute;
+	z-index: -1;
+	width: 0;
+	height: 0;
+	visibility: hidden;
+}
+
 
 /* login.html
  * ========== */
@@ -482,7 +514,7 @@ footer a {
 .fw-signin-go {
 	font-size: 18px;
 	float: right;
-	color: #15c288;
+	color: #d9524e;
 	font-family: "microsoft yahei";
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -524,7 +556,7 @@ footer a {
 
 .fw-pay-info {
 	width: 90%;
-	max-width: 600px;
+	max-width: 700px;
 	min-width: 300px;
 	margin: 40px auto 20px auto;
 }

@@ -7,9 +7,11 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<meta name="HandheldFriendly" content="true">
-		<meta http-equiv="pragma" content="no-cache">
-		<meta http-equiv="expires" content="0">
-		<meta http-equiv="cache-control" content="no-cache">
+		<meta http-equiv="cache-control" content="max-age=0" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+		<meta http-equiv="pragma" content="no-cache" />
 		<!-- 永不缓存，测试结束后将上面3个meta删除  -->
 		<meta http-equiv="Cache-Control" content="no-transform">
 		<meta http-equiv="Cache-Control" content="no-siteapp">
@@ -29,7 +31,7 @@
 		<!--本地css,测试后删除-->
 		<script src="http://static.jubaobar.cn/framework/jquery/jquery-1.11.3.min.js"></script>
 		<script src="http://static.jubaobar.cn/framework/bootstrap/dist/js/bootstrap.min.js"></script>
-		<script src="http://static.jubaobar.cn/res/js/yhtml5.js"></script>
+		<!--<script src="http://static.jubaobar.cn/res/js/yhtml5.js"></script>-->
 		<script src="../res/js/yhtml5.js"></script>
 		<!--本地js,测试后删除-->
 		<!--[if lt IE 9]>
@@ -47,7 +49,7 @@
 			<div class="container hidden-xs">
 				<div class="row">
 					<div class="col-sm-4 col-xs-12">
-						<a href="51pay-index.html" class="fw-top-bar-logo center-block" onclick="">
+						<a href="index.html" class="fw-top-bar-logo center-block" onclick="">
 							<img src="http://static.jubaobar.cn/res/img/logo/51logoHD.png" class="fw-wt80" alt="51代充" title="51代充">
 						</a>
 					</div>
@@ -62,13 +64,11 @@
 						</div>
 					</div>
 					<div class="col-sm-2">
-						<div class="tab-content">
-							<div class="fw-top-bar-login tab-pane fade in active" id="sign-up">
-								<a href="#sign-in" data-toggle="tab">[登录</a>&nbsp;/&nbsp;<a href="inc/login.html">注册]</a>
-							</div>
-							<div class="fw-top-bar-login tab-pane fade" id="sign-in">
-								<a href="inc/login.html">[叶叶叶</a>&nbsp;/&nbsp;<a href="#sign-up" data-toggle="tab">登出]</a>
-							</div>
+						<div class="fw-top-bar-login js-front">
+							<a class="js-turn" href="#" onclick="javascript:return false;">[登录</a>&nbsp;/&nbsp;<a href="login.html">注册]</a>
+						</div>
+						<div class="fw-top-bar-login fw-displayn js-back">
+							<a href="user-center.html" target="_blank">[叶叶叶</a>&nbsp;/&nbsp;<a class="js-turn-back" href="#" onclick="javascript:return false;">登出]</a>
 						</div>
 					</div>
 				</div>
@@ -83,13 +83,17 @@
 							<span class="icon-bar"></span>
 						</button>
 						<div class="pull-right fw-user-nav clearfix visible-xs">
-							<ul class="nav nav-login">
-								<li><a href="inc/login.html">登陆</a></li>
-								<li><a href="">注册</a></li>
+							<ul class="nav nav-login js-front">
+								<li class="js-turn"><a href="#" onclick="javascript:return false;">登陆</a></li>
+								<li><a href="login.html">注册</a></li>
+							</ul>
+							<ul class="nav nav-login fw-displayn js-back">
+								<li><a href="user-center.html">叶叶</a></li>
+								<li class="js-turn-back"><a href="#" onclick="javascript:return false;">登出</a></li>
 							</ul>
 						</div>
 						<div class="navbar-brand visible-xs fw-logo2">
-							<a href="51pay-index.html">
+							<a href="index.html">
 								<img src="http://static.jubaobar.cn/res/img/logo/51logo2.png" class="fw-wt100" alt="51代充" title="51代充">
 							</a>
 						</div>
@@ -105,13 +109,13 @@
 									</div>
 								</form>
 							</li>
-							<li class="active"><a href="http://jubaobar.cn" target="_blank" onclick="">首页</a></li>
-							<li><a href="http://jubaobar.cn" target="_blank" onclick="">海外购代充</a></li>
-							<li><a href="http://jubaobar.cn" target="_blank" onclick="">游戏代充</a></li>
-							<li><a href="http://jubaobar.cn" target="_blank" onclick="">苹果代充</a></li>
-							<li><a href="http://jubaobar.cn" target="_blank" onclick="">话费代充</a></li>
-							<li><a href="http://jubaobar.cn" target="_blank" onclick="">QQ代充</a></li>
-							<li><a href="http://jubaobar.cn" target="_blank" onclick="">VIP会员</a></li>
+							<li class="js-header-nav active"><a href="index.html" target="_blank">首页</a></li>
+							<li class="js-header-nav"><a href="pay-info-oversea.html" target="_blank">海外购代充</a></li>
+							<li class="js-header-nav"><a href="http://jubaobar.cn" target="_blank">游戏代充</a></li>
+							<li class="js-header-nav"><a href="http://jubaobar.cn" target="_blank">苹果代充</a></li>
+							<li class="js-header-nav"><a href="http://jubaobar.cn" target="_blank">话费代充</a></li>
+							<li class="js-header-nav"><a href="http://jubaobar.cn" target="_blank">QQ代充</a></li>
+							<li class="js-header-nav"><a href="http://jubaobar.cn" target="_blank">VIP会员</a></li>
 						</ul>
 					</div>
 				</div>
@@ -131,6 +135,7 @@
 				</li>
 			</ul>
 		</header>
+		<div class="js-header-nav-active">0</div>
 		<div class="container fw-pay-info fw-mh500">
 			<div id="fw-pay-overseas" class="panel panel-default js-pay-info">
 				<div class="panel-heading">
@@ -205,16 +210,15 @@
 				</div>
 			</div>
 		</div>
-
 		<footer class="footer">
 			<div class="container">
 				<div class="fw-about">
-					<span><a href="inc/about-us.html" target="_blank">关于我们</a></span>丨
-					<span><a href="http://jubaobar.cn" target="_blank">联系我们</a></span>丨
-					<span><a href="http://jubaobar.cn" target="_blank">加入我们</a></span>丨
-					<span><a href="http://jubaobar.cn" target="_blank">隐私条款</a></span>丨
-					<span><a href="http://jubaobar.cn" target="_blank">发货须知</a></span>丨
-					<span><a href="http://jubaobar.cn" target="_blank">退货须知</a></span>
+					<span><a href="about-us.html#fw-about-us1" target="_blank">关于我们</a></span>丨
+					<span><a href="about-us.html#fw-about-us2" target="_blank">联系我们</a></span>丨
+					<span><a href="about-us.html#fw-about-us3" target="_blank">加入我们</a></span>丨
+					<span><a href="about-us.html#fw-about-us4" target="_blank">隐私条款</a></span>丨
+					<span><a href="about-us.html#fw-about-us5" target="_blank">发货须知</a></span>丨
+					<span><a href="about-us.html#fw-about-us6" target="_blank">退货须知</a></span>
 				</div>
 				<div class="fw-copyright">
 					<span>©&nbsp;2005-2016&nbsp;</span>
@@ -225,13 +229,13 @@
 				</div>
 				<div class="fw-certified center-block">
 					<div>
-						<a href=""><img src="http://static.jubaobar.cn/res/img/icon/certified-icon1.png" /></a>
+						<a href=""><img src="http://static.jubaobar.cn/res/img/icon/certified-icon1.png" alt="certified-icon"></a>
 					</div>
 					<div>
-						<a href=""><img src="http://static.jubaobar.cn/res/img/icon/certified-icon3.png" /></a>
+						<a href=""><img src="http://static.jubaobar.cn/res/img/icon/certified-icon3.png" alt="certified-icon"></a>
 					</div>
 					<div>
-						<a href=""><img src="http://static.jubaobar.cn/res/img/icon/certified-icon2.png" /></a>
+						<a href=""><img src="http://static.jubaobar.cn/res/img/icon/certified-icon2.png" alt="certified-icon"></a>
 					</div>
 				</div>
 			</div>

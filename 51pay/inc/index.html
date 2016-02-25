@@ -31,7 +31,7 @@
 		<!--本地css,测试后删除-->
 		<script src="http://static.jubaobar.cn/framework/jquery/jquery-1.11.3.min.js"></script>
 		<script src="http://static.jubaobar.cn/framework/bootstrap/dist/js/bootstrap.min.js"></script>
-		<script src="http://static.jubaobar.cn/res/js/yhtml5.js"></script>
+		<!--<script src="http://static.jubaobar.cn/res/js/yhtml5.js"></script>-->
 		<script src="../res/js/yhtml5.js"></script>
 		<!--本地js,测试后删除-->
 		<!--[if lt IE 9]>
@@ -109,13 +109,13 @@
 									</div>
 								</form>
 							</li>
-							<li class="active"><a href="index.html" target="_blank">首页</a></li>
-							<li><a href="pay-info-oversea.html" target="_blank">海外购代充</a></li>
-							<li><a href="http://jubaobar.cn" target="_blank">游戏代充</a></li>
-							<li><a href="http://jubaobar.cn" target="_blank">苹果代充</a></li>
-							<li><a href="http://jubaobar.cn" target="_blank">话费代充</a></li>
-							<li><a href="http://jubaobar.cn" target="_blank">QQ代充</a></li>
-							<li><a href="http://jubaobar.cn" target="_blank">VIP会员</a></li>
+							<li class="js-header-nav active"><a href="index.html" target="_blank">首页</a></li>
+							<li class="js-header-nav"><a href="pay-info-oversea.html" target="_blank">海外购代充</a></li>
+							<li class="js-header-nav"><a href="http://jubaobar.cn" target="_blank">游戏代充</a></li>
+							<li class="js-header-nav"><a href="http://jubaobar.cn" target="_blank">苹果代充</a></li>
+							<li class="js-header-nav"><a href="http://jubaobar.cn" target="_blank">话费代充</a></li>
+							<li class="js-header-nav"><a href="http://jubaobar.cn" target="_blank">QQ代充</a></li>
+							<li class="js-header-nav"><a href="http://jubaobar.cn" target="_blank">VIP会员</a></li>
 						</ul>
 					</div>
 				</div>
@@ -135,6 +135,7 @@
 				</li>
 			</ul>
 		</header>
+		<div class="js-header-nav-active">0</div>
 		<div class="fw-container-empty">
 			<div class="hidden-xs fw-mt50"></div>
 		</div>
@@ -144,7 +145,7 @@
 					<h3 class="fw-slide-hot">热门品牌</h3>
 					<div class="row fw-slide-border">
 						<div class="col-sm-6 fw-pbt3b3 fw-slide-border-right">
-							<img src="http://static.jubaobar.cn/res/img/show/brandpic1.png" alt="brand">
+							<a href="filter-goods-game.html"><img src="http://static.jubaobar.cn/res/img/show/brandpic1.png" alt="brand"></a>
 						</div>
 						<div class="col-sm-6 fw-pbt3b3">
 							<img src="http://static.jubaobar.cn/res/img/show/brandpic2.png" alt="brand">
@@ -198,11 +199,9 @@
 						</div>
 						<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
 							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-							<span class="sr-only">Previous</span>
 						</a>
 						<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
 							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-							<span class="sr-only">Next</span>
 						</a>
 					</div>
 				</div>
@@ -210,8 +209,8 @@
 		</div>
 		<div class="container fw-container-star">
 			<ul class="nav nav-tabs">
-				<li class="active"><a class="fw-nav-tab" href="#newGoods" data-toggle="tab">新品上市</a></li>
-				<li><a class="fw-nav-tab" href="#bargainGoods" data-toggle="tab">特价商品</a></li>
+				<li class="active"><a class="fw-nav-tab" href="#newGoods" data-toggle="tab"><b>新品上市</b></a></li>
+				<li><a class="fw-nav-tab" href="#bargainGoods" data-toggle="tab"><b>特价商品</b></a></li>
 			</ul>
 		</div>
 		<div class="container fw-star">
