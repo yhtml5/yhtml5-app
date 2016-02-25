@@ -47,7 +47,7 @@
 			<div class="container hidden-xs">
 				<div class="row">
 					<div class="col-sm-4 col-xs-12">
-						<a href="51pay-index.html" class="fw-top-bar-logo center-block" onclick="">
+						<a href="index.html" class="fw-top-bar-logo center-block" onclick="">
 							<img src="http://static.jubaobar.cn/res/img/logo/51logoHD.png" class="fw-wt80" alt="51代充" title="51代充">
 						</a>
 					</div>
@@ -62,13 +62,11 @@
 						</div>
 					</div>
 					<div class="col-sm-2">
-						<div class="tab-content">
-							<div class="fw-top-bar-login tab-pane fade in active" id="sign-up">
-								<a href="#sign-in" data-toggle="tab">[登录</a>&nbsp;/&nbsp;<a href="inc/login.html">注册]</a>
-							</div>
-							<div class="fw-top-bar-login tab-pane fade" id="sign-in">
-								<a href="inc/login.html">[叶叶叶</a>&nbsp;/&nbsp;<a href="#sign-up" data-toggle="tab">登出]</a>
-							</div>
+						<div class="fw-top-bar-login js-front">
+							<a class="js-turn" href="#" onclick="javascript:return false;">[登录</a>&nbsp;/&nbsp;<a href="login.html">注册]</a>
+						</div>
+						<div class="fw-top-bar-login fw-displayn js-back">
+							<a href="user-center.html">[叶叶叶</a>&nbsp;/&nbsp;<a class="js-turn-back" href="#" onclick="javascript:return false;">登出]</a>
 						</div>
 					</div>
 				</div>
@@ -83,13 +81,17 @@
 							<span class="icon-bar"></span>
 						</button>
 						<div class="pull-right fw-user-nav clearfix visible-xs">
-							<ul class="nav nav-login">
-								<li><a href="inc/login.html">登陆</a></li>
-								<li><a href="">注册</a></li>
+							<ul class="nav nav-login js-front">
+								<li class="js-turn"><a href="#" onclick="javascript:return false;">登陆</a></li>
+								<li><a href="login.html">注册</a></li>
+							</ul>
+							<ul class="nav nav-login fw-displayn js-back">
+								<li><a href="user-center.html">叶叶</a></li>
+								<li class="js-turn-back"><a href="#" onclick="javascript:return false;">登出</a></li>
 							</ul>
 						</div>
 						<div class="navbar-brand visible-xs fw-logo2">
-							<a href="51pay-index.html">
+							<a href="index.html">
 								<img src="http://static.jubaobar.cn/res/img/logo/51logo2.png" class="fw-wt100" alt="51代充" title="51代充">
 							</a>
 						</div>
@@ -336,12 +338,12 @@
 		<footer class="footer">
 			<div class="container">
 				<div class="fw-about">
-					<span><a href="inc/about-us.html" target="_blank">关于我们</a></span>丨
-					<span><a href="http://jubaobar.cn" target="_blank">联系我们</a></span>丨
-					<span><a href="http://jubaobar.cn" target="_blank">加入我们</a></span>丨
-					<span><a href="http://jubaobar.cn" target="_blank">隐私条款</a></span>丨
-					<span><a href="http://jubaobar.cn" target="_blank">发货须知</a></span>丨
-					<span><a href="http://jubaobar.cn" target="_blank">退货须知</a></span>
+					<span><a href="about-us.html#fw-about-us1" target="_blank">关于我们</a></span>丨
+					<span><a href="about-us.html#fw-about-us2" target="_blank">联系我们</a></span>丨
+					<span><a href="about-us.html#fw-about-us3" target="_blank">加入我们</a></span>丨
+					<span><a href="about-us.html#fw-about-us4" target="_blank">隐私条款</a></span>丨
+					<span><a href="about-us.html#fw-about-us5" target="_blank">发货须知</a></span>丨
+					<span><a href="about-us.html#fw-about-us6" target="_blank">退货须知</a></span>
 				</div>
 				<div class="fw-copyright">
 					<span>©&nbsp;2005-2016&nbsp;</span>

@@ -9,6 +9,11 @@
 /* General
  * ======= */
 $(function() {
+	$('.navbar-nav li').click(function(e) {
+		e.preventDefault();
+		$('.nav li').removeClass('active');
+		$(this).addClass('active');
+	});
 	$('.pagination li').click(function(e) {
 		e.preventDefault();
 		$('.pagination li').removeClass('active');
@@ -19,21 +24,18 @@ $(function() {
 		$('.list-group > a').removeClass('active');
 		$(this).addClass('active');
 	});
-	/* index.html
-	 * ========== */
 	$("[data-toggle='popover']").popover();
-	/* login.html
-	 * ========== */
-	$(".js-go-sign").click(function() {
-		$(".js-form-login").fadeOut(500)
+	//turn
+	$(".js-turn").click(function() {
+		$(".js-front").fadeOut(500)
 		setTimeout(function() {
-			$(".js-form-sigin").fadeIn(500)
+			$(".js-back").fadeIn(500)
 		}, 600);
 	})
-	$(".js-go-login").click(function() {
-		$(".js-form-sigin").fadeOut(500)
+	$(".js-turn-back").click(function() {
+		$(".js-back").fadeOut(500)
 		setTimeout(function() {
-			$(".js-form-login").fadeIn(500)
+			$(".js-front").fadeIn(500)
 		}, 600);
 	});
 	/* pay-info.html
@@ -49,5 +51,15 @@ $(function() {
 		setTimeout(function() {
 			$(".js-pay-info").fadeIn(500)
 		}, 600);
-	})
+	});
+	/* about-us.html
+	 * ============= */
+	function urlIdActive() {
+		var urlId = window.location.hash.replace(/^(.*[n])*.*(.|n)$/g, "$2") - 1;
+		if (urlId >= 0) {
+			$('.list-group > a').removeClass('active');
+			$('.list-group > a:eq(' + urlId + ')').addClass('active').tab('show');
+		}
+	};
+	urlIdActive()
 });
