@@ -85,7 +85,13 @@ a {
 
 a:hover,
 a:focus {
-	color: #23527c;
+	color: #d9524e;
+}
+
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:focus,
+.nav-pills>li.active>a:hover {
+	background-color: #d9524e;
 }
 
 
@@ -126,7 +132,7 @@ a:focus {
 }
 
 .fw-bd1 {
-	border: solid 1px #337ab7;
+	border: solid 1px #d9524e;
 }
 
 .fw-body2 {
