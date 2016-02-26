@@ -67,5 +67,15 @@ $(function() {
 			$('.list-group > a:eq(' + urlId + ')').addClass('active').tab('show');
 		}
 	};
-	urlIdActive()
+	urlIdActive();
+	/* login.html
+	 * ============= */
+	function loginHide() {
+		var loginHide = $(".js-header-nav-active").html();
+		console.log(loginHide)
+		if (loginHide == 10110) {
+			$(".fw-user-nav,.fw-top-bar-login").hide()
+		}
+	}
+	loginHide();
 });
