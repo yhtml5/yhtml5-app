@@ -16,24 +16,222 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="default">
 		<meta name="format-detection" content="telephone=no">
-		<link rel="shortcut icon" href="http://static.jubaobar.cn/51pay/res/img/logo/logo2.png" type="image/x-icon">
-		<link rel="stylesheet" type="text/css" href="res/bootstrapV4/dist/css/bootstrap.min.css" />
+		<link rel="shortcut icon" href="res/img/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="res/bootstrap4/dist/css/bootstrap.css" />
 		<link rel="stylesheet" type="text/css" href="res/css/yhtml5.css">
 		<script src="res/js/jquery-1.11.3.min.js"></script>
-		<script src="http://static.jubaobar.cn/framework/bootstrap/dist/js/bootstrap.min.js"></script>
-		<script src="res/js/yhtml5.js"></script>
-		<script src="../res/js/yhtml5.js"></script>
-		<!--本地js,测试后删除-->
-		<!--[if lt IE 9]>
-        <script src="js/html5shiv.min.js"></script>
-        <script src="js/respond.min.js"></script>
-        <link rel="respond-proxy" id="respond-proxy" href="http://static.sfcdn.org/cross-domain/respond-proxy.html"/>
-        <link rel="respond-redirect" id="respond-redirect" href="/assets/cross-domain/respond.proxy.gif"/>
-        <script src="js/respond.proxy.js"></script>
-        <![endif]-->
+		<script src="res/bootstrap4/docs/assets/js/vendor/tether.min.js"></script>
+		<script src="res/bootstrap4/docs/assets/js/vendor/holder.min.js"></script>
+		<script src="res/bootstrap4/dist/js/bootstrap.js"></script>
+		<script src="res/js/yhtml5.js" defer="defer"></script>
+		<style type="text/css">
+			.css-width80 {
+				width: 80%;
+			}
+			
+			.css-width100 {
+				width: 100%;
+			}
+			
+			.css-height500 {
+				height: 500px;
+			}
+			
+			.css-mt54 {
+				margin-top: 54px;
+			}
+		</style>
 	</head>
 
 	<body>
+
+		<header>
+			<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+				<div class="container">
+					<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
+						&#9776;
+					</button>
+					<div class="row collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
+						<div class="col-md-6">
+							<a class="navbar-brand" href="###">Bootstrap</a>
+							<ul class="nav navbar-nav">
+								<li class="nav-item activ"><a class="nav-link" href="###">布局</a></li>
+								<li class="nav-item activ"><a class="nav-link" href="###">内容</a></li>
+								<li class="nav-item activ"><a class="nav-link" href="###">组件</a></li>
+								<li class="nav-item activ"><a class="nav-link" href="###">插件</a></li>
+							</ul>
+						</div>
+						<div class="col-md-6">
+							<form class="form-inline pull-sm-right" action="" method="post">
+								<input class="form-control" type="text" name="" required="" placeholder="Search...">
+								<button class="btn btn-success hidden-sm-down" type="submit">搜索 </button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<!--container-->
+			</nav>
+			<div class="carousel slide css-mt54" id="carousel-header" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#carousel-header" data-slide-to="0" class="active"></li>
+					<li data-target="#carousel-header" data-slide-to="1"></li>
+					<li data-target="#carousel-header" data-slide-to="2"></li>
+				</ol>
+				<div class="carousel-inner" role="listbox">
+					<div class="carousel-item active">
+						<img data-src="holder.js/100px500?theme=vine" alt="slide1">
+						<div class="carousel-caption">
+							<h3></h3>
+							<p></p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img data-src="holder.js/100px500?theme=vine" alt="slide2">
+					</div>
+					<div class="carousel-item">
+						<img data-src="holder.js/100px500?theme=vine" alt="slide3">
+					</div>
+				</div>
+				<a href="#carousel-header" class="left carousel-control" role="button" data-slide="prev">
+					<span class="icon-prev" aria-hidden="true"></span>
+				</a>
+				<a href="#carousel-header" class="right carousel-control" role="button" data-slide="next">
+					<span class="icon-next" aria-hidden="true"></span>
+				</a>
+			</div>
+		</header>
+		<div class="container m-t-3">
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="list-group text-xs-center">
+						<a href="###" class="list-group-item active"></span>按钮</a>
+						<a href="###" class="list-group-item">导航栏</a>
+						<a href="###" class="list-group-item">输入框</a>
+						<a href="###" class="list-group-item">进度条</a>
+						<a href="###" class="list-group-item">轮播</a>
+					</div>
+				</div>
+				<div class="col-sm-9">
+					<div class="" id="demoButton">
+						<h2>按钮</h2>
+						<hr />
+						<div class="">
+							<button type="button" class="btn btn-secondary">Secondary</button>
+							<button type="button" class="btn btn-info">Info</button>
+							<button type="button" class="btn btn-success">Success</button>
+							<button type="button" class="btn btn-warning">Warning</button>
+							<button type="button" class="btn btn-primary">Primary</button>
+							<button type="button" class="btn btn-danger">Danger</button>
+						</div>
+						<br />
+						<div class="">
+							<button type="button" class="btn btn-secondary-outline">Secondary</button>
+							<button type="button" class="btn btn-info-outline">Info</button>
+							<button type="button" class="btn btn-success-outline">Success</button>
+							<button type="button" class="btn btn-warning-outline">Warning</button>
+							<button type="button" class="btn btn-primary-outline">Primary</button>
+							<button type="button" class="btn btn-danger-outline">Danger</button>
+						</div>
+						<br />
+
+					</div>
+					<div class="m-t-3" id="demoNavbar">
+						<h2>导航栏</h2>
+						<hr />
+						<nav class="navbar navbar-light bg-faded">
+							<div class="nav navbar-nav">
+								<a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+								<a class="nav-item nav-link" href="#">Features</a>
+								<a class="nav-item nav-link" href="#">Pricing</a>
+								<a class="nav-item nav-link" href="#">About</a>
+								<form class="form-inline pull-xs-right">
+									<input class="form-control" type="text" placeholder="Search">
+								</form>
+							</div>
+						</nav>
+						<br />
+						<nav class="navbar navbar-light bg-info">
+							<div class="nav navbar-nav">
+								<a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+								<a class="nav-item nav-link" href="#">Features</a>
+								<a class="nav-item nav-link" href="#">Pricing</a>
+								<a class="nav-item nav-link" href="#">About</a>
+								<form class="form-inline pull-xs-right">
+									<input class="form-control" type="text" placeholder="Search">
+								</form>
+							</div>
+						</nav>
+						<br />
+						<nav class="navbar navbar-dark bg-warning">
+							<div class="nav navbar-nav">
+								<a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+								<a class="nav-item nav-link" href="#">Features</a>
+								<a class="nav-item nav-link" href="#">Pricing</a>
+								<a class="nav-item nav-link" href="#">About</a>
+								<form class="form-inline pull-xs-right">
+									<input class="form-control" type="text" placeholder="Search">
+								</form>
+							</div>
+						</nav>
+						<br />
+						<nav class="navbar navbar-dark bg-success">
+							<div class="nav navbar-nav">
+								<a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+								<a class="nav-item nav-link" href="#">Features</a>
+								<a class="nav-item nav-link" href="#">Pricing</a>
+								<a class="nav-item nav-link" href="#">About</a>
+								<form class="form-inline pull-xs-right">
+									<input class="form-control" type="text" placeholder="Search">
+								</form>
+							</div>
+						</nav>
+						<br />
+						<nav class="navbar navbar-dark bg-danger">
+							<div class="nav navbar-nav">
+								<a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+								<a class="nav-item nav-link" href="#">Features</a>
+								<a class="nav-item nav-link" href="#">Pricing</a>
+								<a class="nav-item nav-link" href="#">About</a>
+								<form class="form-inline pull-xs-right">
+									<input class="form-control" type="text" placeholder="Search">
+								</form>
+							</div>
+						</nav>
+						<br />
+						<nav class="navbar navbar-dark bg-primary">
+							<div class="nav navbar-nav">
+								<a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+								<a class="nav-item nav-link" href="#">Features</a>
+								<a class="nav-item nav-link" href="#">Pricing</a>
+								<a class="nav-item nav-link" href="#">About</a>
+								<form class="form-inline pull-xs-right">
+									<input class="form-control" type="text" placeholder="Search">
+								</form>
+							</div>
+						</nav>
+						<br />
+						<nav class="navbar navbar-dark custom-navbar bg-inverse">
+							<div class="nav navbar-nav">
+								<a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+								<a class="nav-item nav-link" href="#">Features</a>
+								<a class="nav-item nav-link" href="#">Pricing</a>
+								<a class="nav-item nav-link" href="#">About</a>
+								<form class="form-inline pull-xs-right">
+									<input class="form-control" type="text" placeholder="Search">
+								</form>
+							</div>
+						</nav>
+						<br />
+						<button class="js-nav-navbar-full">圆角</button>
+						<button class="js-nav-bg-success">绿色</button>
+						<br />
+					</div>
+				</div>
+				<!--col-md-9-->
+			</div>
+		</div>
+		<script type="text/javascript">
+		</script>
 	</body>
 
 </html>
