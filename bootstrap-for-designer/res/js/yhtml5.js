@@ -1,4 +1,19 @@
+/*=========================================================================================
+ * Author:Kyle|张大漾
+ * Author Website:http://yhtml5.com
+ * Author Gihub:https://github.com/yhtml5
+ * Description: A Website disgned by boostrap and Jquery.Do something awesome and have fun !
+ *==========================================================================================*/
+
+
+/* General
+ * ======= */
+
 $(function() {
+	$('.list-group-item').click(function() {
+		$('.list-group-item').removeClass('active');
+		$(this).addClass('active');
+	});
 	$('.js-nav-navbar-full').click(function() {
 		$('.custom-navbar').toggleClass('navbar-full')
 	})
