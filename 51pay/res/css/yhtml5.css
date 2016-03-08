@@ -149,6 +149,10 @@ a:focus {
 	display: none;
 }
 
+.fw-font16 {
+	font-size: 16px !important;
+}
+
 .fw-font-price {
 	font-family: "microsoft yahei";
 	font-size: 20px;
@@ -224,12 +228,21 @@ a:focus {
 	margin: 40px auto 20px auto;
 }
 
+.fw-mr25 {
+	margin-right: 15px;
+}
+
 .fw-mt12 {
 	margin-top: 12px;
 }
 
 .fw-mt20 {
 	margin-top: 20px;
+}
+
+.fw-mt15 {
+	margin-top: 15px;
+	float: left;
 }
 
 .fw-mtb2 {
@@ -258,6 +271,10 @@ a:focus {
 
 .fw-userterms p {
 	text-indent: 2em;
+}
+
+.fw-wb {
+	word-break: break-all
 }
 
 .fw-wt100 {
