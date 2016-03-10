@@ -1,6 +1,19 @@
 /*@require bootstrap.js
     @require "bootstrap.css"*/
-.y-head{
-	margin-bottom: auto;
+
+.y-logo{
+	display: block;
+    width: 200px;
+    margin:10px 20px;
+    float: left;
+}
+.y-logo img{
+	width: 100%;
+}
+.y-header-nav{
+	margin-top: 18px;
+}
+.y-header-close{
+	margin-top: 10px;
 }
 
