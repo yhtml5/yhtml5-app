@@ -1,0 +1,26 @@
+/*@require bootstrap.js
+    @require "bootstrap.css"*/
+@font-face {
+  font-family: 'iconfont';
+  src: url('//at.alicdn.com/t/font_1457592750_2127416.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_1457592750_2127416.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_1457592750_2127416.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/font_1457592750_2127416.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_1457592750_2127416.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.y-logo{
+	display: block;
+    width: 200px;
+    margin:10px 20px;
+    float: left;
+}
+.y-logo img{
+	width: 100%;
+}
+.y-header-nav{
+	margin-top: 18px;
+}
+.y-header-close{
+	margin-top: 10px;
+}
+
