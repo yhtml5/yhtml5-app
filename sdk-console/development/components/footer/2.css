@@ -1,6 +1,5 @@
-.y-with10{
-	margin-bottom: auto;
-}
-.y-with10{
+/*@require bootstrap.js
+    @require "bootstrap.css"*/
+.y-footer{
 	margin-bottom: auto;
 }

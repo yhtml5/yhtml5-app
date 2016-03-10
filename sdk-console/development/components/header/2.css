@@ -1,6 +1,6 @@
-.y-with100{
+/*@require bootstrap.js
+    @require "bootstrap.css"*/
+.y-head{
 	margin-bottom: auto;
 }
-.y-with100{
-	margin-bottom: auto;
-}
+
