@@ -1,4 +1,4 @@
-// 设置项目属性
+ // 设置项目属性
 fis.set('project.name', 'fis3-base');
 fis.set('project.md5Length', 8);
 fis.set('project.md5Connector ', '.');
