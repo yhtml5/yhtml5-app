@@ -1,26 +1,181 @@
-/*@require bootstrap.js
-    @require "bootstrap.css"*/
+/*=========================================================================================
+ * Author:Kyle|张大漾
+ * Author Website:http://yhtml5.com
+ * Author Gihub:https://github.com/yhtml5
+ * Description: A Website disgned by boostrap and Jquery.Do something awesome and have fun !
+ *==========================================================================================*/
+
+
+/* ali-font-icon
+ * ============== */
+
 @font-face {
-  font-family: 'iconfont';
-  src: url('//at.alicdn.com/t/font_1457592750_2127416.eot'); /* IE9*/
-  src: url('//at.alicdn.com/t/font_1457592750_2127416.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('//at.alicdn.com/t/font_1457592750_2127416.woff') format('woff'), /* chrome、firefox */
-  url('//at.alicdn.com/t/font_1457592750_2127416.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('//at.alicdn.com/t/font_1457592750_2127416.svg#iconfont') format('svg'); /* iOS 4.1- */
-}
-.y-logo{
-	display: block;
-    width: 200px;
-    margin:10px 20px;
-    float: left;
-}
-.y-logo img{
-	width: 100%;
-}
-.y-header-nav{
-	margin-top: 18px;
-}
-.y-header-close{
-	margin-top: 10px;
+	font-family: 'iconfont';
+	src: url('iconfont.eot');
+	/* IE9*/
+	src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('iconfont.woff') format('woff'), /* chrome、firefox */
+	url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+	url('iconfont.svg#iconfont') format('svg');
+	/* iOS 4.1- */
 }
 
+.iconfont {
+	font-family: "iconfont" !important;
+	font-size: 16px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: 0.2px;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Expand bootstrap style
+ * ====================== */
+
+.y-navbar-info {}
+
+.y-navbar-info .navbar-nav > li > a {
+	color: #333;
+	border-radius: 6px;
+	font-size: 16px;
+}
+
+.y-navbar-info .navbar-nav > li > a:hover,
+.y-navbar-info .navbar-nav > li > a:focus {
+	color: #099fdd;
+	background-color: transparent;
+}
+
+.y-navbar-info .navbar-nav > .active > a,
+.y-navbar-info .navbar-nav > .active > a:hover,
+.y-navbar-info .navbar-nav > .active > a:focus {
+	color: #fff;
+	background-color: #099fdd;
+}
+
+.y-navbar-info .navbar-toggle {
+	border-color: #099fdd;
+}
+
+.y-navbar-info .navbar-toggle:hover,
+.y-navbar-info .navbar-toggle:focus {
+	background-color: #f9f9f9;
+}
+
+.y-navbar-info .navbar-toggle .icon-bar {
+	background-color: #099fdd;
+}
+
+.y-navbar-info .navbar-collapse,
+.y-navbar-info .navbar-form {
+	border-color: #e7e7e7;
+}
+
+
+/* base style
+ * ========== */
+
+.y-mt15 {
+	margin-top: 15px;
+}
+
+
+/* header style
+ * ============ */
+
+.y-header .navbar {
+	background: #fff;
+	box-shadow: 2px 3px 9px 0 rgba(0, 0, 0, 0.06);
+	border-color: #e7e7e7;
+}
+
+.y-header .navbar-toggle {
+	margin-top: 24px;
+	margin-right: 18px;
+}
+
+.y-header .y-header-logo img {
+	height: 100%;
+	width: auto;
+	margin-left: 10px;
+}
+
+.y-header-logo {
+	float: left;
+	height: 80px;
+	margin-right: 20px;
+}
+
+.y-header-search {
+	color: #099fdd;
+}
+
+.y-header-search input {
+	height: 36px;
+}
+
+@media (max-width: 768px) {
+	.y-header-close {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.y-header-close {
+	color: #777;
+}
+
+.y-header-close:hover,
+.y-header-close:focus {
+	color: #f25050;
+	background-color: transparent;
+}
+
+.y-header-close i {
+	font-size: 24px;
+	margin-left: 10px;
+}
+
+.y-header-help {
+	border: solid 1px #099fdd;
+	color: #099fdd !important;
+}
+
+.y-header-help:hover,
+.y-header-help:focus {
+	border: solid 1px #099fdd;
+	color: #099fdd !important;
+}
+
+.y-header-help i {
+	font-size: 22px;
+	margin-left: 8px;
+}
+
+.y-header-search {
+	height: 36px;
+}
+
+
+/* body style
+ * ============ */
+
+.y-body {
+	margin-top: 120px;
+	text-align: center;
+}
+
+.y-body .panel {
+	height: 372px;
+	box-shadow: 0 0 9px 5px rgba(0, 0, 0, 0.06);
+	-webkit-transition: box-shadow 0.3s ease-out 0s;
+	-moz-transition: box-shadow 0.3s ease-out 0s;
+	transition: box-shadow 0.3s ease-out 0s;
+}
+
+.y-body .panel:hover,
+.y-body .panel:focus {
+	-webkit-box-shadow: 0 0 11px 7px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 11px 7px rgba(0, 0, 0, 0.1);
+}

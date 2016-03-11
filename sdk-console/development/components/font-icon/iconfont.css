@@ -21,13 +21,16 @@
 .icon-guanbi:before { content: "\e607"; }
 .icon-android:before { content: "\e604"; }
 .icon-xiangzi:before { content: "\e60e"; }
+.icon-hanbaodaohang:before { content: "\e614"; }
 .icon-zongyonghushu:before { content: "\e609"; }
+.icon-wenhao:before { content: "\e612"; }
 .icon-yonghu1:before { content: "\e60a"; }
 .icon-tuichu:before { content: "\e603"; }
 .icon-zhuye:before { content: "\e606"; }
 .icon-shouyi:before { content: "\e60b"; }
 .icon-kongxiangzi:before { content: "\e60f"; }
 .icon-shouyi1:before { content: "\e610"; }
+.icon-daohang:before { content: "\e613"; }
 .icon-xiasanjiao:before { content: "\e605"; }
 .icon-yonghu2:before { content: "\e60c"; }
 .icon-shouyi2:before { content: "\e60d"; }

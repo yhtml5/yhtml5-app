@@ -1,9 +1,8 @@
- // 设置项目属性
+// 设置项目属性
 fis.set('project.name', 'fis3-base');
 fis.set('project.md5Length', 8);
 fis.set('project.md5Connector ', '.');
-fis.set('project.ignore', ['test2/**', '.git/**', 'fis-conf.js', '*.psd']);
-
+fis.set("project.ignore", ['test2/**', '.git/**', 'fis-conf.js', '*.psd', 'components/font-icon/**', '**.svg']);
 
 // 所有模板放到 tempalte 目录下
 fis.match('/page/(**.html)', {
@@ -20,6 +19,10 @@ fis.match('/components/**/*', {
 fis.match('/components/**/(*.png)', {
 	release: '/static/img/$1',
 	url: '../static/img/$1'
+});
+fis.match('/components/**/(iconfont.*)', {
+	release: '/static/iconfont/$1',
+//	url: '../static/iconfont/$1'
 });
 // components下的 js 调用 jswrapper 进行自动化组件化封装
 //fis.match('/components/**/*.js', {
@@ -61,19 +64,24 @@ fis.media('pro')
 	.match('/components/**/*.css', {
 		packTo: '/static/yhtml5.css'
 	})
-	.match('1.js', {
+	.match('conmon/**', {
 		packOrder: 1
 	})
-
-.match('/static/{*.js,*css}', {
+	.match('header/**', {
+		packOrder: 2
+	})
+	.match('footer/**', {
+		packOrder: 3
+	})
+	.match('/static/{*.js,*css}', {
 		release: '/$0',
 		url: '..$0',
 		useHash: true
 	})
 	/**************************Copy******************************/
 
-	/*************************CDN规范*****************************/
-	// optimize
+/*************************CDN规范*****************************/
+// optimize
 fis.media('cdn')
 	.match('*.js', {
 		optimizer: fis.plugin('uglify-js', {

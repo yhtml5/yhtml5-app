@@ -1,34 +1,38 @@
 <link href="header.css" />
 <script src="header.js"></script>
-<header>
-	<nav class="navbar navbar-default navbar-fixed-top container-fluid">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target="#navbarCollapse">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="y-logo" href="index.html">
-				<img src="logo-sdk.png" class="" alt="sdk 商户后台" title="sdk 商户后台">
-			</a>
+<header class="y-header">
+	<nav class="navbar y-navbar-info navbar-fixed-top">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand y-header-logo" href="#"><img src="logo-sdk.png" /></a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse y-mt15" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav text-center">
+					<li class="active"><a href="#">控制台</a></li>
+					<li><a href="#">成员管理</a></li>
+					<li><a href="#">结算管理</a></li>
+					<li><a class="y-header-help" href="#">帮助<i class="iconfont">&#xe612;</i></a></li>
+				</ul>
+				<a class="nav navbar-brand navbar-right y-header-close" href="#">退出<i class="iconfont">&#xe608;</i></a>
+				<form class="navbar-form pull-right" role="search" action="" method="">
+					<div class="input-group y-header-search  hidden-sm">
+						<input type="text" class="form-control" id="" value="" placeholder="Search">
+						<span class="input-group-btn">
+						<button class="btn btn-default" type="submit"><i class="iconfont">&#xe611;</i></button>
+					</span>
+					</div>
+				</form>
+			</div>
+			<!-- /.navbar-collapse -->
 		</div>
-		<div class="collapse navbar-collapse y-header-nav" id="navbarCollapse">
-			<ul class="nav nav-pills">
-				<li class="js-header-nav active"><a href="">控制台</a></li>
-				<li class="js-header-nav"><a href="">成员管理</a></li>
-				<li class="js-header-nav"><a href="">结算管理</a></li>
-				<li class="js-header-nav"><a href="">帮助</a></li>
-				<li>
-					<form method="GET" action="" accept-charset="UTF-8" class="form-inline" onsubmit="">
-						<div class="form-group">
-							<input class="form-control" placeholder="请输入要搜索的内容..." name="kw" type="text">
-							<span class="glyphicon glyphicon-search "></span>
-						</div>
-					</form>
-				</li>
-				<li class="js-header-nav y-header-close">退出<i class="iconfont">&#xe603;</i></li>
-			</ul>
-		</div>
+		<!-- /.container -->
 	</nav>
 </header>
