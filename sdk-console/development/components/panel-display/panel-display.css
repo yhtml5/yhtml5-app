@@ -5,11 +5,47 @@
 .y-panel-display-user i {
 	font-size: 40px;
 	color: #3a3a3a;
-	-webkit-transition: color 0.3s ease-out 0s;
-	-moz-transition: color 0.3s ease-out 0s;
-	transition: color 0.3s ease-out 0s;
 }
 
+.y-panel-display-money p,
+.y-panel-display-user p {
+	font-size: 16px;
+	margin-top: -4px;
+	font-weight: bold;
+}
+
+.y-panel-display .y-num {
+	font-size: 20px;
+	line-height: 80px;
+	vertical-align: middle;
+}
+
+.y-panel-display-set i {
+	color: #099fdd;
+	font-size: 30px;
+}
+
+.y-panel-display-set p {
+	font-weight: bold;
+}
+
+.y-panel-display h3,
+.y-panel-display-money p,
+.y-panel-display-user p,
+.y-panel-display-money i,
+.y-panel-display .y-num,
+.y-panel-display-set i,
+.y-panel-display-set p,
+.y-panel-display-user i {
+	-webkit-transition: color 0.4s ease-out 0s;
+	-moz-transition: color 0.4s ease-out 0s;
+	transition: color 0.4s ease-out 0s;
+}
+
+.y-panel-display h3:hover,
+.y-panel-display h3:focus,
+.y-panel-display .y-num:hover,
+.y-panel-display .y-num:focus,
 .y-panel-display-money i:hover,
 .y-panel-display-money i:focus,
 .y-panel-display-user i:hover,
@@ -19,45 +55,6 @@
 .y-panel-display-user p:hover,
 .y-panel-display-user p:focus {
 	color: #099fdd;
-}
-
-.y-panel-display-money p,
-.y-panel-display-user p {
-	font-size: 16px;
-	margin-top: -4px;
-	font-weight: bold;
-	-webkit-transition: color 0.3s ease-out 0s;
-	-moz-transition: color 0.3s ease-out 0s;
-	transition: color 0.3s ease-out 0s;
-}
-
-.y-panel-display .y-num {
-	font-size: 20px;
-	line-height: 80px;
-	vertical-align: middle;
-	-webkit-transition: color 0.3s ease-out 0s;
-	-moz-transition: color 0.3s ease-out 0s;
-	transition: color 0.3s ease-out 0s;
-}
-
-.y-panel-display .y-num:hover,
-.y-panel-display .y-num:focus {
-	color: #099fdd;
-}
-
-.y-panel-display-set i {
-	color: #099fdd;
-	font-size: 30px;
-	-webkit-transition: color 0.3s ease-out 0s;
-	-moz-transition: color 0.3s ease-out 0s;
-	transition: color 0.3s ease-out 0s;
-}
-
-.y-panel-display-set p {
-	font-weight: bold;
-	-webkit-transition: color 0.3s ease-out 0s;
-	-moz-transition: color 0.3s ease-out 0s;
-	transition: color 0.3s ease-out 0s;
 }
 
 .y-panel-display-set i:hover,

@@ -1,1 +1,2 @@
-var j=2
+/* panel-add script
+ * =============== */

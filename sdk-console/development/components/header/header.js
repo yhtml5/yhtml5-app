@@ -1,1 +1,2 @@
-var j=2
+/* header script
+ * ============= */
