@@ -17,6 +17,7 @@
 }
 .icon-yonghu:before { content: "\e608"; }
 .icon-shezhi:before { content: "\e600"; }
+.icon-qq:before { content: "\e615"; }
 .icon-sousuo:before { content: "\e611"; }
 .icon-guanbi:before { content: "\e607"; }
 .icon-android:before { content: "\e604"; }
@@ -28,10 +29,13 @@
 .icon-tuichu:before { content: "\e603"; }
 .icon-zhuye:before { content: "\e606"; }
 .icon-shouyi:before { content: "\e60b"; }
+.icon-ios:before { content: "\e616"; }
+.icon-icon:before { content: "\e617"; }
 .icon-kongxiangzi:before { content: "\e60f"; }
 .icon-shouyi1:before { content: "\e610"; }
 .icon-daohang:before { content: "\e613"; }
 .icon-xiasanjiao:before { content: "\e605"; }
+.icon-chanpinwendang:before { content: "\e618"; }
 .icon-yonghu2:before { content: "\e60c"; }
 .icon-shouyi2:before { content: "\e60d"; }
 .icon-jiahao:before { content: "\e602"; }

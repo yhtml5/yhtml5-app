@@ -1,6 +1,10 @@
 /* panel-display style
  * =================== */
 
+.y-panel-display {
+	height: 372px;
+}
+
 .y-panel-display-money i,
 .y-panel-display-user i {
 	font-size: 40px;
