@@ -54,7 +54,7 @@ function initGithubCharts() {
 				areaStyle: {
 					normal: {}
 				},
-				data: [350, 678,3219, 2100, 1000, 7072,6331]
+				data: [350, 678,3219, 2100, 1000, 6072,8500]
 			}, {
 				name: 'SVN提交次数',
 				type: 'line',
