@@ -2,7 +2,7 @@
 fis.set('project.name', 'fis3-base');
 fis.set('project.md5Length', 8);
 fis.set('project.md5Connector ', '.');
-fis.set("project.ignore", ['test2/**', '.git/**', 'fis-conf.js', '*.psd', 'components/font-icon/**', '**.svg']);
+fis.set("project.ignore", ['test2/**', '.git/**', 'fis-conf.js', 'design/**', 'task/**', '*.psd', 'components/font-icon/**', '**.svg']);
 
 // 所有模板放到 tempalte 目录下
 fis.match('/page/(**.html)', {
@@ -22,7 +22,7 @@ fis.match('/components/**/(*.png)', {
 });
 fis.match('/components/**/(iconfont.*)', {
 	release: '/static/iconfont/$1',
-//	url: '../static/iconfont/$1'
+	//	url: '../static/iconfont/$1'
 });
 // components下的 js 调用 jswrapper 进行自动化组件化封装
 //fis.match('/components/**/*.js', {

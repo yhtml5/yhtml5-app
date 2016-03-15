@@ -1,0 +1,336 @@
+/*!/components/app-add/app-add.css*/
+/* help-center style
+ * ================= */
+.y-app-add{
+	top: 20%;
+}
+
+.y-app-add .form-group{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+} 
+.y-app-add .form-group input {
+	margin-top: 14px;
+	margin-bottom: 20px;
+}
+/*!/components/help-center/help-center.css*/
+/* help-center style
+ * ================= */
+
+.y-help-center .list-group {
+	text-align: center;
+	width: 80%;
+	margin: 10px auto 20px auto;
+	max-width: 320px;
+}
+
+.y-help-center .list-group-item {
+	border-radius: 4px;
+	border-radius: 4px;
+	margin-bottom: 18px;
+	padding: 6px 16px;
+}
+
+.y-help-center .list-group-item i {
+	font-size: 30px;
+}
+
+.y-help-center .col-xs-9 {
+	line-height: 42px;
+}
+/*!/components/member/member.css*/
+/* member style
+ * ============ */
+.y-member-list-title{
+	line-height: 52px;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+}
+.y-member-add-btn{
+	line-height: 52px;
+	text-align: center;
+}
+.y-member th{
+	line-height: 36px !important;
+	font-size: 16px;
+	text-align: center;
+}
+.y-member td{
+	line-height: 36px !important;
+	
+}
+
+/*!/components/panel-add/panel-add.css*/
+/* panel-add style
+ * =============== */
+
+.y-panel-add {
+	vertical-align: middle;
+	line-height: 300px;
+	height: 372px;
+}
+
+.y-panel-add i {
+	font-size: 80px;
+	color: #7d7d7d;
+	-webkit-transition: font-size 0.3s ease-out 0s;
+	-moz-transition: font-size 0.3s ease-out 0s;
+	transition: font-size 0.3s ease-out 0s;
+}
+
+.y-panel-add i:hover,
+.y-panel-add i:focus {
+	color: #099fdd;
+	font-size: 120px;
+}
+/*!/components/panel-display/panel-display.css*/
+/* panel-display style
+ * =================== */
+
+.y-panel-display {
+	height: 372px;
+}
+
+.y-panel-display-money i,
+.y-panel-display-user i {
+	font-size: 40px;
+	color: #3a3a3a;
+}
+
+.y-panel-display-money p,
+.y-panel-display-user p {
+	font-size: 16px;
+	margin-top: -4px;
+	font-weight: bold;
+}
+
+.y-panel-display .y-num {
+	font-size: 20px;
+	line-height: 80px;
+	vertical-align: middle;
+}
+
+.y-panel-display-set i {
+	color: #099fdd;
+	font-size: 30px;
+}
+
+.y-panel-display-set p {
+	font-weight: bold;
+}
+
+.y-panel-display h3,
+.y-panel-display-money p,
+.y-panel-display-user p,
+.y-panel-display-money i,
+.y-panel-display .y-num,
+.y-panel-display-set i,
+.y-panel-display-set p,
+.y-panel-display-user i {
+	-webkit-transition: color 0.4s ease-out 0s;
+	-moz-transition: color 0.4s ease-out 0s;
+	transition: color 0.4s ease-out 0s;
+}
+
+.y-panel-display h3:hover,
+.y-panel-display h3:focus,
+.y-panel-display .y-num:hover,
+.y-panel-display .y-num:focus,
+.y-panel-display-money i:hover,
+.y-panel-display-money i:focus,
+.y-panel-display-user i:hover,
+.y-panel-display-user i:focus,
+.y-panel-display-money p:hover,
+.y-panel-display-money p:focus,
+.y-panel-display-user p:hover,
+.y-panel-display-user p:focus {
+	color: #099fdd;
+}
+
+.y-panel-display-set i:hover,
+.y-panel-display-set i:focus,
+.y-panel-display-set p:hover,
+.y-panel-display-set p:focus {
+	color: #3a3a3a;
+}
+/*!/components/header/header.css*/
+/*=========================================================================================
+ * Author:Kyle|张大漾
+ * Author Website:http://yhtml5.com
+ * Author Gihub:https://github.com/yhtml5
+ * Description: A Website disgned by boostrap and Jquery.Do something awesome and have fun !
+ *==========================================================================================*/
+
+
+/* ali-font-icon
+ * ============== */
+
+@font-face {
+	font-family: "iconfont";
+	src: url('/static/iconfont/iconfont.eot');
+	/* IE9*/
+	src: url('/static/iconfont/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('/static/iconfont/iconfont.woff') format('woff'), /* chrome, firefox */
+	url('/static/iconfont/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+	url('/static/iconfont/iconfont.svg#iconfont') format('svg');
+	/* iOS 4.1- */
+}
+
+.iconfont {
+	font-family: "iconfont" !important;
+	font-size: 16px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: 0.2px;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+-moz-osx-font-smoothing: grayscale;
+
+}
+
+/* Expand bootstrap style
+ * ====================== */
+.y-navbar-info {}
+.y-navbar-info .navbar-nav > li > a {
+	color: #333;
+	border-radius: 6px;
+	font-size: 16px;
+}
+.y-navbar-info .navbar-nav > li > a:hover,
+.y-navbar-info .navbar-nav > li > a:focus {
+	color: #099fdd;
+	background-color: transparent;
+}
+.y-navbar-info .navbar-nav > .active > a,
+.y-navbar-info .navbar-nav > .active > a:hover,
+.y-navbar-info .navbar-nav > .active > a:focus {
+	color: #fff;
+	background-color: #099fdd;
+}
+.y-navbar-info .navbar-toggle {
+	border-color: #099fdd;
+}
+.y-navbar-info .navbar-toggle:hover,
+.y-navbar-info .navbar-toggle:focus {
+	background-color: #f9f9f9;
+}
+.y-navbar-info .navbar-toggle .icon-bar {
+	background-color: #099fdd;
+}
+.y-navbar-info .navbar-collapse,
+.y-navbar-info .navbar-form {
+	border-color: #e7e7e7;
+}
+
+/* cover bootstrap style
+ * ===================== */
+.list-group-item.active,
+.list-group-item.active:focus,
+.list-group-item.active:hover {
+	background-color: #099fdd;
+	border-color: #099fdd;
+}
+
+.modal-content .close {
+	font-size: 30px;
+}
+
+/* base style
+ * ========== */
+.y-mt15 {
+	margin-top: 15px;
+}
+.y-modal-header-default {
+	background: #f5f5f5;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.y-modal-footer-default {
+	background: #f5f5f5;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+
+/* header style
+ * ============ */
+.y-header .navbar {
+	background: #fff;
+	box-shadow: 2px 3px 9px 0 rgba(0, 0, 0, 0.06);
+	border-color: #e7e7e7;
+}
+.y-header .navbar-toggle {
+	margin-top: 24px;
+	margin-right: 18px;
+}
+.y-header .y-header-logo img {
+	height: 100%;
+	width: auto;
+	margin-left: 10px;
+}
+.y-header-logo {
+	float: left;
+	height: 80px;
+	margin-right: 20px;
+}
+.y-header-search {
+	color: #099fdd;
+}
+.y-header-search input {
+	height: 36px;
+}
+@media (max-width: 768px) {
+	.y-header-close {
+		width: 100%;
+		text-align: center;
+	}
+}
+.y-header-close {
+	color: #777;
+}
+.y-header-close:hover,
+.y-header-close:focus {
+	color: #f25050;
+	background-color: transparent;
+}
+.y-header-close i {
+	font-size: 24px;
+	margin-left: 10px;
+}
+.y-header-help {
+	border: solid 1px #099fdd;
+	color: #099fdd;
+	margin-left: 20px;
+}
+.y-header-help i {
+	font-size: 22px;
+	margin-left: 8px;
+}
+.y-header-help i,
+.y-header-help span {
+	color: #099fdd;
+}
+.y-header-search {
+	height: 36px;
+}
+
+/* body style
+ * ============ */
+.y-body {
+	margin-top: 120px;
+	text-align: center;
+}
+.y-body .panel {
+	box-shadow: 0 0 9px 5px rgba(0, 0, 0, 0.06);
+	-webkit-transition: box-shadow 0.3s ease-out 0s;
+	-moz-transition: box-shadow 0.3s ease-out 0s;
+	transition: box-shadow 0.3s ease-out 0s;
+}
+.y-body .panel:hover,
+.y-body .panel:focus {
+	-webkit-box-shadow: 0 0 11px 7px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 11px 7px rgba(0, 0, 0, 0.1);
+}
