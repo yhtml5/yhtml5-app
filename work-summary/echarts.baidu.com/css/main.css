@@ -1936,3 +1936,14 @@ ul {
 	margin-left: auto;
 	margin-right: auto;
 }
+.y-project-img{
+	    width: 50% !important; 
+    margin: auto;
+}
+.y-project-img2{
+	    width: 66% !important; 
+    margin: auto;
+}
+.y-sdk-console{
+	font-size: 18px;
+}

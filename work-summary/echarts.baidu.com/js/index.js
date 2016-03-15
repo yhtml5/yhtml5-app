@@ -203,22 +203,7 @@ function initSizeCharts() {
 				},
 				data: [0, 0, 4, 0, 0, 0, 4]
 			}]
-		});
-		//		var i = new echarts.graphic.Group,
-		//			a = new echarts.graphic.Group;
-		//		t.getZr().add(i), t.getZr().add(a), i.animate().when(2e3, {
-		//			position: [373, 373]
-		//		}).during(function() {
-		//			e[1].value = Math.round(i.position[0]), e[2].value = Math.round(a.position[1]), t.setOption({
-		//				series: [{
-		//					data: e
-		//				}]
-		//			})
-		//		}).start(), a.animate().when(1e3, {
-		//			position: [172, 172]
-		//		}).start(), $(window).on("resize", function() {
-		//			t.resize()
-		//		})
+		})
 	}
 }
 
