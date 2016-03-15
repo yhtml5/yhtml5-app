@@ -4,9 +4,8 @@ function initGithubCharts() {
 		var t = echarts.init($("#github-line-chart")[0]);
 		t.setOption({
 			animationDuration: 1500,
-
 			title: {
-				text: '代码提交次数'
+				text: '  代码提交（次数）'
 			},
 			tooltip: {
 				trigger: 'axis'
@@ -40,7 +39,7 @@ function initGithubCharts() {
 				areaStyle: {
 					normal: {}
 				},
-				data: [20,70, 120, 260, 610, 850, 830]
+				data: [20, 70, 120, 260, 610, 850, 830]
 			}, {
 				name: 'Github修改次数',
 				type: 'line',
@@ -54,7 +53,7 @@ function initGithubCharts() {
 				areaStyle: {
 					normal: {}
 				},
-				data: [350, 678,3219, 2100, 1000, 6072,8500]
+				data: [350, 678, 3219, 2100, 1000, 6072, 8500]
 			}, {
 				name: 'SVN提交次数',
 				type: 'line',
@@ -62,7 +61,7 @@ function initGithubCharts() {
 				areaStyle: {
 					normal: {}
 				},
-				data: [350, 570,350, 100, 190, 270,90]
+				data: [350, 570, 350, 100, 190, 270, 90]
 			}, {
 				name: 'SVN修改次数',
 				type: 'line',
@@ -76,7 +75,7 @@ function initGithubCharts() {
 				areaStyle: {
 					normal: {}
 				},
-				data: [199, 1461, 1173,333, 666,  1654, 901]
+				data: [199, 1461, 1173, 333, 666, 1654, 901]
 			}, ]
 		}), setTimeout(function() {
 			t.setOption({
@@ -112,83 +111,114 @@ function initSizeCharts() {
 				}
 			}, "-"];
 		t.setOption({
-			animation: !1,
-			grid: {
-				left: -20,
-				right: 20,
-				top: 4,
-				bottom: 30
+			title: {
+				text: '      项目总览（天数）'
 			},
-			textStyle: {
-				fontSize: 14
-			},
-			xAxis: {
-				axisLine: {
-					lineStyle: {
-						color: "#ccc"
-					}
-				},
-				axisLabel: {
-					textStyle: {
-						fontSize: 14,
-						color: "#999"
-					}
-				},
-				axisTick: {
-					show: !1
-				},
-				splitLine: {
-					show: !1
-				},
-				data: ["", "ECharts 2", "ECharts 3", ""]
-			},
-			yAxis: {
-				min: 0,
-				max: 400,
-				splitNumber: 4,
-				splitLine: {
-					lineStyle: {
-						color: "#eee"
-					}
-				},
-				axisLine: {
-					show: !1
-				},
-				axisLabel: {
-					show: !1
-				},
-				axisTick: {
-					show: !1
+			tooltip: {
+				trigger: 'axis',
+				axisPointer: { // 坐标轴指示器，坐标轴触发有效
+					type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
 				}
 			},
+			legend: {
+				data: ['部署架构', '前端开发', '移动适配', '重构优化',  '技术学习','数据交互']
+			},
+			grid: {
+				left: '3%',
+				right: '4%',
+				bottom: '3%',
+				containLabel: true
+			},
+			xAxis: {
+				type: 'value'
+			},
+			yAxis: {
+				type: 'category',
+				data: ['美白走', '新美白走', 'fwCMS', '聚宝网站', '51pay', 'SDK后台', 'Yhtml5.js']
+			},
 			series: [{
-				type: "bar",
-				barCategoryGap: "50%",
+				name: '部署架构',
+				type: 'bar',
+				stack: '总量',
 				label: {
 					normal: {
-						formatter: "{c} KB",
-						show: !0,
-						position: "top"
+						show: true,
+						position: 'insideRight'
 					}
 				},
-				data: e
+				data: [0, 0, 4, 0, 0, 2, 4]
+			}, {
+				name: '前端开发',
+				type: 'bar',
+				stack: '总量',
+				label: {
+					normal: {
+						show: true,
+						position: 'insideRight'
+					}
+				},
+				data: [5, 13, 4, 5, 9, 6, 8]
+			}, {
+				name: '移动适配',
+				type: 'bar',
+				stack: '总量',
+				label: {
+					normal: {
+						show: true,
+						position: 'insideRight'
+					}
+				},
+				data: [1, 2, 1, 0, 2, 2, 4]
+			}, {
+				name: '重构优化',
+				type: 'bar',
+				stack: '总量',
+				label: {
+					normal: {
+						show: true,
+						position: 'insideRight'
+					}
+				},
+				data: [1, 3, 4, 20, 4, 2, 2]
+			}, {
+				name: '技术学习',
+				type: 'bar',
+				stack: '总量',
+				label: {
+					normal: {
+						show: true,
+						position: 'insideRight'
+					}
+				},
+				data: [3, 3, 4, 0, 2, 2, 6]
+			}, {
+				name: '数据交互',
+				type: 'bar',
+				stack: '总量',
+				label: {
+					normal: {
+						show: true,
+						position: 'insideRight'
+					}
+				},
+				data: [0, 0, 4, 0, 0, 0, 4]
 			}]
 		});
-		var i = new echarts.graphic.Group,
-			a = new echarts.graphic.Group;
-		t.getZr().add(i), t.getZr().add(a), i.animate().when(2e3, {
-			position: [373, 373]
-		}).during(function() {
-			e[1].value = Math.round(i.position[0]), e[2].value = Math.round(a.position[1]), t.setOption({
-				series: [{
-					data: e
-				}]
-			})
-		}).start(), a.animate().when(1e3, {
-			position: [172, 172]
-		}).start(), $(window).on("resize", function() {
-			t.resize()
-		})
+		//		var i = new echarts.graphic.Group,
+		//			a = new echarts.graphic.Group;
+		//		t.getZr().add(i), t.getZr().add(a), i.animate().when(2e3, {
+		//			position: [373, 373]
+		//		}).during(function() {
+		//			e[1].value = Math.round(i.position[0]), e[2].value = Math.round(a.position[1]), t.setOption({
+		//				series: [{
+		//					data: e
+		//				}]
+		//			})
+		//		}).start(), a.animate().when(1e3, {
+		//			position: [172, 172]
+		//		}).start(), $(window).on("resize", function() {
+		//			t.resize()
+		//		})
 	}
 }
 
