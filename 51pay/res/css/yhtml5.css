@@ -289,6 +289,12 @@ a:focus {
 	width: 40%;
 }
 
+.fw-ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
 .fw-user-nav li {
 	float: left;
 	line-height: 50px;
@@ -624,4 +630,47 @@ footer a {
 
 .fw-uc-btn-pay {
 	margin-right: 5px;
+}
+
+.fw-goods-type h3 {
+	font-size: 22px;
+	margin-bottom: 36px;
+	    text-indent: 0.2em;
+}
+.fw-goods-type .fw-ellipsis{
+	color: #3F3F3F;
+}
+
+.fw-goods-type div {
+	font-size: 16px;
+	color: #8B8B8B;
+	margin: 6px;
+	padding-bottom: 6px;
+	border-color: #a8a8a8;
+	border-style: dotted;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 2px;
+	border-left-width: 0px;
+}
+
+.fw-goods-type .fw-goods-price {
+	font-size: 18px;
+	color: #3f3f3f;
+}
+
+.fw-goods-type button {
+	margin-top: 16px;
+	margin-left: 10%;
+	width: 30%;
+	max-width: 100px;
+	min-width: 60px;
+}
+
+.fw-goods-img .thumbnail {
+	width: 300px;
+}
+
+.fw-goods-img img {
+	height: 300px;
 }
