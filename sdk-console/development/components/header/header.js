@@ -25,6 +25,13 @@ y(function() {
 			btn.button('reset')
 		}, 2000)
 	})
+	y(".y-member-add-create").on('click', function() {
+		var btn = y(this).button('loading')
+			//business logic
+		setTimeout(function() {
+			btn.button('reset')
+		}, 2000)
+	})
 
 	function expandTable() {
 		var tbody = y('.y-member tbody').html()

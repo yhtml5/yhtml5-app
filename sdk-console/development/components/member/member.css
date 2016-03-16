@@ -1,21 +1,29 @@
 /* member style
  * ============ */
-.y-member-list-title{
+
+.y-member-list-title {
 	line-height: 52px;
 	text-align: center;
 	font-size: 20px;
 	font-weight: bold;
 }
-.y-member-add-btn{
+
+.y-member-add-btn {
 	line-height: 52px;
 	text-align: center;
 }
-.y-member th{
+
+.y-member th {
 	line-height: 36px !important;
 	font-size: 16px;
 	text-align: center;
 }
-.y-member td{
+
+.y-member td {
 	line-height: 36px !important;
-	
+}
+
+.y-member-add .modal-body，
+.y-member-delete .modal-body {
+	padding: 30px;
 }
