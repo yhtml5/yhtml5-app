@@ -674,3 +674,12 @@ footer a {
 .fw-goods-img img {
 	height: 300px;
 }
+.fw-baidu-edit{
+	height: 600px;
+	background-color: #1999FF;
+	border-radius: 6px;
+	margin-bottom: 20px;
+	font-size: 40px;
+	text-align: center;
+	padding-top: 200px;
+}
