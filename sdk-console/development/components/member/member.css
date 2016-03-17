@@ -23,7 +23,28 @@
 	line-height: 36px !important;
 }
 
-.y-member-add .modal-body，
+.y-member-add .modal-body,
 .y-member-delete .modal-body {
-	padding: 30px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 20px;
 }
+
+.y-member-none {
+	margin-top: 40px;
+	margin-bottom: 80px;;
+}
+
+.y-member-none i {
+	font-size: 80px;
+	position: relative;
+}
+
+.y-member-none i,
+.y-member-none h4 {
+	color: #666;
+}
+.y-member-table{
+	display: none;
+}
+

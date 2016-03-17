@@ -5,7 +5,6 @@
  * Description: A Website disgned by boostrap and Jquery.Do something awesome and have fun !
  *==========================================================================================*/
 
-
 /* General
  * ======= */
 var y = $.noConflict()
@@ -23,23 +22,43 @@ y(function() {
 			//business logic
 		setTimeout(function() {
 			btn.button('reset')
-		}, 2000)
+		}, 1000)
 	})
 	y(".y-member-add-create").on('click', function() {
 		var btn = y(this).button('loading')
 			//business logic
 		setTimeout(function() {
 			btn.button('reset')
-		}, 2000)
+		}, 1000)
+	})
+	y(".y-member-delete-create").on('click', function() {
+		var btn = y(this).button('loading')
+			//business logic
+		setTimeout(function() {
+			btn.button('reset')
+		}, 1000)
+	})
+	y(".y-member-password-reset-create").on('click', function() {
+		var btn = y(this).button('loading')
+			//business logic
+		setTimeout(function() {
+			btn.button('reset')
+		}, 1000)
 	})
 
-	function expandTable() {
+	function yExpandTable() {
 		var tbody = y('.y-member tbody').html()
 		for (var i = 0; i < 9; i++) {
 			y('.y-member tbody').append(tbody)
 		}
 	}
-	expandTable();
-
+	yExpandTable();
+	y('.y-member-none').hover(function() {
+		y(this).fadeOut()
+		//loading date logic
+		setTimeout(function() {
+			y('.y-member-table').fadeIn()
+		}, 800)
+	})
 
 })

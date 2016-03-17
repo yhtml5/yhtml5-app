@@ -85,6 +85,11 @@
 .y-mt15 {
 	margin-top: 15px;
 }
+
+.y-min-h300{
+	min-height: 300px;
+}
+
 .y-modal-header-default {
 	background: #f5f5f5;
 	border-top-left-radius: 5px;

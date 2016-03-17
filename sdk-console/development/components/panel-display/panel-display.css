@@ -33,6 +33,7 @@
 	font-weight: bold;
 }
 
+.y-member-none i,
 .y-panel-display h3,
 .y-panel-display-money p,
 .y-panel-display-user p,
@@ -46,6 +47,8 @@
 	transition: color 0.4s ease-out 0s;
 }
 
+.y-member-none i:hover,
+.y-member-none i:focus,
 .y-panel-display h3:hover,
 .y-panel-display h3:focus,
 .y-panel-display .y-num:hover,
