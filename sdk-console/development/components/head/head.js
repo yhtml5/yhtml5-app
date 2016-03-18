@@ -10,12 +10,20 @@
 var y = $.noConflict()
 y(function() {
 	y('.list-group a').click(function() {
-		y('.list-group a').removeClass('active');
-		y(this).addClass('active');
+		y('.list-group a').removeClass('active')
+		y(this).addClass('active')
 	})
 	y('.nav .y-active').click(function() {
-		y('.nav .y-active').removeClass('active');
-		y(this).addClass('active');
+		y('.nav .y-active').removeClass('active')
+		y(this).addClass('active')
+	})
+	y('.j-panel-header-function .dropdown-menu a').click(function() {
+		var a = y(this).text()
+		y('.j-panel-header-function span').text(a)
+	})
+	y('.j-panel-header-app .dropdown-menu a').click(function() {
+		var a = y(this).text()
+		y('.j-panel-header-app span').text(a)
 	})
 	y(".y-app-add-create").on('click', function() {
 		var btn = y(this).button('loading')
@@ -60,5 +68,5 @@ y(function() {
 			y('.y-member-table').fadeIn()
 		}, 800)
 	})
-	y("[data-toggle='popover']").popover();
+	y("[data-toggle='popover']").popover()
 })
