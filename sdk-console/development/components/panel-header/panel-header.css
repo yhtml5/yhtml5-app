@@ -11,9 +11,11 @@
 }
 
 .y-header .breadcrumb b {
-	margin-bottom: 6px;
+	margin-bottom: 4px;
 }
-
+.y-header .breadcrumb a {
+	text-decoration: none;
+}
 .y-header .breadcrumb .y-ellipsis {
 	display: inline-block;
 	max-width: 60px;

@@ -70,3 +70,7 @@
 .y-panel-display-set p:focus {
 	color: #3a3a3a;
 }
+.y-panel-display-set a{
+	text-decoration: none;
+	color: #3a3a3a;
+}
