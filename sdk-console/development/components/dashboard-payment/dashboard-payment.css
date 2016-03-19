@@ -8,6 +8,11 @@
 	font-weight: bold;
 }
 
+.y-dashboard-payment-function,
+.y-dashboard-payment-filter {
+	line-height: 52px;
+}
+
 .y-dashboard-payment-add-btn {
 	line-height: 52px;
 	text-align: center;
