@@ -17,6 +17,14 @@ y(function() {
 		y('.nav .y-active').removeClass('active')
 		y(this).addClass('active')
 	})
+	y('.breadcrumb .j-app li').click(function() {
+		y('.breadcrumb .j-app li').removeClass('active')
+		y(this).addClass('active')
+	})
+	y('.breadcrumb .j-function li').click(function() {
+		y('.breadcrumb .j-function li').removeClass('active')
+		y(this).addClass('active')
+	})
 	y('.j-panel-header-function .dropdown-menu a').click(function() {
 		var a = y(this).text()
 		y('.j-panel-header-function span').text(a)
