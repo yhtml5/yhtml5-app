@@ -73,28 +73,27 @@
 }
 
 .y-btn-blue {
-  color: #fff;
-  background-color: #099fdd;
-  border-color: #46b8da;
+	color: #fff;
+	background-color: #099fdd;
+	border-color: #0799d9;
 }
+
 .y-btn-blue:focus,
-.y-btn-blue.focus {
-  color: #fff;
-  background-color: #0996d2;
-  border-color: #1b6d85;
-}
+.y-btn-blue.focus,
 .y-btn-blue:hover {
-  color: #fff;
-  background-color: #0996d2;
-  border-color: #269abc;
+	color: #fff;
+	background-color: #0996d2;
+	border-color: #0794d1;
 }
+
 .y-btn-blue:active,
 .y-btn-blue.active,
 .open > .dropdown-toggle.y-btn-blue {
-  color: #fff;
-  background-color: #0996d2;
-  border-color: #269abc;
+	color: #fff;
+	background-color: #0996d2;
+	border-color: #0e5aa7;
 }
+
 .y-btn-blue:active:hover,
 .y-btn-blue.active:hover,
 .open > .dropdown-toggle.y-btn-blue:hover,
@@ -104,15 +103,17 @@
 .y-btn-blue:active.focus,
 .y-btn-blue.active.focus,
 .open > .dropdown-toggle.y-btn-blue.focus {
-  color: #fff;
-  background-color: #269abc;
-  border-color: #1b6d85;
+	color: #fff;
+	background-color: #0794d0;
+	border-color: #1b6d85;
 }
+
 .y-btn-blue:active,
 .y-btn-blue.active,
 .open > .dropdown-toggle.y-btn-blue {
-  background-image: none;
+	background-image: none;
 }
+
 .y-btn-blue.disabled:hover,
 .y-btn-blue[disabled]:hover,
 fieldset[disabled] .y-btn-blue:hover,
@@ -122,13 +123,16 @@ fieldset[disabled] .y-btn-blue:focus,
 .y-btn-blue.disabled.focus,
 .y-btn-blue[disabled].focus,
 fieldset[disabled] .y-btn-blue.focus {
-  background-color: #099fdd;
-  border-color: #46b8da;
+	background-color: #099fdd;
+	border-color: #0799d9;
 }
+
 .y-btn-blue .badge {
-  color: #099fdd;
-  background-color: #fff;
+	color: #099fdd;
+	background-color: #fff;
 }
+
+
 /* cover bootstrap style
  * ===================== */
 
@@ -177,6 +181,10 @@ fieldset[disabled] .y-btn-blue.focus {
 	background: #f5f5f5;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
+}
+
+.y-dashboard-payment .caret {
+	
 }
 
 

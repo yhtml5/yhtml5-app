@@ -14,9 +14,10 @@ y(function() {
 		y(this).addClass('active')
 	})
 	y('.nav .y-active').click(function() {
-		y('.nav .y-active').removeClass('active')
-		y(this).addClass('active')
-	})
+			y('.nav .y-active').removeClass('active')
+			y(this).addClass('active')
+		})
+		//面包屑选中切换状态
 	y('.j-dashboard-breadcrumb .j-app li').click(function() {
 		y('.j-dashboard-breadcrumb .j-app li').removeClass('active')
 		y(this).addClass('active')
@@ -32,6 +33,22 @@ y(function() {
 	y('.j-dashboard-header-app .dropdown-menu a').click(function() {
 		var a = y(this).text()
 		y('.j-dashboard-header-app span').text(a)
+	})
+	y('.y-dashboard-payment-filter .j-menu-date a').click(function() {
+		var a = y(this).text()
+		y('.y-dashboard-payment-filter .j-date').text(a)
+	})
+	y('.y-dashboard-payment-filter .j-menu-pay a').click(function() {
+		var a = y(this).text()
+		y('.y-dashboard-payment-filter .j-pay').text(a)
+	})
+	y('.y-dashboard-payment-filter .j-menu-settlement a').click(function() {
+		var a = y(this).text()
+		y('.y-dashboard-payment-filter .j-settlement').text(a)
+	})
+	y('.y-dashboard-payment-filter .j-menu-channel a').click(function() {
+		var a = y(this).text()
+		y('.y-dashboard-payment-filter .j-channel').text(a)
 	})
 	y(".y-app-add-create").on('click', function() {
 		var btn = y(this).button('loading')
@@ -63,7 +80,8 @@ y(function() {
 	})
 
 	function yDashboardPaymentFilter() {
-		var a = y('.y-dashboard-payment-filter').width()
+		var a = y('.y-template-panel').width()
+		var b = 450
 
 		function small() {
 			y('.y-dashboard-payment-filter .j-date').text("日期")
@@ -73,26 +91,26 @@ y(function() {
 		}
 
 		function big() {
-			y('.y-dashboard-payment-filter .j-date').html("选择日期&nbsp;")
-			y('.y-dashboard-payment-filter .j-pay').html("支付状态&nbsp;")
-			y('.y-dashboard-payment-filter .j-settlement').html("结算状态&nbsp;")
-			y('.y-dashboard-payment-filter .j-channel').html("全部渠道&nbsp;")
+			y('.y-dashboard-payment-filter .j-date').html("选择日期")
+			y('.y-dashboard-payment-filter .j-pay').html("支付状态")
+			y('.y-dashboard-payment-filter .j-settlement').html("结算状态")
+			y('.y-dashboard-payment-filter .j-channel').html("全部渠道")
 		}
-		if (a < 388) {
+		if (a < b) {
 			small()
 		}
 		y(window).resize(function() {
-			var w = y('.y-dashboard-payment-filter').width()
-			if (w < 388) {
+			var c = y('.y-template-panel').width()
+			if (c < b) {
 				small()
 			} else {
 				big()
 			}
-			console.log(w)
+			console.log(c)
 			console.log("不要调皮地频繁调节窗口")
 		})
 	}
-	yDashboardPaymentFilter()
+	//	yDashboardPaymentFilter()
 
 	function yExpandTable() {
 		var tbody = y('.y-member tbody,.y-dashboard-payment tbody').html()
