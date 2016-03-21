@@ -17,16 +17,7 @@ y(function() {
 			y('.nav .y-active').removeClass('active')
 			y(this).addClass('active')
 		})
-		//面包屑选中切换状态
-	y('.j-dashboard-breadcrumb .j-app li').click(function() {
-		y('.j-dashboard-breadcrumb .j-app li').removeClass('active')
-		y(this).addClass('active')
-	})
-	y('.j-dashboard-breadcrumb .j-function li').click(function() {
-			y('.j-dashboard-breadcrumb .j-function li').removeClass('active')
-			y(this).addClass('active')
-		})
-		//点击更新筛选文字
+		//点击更新文字
 	y('.j-dashboard-header-function .dropdown-menu a').click(function() {
 		var a = y(this).text()
 		y('.j-dashboard-header-function span').text(a)
@@ -48,9 +39,10 @@ y(function() {
 		y('.y-dashboard-payment-filter .j-settlement').text(a)
 	})
 	y('.y-dashboard-payment-filter .j-menu-channel a').click(function() {
-		var a = y(this).text()
-		y('.y-dashboard-payment-filter .j-channel').text(a)
-	})
+			var a = y(this).text()
+			y('.y-dashboard-payment-filter .j-channel').text(a)
+		})
+		//按钮点击等待逻辑
 	y(".y-app-add-create").on('click', function() {
 		var btn = y(this).button('loading')
 			//business logic
@@ -73,6 +65,20 @@ y(function() {
 		}, 1000)
 	})
 	y(".y-member-password-reset-create").on('click', function() {
+		var btn = y(this).button('loading')
+			//business logic
+		setTimeout(function() {
+			btn.button('reset')
+		}, 1000)
+	})
+	y(".y-dashboard-set-update").on('click', function() {
+		var btn = y(this).button('loading')
+			//business logic
+		setTimeout(function() {
+			btn.button('reset')
+		}, 1000)
+	})
+	y(".y-dashboard-set-delete").on('click', function() {
 		var btn = y(this).button('loading')
 			//business logic
 		setTimeout(function() {
@@ -134,7 +140,8 @@ y(function() {
 
 	function urlIdActive() {
 		var urlId = window.location.hash.replace(/^(.*[n])*.*(.|n)$/g, "$2") - 1;
-		console.log("Web大前端")
+		console.log(urlId)
+		console.log("请不要调皮，在这里测试即将导致系统崩溃")
 		if (urlId >= 0) {
 			y('.y-template-dashboard .tab-pane').removeClass('active in');
 			y('.y-template-dashboard .tab-pane:eq(' + urlId + ')').addClass('active in').tab('show');
