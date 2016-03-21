@@ -33,44 +33,7 @@
 	font-weight: bold;
 }
 
-.y-member-none i,
-.y-panel-display h3,
-.y-panel-display-money p,
-.y-panel-display-user p,
-.y-panel-display-money i,
-.y-panel-display .y-num,
-.y-panel-display-set i,
-.y-panel-display-set p,
-.y-panel-display-user i {
-	-webkit-transition: color 0.4s ease-out 0s;
-	-moz-transition: color 0.4s ease-out 0s;
-	transition: color 0.4s ease-out 0s;
-}
-
-.y-member-none i:hover,
-.y-member-none i:focus,
-.y-panel-display h3:hover,
-.y-panel-display h3:focus,
-.y-panel-display .y-num:hover,
-.y-panel-display .y-num:focus,
-.y-panel-display-money i:hover,
-.y-panel-display-money i:focus,
-.y-panel-display-user i:hover,
-.y-panel-display-user i:focus,
-.y-panel-display-money p:hover,
-.y-panel-display-money p:focus,
-.y-panel-display-user p:hover,
-.y-panel-display-user p:focus {
-	color: #099fdd;
-}
-
-.y-panel-display-set i:hover,
-.y-panel-display-set i:focus,
-.y-panel-display-set p:hover,
-.y-panel-display-set p:focus {
-	color: #3a3a3a;
-}
-.y-panel-display-set a{
+.y-panel-display-set a {
 	text-decoration: none;
 	color: #3a3a3a;
 }

@@ -1,22 +1,35 @@
 /* breadcrumb style
  * ================ */
 
-.y-header .breadcrumb {
-	font-size: 16px;
+.y-dashboard-header-navbar {
+	text-align: center;
 }
 
-.y-header .breadcrumb i {
+@media (max-width: 768px) {
+	.y-dashboard-header-navbar .dropdown-menu {
+		text-align: center;
+	}
+}
+
+.y-dashboard-header-navbar .breadcrumb {
+	font-size: 16px;
+	float: left;
+}
+
+.y-dashboard-iconfont-home {
 	font-size: 26px;
 	margin-right: 6px;
 }
 
-.y-header .breadcrumb b {
+.y-dashboard-header-navbar .breadcrumb b {
 	margin-bottom: 4px;
 }
-.y-header .breadcrumb a {
+
+.y-dashboard-header-navbar .breadcrumb a {
 	text-decoration: none;
 }
-.y-header .breadcrumb .y-ellipsis {
+
+.y-dashboard-header-navbar .y-ellipsis {
 	display: inline-block;
 	max-width: 60px;
 	vertical-align: bottom;

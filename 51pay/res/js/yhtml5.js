@@ -66,7 +66,7 @@ $(function() {
 			$('.list-group > a').removeClass('active');
 			$('.list-group > a:eq(' + urlId + ')').addClass('active').tab('show');
 		}
-	};
+	}
 	urlIdActive();
 	/* login.html
 	 * ============= */

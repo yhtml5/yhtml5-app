@@ -23,9 +23,10 @@ y(function() {
 		y(this).addClass('active')
 	})
 	y('.j-dashboard-breadcrumb .j-function li').click(function() {
-		y('.j-dashboard-breadcrumb .j-function li').removeClass('active')
-		y(this).addClass('active')
-	})
+			y('.j-dashboard-breadcrumb .j-function li').removeClass('active')
+			y(this).addClass('active')
+		})
+		//点击更新筛选文字
 	y('.j-dashboard-header-function .dropdown-menu a').click(function() {
 		var a = y(this).text()
 		y('.j-dashboard-header-function span').text(a)
@@ -111,6 +112,9 @@ y(function() {
 		})
 	}
 	//	yDashboardPaymentFilter()
+	y(window).resize(function() {
+		console.log("不要调皮地频繁调节窗口")
+	})
 
 	function yExpandTable() {
 		var tbody = y('.y-member tbody,.y-dashboard-payment tbody').html()
@@ -127,4 +131,14 @@ y(function() {
 		}, 800)
 	})
 	y("[data-toggle='popover']").popover()
+
+	function urlIdActive() {
+		var urlId = window.location.hash.replace(/^(.*[n])*.*(.|n)$/g, "$2") - 1;
+		console.log("Web大前端")
+		if (urlId >= 0) {
+			y('.y-template-dashboard .tab-pane').removeClass('active in');
+			y('.y-template-dashboard .tab-pane:eq(' + urlId + ')').addClass('active in').tab('show');
+		}
+	}
+	urlIdActive();
 })
