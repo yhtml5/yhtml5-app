@@ -1,8 +1,8 @@
-<div class="panel panel-default y-member">
+<div class="panel panel-default" data-model="y-canal">
 	<div class="panel-heading">
 		<div class="row">
-			<div class="col-xs-6 col-sm-3 col-lg-2 y-member-list-title">渠道列表</div>
-			<div class="col-xs-6 visible-xs-block col-sm-3 col-sm-push-1 y-member-add-btn">
+			<div class="col-xs-6 col-sm-3 col-lg-2 y-panel-title">渠道列表</div>
+			<div class="col-xs-6 visible-xs-block col-sm-3 col-sm-push-1 y-panel-btn">
 				<button class="btn btn-info" data-toggle="modal" data-target="#y-member-add">创建渠道</button>
 			</div>
 			<div class="col-xs-12 col-sm-5 col-sm-pull-1">
@@ -15,19 +15,19 @@
 					</div>
 				</form>
 			</div>
-			<div class="col-xs-6 hidden-xs col-sm-3 col-sm-push-1 col-lg-push-2 y-member-add-btn">
+			<div class="col-xs-6 hidden-xs col-sm-3 col-sm-push-1 col-lg-push-2 y-panel-btn">
 				<button class="btn btn-info" data-toggle="modal" data-target="#y-member-add">创建渠道</button>
 			</div>
 		</div>
 
 	</div>
 	<div class="panel-body y-min-h300">
-		<div class="y-member-none">
-			<i class="iconfont">&#xe60e;</i>
-			<h4 class="y-shake">您未添加任何渠道~</h4>
+		<div class="y-mt40 y-color-default" data-toggle="y-hover-show">
+			<i class="iconfont y-transition-color-info y-fonticon-md">&#xe60e;</i>
+			<h4 class="">您未添加任何渠道~</h4>
 		</div>
-		<div class="table-responsive y-member-table">
-			<table class="table table-striped table-hover table-condensed table-bordered">
+		<div class="table-responsive y-hide" data-toggle="y-hover-shown">
+			<table class="table table-striped table-hover table-condensed table-bordered y-table-md">
 				<thead>
 					<tr>
 						<th>渠道编号</th>
@@ -39,7 +39,7 @@
 						<th>操作</th>
 					</tr>
 				</thead>
-				<tbody>
+				<tbody class="">
 					<tr>
 						<td>Data</td>
 						<td>Data</td>

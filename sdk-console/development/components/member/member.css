@@ -1,50 +1,5 @@
 /* member style
  * ============ */
 
-.y-member-list-title {
-	line-height: 52px;
-	text-align: center;
-	font-size: 20px;
-	font-weight: bold;
-}
 
-.y-member-add-btn {
-	line-height: 52px;
-	text-align: center;
-}
-
-.y-member th {
-	line-height: 36px !important;
-	font-size: 16px;
-	text-align: center;
-}
-
-.y-member td {
-	line-height: 36px !important;
-}
-
-.y-member-add .modal-body,
-.y-member-delete .modal-body {
-	padding-left: 30px;
-	padding-right: 30px;
-	padding-top: 20px;
-}
-
-.y-member-none {
-	margin-top: 40px;
-	margin-bottom: 80px;;
-}
-
-.y-member-none i {
-	font-size: 80px;
-	position: relative;
-}
-
-.y-member-none i,
-.y-member-none h4 {
-	color: #666;
-}
-.y-member-table{
-	display: none;
-}
 

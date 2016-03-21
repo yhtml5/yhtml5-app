@@ -123,17 +123,17 @@ y(function() {
 	})
 
 	function yExpandTable() {
-		var tbody = y('.y-member tbody,.y-dashboard-payment tbody').html()
+		var tbody = y('[data-model="y-canal"] tbody,.y-dashboard-payment tbody').html()
 		for (var i = 0; i < 9; i++) {
-			y('.y-member tbody,.y-dashboard-payment tbody').append(tbody)
+			y('[data-model="y-canal"] tbody,.y-dashboard-payment tbody').append(tbody)
 		}
 	}
 	yExpandTable();
-	y('.y-member-none').hover(function() {
+	y('[data-toggle="y-hover-show"]').hover(function() {
 		y(this).fadeOut()
 			//loading date logic
 		setTimeout(function() {
-			y('.y-member-table').fadeIn()
+			y('[data-toggle="y-hover-shown"]').fadeIn()
 		}, 800)
 	})
 	y("[data-toggle='popover']").popover()
