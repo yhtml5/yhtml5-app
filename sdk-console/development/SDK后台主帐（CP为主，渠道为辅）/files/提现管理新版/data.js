@@ -1,0 +1,125 @@
+﻿$axure.loadCurrentPage({
+  "url":"提现管理新版.html",
+  "generationDate":new Date(1458553420402.64),
+  "isCanvasEnabled":false,
+  "variables":["OnLoadVariable"],
+  "page":{
+    "packageId":"abce81f1de6a4ca783d1ec38cfcc6e7e",
+    "type":"Axure:Page",
+    "name":"提现管理新版",
+    "notes":{
+},
+    "style":{
+      "baseStyle":"627587b6038d43cca051c114ac41ad32",
+      "pageAlignment":"near",
+      "fill":{
+        "fillType":"solid",
+        "color":0xFFFFFFFF},
+      "image":null,
+      "imageHorizontalAlignment":"near",
+      "imageVerticalAlignment":"near",
+      "imageRepeat":"auto",
+      "favicon":null,
+      "sketchFactor":"0",
+      "colorStyle":"appliedColor",
+      "fontName":"应用字体",
+      "borderWidth":"0"},
+    "adaptiveStyles":{
+},
+    "interactionMap":{
+},
+    "diagram":{
+      "objects":[{
+          "id":"c8d6ae3e7a2b4c7bb3c5a0d153765899",
+          "label":"",
+          "type":"imageBox",
+          "styleType":"imageBox",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":110,
+              "y":75},
+            "size":{
+              "width":1223,
+              "height":1005}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"ab3a0950a3404d10bbb9cf213302eecc",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":110,
+                  "y":75},
+                "size":{
+                  "width":1223,
+                  "height":1005}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/提现管理新版/u0.jpg"}},
+{
+          "id":"010b7e516cc94ead931d6abeb7ff2d7d",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":420,
+              "y":271},
+            "size":{
+              "width":100,
+              "height":30},
+            "cornerRadiusTopLeft":"5"},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"087889109acd4dddb12ff5d8c1b64893",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":420,
+                  "y":271},
+                "size":{
+                  "width":100,
+                  "height":30},
+                "cornerRadiusTopLeft":"5"},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"linkWindow",
+                      "description":"在 当前窗口 打开 提现",
+                      "target":{
+                        "targetType":"page",
+                        "url":"提现.html",
+                        "includeVariables":true},
+                      "linkType":"current"}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/基本信息（个人呈现）/u85.png"}}]}},
+  "masters":{
+},
+  "objectPaths":{
+    "c8d6ae3e7a2b4c7bb3c5a0d153765899":{
+      "scriptId":"u0"},
+    "ab3a0950a3404d10bbb9cf213302eecc":{
+      "scriptId":"u1"},
+    "010b7e516cc94ead931d6abeb7ff2d7d":{
+      "scriptId":"u2"},
+    "087889109acd4dddb12ff5d8c1b64893":{
+      "scriptId":"u3"}}});
