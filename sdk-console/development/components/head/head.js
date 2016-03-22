@@ -123,9 +123,9 @@ y(function() {
 	})
 
 	function yExpandTable() {
-		var tbody = y('[data-model="y-canal"] tbody,.y-dashboard-payment tbody').html()
+		var tbody = y('[data-page="canal-manage"] tbody,.y-dashboard-payment tbody').html()
 		for (var i = 0; i < 9; i++) {
-			y('[data-model="y-canal"] tbody,.y-dashboard-payment tbody').append(tbody)
+			y('[data-page="canal-manage"] tbody,.y-dashboard-payment tbody').append(tbody)
 		}
 	}
 	yExpandTable();
@@ -140,7 +140,6 @@ y(function() {
 
 	function urlIdActive() {
 		var urlId = window.location.hash.replace(/^(.*[n])*.*(.|n)$/g, "$2") - 1;
-		console.log(urlId)
 		console.log("请不要调皮，在这里测试即将导致系统崩溃")
 		if (urlId >= 0) {
 			y('.y-template-dashboard .tab-pane').removeClass('active in');
