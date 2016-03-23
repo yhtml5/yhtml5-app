@@ -161,14 +161,25 @@ fieldset[disabled] .y-btn-blue.focus {
 .y-color-default {
 	color: #666;
 }
-
+.y-
 .y-ellipsis {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
 
-.y-fonticon-md {
+.y-font-sm{
+	font-size: 18px;
+}
+.y-iconfont-xs {
+	position: relative;
+	font-size: 30px;
+}
+.y-iconfont-sm {
+	position: relative;
+	font-size: 60px;
+}
+.y-iconfont-md {
 	position: relative;
 	font-size: 100px;
 }
@@ -184,7 +195,10 @@ fieldset[disabled] .y-btn-blue.focus {
 .y-mt40 {
 	margin-top: 40px;
 }
-
+.y-mlr10{
+	margin-left: 10px;
+	margin-right: 10px;
+}
 .y-min-h300 {
 	min-height: 300px;
 }
