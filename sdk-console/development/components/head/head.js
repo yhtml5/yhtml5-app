@@ -65,18 +65,26 @@ y(function() {
 		}, 1000)
 	})
 	y(".y-dashboard-set-update").on('click', function() {
-		var btn = y(this).button('loading')
-			//business logic
-		setTimeout(function() {
-			btn.button('reset')
-		}, 1000)
-	})
+			var btn = y(this).button('loading')
+				//business logic
+			setTimeout(function() {
+				btn.button('reset')
+			}, 1000)
+		})
+		//弹窗显示删除中 display
+
+	function btnLoadingReset() {
+		setInterval(function() {
+			a = y("[data-modal='dashboard-delete']").css("display")
+			if (a == "none") {
+				y("[data-js='dashboard-delete']").button('loading').button('reset')
+			}
+		}, 500)
+	}
+	btnLoadingReset()
 	y("[data-js='dashboard-delete']").on('click', function() {
 		var btn = y(this).button('loading')
 			//business logic
-		y("[data-js='dashboard-delete-done']").click(function() {
-			btn.button('reset')
-		})
 	})
 
 	function yDashboardPaymentFilter() {
