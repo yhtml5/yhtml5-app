@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"应用删除确认.html",
-  "generationDate":new Date(1457084867124.35),
+  "generationDate":new Date(1458553417541.47),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -572,7 +572,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/帮助/u79.png"}},
+            "normal~":"images/帮助/u88.png"}},
 {
           "id":"e06b41923de7436da694d88db7c9cbc3",
           "label":"",
@@ -613,7 +613,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用删除确认/u73.png"}},
+            "normal~":"images/修改基本信息成功提示/u115.png"}},
 {
           "id":"3b8caecad29842f1a993eda14c4974dd",
           "label":"",
@@ -685,7 +685,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用删除确认/u77.png"}},
+            "normal~":"images/找回原安全密码/u83.png"}},
 {
           "id":"a4e975d354e24e208238fc47912ce1ec",
           "label":"",
@@ -733,7 +733,7 @@
                       "linkType":"current"}]}]}},
           "tabbable":true,
           "images":{
-            "normal~":"images/帮助/u65.png"}},
+            "normal~":"images/帮助/u74.png"}},
 {
           "id":"44f7a2b86d7f484eba02f1e06bf4477b",
           "label":"",
@@ -868,7 +868,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用删除确认/u87.png"}},
+            "normal~":"images/基本信息（个人呈现）/u85.png"}},
 {
           "id":"ea29c7d0ad0a4b138f9e04c2f9a0f2ea",
           "label":"",
@@ -887,7 +887,7 @@
           "images":{
             "start~":"resources/images/transparent.gif",
             "end~":"resources/images/transparent.gif",
-            "line~":"images/应用删除确认/u89_line.png"}},
+            "line~":"images/商户签约-提交成功提醒/u92_line.png"}},
 {
           "id":"1afdcf5cd4c143739d723b4e76a1811d",
           "label":"",
@@ -951,7 +951,7 @@
                       "linkType":"current"}]}]}},
           "tabbable":true,
           "images":{
-            "normal~":"images/应用删除确认/u90.png"}},
+            "normal~":"images/商户签约-提交成功提醒/u93.png"}},
 {
           "id":"77b29639ff1f40aab5a10fc7fb225076",
           "label":"",
@@ -1017,7 +1017,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用添加/u83.png"}},
+            "normal~":"images/商户签约-基本信息（个人）/u81.png"}},
 {
           "id":"c1878f7d13144d54b46ed3afb7748c97",
           "label":"",
@@ -1083,7 +1083,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用添加/u83.png"}}]}},
+            "normal~":"images/商户签约-基本信息（个人）/u81.png"}}]}},
   "masters":{
     "f73d698e06464df78e2f277ca77e6c60":{
       "packageId":"f73d698e06464df78e2f277ca77e6c60",
@@ -1305,15 +1305,14 @@
                     "isNewIfGroup":false,
                     "actions":[{
                         "action":"linkWindow",
-                        "description":"在 当前窗口 打开 入口",
+                        "description":"在 当前窗口 打开 链接",
                         "target":{
                           "targetType":"page",
-                          "url":"入口.html",
                           "includeVariables":true},
                         "linkType":"current"}]}]}},
             "tabbable":true,
             "images":{
-              "normal~":"images/帮助/u55.png"}},
+              "normal~":"images/帮助/u66.png"}},
 {
             "id":"34dbe10428ea41ee8cdbb51d7c3ed73a",
             "label":"",
@@ -1396,7 +1395,7 @@
                 "adaptiveStyles":{
 }}],
             "images":{
-              "normal~":"images/应用设置/u13.png"}},
+              "normal~":"images/基本信息（个人呈现）/u25.png"}},
 {
             "id":"59565fd155404fd087e51bcb3b8ceb97",
             "label":"",
@@ -1472,7 +1471,7 @@
                 "adaptiveStyles":{
 }}],
             "images":{
-              "normal~":"images/应用设置/u13.png"}},
+              "normal~":"images/基本信息（个人呈现）/u25.png"}},
 {
             "id":"820860e588cd4af3ae78284ddd63919b",
             "label":"",
@@ -1597,7 +1596,7 @@
                 "adaptiveStyles":{
 }}],
             "images":{
-              "normal~":"images/帮助/u57.png"}},
+              "normal~":"images/帮助/u55.png"}},
 {
             "id":"fcdd9f24623747709c69b6ad0e7e80dd",
             "label":"",

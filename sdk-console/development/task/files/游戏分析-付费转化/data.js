@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"游戏分析-付费转化.html",
-  "generationDate":new Date(1457084873607.72),
+  "generationDate":new Date(1458553425407.92),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -224,7 +224,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用设置/u13.png"}},
+            "normal~":"images/基本信息（个人呈现）/u25.png"}},
 {
           "id":"61cac7497dcb4125b691a18267dbc984",
           "label":"",
@@ -333,7 +333,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用设置/u13.png"}},
+            "normal~":"images/基本信息（个人呈现）/u25.png"}},
 {
           "id":"af983b31b47c4712832475100c458565",
           "label":"",
@@ -9304,7 +9304,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用删除确认/u87.png"}},
+            "normal~":"images/基本信息（个人呈现）/u85.png"}},
 {
           "id":"5233ce0e03ee4d539cc97f47a66a2f17",
           "label":"",

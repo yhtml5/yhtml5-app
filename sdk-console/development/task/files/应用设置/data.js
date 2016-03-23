@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"应用设置.html",
-  "generationDate":new Date(1457084866584.32),
+  "generationDate":new Date(1458553417030.44),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -204,7 +204,7 @@
             "fontWeight":"700",
             "location":{
               "x":602,
-              "y":740},
+              "y":792},
             "size":{
               "width":141,
               "height":33}},
@@ -223,7 +223,7 @@
                 "fontWeight":"700",
                 "location":{
                   "x":602,
-                  "y":740},
+                  "y":792},
                 "size":{
                   "width":141,
                   "height":33}},
@@ -339,10 +339,10 @@
             "fontSize":"28px",
             "fontWeight":"700",
             "location":{
-              "x":445,
+              "x":438,
               "y":660},
             "size":{
-              "width":300,
+              "width":308,
               "height":33}},
           "adaptiveStyles":{
 },
@@ -358,10 +358,10 @@
                 "fontSize":"28px",
                 "fontWeight":"700",
                 "location":{
-                  "x":445,
+                  "x":438,
                   "y":660},
                 "size":{
-                  "width":300,
+                  "width":308,
                   "height":33}},
               "adaptiveStyles":{
 }}],
@@ -410,7 +410,7 @@
             "fontSize":"18px",
             "location":{
               "x":782,
-              "y":740},
+              "y":792},
             "size":{
               "width":90,
               "height":33}},
@@ -467,7 +467,79 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/帮助/u79.png"}}]}},
+            "normal~":"images/帮助/u88.png"}},
+{
+          "id":"450ecc25736440d68ae2c920473142f5",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"paragraph",
+          "visible":true,
+          "style":{
+            "fontName":"'Arial Negreta', 'Arial'",
+            "fontSize":"28px",
+            "fontWeight":"700",
+            "location":{
+              "x":538,
+              "y":727},
+            "size":{
+              "width":199,
+              "height":33}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"e90e55b475124f68930f6fe975da8d48",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'Arial Negreta', 'Arial'",
+                "fontSize":"28px",
+                "fontWeight":"700",
+                "location":{
+                  "x":538,
+                  "y":727},
+                "size":{
+                  "width":199,
+                  "height":33}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"c0295637bb7148fa866d93af943b0172",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":782,
+              "y":725},
+            "size":{
+              "width":128,
+              "height":35}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"a9edd6efbd924e2db4a22d195cf08ccf",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":782,
+                  "y":725},
+                "size":{
+                  "width":128,
+                  "height":35}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/应用设置/u68.png"}}]}},
   "masters":{
     "f73d698e06464df78e2f277ca77e6c60":{
       "packageId":"f73d698e06464df78e2f277ca77e6c60",
@@ -689,15 +761,14 @@
                     "isNewIfGroup":false,
                     "actions":[{
                         "action":"linkWindow",
-                        "description":"在 当前窗口 打开 入口",
+                        "description":"在 当前窗口 打开 链接",
                         "target":{
                           "targetType":"page",
-                          "url":"入口.html",
                           "includeVariables":true},
                         "linkType":"current"}]}]}},
             "tabbable":true,
             "images":{
-              "normal~":"images/帮助/u55.png"}},
+              "normal~":"images/帮助/u66.png"}},
 {
             "id":"34dbe10428ea41ee8cdbb51d7c3ed73a",
             "label":"",
@@ -780,7 +851,7 @@
                 "adaptiveStyles":{
 }}],
             "images":{
-              "normal~":"images/应用设置/u13.png"}},
+              "normal~":"images/基本信息（个人呈现）/u25.png"}},
 {
             "id":"59565fd155404fd087e51bcb3b8ceb97",
             "label":"",
@@ -856,7 +927,7 @@
                 "adaptiveStyles":{
 }}],
             "images":{
-              "normal~":"images/应用设置/u13.png"}},
+              "normal~":"images/基本信息（个人呈现）/u25.png"}},
 {
             "id":"820860e588cd4af3ae78284ddd63919b",
             "label":"",
@@ -981,7 +1052,7 @@
                 "adaptiveStyles":{
 }}],
             "images":{
-              "normal~":"images/帮助/u57.png"}},
+              "normal~":"images/帮助/u55.png"}},
 {
             "id":"fcdd9f24623747709c69b6ad0e7e80dd",
             "label":"",
@@ -1452,4 +1523,12 @@
     "6f6518a044964462b37333285867115f":{
       "scriptId":"u64"},
     "7d8466d17edb43039441b526f1c0ac13":{
-      "scriptId":"u65"}}});
+      "scriptId":"u65"},
+    "450ecc25736440d68ae2c920473142f5":{
+      "scriptId":"u66"},
+    "e90e55b475124f68930f6fe975da8d48":{
+      "scriptId":"u67"},
+    "c0295637bb7148fa866d93af943b0172":{
+      "scriptId":"u68"},
+    "a9edd6efbd924e2db4a22d195cf08ccf":{
+      "scriptId":"u69"}}});

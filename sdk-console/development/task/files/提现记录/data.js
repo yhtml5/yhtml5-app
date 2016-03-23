@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"提现记录.html",
-  "generationDate":new Date(1457084870113.52),
+  "generationDate":new Date(1458553422100.73),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -125,7 +125,7 @@
           "images":{
             "start~":"resources/images/transparent.gif",
             "end~":"resources/images/transparent.gif",
-            "line~":"images/成员添加/u4_line.png"}},
+            "line~":"images/渠道添加/u4_line.png"}},
 {
           "id":"e19486f4a4914648a5bffe7f3985da38",
           "label":"",
@@ -165,15 +165,15 @@
                   "isNewIfGroup":false,
                   "actions":[{
                       "action":"linkWindow",
-                      "description":"在 当前窗口 打开 结算管理",
+                      "description":"在 当前窗口 打开 提现",
                       "target":{
                         "targetType":"page",
-                        "url":"结算管理.html",
+                        "url":"提现.html",
                         "includeVariables":true},
                       "linkType":"current"}]}]}},
           "tabbable":true,
           "images":{
-            "normal~":"images/成员添加/u5.png"}},
+            "normal~":"images/渠道添加/u5.png"}},
 {
           "id":"d0115169f14547de9fe4e23571b0f3cb",
           "label":"",
@@ -862,7 +862,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/帮助/u79.png"}},
+            "normal~":"images/帮助/u88.png"}},
 {
           "id":"624fa0f6695f4b368c405a4eec0eaa95",
           "label":"",

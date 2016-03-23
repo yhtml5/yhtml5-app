@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"游戏分析-付费渗透.html",
-  "generationDate":new Date(1457084875605.83),
+  "generationDate":new Date(1458553427395.04),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -224,7 +224,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用设置/u13.png"}},
+            "normal~":"images/基本信息（个人呈现）/u25.png"}},
 {
           "id":"3ee9fcdcee94447b962055d784b1f060",
           "label":"",
@@ -333,7 +333,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用设置/u13.png"}},
+            "normal~":"images/基本信息（个人呈现）/u25.png"}},
 {
           "id":"961e29780cfe4ebcbfad6c18c23b1784",
           "label":"",
@@ -12720,7 +12720,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用删除确认/u87.png"}},
+            "normal~":"images/基本信息（个人呈现）/u85.png"}},
 {
           "id":"4b2a172ac472400aaf004fb5a0072a17",
           "label":"",

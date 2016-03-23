@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"删除提现记录.html",
-  "generationDate":new Date(1457084870543.54),
+  "generationDate":new Date(1458553422498.76),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -125,7 +125,7 @@
           "images":{
             "start~":"resources/images/transparent.gif",
             "end~":"resources/images/transparent.gif",
-            "line~":"images/成员添加/u4_line.png"}},
+            "line~":"images/渠道添加/u4_line.png"}},
 {
           "id":"6aeda5821b904da3893b53fe8f3a2cfa",
           "label":"",
@@ -165,15 +165,15 @@
                   "isNewIfGroup":false,
                   "actions":[{
                       "action":"linkWindow",
-                      "description":"在 当前窗口 打开 结算管理",
+                      "description":"在 当前窗口 打开 提现",
                       "target":{
                         "targetType":"page",
-                        "url":"结算管理.html",
+                        "url":"提现.html",
                         "includeVariables":true},
                       "linkType":"current"}]}]}},
           "tabbable":true,
           "images":{
-            "normal~":"images/成员添加/u5.png"}},
+            "normal~":"images/渠道添加/u5.png"}},
 {
           "id":"d24d7dc66f8948f38f36621163e2419a",
           "label":"",
@@ -967,7 +967,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用删除确认/u73.png"}},
+            "normal~":"images/修改基本信息成功提示/u115.png"}},
 {
           "id":"43c23ab32f9a47d8ad7e3838656d04d7",
           "label":"",
@@ -1019,7 +1019,7 @@
           "images":{
             "start~":"resources/images/transparent.gif",
             "end~":"resources/images/transparent.gif",
-            "line~":"images/应用删除确认/u89_line.png"}},
+            "line~":"images/商户签约-提交成功提醒/u92_line.png"}},
 {
           "id":"edd3d7c86f6442f2b7a5b25600ec1be5",
           "label":"",
@@ -1075,7 +1075,7 @@
                       "linkType":"current"}]}]}},
           "tabbable":true,
           "images":{
-            "normal~":"images/应用删除确认/u90.png"}},
+            "normal~":"images/商户签约-提交成功提醒/u93.png"}},
 {
           "id":"a863f9b6539d4add9690ceda640a8c70",
           "label":"",
@@ -1166,7 +1166,7 @@
                       "linkType":"current"}]}]}},
           "tabbable":true,
           "images":{
-            "normal~":"images/应用删除确认/u90.png"}}]}},
+            "normal~":"images/商户签约-提交成功提醒/u93.png"}}]}},
   "masters":{
 },
   "objectPaths":{

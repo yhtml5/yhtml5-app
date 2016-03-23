@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"游戏分析入口（支付总览）.html",
-  "generationDate":new Date(1457084872350.65),
+  "generationDate":new Date(1458553424160.85),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -239,7 +239,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用设置/u13.png"}},
+            "normal~":"images/基本信息（个人呈现）/u25.png"}},
 {
           "id":"19f1a734f23d49b682ce20f87bee8f3e",
           "label":"",
@@ -348,7 +348,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用设置/u13.png"}},
+            "normal~":"images/基本信息（个人呈现）/u25.png"}},
 {
           "id":"a7a7b699f1414d0bb535ab39d644e460",
           "label":"",
@@ -10009,7 +10009,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用删除确认/u87.png"}},
+            "normal~":"images/基本信息（个人呈现）/u85.png"}},
 {
           "id":"0942bffa1b4542d09ca6ca72dc586a1b",
           "label":"",

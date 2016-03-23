@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"支付查询.html",
-  "generationDate":new Date(1457084869232.47),
+  "generationDate":new Date(1458553420283.63),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -229,15 +229,14 @@
                   "isNewIfGroup":false,
                   "actions":[{
                       "action":"linkWindow",
-                      "description":"在 当前窗口 打开 入口",
+                      "description":"在 当前窗口 打开 链接",
                       "target":{
                         "targetType":"page",
-                        "url":"入口.html",
                         "includeVariables":true},
                       "linkType":"current"}]}]}},
           "tabbable":true,
           "images":{
-            "normal~":"images/帮助/u55.png"}},
+            "normal~":"images/帮助/u66.png"}},
 {
           "id":"1475cfb5526b4d0496a952b35cbd1d1c",
           "label":"",
@@ -320,7 +319,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用设置/u13.png"}},
+            "normal~":"images/基本信息（个人呈现）/u25.png"}},
 {
           "id":"1f01ca8889a54d7ea46c8ee7fdb202ac",
           "label":"",
@@ -396,7 +395,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用设置/u13.png"}},
+            "normal~":"images/基本信息（个人呈现）/u25.png"}},
 {
           "id":"66207f9abcc645e7a3045022f6975b08",
           "label":"",
@@ -5525,7 +5524,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/帮助/u79.png"}},
+            "normal~":"images/帮助/u88.png"}},
 {
           "id":"4a0ef135f7be45e4a40072377576b5d5",
           "label":"日期筛选",

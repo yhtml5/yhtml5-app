@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"游戏分析-付费习惯.html",
-  "generationDate":new Date(1457084878078.98),
+  "generationDate":new Date(1458553429851.18),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -224,7 +224,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用设置/u13.png"}},
+            "normal~":"images/基本信息（个人呈现）/u25.png"}},
 {
           "id":"d7f0648488ab4cab8d1562570ef16f53",
           "label":"",
@@ -333,7 +333,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用设置/u13.png"}},
+            "normal~":"images/基本信息（个人呈现）/u25.png"}},
 {
           "id":"fffacaa6af9e45b4ab9a1ea09aae074c",
           "label":"",
@@ -2559,7 +2559,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用删除确认/u87.png"}},
+            "normal~":"images/基本信息（个人呈现）/u85.png"}},
 {
           "id":"346c210118d446938d7401cb4ea9774a",
           "label":"",

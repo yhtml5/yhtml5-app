@@ -13,13 +13,85 @@
     "loadFeedbackPlugin":false},
   "sitemap":{
     "rootNodes":[{
-        "pageName":"入口",
-        "type":"Wireframe",
-        "url":"入口.html"},
-{
         "pageName":"帮助",
         "type":"Wireframe",
         "url":"帮助.html"},
+{
+        "pageName":"签约管理",
+        "type":"Folder",
+        "url":"",
+        "children":[{
+            "pageName":"商户管理-签约协议",
+            "type":"Wireframe",
+            "url":"商户管理-签约协议.html"},
+{
+            "pageName":"商户签约-基本信息（个人）",
+            "type":"Wireframe",
+            "url":"商户签约-基本信息（个人）.html"},
+{
+            "pageName":"商户签约-基本信息（企业）",
+            "type":"Wireframe",
+            "url":"商户签约-基本信息（企业）.html"},
+{
+            "pageName":"商户签约-结算信息",
+            "type":"Wireframe",
+            "url":"商户签约-结算信息.html"},
+{
+            "pageName":"商户签约-提交成功提醒",
+            "type":"Wireframe",
+            "url":"商户签约-提交成功提醒.html"},
+{
+            "pageName":"大入口",
+            "type":"Wireframe",
+            "url":"大入口.html"}]},
+{
+        "pageName":"账户信息管理",
+        "type":"Folder",
+        "url":"",
+        "children":[{
+            "pageName":"基本信息（个人呈现）",
+            "type":"Wireframe",
+            "url":"基本信息（个人呈现）.html"},
+{
+            "pageName":"基本信息（个人修改）",
+            "type":"Wireframe",
+            "url":"基本信息（个人修改）.html"},
+{
+            "pageName":"修改基本信息成功提示",
+            "type":"Wireframe",
+            "url":"修改基本信息成功提示.html"},
+{
+            "pageName":"基本信息（企业呈现）",
+            "type":"Wireframe",
+            "url":"基本信息（企业呈现）.html"},
+{
+            "pageName":"基本信息（企业修改）",
+            "type":"Wireframe",
+            "url":"基本信息（企业修改）.html"},
+{
+            "pageName":"结算信息",
+            "type":"Wireframe",
+            "url":"结算信息.html"},
+{
+            "pageName":"修改结算信息成功提示（不需要）",
+            "type":"Wireframe",
+            "url":"修改结算信息成功提示（不需要）.html"},
+{
+            "pageName":"密码管理",
+            "type":"Wireframe",
+            "url":"密码管理.html"},
+{
+            "pageName":"修改密码成功提示（不需要）",
+            "type":"Wireframe",
+            "url":"修改密码成功提示（不需要）.html"},
+{
+            "pageName":"找回原安全密码",
+            "type":"Wireframe",
+            "url":"找回原安全密码.html"},
+{
+            "pageName":"签约协议",
+            "type":"Wireframe",
+            "url":"签约协议.html"}]},
 {
         "pageName":"应用管理",
         "type":"Folder",
@@ -41,21 +113,25 @@
             "type":"Wireframe",
             "url":"应用删除确认.html"}]},
 {
-        "pageName":"成员管理",
+        "pageName":"渠道管理",
         "type":"Folder",
         "url":"",
         "children":[{
-            "pageName":"成员管理",
+            "pageName":"渠道管理",
             "type":"Wireframe",
-            "url":"成员管理.html"},
+            "url":"渠道管理.html"},
 {
-            "pageName":"成员删除确认",
+            "pageName":"渠道删除确认",
             "type":"Wireframe",
-            "url":"成员删除确认.html"},
+            "url":"渠道删除确认.html"},
 {
-            "pageName":"成员添加",
+            "pageName":"未签约提醒",
             "type":"Wireframe",
-            "url":"成员添加.html"},
+            "url":"未签约提醒.html"},
+{
+            "pageName":"渠道添加",
+            "type":"Wireframe",
+            "url":"渠道添加.html"},
 {
             "pageName":"重置密码",
             "type":"Wireframe",
@@ -73,9 +149,21 @@
         "type":"Folder",
         "url":"",
         "children":[{
-            "pageName":"结算管理",
+            "pageName":"提现管理新版",
             "type":"Wireframe",
-            "url":"结算管理.html"},
+            "url":"提现管理新版.html"},
+{
+            "pageName":"提现",
+            "type":"Wireframe",
+            "url":"提现.html"},
+{
+            "pageName":"添加银行卡",
+            "type":"Wireframe",
+            "url":"添加银行卡.html"},
+{
+            "pageName":"结算管理未签约提醒",
+            "type":"Wireframe",
+            "url":"结算管理未签约提醒.html"},
 {
             "pageName":"提现复核",
             "type":"Wireframe",
@@ -89,13 +177,13 @@
             "type":"Wireframe",
             "url":"删除提现记录.html"},
 {
-            "pageName":"账户明细",
+            "pageName":"账户明细（第一版不做）",
             "type":"Wireframe",
-            "url":"账户明细.html"},
+            "url":"账户明细（第一版不做）.html"},
 {
-            "pageName":"交易详情",
+            "pageName":"交易详情（第一版不做）",
             "type":"Wireframe",
-            "url":"交易详情.html"}]},
+            "url":"交易详情（第一版不做）.html"}]},
 {
         "pageName":"游戏分析（第二版做）",
         "type":"Folder",

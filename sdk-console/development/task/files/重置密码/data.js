@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"重置密码.html",
-  "generationDate":new Date(1457084868584.43),
+  "generationDate":new Date(1458553419610.59),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -125,7 +125,7 @@
           "images":{
             "start~":"resources/images/transparent.gif",
             "end~":"resources/images/transparent.gif",
-            "line~":"images/成员添加/u4_line.png"}},
+            "line~":"images/渠道添加/u4_line.png"}},
 {
           "id":"8938b492e5fb4e58b8ec743398516595",
           "label":"",
@@ -165,15 +165,15 @@
                   "isNewIfGroup":false,
                   "actions":[{
                       "action":"linkWindow",
-                      "description":"在 当前窗口 打开 成员管理",
+                      "description":"在 当前窗口 打开 渠道管理",
                       "target":{
                         "targetType":"page",
-                        "url":"成员管理.html",
+                        "url":"渠道管理.html",
                         "includeVariables":true},
                       "linkType":"current"}]}]}},
           "tabbable":true,
           "images":{
-            "normal~":"images/成员添加/u5.png"}},
+            "normal~":"images/渠道添加/u5.png"}},
 {
           "id":"afac0beb672a46f39c326152f4eabb58",
           "label":"",
@@ -250,15 +250,15 @@
                   "isNewIfGroup":false,
                   "actions":[{
                       "action":"linkWindow",
-                      "description":"在 当前窗口 打开 成员管理",
+                      "description":"在 当前窗口 打开 渠道管理",
                       "target":{
                         "targetType":"page",
-                        "url":"成员管理.html",
+                        "url":"渠道管理.html",
                         "includeVariables":true},
                       "linkType":"current"}]}]}},
           "tabbable":true,
           "images":{
-            "normal~":"images/成员添加/u9.png"}},
+            "normal~":"images/渠道添加/u9.png"}},
 {
           "id":"7a274f9e0e7c44428789276c9edcb615",
           "label":"",
@@ -403,7 +403,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/帮助/u79.png"}},
+            "normal~":"images/帮助/u88.png"}},
 {
           "id":"d3a982d6fa004a2898e1de9e4ada508f",
           "label":"",
@@ -469,7 +469,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用添加/u83.png"}},
+            "normal~":"images/商户签约-基本信息（个人）/u81.png"}},
 {
           "id":"2429be8978454f02aead60b6d01a2c67",
           "label":"",
@@ -535,7 +535,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用添加/u83.png"}}]}},
+            "normal~":"images/商户签约-基本信息（个人）/u81.png"}}]}},
   "masters":{
 },
   "objectPaths":{

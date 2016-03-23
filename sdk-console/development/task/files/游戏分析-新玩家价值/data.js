@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"游戏分析-新玩家价值.html",
-  "generationDate":new Date(1457084877091.92),
+  "generationDate":new Date(1458553428887.12),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -224,7 +224,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用设置/u13.png"}},
+            "normal~":"images/基本信息（个人呈现）/u25.png"}},
 {
           "id":"83d34a37b8f2460fa17e5e313eb76d56",
           "label":"",
@@ -333,7 +333,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用设置/u13.png"}},
+            "normal~":"images/基本信息（个人呈现）/u25.png"}},
 {
           "id":"d985dea8c300448686cee7a4b582f9aa",
           "label":"",
@@ -8194,7 +8194,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用删除确认/u87.png"}},
+            "normal~":"images/基本信息（个人呈现）/u85.png"}},
 {
           "id":"609a087e39bb4569836fb7c93ab97522",
           "label":"",

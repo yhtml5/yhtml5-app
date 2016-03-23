@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"提现复核.html",
-  "generationDate":new Date(1457084869839.5),
+  "generationDate":new Date(1458553421806.72),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -125,7 +125,7 @@
           "images":{
             "start~":"resources/images/transparent.gif",
             "end~":"resources/images/transparent.gif",
-            "line~":"images/成员添加/u4_line.png"}},
+            "line~":"images/渠道添加/u4_line.png"}},
 {
           "id":"36fb50b2fa2b4931a742466dcfe4e31c",
           "label":"",
@@ -165,15 +165,15 @@
                   "isNewIfGroup":false,
                   "actions":[{
                       "action":"linkWindow",
-                      "description":"在 当前窗口 打开 结算管理",
+                      "description":"在 当前窗口 打开 提现",
                       "target":{
                         "targetType":"page",
-                        "url":"结算管理.html",
+                        "url":"提现.html",
                         "includeVariables":true},
                       "linkType":"current"}]}]}},
           "tabbable":true,
           "images":{
-            "normal~":"images/成员添加/u5.png"}},
+            "normal~":"images/渠道添加/u5.png"}},
 {
           "id":"c0a0f3f4d18b42efb8f9b64092511122",
           "label":"",
@@ -258,7 +258,7 @@
                       "linkType":"current"}]}]}},
           "tabbable":true,
           "images":{
-            "normal~":"images/成员添加/u9.png"}},
+            "normal~":"images/渠道添加/u9.png"}},
 {
           "id":"5255c1bda12d45dda78d1dee48f6e950",
           "label":"",
@@ -326,7 +326,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/提现复核/u13.png"}},
+            "normal~":"images/提现/u38.png"}},
 {
           "id":"eb9835cec9d14348bd7a9f0aedcd4f5c",
           "label":"",
@@ -385,43 +385,6 @@
               "style":{
                 "location":{
                   "x":750,
-                  "y":452},
-                "size":{
-                  "width":53,
-                  "height":16}},
-              "adaptiveStyles":{
-}}],
-          "images":{
-            "normal~":"resources/images/transparent.gif"}},
-{
-          "id":"a49cfe502bbd4e829bb4cfbb71d11134",
-          "label":"",
-          "type":"buttonShape",
-          "styleType":"paragraph",
-          "visible":true,
-          "style":{
-            "fontName":"'Arial Negreta', 'Arial'",
-            "fontWeight":"700",
-            "location":{
-              "x":978,
-              "y":452},
-            "size":{
-              "width":53,
-              "height":16}},
-          "adaptiveStyles":{
-},
-          "objects":[{
-              "id":"bc78ef1d6f714c26b7de8cc98afbc10d",
-              "label":"",
-              "isContained":true,
-              "type":"richTextPanel",
-              "styleType":"paragraph",
-              "visible":true,
-              "style":{
-                "fontName":"'Arial Negreta', 'Arial'",
-                "fontWeight":"700",
-                "location":{
-                  "x":978,
                   "y":452},
                 "size":{
                   "width":53,
@@ -768,7 +731,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用删除确认/u87.png"}},
+            "normal~":"images/基本信息（个人呈现）/u85.png"}},
 {
           "id":"7b9780a7094b4fa0b775e421e47d3f2c",
           "label":"",
@@ -805,7 +768,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/帮助/u79.png"}},
+            "normal~":"images/帮助/u88.png"}},
 {
           "id":"891963934a584e199936446a129737bb",
           "label":"",
@@ -871,7 +834,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用添加/u83.png"}},
+            "normal~":"images/商户签约-基本信息（个人）/u81.png"}},
 {
           "id":"fc3c21a035ec431d8bfb3d9d60711f96",
           "label":"",
@@ -937,7 +900,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用添加/u83.png"}}]}},
+            "normal~":"images/商户签约-基本信息（个人）/u81.png"}}]}},
   "masters":{
 },
   "objectPaths":{
@@ -979,67 +942,63 @@
       "scriptId":"u17"},
     "b63f2c6cbcc34653bde8f68c96d1fc5b":{
       "scriptId":"u18"},
-    "a49cfe502bbd4e829bb4cfbb71d11134":{
-      "scriptId":"u19"},
-    "bc78ef1d6f714c26b7de8cc98afbc10d":{
-      "scriptId":"u20"},
     "6e58857cc277408486453f3ee6bc86eb":{
-      "scriptId":"u21"},
+      "scriptId":"u19"},
     "d26642ab9aef4a86903b418a86327080":{
-      "scriptId":"u22"},
+      "scriptId":"u20"},
     "ab0bbf9b5ad34eb0bfafb3ad72442ea2":{
-      "scriptId":"u23"},
+      "scriptId":"u21"},
     "a828079a0ed8425ba07b0e1554f6bfc1":{
-      "scriptId":"u24"},
+      "scriptId":"u22"},
     "b5098629d5bc459587df720289ba05fb":{
-      "scriptId":"u25"},
+      "scriptId":"u23"},
     "a3d4c72033f844f8843d3f885510191a":{
-      "scriptId":"u26"},
+      "scriptId":"u24"},
     "45244091c3734fabb3f69145b7e0f167":{
-      "scriptId":"u27"},
+      "scriptId":"u25"},
     "73b78c7c78ff4e24a06a94877dd498b4":{
-      "scriptId":"u28"},
+      "scriptId":"u26"},
     "9b28b1c02e49429185a4b94cab182ff5":{
-      "scriptId":"u29"},
+      "scriptId":"u27"},
     "e52a8220100d4307913eb71878a4295b":{
-      "scriptId":"u30"},
+      "scriptId":"u28"},
     "18e047abe8c5441f96f5fcdf57293dff":{
-      "scriptId":"u31"},
+      "scriptId":"u29"},
     "a5099260167b40ad8286e1885491d810":{
-      "scriptId":"u32"},
+      "scriptId":"u30"},
     "6beffdb0582d4988b71081bdbc540dc3":{
-      "scriptId":"u33"},
+      "scriptId":"u31"},
     "08dadd7619fb4a8e965d089648f14666":{
-      "scriptId":"u34"},
+      "scriptId":"u32"},
     "171a040fffa042ddbaf08afe87027f7b":{
-      "scriptId":"u35"},
+      "scriptId":"u33"},
     "2904009c2c1642e4913592d3b55346ca":{
-      "scriptId":"u36"},
+      "scriptId":"u34"},
     "c8206582c14d493291da3efa46b1b1db":{
-      "scriptId":"u37"},
+      "scriptId":"u35"},
     "a8d06e950f50409fbc96bd23269568a2":{
-      "scriptId":"u38"},
+      "scriptId":"u36"},
     "ab75d4df983a4acb8b301040a5591ff9":{
-      "scriptId":"u39"},
+      "scriptId":"u37"},
     "e83e782142c846d59e2db3e9bf7813cb":{
-      "scriptId":"u40"},
+      "scriptId":"u38"},
     "7b9780a7094b4fa0b775e421e47d3f2c":{
-      "scriptId":"u41"},
+      "scriptId":"u39"},
     "3537d3cb21084105b38ea4a5eeff0874":{
-      "scriptId":"u42"},
+      "scriptId":"u40"},
     "891963934a584e199936446a129737bb":{
-      "scriptId":"u43"},
+      "scriptId":"u41"},
     "44a826d05aa040babf1f938218722b60":{
-      "scriptId":"u44"},
+      "scriptId":"u42"},
     "2b76a9fbb77744d79f3fd5978389a4b1":{
-      "scriptId":"u45"},
+      "scriptId":"u43"},
     "809acc5f48e947c888fea1ea96c604f7":{
-      "scriptId":"u46"},
+      "scriptId":"u44"},
     "fc3c21a035ec431d8bfb3d9d60711f96":{
-      "scriptId":"u47"},
+      "scriptId":"u45"},
     "6a5efefe41a848ed956c486f9b396dc0":{
-      "scriptId":"u48"},
+      "scriptId":"u46"},
     "2de541c476b04dce8c8c1835f7d01e8e":{
-      "scriptId":"u49"},
+      "scriptId":"u47"},
     "e560b397818a4a8585f4fc6e83f821ba":{
-      "scriptId":"u50"}}});
+      "scriptId":"u48"}}});
