@@ -157,6 +157,7 @@ fieldset[disabled] .y-btn-blue.focus {
 /* base style
  * ========== */
 
+
 .y-color-default {
 	color: #666;
 }
@@ -202,6 +203,7 @@ fieldset[disabled] .y-btn-blue.focus {
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 }
+
 
 .y-card-md {
 	width: 80%;
@@ -307,7 +309,6 @@ fieldset[disabled] .y-btn-blue.focus {
 .y-panel-display-set p:focus {
 	color: #3a3a3a;
 }
-
 
 /*#099fdd、#f25050*/
 

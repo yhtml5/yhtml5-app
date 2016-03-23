@@ -57,14 +57,7 @@ y(function() {
 			btn.button('reset')
 		}, 1000)
 	})
-	y(".y-member-delete-create").on('click', function() {
-		var btn = y(this).button('loading')
-			//business logic
-		setTimeout(function() {
-			btn.button('reset')
-		}, 1000)
-	})
-	y(".y-member-password-reset-create").on('click', function() {
+	y("[data-js='send-message']").on('click', function() {
 		var btn = y(this).button('loading')
 			//business logic
 		setTimeout(function() {
@@ -78,12 +71,12 @@ y(function() {
 			btn.button('reset')
 		}, 1000)
 	})
-	y(".y-dashboard-set-delete").on('click', function() {
+	y("[data-js='dashboard-delete']").on('click', function() {
 		var btn = y(this).button('loading')
 			//business logic
-		setTimeout(function() {
+		y("[data-js='dashboard-delete-done']").click(function() {
 			btn.button('reset')
-		}, 1000)
+		})
 	})
 
 	function yDashboardPaymentFilter() {
