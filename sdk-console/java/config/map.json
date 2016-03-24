@@ -37,19 +37,27 @@
             "type": "svg"
         },
         "components/account copy/account.html": {
-            "uri": "/vm-components/account.vm",
+            "uri": "/vm/account.vm",
             "type": "vm",
             "deps": [
                 "components/account copy/account.css"
             ]
         },
         "components/account-record/account-record.html": {
-            "uri": "/vm-components/account-record.vm",
+            "uri": "/vm/account-record.vm",
             "type": "vm"
         },
         "components/account-withdraw/account-withdraw.html": {
-            "uri": "/vm-components/account-withdraw.vm",
+            "uri": "/vm/account-withdraw.vm",
             "type": "vm"
+        },
+        "components/account-withdraw/account.css": {
+            "uri": "/others/account-withdraw/account.css",
+            "type": "css",
+            "deps": [
+                "components/head/head.css"
+            ],
+            "pkg": "p0"
         },
         "components/account/account.css": {
             "uri": "/others/account/account.css",
@@ -60,26 +68,26 @@
             "pkg": "p0"
         },
         "components/account/account.html": {
-            "uri": "/vm-components/account.vm",
+            "uri": "/vm/account.vm",
             "type": "vm",
             "deps": [
                 "components/account/account.css"
             ]
         },
         "components/undeveloped/undeveloped.html": {
-            "uri": "/vm-components/undeveloped.vm",
+            "uri": "/vm/undeveloped.vm",
             "type": "vm"
         },
         "components/canal-add/canal-add.html": {
-            "uri": "/vm-components/canal-add.vm",
+            "uri": "/vm/canal-add.vm",
             "type": "vm"
         },
         "components/canal-delete/canal-delete.html": {
-            "uri": "/vm-components/canal-delete.vm",
+            "uri": "/vm/canal-delete.vm",
             "type": "vm"
         },
         "components/canal-reset/canal-reset.html": {
-            "uri": "/vm-components/canal-reset.vm",
+            "uri": "/vm/canal-reset.vm",
             "type": "vm"
         },
         "components/canal/canal.css": {
@@ -91,14 +99,14 @@
             "pkg": "p0"
         },
         "components/canal/canal.html": {
-            "uri": "/vm-components/canal.vm",
+            "uri": "/vm/canal.vm",
             "type": "vm",
             "deps": [
                 "components/canal/canal.css"
             ]
         },
         "components/dashboard-delete/dashboard-delete.html": {
-            "uri": "/vm-components/dashboard-delete.vm",
+            "uri": "/vm/dashboard-delete.vm",
             "type": "vm"
         },
         "components/dashboard-header/dashboard-header.css": {
@@ -110,7 +118,7 @@
             "pkg": "p0"
         },
         "components/dashboard-header/dashboard-header.html": {
-            "uri": "/vm-components/dashboard-header.vm",
+            "uri": "/vm/dashboard-header.vm",
             "type": "vm",
             "deps": [
                 "components/dashboard-header/dashboard-header.css"
@@ -121,7 +129,7 @@
             "type": "png"
         },
         "components/dashboard-payment/dashboard-payment.html": {
-            "uri": "/vm-components/dashboard-payment.vm",
+            "uri": "/vm/dashboard-payment.vm",
             "type": "vm"
         },
         "components/dashboard-set/dashboard-set.css": {
@@ -133,7 +141,7 @@
             "pkg": "p0"
         },
         "components/dashboard-set/dashboard-set.html": {
-            "uri": "/vm-components/dashboard-set.vm",
+            "uri": "/vm/dashboard-set.vm",
             "type": "vm",
             "deps": [
                 "components/dashboard-set/dashboard-set.css"
@@ -145,7 +153,7 @@
             "pkg": "p1"
         },
         "components/head/head.html": {
-            "uri": "/vm-components/head.vm",
+            "uri": "/vm/head.vm",
             "type": "vm",
             "deps": [
                 "components/head/head.js",
@@ -186,7 +194,7 @@
             "pkg": "p0"
         },
         "components/header/header.html": {
-            "uri": "/vm-components/header.vm",
+            "uri": "/vm/header.vm",
             "type": "vm",
             "deps": [
                 "components/header/header.css"
@@ -205,7 +213,7 @@
             "pkg": "p0"
         },
         "components/help-center/help-center.html": {
-            "uri": "/vm-components/help-center.vm",
+            "uri": "/vm/help-center.vm",
             "type": "vm",
             "deps": [
                 "components/help-center/help-center.js",
@@ -229,7 +237,7 @@
             "pkg": "p0"
         },
         "components/panel-add/panel-add.html": {
-            "uri": "/vm-components/panel-add.vm",
+            "uri": "/vm/panel-add.vm",
             "type": "vm",
             "deps": [
                 "components/panel-add/panel-add.css"
@@ -244,7 +252,7 @@
             "pkg": "p0"
         },
         "components/panel-display/panel-display.html": {
-            "uri": "/vm-components/panel-display.vm",
+            "uri": "/vm/panel-display.vm",
             "type": "vm",
             "deps": [
                 "components/panel-display/panel-display.css"
@@ -261,11 +269,12 @@
     },
     "pkg": {
         "p0": {
-            "uri": "../static/yhtml5_69a676ae.css",
+            "uri": "../static/yhtml5_2c016624.css",
             "type": "css",
             "has": [
                 "components/head/head.css",
                 "components/account copy/account.css",
+                "components/account-withdraw/account.css",
                 "components/account/account.css",
                 "components/canal/canal.css",
                 "components/dashboard-header/dashboard-header.css",

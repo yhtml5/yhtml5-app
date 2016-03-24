@@ -49,15 +49,18 @@ fis.match('::package', {
 /*************************后端模板*****************************/
 
 fis.media('java')
+	.match('Reademe-java.md', {
+		release: '/$0',
+	})
 	.match('/components/(**)', {
 		release: 'others/$1',
 	})
 	.match('/components/*/(*.html)', {
 		rExt: '.vm',
-		release: '/vm-components/$1',
+		release: '/vm/$1',
 	})
 	.match('/template/(**.html)', {
-		release: '/vm-page/$1',
+		release: '/demo/$1',
 	})
 	.match('/components/**/(*.png)', {
 		release: '/static/img/$1',

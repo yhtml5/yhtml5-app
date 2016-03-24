@@ -1,0 +1,43 @@
+/*
+ * @require /components/head/head.css
+ */
+
+/* account style
+ * ============= */
+
+.y-account .panel-heading .row {
+	line-height: 50px;
+}
+
+.y-account .panel-heading button {
+	margin-right: 6px;
+	margin-left: 6px;
+}
+
+.y-account-title-money span {
+	font-size: 18px;
+}
+
+.y-account-title-money .y-num {
+	color: #f25050;
+}
+
+.y-account-hint {
+	text-align: left;
+	margin-top: 10px;
+}
+
+.y-account {
+	max-width: 600px;
+	margin: auto;
+}
+
+.y-account .panel-body {
+	padding-top: 60px;
+	padding-bottom: 30px;
+}
+
+.y-account .panel-body label {
+	font-size: 18px;
+	font-weight: 400;
+}
