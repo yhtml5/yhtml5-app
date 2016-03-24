@@ -9,12 +9,17 @@
  * ======= */
 var y = $.noConflict()
 y(function() {
+	//点击切换active
 	y('.list-group a').click(function() {
 		y('.list-group a').removeClass('active')
 		y(this).addClass('active')
 	})
 	y('.nav .y-active').click(function() {
-			y('.nav .y-active').removeClass('active')
+		y('.nav .y-active').removeClass('active')
+		y(this).addClass('active')
+	})
+	y('.pagination li').click(function() {
+			y('.pagination li').removeClass('active')
 			y(this).addClass('active')
 		})
 		//点击更新文字
@@ -120,13 +125,15 @@ y(function() {
 	}
 	//	yDashboardPaymentFilter()
 	y(window).resize(function() {
-		console.log("不要调皮地频繁调节窗口")
-	})
-
+			console.log("不要调皮地频繁调节窗口")
+		})
+		//增加表格内容
 	function yExpandTable() {
-		var tbody = y('[data-page="canal-manage"] tbody,.y-dashboard-payment tbody').html()
-		for (var i = 0; i < 9; i++) {
-			y('[data-page="canal-manage"] tbody,.y-dashboard-payment tbody').append(tbody)
+		for (var j = 1; j < 5; j++) {
+			var tbody = y('[data-js="repeat' + j + '"]').html()
+			for (var i = 0; i < 9; i++) {
+				y('[data-js="repeat' + j + '"]').append(tbody)
+			}
 		}
 	}
 	yExpandTable();
@@ -135,7 +142,7 @@ y(function() {
 			//loading date logic
 		setTimeout(function() {
 			y('[data-toggle="y-hover-shown"]').fadeIn()
-		}, 800)
+		},400)
 	})
 	y("[data-toggle='popover']").popover()
 

@@ -157,28 +157,47 @@ fieldset[disabled] .y-btn-blue.focus {
 /* base style
  * ========== */
 
+.y-box-sm {
+	width: 90%;
+	max-width: 120px;
+	margin: auto;
+	padding: 8px;
+	border: solid 1px #666;
+	border-radius: 4px;
+}
 
 .y-color-default {
 	color: #666;
 }
-.y-
+
+.y-bg-ebebeb {
+	background-color: #ebebeb;
+}
+
 .y-ellipsis {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
 
-.y-font-sm{
+.y-font-sm {
 	font-size: 18px;
 }
+
+.y-font-b {
+	font-weight: 700;
+}
+
 .y-iconfont-xs {
 	position: relative;
 	font-size: 30px;
 }
+
 .y-iconfont-sm {
 	position: relative;
 	font-size: 60px;
 }
+
 .y-iconfont-md {
 	position: relative;
 	font-size: 100px;
@@ -188,17 +207,36 @@ fieldset[disabled] .y-btn-blue.focus {
 	display: none;
 }
 
+.y-lh52 {
+	line-height: 52px;
+}
+
+.y-mb20 {
+	margin-bottom: 20px;
+}
+
 .y-mt15 {
 	margin-top: 15px;
+}
+
+.y-mt34 {
+	margin-top: 34px;
 }
 
 .y-mt40 {
 	margin-top: 40px;
 }
-.y-mlr10{
+
+.y-mlr0 {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.y-mlr10 {
 	margin-left: 10px;
 	margin-right: 10px;
 }
+
 .y-min-h300 {
 	min-height: 300px;
 }
@@ -217,7 +255,6 @@ fieldset[disabled] .y-btn-blue.focus {
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 }
-
 
 .y-card-md {
 	width: 80%;
@@ -267,6 +304,35 @@ fieldset[disabled] .y-btn-blue.focus {
 
 .y-table-md > tbody > tr > td {
 	line-height: 36px;
+}
+
+.y-btn-sm-sm {
+	padding: 6px 12px;
+	font-size: 14px;
+}
+
+@media (min-width:768px) and (max-width:991px) {
+	.y-btn-sm-sm {
+		padding: 4px 8px !important;
+		font-size: 12px !important;
+	}
+}
+
+@media (max-width:768px) {
+	.y-border-none-xs {
+		border: none !important;
+	}
+}
+
+.y-transition-border-color-info {
+	-webkit-transition: border-color 0.4s ease-out 0s;
+	-moz-transition: border-color 0.4s ease-out 0s;
+	transition: border-color 0.4s ease-out 0s;
+}
+
+.y-transition-border-color-info:hover,
+.y-transition-border-color-info:focus {
+	border-color: #099fdd;
 }
 
 .y-transition-color-info {
@@ -323,6 +389,7 @@ fieldset[disabled] .y-btn-blue.focus {
 .y-panel-display-set p:focus {
 	color: #3a3a3a;
 }
+
 
 /*#099fdd、#f25050*/
 
@@ -421,7 +488,8 @@ fieldset[disabled] .y-btn-blue.focus {
 	text-align: center;
 }
 
-.y-body .panel {
+.y-body .panel,
+.y-account-head {
 	box-shadow: 0 0 9px 5px rgba(0, 0, 0, 0.06);
 	-webkit-transition: box-shadow 0.3s ease-out 0s;
 	-moz-transition: box-shadow 0.3s ease-out 0s;
