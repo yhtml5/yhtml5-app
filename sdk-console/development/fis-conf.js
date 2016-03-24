@@ -56,8 +56,7 @@ fis.media('java')
 		release: 'others/$1',
 	})
 	.match('/components/*/(*.html)', {
-		rExt: '.vm',
-		release: '/vm/$1',
+		release: '/widget/$1',
 	})
 	.match('/template/(**.html)', {
 		release: '/demo/$1',
