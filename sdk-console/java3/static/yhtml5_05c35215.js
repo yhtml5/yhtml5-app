@@ -1,5 +1,6 @@
-/*@require /static/lib/bootstrap/bootstrap.js
- *@require /static/lib/jquery/jquery.min.js
+;/*!/components/head/head.js*/
+/*@require static/lib/bootstrap/bootstrap.js
+ *@require static/lib/jquery/jquery.min.js
  */
 
 /*=========================================================================================
@@ -160,3 +161,6 @@ y(function() {
 	}
 	urlIdActive();
 })
+;/*!/components/help-center/help-center.js*/
+/* help-center script
+ * ================== */

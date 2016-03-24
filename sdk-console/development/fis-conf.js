@@ -1,11 +1,11 @@
 // 设置项目属性
 fis.set('project.name', 'fis3-base');
 fis.set('project.md5Length', 8);
-fis.set('project.md5Connector ', '.');
+fis.set('project.md5Connector ', '_');
 fis.set("project.ignore", ['test2/**', '.git/**', 'fis-conf.js', 'design/**', 'task/**', '*.psd', 'components/font-icon/**', '**.svg']);
 
 // 所有模板放到 tempalte 目录下
-fis.match('/page/(**.html)', {
+fis.match('/template/(**.html)', {
 	release: '/template/$1',
 });
 fis.match('{*.log,*json}', {
@@ -16,24 +16,14 @@ fis.match('/components/**/*', {
 	isMod: true,
 	useSameNameRequire: true
 });
-fis.match('/components/**/(*.png)', {
-	release: '/static/img/$1',
-	url: '../static/img/$1'
-});
-fis.match('/components/**/(iconfont.*)', {
-	release: '/static/iconfont/$1',
-	//	url: '../static/iconfont/$1'
-});
-// components下的 js 调用 jswrapper 进行自动化组件化封装
-//fis.match('/components/**/*.js', {
-//	postprocessor: fis.plugin('jswrapper', {
-//		type: 'commonjs'
-//	})
+//fis.match('/components/**/(*.png)', {
+//	release: '/static/img/$1',
+//	url: '../static/img/$1'
 //});
-
-/**********************Production规范**************************/
-// 因为是纯前端项目，依赖不能自断被加载进来，所以这里需要借助一个 loader 来完成，
-// 注意：与后端结合的项目不需要此插件!!!
+//fis.match('/components/**/(iconfont.*)', {
+//	release: '/static/iconfont/$1',
+//	//	url: '../static/iconfont/$1'
+//});
 fis.match('::package', {
 	// npm install [-g] fis3-postpackager-loader
 	// 分析 __RESOURCE_MAP__ 结构，来解决资源加载问题
@@ -43,6 +33,78 @@ fis.match('::package', {
 		useInlineMap: true, // 资源映射表内嵌
 	})
 });
+//去掉依赖声明文本
+//fis.match('*.html', {
+//		optimizer: (function(content) {
+//			return content.replace(/<!--([\s\s]*?)-->/g, "")
+//		})
+//	})
+
+// components下的 js 调用 jswrapper 进行自动化组件化封装
+//fis.match('/components/**/*.js', {
+//	postprocessor: fis.plugin('jswrapper', {
+//		type: 'commonjs'
+//	})
+//});
+/*************************后端模板*****************************/
+
+fis.media('java')
+	.match('/components/(**)', {
+		release: 'others/$1',
+	})
+	.match('/components/*/(*.html)', {
+		rExt: '.vm',
+		release: '/vm-components/$1',
+	})
+	.match('/template/(**.html)', {
+		release: '/vm-page/$1',
+	})
+	.match('/components/**/(*.png)', {
+		release: '/static/img/$1',
+		url: '../static/img/$1'
+	})
+	.match('/components/**/(iconfont.*)', {
+		release: '/static/iconfont/$1',
+		url: '../static/iconfont/$1'
+	})
+	.match('/static/lib/**', {
+		url: '..$0'
+	})
+	.match('::package', {
+		packager: fis.plugin('map'),
+		spriter: fis.plugin('csssprites', {
+			layout: 'matrix',
+			margin: '15'
+		})
+	})
+	.match('/components/**/*.js', {
+		packTo: '/static/yhtml5.js'
+	})
+	.match('/components/**/*.css', {
+		packTo: '/static/yhtml5.css'
+	})
+	.match('head/**', {
+		packOrder: 0
+	})
+	.match('header/**', {
+		packOrder: 2
+	})
+	.match('components/*/*', {
+		packOrder: 3
+	})
+	.match('footer/**', {
+		packOrder: 9
+	})
+	.match('/static/{*.js,*css}', {
+		release: '/$0',
+		url: '..$0',
+		useHash: true
+	})
+
+/**********************Production规范**************************/
+// 因为是纯前端项目，依赖不能自断被加载进来，所以这里需要借助一个 loader 来完成，
+// 注意：与后端结合的项目不需要此插件!!!
+
 fis.media('pro')
 	// 启用打包插件，必须匹配 ::package
 	.match('::package', {
@@ -51,12 +113,6 @@ fis.media('pro')
 			layout: 'matrix',
 			margin: '15'
 		})
-	})
-	.match('*.js', {
-		packTo: '/static/others.js'
-	})
-	.match('*.css', {
-		packTo: '/staitc/others.css'
 	})
 	.match('/components/**/*.js', {
 		packTo: '/static/yhtml5.js'
@@ -79,19 +135,6 @@ fis.media('pro')
 		useHash: true
 	})
 	/**************************Copy******************************/
-
-/*************************后端模板*****************************/
-
-fis.media('java')
-	// 启用打包插件，必须匹配 ::package
-	.match('/components/*.html', {
-		rExt: '.vm'
-		release: '/components/$0',
-	})
-	.match('/page/(**.html)', {
-		rExt: '.vm'
-		release: '/template/$1',
-	})
 
 /*************************CDN规范*****************************/
 // optimize

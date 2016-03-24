@@ -1,3 +1,4 @@
+/*!/components/head/head.css*/
 /*=========================================================================================
  * Author:Kyle|张大漾
  * Author Website:http://yhtml5.com
@@ -6,7 +7,7 @@
  *==========================================================================================*/
 
 /*
- * @require /static/lib/bootstrap/bootstrap.css
+ * @require static/lib/bootstrap/bootstrap.css
  */
 
 /* ali-font-icon
@@ -14,12 +15,12 @@
 
 @font-face {
 	font-family: "iconfont";
-	src: url('iconfont.eot');
+	src: url('../static/iconfont/iconfont.eot');
 	/* IE9*/
-	src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-	url('iconfont.woff') format('woff'), /* chrome, firefox */
-	url('iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-	url('iconfont.svg#iconfont') format('svg');
+	src: url('../static/iconfont/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('../static/iconfont/iconfont.woff') format('woff'), /* chrome, firefox */
+	url('../static/iconfont/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+	url('../static/iconfont/iconfont.svg#iconfont') format('svg');
 	/* iOS 4.1- */
 }
 
@@ -503,4 +504,302 @@ fieldset[disabled] .y-btn-blue.focus {
 .y-body .panel:focus {
 	-webkit-box-shadow: 0 0 11px 7px rgba(0, 0, 0, 0.1);
 	box-shadow: 0 0 11px 7px rgba(0, 0, 0, 0.1);
+}
+/*!/components/account copy/account.css*/
+/*
+ * @require components/head/head.css
+ */
+
+/* account style
+ * ============= */
+
+.y-account .panel-heading .row {
+	line-height: 50px;
+}
+
+.y-account .panel-heading button {
+	margin-right: 6px;
+	margin-left: 6px;
+}
+
+.y-account-title-money span {
+	font-size: 18px;
+}
+
+.y-account-title-money .y-num {
+	color: #f25050;
+}
+
+.y-account-hint {
+	text-align: left;
+	margin-top: 10px;
+}
+
+.y-account {
+	max-width: 600px;
+	margin: auto;
+}
+
+.y-account .panel-body {
+	padding-top: 60px;
+	padding-bottom: 30px;
+}
+
+.y-account .panel-body label {
+	font-size: 18px;
+	font-weight: 400;
+}
+/*!/components/account/account.css*/
+/*
+ * @require components/head/head.css
+ */
+
+/* account style
+ * ============= */
+
+.y-account-head {
+	background-color: #f5f5f5;
+	box-shadow: 0 0 9px 5px rgba(0, 0, 0, 0.06);
+	-webkit-transition: box-shadow 0.3s ease-out 0s;
+	-moz-transition: box-shadow 0.3s ease-out 0s;
+	transition: box-shadow 0.3s ease-out 0s;
+	border: solid 1px #eee;
+	border-radius: 4px;
+	margin-bottom: 30px;
+}
+
+.y-account-head:hover,
+.y-account-head:focus {
+	-webkit-box-shadow: 0 0 11px 7px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 11px 7px rgba(0, 0, 0, 0.1);
+}
+
+.y-account-head-money {
+	font-size: 18px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	-webkit-transition: color 0.4s ease-out 0s;
+	-moz-transition: color 0.4s ease-out 0s;
+	transition: color 0.4s ease-out 0s;
+}
+
+.y-account-head-money:hover,
+.y-account-head-money:focus {
+	color: #099fdd;
+}
+
+.y-account-head-center {
+	height: 160px;
+	border: solid 1px #cacaca;
+	border-top: none;
+	border-bottom: none;
+}
+.y-account-head-center p,
+.y-account-head-right p{
+	font-weight: 700;
+}
+
+/*!/components/canal/canal.css*/
+/*
+ * @require components/head/head.css
+ */
+
+/* canal style
+ * ============ */
+
+
+
+
+/*!/components/dashboard-header/dashboard-header.css*/
+/*
+ * @require components/head/head.css
+ */
+
+/* breadcrumb style
+ * ================ */
+
+.y-dashboard-header-navbar {
+	text-align: center;
+}
+
+@media (max-width: 768px) {
+	.y-dashboard-header-navbar .dropdown-menu {
+		text-align: center;
+	}
+}
+
+.y-dashboard-header-navbar .breadcrumb {
+	font-size: 16px;
+	float: left;
+}
+
+.y-dashboard-iconfont-home {
+	font-size: 26px;
+	margin-right: 6px;
+}
+
+.y-dashboard-header-navbar .breadcrumb b {
+	margin-bottom: 4px;
+}
+
+.y-dashboard-header-navbar .breadcrumb a {
+	text-decoration: none;
+}
+
+.y-dashboard-header-navbar .y-ellipsis {
+	display: inline-block;
+	max-width: 60px;
+	vertical-align: bottom;
+}
+/*!/components/dashboard-set/dashboard-set.css*/
+/*
+ * @require components/head/head.css
+ */
+
+/* dashboard-set style
+ * =================== */
+
+.y-dashboard-set {
+	width: 80%;
+	max-width: 720px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media (max-width:420px) {
+	.y-dashboard-set {
+		width: 100%;
+	}
+}
+
+.y-dashboard-set .panel-body {
+	padding-top: 30px;
+}
+
+.y-dashboard-set label {
+	font-size: 16px;
+}
+
+.y-dashboard-set-platform,
+.y-dashboard-set-demo {
+	line-height: 36px;
+}
+
+.y-dashboard-set-platform i,
+.y-dashboard-set-demo i {
+	font-size: 40px;
+}
+
+@media (max-width:768px) {
+	.y-xs-text-left label {
+		text-align: left;
+	}
+}
+/*!/components/header/header.css*/
+/*@require head.css*/
+
+/* header style
+ * ============ */
+
+
+
+
+/*!/components/help-center/help-center.css*/
+/*
+ * @require components/head/head.css
+ */
+
+/* help-center style
+ * ================= */
+
+.y-help-center .list-group {
+	text-align: center;
+	width: 80%;
+	margin: 10px auto 20px auto;
+	max-width: 320px;
+}
+
+.y-help-center .list-group-item {
+	border-radius: 4px;
+	border-radius: 4px;
+	margin-bottom: 18px;
+	padding: 6px 16px;
+}
+
+.y-help-center .list-group-item i {
+	font-size: 30px;
+}
+
+.y-help-center .col-xs-9 {
+	line-height: 42px;
+}
+/*!/components/panel-add/panel-add.css*/
+/*
+ * @require components/head/head.css
+ */
+
+/* panel-add style
+ * =============== */
+
+.y-panel-add {
+	vertical-align: middle;
+	line-height: 300px;
+	height: 372px;
+}
+
+.y-panel-add i {
+	font-size: 80px;
+	-webkit-transition: font-size 0.3s ease-out 0s;
+	-moz-transition: font-size 0.3s ease-out 0s;
+	transition: font-size 0.3s ease-out 0s;
+}
+
+.y-panel-add i:hover,
+.y-panel-add i:focus {
+	color: #099fdd;
+	font-size: 120px;
+}
+/*!/components/panel-display/panel-display.css*/
+/*
+ * @require components/head/head.css
+ */
+
+/* panel-display style
+ * =================== */
+
+.y-panel-display {
+	height: 372px;
+}
+
+.y-panel-display-money i,
+.y-panel-display-user i {
+	font-size: 40px;
+	color: #3a3a3a;
+}
+
+.y-panel-display-money p,
+.y-panel-display-user p {
+	font-size: 16px;
+	margin-top: -4px;
+	font-weight: bold;
+}
+
+.y-panel-display .y-num {
+	font-size: 20px;
+	line-height: 80px;
+	vertical-align: middle;
+}
+
+.y-panel-display-set i {
+	color: #099fdd;
+	font-size: 30px;
+}
+
+.y-panel-display-set p {
+	font-weight: bold;
+}
+
+.y-panel-display-set a {
+	text-decoration: none;
+	color: #3a3a3a;
 }
