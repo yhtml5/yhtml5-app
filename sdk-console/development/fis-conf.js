@@ -80,6 +80,19 @@ fis.media('pro')
 	})
 	/**************************Copy******************************/
 
+/*************************后端模板*****************************/
+
+fis.media('java')
+	// 启用打包插件，必须匹配 ::package
+	.match('/components/*.html', {
+		rExt: '.vm'
+		release: '/components/$0',
+	})
+	.match('/page/(**.html)', {
+		rExt: '.vm'
+		release: '/template/$1',
+	})
+
 /*************************CDN规范*****************************/
 // optimize
 fis.media('cdn')
