@@ -49,7 +49,7 @@ fis.match('::package', {
 /*************************后端模板*****************************/
 
 fis.media('java')
-	.match('Reademe-java.md', {
+	.match('Reademe-java.', {
 		release: '/$0',
 	})
 	.match('/components/(**)', {
