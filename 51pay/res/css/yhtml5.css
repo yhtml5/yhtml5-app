@@ -36,6 +36,9 @@
 .row img {
 	width: 100%;
 }
+.y-img-reset img{
+	width: 100%;
+}
 
 body {
 	background-color: #e6e6e6;
