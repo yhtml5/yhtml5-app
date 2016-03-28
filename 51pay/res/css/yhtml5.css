@@ -36,8 +36,9 @@
 .row img {
 	width: 100%;
 }
-.y-img-reset img{
-	width: 100%;
+
+.y-img-reset img {
+	width: auto;
 }
 
 body {
@@ -638,9 +639,10 @@ footer a {
 .fw-goods-type h3 {
 	font-size: 22px;
 	margin-bottom: 36px;
-	    text-indent: 0.2em;
+	text-indent: 0.2em;
 }
-.fw-goods-type .fw-ellipsis{
+
+.fw-goods-type .fw-ellipsis {
 	color: #3F3F3F;
 }
 
@@ -677,6 +679,7 @@ footer a {
 .fw-goods-img img {
 	height: 300px;
 }
-.fw-baidu-edit{
+
+.fw-baidu-edit {
 	min-height: 400px;
 }
