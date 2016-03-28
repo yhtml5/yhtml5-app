@@ -123,8 +123,6 @@ y(function() {
 			} else {
 				big()
 			}
-			console.log(c)
-			console.log("不要调皮地频繁调节窗口")
 		})
 	}
 	//	yDashboardPaymentFilter()
@@ -146,17 +144,19 @@ y(function() {
 			//loading date logic
 		setTimeout(function() {
 			y('[data-toggle="y-hover-shown"]').fadeIn()
-		},400)
+		}, 400)
 	})
 	y("[data-toggle='popover']").popover()
+	console.log("%c YHTML5 %c Copyright \xa9 2014-%s", 'font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;font-size:44px;color:#00bbee;-webkit-text-fill-color:#00bbee;-webkit-text-stroke: 1px #00bbee;', "font-size:12px;color:#999999;margin-top:10px;", (new Date).getFullYear())
 
 	function urlIdActive() {
 		var urlId = window.location.hash.replace(/^(.*[n])*.*(.|n)$/g, "$2") - 1;
-		console.log("请不要调皮，在这里测试即将导致系统崩溃")
+		console.log("温馨提示：请不要调皮地在此粘贴执行任何内容，这可能会导致您的账户受到攻击，给您带来损失 ！^_^")
 		if (urlId >= 0) {
 			y('.y-template-dashboard .tab-pane').removeClass('active in');
 			y('.y-template-dashboard .tab-pane:eq(' + urlId + ')').addClass('active in').tab('show');
 		}
 	}
 	urlIdActive();
+
 })

@@ -492,9 +492,9 @@ fieldset[disabled] .y-btn-blue.focus {
 	text-align: center;
 }
 
-.y-body .panel,
-.y-account-head {
-	box-shadow: 0 0 9px 5px rgba(0, 0, 0, 0.06);
+.y-body .panel {
+	box-shadow: 0 0 9px 5px rgba(0, 0, 0, 0.04);
+	-webkit-box-shadow: 0 0 9px 5px rgba(0, 0, 0, 0.04);
 	-webkit-transition: box-shadow 0.3s ease-out 0s;
 	-moz-transition: box-shadow 0.3s ease-out 0s;
 	transition: box-shadow 0.3s ease-out 0s;
@@ -502,6 +502,6 @@ fieldset[disabled] .y-btn-blue.focus {
 
 .y-body .panel:hover,
 .y-body .panel:focus {
-	-webkit-box-shadow: 0 0 11px 7px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0 0 11px 7px rgba(0, 0, 0, 0.2);
 	box-shadow: 0 0 11px 7px rgba(0, 0, 0, 0.1);
 }

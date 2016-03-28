@@ -61,9 +61,13 @@ fis.media('java')
 	.match('/template/(**.html)', {
 		release: '/demo/$1',
 	})
+	.match('/components/**/(*.gif)', {
+		release: '/static/img/$1',
+		url: '../static/img/$1',
+	})
 	.match('/components/**/(*.png)', {
 		release: '/static/img/$1',
-		url: '../static/img/$1'
+		url: '../static/img/$1',
 	})
 	.match('/components/**/(iconfont.*)', {
 		release: '/static/iconfont/$1',
