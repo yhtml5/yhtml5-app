@@ -1,21 +1,9 @@
 // 设置项目属性
-fis.set('project.name', 'fis3-base');
+fis.set('project.name', 'yhtml5-fis3');
 fis.set('project.md5Length', 8);
 fis.set('project.md5Connector ', '_');
-fis.set("project.ignore", ['test2/**', '.git/**', 'fis-conf.js', 'design/**', 'task/**', '*.psd', 'components/font-icon/**', '**.svg']);
+//fis.set("project.ignore", ['test2/**', '.git/**', 'fis-conf.js', 'design/**', 'task/**', '*.psd', 'components/font-icon/**', '**.svg']);
 
-// 所有模板放到 tempalte 目录下
-fis.match('/template/(**.html)', {
-	release: '/template/$1',
-});
-fis.match('{*.log,*json}', {
-	release: '/config/$0'
-});
-// components源码目录下的资源被标注为组件
-fis.match('/components/**/*', {
-	isMod: true,
-	useSameNameRequire: true
-});
 //fis.match('/components/**/(*.png)', {
 //	release: '/static/img/$1',
 //	url: '../static/img/$1'
@@ -23,16 +11,7 @@ fis.match('/components/**/*', {
 //fis.match('/components/**/(iconfont.*)', {
 //	release: '/static/iconfont/$1',
 //	//	url: '../static/iconfont/$1'
-//});
-fis.match('::package', {
-	// npm install [-g] fis3-postpackager-loader
-	// 分析 __RESOURCE_MAP__ 结构，来解决资源加载问题
-	postpackager: fis.plugin('loader', {
-		//allInOne: true, 默认 false, 配置是否合并零碎资源。
-		resourceType: 'commonJs',
-		useInlineMap: true, // 资源映射表内嵌
-	})
-});
+//})
 //去掉依赖声明文本
 //fis.match('*.html', {
 //		optimizer: (function(content) {
@@ -45,10 +24,33 @@ fis.match('::package', {
 //	postprocessor: fis.plugin('jswrapper', {
 //		type: 'commonjs'
 //	})
-//});
-/*************************后端模板*****************************/
 
-fis.media('java')
+//});
+
+/**************************Beta******************************/
+fis.media('beta')
+	.set("project.ignore", ['fis-conf.js', '*.psd', '.git/**'])
+	.match('::package', {
+		// npm install [-g] fis3-postpackager-loader
+		// 分析 __RESOURCE_MAP__ 结构，来解决资源加载问题
+		postpackager: fis.plugin('loader', {
+			//allInOne: true, 默认 false, 配置是否合并零碎资源。
+			resourceType: 'commonJs',
+			useInlineMap: true, // 资源映射表内嵌
+		})
+	})
+	// components源码目录下的资源被标注为组件,合并link链接
+	.match('/components/**/*', {
+		isMod: true,
+		useSameNameRequire: true,
+	})
+	// 所有模板放到 tempalte 目录下
+	.match('/template/(**.html)', {
+		release: '/template/$1',
+	})
+	.match('{*.log,map.json}', {
+		release: '/config/$0'
+	})
 	.match('Reademe-java.', {
 		release: '/$0',
 	})
@@ -105,8 +107,92 @@ fis.media('java')
 		release: '/$0',
 		url: '..$0',
 		useHash: true
-	})
+	});
+/*************************java模板*****************************/
 
+fis.media('java')
+	.set("project.ignore", ['fis-conf.js', '*.psd', '.git/**', '/server/**'])
+	.match('::package', {
+		// npm install [-g] fis3-postpackager-loader
+		// 分析 __RESOURCE_MAP__ 结构，来解决资源加载问题
+		postpackager: fis.plugin('loader', {
+			//allInOne: true, 默认 false, 配置是否合并零碎资源。
+			resourceType: 'commonJs',
+			useInlineMap: true, // 资源映射表内嵌
+		})
+	})
+	// components源码目录下的资源被标注为组件,合并link链接
+	.match('/components/**/*', {
+		isMod: true,
+		useSameNameRequire: true,
+	})
+	// 所有模板放到 tempalte 目录下
+	.match('/template/(**.html)', {
+		release: '/template/$1',
+	})
+	.match('{*.log,map.json}', {
+		release: '/config/$0'
+	})
+	.match('Reademe-java.', {
+		release: '/$0',
+	})
+	.match('/static/lib/angular/**', {
+		release: false
+	})
+	.match('/components/(**)', {
+		release: 'others/$1',
+	})
+	.match('/components/*/(*.html)', {
+		release: '/widget/$1',
+	})
+	.match('/template/(**.html)', {
+		release: '/demo/$1',
+	})
+	.match('/components/**/(*.gif)', {
+		release: '/static/img/$1',
+		url: '../static/img/$1',
+	})
+	.match('/components/**/(*.png)', {
+		release: '/static/img/$1',
+		url: '../static/img/$1',
+	})
+	.match('/components/**/(iconfont.*)', {
+		release: '/static/iconfont/$1',
+		url: '../static/iconfont/$1'
+	})
+	.match('/static/lib/**', {
+		url: '..$0'
+	})
+	.match('::package', {
+		packager: fis.plugin('map'),
+		spriter: fis.plugin('csssprites', {
+			layout: 'matrix',
+			margin: '15'
+		})
+	})
+	.match('/components/**/*.js', {
+		packTo: '/static/yhtml5.js'
+	})
+	.match('/components/**/*.css', {
+		packTo: '/static/yhtml5.css'
+	})
+	.match('head/**', {
+		packOrder: 0
+	})
+	.match('header/**', {
+		packOrder: 2
+	})
+	.match('components/*/*', {
+		packOrder: 3
+	})
+	.match('footer/**', {
+		packOrder: 9
+	})
+	.match('/static/{*.js,*css}', {
+		release: '/$0',
+		url: '..$0',
+		useHash: true
+	});
 /**********************Production规范**************************/
 // 因为是纯前端项目，依赖不能自断被加载进来，所以这里需要借助一个 loader 来完成，
 // 注意：与后端结合的项目不需要此插件!!!
@@ -139,8 +225,7 @@ fis.media('pro')
 		release: '/$0',
 		url: '..$0',
 		useHash: true
-	})
-	/**************************Copy******************************/
+	});
 
 /*************************CDN规范*****************************/
 // optimize

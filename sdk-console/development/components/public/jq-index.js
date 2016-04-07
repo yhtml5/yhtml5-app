@@ -1,13 +1,15 @@
-/*@require /static/lib/bootstrap/bootstrap.js
- *@require /static/lib/jquery/jquery.min.js
- */
-
 /*=========================================================================================
  * Author:Kyle|张大漾
  * Author Website:http://yhtml5.com
  * Author Gihub:https://github.com/yhtml5
  * Description: A Website disgned by boostrap and Jquery.Do something awesome and have fun !
  *==========================================================================================*/
+
+/*
+ *@require /static/lib/bootstrap/bootstrap.js
+ *@require /static/lib/jquery/jquery.min.js
+ *
+ */
 
 /* General
  * ======= */
