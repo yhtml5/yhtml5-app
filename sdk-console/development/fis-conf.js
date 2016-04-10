@@ -3,7 +3,7 @@ fis.set('project.name', 'yhtml5-fis3');
 fis.set('project.md5Length', 8);
 fis.set('project.md5Connector ', '_');
 //fis.set("project.ignore", ['test2/**', '.git/**', 'fis-conf.js', 'design/**', 'task/**', '*.psd', 'components/font-icon/**', '**.svg']);
-
+//文件一定要精确
 //fis.match('/components/**/(*.png)', {
 //	release: '/static/img/$1',
 //	url: '../static/img/$1'
@@ -29,7 +29,7 @@ fis.set('project.md5Connector ', '_');
 
 /**************************Beta******************************/
 fis.media('beta')
-	.set("project.ignore", ['fis-conf.js', '*.psd', '.git/**'])
+	.set("project.ignore", ['*.psd', '.git/**'])
 	.match('::package', {
 		// npm install [-g] fis3-postpackager-loader
 		// 分析 __RESOURCE_MAP__ 结构，来解决资源加载问题
@@ -44,39 +44,16 @@ fis.media('beta')
 		isMod: true,
 		useSameNameRequire: true,
 	})
-	// 所有模板放到 tempalte 目录下
-	.match('/template/(**.html)', {
-		release: '/template/$1',
-	})
-	.match('{*.log,map.json}', {
+	.match('{*.log,map.json,fis-conf.js,}', {
 		release: '/config/$0'
 	})
-	.match('Reademe-java.', {
-		release: '/$0',
-	})
-	.match('/components/(**)', {
-		release: 'others/$1',
-	})
-	.match('/components/*/(*.html)', {
-		release: '/widget/$1',
-	})
-	.match('/template/(**.html)', {
-		release: '/demo/$1',
-	})
-	.match('/components/**/(*.gif)', {
-		release: '/static/img/$1',
-		url: '../static/img/$1',
-	})
-	.match('/components/**/(*.png)', {
+	.match('{/components/**/(*.gif),/components/**/(*.png)}', {
 		release: '/static/img/$1',
 		url: '../static/img/$1',
 	})
 	.match('/components/**/(iconfont.*)', {
 		release: '/static/iconfont/$1',
 		url: '../static/iconfont/$1'
-	})
-	.match('/static/lib/**', {
-		url: '..$0'
 	})
 	.match('::package', {
 		packager: fis.plugin('map'),
@@ -105,63 +82,27 @@ fis.media('beta')
 	})
 	.match('/static/{*.js,*css}', {
 		release: '/$0',
-		url: '..$0',
 		useHash: true
+	})
+	//因为html文件在template文件夹下，且是相对路径，所以需要更改资源url
+	//js里的资源定位需要加上__url()
+	.match('{/static/**,/server/**}', {
+		url: '..$0'
 	});
 /*************************java模板*****************************/
+/*
+ *要求：包含编译后的demo、template、reademe 
+ *      文件路径为绝对路径
+ * 
+ */
 
 fis.media('java')
-	.set("project.ignore", ['fis-conf.js', '*.psd', '.git/**', '/server/**'])
+	.set("project.ignore", ['*.psd', '.git/**'])
 	.match('::package', {
-		// npm install [-g] fis3-postpackager-loader
-		// 分析 __RESOURCE_MAP__ 结构，来解决资源加载问题
 		postpackager: fis.plugin('loader', {
-			//allInOne: true, 默认 false, 配置是否合并零碎资源。
 			resourceType: 'commonJs',
-			useInlineMap: true, // 资源映射表内嵌
+			useInlineMap: true,
 		})
-	})
-	// components源码目录下的资源被标注为组件,合并link链接
-	.match('/components/**/*', {
-		isMod: true,
-		useSameNameRequire: true,
-	})
-	// 所有模板放到 tempalte 目录下
-	.match('/template/(**.html)', {
-		release: '/template/$1',
-	})
-	.match('{*.log,map.json}', {
-		release: '/config/$0'
-	})
-	.match('Reademe-java.', {
-		release: '/$0',
-	})
-	.match('/static/lib/angular/**', {
-		release: false
-	})
-	.match('/components/(**)', {
-		release: 'others/$1',
-	})
-	.match('/components/*/(*.html)', {
-		release: '/widget/$1',
-	})
-	.match('/template/(**.html)', {
-		release: '/demo/$1',
-	})
-	.match('/components/**/(*.gif)', {
-		release: '/static/img/$1',
-		url: '../static/img/$1',
-	})
-	.match('/components/**/(*.png)', {
-		release: '/static/img/$1',
-		url: '../static/img/$1',
-	})
-	.match('/components/**/(iconfont.*)', {
-		release: '/static/iconfont/$1',
-		url: '../static/iconfont/$1'
-	})
-	.match('/static/lib/**', {
-		url: '..$0'
 	})
 	.match('::package', {
 		packager: fis.plugin('map'),
@@ -169,6 +110,38 @@ fis.media('java')
 			layout: 'matrix',
 			margin: '15'
 		})
+	})
+	.match('/components/**/*', {
+		isMod: true,
+		useSameNameRequire: true,
+	})
+	//java 不打包、不发布的文件,后面的规则会覆盖前面的
+	//和__url()冲突  
+	.match('{/static/lib/angular/**,/server/**}', {
+		release: false
+	})
+	.match('/template/(**.html)', {
+		release: '/demo/$1',
+	})
+	.match('{*.log,map.json}', {
+		release: '/config/$0'
+	})
+	.match('Reademe.html', {
+		release: '/$0',
+	})
+	.match('/components/(**)', {
+		release: 'others/$1',
+	})
+	.match('/components/*/(*.html)', {
+		release: '/widget/$1',
+	})
+	.match('{/components/**/(*.gif),/components/**/(*.png)}', {
+		release: '/static/img/$1',
+		url: '../static/img/$1',
+	})
+	.match('/components/**/(iconfont.*)', {
+		release: '/static/iconfont/$1',
+		url: '../static/iconfont/$1'
 	})
 	.match('/components/**/*.js', {
 		packTo: '/static/yhtml5.js'
@@ -190,8 +163,10 @@ fis.media('java')
 	})
 	.match('/static/{*.js,*css}', {
 		release: '/$0',
-		url: '..$0',
 		useHash: true
+	})
+	.match('/static/**', {
+		url: '..$0'
 	});
 /**********************Production规范**************************/
 // 因为是纯前端项目，依赖不能自断被加载进来，所以这里需要借助一个 loader 来完成，

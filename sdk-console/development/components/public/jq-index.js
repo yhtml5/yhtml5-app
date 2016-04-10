@@ -1,8 +1,10 @@
 /*=========================================================================================
  * Author:Kyle|张大漾
- * Author Website:http://yhtml5.com
- * Author Gihub:https://github.com/yhtml5
- * Description: A Website disgned by boostrap and Jquery.Do something awesome and have fun !
+ * Website:http://yhtml5.com
+ * Gihub:https://github.com/yhtml5
+ * Description: A Website disgned by Boostrap and Jquery.
+ *              It requires Angular 1.4.x or higher and it has been tested with Angular 1.4.8
+ *              Do something awesome and have fun !
  *==========================================================================================*/
 
 /*
@@ -128,10 +130,10 @@ y(function() {
 		})
 	}
 	//	yDashboardPaymentFilter()
-	y(window).resize(function() {
-			console.log("不要调皮地频繁调节窗口")
-		})
-		//增加表格内容
+	//	y(window).resize(function() {
+	//			console.log("不要调皮地频繁调节窗口")
+	//		})
+	//增加表格内容
 	function yExpandTable() {
 		for (var j = 1; j < 5; j++) {
 			var tbody = y('[data-js="repeat' + j + '"]').html()
@@ -160,5 +162,6 @@ y(function() {
 		}
 	}
 	urlIdActive();
-
+    //加载angular
+    
 })
