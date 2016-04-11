@@ -162,6 +162,9 @@ y(function() {
 		}
 	}
 	urlIdActive();
-    //加载angular
-    
+	//加载angular
+	y('body').click(function() {
+      y('.user-name').attr('ng-bind','x.appName')
+	})
+
 })
