@@ -1,0 +1,850 @@
+/*!/components/head/head.css*/
+/*=========================================================================================
+ * Author:Kyle|张大漾
+ * Author Website:http://yhtml5.com
+ * Author Gihub:https://github.com/yhtml5
+ * Description: A Website disgned by boostrap and Jquery.Do something awesome and have fun !
+ *==========================================================================================*/
+
+/*
+ * @require static/lib/bootstrap/bootstrap.css
+ */
+
+/* ali-font-icon
+ * ============== */
+
+@font-face {
+	font-family: "iconfont";
+	src: url('../static/iconfont/iconfont.eot');
+	/* IE9*/
+	src: url('../static/iconfont/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('../static/iconfont/iconfont.woff') format('woff'), /* chrome, firefox */
+	url('../static/iconfont/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+	url('../static/iconfont/iconfont.svg#iconfont') format('svg');
+	/* iOS 4.1- */
+}
+
+.iconfont {
+	font-family: "iconfont" !important;
+	font-size: 16px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: 0.2px;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Expand bootstrap style
+ * ====================== */
+
+.y-navbar-info {}
+
+.y-navbar-info .navbar-nav > li > a {
+	color: #333;
+	border-radius: 6px;
+	font-size: 16px;
+}
+
+.y-navbar-info .navbar-nav > li > a:hover,
+.y-navbar-info .navbar-nav > li > a:focus {
+	color: #099fdd;
+	background-color: transparent;
+}
+
+.y-navbar-info .navbar-nav > .active > a,
+.y-navbar-info .navbar-nav > .active > a:hover,
+.y-navbar-info .navbar-nav > .active > a:focus {
+	color: #fff;
+	background-color: #099fdd;
+}
+
+.y-navbar-info .navbar-toggle {
+	border-color: #099fdd;
+}
+
+.y-navbar-info .navbar-toggle:hover,
+.y-navbar-info .navbar-toggle:focus {
+	background-color: #f9f9f9;
+}
+
+.y-navbar-info .navbar-toggle .icon-bar {
+	background-color: #099fdd;
+}
+
+.y-navbar-info .navbar-collapse,
+.y-navbar-info .navbar-form {
+	border-color: #e7e7e7;
+}
+
+.y-btn-blue {
+	color: #fff;
+	background-color: #099fdd;
+	border-color: #0799d9;
+}
+
+.y-btn-blue:focus,
+.y-btn-blue.focus,
+.y-btn-blue:hover {
+	color: #fff;
+	background-color: #0996d2;
+	border-color: #0794d1;
+}
+
+.y-btn-blue:active,
+.y-btn-blue.active,
+.open > .dropdown-toggle.y-btn-blue {
+	color: #fff;
+	background-color: #0996d2;
+	border-color: #0e5aa7;
+}
+
+.y-btn-blue:active:hover,
+.y-btn-blue.active:hover,
+.open > .dropdown-toggle.y-btn-blue:hover,
+.y-btn-blue:active:focus,
+.y-btn-blue.active:focus,
+.open > .dropdown-toggle.y-btn-blue:focus,
+.y-btn-blue:active.focus,
+.y-btn-blue.active.focus,
+.open > .dropdown-toggle.y-btn-blue.focus {
+	color: #fff;
+	background-color: #0794d0;
+	border-color: #1b6d85;
+}
+
+.y-btn-blue:active,
+.y-btn-blue.active,
+.open > .dropdown-toggle.y-btn-blue {
+	background-image: none;
+}
+
+.y-btn-blue.disabled:hover,
+.y-btn-blue[disabled]:hover,
+fieldset[disabled] .y-btn-blue:hover,
+.y-btn-blue.disabled:focus,
+.y-btn-blue[disabled]:focus,
+fieldset[disabled] .y-btn-blue:focus,
+.y-btn-blue.disabled.focus,
+.y-btn-blue[disabled].focus,
+fieldset[disabled] .y-btn-blue.focus {
+	background-color: #099fdd;
+	border-color: #0799d9;
+}
+
+.y-btn-blue .badge {
+	color: #099fdd;
+	background-color: #fff;
+}
+
+
+/* cover bootstrap style
+ * ===================== */
+
+
+.list-group-item.active,
+.list-group-item.active:focus,
+.list-group-item.active:hover {
+	background-color: #099fdd;
+	border-color: #099fdd;
+}
+
+.modal-content .close {
+	font-size: 30px;
+}
+
+.panel-default .panel-heading {
+	color: #333;
+	background-color: #f5f5f5;
+	border-color: #ddd;
+}
+
+
+/* base style
+ * ========== */
+
+.y-box-sm {
+	width: 90%;
+	max-width: 120px;
+	margin: auto;
+	padding: 8px;
+	border: solid 1px #666;
+	border-radius: 4px;
+}
+
+.y-color-default {
+	color: #666;
+}
+
+.y-bg-ebebeb {
+	background-color: #ebebeb;
+}
+
+.y-ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.y-font-sm {
+	font-size: 18px;
+}
+
+.y-font-b {
+	font-weight: 700;
+}
+
+.y-iconfont-xs {
+	position: relative;
+	font-size: 30px;
+}
+
+.y-iconfont-sm {
+	position: relative;
+	font-size: 60px;
+}
+
+.y-iconfont-md {
+	position: relative;
+	font-size: 100px;
+}
+
+.y-hide {
+	display: none;
+}
+
+.y-lh52 {
+	line-height: 52px;
+}
+
+.y-mb20 {
+	margin-bottom: 20px;
+}
+
+.y-mt15 {
+	margin-top: 15px;
+}
+
+.y-mt34 {
+	margin-top: 34px;
+}
+
+.y-mt40 {
+	margin-top: 40px;
+}
+
+.y-mlr0 {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.y-mlr10 {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.y-min-h300 {
+	min-height: 300px;
+}
+
+.y-pd30 {
+	padding: 30px;
+}
+
+.y-input-md {
+	margin-top: 10px;
+	margin-bottom: 24px;
+}
+
+.y-modal-header-default {
+	background: #f5f5f5;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.y-card-md {
+	width: 80%;
+	max-width: 720px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media (max-width:420px) {
+	.y-card-md {
+		width: 100%;
+	}
+}
+
+.y-card-body-sm {
+	width: 80%;
+	margin: 10px auto;
+}
+
+.y-card-empty-md {
+	padding: 40px 40px 60px 40px;
+}
+
+.y-modal-footer-default {
+	background: #f5f5f5;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.y-panel-title {
+	line-height: 52px;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.y-panel-btn {
+	line-height: 52px;
+	text-align: center;
+}
+
+.y-table-md > thead > tr > th {
+	line-height: 36px;
+	font-size: 16px;
+	text-align: center;
+}
+
+.y-table-md > tbody > tr > td {
+	line-height: 36px;
+}
+
+.y-btn-sm-sm {
+	padding: 6px 12px;
+	font-size: 14px;
+}
+
+@media (min-width:768px) and (max-width:991px) {
+	.y-btn-sm-sm {
+		padding: 4px 8px !important;
+		font-size: 12px !important;
+	}
+}
+
+@media (max-width:768px) {
+	.y-border-none-xs {
+		border: none !important;
+	}
+}
+
+.y-transition-border-color-info {
+	-webkit-transition: border-color 0.4s ease-out 0s;
+	-moz-transition: border-color 0.4s ease-out 0s;
+	transition: border-color 0.4s ease-out 0s;
+}
+
+.y-transition-border-color-info:hover,
+.y-transition-border-color-info:focus {
+	border-color: #099fdd;
+}
+
+.y-transition-color-info {
+	-webkit-transition: color 0.4s ease-out 0s;
+	-moz-transition: color 0.4s ease-out 0s;
+	transition: color 0.4s ease-out 0s;
+}
+
+.y-transition-color-info:hover,
+.y-transition-color-info:focus {
+	color: #099fdd;
+}
+
+.y-panel-display h3,
+.y-panel-display-money p,
+.y-panel-display-user p,
+.y-panel-display-money i,
+.y-panel-display .y-num,
+.y-panel-display-set i,
+.y-panel-display-set p,
+.y-panel-display-user i,
+.y-dashboard-set-platform i,
+.y-dashboard-set-demo i,
+.y-undeveloped i {
+	-webkit-transition: color 0.4s ease-out 0s;
+	-moz-transition: color 0.4s ease-out 0s;
+	transition: color 0.4s ease-out 0s;
+}
+
+.y-panel-display h3:hover,
+.y-panel-display h3:focus,
+.y-panel-display .y-num:hover,
+.y-panel-display .y-num:focus,
+.y-panel-display-money i:hover,
+.y-panel-display-money i:focus,
+.y-panel-display-user i:hover,
+.y-panel-display-user i:focus,
+.y-panel-display-money p:hover,
+.y-panel-display-money p:focus,
+.y-panel-display-user p:hover,
+.y-panel-display-user p:focus,
+.y-dashboard-set-platform i:hover,
+.y-dashboard-set-platform i:focus,
+.y-dashboard-set-demo i:hover,
+.y-dashboard-set-demo i:focus,
+.y-undeveloped i:hover,
+.y-undeveloped i:focus {
+	color: #099fdd;
+}
+
+.y-panel-display-set i:hover,
+.y-panel-display-set i:focus,
+.y-panel-display-set p:hover,
+.y-panel-display-set p:focus {
+	color: #3a3a3a;
+}
+
+
+/*#099fdd、#f25050*/
+
+
+/* header style
+ * ============ */
+
+.y-header .navbar-collapse {
+	margin-top: 15px;
+}
+
+.y-header .navbar {
+	background: #fff;
+	box-shadow: 2px 3px 9px 0 rgba(0, 0, 0, 0.06);
+	border-color: #e7e7e7;
+}
+
+.y-header .navbar-toggle {
+	margin-top: 24px;
+	margin-right: 18px;
+}
+
+.y-header .y-header-logo img {
+	height: 100%;
+	width: auto;
+	margin-left: 10px;
+}
+
+.y-header-logo {
+	float: left;
+	height: 80px;
+	margin-right: 20px;
+}
+
+.y-header-search {
+	color: #099fdd;
+}
+
+.y-header-search input {
+	height: 36px;
+}
+
+@media (max-width: 768px) {
+	.y-header-close {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.y-header-close {
+	color: #777;
+}
+
+.y-header-close:hover,
+.y-header-close:focus {
+	color: #f25050;
+	background-color: transparent;
+}
+
+.y-header-close i {
+	font-size: 24px;
+	margin-left: 10px;
+}
+
+.y-header-help {
+	border: solid 1px #099fdd;
+	color: #099fdd;
+}
+
+@media (min-width: 768px) {
+	.y-header-help {
+		margin-left: 20px;
+	}
+}
+
+.y-header-help i {
+	font-size: 22px;
+	margin-left: 8px;
+}
+
+.y-header-help i,
+.y-header-help span {
+	color: #099fdd;
+}
+
+.y-header-search {
+	height: 36px;
+}
+
+
+/* body style
+ * ============ */
+
+.y-body {
+	margin-top: 120px;
+	text-align: center;
+}
+
+.y-body .panel {
+	box-shadow: 0 0 9px 5px rgba(0, 0, 0, 0.04);
+	-webkit-box-shadow: 0 0 9px 5px rgba(0, 0, 0, 0.04);
+	-webkit-transition: box-shadow 0.3s ease-out 0s;
+	-moz-transition: box-shadow 0.3s ease-out 0s;
+	transition: box-shadow 0.3s ease-out 0s;
+}
+
+.y-body .panel:hover,
+.y-body .panel:focus {
+	-webkit-box-shadow: 0 0 11px 7px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 11px 7px rgba(0, 0, 0, 0.1);
+}
+/*!/components/account copy/account.css*/
+/*
+ * @require components/head/head.css
+ */
+
+/* account style
+ * ============= */
+
+.y-account .panel-heading .row {
+	line-height: 50px;
+}
+
+.y-account .panel-heading button {
+	margin-right: 6px;
+	margin-left: 6px;
+}
+
+.y-account-title-money span {
+	font-size: 18px;
+}
+
+.y-account-title-money .y-num {
+	color: #f25050;
+}
+
+.y-account-hint {
+	text-align: left;
+	margin-top: 10px;
+}
+
+.y-account {
+	max-width: 600px;
+	margin: auto;
+}
+
+.y-account .panel-body {
+	padding-top: 60px;
+	padding-bottom: 30px;
+}
+
+.y-account .panel-body label {
+	font-size: 18px;
+	font-weight: 400;
+}
+/*!/components/account-withdraw/account.css*/
+/*
+ * @require components/head/head.css
+ */
+
+/* account style
+ * ============= */
+
+.y-account .panel-heading .row {
+	line-height: 50px;
+}
+
+.y-account .panel-heading button {
+	margin-right: 6px;
+	margin-left: 6px;
+}
+
+.y-account-title-money span {
+	font-size: 18px;
+}
+
+.y-account-title-money .y-num {
+	color: #f25050;
+}
+
+.y-account-hint {
+	text-align: left;
+	margin-top: 10px;
+}
+
+.y-account {
+	max-width: 600px;
+	margin: auto;
+}
+
+.y-account .panel-body {
+	padding-top: 60px;
+	padding-bottom: 30px;
+}
+
+.y-account .panel-body label {
+	font-size: 18px;
+	font-weight: 400;
+}
+/*!/components/account/account.css*/
+/*
+ * @require components/head/head.css
+ */
+
+/* account style
+ * ============= */
+
+.y-account-head {
+	background-color: #f5f5f5;
+	box-shadow: 0 0 9px 5px rgba(0, 0, 0, 0.06);
+	-webkit-transition: box-shadow 0.3s ease-out 0s;
+	-moz-transition: box-shadow 0.3s ease-out 0s;
+	transition: box-shadow 0.3s ease-out 0s;
+	border: solid 1px #eee;
+	border-radius: 4px;
+	margin-bottom: 30px;
+}
+
+.y-account-head:hover,
+.y-account-head:focus {
+	-webkit-box-shadow: 0 0 11px 7px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 11px 7px rgba(0, 0, 0, 0.1);
+}
+
+.y-account-head-money {
+	font-size: 18px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	-webkit-transition: color 0.4s ease-out 0s;
+	-moz-transition: color 0.4s ease-out 0s;
+	transition: color 0.4s ease-out 0s;
+}
+
+.y-account-head-money:hover,
+.y-account-head-money:focus {
+	color: #099fdd;
+}
+
+.y-account-head-center {
+	height: 160px;
+	border: solid 1px #cacaca;
+	border-top: none;
+	border-bottom: none;
+}
+.y-account-head-center p,
+.y-account-head-right p{
+	font-weight: 700;
+}
+
+/*!/components/canal/canal.css*/
+/*
+ * @require components/head/head.css
+ */
+
+/* canal style
+ * ============ */
+
+
+
+
+/*!/components/dashboard-header/dashboard-header.css*/
+/*
+ * @require components/head/head.css
+ */
+
+/* breadcrumb style
+ * ================ */
+
+.y-dashboard-header-navbar {
+	text-align: center;
+}
+
+@media (max-width: 768px) {
+	.y-dashboard-header-navbar .dropdown-menu {
+		text-align: center;
+	}
+}
+
+.y-dashboard-header-navbar .breadcrumb {
+	font-size: 16px;
+	float: left;
+}
+
+.y-dashboard-iconfont-home {
+	font-size: 26px;
+	margin-right: 6px;
+}
+
+.y-dashboard-header-navbar .breadcrumb b {
+	margin-bottom: 4px;
+}
+
+.y-dashboard-header-navbar .breadcrumb a {
+	text-decoration: none;
+}
+
+.y-dashboard-header-navbar .y-ellipsis {
+	display: inline-block;
+	max-width: 60px;
+	vertical-align: bottom;
+}
+/*!/components/dashboard-set/dashboard-set.css*/
+/*
+ * @require components/head/head.css
+ */
+
+/* dashboard-set style
+ * =================== */
+
+.y-dashboard-set {
+	width: 80%;
+	max-width: 720px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media (max-width:420px) {
+	.y-dashboard-set {
+		width: 100%;
+	}
+}
+
+.y-dashboard-set .panel-body {
+	padding-top: 30px;
+}
+
+.y-dashboard-set label {
+	font-size: 16px;
+}
+
+.y-dashboard-set-platform,
+.y-dashboard-set-demo {
+	line-height: 36px;
+}
+
+.y-dashboard-set-platform i,
+.y-dashboard-set-demo i {
+	font-size: 40px;
+}
+
+@media (max-width:768px) {
+	.y-xs-text-left label {
+		text-align: left;
+	}
+}
+/*!/components/header/header.css*/
+/*@require head.css*/
+
+/* header style
+ * ============ */
+
+
+
+
+/*!/components/help-center/help-center.css*/
+/*
+ * @require components/head/head.css
+ */
+
+/* help-center style
+ * ================= */
+
+.y-help-center .list-group {
+	text-align: center;
+	width: 80%;
+	margin: 10px auto 20px auto;
+	max-width: 320px;
+}
+
+.y-help-center .list-group-item {
+	border-radius: 4px;
+	border-radius: 4px;
+	margin-bottom: 18px;
+	padding: 6px 16px;
+}
+
+.y-help-center .list-group-item i {
+	font-size: 30px;
+}
+
+.y-help-center .col-xs-9 {
+	line-height: 42px;
+}
+/*!/components/panel-add/panel-add.css*/
+/*
+ * @require components/head/head.css
+ */
+
+/* panel-add style
+ * =============== */
+
+.y-panel-add {
+	vertical-align: middle;
+	line-height: 300px;
+	height: 372px;
+}
+
+.y-panel-add i {
+	font-size: 80px;
+	-webkit-transition: font-size 0.3s ease-out 0s;
+	-moz-transition: font-size 0.3s ease-out 0s;
+	transition: font-size 0.3s ease-out 0s;
+}
+
+.y-panel-add i:hover,
+.y-panel-add i:focus {
+	color: #099fdd;
+	font-size: 120px;
+}
+/*!/components/panel-display/panel-display.css*/
+/*
+ * @require components/head/head.css
+ */
+
+/* panel-display style
+ * =================== */
+
+.y-panel-display {
+	height: 372px;
+}
+
+.y-panel-display-money i,
+.y-panel-display-user i {
+	font-size: 40px;
+	color: #3a3a3a;
+}
+
+.y-panel-display-money p,
+.y-panel-display-user p {
+	font-size: 16px;
+	margin-top: -4px;
+	font-weight: bold;
+}
+
+.y-panel-display .y-num {
+	font-size: 20px;
+	line-height: 80px;
+	vertical-align: middle;
+}
+
+.y-panel-display-set i {
+	color: #099fdd;
+	font-size: 30px;
+}
+
+.y-panel-display-set p {
+	font-weight: bold;
+}
+
+.y-panel-display-set a {
+	text-decoration: none;
+	color: #3a3a3a;
+}

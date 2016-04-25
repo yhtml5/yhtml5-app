@@ -1,0 +1,43 @@
+<div class="panel panel-default y-panel-display">
+	<div class="panel-heading">
+		<h3 ng-bind="x.appName"></h3>
+	</div>
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-xs-6 col-xs-push-1 y-panel-display-money">
+				<i class="iconfont">&#xe610;</i>
+				<p>总收益</p>
+			</div>
+			<div class="col-xs-6 col-xs-pull-1 y-num" ng-bind="x.totalMoneyNum"></div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6 col-xs-push-1 y-panel-display-user">
+				<i class="iconfont">&#xe609;</i>
+				<p>付费用户</p>
+			</div>
+			<div class="col-xs-6 col-xs-pull-1 y-num" ng-bind="x.userPayNum"></div>
+		</div>
+	</div>
+	<div class="panel-footer">
+		<div class="row y-panel-display-set">
+			<div class="col-xs-4 col-xs-push-1">
+				<a href="dashboard.html#payment1">
+					<i class="iconfont">&#xe601;</i>
+					<p>支付</p>
+				</a>
+			</div>
+			<div class="col-xs-4">
+				<a href="dashboard.html#analyze2">
+					<i class="iconfont">&#xe60d;</i>
+					<p>分析</p>
+				</a>
+			</div>
+			<div class="col-xs-4 col-xs-pull-1">
+				<a href="dashboard.html#set3">
+					<i class="iconfont">&#xe600;</i>
+					<p>设置</p>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
