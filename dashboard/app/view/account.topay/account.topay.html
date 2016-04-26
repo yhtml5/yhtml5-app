@@ -4,13 +4,161 @@
 			<div class="col-xs-12 col-sm-2">
 				<h3>代发</h3>
 			</div>
-			<div class="col-xs-6 col-sm-3 y-mt15">
-				<button type="button" class="btn btn-default">批量代发</button>
+			<div class="col-xs-6 col-sm-4 col-sm-pull-1 y-mt15">
+				<button type="button" class="btn btn-default" ng-click="accountTopayBatchOpen()">批量代付</button>
 			</div>
 		</div>
 		<!--row-->
 	</div>
 	<div class="panel-body">
-		
+		<form action="" class="form-horizontal y-mt30">
+			<div class="form-group">
+				<label for="name" class="col-sm-4 control-label">收款方姓名</label>
+				<div class="col-xs-12 col-sm-6">
+					<input type="text" class="form-control" name="" id="" value="" placeholder="请核实对方姓名...">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="websiteDomain" class="col-sm-4 control-label">账户类型</label>
+				<div class="col-sm-6">
+					<label class="radio-inline">
+						<input type="radio" name="accountClass" id="" value="1" checked="">个人
+					</label>
+					<label class="radio-inline">
+						<input type="radio" name="accountClass" id="" value="2">企业
+					</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="col-sm-4 control-label">身份证号</label>
+				<div class="col-sm-6">
+					<input type="text" class="form-control" name="" id="" value="" placeholder="请输入身份证号...">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="col-sm-4 control-label">收款方开户行</label>
+				<div class="col-sm-6">
+					<select class="form-control" name="">
+						<option value="">中国银行</option>
+						<option value="">建设银行</option>
+						<option value="">工商银行</option>
+						<option value="">农业银行</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="col-sm-4 control-label">收款方银行卡号</label>
+				<div class="col-sm-6">
+					<input type="text" class="form-control" name="" id="" value="" placeholder="请输入卡号...">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="col-sm-4 control-label">开户行所在地</label>
+				<div class="col-sm-6">
+					<input type="text" class="form-control" name="" id="" value="" placeholder="请输入开户行所在地...">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="col-sm-4 control-label">开户行支行名称</label>
+				<div class="col-sm-6">
+					<input type="text" class="form-control" name="" id="" value="" placeholder="请输入开户行支行名称...">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="col-sm-4 control-label">打款金额</label>
+				<div class="col-sm-6">
+					<input type="text" class="form-control" name="" id="" value="" placeholder="请输入金额数...">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="col-sm-4 control-label">打款原因</label>
+				<div class="col-sm-6">
+					<input type="text" class="form-control" name="" id="" value="" placeholder="">
+				</div>
+			</div>
+		</form>
 	</div>
+	<div class="panel-footer">
+		<button type="button" class="btn y-btn-blue" ng-click="accountTopayConfirmOpen()">下一步</button>
+	</div>
+	<script type="text/ng-template" id="accountTopayBatch.html">
+		<div class="modal-header y-modal-header-default">
+			<h3>批量代付
+			    <button type="button" class="close" ng-click="cancel()">
+			        <span aria-hidden="true">&times;</span>
+		        </button>
+			</h3>
+		</div>
+		<div class="modal-body">
+			<form class="form-horizontal y-mt15" action="" method="post">
+				<div class="form-group">
+					<label class="col-sm-4 control-label" for="">付款文件</label>
+					<div class="col-sm-8">
+						<input class="form-group y-mt6 y-mlr0" type="file" name="" id="" value="">
+						<p class="text-left">模板文件下载：<a href="###">xls文件</a></p>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="modal-footer y-modal-footer-default">
+			<button type="button" class="btn y-btn-blue center-block">下一步</button>
+		</div>
+	</script>
+	<script type="text/ng-template" id="accountTopayConfirm.html">
+		<div class="modal-header y-modal-header-default">
+			<h3>代付确认
+			    <button type="button" class="close" ng-click="cancel()">
+			        <span aria-hidden="true">&times;</span>
+		        </button>
+			</h3>
+		</div>
+		<div class="modal-body y-pt20">
+			<form class="form-horizontal" action="" method="">
+				<div class="form-group">
+					<label class="col-sm-4 control-label">银行卡信息：</label>
+					<div class="col-sm-7">
+						<p class="y-color-red">招商银行</p>
+						<p>沈贤丁（********2113）<span class="label label-info">签约账户</span>
+						</p>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-4 control-label">提现金额：</label>
+					<div class="col-sm-7">
+						<p>2,324.00 元</p>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-4 control-label">商家实付：</label>
+					<div class="col-sm-7">
+						<p>5,324.00 元</p>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-4 control-label">手续费：</label>
+					<div class="col-sm-7">
+						<p>324.00 元</p>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-4 control-label">安全密码：</label>
+					<div class="col-sm-4">
+						<input class="form-control" type="password" name="" id="" value="" />
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-4 control-label">短信验证码：</label>
+					<div class="col-sm-4">
+						<input class="form-control" type="text" name="" id="" value="" />
+					</div>
+					<div class="col-sm-2">
+						<button type="button" class="btn y-btn-blue">发送验证码</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="modal-footer y-modal-footer-default">
+			<button type="button" class="btn y-btn-blue center-block">下一步</button>
+		</div>
+	</script>
 </div>

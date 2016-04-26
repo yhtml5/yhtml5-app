@@ -1,4 +1,4 @@
-<div class="panel panel-default">
+<div class="panel panel-default" ng-controller="app.account">
 	<div class="panel-heading">
 		<h3 class="text-xl-left y-ml20">提现</h3>
 	</div>
@@ -25,6 +25,14 @@
 		</form>
 	</div>
 	<div class="panel-footer">
-		<button type="button" class="btn btn-info">下一步</button>
+		<button type="button" class="btn btn-info" ng-click="realNameRemindOpen()">下一步</button>
 	</div>
+	<script type="text/ng-template" id="realNameRemind.html">
+		<div class="modal-body">
+			<h3 class="text-center">请先完成实名认证才可进行操作！</h3>
+		</div>
+		<div class="modal-footer text-xs-center">
+			<button type="button" class="btn btn-danger" ng-click="cancel()">确认</button>
+		</div>
+	</script>
 </div>

@@ -19,7 +19,12 @@
  - [] ng-repeat 嵌套多个元素，并且展示
       **参考account.record.html
  - [] 如何处理获取到的json数据，并且展示
-      **使用$http服务，将获取到json的数组、对象映射到作用域，绑定作用域到template，参考account.record.html   
+      **使用$http服务，将获取到json的数组、对象映射到作用域，绑定作用域到template，参考account.record.html
+ - [] 开户行所在地、支行名称、地域名称，数据来源问题 
+ - [] angular 去特定数组中的数据 
+ - [] angular 上传插件
+ - [] html 识别excel数据并显示
+  
    
       
       

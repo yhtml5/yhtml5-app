@@ -74,13 +74,13 @@
 				</thead>
 				<tbody>
 					<tr ng-repeat="data in accountDetail">
-						<td ng-bind="data.time">Data</td>
+						<td ng-bind="data.completionTime">Data</td>
 						<td ng-bind="data.num">Data</td>
 						<td ng-bind="data.class">Data</td>
 						<td ng-bind="data.income" class="text-success">Data</td>
 						<td ng-bind="data.expense" class="text-danger">Data</td>
 						<td ng-bind="data.balance">Data</td>
-						<td><button type="button" class="btn btn-link">详情</button></td>
+						<td><button type="button" class="btn btn-link" ng-click="accountDetailMoreOpen()">详情</button></td>
 					</tr>
 				</tbody>
 			</table>
@@ -99,4 +99,77 @@
 			</ul>
 		</div>
 	</div>
+	<script type="text/ng-template" id="accountDetailMore.html">
+		<div class="modal-header y-modal-header-default">
+			<h3>交易详情
+			    <button type="button" class="close" ng-click="cancel()">
+			        <span aria-hidden="true">&times;</span>
+		        </button>
+			</h3>
+		</div>
+		<div class="modal-body">
+			<div class="table-responsive">
+				<table class="table table-striped table-hover table-condensed table-bordered">
+					<tbody>
+						<tr>
+							<td>创建时间</td>
+							<td>Data</td>
+							<td>完成时间</td>
+							<td>Data</td>
+						</tr>
+						<tr>
+							<td>流水号</td>
+							<td>Data</td>
+							<td>商户订单号</td>
+							<td>Data</td>
+						</tr>
+						<tr>
+							<td>支付状态</td>
+							<td>Data</td>
+							<td>交易类型</td>
+							<td>Data</td>
+						</tr>
+						<tr>
+							<td>金额</td>
+							<td>Data</td>
+							<td>支付方式</td>
+							<td>Data</td>
+						</tr>
+						<tr>
+							<td>备注</td>
+							<td colspan="3">Data</td>
+						</tr>
+						<!--<tr>
+							<td>创建时间</td>
+							<td ng-bind="accountDetail.createTime">Data</td>
+							<td>完成时间</td>
+							<td ng-bind="accountDetail.completionTime ">Data</td>
+						</tr>
+						<tr>
+							<td>流水号</td>
+							<td ng-bind="accountDetail.num">Data</td>
+							<td>商户订单号</td>
+							<td ng-bind="accountDetail.orderNum">Data</td>
+						</tr>
+						<tr>
+							<td>支付状态</td>
+							<td ng-bind="accountDetail.state">Data</td>
+							<td>交易类型</td>
+							<td ng-bind="accountDetail.class">Data</td>
+						</tr>
+						<tr>
+							<td>金额</td>
+							<td ng-bind="accountDetail.money">Data</td>
+							<td>支付方式</td>
+							<td ng-bind="accountDetail.payType">Data</td>
+						</tr>
+						<tr>
+							<td>备注</td>
+							<td ng-bind="accountDetail.note">Data</td>
+						</tr>-->
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</script>
 </div>

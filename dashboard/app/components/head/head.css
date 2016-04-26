@@ -20,8 +20,14 @@
 .y-text-red {
 	color: #f25050;
 }
+.y-color-red {
+	color: #f25050;
+}
 
 .y-text-blue {
+	color: : #099fdd;
+}
+.y-color-blue {
 	color: : #099fdd;
 }
 
@@ -511,8 +517,8 @@ fieldset[disabled] .y-btn-red.focus {
 }
 
 .y-mlr0 {
-	margin-left: 0;
-	margin-right: 0;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
 }
 
 .y-ml2 {
@@ -570,6 +576,9 @@ fieldset[disabled] .y-btn-red.focus {
 
 .y-pd30 {
 	padding: 30px;
+}
+.y-pt20{
+	padding-top: 20px;
 }
 
 .y-text-l {}
