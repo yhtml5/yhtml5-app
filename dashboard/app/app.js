@@ -13,7 +13,8 @@
 angular.module('app', [
 		'ui.router',
 		'app.navMain',
-		'app.appList'
+		'app.appList',
+		'app.account'
 	])
 	.config(function($stateProvider, $urlRouterProvider) {
 		$urlRouterProvider.otherwise("/dashboard")

@@ -216,6 +216,66 @@ fieldset[disabled] .y-btn-blue.focus {
 	background-color: #fff;
 }
 
+.y-btn-red {
+	color: #fff;
+	background-color: #099fdd;
+	border-color: #0799d9;
+}
+
+.y-btn-red:focus,
+.y-btn-red.focus,
+.y-btn-red:hover {
+	color: #fff;
+	background-color: #0996d2;
+	border-color: #0794d1;
+}
+
+.y-btn-red:active,
+.y-btn-red.active,
+.open > .dropdown-toggle.y-btn-red {
+	color: #fff;
+	background-color: #0996d2;
+	border-color: #0e5aa7;
+}
+
+.y-btn-red:active:hover,
+.y-btn-red.active:hover,
+.open > .dropdown-toggle.y-btn-red:hover,
+.y-btn-red:active:focus,
+.y-btn-red.active:focus,
+.open > .dropdown-toggle.y-btn-red:focus,
+.y-btn-red:active.focus,
+.y-btn-red.active.focus,
+.open > .dropdown-toggle.y-btn-red.focus {
+	color: #fff;
+	background-color: #0794d0;
+	border-color: #1b6d85;
+}
+
+.y-btn-red:active,
+.y-btn-red.active,
+.open > .dropdown-toggle.y-btn-red {
+	background-image: none;
+}
+
+.y-btn-red.disabled:hover,
+.y-btn-red[disabled]:hover,
+fieldset[disabled] .y-btn-red:hover,
+.y-btn-red.disabled:focus,
+.y-btn-red[disabled]:focus,
+fieldset[disabled] .y-btn-red:focus,
+.y-btn-red.disabled.focus,
+.y-btn-red[disabled].focus,
+fieldset[disabled] .y-btn-red.focus {
+	background-color: #099fdd;
+	border-color: #0799d9;
+}
+
+.y-btn-red .badge {
+	color: #099fdd;
+	background-color: #fff;
+}
+
 
 /* base style
  * ========== */
@@ -474,6 +534,10 @@ fieldset[disabled] .y-btn-blue.focus {
 
 .y-mt-30 {
 	margin-top: -30px;
+}
+
+.y-mt6 {
+	margin-top: 6px;
 }
 
 .y-mt15 {

@@ -16,3 +16,15 @@
       **参考 angular-phonecat**
  - [] angular-ui-bootstrap modal 中 select选择包含在script，不生成option
  - [] select 默认value属性如何实现
+ - [] ng-repeat 嵌套多个元素，并且展示
+      **参考account.record.html
+ - [] 如何处理获取到的json数据，并且展示
+      **使用$http服务，将获取到json的数组、对象映射到作用域，绑定作用域到template，参考account.record.html   
+   
+      
+      
+      
+      
+      
+      
+      
