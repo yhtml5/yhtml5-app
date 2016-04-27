@@ -20,6 +20,7 @@
 .y-text-red {
 	color: #f25050;
 }
+
 .y-color-red {
 	color: #f25050;
 }
@@ -27,6 +28,7 @@
 .y-text-blue {
 	color: : #099fdd;
 }
+
 .y-color-blue {
 	color: : #099fdd;
 }
@@ -283,6 +285,83 @@ fieldset[disabled] .y-btn-red.focus {
 }
 
 
+/*progressbar*/
+
+.y-progress-step {
+	margin-bottom: 30px;
+	overflow: hidden;
+	padding-left: 0;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+}
+
+.y-progress-step li {
+	list-style-type: none;
+	color: #a9a9a9;
+	text-transform: uppercase;
+	font-size: 18px;
+	width: 33.33%;
+	float: left;
+	position: relative;
+	text-align: center;
+}
+
+.y-progress-step li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 30px;
+	line-height: 30px;
+	display: block;
+	font-size: 16px;
+	color: #fff;
+	background: #a9a9a9;
+	border-radius: 50%;
+	margin: 0 auto 5px auto;
+}
+
+
+/*progressbar connectors*/
+
+.y-progress-step li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: #a9a9a9;
+	position: absolute;
+	left: -50%;
+	top: 14px;
+	z-index: -1;
+	/*put it behind the numbers*/
+}
+
+.y-progress-step li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none;
+}
+
+
+/*marking active/completed steps green*/
+
+
+/*The number of the step and the connector before it = green*/
+
+.y-progress-step li.active:before,
+.y-progress-step li.active:after {
+	background: #099fdd;
+	color: white;
+}
+
+.y-progress-step li.active:before,
+.y-progress-step li.active:after {
+	background: #099fdd;
+	color: white;
+}
+
+.y-progress-step .active .y-turn-blue {
+	color: #099fdd;
+}
+
+
 /* base style
  * ========== */
 
@@ -454,7 +533,9 @@ fieldset[disabled] .y-btn-red.focus {
 	border: solid 1px #666;
 	border-radius: 4px;
 }
-
+.y-color-white{
+	color:#fff
+}
 .y-color-default {
 	color: #666;
 }
@@ -470,7 +551,9 @@ fieldset[disabled] .y-btn-red.focus {
 .y-color-whiteSmoke {
 	color: #f5f5f5
 }
-
+.y-bg-fff {
+	background-color: #fff;
+}
 .y-bg-ebebeb {
 	background-color: #ebebeb;
 }
@@ -514,6 +597,14 @@ fieldset[disabled] .y-btn-red.focus {
 
 .y-mb20 {
 	margin-bottom: 20px;
+}
+
+.y-mb40 {
+	margin-bottom: 40px;
+}
+
+.y-mb60 {
+	margin-bottom: 60px;
 }
 
 .y-mlr0 {
@@ -577,7 +668,8 @@ fieldset[disabled] .y-btn-red.focus {
 .y-pd30 {
 	padding: 30px;
 }
-.y-pt20{
+
+.y-pt20 {
 	padding-top: 20px;
 }
 

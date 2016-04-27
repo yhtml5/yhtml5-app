@@ -10,13 +10,14 @@
 		<link rel="import" href="components/head/head.html?__inline">
 	</head>
 
-	<body class="y-template-index y-bg-ebebeb">
+	<body class="y-bg-ebebeb">
 		<!--[if lt IE 7]>
           <p class="browsehappy">You are using an <strong>outdated</strong> browser. 
           	Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 		<header class="y-header" ui-view="nav"></header>
-		<div class="container y-body y-mt-30" ui-view="content"></div>
+		<div ui-view="content"></div>
+		<!--<div class="container y-body y-mt-30" ui-view="content"></div>-->
 		<!-- In production use:
                  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
             -->

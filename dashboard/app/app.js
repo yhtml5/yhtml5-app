@@ -17,7 +17,7 @@ angular.module('app', [
 		'app.account'
 	])
 	.config(function($stateProvider, $urlRouterProvider) {
-		$urlRouterProvider.otherwise("/dashboard")
+		$urlRouterProvider.otherwise("/authentication")
 		$stateProvider
 			.state('dashboard', {
 				url: "/dashboard",
@@ -27,6 +27,17 @@ angular.module('app', [
 					},
 					"content": {
 						templateUrl: "view/appList/appList.html"
+					}
+				}
+			})
+			.state('authentication', {
+				url: "/authentication",
+				views: {
+					"nav": {
+						templateUrl: "view/nav-main/nav-main.html"
+					},
+					"content": {
+						templateUrl: "view/authentication/authentication.html"
 					}
 				}
 			})
