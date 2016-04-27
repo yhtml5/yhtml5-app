@@ -46,11 +46,11 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-dashboard/production/
+
 logs/*
 !.gitkeep
 dashboard/node_modules/
-dashboard/bower_components/
+dashboard/app/bower_components/
 tmp
 .DS_Store
 .idea
