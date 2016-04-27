@@ -65,6 +65,10 @@ body {
 	white-space: normal;
 }
 
+.text-indent2 {
+	text-indent: 2em;
+}
+
 .text-xs-left {
 	text-align: left !important;
 }
@@ -533,9 +537,11 @@ fieldset[disabled] .y-btn-red.focus {
 	border: solid 1px #666;
 	border-radius: 4px;
 }
-.y-color-white{
-	color:#fff
+
+.y-color-white {
+	color: #fff
 }
+
 .y-color-default {
 	color: #666;
 }
@@ -551,9 +557,11 @@ fieldset[disabled] .y-btn-red.focus {
 .y-color-whiteSmoke {
 	color: #f5f5f5
 }
+
 .y-bg-fff {
 	background-color: #fff;
 }
+
 .y-bg-ebebeb {
 	background-color: #ebebeb;
 }
@@ -673,6 +681,14 @@ fieldset[disabled] .y-btn-red.focus {
 	padding-top: 20px;
 }
 
+.y-pt40 {
+	padding-top: 40px;
+}
+
+.y-pt60 {
+	padding-top: 60px;
+}
+
 .y-text-l {}
 
 .y-input-md {
@@ -722,6 +738,11 @@ fieldset[disabled] .y-btn-red.focus {
 	.y-l-sm {
 		left: 15%;
 	}
+}
+
+.y-scroll-y-md {
+	max-height: 720px;
+	overflow-y: scroll;
 }
 
 .y-modal-footer-default {
