@@ -3,8 +3,8 @@
  * @require ../../app.js
  *
  */
-angular.module('app.navMain', ['ui.bootstrap', 'ngAnimate', 'ui.router']) //可以不加ui模块？
-	.controller('app.navMain', function($scope, $http, $uibModal) {
+angular.module('app.nav', ['ui.bootstrap', 'ngAnimate', 'ui.router']) //可以不加ui模块？
+	.controller('app.nav', function($scope, $http, $uibModal) {
 		$scope.userVerify = true
 		$scope.userCenter = true
 		$scope.toggle = function() {

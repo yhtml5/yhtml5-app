@@ -12,12 +12,15 @@
 // Declare app level module which depends on views, and components
 angular.module('app', [
 		'ui.router',
-		'app.navMain',
+		'app.nav',
 		'app.appList',
-		'app.account'
+		'app.account',
+		'app.authentication'
 	])
 	.config(function($stateProvider, $urlRouterProvider) {
-		$urlRouterProvider.otherwise("/authentication")
+		$urlRouterProvider
+		//.when('/dashboard/*', '/dashboard')
+			.otherwise("/authentication/agreement")
 		$stateProvider
 			.state('dashboard', {
 				url: "/dashboard",
@@ -34,10 +37,42 @@ angular.module('app', [
 				url: "/authentication",
 				views: {
 					"nav": {
-						templateUrl: "view/nav-main/nav-main.html"
+						templateUrl: "view/nav-authentication/nav-authentication.html"
 					},
 					"content": {
 						templateUrl: "view/authentication/authentication.html"
+					}
+				}
+			})
+			.state('authentication.agreement', {
+				url: "/agreement",
+				views: {
+					"content": {
+						templateUrl: "view/authentication.agreement/authentication.agreement.html"
+					}
+				}
+			})
+			.state('authentication.person', {
+				url: "/person",
+				views: {
+					"content": {
+						templateUrl: "view/authentication.person/authentication.person.html"
+					}
+				}
+			})
+			.state('authentication.company', {
+				url: "/company",
+				views: {
+					"content": {
+						templateUrl: "view/authentication.company/authentication.company.html"
+					}
+				}
+			})
+			.state('authentication.account', {
+				url: "/account",
+				views: {
+					"content": {
+						templateUrl: "view/authentication.account/authentication.account.html"
 					}
 				}
 			})
@@ -66,49 +101,37 @@ angular.module('app', [
 			.state('account.record', {
 				url: "/record",
 				views: {
-					"nav": {
-						templateUrl: "view/nav-main/nav-main.html"
-					},
 					"content": {
 						templateUrl: "view/account.record/account.record.html"
 					}
-					
+
 				}
 			})
 			.state('account.withdraw', {
 				url: "/withdraw",
 				views: {
-					"nav": {
-						templateUrl: "view/nav-main/nav-main.html"
-					},
 					"content": {
 						templateUrl: "view/account.withdraw/account.withdraw.html"
 					}
-					
+
 				}
 			})
 			.state('account.detail', {
 				url: "/detail",
 				views: {
-					"nav": {
-						templateUrl: "view/nav-main/nav-main.html"
-					},
 					"content": {
 						templateUrl: "view/account.detail/account.detail.html"
 					}
-					
+
 				}
 			})
 			.state('account.topay', {
 				url: "/topay",
 				views: {
-					"nav": {
-						templateUrl: "view/nav-main/nav-main.html"
-					},
 					"content": {
 						templateUrl: "view/account.topay/account.topay.html"
 					}
-					
+
 				}
 			})
 			.state('undeveloped', {
@@ -122,5 +145,5 @@ angular.module('app', [
 					}
 				}
 			})
-			
+
 	})

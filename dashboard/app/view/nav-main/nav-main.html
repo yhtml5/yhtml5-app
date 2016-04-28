@@ -1,4 +1,4 @@
-<nav class="navbar y-navbar-info navbar-fixed-top" ng-controller="app.navMain">
+<nav class="navbar y-navbar-info navbar-fixed-top" ng-controller="app.nav">
 	<div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
@@ -15,10 +15,10 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse y-mt15" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav text-center" role="tablist">
-				<li role="presentation" class="active">
-					<a ui-sref="dashboard">控制台</a></li>
-				<li role="presentation">
-					<a ui-sref="account.record">结算管理</a>
+				<li role="presentation" ui-sref-active="active" ui-sref="dashboard">
+					<a href="###" onclick="javascript:return false;">控制台</a></li>
+				<li role="presentation" ui-sref-active="active" ui-sref="account.record">
+					<a href="###" onclick="javascript:return false;">结算管理</a>
 				</li>
 				<li class="y-ml2" role="presentation">
 					<a href="###" onclick="javascript:return false;" ng-click="open()">帮助</a>
@@ -37,8 +37,8 @@
 			</form>
 			<div class="y-card-nav" ng-hide="userCenter">
 				<p>1417376255@qq.com</p>
-				<button class="btn btn-success">已认证</button>
-				<!--<button class="btn btn-danger">认证中</button>-->
+				<!--<button class="btn btn-success">已认证</button>-->
+				<button class="btn btn-danger" ui-sref="authentication.agreement">未认证</button>
 				<div class="">
 					<a href="">我的账户</a>丨<a href="">退出</a>
 				</div>

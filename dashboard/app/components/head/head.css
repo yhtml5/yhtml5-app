@@ -292,6 +292,9 @@ fieldset[disabled] .y-btn-red.focus {
 /*progressbar*/
 
 .y-progress-step {
+	max-width: 1600px;
+	margin-left: auto;
+	margin-right: auto;
 	margin-bottom: 30px;
 	overflow: hidden;
 	padding-left: 0;
@@ -599,6 +602,10 @@ fieldset[disabled] .y-btn-red.focus {
 	display: none;
 }
 
+.y-fs16 {
+	font-size: 16px;
+}
+
 .y-lh52 {
 	line-height: 52px;
 }
@@ -669,6 +676,14 @@ fieldset[disabled] .y-btn-red.focus {
 	margin-top: 90px;
 }
 
+.y-mt120 {
+	margin-top: 120px;
+}
+
+.y-mt160 {
+	margin-top: 160px;
+}
+
 .y-min-h300 {
 	min-height: 300px;
 }
@@ -689,7 +704,25 @@ fieldset[disabled] .y-btn-red.focus {
 	padding-top: 60px;
 }
 
-.y-text-l {}
+.y-pb20 {
+	padding-bottom: 20px;
+}
+
+.y-pb40 {
+	padding-bottom: 40px;
+}
+
+.y-pb60 {
+	padding-bottom: 60px;
+}
+
+.y-wd60 {
+	width: 60%;
+}
+
+.y-wd80 {
+	width: 80%;
+}
 
 .y-input-md {
 	margin-top: 10px;
@@ -741,7 +774,7 @@ fieldset[disabled] .y-btn-red.focus {
 }
 
 .y-scroll-y-md {
-	max-height: 720px;
+	max-height: 480px;
 	overflow-y: scroll;
 }
 
