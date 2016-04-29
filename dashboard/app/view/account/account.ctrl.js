@@ -3,8 +3,8 @@
  * @require ../../app.js
  *
  */
-angular.module('app.account', ['ui.bootstrap', 'ngAnimate'])
-	.controller('app.account', function($scope, $http, $uibModal) {
+angular.module('yhtml5.account', ['ui.bootstrap', 'ngAnimate'])
+	.controller('yhtml5.account', function($scope, $http, $uibModal) {
 		//get json
 		$http.get("../../server/account.record.json")
 			.success(function(response) {

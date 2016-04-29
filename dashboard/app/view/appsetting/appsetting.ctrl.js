@@ -3,8 +3,8 @@
  * @require ../../app.js
  *
  */
-angular.module('yhtml5.authentication', ['ui.bootstrap', 'ngAnimate'])
-	.controller('yhtml5.authentication', function($scope, $http, $uibModal, $state) {
+angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate'])
+	.controller('yhtml5.appsetting', function($scope, $http, $uibModal, $state) {
 		$scope.isStep1 = true
 		$scope.toStep1 = function() {
 			$scope.isStep1 = true

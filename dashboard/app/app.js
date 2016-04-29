@@ -1,4 +1,4 @@
-//'use strict';
+'use strict';
 /*
  * @require /bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js
  * @require /bower_components/angular/angular.js
@@ -10,12 +10,13 @@
  */
 
 // Declare app level module which depends on views, and components
-angular.module('app', [
+angular.module('yhtml5', [
 		'ui.router',
-		'app.nav',
-		'app.appList',
-		'app.account',
-		'app.authentication'
+		'yhtml5.nav',
+		'yhtml5.appList',
+		'yhtml5.appsetting',
+		'yhtml5.account',
+		'yhtml5.authentication'
 	])
 	.config(function($stateProvider, $urlRouterProvider) {
 		$urlRouterProvider
@@ -30,60 +31,6 @@ angular.module('app', [
 					},
 					"content": {
 						templateUrl: "view/appList/appList.html"
-					}
-				}
-			})
-			.state('authentication', {
-				url: "/authentication",
-				views: {
-					"nav": {
-						templateUrl: "view/nav-authentication/nav-authentication.html"
-					},
-					"content": {
-						templateUrl: "view/authentication/authentication.html"
-					}
-				}
-			})
-			.state('authentication.agreement', {
-				url: "/agreement",
-				views: {
-					"content": {
-						templateUrl: "view/authentication.agreement/authentication.agreement.html"
-					}
-				}
-			})
-			.state('authentication.person', {
-				url: "/person",
-				views: {
-					"content": {
-						templateUrl: "view/authentication.person/authentication.person.html"
-					}
-				}
-			})
-			.state('authentication.company', {
-				url: "/company",
-				views: {
-					"content": {
-						templateUrl: "view/authentication.company/authentication.company.html"
-					}
-				}
-			})
-			.state('authentication.account', {
-				url: "/account",
-				views: {
-					"content": {
-						templateUrl: "view/authentication.account/authentication.account.html"
-					}
-				}
-			})
-			.state('payment', {
-				url: "/payment",
-				views: {
-					"nav": {
-						templateUrl: "view/nav-app/nav-app.html"
-					},
-					"content": {
-						templateUrl: "view/payment/payment.html"
 					}
 				}
 			})
@@ -134,6 +81,73 @@ angular.module('app', [
 
 				}
 			})
+			//======== real-name authentication ========
+			.state('authentication', {
+				url: "/authentication",
+				views: {
+					"nav": {
+						templateUrl: "view/nav-authentication/nav-authentication.html"
+					},
+					"content": {
+						templateUrl: "view/authentication/authentication.html"
+					}
+				}
+			})
+			.state('authentication.agreement', {
+				url: "/agreement",
+				views: {
+					"content": {
+						templateUrl: "view/authentication.agreement/authentication.agreement.html"
+					}
+				}
+			})
+			.state('authentication.person', {
+				url: "/person",
+				views: {
+					"content": {
+						templateUrl: "view/authentication.person/authentication.person.html"
+					}
+				}
+			})
+			.state('authentication.company', {
+				url: "/company",
+				views: {
+					"content": {
+						templateUrl: "view/authentication.company/authentication.company.html"
+					}
+				}
+			})
+			.state('authentication.account', {
+				url: "/account",
+				views: {
+					"content": {
+						templateUrl: "view/authentication.account/authentication.account.html"
+					}
+				}
+			})
+			//======== app ========
+			.state('payment', {
+				url: "/payment",
+				views: {
+					"nav": {
+						templateUrl: "view/nav-app/nav-app.html"
+					},
+					"content": {
+						templateUrl: "view/payment/payment.html"
+					}
+				}
+			})
+			.state('appsetting', {
+				url: "/appsetting",
+				views: {
+					"nav": {
+						templateUrl: "view/nav-app/nav-app.html"
+					},
+					"content": {
+						templateUrl: "view/appsetting/appsetting.html"
+					}
+				}
+			})
 			.state('undeveloped', {
 				url: "/undeveloped",
 				views: {
@@ -145,5 +159,4 @@ angular.module('app', [
 					}
 				}
 			})
-
 	})

@@ -24,7 +24,10 @@
  - [] angular 去特定数组中的数据 
  - [] angular 上传插件
  - [] html 识别excel数据并显示
- - [] 上传插件（ng-file-upload）使用，文件限制、大小限制、上传进度、拖拽上传、断点续传、
+ - [] 文件上传（ng-file-upload），文件限制、大小限制、上传进度、拖拽上传、断点续传
+ - [] restful API
+ - [] lazyload 延迟加载view所需的controller、resource、json   
+ - [] repeat 表格数据和其它内容数据如何绑定
   
    
       
