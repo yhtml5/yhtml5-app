@@ -148,6 +148,38 @@ angular.module('yhtml5', [
 					}
 				}
 			})
+			.state('appsetting.info', {
+				url: "/info",
+				views: {
+					"content": {
+						templateUrl: "view/appsetting.info/appsetting.info.html"
+					}
+				}
+			})
+			.state('appsetting.channel', {
+				url: "/channel",
+				views: {
+					"content": {
+						templateUrl: "view/appsetting.channel/appsetting.channel.html"
+					}
+				}
+			})
+			.state('appsetting.api', {
+				url: "/api",
+				views: {
+					"content": {
+						templateUrl: "view/appsetting.api/appsetting.api.html"
+					}
+				}
+			})
+			.state('appsetting.canal', {
+				url: "/canal",
+				views: {
+					"content": {
+						templateUrl: "view/appsetting.canal/appsetting.canal.html"
+					}
+				}
+			})
 			.state('undeveloped', {
 				url: "/undeveloped",
 				views: {
