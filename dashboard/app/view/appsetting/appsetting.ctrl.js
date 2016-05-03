@@ -4,34 +4,70 @@
  *
  */
 angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate'])
-	.controller('yhtml5.appsetting', function($scope, $http, $uibModal, $state) {
-		$scope.isStep1 = true
-		$scope.toStep1 = function() {
-			$scope.isStep1 = true
-			$scope.isStep2 = false
-			$scope.isStep3 = false
-		}
-		$scope.toStep2 = function() {
-			$scope.isStep1 = true
-			$scope.isStep2 = true
-			$scope.isStep3 = false
-		}
-		$scope.toStep3 = function() {
-			$scope.isStep1 = true
-			$scope.isStep2 = true
-			$scope.isStep3 = true
-		}
+	.controller('yhtml5.appsetting', function($scope, $uibModal) {
 		$scope.animationsEnabled = true;
-		$scope.authenticationAccountConfirmOpen = function(size) {
+		$scope.appsettingCanalResetOpen = function(size) {
 			var modalInstance = $uibModal.open({
 				animation: $scope.animationsEnabled,
-				templateUrl: 'authenticationAccountConfirm.html',
-				controller: 'authenticationAccountConfirmCtrl',
+				templateUrl: 'appsettingCanalReset.html',
+				controller: 'appsettingCanalResetCtrl',
 				size: size
 			})
-		};
+		}
+		$scope.appsettingCanalCreateOpen = function(size) {
+			var modalInstance = $uibModal.open({
+				animation: $scope.animationsEnabled,
+				templateUrl: 'appsettingCanalCreate.html',
+				controller: 'appsettingCanalCreateCtrl',
+				size: size
+			})
+		}
+		$scope.appsettingChannelAgreementOpen = function(size) {
+			var modalInstance = $uibModal.open({
+				animation: $scope.animationsEnabled,
+				templateUrl: 'appsettingChannelAgreement.html',
+				controller: 'appsettingChannelAgreementCtrl',
+				size: size
+			})
+		}
+		$scope.appsettingChannelRechanrgecardOpen = function(size) {
+			var modalInstance = $uibModal.open({
+				animation: $scope.animationsEnabled,
+				templateUrl: 'appsettingChannelRechanrgecard.html',
+				controller: 'appsettingChannelRechanrgecardCtrl',
+				size: size
+			})
+		}
+		$scope.appsettingChannelPointcardOpen = function(size) {
+			var modalInstance = $uibModal.open({
+				animation: $scope.animationsEnabled,
+				templateUrl: 'appsettingChannelPointcard.html',
+				controller: 'appsettingChannelPointcardCtrl',
+				size: size
+			})
+		}
 	})
-	.controller('authenticationAccountConfirmCtrl', function($scope, $uibModalInstance) {
+	.controller('appsettingCanalResetCtrl', function($scope, $uibModalInstance) {
+		$scope.cancel = function() {
+			$uibModalInstance.dismiss('cancel');
+		}
+	})
+	.controller('appsettingCanalCreateCtrl', function($scope, $uibModalInstance) {
+		$scope.cancel = function() {
+			$uibModalInstance.dismiss('cancel');
+		}
+	})
+	.controller('appsettingChannelAgreementCtrl', function($scope, $uibModalInstance) {
+		$scope.cancel = function() {
+			$uibModalInstance.dismiss('cancel');
+		}
+	})
+	.controller('appsettingChannelRechanrgecardCtrl', function($scope, $uibModalInstance) {
+		$scope.cancel = function() {
+			$uibModalInstance.dismiss('cancel');
+		}
+	})
+	.controller('appsettingChannelPointcardCtrl', function($scope, $uibModalInstance) {
 		$scope.cancel = function() {
 			$uibModalInstance.dismiss('cancel');
 		}

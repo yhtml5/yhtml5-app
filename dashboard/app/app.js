@@ -12,6 +12,7 @@
 // Declare app level module which depends on views, and components
 angular.module('yhtml5', [
 		'ui.router',
+		'controllers',
 		'yhtml5.nav',
 		'yhtml5.appList',
 		'yhtml5.appsetting',
@@ -177,6 +178,18 @@ angular.module('yhtml5', [
 				views: {
 					"content": {
 						templateUrl: "view/appsetting.canal/appsetting.canal.html"
+					},
+					"modal": {
+						templateUrl: "view/smsConfirm/smsConfirm.html"
+					}
+				}
+			})
+			//======== public ========
+			.state('smsConfirm', {
+				url: "/smsConfirm",
+				views: {
+					"content": {
+						templateUrl: "view/smsConfirm/smsConfirm.html"
 					}
 				}
 			})

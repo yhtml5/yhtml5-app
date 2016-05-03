@@ -80,7 +80,9 @@
 						<td ng-bind="data.income" class="text-success">Data</td>
 						<td ng-bind="data.expense" class="text-danger">Data</td>
 						<td ng-bind="data.balance">Data</td>
-						<td><button type="button" class="btn btn-link" ng-click="accountDetailMoreOpen()">详情</button></td>
+						<td>
+							<button type="button" class="btn btn-link" ng-click="accountDetailMoreOpen()">详情</button>
+						</td>
 					</tr>
 				</tbody>
 			</table>
@@ -101,7 +103,7 @@
 	</div>
 	<script type="text/ng-template" id="accountDetailMore.html">
 		<div class="modal-header y-modal-header-default">
-			<h3>交易详情
+			<h3 class="y-mg0">交易详情
 			    <button type="button" class="close" ng-click="cancel()">
 			        <span aria-hidden="true">&times;</span>
 		        </button>

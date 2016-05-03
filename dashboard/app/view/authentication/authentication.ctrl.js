@@ -4,7 +4,7 @@
  *
  */
 angular.module('yhtml5.authentication', ['ui.bootstrap', 'ngAnimate'])
-	.controller('yhtml5.authentication', function($scope, $http, $uibModal, $state) {
+	.controller('yhtml5.authentication', function($scope, $uibModal, $state) {
 		$scope.isStep1 = true
 		$scope.toStep1 = function() {
 			$scope.isStep1 = true

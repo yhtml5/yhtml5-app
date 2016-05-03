@@ -28,10 +28,17 @@
  - [] restful API
  - [] lazyload 延迟加载view所需的controller、resource、json   
  - [] repeat 表格数据和其它内容数据如何绑定
+ 
+### 性能优化
+ - [] 减少标签嵌套深度
+ - [] 选择器高复用、可维护写法优先、适当减少选择器
+ - [] 优化nav、helpCenter部分，参考smsConfirm
   
-   
-      
-      
+### 项目规范   
+ - [] angular-ui-bootstrap modal id 统一为template.modal.html
+ - [] 分类排序head.html
+ - [x] 提取字体图标为单独组件 
+ - [] 解耦 样式（css）、模板（template）、业务逻辑（logic）     
       
       
       

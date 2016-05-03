@@ -27,11 +27,11 @@
 }
 
 .y-text-blue {
-	color: : #099fdd;
+	color: #099fdd;
 }
 
 .y-color-blue {
-	color: : #099fdd;
+	color: #099fdd;
 }
 
 body {
@@ -494,19 +494,27 @@ fieldset[disabled] .y-btn-red.focus {
 .y-fs16 {
 	font-size: 16px;
 }
+
 .y-fs18 {
 	font-size: 18px;
 }
+
 .y-fs26 {
 	font-size: 26px;
+}
+
+.y-hl36 {
+	height: 36px
 }
 
 .y-lh52 {
 	line-height: 52px;
 }
+
 .y-mb0 {
 	margin-bottom: 0px;
 }
+
 .y-mb10 {
 	margin-bottom: 10px;
 }
@@ -517,6 +525,10 @@ fieldset[disabled] .y-btn-red.focus {
 
 .y-mb40 {
 	margin-bottom: 40px;
+}
+
+.y-mg0 {
+	margin: 0px;
 }
 
 .y-mb60 {
@@ -595,6 +607,10 @@ fieldset[disabled] .y-btn-red.focus {
 
 .y-pt20 {
 	padding-top: 20px;
+}
+
+.y-pt30 {
+	padding-top: 30px;
 }
 
 .y-pt40 {
