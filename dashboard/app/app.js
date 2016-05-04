@@ -17,7 +17,8 @@ angular.module('yhtml5', [
 		'yhtml5.appList',
 		'yhtml5.appsetting',
 		'yhtml5.account',
-		'yhtml5.authentication'
+		'yhtml5.authentication',
+		'yhtml5.user'
 	])
 	.config(function($stateProvider, $urlRouterProvider) {
 		$urlRouterProvider
@@ -181,6 +182,26 @@ angular.module('yhtml5', [
 					},
 					"modal": {
 						templateUrl: "view/smsConfirm/smsConfirm.html"
+					}
+				}
+			})
+			//======== user ========
+			.state('user', {
+				url: "/user",
+				views: {
+					"nav": {
+						templateUrl: "view/nav-main/nav-main.html"
+					},
+					"content": {
+						templateUrl: "view/user/user.html"
+					}
+				}
+			})
+			.state('user.agreement', {
+				url: "/agreement",
+				views: {
+					"content": {
+						templateUrl: "view/user.agreement/user.agreement.html"
 					}
 				}
 			})

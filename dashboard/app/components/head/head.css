@@ -60,6 +60,12 @@ body {
 /* Expand bootstrap style
  * ====================== */
 
+.y-ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
 .text-truncate {
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -456,12 +462,6 @@ fieldset[disabled] .y-btn-red.focus {
 
 .y-bg-ebebeb {
 	background-color: #ebebeb;
-}
-
-.y-ellipsis {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
 }
 
 .y-iconfont-xs {
