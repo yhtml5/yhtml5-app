@@ -205,6 +205,17 @@ angular.module('yhtml5', [
 					}
 				}
 			})
+			.state('user.person', {
+				url: "/person",
+				views: {
+					"content": {
+						templateUrl: "view/user.person/user.person.html"
+					},
+					"modal": {
+						templateUrl: "view/noteSimple/noteSimple.html"
+					}
+				}
+			})
 			//======== public ========
 			.state('smsConfirm', {
 				url: "/smsConfirm",

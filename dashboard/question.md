@@ -28,7 +28,12 @@
  - [] restful API
  - [] lazyload 延迟加载view所需的controller、resource、json   
  - [] repeat 表格数据和其它内容数据如何绑定
- 
+ - [x] get modal 404  
+      **template 没有引用ui-view="modal"
+      **app.js 中没有设置modal指向链接地址
+      **没有设置触发按钮
+ - [] 引用modal时候，会隐藏滚动条，引起的回流重绘。可否一直显示隐藏滚动条    
+    
 ### 性能优化
  - [] 减少标签嵌套深度
  - [] 选择器高复用、可维护写法优先、适当减少选择器

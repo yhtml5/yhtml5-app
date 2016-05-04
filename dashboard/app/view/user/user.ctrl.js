@@ -5,69 +5,30 @@
  */
 angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate'])
 	.controller('yhtml5.user', function($scope, $uibModal) {
+		$scope.userPersonFormEnabled = true
+		$scope.userPersonUpdate = true
+		$scope.userPersonSave = true
+		$scope.userPersonFormTotal = function() {
+			$scope.userPersonFormEnabled = !$scope.userPersonFormEnabled
+			$scope.userPersonUpdate = false
+			$scope.userPersonSave = false
+		}
 		$scope.animationsEnabled = true;
-		$scope.userResetOpen = function(size) {
+		$scope.userPersonFormSave = function(size) {
+			$scope.userPersonFormEnabled = true
+			$scope.userPersonUpdate = true
+			$scope.userPersonSave = true
 			var modalInstance = $uibModal.open({
 				animation: $scope.animationsEnabled,
-				templateUrl: 'userReset.html',
-				controller: 'appSettingCanalResetCtrl',
-				size: size
-			})
-		}
-		$scope.appsettingCanalCreateOpen = function(size) {
-			var modalInstance = $uibModal.open({
-				animation: $scope.animationsEnabled,
-				templateUrl: 'appsettingCanalCreate.html',
-				controller: 'appsettingCanalCreateCtrl',
-				size: size
-			})
-		}
-		$scope.appsettingChannelAgreementOpen = function(size) {
-			var modalInstance = $uibModal.open({
-				animation: $scope.animationsEnabled,
-				templateUrl: 'appsettingChannelAgreement.html',
-				controller: 'appsettingChannelAgreementCtrl',
-				size: size
-			})
-		}
-		$scope.appsettingChannelRechanrgecardOpen = function(size) {
-			var modalInstance = $uibModal.open({
-				animation: $scope.animationsEnabled,
-				templateUrl: 'appsettingChannelRechanrgecard.html',
-				controller: 'appsettingChannelRechanrgecardCtrl',
-				size: size
-			})
-		}
-		$scope.appsettingChannelPointcardOpen = function(size) {
-			var modalInstance = $uibModal.open({
-				animation: $scope.animationsEnabled,
-				templateUrl: 'appsettingChannelPointcard.html',
-				controller: 'appsettingChannelPointcardCtrl',
+				templateUrl: 'noteSimple.html',
+				controller: 'userPersonNoteSimpleCtrl',
 				size: size
 			})
 		}
 	})
-	.controller('appsettingCanalResetCtrl', function($scope, $uibModalInstance) {
-		$scope.cancel = function() {
-			$uibModalInstance.dismiss('cancel');
-		}
-	})
-	.controller('appsettingCanalCreateCtrl', function($scope, $uibModalInstance) {
-		$scope.cancel = function() {
-			$uibModalInstance.dismiss('cancel');
-		}
-	})
-	.controller('appsettingChannelAgreementCtrl', function($scope, $uibModalInstance) {
-		$scope.cancel = function() {
-			$uibModalInstance.dismiss('cancel');
-		}
-	})
-	.controller('appsettingChannelRechanrgecardCtrl', function($scope, $uibModalInstance) {
-		$scope.cancel = function() {
-			$uibModalInstance.dismiss('cancel');
-		}
-	})
-	.controller('appsettingChannelPointcardCtrl', function($scope, $uibModalInstance) {
+	.controller('userPersonNoteSimpleCtrl', function($scope, $uibModalInstance) {
+		$scope.text = "资料修改成功，信息正在审核中，请耐心等候！"
+		$scope.isInfo = true
 		$scope.cancel = function() {
 			$uibModalInstance.dismiss('cancel');
 		}
