@@ -1,0 +1,36 @@
+{
+	"resultCode": 0,
+	"errMsg": "",
+	"userId": "yhtml5",
+	"userApps": [
+		{
+			"appName": "测试应用1",
+			"totalMoneyNum": "1234",
+			"userPayNum": "111",
+			"appIcon": "icon-android",
+			"todayMoneyNum": "1,021,756.50",
+			"todayOrderNum": "11112"
+		}, {
+			"appName": "测试应用2",
+			"totalMoneyNum": "2345",
+			"userPayNum": "222",
+			"appIcon": "icon-pc",
+			"todayMoneyNum": "2,222,222",
+			"todayOrderNum": "2222"
+		}, {
+			"appName": "测试应用3",
+			"totalMoneyNum": "4567",
+			"userPayNum": "333",
+			"appIcon": "icon-h501",
+			"todayMoneyNum": "3,333,333.30",
+			"todayOrderNum": "3333"
+		}, {
+			"appName": "测试应用4",
+			"totalMoneyNum": "7891",
+			"userPayNum": "444",
+			"appIcon": "icon-ios",
+			"todayMoneyNum": "4,444,444.40",
+			"todayOrderNum": "4444"
+		}
+	]
+} 

@@ -1,6 +1,6 @@
 'use strict';
 /*
- * @require ../../app.js
+ * @require app.js
  *
  */
 angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate'])
