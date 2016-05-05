@@ -7,8 +7,9 @@
  *              Do something awesome and have fun !
  *==========================================================================================*/
 
-
 /*
+ * @require ../../bower_components/html5-boilerplate/dist/css/normalize.css
+ * @require ../../bower_components/html5-boilerplate/dist/css/main.css
  * @require ../../bower_components/bootstrap/dist/css/bootstrap.css
  * @require ../iconfont/iconfont.css
  *
