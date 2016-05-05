@@ -22,7 +22,7 @@ angular.module('yhtml5.appList', ['ui.bootstrap', 'ngAnimate'])
             $scope.animationsEnabled = !$scope.animationsEnabled;
         };
         //get json
-        $http.get(__url('../../server/init.json'))
+        $http.get(__uri('../../server/init.json'))
             .success(function(response) {
                 $scope.userApps = response.userApps //$scope.names 为一个数组
             })
