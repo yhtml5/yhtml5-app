@@ -44,13 +44,14 @@ fis.media('dev')
     })
     .match('{/static/**,/bower_components/**,/server/**,/view/**}', {
         domain: '.',
-    });
-/*************************local模板*****************************/
-fis.media('local')
+    })
+    /*************************test模板*****************************/
+fis.media('test')
     .set("project.ignore", [
         '**/**.test.js',
         '*.psd',
         '.git/**',
+        'fis-conf.*',
         '/components/**',
         '/bower_components/**'
     ])
@@ -60,9 +61,25 @@ fis.media('local')
             useInlineMap: true,
         })
     })
+    .match('::package', {
+        packager: fis.plugin('map'),
+        spriter: fis.plugin('csssprites', {
+            layout: 'matrix',
+            margin: '15'
+        })
+    })
+    .match('*.css', {
+        optimizer: fis.plugin('clean-css', {
+            'keepBreaks': false,
+            useSprite: true
+        })
+    })
     .match('{/components/**,/view/**}', {
         isMod: true,
         useSameNameRequire: true,
+    })
+    .match('{/app.js,/ctrl.js,/bower_components/**,components/**,}', {
+        release: '/others/$0'
     })
     .match('{/components/**/(*.gif),/components/**/(*.png)}', {
         release: 'static/img/$1',
@@ -71,16 +88,6 @@ fis.media('local')
     .match('/components/**/(iconfont.*)', {
         release: 'static/iconfont/$1',
         url: 'iconfont/$1'
-    })
-    .match('{*.log,map.json,fis-conf.*,}', {
-        release: '/config/$0'
-    })
-    .match('::package', {
-        packager: fis.plugin('map'),
-        spriter: fis.plugin('csssprites', {
-            layout: 'matrix',
-            margin: '15'
-        })
     })
     .match('{/app.js,/ctrl.js,/components/**/*.js,/bower_components/**/*.js,/view/**/*.js}', {
         packTo: '/static/yhtml5.js',
@@ -97,7 +104,7 @@ fis.media('local')
     .match('/components/**', {
         packOrder: 3
     })
-    .match('/static/{*.js,*.css}', {
+    .match('{/static/**,**.{gif,png}}', {
         useHash: true
     })
     .match('{/static/**,/bower_components/**,/server/**,/view/**}', {
@@ -113,41 +120,6 @@ fis.media('cdn')
                 expect: ['require', 'define', 'some string']
             }
         })
-    })
-    .match('*.css', {
-        optimizer: fis.plugin('clean-css', {
-            'keepBreaks': false,
-            useSprite: true
-        })
-    })
-    .match('*.{jpg,png}', {
-        useHash: true
-    })
-    .match('::package', {
-        packager: fis.plugin('map'),
-        spriter: fis.plugin('csssprites', {
-            layout: 'matrix',
-            margin: '15'
-        })
-    })
-    .match('::package', {
-        packager: fis.plugin('map'),
-        spriter: fis.plugin('csssprites', {
-            layout: 'matrix',
-            margin: '15'
-        })
-    })
-    .match('*.js', {
-        packTo: '/static/others.js'
-    })
-    .match('*.css', {
-        packTo: '/staitc/others.css'
-    })
-    .match('/components/**/*.js', {
-        packTo: '/static/yhtml5.js'
-    })
-    .match('/components/**/*.css', {
-        packTo: '/static/yhtml5.css'
     })
     //去掉依赖声明文本
     .match('*.html', {

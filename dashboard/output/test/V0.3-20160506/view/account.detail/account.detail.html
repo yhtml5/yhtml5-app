@@ -1,0 +1,177 @@
+<div class="panel panel-default" ng-controller="yhtml5.account">
+	<div class="panel-heading">
+		<div class="row">
+			<div class="col-xs-12 col-sm-2">
+				<h3>账户详情</h3>
+			</div>
+			<div class="col-xs-6 col-sm-2 y-mt15">
+				<div class="btn-group" uib-dropdown>
+					<button id="single-button" type="button" class="btn y-btn-blue" uib-dropdown-toggle ng-disabled="disabled">
+                         选择日期 <span class="caret"></span>
+                    </button>
+					<ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+						<li role="menuitem"><a href="#">今日</a></li>
+						<li role="menuitem"><a href="#">昨日</a></li>
+						<li role="menuitem"><a href="#">近7日</a></li>
+						<li role="menuitem"><a href="#">近30日</a></li>
+						<li class="divider"></li>
+						<li role="menuitem"><a href="#">全部</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-xs-6 col-sm-3 y-mt15">
+				<div class="btn-group" uib-dropdown>
+					<button id="single-button" type="button" class="btn y-btn-blue" uib-dropdown-toggle ng-disabled="disabled">
+                         资金流向 <span class="caret"></span>
+                    </button>
+					<ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+						<li role="menuitem"><a href="#">全部</a></li>
+						<li role="menuitem"><a href="#">收入</a></li>
+						<li role="menuitem"><a href="#">支出</a></li>
+					</ul>
+				</div>
+				<div class="btn-group" uib-dropdown>
+					<button id="single-button" type="button" class="btn y-btn-blue" uib-dropdown-toggle ng-disabled="disabled">
+                         交易类型 <span class="caret"></span>
+                    </button>
+					<ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+						<li role="menuitem"><a href="#">全部</a></li>
+						<li role="menuitem"><a href="#">提现</a></li>
+						<li role="menuitem"><a href="#">代发</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-xs-6 col-sm-3 y-mt6">
+				<form class="navbar-form pull-right" role="search" action="" method="">
+					<div class="input-group y-header-search  hidden-sm">
+						<input type="text" class="form-control" id="" value="" placeholder="流水号...">
+						<span class="input-group-btn">
+						<button class="btn btn-default" type="submit"><i class="iconfont">&#xe611;</i></button>
+					</span>
+					</div>
+				</form>
+			</div>
+			<div class="col-xs-6 col-sm-2 y-mt15">
+				<button class="btn y-btn-blue">查询</button>
+				<button class="btn y-btn-blue">导出</button>
+			</div>
+		</div>
+		<!--row-->
+	</div>
+	<div class="panel-body">
+		<div class="table-responsive">
+			<table class="table table-striped table-hover table-condensed table-bordered y-table-md">
+				<thead>
+					<tr>
+						<th>交易时间</th>
+						<th>流水号</th>
+						<th>交易类型</th>
+						<th>收入</th>
+						<th>支出</th>
+						<th>账户余额</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="data in accountDetail">
+						<td ng-bind="data.completionTime">Data</td>
+						<td ng-bind="data.num">Data</td>
+						<td ng-bind="data.class">Data</td>
+						<td ng-bind="data.income" class="text-success">Data</td>
+						<td ng-bind="data.expense" class="text-danger">Data</td>
+						<td ng-bind="data.balance">Data</td>
+						<td>
+							<button type="button" class="btn btn-link" ng-click="accountDetailMoreOpen()">详情</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!--y-dashboard-payment-table-->
+		<p class="text-info visible-xs">左右滑动显示完整的表格内容</p>
+		<div class="text-center">
+			<ul class="pagination">
+				<li><a href="#">&laquo;&nbsp;上一页</a></li>
+				<li class="active"><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">...</a></li>
+				<li><a href="#">下一页&nbsp;&raquo;</a></li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/ng-template" id="accountDetailMore.html">
+		<div class="modal-header y-modal-header-default">
+			<h3 class="y-mg0">交易详情
+			    <button type="button" class="close" ng-click="cancel()">
+			        <span aria-hidden="true">&times;</span>
+		        </button>
+			</h3>
+		</div>
+		<div class="modal-body">
+			<div class="table-responsive">
+				<table class="table table-striped table-hover table-condensed table-bordered">
+					<tbody>
+						<tr>
+							<td>创建时间</td>
+							<td>Data</td>
+							<td>完成时间</td>
+							<td>Data</td>
+						</tr>
+						<tr>
+							<td>流水号</td>
+							<td>Data</td>
+							<td>商户订单号</td>
+							<td>Data</td>
+						</tr>
+						<tr>
+							<td>支付状态</td>
+							<td>Data</td>
+							<td>交易类型</td>
+							<td>Data</td>
+						</tr>
+						<tr>
+							<td>金额</td>
+							<td>Data</td>
+							<td>支付方式</td>
+							<td>Data</td>
+						</tr>
+						<tr>
+							<td>备注</td>
+							<td colspan="3">Data</td>
+						</tr>
+						<!--<tr>
+							<td>创建时间</td>
+							<td ng-bind="accountDetail.createTime">Data</td>
+							<td>完成时间</td>
+							<td ng-bind="accountDetail.completionTime ">Data</td>
+						</tr>
+						<tr>
+							<td>流水号</td>
+							<td ng-bind="accountDetail.num">Data</td>
+							<td>商户订单号</td>
+							<td ng-bind="accountDetail.orderNum">Data</td>
+						</tr>
+						<tr>
+							<td>支付状态</td>
+							<td ng-bind="accountDetail.state">Data</td>
+							<td>交易类型</td>
+							<td ng-bind="accountDetail.class">Data</td>
+						</tr>
+						<tr>
+							<td>金额</td>
+							<td ng-bind="accountDetail.money">Data</td>
+							<td>支付方式</td>
+							<td ng-bind="accountDetail.payType">Data</td>
+						</tr>
+						<tr>
+							<td>备注</td>
+							<td ng-bind="accountDetail.note">Data</td>
+						</tr>-->
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</script>
+</div>
