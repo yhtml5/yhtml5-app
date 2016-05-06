@@ -13,7 +13,7 @@
   * 开发业务组件模板：account、canal、dashboard、helpCenter、panel...
   * 输出java版本 V0.1-20160407 包含VM模板文件
   * 输出beta版本 V0.1-20160408 Angular测试版本
-  
+
 ### V0.3-20160411
   * 应用AngularJS、AngularUI到项目中
   * 使用前端自动化测试工具
@@ -25,9 +25,10 @@
   * 逐渐去掉jquery依赖，jquery是非常好用的操作dom的工具，但是这里和angular重复了，而且不需要应用
   * 创建angular项目，项目向angular版本迁移
   * 从第一版简单的Jquery 操作DOM模式，迁到第三版的Angular MVC开发模式
-  
+
 
 ### V1.0 Beta
+  * 更新阿里图标
 
 
 
