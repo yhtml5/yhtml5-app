@@ -20,6 +20,11 @@
  * === base ===
  */
 
+body {
+    /*background-color: #e6e6e6;*/
+    font-family: "microsoft yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .y-ht600 {
     height: 600px;
 }
@@ -49,14 +54,40 @@
 }
 
 .y-bg-transition-info {
-    /*animation: 10s ease 0s normal none infinite running bg-generator;*/
-    /*background: rgba(0, 0, 0, 0) linear-gradient(223deg, #9ce8dd, #a993da, #f0cb54, #6d93a3) repeat scroll 0 0 / 600% 600%;*/
-    background-color: #9ce8dd;
-    height: 110%;
-    left: -5%;
-    position: absolute;
-    top: -5%;
-    transition: -webkit-filter 0.2s ease 0s, background-image 0.2s ease 0s;
+    background-color: #F7F9FA;
     width: 110%;
+    height: 110%;
+    position: absolute;
+    left: -5%;
+    top: -5%;
     z-index: -1;
+    transition: -webkit-filter 0.2s ease, background-image 0.2s ease;
+    background: linear-gradient(223deg, #1c81df, #e48ba4, #37b5e4, #8dd088);
+    background-size: 600% 600%;
+    -webkit-animation: bg-generator 50s ease infinite;
+    animation: bg-generator 20s ease infinite;
+}
+
+@keyframes bg-generator {
+    0% {
+        background-position: 0% 84%
+    }
+    50% {
+        background-position: 100% 17%
+    }
+    100% {
+        background-position: 0% 84%
+    }
+}
+
+@-webkit-keyframes bg-generator {
+    0% {
+        background-position: 0% 84%
+    }
+    50% {
+        background-position: 100% 17%
+    }
+    100% {
+        background-position: 0% 84%
+    }
 }
