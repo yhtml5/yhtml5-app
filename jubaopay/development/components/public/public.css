@@ -7,10 +7,56 @@
  *              Do something awesome and have fun !
  *=============================================================================*/
 
+
 /*
  * @require ../../bower_components/html5-boilerplate/dist/css/normalize.css
  * @require ../../bower_components/html5-boilerplate/dist/css/main.css
  * @require ../../bower_components/bootstrap/dist/css/bootstrap.css
  * @require ../iconfont/iconfont.css
- *
  */
+
+
+/*
+ * === base ===
+ */
+
+.y-ht600 {
+    height: 600px;
+}
+
+.y-ht1200 {
+    height: 1200px;
+}
+
+.y-mt20 {
+    margin-top: 20px;
+}
+
+.y-mt120 {
+    margin-top: 120px;
+}
+
+
+/*
+ * === costom ===
+ */
+
+.y-bg-transition {
+    overflow: hidden;
+    padding: 2em 2em 1em;
+    position: relative;
+    transition: padding 0.2s ease 0s;
+}
+
+.y-bg-transition-info {
+    /*animation: 10s ease 0s normal none infinite running bg-generator;*/
+    /*background: rgba(0, 0, 0, 0) linear-gradient(223deg, #9ce8dd, #a993da, #f0cb54, #6d93a3) repeat scroll 0 0 / 600% 600%;*/
+    background-color: #9ce8dd;
+    height: 110%;
+    left: -5%;
+    position: absolute;
+    top: -5%;
+    transition: -webkit-filter 0.2s ease 0s, background-image 0.2s ease 0s;
+    width: 110%;
+    z-index: -1;
+}

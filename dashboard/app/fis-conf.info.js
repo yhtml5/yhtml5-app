@@ -37,3 +37,8 @@ fis.match('/components/**/*.js', {
         type: 'commonjs'
     })
 });
+// 处理依赖关系，加载依赖资源,只有被依赖才能加载，
+postpackager: fis.plugin('loader', {
+    resourceType: 'commonJs',
+    useInlineMap: true,
+})

@@ -4,22 +4,27 @@
 <!--[if IE 8]>     <html lang="en" ng-app="app" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html lang="zh-CN" class="no-js">
-	<!--<![endif]-->
+    <!--<![endif]-->
 
-	<head>
-		<link rel="import" href="components/head/head.html?__inline">
-	</head>
+    <head>
+        <link rel="import" href="components/head/head.html?__inline">
+    </head>
 
-	<body class="y-bg-ebebeb">
-		<!--[if lt IE 7]>
+    <body class="y-ht600">
+        <!--[if lt IE 7]>
           <p class="browsehappy">您在使用<strong>上个世纪</strong>浏览器.
           	请<a href="http://browsehappy.com/">升级您的浏览器</a>获取更好的体验</p>
         <![endif]-->
-		<header class="y-header" ui-view="nav"></header>
-		<div ui-view="content"></div>
-		<!--<div class="container y-body y-mt-30" ui-view="content"></div>-->
+        <header>
+            <link rel="import" href="components/nav/nav.html?__inline">
+            <link rel="import" href="components/slides/slides.html?__inline">
+        </header>
+        <div class="">
 
-		<script src="app.js"></script>
-	</body>
+        </div>
+        <footer>
+            <link rel="import" href="components/footer/footer.html?__inline">
+        </footer>
+    </body>
 
 </html>
