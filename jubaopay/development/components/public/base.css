@@ -1,0 +1,60 @@
+/*
+ * @require public.css
+ */
+
+
+/*
+ * === base ===
+ */
+
+body {
+    /*background-color: #e6e6e6;*/
+    font-family: "microsoft yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.y-color-white {
+    color: #fff;
+}
+
+.y-ht660 {
+    height: 660px;
+}
+
+.y-ht1200 {
+    height: 1200px;
+}
+.y-mt-600 {
+    margin-top: -600px;
+}
+
+.y-mt-20 {
+    margin-top: -20px;
+}
+
+.y-mt-15 {
+    margin-top: -15px;
+}
+
+.y-mt-10 {
+    margin-top: -10px;
+}
+
+.y-mt20 {
+    margin-top: 20px;
+}
+
+.y-mt40 {
+    margin-top: 40px;
+}
+
+.y-mt120 {
+    margin-top: 120px;
+}
+
+.y-wt60 {
+    width: 60%;
+}
+
+.y-wt80 {
+    width: 80%;
+}
