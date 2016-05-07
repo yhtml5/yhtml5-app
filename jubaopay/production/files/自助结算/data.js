@@ -1,0 +1,186 @@
+﻿$axure.loadCurrentPage({
+  "url":"自助结算.html",
+  "generationDate":new Date(1462525707658.27),
+  "isCanvasEnabled":false,
+  "variables":["OnLoadVariable"],
+  "page":{
+    "packageId":"616975cee965431bb111d43a68613822",
+    "type":"Axure:Page",
+    "name":"自助结算",
+    "notes":{
+},
+    "style":{
+      "baseStyle":"627587b6038d43cca051c114ac41ad32",
+      "pageAlignment":"near",
+      "fill":{
+        "fillType":"solid",
+        "color":0xFFFFFFFF},
+      "image":null,
+      "imageHorizontalAlignment":"near",
+      "imageVerticalAlignment":"near",
+      "imageRepeat":"auto",
+      "favicon":null,
+      "sketchFactor":"0",
+      "colorStyle":"appliedColor",
+      "fontName":"应用字体",
+      "borderWidth":"0"},
+    "adaptiveStyles":{
+},
+    "interactionMap":{
+},
+    "diagram":{
+      "objects":[{
+          "id":"29bb9ddecd7d4010a0d96ce0df0c1a4c",
+          "label":"",
+          "type":"imageBox",
+          "styleType":"imageBox",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":80,
+              "y":150},
+            "size":{
+              "width":903,
+              "height":138}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"d1c4c9d97c844fee967bdc05f591b73c",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":80,
+                  "y":150},
+                "size":{
+                  "width":903,
+                  "height":138}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/自助结算/u0.png"}},
+{
+          "id":"0318f5664e6b43ed954d7219e51fb133",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"paragraph",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":100,
+              "y":34},
+            "size":{
+              "width":579,
+              "height":32}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"ade08882b8cb4c0080f3e36c67d291ee",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":100,
+                  "y":34},
+                "size":{
+                  "width":579,
+                  "height":32}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"41570424a9694902b53cf3333baaad27",
+          "label":"",
+          "type":"imageBox",
+          "styleType":"imageBox",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":80,
+              "y":350},
+            "size":{
+              "width":265,
+              "height":108}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"5e340bbfd6c14bd8a16902ad4d5b2660",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":80,
+                  "y":350},
+                "size":{
+                  "width":265,
+                  "height":108}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/自助结算/u4.png"}},
+{
+          "id":"f23bbe7aec324c0d8b98cf1092ed5b8e",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "horizontalAlignment":"right",
+            "location":{
+              "x":92,
+              "y":404},
+            "size":{
+              "width":148,
+              "height":48},
+            "borderWidth":"-1"},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"97367b64458549a2938833f13792d104",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "horizontalAlignment":"right",
+                "location":{
+                  "x":92,
+                  "y":404},
+                "size":{
+                  "width":148,
+                  "height":48},
+                "borderWidth":"-1"},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/自助结算/u6.png"}}]}},
+  "masters":{
+},
+  "objectPaths":{
+    "29bb9ddecd7d4010a0d96ce0df0c1a4c":{
+      "scriptId":"u0"},
+    "d1c4c9d97c844fee967bdc05f591b73c":{
+      "scriptId":"u1"},
+    "0318f5664e6b43ed954d7219e51fb133":{
+      "scriptId":"u2"},
+    "ade08882b8cb4c0080f3e36c67d291ee":{
+      "scriptId":"u3"},
+    "41570424a9694902b53cf3333baaad27":{
+      "scriptId":"u4"},
+    "5e340bbfd6c14bd8a16902ad4d5b2660":{
+      "scriptId":"u5"},
+    "f23bbe7aec324c0d8b98cf1092ed5b8e":{
+      "scriptId":"u6"},
+    "97367b64458549a2938833f13792d104":{
+      "scriptId":"u7"}}});
