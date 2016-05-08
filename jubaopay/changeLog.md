@@ -1,13 +1,12 @@
 # 更新日志
 
 ### 导航
-- [FWDB V0.1](#V0.1-20160407)
-- [FWDB V0.3](#V0.3-20160411)
+- [jubaopay V0.1](#V0.1-20160407)
 
 
-### V0.1-20160407
-  * 安装nodejs、npm，安装前端自动化构建工具FIS3
-  * 配置fis-conf.js,构建项目目录
+### V0.1-20160508
+  * 新建jubaopay项目，安装bower包管理器，
+  * 配置bower.json,分析依赖关系，构建项目所需要的组件
   * 安装bootstrap、Jquery、ali-iconfont
   * 开发基础组件模块：head、nav、header、public、undeveloped、footer...
   * 开发业务组件模板：account、canal、dashboard、helpCenter、panel...
