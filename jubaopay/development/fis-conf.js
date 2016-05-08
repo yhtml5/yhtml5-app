@@ -3,6 +3,13 @@ fis.set('project.md5Length', 8);
 fis.set('project.md5Connector ', '_');
 
 fis.media('dev')
+    .set("project.ignore", [
+        '**/**.test.js',
+        '*.psd',
+        '.git/**',
+        '/components/**',
+        '/bower_components/**'
+    ])
     .match('::package', {
         postpackager: fis.plugin('loader', {
             resourceType: 'commonJs',
@@ -13,10 +20,21 @@ fis.media('dev')
         isMod: true,
         useSameNameRequire: true,
     })
-    .match('{/components/**/*.css,/view/**/*.css}', {
+    .match('{/components/**/(*.gif),/components/**/(*.png)}', {
+        release: '/static/img/$1',
+    })
+    .match('/components/**/(iconfont.*)', {
+        release: '/static/iconfont/$1',
+    })
+    .match('/components/**/*.css', {
         packTo: '/static/yhtml5.css',
     })
-
+    .match('/components/**/*.js', {
+        packTo: '/static/yhtml5.js',
+    })
+    .match('{/static/**,*.png,*.jpg,iconfont.*}', {
+        useHash: true
+    })
 
 ///**************************dev******************************/
 //fis.media('dev')

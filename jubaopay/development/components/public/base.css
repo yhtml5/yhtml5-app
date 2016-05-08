@@ -2,13 +2,28 @@
  * @require public.css
  */
 
-
 /*
  * === base ===
  */
 
+.y-bgc666 {
+    background-color: #666;
+}
+
 .y-color-white {
     color: #fff;
+}
+
+.y-color-blue {
+    color: #099fdd;
+}
+
+.y-fs24 {
+    font-size: 24px;
+}
+
+.y-fs36 {
+    font-size: 36px;
 }
 
 .y-ht660 {
@@ -18,8 +33,21 @@
 .y-ht1200 {
     height: 1200px;
 }
-.y-mt-600 {
-    margin-top: -600px;
+
+.y-lh30 {
+    line-height: 30px;
+}
+
+.y-mb20 {
+    margin-bottom: 20px;
+}
+
+.y-mb40 {
+    margin-bottom: 40px;
+}
+
+.y-mt-40 {
+    margin-top: -40px;
 }
 
 .y-mt-20 {
@@ -42,12 +70,24 @@
     margin-top: 40px;
 }
 
+.y-mt60 {
+    margin-top: 60px;
+}
+
+.y-mt100 {
+    margin-top: 100px;
+}
+
 .y-mt120 {
     margin-top: 120px;
 }
 
 .y-wt60 {
     width: 60%;
+}
+
+.y-wt70 {
+    width: 70%;
 }
 
 .y-wt80 {
