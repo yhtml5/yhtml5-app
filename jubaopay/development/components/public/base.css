@@ -2,6 +2,7 @@
  * @require public.css
  */
 
+
 /*
  * === base ===
  */
@@ -62,6 +63,10 @@
     margin-top: -10px;
 }
 
+.y-mt14 {
+    margin-top: 14px;
+}
+
 .y-mt20 {
     margin-top: 20px;
 }
@@ -72,6 +77,10 @@
 
 .y-mt60 {
     margin-top: 60px;
+}
+
+.y-mt80 {
+    margin-top: 80px;
 }
 
 .y-mt100 {

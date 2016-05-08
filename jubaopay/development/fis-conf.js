@@ -16,10 +16,6 @@ fis.media('dev')
             useInlineMap: true,
         })
     })
-    .match('{/components/**,/view/**}', {
-        isMod: true,
-        useSameNameRequire: true,
-    })
     .match('{/components/**/(*.gif),/components/**/(*.png)}', {
         release: '/static/img/$1',
     })

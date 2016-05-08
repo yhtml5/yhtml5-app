@@ -1,18 +1,17 @@
 {
-  "name": "jubaopay",
-  "description": "a websit design by bootstrap",
-  "version": "0.1.1",
-  "homepage": "yhtml5.com",
-  "license": "MIT",
-  "private": true,
-  "dependencies": {
-    "jquery": "~1.x.x",
-    "bootstrap": "^3.3.6",
-    "html5-boilerplate": "^5.3.0",
-    "fullpage.js": "^2.7.9"
-  },
-  "authors": [
-    "yhtml5"
-  ],
-  "main": ""
+    "name": "jubaopay",
+    "authors": "yhtml5",
+    "description": "a websit design by bootstrap",
+    "version": "0.1.1",
+    "homepage": "yhtml5.com",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+        "jquery": "~1.x.x",
+        "bootstrap": "^3.3.6",
+        "html5-boilerplate": "^5.3.0",
+        "fullpage.js": "^2.7.9"
+    },
+
+    "main": ""
 }
