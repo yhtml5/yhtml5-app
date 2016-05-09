@@ -5,26 +5,26 @@ angular.module('controllers', ['ui.bootstrap', 'ngAnimate'])
         $scope.downloadRecord = [{
             "sdkName": "JAVA包",
             "sdkNote": "（PC支付）",
-            "sdkClass": "icon-iconanzhuo"
+            "sdkClass": "icon-java"
         }, {
             "sdkName": ".NET包",
             "sdkNote": "（PC支付）",
-            "sdkClass": "icon-iconanzhuo"
+            "sdkClass": "icon-windows"
         }, {
             "sdkName": "PHP包",
             "sdkNote": "（PC支付）",
-            "sdkClass": "icon-iconanzhuo"
+            "sdkClass": "icon-php"
         }, {
-            "sdkName": "COCS2D包",
+            "sdkName": "COCS2D",
             "sdkNote": "（SDK开发包）",
-            "sdkClass": "icon-iconanzhuo"
+            "sdkClass": "icon-weibiaoti4zhuanhuan"
         }, {
             "sdkName": "IOS包",
             "sdkNote": "（SDK开发包）",
-            "sdkClass": "icon-iconanzhuo"
+            "sdkClass": "icon-ios"
         }, {
-            "sdkName": "商户接入文档",
-            "sdkNote": "下载文档",
+            "sdkName": "商户文档",
+            "sdkNote": "下载接入文档",
             "sdkClass": "icon-iconanzhuo"
         }]
     })
