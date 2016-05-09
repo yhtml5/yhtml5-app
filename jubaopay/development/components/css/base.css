@@ -1,0 +1,114 @@
+/*
+ * === base ===
+ */
+
+.y-bgc666 {
+    background-color: #666;
+}
+
+.y-bgcf6 {
+    background-color: #f6f6f6;
+}
+
+.y-color-white {
+    color: #fff;
+}
+
+.y-color-blue {
+    color: #099fdd;
+}
+
+.y-fs24 {
+    font-size: 24px;
+}
+
+.y-fs36 {
+    font-size: 36px;
+}
+.y-fs50 {
+    font-size: 50px;
+}
+.y-ht660 {
+    height: 660px;
+}
+
+.y-ht1200 {
+    height: 1200px;
+}
+
+.y-lh30 {
+    line-height: 30px;
+}
+
+.y-mb20 {
+    margin-bottom: 20px;
+}
+
+.y-mb40 {
+    margin-bottom: 40px;
+}
+
+.y-mt-40 {
+    margin-top: -40px;
+}
+
+.y-mt-20 {
+    margin-top: -20px;
+}
+
+.y-mt-15 {
+    margin-top: -15px;
+}
+
+.y-mt-10 {
+    margin-top: -10px;
+}
+
+.y-mt14 {
+    margin-top: 14px;
+}
+
+.y-mt20 {
+    margin-top: 20px;
+}
+
+.y-mt40 {
+    margin-top: 40px;
+}
+
+.y-mt60 {
+    margin-top: 60px;
+}
+
+.y-mt80 {
+    margin-top: 80px;
+}
+
+.y-mt100 {
+    margin-top: 100px;
+}
+
+.y-mt120 {
+    margin-top: 120px;
+}
+
+.y-mt160 {
+    margin-top: 160px;
+}
+
+.y-pd-lg {
+    padding-top: 180px;
+    padding-bottom: 180px;
+}
+
+.y-wt60 {
+    width: 60%;
+}
+
+.y-wt70 {
+    width: 70%;
+}
+
+.y-wt80 {
+    width: 80%;
+}

@@ -1,7 +1,6 @@
 fis.set('project.name', 'yhtml5-fis3');
 fis.set('project.md5Length', 8);
 fis.set('project.md5Connector ', '_');
-
 fis.media('dev')
     .set("project.ignore", [
         '**/**.test.js',
@@ -16,22 +15,32 @@ fis.media('dev')
             useInlineMap: true,
         })
     })
+    .match('{/components/**,/bower_components/**}', {
+        release: '/dist/$0',
+    })
     .match('{/components/**/(*.gif),/components/**/(*.png)}', {
         release: '/static/img/$1',
     })
     .match('/components/**/(iconfont.*)', {
         release: '/static/iconfont/$1',
     })
-    .match('/components/**/*.css', {
+    .match('{/index.css,/components/**/*.css}', {
         packTo: '/static/yhtml5.css',
     })
-    .match('/components/**/*.js', {
+    .match('{/index.js,/components/**/*.js}', {
         packTo: '/static/yhtml5.js',
     })
     .match('{/static/**,*.png,*.jpg,iconfont.*}', {
         useHash: true
     })
-
+    /*************************test模板*****************************/
+fis.media('test')
+    .match('{/fis-conf.*,map.json}', {
+        release: false
+    })
+    .match('{/static/**,/bower_components/**,*.png,*.jpg,iconfont.*}', {
+        domain: '',
+    });
 ///**************************dev******************************/
 //fis.media('dev')
 //  .set("project.ignore", [
