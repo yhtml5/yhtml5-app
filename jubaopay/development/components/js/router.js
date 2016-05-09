@@ -28,10 +28,10 @@ angular.module('yhtml5', [
                 url: "/download",
                 views: {
                     "nav": {
-                        templateUrl: "view/nav/nav.html"
+                        templateUrl: "view/nav-blue/nav-blue.html"
                     },
                     "content": {
-                        templateUrl: ""
+                        templateUrl: "view/download/download.html"
                     },
                     "footer": {
                         templateUrl: "view/footer/footer.html"

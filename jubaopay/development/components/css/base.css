@@ -25,9 +25,15 @@
 .y-fs36 {
     font-size: 36px;
 }
+
 .y-fs50 {
     font-size: 50px;
 }
+
+.y-fs90 {
+    font-size: 90px;
+}
+
 .y-ht660 {
     height: 660px;
 }
@@ -46,6 +52,14 @@
 
 .y-mb40 {
     margin-bottom: 40px;
+}
+
+.y-mb60 {
+    margin-bottom: 60px;
+}
+
+.y-mb80 {
+    margin-bottom: 80px;
 }
 
 .y-mt-40 {
