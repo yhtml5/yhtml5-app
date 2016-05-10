@@ -13,6 +13,25 @@
     width: auto;
 }
 
+.y-nav-qq {
+    position: fixed;
+    top: 85%;
+    right: 1px;
+    height: 80px;
+    width: 160px;
+    background: url(qq-lg.png) no-repeat 0 0;
+    /*cursor: pointer;*/
+    -webkit-transition: right 2s;
+    -moz-transition: right 2s;
+    transition: right 2s;
+}
+
+.y-nav-qq :hover,
+.y-nav-qq :focus,
+{
+    right: 111px;
+}
+
 .navbar-transparent {}
 
 .navbar-transparent .navbar-brand {
@@ -125,7 +144,6 @@ fieldset[disabled] .navbar-transparent .btn-link:hover,
 fieldset[disabled] .navbar-transparent .btn-link:focus {
     color: #ccc;
 }
-
 
 .y-navbar-info {}
 

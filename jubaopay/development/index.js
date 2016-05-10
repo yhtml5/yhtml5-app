@@ -6,5 +6,6 @@
  * @require /bower_components/angular-ui-router/release/angular-ui-router.js
  * @require /components/js/router.js
  * @require /components/js/ctrl.js
+ * @require /components/js/tj.js
  *
  */

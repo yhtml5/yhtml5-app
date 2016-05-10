@@ -15,6 +15,9 @@ angular.module('yhtml5', [
                     "nav": {
                         templateUrl: "view/nav/nav.html"
                     },
+                    "nav-right": {
+                        templateUrl: "view/nav-right/nav-right.html"
+                    },
                     "content": {
                         templateUrl: "view/show/show.html"
                     },
