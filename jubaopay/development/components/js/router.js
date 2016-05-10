@@ -38,4 +38,48 @@ angular.module('yhtml5', [
                     }
                 }
             })
+            .state('production', {
+                url: "/production",
+                views: {
+                    "nav": {
+                        templateUrl: "view/nav-blue/nav-blue.html"
+                    },
+                    "content": {
+                        templateUrl: "view/production/production.html"
+                    },
+                    "footer": {
+                        templateUrl: "view/footer/footer.html"
+                    }
+                }
+            })
+            .state('production.accounting', {
+                url: "/accounting",
+                views: {
+                    "content": {
+                        templateUrl: "view/accounting/accounting.html"
+                    }
+                }
+            })
+            .state('production.credit', {
+                url: "/credit",
+                views: {
+                    "content": {
+                        templateUrl: "view/credit/credit.html"
+                    }
+                }
+            })
+            .state('cost', {
+                url: "/cost",
+                views: {
+                    "nav": {
+                        templateUrl: "view/nav-blue/nav-blue.html"
+                    },
+                    "content": {
+                        templateUrl: "view/cost/cost.html"
+                    },
+                    "footer": {
+                        templateUrl: "view/footer/footer.html"
+                    }
+                }
+            })
     })
