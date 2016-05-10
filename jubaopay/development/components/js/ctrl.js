@@ -3,29 +3,57 @@
 angular.module('controllers', ['ui.bootstrap', 'ngAnimate'])
     .controller('controllers', function($scope, $http, $uibModal) {
         $scope.downloadRecord = [{
-            "sdkName": "JAVA包",
-            "sdkNote": "（PC支付）",
-            "sdkClass": "icon-java"
+            "name": "JAVA包",
+            "note": "WAP支付",
+            "class": "icon-java",
+            "url":"http://img.jubaobar.cn/static/openpay-doc/java-wap-demo.zip"
         }, {
-            "sdkName": ".NET包",
-            "sdkNote": "（PC支付）",
-            "sdkClass": "icon-windows"
+            "name": "JAVA包",
+            "note": "PC端",
+            "class": "icon-java",
+            "url":"http://img.jubaobar.cn/static/openpay-doc/java-demo.zip"
         }, {
-            "sdkName": "PHP包",
-            "sdkNote": "（PC支付）",
-            "sdkClass": "icon-php"
+            "name": ".NET包",
+            "note": "WAP支付",
+            "class": "icon-windows",
+            "url":"http://img.jubaobar.cn/static/openpay-doc/aspx-wap-demo.zip"
+
+        },  {
+            "name": ".NET包",
+            "note": "PC端",
+            "class": "icon-windows",
+            "url":"http://img.jubaobar.cn/static/openpay-doc/aspx-demo.zip"
+
+        },{
+            "name": "PHP包",
+            "note": "WAP支付",
+            "class": "icon-php",
+            "url":"http://img.jubaobar.cn/static/openpay-doc/php-demo.zip"
         }, {
-            "sdkName": "COCS2D",
-            "sdkNote": "（SDK开发包）",
-            "sdkClass": "icon-weibiaoti4zhuanhuan"
+            "name": "PHP包",
+            "note": "PC端",
+            "class": "icon-php",
+            "url":"http://img.jubaobar.cn/static/openpay-doc/php-demo.zipp"
         }, {
-            "sdkName": "IOS包",
-            "sdkNote": "（SDK开发包）",
-            "sdkClass": "icon-ios"
+            "name": "COCS2D",
+            "note": "SDK开发包",
+            "class": "icon-weibiaoti4zhuanhuan",
+            "url":"http://img.jubaobar.cn/static/openpay-doc/cocos-demo.zip"
         }, {
-            "sdkName": "商户文档",
-            "sdkNote": "下载接入文档",
-            "sdkClass": "icon-iconanzhuo"
+            "name": "IOS包",
+            "note": "SDK开发包",
+            "class": "icon-ios",
+            "url":"http://img.jubaobar.cn/static/openpay-doc/ios_sdk.zip"
+        }, {
+            "name": "Andorid",
+            "note": "SDK开发包",
+            "class": "icon-ios",
+            "url":"http://img.jubaobar.cn/static/openpay-doc/new-sdk-demo.zip"
+        }, {
+            "name": "商户文档",
+            "note": "下载接入文档",
+            "class": "icon-iconanzhuo",
+            "url":"http://img.jubaobar.cn/static/openpay-doc/jubaopay-guide.pdf"
         }];
         $scope.paymentRecord = [{
             "name": "支付宝",
