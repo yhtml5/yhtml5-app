@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"删除提现记录.html",
-  "generationDate":new Date(1461745770499.35),
+  "generationDate":new Date(1462860697202.22),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -125,7 +125,7 @@
           "images":{
             "start~":"resources/images/transparent.gif",
             "end~":"resources/images/transparent.gif",
-            "line~":"images/批量复核_p2/u4_line.png"}},
+            "line~":"images/批量复核/u4_line.png"}},
 {
           "id":"6aeda5821b904da3893b53fe8f3a2cfa",
           "label":"",
@@ -172,7 +172,7 @@
                       "linkType":"current"}]}]}},
           "tabbable":true,
           "images":{
-            "normal~":"images/批量复核_p2/u5.png"}},
+            "normal~":"images/批量复核/u5.png"}},
 {
           "id":"d24d7dc66f8948f38f36621163e2419a",
           "label":"",
@@ -966,7 +966,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/不可修改提醒/u91.png"}},
+            "normal~":"images/不可修改提醒/u92.png"}},
 {
           "id":"43c23ab32f9a47d8ad7e3838656d04d7",
           "label":"",
@@ -1018,7 +1018,7 @@
           "images":{
             "start~":"resources/images/transparent.gif",
             "end~":"resources/images/transparent.gif",
-            "line~":"images/商户签约-提交成功提醒/u83_line.png"}},
+            "line~":"images/不可修改提醒/u96_line.png"}},
 {
           "id":"edd3d7c86f6442f2b7a5b25600ec1be5",
           "label":"",
@@ -1073,7 +1073,7 @@
                       "linkType":"current"}]}]}},
           "tabbable":true,
           "images":{
-            "normal~":"images/商户签约-提交成功提醒/u84.png"}},
+            "normal~":"images/不可修改提醒/u97.png"}},
 {
           "id":"a863f9b6539d4add9690ceda640a8c70",
           "label":"",
@@ -1163,7 +1163,7 @@
                       "linkType":"current"}]}]}},
           "tabbable":true,
           "images":{
-            "normal~":"images/商户签约-提交成功提醒/u84.png"}}]}},
+            "normal~":"images/不可修改提醒/u97.png"}}]}},
   "masters":{
 },
   "objectPaths":{

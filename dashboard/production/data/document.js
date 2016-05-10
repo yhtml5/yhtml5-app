@@ -25,54 +25,6 @@
         "type":"Wireframe",
         "url":"注册与登陆.html"},
 {
-        "pageName":"实名认证",
-        "type":"Folder",
-        "url":"",
-        "children":[{
-            "pageName":"商户管理-技术协议",
-            "type":"Wireframe",
-            "url":"商户管理-技术协议.html"},
-{
-            "pageName":"商户签约-基本信息（个人）",
-            "type":"Wireframe",
-            "url":"商户签约-基本信息（个人）.html"},
-{
-            "pageName":"商户签约-基本信息（图片上传）",
-            "type":"Wireframe",
-            "url":"商户签约-基本信息（图片上传）.html"},
-{
-            "pageName":"商户签约-基本信息（企业）",
-            "type":"Wireframe",
-            "url":"商户签约-基本信息（企业）.html"},
-{
-            "pageName":"商户签约-结算信息",
-            "type":"Wireframe",
-            "url":"商户签约-结算信息.html"},
-{
-            "pageName":"商户签约-提交成功提醒",
-            "type":"Wireframe",
-            "url":"商户签约-提交成功提醒.html"}]},
-{
-        "pageName":"首页",
-        "type":"Folder",
-        "url":"",
-        "children":[{
-            "pageName":"首页（控制台）",
-            "type":"Wireframe",
-            "url":"首页（控制台）.html"},
-{
-            "pageName":"应用添加（PC/H5）",
-            "type":"Wireframe",
-            "url":"应用添加（pc_h5）.html"},
-{
-            "pageName":"应用添加（android）",
-            "type":"Wireframe",
-            "url":"应用添加（android）.html"},
-{
-            "pageName":"应用添加（ios）",
-            "type":"Wireframe",
-            "url":"应用添加（ios）.html"}]},
-{
         "pageName":"我的账户",
         "type":"Folder",
         "url":"",
@@ -149,6 +101,54 @@
             "type":"Wireframe",
             "url":"技术协议.html"}]},
 {
+        "pageName":"实名认证",
+        "type":"Folder",
+        "url":"",
+        "children":[{
+            "pageName":"商户管理-技术协议",
+            "type":"Wireframe",
+            "url":"商户管理-技术协议.html"},
+{
+            "pageName":"商户签约-基本信息（个人）",
+            "type":"Wireframe",
+            "url":"商户签约-基本信息（个人）.html"},
+{
+            "pageName":"商户签约-基本信息（图片上传）",
+            "type":"Wireframe",
+            "url":"商户签约-基本信息（图片上传）.html"},
+{
+            "pageName":"商户签约-基本信息（企业）",
+            "type":"Wireframe",
+            "url":"商户签约-基本信息（企业）.html"},
+{
+            "pageName":"商户签约-结算信息",
+            "type":"Wireframe",
+            "url":"商户签约-结算信息.html"},
+{
+            "pageName":"商户签约-提交成功提醒",
+            "type":"Wireframe",
+            "url":"商户签约-提交成功提醒.html"}]},
+{
+        "pageName":"首页",
+        "type":"Folder",
+        "url":"",
+        "children":[{
+            "pageName":"首页",
+            "type":"Wireframe",
+            "url":"首页.html"},
+{
+            "pageName":"应用添加（PC/H5）",
+            "type":"Wireframe",
+            "url":"应用添加（pc_h5）.html"},
+{
+            "pageName":"应用添加（android）",
+            "type":"Wireframe",
+            "url":"应用添加（android）.html"},
+{
+            "pageName":"应用添加（ios）",
+            "type":"Wireframe",
+            "url":"应用添加（ios）.html"}]},
+{
         "pageName":"应用设置",
         "type":"Folder",
         "url":"",
@@ -169,21 +169,9 @@
             "type":"Wireframe",
             "url":"应用信息（ios）.html"},
 {
-            "pageName":"支付通道",
+            "pageName":"支持开通的通道显示",
             "type":"Wireframe",
-            "url":"支付通道.html",
-            "children":[{
-                "pageName":"点卡支付",
-                "type":"Wireframe",
-                "url":"点卡支付.html"},
-{
-                "pageName":"充值卡支付",
-                "type":"Wireframe",
-                "url":"充值卡支付.html"},
-{
-                "pageName":"支付宝协议",
-                "type":"Wireframe",
-                "url":"支付宝协议.html"}]},
+            "url":"支持开通的通道显示.html"},
 {
             "pageName":"技术对接（pc/wap）",
             "type":"Wireframe",
@@ -245,21 +233,21 @@
             "type":"Wireframe",
             "url":"提现.html"},
 {
-            "pageName":"代付 p2",
+            "pageName":"代付",
             "type":"Wireframe",
-            "url":"代付_p2.html"},
+            "url":"代付.html"},
 {
-            "pageName":"批量代付 p2",
+            "pageName":"批量代付",
             "type":"Wireframe",
-            "url":"批量代付_p2.html"},
+            "url":"批量代付.html"},
 {
             "pageName":"单笔复核",
             "type":"Wireframe",
             "url":"单笔复核.html"},
 {
-            "pageName":"批量复核 p2",
+            "pageName":"批量复核",
             "type":"Wireframe",
-            "url":"批量复核_p2.html"},
+            "url":"批量复核.html"},
 {
             "pageName":"删除提现记录",
             "type":"Wireframe",
@@ -273,7 +261,7 @@
             "type":"Wireframe",
             "url":"交易详情.html"}]},
 {
-        "pageName":"游戏分析（第二版做）",
+        "pageName":"游戏分析（下一版本做）",
         "type":"Folder",
         "url":"",
         "children":[{
@@ -303,7 +291,27 @@
 {
             "pageName":"游戏分析-渠道推广效果",
             "type":"Wireframe",
-            "url":"游戏分析-渠道推广效果.html"}]}]},
+            "url":"游戏分析-渠道推广效果.html"}]},
+{
+        "pageName":"回收箱",
+        "type":"Folder",
+        "url":"",
+        "children":[{
+            "pageName":"支付通道",
+            "type":"Wireframe",
+            "url":"支付通道.html",
+            "children":[{
+                "pageName":"点卡支付",
+                "type":"Wireframe",
+                "url":"点卡支付.html"},
+{
+                "pageName":"充值卡支付",
+                "type":"Wireframe",
+                "url":"充值卡支付.html"},
+{
+                "pageName":"支付宝协议",
+                "type":"Wireframe",
+                "url":"支付宝协议.html"}]}]}]},
   "globalVariables":{
     "onloadvariable":""},
   "defaultAdaptiveView":{

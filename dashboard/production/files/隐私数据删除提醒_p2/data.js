@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"隐私数据删除提醒_p2.html",
-  "generationDate":new Date(1461745755984.2),
+  "generationDate":new Date(1462860680362.76),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -74,7 +74,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/基本信息（个人呈现）/u66.png"}},
+            "normal~":"images/基本信息（个人呈现）/u67.png"}},
 {
           "id":"db67d30e7ddc487cbf816d0d1218f00d",
           "label":"",
@@ -107,7 +107,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/基本信息（个人呈现）/u68.png"}},
+            "normal~":"images/基本信息（个人呈现）/u69.png"}},
 {
           "id":"d0fa277a5e144467af313a11ea348be9",
           "label":"",
@@ -179,7 +179,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/隐私数据管理（订单数据）_p2/u36.png"}},
+            "normal~":"images/隐私数据管理（订单数据）_p2/u37.png"}},
 {
           "id":"ecd70a2bd5b24354b073a6006e26d129",
           "label":"",
@@ -262,7 +262,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/隐私数据管理（订单数据）_p2/u41.png"}},
+            "normal~":"images/隐私数据管理（订单数据）_p2/u42.png"}},
 {
           "id":"98a1a6f70e744ab487bfbc058cc29a7b",
           "label":"",
@@ -295,7 +295,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/隐私数据删除确认_p2/u43.png"}},
+            "normal~":"images/隐私数据删除确认_p2/u44.png"}},
 {
           "id":"97ca3cd63c77438eba4bc68cffff9862",
           "label":"",
@@ -328,7 +328,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/隐私数据管理（订单数据）_p2/u43.png"}},
+            "normal~":"images/隐私数据管理（订单数据）_p2/u44.png"}},
 {
           "id":"f092b75bd2ec477aae624ccf09e31e95",
           "label":"",
@@ -361,7 +361,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/隐私数据管理（订单数据）_p2/u45.png"}},
+            "normal~":"images/隐私数据管理（订单数据）_p2/u46.png"}},
 {
           "id":"a5f2959ca51140c9986ea742af0fb39c",
           "label":"",
@@ -402,7 +402,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/不可修改提醒/u91.png"}},
+            "normal~":"images/不可修改提醒/u92.png"}},
 {
           "id":"d611449131cf4de4920768e50b3d26b1",
           "label":"",
@@ -435,7 +435,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-提交成功提醒/u81.png"}},
+            "normal~":"images/修改基本信息成功提示/u94.png"}},
 {
           "id":"35789591b1324990a1c88b9237e5ef76",
           "label":"",
@@ -454,7 +454,7 @@
           "images":{
             "start~":"resources/images/transparent.gif",
             "end~":"resources/images/transparent.gif",
-            "line~":"images/商户签约-提交成功提醒/u83_line.png"}},
+            "line~":"images/不可修改提醒/u96_line.png"}},
 {
           "id":"c7c2bf0d3f534caebd284c0067366e03",
           "label":"",
@@ -509,7 +509,7 @@
                       "linkType":"current"}]}]}},
           "tabbable":true,
           "images":{
-            "normal~":"images/商户签约-提交成功提醒/u84.png"}},
+            "normal~":"images/不可修改提醒/u97.png"}},
 {
           "id":"cd7675cd242e408583401cea69c3f7ec",
           "label":"",
@@ -635,12 +635,15 @@
             "styleType":"textBox",
             "visible":true,
             "style":{
-              "fontSize":"16px",
+              "foreGroundFill":{
+                "fillType":"solid",
+                "color":0xFFCCCCCC,
+                "opacity":1},
               "location":{
-                "x":855,
-                "y":41},
+                "x":869,
+                "y":39},
               "size":{
-                "width":203,
+                "width":191,
                 "height":33}},
             "adaptiveStyles":{
 }},
@@ -653,10 +656,10 @@
             "style":{
               "fontSize":"16px",
               "location":{
-                "x":1058,
+                "x":1060,
                 "y":41},
               "size":{
-                "width":38,
+                "width":36,
                 "height":33}},
             "adaptiveStyles":{
 },
@@ -670,10 +673,10 @@
                 "style":{
                   "fontSize":"16px",
                   "location":{
-                    "x":1058,
+                    "x":1060,
                     "y":41},
                   "size":{
-                    "width":38,
+                    "width":36,
                     "height":33}},
                 "adaptiveStyles":{
 }}],
@@ -770,10 +773,10 @@
                     "isNewIfGroup":false,
                     "actions":[{
                         "action":"linkWindow",
-                        "description":"在 当前窗口 打开 首页（控制台）",
+                        "description":"在 当前窗口 打开 首页",
                         "target":{
                           "targetType":"page",
-                          "url":"首页（控制台）.html",
+                          "url":"首页.html",
                           "includeVariables":true},
                         "linkType":"current"}]}]}},
             "tabbable":true,
@@ -787,7 +790,7 @@
             "visible":true,
             "style":{
               "location":{
-                "x":747,
+                "x":591,
                 "y":40},
               "size":{
                 "width":50,
@@ -803,7 +806,7 @@
                 "visible":true,
                 "style":{
                   "location":{
-                    "x":747,
+                    "x":591,
                     "y":40},
                   "size":{
                     "width":50,
@@ -1116,7 +1119,7 @@
             "visible":true,
             "style":{
               "location":{
-                "x":654,
+                "x":498,
                 "y":46},
               "size":{
                 "width":74,
@@ -1133,7 +1136,7 @@
                 "visible":true,
                 "style":{
                   "location":{
-                    "x":654,
+                    "x":498,
                     "y":46},
                   "size":{
                     "width":74,
@@ -1142,7 +1145,22 @@
                 "adaptiveStyles":{
 }}],
             "images":{
-              "normal~":"images/帮助/u66.png"}}]}}},
+              "normal~":"images/帮助/u66.png"}},
+{
+            "id":"976f1f9cbabf4bd0a87b103b2d7cdb24",
+            "label":"",
+            "type":"comboBox",
+            "styleType":"comboBox",
+            "visible":true,
+            "style":{
+              "location":{
+                "x":780,
+                "y":39},
+              "size":{
+                "width":89,
+                "height":31}},
+            "adaptiveStyles":{
+}}]}}},
   "objectPaths":{
     "ddbc506c4336476baf6b627cdb5b52ef":{
       "scriptId":"u0",
@@ -1199,60 +1217,62 @@
       "861b3c8487af4ee0950251a48b2c6762":{
         "scriptId":"u26"},
       "b711ccb25389454aa756897a2ff7e007":{
-        "scriptId":"u27"}},
+        "scriptId":"u27"},
+      "976f1f9cbabf4bd0a87b103b2d7cdb24":{
+        "scriptId":"u28"}},
     "9e2dde39601e4ed28a04f4652d1ef6fb":{
-      "scriptId":"u28"},
-    "c6f3f53095b242d7a5594ac81536a8a3":{
       "scriptId":"u29"},
-    "db67d30e7ddc487cbf816d0d1218f00d":{
+    "c6f3f53095b242d7a5594ac81536a8a3":{
       "scriptId":"u30"},
-    "bde1dd9f6d05432e82230ea9ced644f5":{
+    "db67d30e7ddc487cbf816d0d1218f00d":{
       "scriptId":"u31"},
-    "d0fa277a5e144467af313a11ea348be9":{
+    "bde1dd9f6d05432e82230ea9ced644f5":{
       "scriptId":"u32"},
-    "0ee464e6f5f748b2903f3a29b0d381d5":{
+    "d0fa277a5e144467af313a11ea348be9":{
       "scriptId":"u33"},
-    "3c24281051d34beeb31ccf72be561a9d":{
+    "0ee464e6f5f748b2903f3a29b0d381d5":{
       "scriptId":"u34"},
-    "0c073910dab74db3a3e65bdaf8d0f1d2":{
+    "3c24281051d34beeb31ccf72be561a9d":{
       "scriptId":"u35"},
-    "ecd70a2bd5b24354b073a6006e26d129":{
+    "0c073910dab74db3a3e65bdaf8d0f1d2":{
       "scriptId":"u36"},
-    "fd3480c95ac0432d93689b63a850e63e":{
+    "ecd70a2bd5b24354b073a6006e26d129":{
       "scriptId":"u37"},
-    "f76a0690d0e64600a578c8cc46261507":{
+    "fd3480c95ac0432d93689b63a850e63e":{
       "scriptId":"u38"},
-    "2af50576d94b4141a5f4a943dc529727":{
+    "f76a0690d0e64600a578c8cc46261507":{
       "scriptId":"u39"},
-    "2047dfe2c36e4acf9d91a065f9f21513":{
+    "2af50576d94b4141a5f4a943dc529727":{
       "scriptId":"u40"},
-    "98a1a6f70e744ab487bfbc058cc29a7b":{
+    "2047dfe2c36e4acf9d91a065f9f21513":{
       "scriptId":"u41"},
-    "b81ec39b83794c09bd164bbbf960c1ad":{
+    "98a1a6f70e744ab487bfbc058cc29a7b":{
       "scriptId":"u42"},
-    "97ca3cd63c77438eba4bc68cffff9862":{
+    "b81ec39b83794c09bd164bbbf960c1ad":{
       "scriptId":"u43"},
-    "7f01ee1aceba4754a682bb2d96b5acee":{
+    "97ca3cd63c77438eba4bc68cffff9862":{
       "scriptId":"u44"},
-    "f092b75bd2ec477aae624ccf09e31e95":{
+    "7f01ee1aceba4754a682bb2d96b5acee":{
       "scriptId":"u45"},
-    "e6cd149408c34a8192e96ae1707b7a83":{
+    "f092b75bd2ec477aae624ccf09e31e95":{
       "scriptId":"u46"},
-    "a5f2959ca51140c9986ea742af0fb39c":{
+    "e6cd149408c34a8192e96ae1707b7a83":{
       "scriptId":"u47"},
-    "0a7a2c0fcc0f4c1886aa3aa9a8bc8c19":{
+    "a5f2959ca51140c9986ea742af0fb39c":{
       "scriptId":"u48"},
-    "d611449131cf4de4920768e50b3d26b1":{
+    "0a7a2c0fcc0f4c1886aa3aa9a8bc8c19":{
       "scriptId":"u49"},
-    "164d58598cec4a52a1d5257538e04707":{
+    "d611449131cf4de4920768e50b3d26b1":{
       "scriptId":"u50"},
-    "35789591b1324990a1c88b9237e5ef76":{
+    "164d58598cec4a52a1d5257538e04707":{
       "scriptId":"u51"},
-    "c7c2bf0d3f534caebd284c0067366e03":{
+    "35789591b1324990a1c88b9237e5ef76":{
       "scriptId":"u52"},
-    "a03fa7fe2ec049bd8abdea3d519c92b1":{
+    "c7c2bf0d3f534caebd284c0067366e03":{
       "scriptId":"u53"},
-    "cd7675cd242e408583401cea69c3f7ec":{
+    "a03fa7fe2ec049bd8abdea3d519c92b1":{
       "scriptId":"u54"},
+    "cd7675cd242e408583401cea69c3f7ec":{
+      "scriptId":"u55"},
     "804fc5a0ca4649a0b6dcec283810a540":{
-      "scriptId":"u55"}}});
+      "scriptId":"u56"}}});

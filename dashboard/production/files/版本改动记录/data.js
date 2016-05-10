@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"版本改动记录.html",
-  "generationDate":new Date(1461745743551.07),
+  "generationDate":new Date(1462860672008.95),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -37,8 +37,8 @@
           "visible":true,
           "style":{
             "location":{
-              "x":170,
-              "y":140},
+              "x":200,
+              "y":291},
             "size":{
               "width":420,
               "height":300}},
@@ -53,8 +53,8 @@
               "visible":true,
               "style":{
                 "location":{
-                  "x":170,
-                  "y":140},
+                  "x":200,
+                  "y":291},
                 "size":{
                   "width":420,
                   "height":300}},
@@ -74,8 +74,8 @@
               "fillType":"solid",
               "color":0xFFCCCCCC},
             "location":{
-              "x":170,
-              "y":140},
+              "x":200,
+              "y":200},
             "size":{
               "width":420,
               "height":40}},
@@ -94,8 +94,8 @@
                   "fillType":"solid",
                   "color":0xFFCCCCCC},
                 "location":{
-                  "x":170,
-                  "y":140},
+                  "x":200,
+                  "y":200},
                 "size":{
                   "width":420,
                   "height":40}},
@@ -115,8 +115,8 @@
               "fillType":"solid",
               "color":0xFFCCCCCC},
             "location":{
-              "x":170,
-              "y":180},
+              "x":200,
+              "y":331},
             "size":{
               "width":90,
               "height":30}},
@@ -135,8 +135,8 @@
                   "fillType":"solid",
                   "color":0xFFCCCCCC},
                 "location":{
-                  "x":170,
-                  "y":180},
+                  "x":200,
+                  "y":331},
                 "size":{
                   "width":90,
                   "height":30}},
@@ -156,8 +156,8 @@
               "fillType":"solid",
               "color":0xFFCCCCCC},
             "location":{
-              "x":260,
-              "y":180},
+              "x":290,
+              "y":331},
             "size":{
               "width":330,
               "height":30}},
@@ -176,8 +176,8 @@
                   "fillType":"solid",
                   "color":0xFFCCCCCC},
                 "location":{
-                  "x":260,
-                  "y":180},
+                  "x":290,
+                  "y":331},
                 "size":{
                   "width":330,
                   "height":30}},
@@ -193,8 +193,8 @@
           "visible":true,
           "style":{
             "location":{
-              "x":255,
-              "y":210},
+              "x":285,
+              "y":361},
             "size":{
               "width":10,
               "height":230}},
@@ -212,8 +212,8 @@
           "visible":true,
           "style":{
             "location":{
-              "x":260,
-              "y":210},
+              "x":290,
+              "y":361},
             "size":{
               "width":330,
               "height":160}},
@@ -227,8 +227,8 @@
           "visible":true,
           "style":{
             "location":{
-              "x":170,
-              "y":210},
+              "x":200,
+              "y":361},
             "size":{
               "width":90,
               "height":160}},
@@ -243,8 +243,8 @@
               "visible":true,
               "style":{
                 "location":{
-                  "x":170,
-                  "y":210},
+                  "x":200,
+                  "y":361},
                 "size":{
                   "width":90,
                   "height":160}},
@@ -260,8 +260,8 @@
           "visible":true,
           "style":{
             "location":{
-              "x":170,
-              "y":370},
+              "x":200,
+              "y":521},
             "size":{
               "width":90,
               "height":70}},
@@ -276,8 +276,8 @@
               "visible":true,
               "style":{
                 "location":{
-                  "x":170,
-                  "y":370},
+                  "x":200,
+                  "y":521},
                 "size":{
                   "width":90,
                   "height":70}},
@@ -293,8 +293,8 @@
           "visible":true,
           "style":{
             "location":{
-              "x":260,
-              "y":370},
+              "x":290,
+              "y":521},
             "size":{
               "width":330,
               "height":70}},
@@ -308,11 +308,11 @@
           "visible":true,
           "style":{
             "location":{
-              "x":170,
-              "y":440},
+              "x":200,
+              "y":591},
             "size":{
               "width":90,
-              "height":70}},
+              "height":40}},
           "adaptiveStyles":{
 },
           "objects":[{
@@ -324,15 +324,15 @@
               "visible":true,
               "style":{
                 "location":{
-                  "x":170,
-                  "y":440},
+                  "x":200,
+                  "y":591},
                 "size":{
                   "width":90,
-                  "height":70}},
+                  "height":40}},
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/版本改动记录/u12.png"}},
+            "normal~":"images/版本改动记录/u15.png"}},
 {
           "id":"f13788d7eee94d97a90fcc73cf3fc411",
           "label":"",
@@ -341,11 +341,122 @@
           "visible":true,
           "style":{
             "location":{
-              "x":260,
-              "y":440},
+              "x":290,
+              "y":591},
             "size":{
               "width":330,
-              "height":70}},
+              "height":40}},
+          "adaptiveStyles":{
+}},
+{
+          "id":"7efbb4fe3af94b96a292b39b9f57f84f",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":200,
+              "y":631},
+            "size":{
+              "width":90,
+              "height":40}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"4793de64fe0c4ff19d6534e6eb7abd49",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":200,
+                  "y":631},
+                "size":{
+                  "width":90,
+                  "height":40}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/版本改动记录/u15.png"}},
+{
+          "id":"f3b10fed73e8419cb56b41e708219ecf",
+          "label":"",
+          "type":"textArea",
+          "styleType":"textArea",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":290,
+              "y":631},
+            "size":{
+              "width":330,
+              "height":40}},
+          "adaptiveStyles":{
+}},
+{
+          "id":"912ffe6f83fb4e9bb40d1a88ca15df48",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":200,
+              "y":671},
+            "size":{
+              "width":90,
+              "height":139}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"37e32a9a4df54f96bba16d3eb2d75aa6",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":200,
+                  "y":671},
+                "size":{
+                  "width":90,
+                  "height":139}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/版本改动记录/u21.png"}},
+{
+          "id":"e9b3ece5bf154116a46d82e31da3e83b",
+          "label":"",
+          "type":"textArea",
+          "styleType":"textArea",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":290,
+              "y":671},
+            "size":{
+              "width":330,
+              "height":139}},
+          "adaptiveStyles":{
+}},
+{
+          "id":"786050b9eee040e287de13fb2bfb6772",
+          "label":"",
+          "type":"textArea",
+          "styleType":"textArea",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":200,
+              "y":240},
+            "size":{
+              "width":420,
+              "height":91}},
           "adaptiveStyles":{
 }}]}},
   "masters":{
@@ -386,4 +497,18 @@
     "6252b18bee044b2b8fdf46f77a2dd763":{
       "scriptId":"u16"},
     "f13788d7eee94d97a90fcc73cf3fc411":{
-      "scriptId":"u17"}}});
+      "scriptId":"u17"},
+    "7efbb4fe3af94b96a292b39b9f57f84f":{
+      "scriptId":"u18"},
+    "4793de64fe0c4ff19d6534e6eb7abd49":{
+      "scriptId":"u19"},
+    "f3b10fed73e8419cb56b41e708219ecf":{
+      "scriptId":"u20"},
+    "912ffe6f83fb4e9bb40d1a88ca15df48":{
+      "scriptId":"u21"},
+    "37e32a9a4df54f96bba16d3eb2d75aa6":{
+      "scriptId":"u22"},
+    "e9b3ece5bf154116a46d82e31da3e83b":{
+      "scriptId":"u23"},
+    "786050b9eee040e287de13fb2bfb6772":{
+      "scriptId":"u24"}}});

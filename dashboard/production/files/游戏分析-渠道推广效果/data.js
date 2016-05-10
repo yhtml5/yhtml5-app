@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"游戏分析-渠道推广效果.html",
-  "generationDate":new Date(1461745779244.75),
+  "generationDate":new Date(1462860705971.08),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -224,7 +224,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/基本信息（个人呈现）/u39.png"}},
+            "normal~":"images/基本信息（个人呈现）/u40.png"}},
 {
           "id":"39652219405943e69654b8397eb620ae",
           "label":"",
@@ -300,7 +300,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用删除确认/u19.png"}},
+            "normal~":"images/应用删除确认/u18.png"}},
 {
           "id":"13431e4e8c9c4b11ab9259a39e0ac69b",
           "label":"",
@@ -333,7 +333,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/基本信息（个人呈现）/u39.png"}},
+            "normal~":"images/基本信息（个人呈现）/u40.png"}},
 {
           "id":"ed9bf308f4a74180867594f55a4e099e",
           "label":"",
@@ -409,7 +409,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用删除确认/u19.png"}},
+            "normal~":"images/应用删除确认/u18.png"}},
 {
           "id":"abfccb751db247a48c892706c1e9420f",
           "label":"",
@@ -559,7 +559,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/基本信息（个人呈现）/u124.png"}},
+            "normal~":"images/基本信息（个人呈现）/u125.png"}},
 {
           "id":"b4bcde66de27472f9dc64e177635e85f",
           "label":"",
@@ -1256,7 +1256,7 @@
                       "adaptiveStyles":{
 }}],
                   "images":{
-                    "normal~":"images/渠道管理列表_p2/u131.png"}},
+                    "normal~":"images/渠道管理列表_p2/u95.png"}},
 {
                   "id":"2bb34824f133464290ac529098dad811",
                   "label":"",
@@ -3112,7 +3112,7 @@
                                       "compress":false}}}]}]}]}},
                   "tabbable":true,
                   "images":{
-                    "normal~":"images/基本信息（个人呈现）/u124.png"}},
+                    "normal~":"images/基本信息（个人呈现）/u125.png"}},
 {
                   "id":"97e1e2b3bd7a4f4fba1eb9d5ea92d8b7",
                   "label":"",
@@ -3669,7 +3669,7 @@
                       "adaptiveStyles":{
 }}],
                   "images":{
-                    "normal~":"images/渠道管理列表_p2/u131.png"}},
+                    "normal~":"images/渠道管理列表_p2/u95.png"}},
 {
                   "id":"ec5e0c2d9e4248f589d26acdcbb6d545",
                   "label":"",
@@ -6333,7 +6333,7 @@
                                       "compress":false}}}]}]}]}},
                   "tabbable":true,
                   "images":{
-                    "normal~":"images/基本信息（个人呈现）/u124.png"}},
+                    "normal~":"images/基本信息（个人呈现）/u125.png"}},
 {
                   "id":"73a56b6f972c48b9a6891b8a6ba4713d",
                   "label":"",
@@ -7076,7 +7076,7 @@
                                       "compress":false}}}]}]}]}},
                   "tabbable":true,
                   "images":{
-                    "normal~":"images/基本信息（个人呈现）/u124.png"}},
+                    "normal~":"images/基本信息（个人呈现）/u125.png"}},
 {
                   "id":"c6b51efa285b49e591f3cf5d2419f104",
                   "label":"",
@@ -7111,7 +7111,7 @@
                       "adaptiveStyles":{
 }}],
                   "images":{
-                    "normal~":"images/渠道管理列表_p2/u131.png"}},
+                    "normal~":"images/渠道管理列表_p2/u95.png"}},
 {
                   "id":"92e1a840908a4b438acb7980e5fb212d",
                   "label":"",

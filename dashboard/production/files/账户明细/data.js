@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"账户明细.html",
-  "generationDate":new Date(1461745770654.46),
+  "generationDate":new Date(1462860697343.32),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -125,7 +125,7 @@
           "images":{
             "start~":"resources/images/transparent.gif",
             "end~":"resources/images/transparent.gif",
-            "line~":"images/批量复核_p2/u4_line.png"}},
+            "line~":"images/批量复核/u4_line.png"}},
 {
           "id":"4f56df4a891f40c1b4b3f0b83f16d0fd",
           "label":"",
@@ -172,7 +172,7 @@
                       "linkType":"current"}]}]}},
           "tabbable":true,
           "images":{
-            "normal~":"images/批量复核_p2/u5.png"}},
+            "normal~":"images/批量复核/u5.png"}},
 {
           "id":"680ecb87acc249d8b3b94605bbca93a5",
           "label":"",
@@ -643,7 +643,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/帮助/u88.png"}}]}},
+            "normal~":"images/帮助/u89.png"}}]}},
   "masters":{
 },
   "objectPaths":{

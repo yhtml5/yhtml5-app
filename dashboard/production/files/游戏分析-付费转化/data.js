@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"游戏分析-付费转化.html",
-  "generationDate":new Date(1461745773300.45),
+  "generationDate":new Date(1462860699909.41),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -224,7 +224,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/基本信息（个人呈现）/u39.png"}},
+            "normal~":"images/基本信息（个人呈现）/u40.png"}},
 {
           "id":"61cac7497dcb4125b691a18267dbc984",
           "label":"",
@@ -300,7 +300,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用删除确认/u19.png"}},
+            "normal~":"images/应用删除确认/u18.png"}},
 {
           "id":"e966a3b4f81741ce991e8df27a3244bc",
           "label":"",
@@ -333,7 +333,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/基本信息（个人呈现）/u39.png"}},
+            "normal~":"images/基本信息（个人呈现）/u40.png"}},
 {
           "id":"af983b31b47c4712832475100c458565",
           "label":"",
@@ -409,7 +409,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用删除确认/u19.png"}},
+            "normal~":"images/应用删除确认/u18.png"}},
 {
           "id":"bf464bc0d1bd4744aa69872f02cfbbeb",
           "label":"",
@@ -9304,7 +9304,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/基本信息（个人呈现）/u124.png"}},
+            "normal~":"images/基本信息（个人呈现）/u125.png"}},
 {
           "id":"5233ce0e03ee4d539cc97f47a66a2f17",
           "label":"",

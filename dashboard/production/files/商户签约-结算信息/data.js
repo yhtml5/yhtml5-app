@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"商户签约-结算信息.html",
-  "generationDate":new Date(1461745746259.16),
+  "generationDate":new Date(1462860682476.64),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -336,7 +336,7 @@
           "images":{
             "start~":"resources/images/transparent.gif",
             "end~":"resources/images/transparent.gif",
-            "line~":"images/商户签约-基本信息（个人）/u33_line.png"}},
+            "line~":"images/基本信息（个人呈现）/u91_line.png"}},
 {
           "id":"d7c7c793da2e423987c789c1c137ece2",
           "label":"",
@@ -356,7 +356,7 @@
           "images":{
             "start~":"resources/images/transparent.gif",
             "end~":"resources/images/transparent.gif",
-            "line~":"images/商户签约-基本信息（个人）/u33_line.png"}},
+            "line~":"images/基本信息（个人呈现）/u91_line.png"}},
 {
           "id":"939d2229676f46ccb7e4b6b6a72ade2e",
           "label":"",
@@ -627,7 +627,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/帮助/u88.png"}},
+            "normal~":"images/帮助/u89.png"}},
 {
           "id":"8d666c81098946329401de3330d288c9",
           "label":"",
@@ -693,7 +693,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u69.png"}},
+            "normal~":"images/基本信息（企业修改）/u89.png"}},
 {
           "id":"b4f4916d106347d8a149389f3f2dd5bc",
           "label":"",
@@ -759,7 +759,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u69.png"}},
+            "normal~":"images/基本信息（企业修改）/u89.png"}},
 {
           "id":"641bb72932b14cbd9827d2bcc40debd2",
           "label":"",
@@ -825,7 +825,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u69.png"}},
+            "normal~":"images/基本信息（企业修改）/u89.png"}},
 {
           "id":"e386c7e4c2564b93a6924576cfd34496",
           "label":"",
@@ -891,7 +891,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u69.png"}},
+            "normal~":"images/基本信息（企业修改）/u89.png"}},
 {
           "id":"6090ca4356694189857e50b457ac9c8e",
           "label":"",

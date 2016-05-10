@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"游戏分析-付费习惯.html",
-  "generationDate":new Date(1461745777860.68),
+  "generationDate":new Date(1462860704387.77),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -224,7 +224,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/基本信息（个人呈现）/u39.png"}},
+            "normal~":"images/基本信息（个人呈现）/u40.png"}},
 {
           "id":"d7f0648488ab4cab8d1562570ef16f53",
           "label":"",
@@ -300,7 +300,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用删除确认/u19.png"}},
+            "normal~":"images/应用删除确认/u18.png"}},
 {
           "id":"bf9fa77917b444a5af631166e6e8d5a1",
           "label":"",
@@ -333,7 +333,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/基本信息（个人呈现）/u39.png"}},
+            "normal~":"images/基本信息（个人呈现）/u40.png"}},
 {
           "id":"fffacaa6af9e45b4ab9a1ea09aae074c",
           "label":"",
@@ -409,7 +409,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用删除确认/u19.png"}},
+            "normal~":"images/应用删除确认/u18.png"}},
 {
           "id":"f3dff45d82304ef9aac595c080b309b9",
           "label":"",
@@ -2559,7 +2559,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/基本信息（个人呈现）/u124.png"}},
+            "normal~":"images/基本信息（个人呈现）/u125.png"}},
 {
           "id":"346c210118d446938d7401cb4ea9774a",
           "label":"",

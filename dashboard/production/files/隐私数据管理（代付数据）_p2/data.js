@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"隐私数据管理（代付数据）_p2.html",
-  "generationDate":new Date(1461745755628.95),
+  "generationDate":new Date(1462860680022.54),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -118,7 +118,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/基本信息（个人呈现）/u66.png"}},
+            "normal~":"images/基本信息（个人呈现）/u67.png"}},
 {
           "id":"db67d30e7ddc487cbf816d0d1218f00d",
           "label":"",
@@ -151,7 +151,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/基本信息（个人呈现）/u68.png"}},
+            "normal~":"images/基本信息（个人呈现）/u69.png"}},
 {
           "id":"d0fa277a5e144467af313a11ea348be9",
           "label":"",
@@ -223,7 +223,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/隐私数据管理（代付数据）_p2/u36.png"}},
+            "normal~":"images/隐私数据管理（代付数据）_p2/u37.png"}},
 {
           "id":"d19c36ec2d2340c19648f95bb25c2bbd",
           "label":"",
@@ -256,7 +256,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/隐私数据管理（提现数据）_p2/u40.png"}},
+            "normal~":"images/隐私数据管理（提现数据）_p2/u41.png"}},
 {
           "id":"abc61e8e42344996899b4997ff3b81fe",
           "label":"",
@@ -289,7 +289,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/隐私数据管理（代付数据）_p2/u40.png"}},
+            "normal~":"images/隐私数据管理（代付数据）_p2/u41.png"}},
 {
           "id":"ca9ca969302443a4852037a2c325af89",
           "label":"",
@@ -393,12 +393,15 @@
             "styleType":"textBox",
             "visible":true,
             "style":{
-              "fontSize":"16px",
+              "foreGroundFill":{
+                "fillType":"solid",
+                "color":0xFFCCCCCC,
+                "opacity":1},
               "location":{
-                "x":855,
-                "y":41},
+                "x":869,
+                "y":39},
               "size":{
-                "width":203,
+                "width":191,
                 "height":33}},
             "adaptiveStyles":{
 }},
@@ -411,10 +414,10 @@
             "style":{
               "fontSize":"16px",
               "location":{
-                "x":1058,
+                "x":1060,
                 "y":41},
               "size":{
-                "width":38,
+                "width":36,
                 "height":33}},
             "adaptiveStyles":{
 },
@@ -428,10 +431,10 @@
                 "style":{
                   "fontSize":"16px",
                   "location":{
-                    "x":1058,
+                    "x":1060,
                     "y":41},
                   "size":{
-                    "width":38,
+                    "width":36,
                     "height":33}},
                 "adaptiveStyles":{
 }}],
@@ -528,10 +531,10 @@
                     "isNewIfGroup":false,
                     "actions":[{
                         "action":"linkWindow",
-                        "description":"在 当前窗口 打开 首页（控制台）",
+                        "description":"在 当前窗口 打开 首页",
                         "target":{
                           "targetType":"page",
-                          "url":"首页（控制台）.html",
+                          "url":"首页.html",
                           "includeVariables":true},
                         "linkType":"current"}]}]}},
             "tabbable":true,
@@ -545,7 +548,7 @@
             "visible":true,
             "style":{
               "location":{
-                "x":747,
+                "x":591,
                 "y":40},
               "size":{
                 "width":50,
@@ -561,7 +564,7 @@
                 "visible":true,
                 "style":{
                   "location":{
-                    "x":747,
+                    "x":591,
                     "y":40},
                   "size":{
                     "width":50,
@@ -874,7 +877,7 @@
             "visible":true,
             "style":{
               "location":{
-                "x":654,
+                "x":498,
                 "y":46},
               "size":{
                 "width":74,
@@ -891,7 +894,7 @@
                 "visible":true,
                 "style":{
                   "location":{
-                    "x":654,
+                    "x":498,
                     "y":46},
                   "size":{
                     "width":74,
@@ -900,7 +903,22 @@
                 "adaptiveStyles":{
 }}],
             "images":{
-              "normal~":"images/帮助/u66.png"}}]}},
+              "normal~":"images/帮助/u66.png"}},
+{
+            "id":"976f1f9cbabf4bd0a87b103b2d7cdb24",
+            "label":"",
+            "type":"comboBox",
+            "styleType":"comboBox",
+            "visible":true,
+            "style":{
+              "location":{
+                "x":780,
+                "y":39},
+              "size":{
+                "width":89,
+                "height":31}},
+            "adaptiveStyles":{
+}}]}},
     "9174c8aff58e4ee48fd3d1e6d813dce8":{
       "packageId":"9174c8aff58e4ee48fd3d1e6d813dce8",
       "type":"Axure:Master",
@@ -953,7 +971,7 @@
                 "adaptiveStyles":{
 }}],
             "images":{
-              "normal~":"images/基本信息（个人呈现）/u29.png"}},
+              "normal~":"images/基本信息（个人呈现）/u30.png"}},
 {
             "id":"883ed10cb9fb4aa0a526d05c27ed09ac",
             "label":"",
@@ -1011,7 +1029,7 @@
             "images":{
               "start~":"resources/images/transparent.gif",
               "end~":"resources/images/transparent.gif",
-              "line~":"images/基本信息（个人呈现）/u33_line.png"}},
+              "line~":"images/基本信息（个人呈现）/u34_line.png"}},
 {
             "id":"401c30b219154d97b3037964a0d6fe17",
             "label":"",
@@ -1030,7 +1048,7 @@
             "images":{
               "start~":"resources/images/transparent.gif",
               "end~":"resources/images/transparent.gif",
-              "line~":"images/基本信息（个人呈现）/u34_line.png"}},
+              "line~":"images/基本信息（个人呈现）/u35_line.png"}},
 {
             "id":"1538fb03af3c473a888106ce0cd56283",
             "label":"",
@@ -1063,7 +1081,7 @@
                 "adaptiveStyles":{
 }}],
             "images":{
-              "normal~":"images/基本信息（个人呈现）/u35.png"}},
+              "normal~":"images/基本信息（个人呈现）/u36.png"}},
 {
             "id":"f900e71c570d4057bd8352f9c5493d58",
             "label":"",
@@ -1135,7 +1153,7 @@
                 "adaptiveStyles":{
 }}],
             "images":{
-              "normal~":"images/基本信息（个人呈现）/u39.png"}},
+              "normal~":"images/基本信息（个人呈现）/u40.png"}},
 {
             "id":"99403f47bfe548ab84d739e915643973",
             "label":"",
@@ -1154,7 +1172,7 @@
             "images":{
               "start~":"resources/images/transparent.gif",
               "end~":"resources/images/transparent.gif",
-              "line~":"images/基本信息（个人呈现）/u34_line.png"}},
+              "line~":"images/基本信息（个人呈现）/u35_line.png"}},
 {
             "id":"2e2e3aac1deb40998b3ceb0a47d15713",
             "label":"",
@@ -1187,7 +1205,7 @@
                 "adaptiveStyles":{
 }}],
             "images":{
-              "normal~":"images/基本信息（个人呈现）/u35.png"}},
+              "normal~":"images/基本信息（个人呈现）/u36.png"}},
 {
             "id":"731d6a41502543c4b43c9f28ab45ee08",
             "label":"",
@@ -1245,7 +1263,7 @@
             "images":{
               "start~":"resources/images/transparent.gif",
               "end~":"resources/images/transparent.gif",
-              "line~":"images/基本信息（个人呈现）/u34_line.png"}},
+              "line~":"images/基本信息（个人呈现）/u35_line.png"}},
 {
             "id":"9f90b205d78b4428a91fe70ae4a12955",
             "label":"",
@@ -1278,7 +1296,7 @@
                 "adaptiveStyles":{
 }}],
             "images":{
-              "normal~":"images/基本信息（个人呈现）/u35.png"}},
+              "normal~":"images/基本信息（个人呈现）/u36.png"}},
 {
             "id":"887e1f3f292c46c5996971f2cbbfb475",
             "label":"",
@@ -1456,7 +1474,7 @@
             "images":{
               "start~":"resources/images/transparent.gif",
               "end~":"resources/images/transparent.gif",
-              "line~":"images/基本信息（个人呈现）/u34_line.png"}},
+              "line~":"images/基本信息（个人呈现）/u35_line.png"}},
 {
             "id":"1d043bdb9b44456a8c2153eea1ac442b",
             "label":"",
@@ -1489,7 +1507,7 @@
                 "adaptiveStyles":{
 }}],
             "images":{
-              "normal~":"images/基本信息（个人呈现）/u35.png"}},
+              "normal~":"images/基本信息（个人呈现）/u36.png"}},
 {
             "id":"d738557ee1b6480aad05a5b1ea667c6d",
             "label":"",
@@ -1547,7 +1565,7 @@
             "images":{
               "start~":"resources/images/transparent.gif",
               "end~":"resources/images/transparent.gif",
-              "line~":"images/基本信息（个人呈现）/u34_line.png"}},
+              "line~":"images/基本信息（个人呈现）/u35_line.png"}},
 {
             "id":"cc3842a9471e4305957366cafa94ae06",
             "label":"",
@@ -1580,7 +1598,7 @@
                 "adaptiveStyles":{
 }}],
             "images":{
-              "normal~":"images/基本信息（个人呈现）/u35.png"}},
+              "normal~":"images/基本信息（个人呈现）/u36.png"}},
 {
             "id":"7a79a28ea60e4604855cd1eeaf6eea46",
             "label":"",
@@ -1706,108 +1724,110 @@
       "861b3c8487af4ee0950251a48b2c6762":{
         "scriptId":"u26"},
       "b711ccb25389454aa756897a2ff7e007":{
-        "scriptId":"u27"}},
+        "scriptId":"u27"},
+      "976f1f9cbabf4bd0a87b103b2d7cdb24":{
+        "scriptId":"u28"}},
     "41c932e62566446892bc423d3cc43318":{
-      "scriptId":"u28"},
-    "5089d3810939463b9032569d7f243d40":{
       "scriptId":"u29"},
-    "9e2dde39601e4ed28a04f4652d1ef6fb":{
+    "5089d3810939463b9032569d7f243d40":{
       "scriptId":"u30"},
-    "c6f3f53095b242d7a5594ac81536a8a3":{
+    "9e2dde39601e4ed28a04f4652d1ef6fb":{
       "scriptId":"u31"},
-    "db67d30e7ddc487cbf816d0d1218f00d":{
+    "c6f3f53095b242d7a5594ac81536a8a3":{
       "scriptId":"u32"},
-    "bde1dd9f6d05432e82230ea9ced644f5":{
+    "db67d30e7ddc487cbf816d0d1218f00d":{
       "scriptId":"u33"},
-    "d0fa277a5e144467af313a11ea348be9":{
+    "bde1dd9f6d05432e82230ea9ced644f5":{
       "scriptId":"u34"},
-    "0ee464e6f5f748b2903f3a29b0d381d5":{
+    "d0fa277a5e144467af313a11ea348be9":{
       "scriptId":"u35"},
-    "7a797f8d160447deb1ffac95931cc9e7":{
+    "0ee464e6f5f748b2903f3a29b0d381d5":{
       "scriptId":"u36"},
-    "2742ca9967e841c1991e5576eac5e628":{
+    "7a797f8d160447deb1ffac95931cc9e7":{
       "scriptId":"u37"},
-    "d19c36ec2d2340c19648f95bb25c2bbd":{
+    "2742ca9967e841c1991e5576eac5e628":{
       "scriptId":"u38"},
-    "05ebd88f439c4128bc962c886f14e41c":{
+    "d19c36ec2d2340c19648f95bb25c2bbd":{
       "scriptId":"u39"},
-    "abc61e8e42344996899b4997ff3b81fe":{
+    "05ebd88f439c4128bc962c886f14e41c":{
       "scriptId":"u40"},
-    "5344febb84e240958cd87a77acab1964":{
+    "abc61e8e42344996899b4997ff3b81fe":{
       "scriptId":"u41"},
+    "5344febb84e240958cd87a77acab1964":{
+      "scriptId":"u42"},
     "ca9ca969302443a4852037a2c325af89":{
-      "scriptId":"u42",
+      "scriptId":"u43",
       "fe68a47290e54e2c8cb5ef23fafad57a":{
-        "scriptId":"u43"},
-      "693426459f8f40a386907aedd9793d5e":{
         "scriptId":"u44"},
-      "883ed10cb9fb4aa0a526d05c27ed09ac":{
+      "693426459f8f40a386907aedd9793d5e":{
         "scriptId":"u45"},
-      "c60d40dd1f9146afb39d7fdaaf690256":{
+      "883ed10cb9fb4aa0a526d05c27ed09ac":{
         "scriptId":"u46"},
-      "1ab799196cc0497aae263512729ce1b5":{
+      "c60d40dd1f9146afb39d7fdaaf690256":{
         "scriptId":"u47"},
-      "401c30b219154d97b3037964a0d6fe17":{
+      "1ab799196cc0497aae263512729ce1b5":{
         "scriptId":"u48"},
-      "1538fb03af3c473a888106ce0cd56283":{
+      "401c30b219154d97b3037964a0d6fe17":{
         "scriptId":"u49"},
-      "9b4fd040a32e43c4b8667ff48dcd798a":{
+      "1538fb03af3c473a888106ce0cd56283":{
         "scriptId":"u50"},
-      "f900e71c570d4057bd8352f9c5493d58":{
+      "9b4fd040a32e43c4b8667ff48dcd798a":{
         "scriptId":"u51"},
-      "0b9ca5319512458380400c3d8284d937":{
+      "f900e71c570d4057bd8352f9c5493d58":{
         "scriptId":"u52"},
-      "d392aadaf65b44d3874c66af0b69301c":{
+      "0b9ca5319512458380400c3d8284d937":{
         "scriptId":"u53"},
-      "d654ce115c0442c88d0fd0c2e2359206":{
+      "d392aadaf65b44d3874c66af0b69301c":{
         "scriptId":"u54"},
-      "99403f47bfe548ab84d739e915643973":{
+      "d654ce115c0442c88d0fd0c2e2359206":{
         "scriptId":"u55"},
-      "2e2e3aac1deb40998b3ceb0a47d15713":{
+      "99403f47bfe548ab84d739e915643973":{
         "scriptId":"u56"},
-      "7281e302fe6644ae97811c08af6aba5c":{
+      "2e2e3aac1deb40998b3ceb0a47d15713":{
         "scriptId":"u57"},
-      "731d6a41502543c4b43c9f28ab45ee08":{
+      "7281e302fe6644ae97811c08af6aba5c":{
         "scriptId":"u58"},
-      "87e824dd19d742508f921d062005f8f7":{
+      "731d6a41502543c4b43c9f28ab45ee08":{
         "scriptId":"u59"},
-      "5d8f67e9cc8d4628be6e67e2e38518f8":{
+      "87e824dd19d742508f921d062005f8f7":{
         "scriptId":"u60"},
-      "9f90b205d78b4428a91fe70ae4a12955":{
+      "5d8f67e9cc8d4628be6e67e2e38518f8":{
         "scriptId":"u61"},
-      "70afacedbfec47f3b1fc94f59eb1c6c6":{
+      "9f90b205d78b4428a91fe70ae4a12955":{
         "scriptId":"u62"},
-      "887e1f3f292c46c5996971f2cbbfb475":{
+      "70afacedbfec47f3b1fc94f59eb1c6c6":{
         "scriptId":"u63"},
-      "f930f1439a81440cab4b96ada525f1b4":{
+      "887e1f3f292c46c5996971f2cbbfb475":{
         "scriptId":"u64"},
-      "2cdd7f8c6e164320a27cb219c8daafd1":{
+      "f930f1439a81440cab4b96ada525f1b4":{
         "scriptId":"u65"},
-      "c2bfbef632f243ba8c3633a696782695":{
+      "2cdd7f8c6e164320a27cb219c8daafd1":{
         "scriptId":"u66"},
-      "03fbc04f0c4444a0b96ff277789d3f0b":{
+      "c2bfbef632f243ba8c3633a696782695":{
         "scriptId":"u67"},
-      "2f3d02644d244c6e893d31bcc9fc9265":{
+      "03fbc04f0c4444a0b96ff277789d3f0b":{
         "scriptId":"u68"},
-      "cb593addeafb4c40b841d59666afb14a":{
+      "2f3d02644d244c6e893d31bcc9fc9265":{
         "scriptId":"u69"},
-      "1d043bdb9b44456a8c2153eea1ac442b":{
+      "cb593addeafb4c40b841d59666afb14a":{
         "scriptId":"u70"},
-      "83146be885e54753be0d2a59debca390":{
+      "1d043bdb9b44456a8c2153eea1ac442b":{
         "scriptId":"u71"},
-      "d738557ee1b6480aad05a5b1ea667c6d":{
+      "83146be885e54753be0d2a59debca390":{
         "scriptId":"u72"},
-      "aecfdaa527d34133aa94562848fd55e3":{
+      "d738557ee1b6480aad05a5b1ea667c6d":{
         "scriptId":"u73"},
-      "a9f3f45977be4604be466b4865a298ae":{
+      "aecfdaa527d34133aa94562848fd55e3":{
         "scriptId":"u74"},
-      "cc3842a9471e4305957366cafa94ae06":{
+      "a9f3f45977be4604be466b4865a298ae":{
         "scriptId":"u75"},
-      "9cdfd4e19a604f4f8876ee66aa9bbc53":{
+      "cc3842a9471e4305957366cafa94ae06":{
         "scriptId":"u76"},
-      "7a79a28ea60e4604855cd1eeaf6eea46":{
+      "9cdfd4e19a604f4f8876ee66aa9bbc53":{
         "scriptId":"u77"},
-      "47d4397c008a4f0aad5761d955ff62a7":{
+      "7a79a28ea60e4604855cd1eeaf6eea46":{
         "scriptId":"u78"},
+      "47d4397c008a4f0aad5761d955ff62a7":{
+        "scriptId":"u79"},
       "917cf09202db430ebe1c35fd29cb8b8d":{
-        "scriptId":"u79"}}}});
+        "scriptId":"u80"}}}});

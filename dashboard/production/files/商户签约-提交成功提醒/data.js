@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"商户签约-提交成功提醒.html",
-  "generationDate":new Date(1461745746580.39),
+  "generationDate":new Date(1462860682766.85),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -65,7 +65,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/帮助/u88.png"}},
+            "normal~":"images/帮助/u89.png"}},
 {
           "id":"9f24e5f09bf3412fad27b14e58b00bc1",
           "label":"",
@@ -373,7 +373,7 @@
           "images":{
             "start~":"resources/images/transparent.gif",
             "end~":"resources/images/transparent.gif",
-            "line~":"images/商户签约-基本信息（个人）/u33_line.png"}},
+            "line~":"images/基本信息（个人呈现）/u91_line.png"}},
 {
           "id":"a59475f377fb447fa49b56577ef81c30",
           "label":"",
@@ -393,7 +393,7 @@
           "images":{
             "start~":"resources/images/transparent.gif",
             "end~":"resources/images/transparent.gif",
-            "line~":"images/商户签约-基本信息（个人）/u33_line.png"}},
+            "line~":"images/基本信息（个人呈现）/u91_line.png"}},
 {
           "id":"a4565c384a764dc99942cb11c0b386f9",
           "label":"",
@@ -797,7 +797,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u69.png"}},
+            "normal~":"images/基本信息（企业修改）/u89.png"}},
 {
           "id":"0f9b56d01b1d4f7da20edf9427dfc58e",
           "label":"",
@@ -863,7 +863,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u69.png"}},
+            "normal~":"images/基本信息（企业修改）/u89.png"}},
 {
           "id":"0a34fdf6646149d0915fc4cffe53cdb9",
           "label":"",
@@ -929,7 +929,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u69.png"}},
+            "normal~":"images/基本信息（企业修改）/u89.png"}},
 {
           "id":"b65268ee858d487897128d166b060859",
           "label":"",
@@ -995,7 +995,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u69.png"}},
+            "normal~":"images/基本信息（企业修改）/u89.png"}},
 {
           "id":"d7c694f6a3e549e4a0c78a09da4dd9fc",
           "label":"",
@@ -1532,7 +1532,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-提交成功提醒/u81.png"}},
+            "normal~":"images/修改基本信息成功提示/u94.png"}},
 {
           "id":"a50d61f678094982bfb1e157126287b4",
           "label":"",
@@ -1551,7 +1551,7 @@
           "images":{
             "start~":"resources/images/transparent.gif",
             "end~":"resources/images/transparent.gif",
-            "line~":"images/商户签约-提交成功提醒/u83_line.png"}},
+            "line~":"images/不可修改提醒/u96_line.png"}},
 {
           "id":"e7ac96a1acc74033a09a3e440099b479",
           "label":"",
@@ -1599,15 +1599,15 @@
                   "isNewIfGroup":false,
                   "actions":[{
                       "action":"linkWindow",
-                      "description":"在 当前窗口 打开 首页（控制台）",
+                      "description":"在 当前窗口 打开 首页",
                       "target":{
                         "targetType":"page",
-                        "url":"首页（控制台）.html",
+                        "url":"首页.html",
                         "includeVariables":true},
                       "linkType":"current"}]}]}},
           "tabbable":true,
           "images":{
-            "normal~":"images/商户签约-提交成功提醒/u84.png"}},
+            "normal~":"images/不可修改提醒/u97.png"}},
 {
           "id":"c96183a576da4873a1f4229d46aadd4d",
           "label":"",

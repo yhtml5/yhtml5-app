@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"游戏分析-鲸鱼用户.html",
-  "generationDate":new Date(1461745778374.05),
+  "generationDate":new Date(1462860704906.14),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -224,7 +224,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/基本信息（个人呈现）/u39.png"}},
+            "normal~":"images/基本信息（个人呈现）/u40.png"}},
 {
           "id":"80a937d4de3a49e8a0b555fab424130b",
           "label":"",
@@ -300,7 +300,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用删除确认/u19.png"}},
+            "normal~":"images/应用删除确认/u18.png"}},
 {
           "id":"2f299fd1df78477ebed3d5f98641d009",
           "label":"",
@@ -333,7 +333,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/基本信息（个人呈现）/u39.png"}},
+            "normal~":"images/基本信息（个人呈现）/u40.png"}},
 {
           "id":"944b2ff857eb42ec9b40de84e3fd4c53",
           "label":"",
@@ -409,7 +409,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用删除确认/u19.png"}},
+            "normal~":"images/应用删除确认/u18.png"}},
 {
           "id":"b9ca82ba3fcb4941bac9bff2f2fdbb58",
           "label":"",
@@ -646,7 +646,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/基本信息（个人呈现）/u124.png"}},
+            "normal~":"images/基本信息（个人呈现）/u125.png"}},
 {
           "id":"cc222c992c0d4912a1fe6511a32935de",
           "label":"",
@@ -3314,7 +3314,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/渠道管理列表_p2/u131.png"}}]}},
+            "normal~":"images/渠道管理列表_p2/u95.png"}}]}},
   "masters":{
     "45a0118f98e444b6b5ae38507708aa85":{
       "packageId":"45a0118f98e444b6b5ae38507708aa85",

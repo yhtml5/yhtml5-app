@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"提现.html",
-  "generationDate":new Date(1461745769378.38),
+  "generationDate":new Date(1462860695953.32),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -285,7 +285,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/帮助/u88.png"}},
+            "normal~":"images/帮助/u89.png"}},
 {
           "id":"8862309f9b0d4550b47b7bc0bd88ccf3",
           "label":"",
@@ -360,15 +360,15 @@
                   "isNewIfGroup":false,
                   "actions":[{
                       "action":"linkWindow",
-                      "description":"在 当前窗口 打开 首页（控制台）",
+                      "description":"在 当前窗口 打开 首页",
                       "target":{
                         "targetType":"page",
-                        "url":"首页（控制台）.html",
+                        "url":"首页.html",
                         "includeVariables":true},
                       "linkType":"current"}]}]}},
           "tabbable":true,
           "images":{
-            "normal~":"images/帮助/u74.png"}},
+            "normal~":"images/帮助/u75.png"}},
 {
           "id":"5b5b7c9857c74ee9be9defe734d17455",
           "label":"",
@@ -607,7 +607,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u69.png"}}]}},
+            "normal~":"images/基本信息（企业修改）/u89.png"}}]}},
   "masters":{
 },
   "objectPaths":{

@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"交易详情.html",
-  "generationDate":new Date(1461745770920.71),
+  "generationDate":new Date(1462860697571.56),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -125,7 +125,7 @@
           "images":{
             "start~":"resources/images/transparent.gif",
             "end~":"resources/images/transparent.gif",
-            "line~":"images/批量复核_p2/u4_line.png"}},
+            "line~":"images/批量复核/u4_line.png"}},
 {
           "id":"1c88e56025ef420ca0047d1dde7812b4",
           "label":"",
@@ -179,7 +179,7 @@
                       "linkType":"current"}]}]}},
           "tabbable":true,
           "images":{
-            "normal~":"images/批量复核_p2/u5.png"}},
+            "normal~":"images/批量复核/u5.png"}},
 {
           "id":"0db0be30e33e41b1b931b3bce3da86a6",
           "label":"",
@@ -654,7 +654,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/不可修改提醒/u91.png"}},
+            "normal~":"images/不可修改提醒/u92.png"}},
 {
           "id":"a2b6afa073154caf9fb4864112dfe59a",
           "label":"",
@@ -724,7 +724,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/帮助/u88.png"}}]}},
+            "normal~":"images/帮助/u89.png"}}]}},
   "masters":{
 },
   "objectPaths":{

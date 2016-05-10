@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"游戏分析入口（支付总览）.html",
-  "generationDate":new Date(1461745772172.62),
+  "generationDate":new Date(1462860698536.43),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -198,10 +198,10 @@
                   "isNewIfGroup":false,
                   "actions":[{
                       "action":"linkWindow",
-                      "description":"在 当前窗口 打开 首页（控制台）",
+                      "description":"在 当前窗口 打开 首页",
                       "target":{
                         "targetType":"page",
-                        "url":"首页（控制台）.html",
+                        "url":"首页.html",
                         "includeVariables":true},
                       "linkType":"current"}]}]}},
           "tabbable":true,
@@ -239,7 +239,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/基本信息（个人呈现）/u39.png"}},
+            "normal~":"images/基本信息（个人呈现）/u40.png"}},
 {
           "id":"19f1a734f23d49b682ce20f87bee8f3e",
           "label":"",
@@ -315,7 +315,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用删除确认/u19.png"}},
+            "normal~":"images/应用删除确认/u18.png"}},
 {
           "id":"5dfdfadd972842339b3e3a95f2c2bc0c",
           "label":"",
@@ -348,7 +348,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/基本信息（个人呈现）/u39.png"}},
+            "normal~":"images/基本信息（个人呈现）/u40.png"}},
 {
           "id":"a7a7b699f1414d0bb535ab39d644e460",
           "label":"",
@@ -424,7 +424,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/应用删除确认/u19.png"}},
+            "normal~":"images/应用删除确认/u18.png"}},
 {
           "id":"4a4c6dc52c924f64ab8082fd0a8b7b41",
           "label":"",
@@ -10009,7 +10009,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/基本信息（个人呈现）/u124.png"}},
+            "normal~":"images/基本信息（个人呈现）/u125.png"}},
 {
           "id":"0942bffa1b4542d09ca6ca72dc586a1b",
           "label":"",

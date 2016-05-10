@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"帮助.html",
-  "generationDate":new Date(1461745744217.52),
+  "generationDate":new Date(1462860672691.42),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -852,7 +852,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/帮助/u68.png"}},
+            "normal~":"images/帮助/u69.png"}},
 {
           "id":"21b7d60d327f48968280e2a1fb2d3ead",
           "label":"",
@@ -885,7 +885,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/帮助/u70.png"}},
+            "normal~":"images/帮助/u71.png"}},
 {
           "id":"b662874fd4cc46c28b55791f42223492",
           "label":"",
@@ -964,15 +964,15 @@
                   "isNewIfGroup":false,
                   "actions":[{
                       "action":"linkWindow",
-                      "description":"在 当前窗口 打开 首页（控制台）",
+                      "description":"在 当前窗口 打开 首页",
                       "target":{
                         "targetType":"page",
-                        "url":"首页（控制台）.html",
+                        "url":"首页.html",
                         "includeVariables":true},
                       "linkType":"current"}]}]}},
           "tabbable":true,
           "images":{
-            "normal~":"images/帮助/u74.png"}},
+            "normal~":"images/帮助/u75.png"}},
 {
           "id":"ee0c5a63f0a8404e8ae318b1df7fee71",
           "label":"",
@@ -1009,7 +1009,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/帮助/u76.png"}},
+            "normal~":"images/帮助/u77.png"}},
 {
           "id":"d86c24621bee4a86bb58aa02b8dd556a",
           "label":"",
@@ -1046,7 +1046,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/帮助/u78.png"}},
+            "normal~":"images/帮助/u79.png"}},
 {
           "id":"22d1be4bef4744b480ece76bfca87cea",
           "label":"",
@@ -1083,7 +1083,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/帮助/u80.png"}},
+            "normal~":"images/帮助/u81.png"}},
 {
           "id":"32434c1f831344218af0a355952cfe0f",
           "label":"",
@@ -1116,7 +1116,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/帮助/u82.png"}},
+            "normal~":"images/帮助/u83.png"}},
 {
           "id":"0f3f729161bd4ef6bd8dbdce863a41d9",
           "label":"",
@@ -1153,7 +1153,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/帮助/u76.png"}},
+            "normal~":"images/帮助/u77.png"}},
 {
           "id":"12bc144c44b14fc1a4852b98e921ab7b",
           "label":"",
@@ -1190,7 +1190,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/帮助/u76.png"}},
+            "normal~":"images/帮助/u77.png"}},
 {
           "id":"ff32e20c332f4bf28c36f331603e3ea6",
           "label":"",
@@ -1227,7 +1227,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/帮助/u88.png"}}]}},
+            "normal~":"images/帮助/u89.png"}}]}},
   "masters":{
     "ce194b8bf61742aea7475dad35671852":{
       "packageId":"ce194b8bf61742aea7475dad35671852",
@@ -1318,12 +1318,15 @@
             "styleType":"textBox",
             "visible":true,
             "style":{
-              "fontSize":"16px",
+              "foreGroundFill":{
+                "fillType":"solid",
+                "color":0xFFCCCCCC,
+                "opacity":1},
               "location":{
-                "x":855,
-                "y":41},
+                "x":869,
+                "y":39},
               "size":{
-                "width":203,
+                "width":191,
                 "height":33}},
             "adaptiveStyles":{
 }},
@@ -1336,10 +1339,10 @@
             "style":{
               "fontSize":"16px",
               "location":{
-                "x":1058,
+                "x":1060,
                 "y":41},
               "size":{
-                "width":38,
+                "width":36,
                 "height":33}},
             "adaptiveStyles":{
 },
@@ -1353,10 +1356,10 @@
                 "style":{
                   "fontSize":"16px",
                   "location":{
-                    "x":1058,
+                    "x":1060,
                     "y":41},
                   "size":{
-                    "width":38,
+                    "width":36,
                     "height":33}},
                 "adaptiveStyles":{
 }}],
@@ -1453,10 +1456,10 @@
                     "isNewIfGroup":false,
                     "actions":[{
                         "action":"linkWindow",
-                        "description":"在 当前窗口 打开 首页（控制台）",
+                        "description":"在 当前窗口 打开 首页",
                         "target":{
                           "targetType":"page",
-                          "url":"首页（控制台）.html",
+                          "url":"首页.html",
                           "includeVariables":true},
                         "linkType":"current"}]}]}},
             "tabbable":true,
@@ -1470,7 +1473,7 @@
             "visible":true,
             "style":{
               "location":{
-                "x":747,
+                "x":591,
                 "y":40},
               "size":{
                 "width":50,
@@ -1486,7 +1489,7 @@
                 "visible":true,
                 "style":{
                   "location":{
-                    "x":747,
+                    "x":591,
                     "y":40},
                   "size":{
                     "width":50,
@@ -1799,7 +1802,7 @@
             "visible":true,
             "style":{
               "location":{
-                "x":654,
+                "x":498,
                 "y":46},
               "size":{
                 "width":74,
@@ -1816,7 +1819,7 @@
                 "visible":true,
                 "style":{
                   "location":{
-                    "x":654,
+                    "x":498,
                     "y":46},
                   "size":{
                     "width":74,
@@ -1825,7 +1828,22 @@
                 "adaptiveStyles":{
 }}],
             "images":{
-              "normal~":"images/帮助/u66.png"}}]}}},
+              "normal~":"images/帮助/u66.png"}},
+{
+            "id":"976f1f9cbabf4bd0a87b103b2d7cdb24",
+            "label":"",
+            "type":"comboBox",
+            "styleType":"comboBox",
+            "visible":true,
+            "style":{
+              "location":{
+                "x":780,
+                "y":39},
+              "size":{
+                "width":89,
+                "height":31}},
+            "adaptiveStyles":{
+}}]}}},
   "objectPaths":{
     "9cc382d8d9c945ddb6a0f08f00aed71d":{
       "scriptId":"u0"},
@@ -1962,48 +1980,50 @@
       "861b3c8487af4ee0950251a48b2c6762":{
         "scriptId":"u66"},
       "b711ccb25389454aa756897a2ff7e007":{
-        "scriptId":"u67"}},
+        "scriptId":"u67"},
+      "976f1f9cbabf4bd0a87b103b2d7cdb24":{
+        "scriptId":"u68"}},
     "16438bdf33b24690afdece2ad3ee8b1d":{
-      "scriptId":"u68"},
-    "c88818ba97e74d1587f95eb035f4830f":{
       "scriptId":"u69"},
-    "21b7d60d327f48968280e2a1fb2d3ead":{
+    "c88818ba97e74d1587f95eb035f4830f":{
       "scriptId":"u70"},
-    "d5864c24a8954789b1ee082f4c809d54":{
+    "21b7d60d327f48968280e2a1fb2d3ead":{
       "scriptId":"u71"},
-    "b662874fd4cc46c28b55791f42223492":{
+    "d5864c24a8954789b1ee082f4c809d54":{
       "scriptId":"u72"},
-    "d61916ea2dca4ddb9dfda4bc5793b29f":{
+    "b662874fd4cc46c28b55791f42223492":{
       "scriptId":"u73"},
-    "d6753dd7e6b64b1a864a4627b23c8808":{
+    "d61916ea2dca4ddb9dfda4bc5793b29f":{
       "scriptId":"u74"},
-    "f71995ae493845b5b08ee4bf1f556e70":{
+    "d6753dd7e6b64b1a864a4627b23c8808":{
       "scriptId":"u75"},
-    "ee0c5a63f0a8404e8ae318b1df7fee71":{
+    "f71995ae493845b5b08ee4bf1f556e70":{
       "scriptId":"u76"},
-    "23b21ab7d2164280a22b2c3c7ef32de9":{
+    "ee0c5a63f0a8404e8ae318b1df7fee71":{
       "scriptId":"u77"},
-    "d86c24621bee4a86bb58aa02b8dd556a":{
+    "23b21ab7d2164280a22b2c3c7ef32de9":{
       "scriptId":"u78"},
-    "c611a1a2821c47b09d2c581b04e09db4":{
+    "d86c24621bee4a86bb58aa02b8dd556a":{
       "scriptId":"u79"},
-    "22d1be4bef4744b480ece76bfca87cea":{
+    "c611a1a2821c47b09d2c581b04e09db4":{
       "scriptId":"u80"},
-    "36481450c87e4ffb8592fadc0b196934":{
+    "22d1be4bef4744b480ece76bfca87cea":{
       "scriptId":"u81"},
-    "32434c1f831344218af0a355952cfe0f":{
+    "36481450c87e4ffb8592fadc0b196934":{
       "scriptId":"u82"},
-    "ea7beacd61c84dbf94367b1c2190e38d":{
+    "32434c1f831344218af0a355952cfe0f":{
       "scriptId":"u83"},
-    "0f3f729161bd4ef6bd8dbdce863a41d9":{
+    "ea7beacd61c84dbf94367b1c2190e38d":{
       "scriptId":"u84"},
-    "8a1338a37f714e9a9a7ba65da2578dcc":{
+    "0f3f729161bd4ef6bd8dbdce863a41d9":{
       "scriptId":"u85"},
-    "12bc144c44b14fc1a4852b98e921ab7b":{
+    "8a1338a37f714e9a9a7ba65da2578dcc":{
       "scriptId":"u86"},
-    "83987b4e5d9b4db5836d57b772924d8d":{
+    "12bc144c44b14fc1a4852b98e921ab7b":{
       "scriptId":"u87"},
-    "ff32e20c332f4bf28c36f331603e3ea6":{
+    "83987b4e5d9b4db5836d57b772924d8d":{
       "scriptId":"u88"},
+    "ff32e20c332f4bf28c36f331603e3ea6":{
+      "scriptId":"u89"},
     "91a0d92a4fb74941a6d866dd03d3eff3":{
-      "scriptId":"u89"}}});
+      "scriptId":"u90"}}});

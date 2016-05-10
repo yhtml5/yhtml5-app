@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"未实名认证提醒.html",
-  "generationDate":new Date(1461745769101.18),
+  "generationDate":new Date(1462860695687.14),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -103,10 +103,10 @@
                   "isNewIfGroup":false,
                   "actions":[{
                       "action":"linkWindow",
-                      "description":"在 当前窗口 打开 代付 p2",
+                      "description":"在 当前窗口 打开 代付",
                       "target":{
                         "targetType":"page",
-                        "url":"代付_p2.html",
+                        "url":"代付.html",
                         "includeVariables":true},
                       "linkType":"current"}]}]}},
           "tabbable":true,
@@ -300,7 +300,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-提交成功提醒/u81.png"}},
+            "normal~":"images/修改基本信息成功提示/u94.png"}},
 {
           "id":"a209a78fa03b4fed95d759b44e56c07a",
           "label":"",
@@ -319,7 +319,7 @@
           "images":{
             "start~":"resources/images/transparent.gif",
             "end~":"resources/images/transparent.gif",
-            "line~":"images/商户签约-提交成功提醒/u83_line.png"}},
+            "line~":"images/不可修改提醒/u96_line.png"}},
 {
           "id":"0d4bb507731c44bb97764fdccfd8a137",
           "label":"",
@@ -367,15 +367,15 @@
                   "isNewIfGroup":false,
                   "actions":[{
                       "action":"linkWindow",
-                      "description":"在 当前窗口 打开 首页（控制台）",
+                      "description":"在 当前窗口 打开 首页",
                       "target":{
                         "targetType":"page",
-                        "url":"首页（控制台）.html",
+                        "url":"首页.html",
                         "includeVariables":true},
                       "linkType":"current"}]}]}},
           "tabbable":true,
           "images":{
-            "normal~":"images/商户签约-提交成功提醒/u84.png"}},
+            "normal~":"images/不可修改提醒/u97.png"}},
 {
           "id":"1f31a58825484e72b85b797b082d5fec",
           "label":"",
@@ -447,7 +447,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/帮助/u88.png"}}]}},
+            "normal~":"images/帮助/u89.png"}}]}},
   "masters":{
 },
   "objectPaths":{

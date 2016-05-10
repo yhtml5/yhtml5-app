@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"商户签约-基本信息（图片上传）.html",
-  "generationDate":new Date(1461745745544.47),
+  "generationDate":new Date(1462860681790.15),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -633,7 +633,7 @@
           "images":{
             "start~":"resources/images/transparent.gif",
             "end~":"resources/images/transparent.gif",
-            "line~":"images/商户签约-基本信息（个人）/u33_line.png"}},
+            "line~":"images/基本信息（个人呈现）/u91_line.png"}},
 {
           "id":"c983ecbe4a824e5aa46c1888ec34fa36",
           "label":"",
@@ -794,7 +794,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u39.png"}},
+            "normal~":"images/基本信息（个人呈现）/u98.png"}},
 {
           "id":"cda859eadd464fa2ae24bd34947ad278",
           "label":"",
@@ -866,7 +866,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u39.png"}},
+            "normal~":"images/基本信息（个人呈现）/u98.png"}},
 {
           "id":"4c7a9a0c29034189bc6dc1903481aed9",
           "label":"",
@@ -1079,7 +1079,7 @@
           "images":{
             "start~":"resources/images/transparent.gif",
             "end~":"resources/images/transparent.gif",
-            "line~":"images/商户签约-基本信息（个人）/u33_line.png"}},
+            "line~":"images/基本信息（个人呈现）/u91_line.png"}},
 {
           "id":"939d2229676f46ccb7e4b6b6a72ade2e",
           "label":"",
@@ -1189,7 +1189,7 @@
           "images":{
             "start~":"resources/images/transparent.gif",
             "end~":"resources/images/transparent.gif",
-            "line~":"images/商户签约-基本信息（个人）/u33_line.png"}},
+            "line~":"images/基本信息（个人呈现）/u91_line.png"}},
 {
           "id":"70040c932aa54d22b13143581affe219",
           "label":"",
@@ -1226,7 +1226,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/帮助/u88.png"}},
+            "normal~":"images/帮助/u89.png"}},
 {
           "id":"5c622aedc2ea4ac0a2bdaa14b313ff7a",
           "label":"",
@@ -1358,7 +1358,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u69.png"}},
+            "normal~":"images/基本信息（企业修改）/u89.png"}},
 {
           "id":"da26ddded1d74838aa51e69572832354",
           "label":"",
@@ -1424,7 +1424,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u69.png"}},
+            "normal~":"images/基本信息（企业修改）/u89.png"}},
 {
           "id":"98d913dad5c34588af8e296b5ae8c46f",
           "label":"",
@@ -1490,7 +1490,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u69.png"}},
+            "normal~":"images/基本信息（企业修改）/u89.png"}},
 {
           "id":"009f51bb97cf4051944fa3ee47ceee85",
           "label":"",
@@ -1556,7 +1556,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u69.png"}},
+            "normal~":"images/基本信息（企业修改）/u89.png"}},
 {
           "id":"93930ab12ef0469f8fb38b0afcaaebc5",
           "label":"",
@@ -1622,7 +1622,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u69.png"}},
+            "normal~":"images/基本信息（企业修改）/u89.png"}},
 {
           "id":"e20cbcdfce9d4232859135359f5d8482",
           "label":"",
@@ -1688,7 +1688,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u69.png"}},
+            "normal~":"images/基本信息（企业修改）/u89.png"}},
 {
           "id":"d3f5b68eaa58455fac3127233f572b78",
           "label":"",
@@ -1754,7 +1754,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u69.png"}},
+            "normal~":"images/基本信息（企业修改）/u89.png"}},
 {
           "id":"cdef7067d7b945118f3577035f8d2ed8",
           "label":"",
@@ -1820,7 +1820,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u69.png"}},
+            "normal~":"images/基本信息（企业修改）/u89.png"}},
 {
           "id":"0fc17c66305245fdad0f74f84eb8eda7",
           "label":"",
@@ -1886,7 +1886,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u69.png"}},
+            "normal~":"images/基本信息（企业修改）/u89.png"}},
 {
           "id":"8e04ce27b09847f59f69833256405878",
           "label":"",
@@ -1952,7 +1952,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u69.png"}},
+            "normal~":"images/基本信息（企业修改）/u89.png"}},
 {
           "id":"6c370184cc614691981b933255c450cb",
           "label":"",
@@ -2018,7 +2018,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u69.png"}},
+            "normal~":"images/基本信息（企业修改）/u89.png"}},
 {
           "id":"a2d2a91640044da995eff772acfb12b1",
           "label":"",
@@ -2084,7 +2084,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u69.png"}},
+            "normal~":"images/基本信息（企业修改）/u89.png"}},
 {
           "id":"09deba33968347b2ac1b0f5623a7bd21",
           "label":"",
@@ -2425,7 +2425,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u39.png"}},
+            "normal~":"images/基本信息（个人呈现）/u98.png"}},
 {
           "id":"534ef73ffb814c1cba9a4752041cb0f0",
           "label":"",
@@ -2460,7 +2460,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u141.png"}},
+            "normal~":"images/基本信息（个人修改）/u93.png"}},
 {
           "id":"7486c9c6f99546ada27eedc5167984e7",
           "label":"",
@@ -2530,7 +2530,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u141.png"}},
+            "normal~":"images/基本信息（个人修改）/u93.png"}},
 {
           "id":"594590b468fd4810959cab859ac956cd",
           "label":"",
@@ -2600,7 +2600,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u141.png"}},
+            "normal~":"images/基本信息（个人修改）/u93.png"}},
 {
           "id":"836513df7e4946e8b1c836363de66e1e",
           "label":"",
@@ -2635,7 +2635,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u141.png"}},
+            "normal~":"images/基本信息（个人修改）/u93.png"}},
 {
           "id":"9329620782d24a68b89a5d03b35d5c18",
           "label":"",
@@ -2670,7 +2670,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u141.png"}},
+            "normal~":"images/基本信息（个人修改）/u93.png"}},
 {
           "id":"0793e09af08340a2aff33892fa6d7d89",
           "label":"",
@@ -2705,7 +2705,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u141.png"}},
+            "normal~":"images/基本信息（个人修改）/u93.png"}},
 {
           "id":"9ce13ef20b3b4d82b8332c179536e2af",
           "label":"",

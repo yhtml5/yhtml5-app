@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"结算管理新版.html",
-  "generationDate":new Date(1461745769189.25),
+  "generationDate":new Date(1462860695774.19),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -103,10 +103,10 @@
                   "isNewIfGroup":false,
                   "actions":[{
                       "action":"linkWindow",
-                      "description":"在 当前窗口 打开 代付 p2",
+                      "description":"在 当前窗口 打开 代付",
                       "target":{
                         "targetType":"page",
-                        "url":"代付_p2.html",
+                        "url":"代付.html",
                         "includeVariables":true},
                       "linkType":"current"}]}]}},
           "tabbable":true,
@@ -263,7 +263,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/帮助/u88.png"}},
+            "normal~":"images/帮助/u89.png"}},
 {
           "id":"b6ac365a0ad34befb207884a8dca8c73",
           "label":"",

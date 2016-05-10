@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"单笔复核.html",
-  "generationDate":new Date(1461745770026.98),
+  "generationDate":new Date(1462860696715.86),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -30,43 +30,6 @@
 },
     "diagram":{
       "objects":[{
-          "id":"7b9780a7094b4fa0b775e421e47d3f2c",
-          "label":"",
-          "type":"buttonShape",
-          "styleType":"buttonShape",
-          "visible":true,
-          "style":{
-            "horizontalAlignment":"left",
-            "verticalAlignment":"top",
-            "location":{
-              "x":1457,
-              "y":210},
-            "size":{
-              "width":430,
-              "height":250}},
-          "adaptiveStyles":{
-},
-          "objects":[{
-              "id":"3537d3cb21084105b38ea4a5eeff0874",
-              "label":"",
-              "isContained":true,
-              "type":"richTextPanel",
-              "styleType":"paragraph",
-              "visible":true,
-              "style":{
-                "horizontalAlignment":"left",
-                "verticalAlignment":"top",
-                "location":{
-                  "x":1457,
-                  "y":210},
-                "size":{
-                  "width":430,
-                  "height":250}},
-              "adaptiveStyles":{
-}}],
-          "images":{
-            "normal~":"images/帮助/u88.png"}},
-{
           "id":"1e403903237d4d3eba15d61a70d60682",
           "label":"",
           "type":"imageBox",
@@ -172,7 +135,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/单笔复核/u6.png"}},
+            "normal~":"images/单笔复核/u4.png"}},
 {
           "id":"05e17331fe6649489dc21fa3957f9ec3",
           "label":"",
@@ -191,7 +154,7 @@
           "images":{
             "start~":"resources/images/transparent.gif",
             "end~":"resources/images/transparent.gif",
-            "line~":"images/批量代付_p2/u8_line.png"}},
+            "line~":"images/批量代付/u8_line.png"}},
 {
           "id":"143ef1e5c31f462da809965bff7d3d66",
           "label":"",
@@ -270,15 +233,15 @@
                   "isNewIfGroup":false,
                   "actions":[{
                       "action":"linkWindow",
-                      "description":"在 当前窗口 打开 首页（控制台）",
+                      "description":"在 当前窗口 打开 首页",
                       "target":{
                         "targetType":"page",
-                        "url":"首页（控制台）.html",
+                        "url":"首页.html",
                         "includeVariables":true},
                       "linkType":"current"}]}]}},
           "tabbable":true,
           "images":{
-            "normal~":"images/帮助/u74.png"}},
+            "normal~":"images/帮助/u75.png"}},
 {
           "id":"8540f9ebc3f4451c9eb7ba6254375664",
           "label":"",
@@ -318,15 +281,15 @@
                   "isNewIfGroup":false,
                   "actions":[{
                       "action":"linkWindow",
-                      "description":"在 当前窗口 打开 代付 p2",
+                      "description":"在 当前窗口 打开 代付",
                       "target":{
                         "targetType":"page",
-                        "url":"代付_p2.html",
+                        "url":"代付.html",
                         "includeVariables":true},
                       "linkType":"current"}]}]}},
           "tabbable":true,
           "images":{
-            "normal~":"images/批量代付_p2/u23.png"}},
+            "normal~":"images/批量代付/u23.png"}},
 {
           "id":"5255c1bda12d45dda78d1dee48f6e950",
           "label":"",
@@ -363,39 +326,6 @@
           "images":{
             "normal~":"resources/images/transparent.gif"}},
 {
-          "id":"1d5f79a8d35746338f1a861b51965c5f",
-          "label":"",
-          "type":"imageBox",
-          "styleType":"imageBox",
-          "visible":true,
-          "style":{
-            "location":{
-              "x":649,
-              "y":311},
-            "size":{
-              "width":30,
-              "height":29}},
-          "adaptiveStyles":{
-},
-          "objects":[{
-              "id":"d8ac2dc6e8364f0092a3e18514f54be2",
-              "label":"",
-              "isContained":true,
-              "type":"richTextPanel",
-              "styleType":"paragraph",
-              "visible":true,
-              "style":{
-                "location":{
-                  "x":649,
-                  "y":311},
-                "size":{
-                  "width":30,
-                  "height":29}},
-              "adaptiveStyles":{
-}}],
-          "images":{
-            "normal~":"images/单笔复核/u17.png"}},
-{
           "id":"eb9835cec9d14348bd7a9f0aedcd4f5c",
           "label":"",
           "type":"buttonShape",
@@ -403,7 +333,7 @@
           "visible":true,
           "style":{
             "location":{
-              "x":769,
+              "x":723,
               "y":315},
             "size":{
               "width":113,
@@ -419,7 +349,7 @@
               "visible":true,
               "style":{
                 "location":{
-                  "x":769,
+                  "x":723,
                   "y":315},
                 "size":{
                   "width":113,
@@ -436,7 +366,7 @@
           "visible":true,
           "style":{
             "location":{
-              "x":696,
+              "x":650,
               "y":315},
             "size":{
               "width":53,
@@ -452,7 +382,7 @@
               "visible":true,
               "style":{
                 "location":{
-                  "x":696,
+                  "x":650,
                   "y":315},
                 "size":{
                   "width":53,
@@ -799,7 +729,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/基本信息（个人呈现）/u124.png"}},
+            "normal~":"images/基本信息（个人呈现）/u125.png"}},
 {
           "id":"891963934a584e199936446a129737bb",
           "label":"",
@@ -865,7 +795,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u69.png"}},
+            "normal~":"images/基本信息（企业修改）/u89.png"}},
 {
           "id":"fc3c21a035ec431d8bfb3d9d60711f96",
           "label":"",
@@ -931,7 +861,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/商户签约-基本信息（个人）/u69.png"}},
+            "normal~":"images/基本信息（企业修改）/u89.png"}},
 {
           "id":"3236ffe0d56c482aaaef8df587d12f48",
           "label":"",
@@ -982,7 +912,7 @@
                       "linkType":"current"}]}]}},
           "tabbable":true,
           "images":{
-            "normal~":"images/单笔复核/u51.png"}},
+            "normal~":"images/单笔复核/u47.png"}},
 {
           "id":"f0d48b20cb594272a012585c4a6c64b9",
           "label":"",
@@ -1021,113 +951,105 @@
   "masters":{
 },
   "objectPaths":{
-    "7b9780a7094b4fa0b775e421e47d3f2c":{
-      "scriptId":"u0"},
-    "3537d3cb21084105b38ea4a5eeff0874":{
-      "scriptId":"u1"},
     "1e403903237d4d3eba15d61a70d60682":{
-      "scriptId":"u2"},
+      "scriptId":"u0"},
     "7a43a20438f345339bcaba18240038b3":{
-      "scriptId":"u3"},
+      "scriptId":"u1"},
     "e430860ed3554e989ebb8e35544f8315":{
-      "scriptId":"u4"},
+      "scriptId":"u2"},
     "0aeae03ce1144bee8d3b30323a0043ba":{
-      "scriptId":"u5"},
+      "scriptId":"u3"},
     "e98891558c1745dab9042219496a0431":{
-      "scriptId":"u6"},
+      "scriptId":"u4"},
     "bee022640c4a406b8c70ce739523fc1b":{
-      "scriptId":"u7"},
+      "scriptId":"u5"},
     "05e17331fe6649489dc21fa3957f9ec3":{
-      "scriptId":"u8"},
+      "scriptId":"u6"},
     "143ef1e5c31f462da809965bff7d3d66":{
-      "scriptId":"u9"},
+      "scriptId":"u7"},
     "a1689b65ba374566b639404c00719f7d":{
-      "scriptId":"u10"},
+      "scriptId":"u8"},
     "3db0446833dd4432a24924bcf25a14fe":{
-      "scriptId":"u11"},
+      "scriptId":"u9"},
     "59869d0f616340399529411e38aa7ec6":{
-      "scriptId":"u12"},
+      "scriptId":"u10"},
     "8540f9ebc3f4451c9eb7ba6254375664":{
-      "scriptId":"u13"},
+      "scriptId":"u11"},
     "c4620d76c9934fae9118608fb071ad9d":{
-      "scriptId":"u14"},
+      "scriptId":"u12"},
     "5255c1bda12d45dda78d1dee48f6e950":{
-      "scriptId":"u15"},
+      "scriptId":"u13"},
     "9834860f93b74fad9738d25f4684e411":{
-      "scriptId":"u16"},
-    "1d5f79a8d35746338f1a861b51965c5f":{
-      "scriptId":"u17"},
-    "d8ac2dc6e8364f0092a3e18514f54be2":{
-      "scriptId":"u18"},
+      "scriptId":"u14"},
     "eb9835cec9d14348bd7a9f0aedcd4f5c":{
-      "scriptId":"u19"},
+      "scriptId":"u15"},
     "8e016961951546109985858cf01adac6":{
-      "scriptId":"u20"},
+      "scriptId":"u16"},
     "ab5898cce3d340189afb5718e4ca2144":{
-      "scriptId":"u21"},
+      "scriptId":"u17"},
     "b63f2c6cbcc34653bde8f68c96d1fc5b":{
-      "scriptId":"u22"},
+      "scriptId":"u18"},
     "6e58857cc277408486453f3ee6bc86eb":{
-      "scriptId":"u23"},
+      "scriptId":"u19"},
     "d26642ab9aef4a86903b418a86327080":{
-      "scriptId":"u24"},
+      "scriptId":"u20"},
     "ab0bbf9b5ad34eb0bfafb3ad72442ea2":{
-      "scriptId":"u25"},
+      "scriptId":"u21"},
     "a828079a0ed8425ba07b0e1554f6bfc1":{
-      "scriptId":"u26"},
+      "scriptId":"u22"},
     "b5098629d5bc459587df720289ba05fb":{
-      "scriptId":"u27"},
+      "scriptId":"u23"},
     "a3d4c72033f844f8843d3f885510191a":{
-      "scriptId":"u28"},
+      "scriptId":"u24"},
     "45244091c3734fabb3f69145b7e0f167":{
-      "scriptId":"u29"},
+      "scriptId":"u25"},
     "73b78c7c78ff4e24a06a94877dd498b4":{
-      "scriptId":"u30"},
+      "scriptId":"u26"},
     "9b28b1c02e49429185a4b94cab182ff5":{
-      "scriptId":"u31"},
+      "scriptId":"u27"},
     "e52a8220100d4307913eb71878a4295b":{
-      "scriptId":"u32"},
+      "scriptId":"u28"},
     "18e047abe8c5441f96f5fcdf57293dff":{
-      "scriptId":"u33"},
+      "scriptId":"u29"},
     "a5099260167b40ad8286e1885491d810":{
-      "scriptId":"u34"},
+      "scriptId":"u30"},
     "6beffdb0582d4988b71081bdbc540dc3":{
-      "scriptId":"u35"},
+      "scriptId":"u31"},
     "08dadd7619fb4a8e965d089648f14666":{
-      "scriptId":"u36"},
+      "scriptId":"u32"},
     "171a040fffa042ddbaf08afe87027f7b":{
-      "scriptId":"u37"},
+      "scriptId":"u33"},
     "2904009c2c1642e4913592d3b55346ca":{
-      "scriptId":"u38"},
+      "scriptId":"u34"},
     "c8206582c14d493291da3efa46b1b1db":{
-      "scriptId":"u39"},
+      "scriptId":"u35"},
     "a8d06e950f50409fbc96bd23269568a2":{
-      "scriptId":"u40"},
+      "scriptId":"u36"},
     "ab75d4df983a4acb8b301040a5591ff9":{
-      "scriptId":"u41"},
+      "scriptId":"u37"},
     "e83e782142c846d59e2db3e9bf7813cb":{
-      "scriptId":"u42"},
+      "scriptId":"u38"},
     "891963934a584e199936446a129737bb":{
-      "scriptId":"u43"},
+      "scriptId":"u39"},
     "44a826d05aa040babf1f938218722b60":{
-      "scriptId":"u44"},
+      "scriptId":"u40"},
     "2b76a9fbb77744d79f3fd5978389a4b1":{
-      "scriptId":"u45"},
+      "scriptId":"u41"},
     "809acc5f48e947c888fea1ea96c604f7":{
-      "scriptId":"u46"},
+      "scriptId":"u42"},
     "fc3c21a035ec431d8bfb3d9d60711f96":{
-      "scriptId":"u47"},
+      "scriptId":"u43"},
     "6a5efefe41a848ed956c486f9b396dc0":{
-      "scriptId":"u48"},
+      "scriptId":"u44"},
     "2de541c476b04dce8c8c1835f7d01e8e":{
-      "scriptId":"u49"},
+      "scriptId":"u45"},
     "e560b397818a4a8585f4fc6e83f821ba":{
-      "scriptId":"u50"},
+      "scriptId":"u46"},
     "3236ffe0d56c482aaaef8df587d12f48":{
-      "scriptId":"u51"},
+      "scriptId":"u47"},
     "9f05ac21c88f4e2f997fb9647b2e7ff6":{
-      "scriptId":"u52"},
+      "scriptId":"u48"},
     "f0d48b20cb594272a012585c4a6c64b9":{
-      "scriptId":"u53"},
+      "scriptId":"u49"},
     "6ae70e4039e74f0b8fe8c84389af30d6":{
-      "scriptId":"u54"}}});
+      "scriptId":"u50"}}});

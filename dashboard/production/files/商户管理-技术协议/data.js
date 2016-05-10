@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"商户管理-技术协议.html",
-  "generationDate":new Date(1461745744777.92),
+  "generationDate":new Date(1462860680864.5),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -204,7 +204,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/帮助/u88.png"}},
+            "normal~":"images/帮助/u89.png"}},
 {
           "id":"20a6ce362a0e4e9295d40c18f5e62a7d",
           "label":"",
