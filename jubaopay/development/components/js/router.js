@@ -6,8 +6,7 @@ angular.module('yhtml5', [
     ])
     .config(function($stateProvider, $urlRouterProvider) {
         $urlRouterProvider
-        //.when('/dashboard/*', '/dashboard')
-            .otherwise("/index")
+            .otherwise("/index");
         $stateProvider
             .state('index', {
                 url: "/index",
@@ -24,7 +23,6 @@ angular.module('yhtml5', [
                     "footer": {
                         templateUrl: "view/footer/footer.html"
                     }
-
                 }
             })
             .state('download', {
@@ -84,5 +82,5 @@ angular.module('yhtml5', [
                         templateUrl: "view/footer/footer.html"
                     }
                 }
-            })
-    })
+            });
+    });

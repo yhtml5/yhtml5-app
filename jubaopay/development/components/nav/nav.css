@@ -20,7 +20,7 @@
     height: 80px;
     width: 160px;
     background: url(qq-lg.png) no-repeat 0 0;
-    /*cursor: pointer;*/
+    cursor: pointer;
     -webkit-transition: right 2s;
     -moz-transition: right 2s;
     transition: right 2s;

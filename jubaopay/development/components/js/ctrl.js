@@ -155,4 +155,4 @@ angular.module('controllers', ['ui.bootstrap', 'ngAnimate'])
             "cost": "2000-3000",
             "time": "T+1"
         }]
-    })
+    });

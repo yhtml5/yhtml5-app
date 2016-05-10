@@ -35,12 +35,59 @@ fis.media('dev')
     })
     /*************************test模板*****************************/
 fis.media('test')
-    .match('{/fis-conf.*,map.json}', {
-        release: false
+    .set("project.ignore", [
+        '**/**.test.js',
+        '*.psd',
+        '.git/**',
+        '/components/**',
+        '/bower_components/**',
+        '/fis-conf.*'
+    ])
+    .match('{/components/**,/bower_components/**}', {
+        release: '/dist/$0',
     })
-    .match('{/static/**,/bower_components/**,*.png,*.jpg,iconfont.*}', {
-        domain: '',
-    });
+    .match('{index.html,/components/**/*.js,/components/**/*.css,/view/**/*.js,/view/**/*.css,/view/**/*.html}', {
+        optimizer: fis.plugin('htmlmin', {
+            removeComments: true,
+            collapseWhitespace: true,
+            minifyJS: true
+        })
+    })
+    .match('::package', {
+        postpackager: fis.plugin('loader', {
+            resourceType: 'commonJs',
+            useInlineMap: true,
+        })
+    })
+    .match('/bower_components/**/*.css', {
+        packTo: '/static/index.css',
+    })
+    .match('/bower_components/**/*.js', {
+        packTo: '/static/index.js',
+    })
+    .match('{index.css,/server/author.css,/components/**/*.css,/view/**/*.css}', {
+        packTo: '/static/yhtml5.css',
+    })
+    .match('{index.js,/server/author.js,/components/**/*.js,/view/**/*.js}', {
+        packTo: '/static/yhtml5.js',
+    })
+    .match('{*.gif,*.png,*.gif,*.jpg}', {
+        release: '/static/img/$1',
+    })
+    .match('qq-lg.png', {
+        url: '/img/$1',
+    })
+    .match('/components/**/(iconfont.*)', {
+        release: '/static/iconfont/$1',
+        url: '/iconfont/$1'
+    })
+    .match('{/static/**,*.png,*.jpg,iconfont.*}', {
+        useHash: true
+    })
+    .match('{/static/**,/bower_components/**,/view/**,*.png,*.jpg,iconfont.*}', {
+        domain: '.',
+    })
+
 ///**************************dev******************************/
 //fis.media('dev')
 //  .set("project.ignore", [
