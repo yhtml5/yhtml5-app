@@ -31,6 +31,9 @@ angular.module('yhtml5', [
                     "nav": {
                         templateUrl: "view/nav-blue/nav-blue.html"
                     },
+                    "nav-right": {
+                        templateUrl: "view/nav-right/nav-right.html"
+                    },
                     "content": {
                         templateUrl: "view/download/download.html"
                     },
@@ -45,6 +48,9 @@ angular.module('yhtml5', [
                     "nav": {
                         templateUrl: "view/nav-blue/nav-blue.html"
                     },
+                    "nav-right": {
+                        templateUrl: "view/nav-right/nav-right.html"
+                    },
                     "content": {
                         templateUrl: "view/production/production.html"
                     },
@@ -57,7 +63,7 @@ angular.module('yhtml5', [
                 url: "/accounting",
                 views: {
                     "content": {
-                        templateUrl: "view/accounting/accounting.html"
+                        templateUrl: "view/production.accounting/production.accounting.html"
                     }
                 }
             })
@@ -65,7 +71,7 @@ angular.module('yhtml5', [
                 url: "/credit",
                 views: {
                     "content": {
-                        templateUrl: "view/credit/credit.html"
+                        templateUrl: "view/production.credit/production.credit.html"
                     }
                 }
             })
@@ -75,8 +81,28 @@ angular.module('yhtml5', [
                     "nav": {
                         templateUrl: "view/nav-blue/nav-blue.html"
                     },
+                    "nav-right": {
+                        templateUrl: "view/nav-right/nav-right.html"
+                    },
                     "content": {
                         templateUrl: "view/cost/cost.html"
+                    },
+                    "footer": {
+                        templateUrl: "view/footer/footer.html"
+                    }
+                }
+            })
+            .state('contact', {
+                url: "/contact",
+                views: {
+                    "nav": {
+                        templateUrl: "view/nav-blue/nav-blue.html"
+                    },
+                    "nav-right": {
+                        templateUrl: "view/nav-right/nav-right.html"
+                    },
+                    "content": {
+                        templateUrl: "view/contact/contact.html"
                     },
                     "footer": {
                         templateUrl: "view/footer/footer.html"
