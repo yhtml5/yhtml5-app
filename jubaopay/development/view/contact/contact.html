@@ -25,11 +25,11 @@
         <div class="y-mt60" ng-repeat="data in contactRecord">
             <div class="row text-left">
                 <div class="col-sm-2">
-                    <img alt="" class="img-responsive img-rounded" src="{{data.img}}">
+                    <img alt="" class="img-responsive img-rounded" ng-src="{{data.img}}">
                 </div>
                 <div class="col-sm-5">
                     <h4 ng-bind="data.name"></h4>
-                    <h4><small ng-bind="data.des">4年产品顾问经验，曾服务过手游、页游、端游和工具类APP等200个多个项目。</small></h4>
+                    <h4><small ng-bind="data.des"></small></h4>
                 </div>
                 <div class="col-sm-2">
                     <img alt="" class="img-responsive img-rounded center-block y-wt80" src="../../components/contact/code2.jpg">
@@ -37,7 +37,7 @@
                 </div>
                 <div class="col-sm-3">
                     <p>邮箱地址：</p>
-                    <p ng-bind="data.emaill">yu.duan@jubaobar.com</p>
+                    <p ng-bind="data.emaill"></p>
                     <p class="y-mt20">QQ：
                         <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=17776899&site=qq&menu=yes">
                             <img src="../../components/img/qq.png">
