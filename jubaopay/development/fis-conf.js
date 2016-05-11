@@ -125,21 +125,20 @@ fis.media('cdn')
     .match('{index.js,/server/author.js,/components/**/*.js,/view/**/*.js}', {
         packTo: '/static/yhtml5.js',
     })
-    .match('{*.gif,*.png,*.gif, code.jpg, process.jpg}', {
+    .match('{*.gif,*.png,*.gif,*.jpg}', {
         release: '/static/img/$1',
     })
-    .match('qq-lg.png', {
-        url: '/img/$1',
-    })
+    //  .match('qq-lg.png', {
+    //      url: '/img/$1',
+    //  })
     .match('/components/**/(iconfont.*)', {
         release: '/static/iconfont/$1',
-        url: '/iconfont/$1'
     })
     .match('{/static/**,*.png,*.jpg,iconfont.*}', {
-        useHash: true
+        useHash: true,
     })
     .match('{/static/**,/bower_components/**,/view/**,*.png,*.jpg,iconfont.*}', {
-        domain: 'http://img.jubaobar.cn/static/jubaopay_site/v4',
+        domain: 'http://static.jubaobar.cn/project/jubaopay',
     });
 
 ///*************************CDN规范*****************************/
