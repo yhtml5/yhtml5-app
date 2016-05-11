@@ -119,10 +119,10 @@ fis.media('cdn')
     .match('/bower_components/**/*.js', {
         packTo: '/static/index.js',
     })
-    .match('{index.css,/server/author.css,/components/**/*.css,/view/**/*.css}', {
+    .match('{node.css,/server/author.css,/components/**/*.css,/view/**/*.css}', {
         packTo: '/static/yhtml5.css',
     })
-    .match('{index.js,/server/author.js,/components/**/*.js,/view/**/*.js}', {
+    .match('{node.js,/server/author.js,/components/**/*.js,/view/**/*.js}', {
         packTo: '/static/yhtml5.js',
     })
     .match('{*.gif,*.png,*.jpg}', {
