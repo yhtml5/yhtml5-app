@@ -1,17 +1,17 @@
+<h3>产品介绍</h3>
+<h3><small>基于目前市场上第三方支付通道分散、申请流程繁琐、技术对接门槛高等问题，我们以SaaS云服务形式为开发者提供专业的支付技术服务解决方案。您只需要提交一次材料，我们可以代你申请对应的支付通道，同时可实现主流支付方式全面接入，完全覆盖IOS、Andriod、H5及PC端的支付场景，并能够从管理后台中查询交易订单、对账信息、运营数据等。</small></h3>
+<h2 class="y-mt40">一键接入，极速收单</h2>
+<h3><small>（帮助您在各种应用场景成功收款）</small></h3>
 <div class="row y-mt60">
-    <div class="col-sm-4">
-        <img src="../../components/img/consume.jpg" class="img-rounded img-responsive center-block">
-        <h3>刺激消费</h3>
-        <p class="y-wt80 center-block">无抵押、免利息、免手续费的授信服务降低了消费门槛，刺激冲动消费重复消费，成为开发者的天然触客渠道</p>
-    </div>
-    <div class="col-sm-4">
-        <img src="../../components/img/money.jpg" class="img-rounded img-responsive center-block">
-        <h3>更快变现</h3>
-        <p class="y-wt80 center-block">授信渠道向您支付全额货款，资金回笼迅速，账期缩短</p>
-    </div>
-    <div class="col-sm-4">
-        <img src="../../components/img/data.jpg" class="img-rounded img-responsive center-block">
-        <h3>数据智能风控</h3>
-        <p class="y-wt80 center-block">深度挖据客户信用数据，极速完成审核，开发者无需承担任何坏账或逾期还款费用</p>
+    <div class="col-xs-4 col-lg-3 y-mt20" ng-repeat="data in paymentRecord">
+        <div class="row y-card y-card-sm">
+            <div class="col-sm-5">
+                <i class="iconfont" ng-class="data.class"></i>
+            </div>
+            <div class="col-sm-7">
+                <h3 ng-bind="data.name"></h3>
+                <h3><small ng-bind="data.note"></small></h3>
+            </div>
+        </div>
     </div>
 </div>
