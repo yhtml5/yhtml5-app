@@ -125,7 +125,7 @@ fis.media('cdn')
     .match('{index.js,/server/author.js,/components/**/*.js,/view/**/*.js}', {
         packTo: '/static/yhtml5.js',
     })
-    .match('{*.gif,*.png,*.gif,*.jpg}', {
+    .match('{*.gif,*.png,*.jpg}', {
         release: '/static/img/$1',
     })
     //  .match('qq-lg.png', {
@@ -137,6 +137,10 @@ fis.media('cdn')
     .match('{/static/**,*.png,*.jpg,iconfont.*}', {
         useHash: true,
     })
+//  .match('{girl1.jpg,girl2.jpg,girl3.jpg}', {
+//      release: '/static/img/$0',
+//      useHash: false,
+//  })
     .match('{/static/**,/bower_components/**,/view/**,*.png,*.jpg,iconfont.*}', {
         domain: 'http://static.jubaobar.cn/project/jubaopay',
     });

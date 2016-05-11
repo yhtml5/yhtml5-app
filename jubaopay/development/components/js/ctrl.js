@@ -33,7 +33,7 @@ angular.module('controllers', ['ui.bootstrap', 'ngAnimate'])
             "name": "PHP包",
             "note": "PC端",
             "class": "icon-php",
-            "url":"http://img.jubaobar.cn/static/openpay-doc/php-demo.zipp"
+            "url":"http://img.jubaobar.cn/static/openpay-doc/php-demo.zip"
         }, {
             "name": "COCS2D",
             "note": "SDK开发包",
@@ -63,13 +63,29 @@ angular.module('controllers', ['ui.bootstrap', 'ngAnimate'])
             "name": "支付宝",
             "note": "扫码支付",
             "class": "icon-zhifubao1"
-        }, {
+        },  {
+            "name": "支付宝",
+            "note": "WAP支付",
+            "class": "icon-zhifubao1"
+        },{
+            "name": "支付宝",
+            "note": "即时到帐",
+            "class": "icon-zhifubao1"
+        },{
             "name": "微信支付",
-            "note": "APP支付",
+            "note": "App 支付",
             "class": "icon-weixinzhifu"
-        }, {
+        },{
+            "name": "微信支付",
+            "note": "公众号支付",
+            "class": "icon-weixinzhifu"
+        },  {
             "name": "银联",
             "note": "银联支付",
+            "class": "icon-yinlian"
+        }, {
+            "name": "银联",
+            "note": "网银支付",
             "class": "icon-yinlian"
         }, {
             "name": "Apple",
@@ -80,6 +96,18 @@ angular.module('controllers', ['ui.bootstrap', 'ngAnimate'])
             "note": "移动网页支付",
             "class": "icon-baiduqianbao"
         }, {
+            "name": "京东支付",
+            "note": "移动网页支付",
+            "class": "icon-jingdong-1"
+        },  {
+            "name": "财付通",
+            "note": "PC 支付",
+            "class": "icon-caifutong"
+        }, {
+            "name": "快钱",
+            "note": "PC 支付",
+            "class": "icon-kuaiqian"
+        },{
             "name": "易宝支付",
             "note": "移动网页支付",
             "class": "icon-yibao"
@@ -154,5 +182,21 @@ angular.module('controllers', ['ui.bootstrap', 'ngAnimate'])
             "type": "所有形式",
             "cost": "2000-3000",
             "time": "T+1"
+        }];
+        $scope.contactRecord = [{
+            "name": "杜晓涵",
+            "des": "4年产品顾问经验，曾服务过手游、页游、端游和工具类APP等200个多个项目。",
+            "emaill": "chenlin.xu@jubaobar.com",
+            "img":"http://static.jubaobar.cn/project/jubaopay/static/img/girl1"
+        },{
+            "name": "玲珑",
+            "des": "4年产品顾问经验，曾服务过手游、页游、端游和工具类APP等200个多个项目。",
+            "emaill": "rong.ling@jubaobar.com",
+            "img":"http://static.jubaobar.cn/project/jubaopay/static/img/girl2"
+        },{
+            "name": "杨小佳",
+            "des": "5年产品顾问经验，曾服务过手游、页游、端游和工具类APP等300个多个项目，经验丰富，服务到位。",
+            "emaill": "yu.duan@jubaobar.com",
+            "img":"http://static.jubaobar.cn/project/jubaopay/static/img/girl3"
         }]
     });
