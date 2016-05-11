@@ -85,7 +85,7 @@ fis.media('test')
         useHash: true
     })
     .match('{/static/**,/bower_components/**,/view/**,*.png,*.jpg,iconfont.*}', {
-        domain: '.',
+        domain: 'http://img.jubaobar.cn/static/jubaopay_site/v4/',
     });
 
 ///*************************CDN规范*****************************/
