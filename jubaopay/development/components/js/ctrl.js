@@ -47,12 +47,12 @@ angular.module('controllers', ['ui.bootstrap', 'ngAnimate'])
         }, {
             "name": "Andorid",
             "note": "SDK开发包",
-            "class": "icon-ios",
+            "class": "icon-iconanzhuo",
             "url":"http://img.jubaobar.cn/static/openpay-doc/new-sdk-demo.zip"
         }, {
             "name": "商户文档",
             "note": "下载接入文档",
-            "class": "icon-iconanzhuo",
+            "class": "icon-iconshtjrz",
             "url":"http://img.jubaobar.cn/static/openpay-doc/jubaopay-guide.pdf"
         }];
         $scope.paymentRecord = [{
