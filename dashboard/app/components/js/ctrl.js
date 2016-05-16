@@ -1,9 +1,4 @@
 'use strict';
-/*
- * @require app.js
- *
- */
-
 angular.module('controllers', ['ui.bootstrap', 'ngAnimate'])
     .controller('controllers', function($scope, $uibModal) {
         $scope.animationsEnabled = true;

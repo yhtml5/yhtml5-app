@@ -4,24 +4,47 @@
 <!--[if IE 8]>     <html lang="en" ng-app="app" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html lang="zh-CN" ng-app="yhtml5" ng-controller="controllers" class="no-js">
-	<!--<![endif]-->
+    <!--<![endif]-->
 
-	<head>
-		<link rel="import" href="components/head/head.html?__inline">
-	</head>
+    <head>
+        <link rel="import" href="components/head/head.html?__inline">
+    </head>
 
-	<body class="y-bg-ebebeb">
-		<!--[if lt IE 7]>
+    <body class="y-bg-ebebeb">
+        <!--[if lt IE 7]>
           <p class="browsehappy">您在使用<strong>上个世纪</strong>浏览器.
           	请<a href="http://browsehappy.com/">升级您的浏览器</a>获取更好的体验</p>
         <![endif]-->
-		<header class="y-header" ui-view="nav"></header>
-		<div ui-view="content"></div>
-		<!--<div class="container y-body y-mt-30" ui-view="content"></div>-->
-		<!-- In production use:
-                 <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-            -->
-		<script src="app.js"></script>
-	</body>
+        <header class="y-header" ui-view="nav"></header>
+        <div ui-view="content"></div>
+
+        <!--  css
+        @require ../../bower_components/html5-boilerplate/dist/css/normalize.css
+        @require ../../bower_components/html5-boilerplate/dist/css/main.css
+        @require ../../bower_components/bootstrap/dist/css/bootstrap.css
+        @require /server/author.css
+        @require /components/iconfont/iconfont.css
+        @require /components/css/cover.css
+        @require /components/css/bootstrap.es.css
+        @require /components/css/animation.css
+        @require /components/css/custom.css
+        @require /components/css/base.css
+        @require /components/nav/nav.css
+        @require /view/footer/footer.css
+        -->
+
+        <!--  js
+        @require /bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js
+        @require /bower_components/angular/angular.js
+        @require /bower_components/angular-bootstrap/ui-bootstrap-tpls.js
+        @require /bower_components/angular-animate/angular-animate.js
+        @require /bower_components/angular-ui-router/release/angular-ui-router.js
+        @require /bower_components/angular-ui-select/dist/select.js
+        @require /server/author.js
+        @require /components/js/router.js
+        @require /components/js/ctrl.js
+        -->
+
+    </body>
 
 </html>

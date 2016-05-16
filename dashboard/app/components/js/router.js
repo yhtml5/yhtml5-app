@@ -1,14 +1,4 @@
 'use strict';
-/*
- * @require /bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js
- * @require /bower_components/angular/angular.min.js
- * @require /bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js
- * @require /bower_components/angular-animate/angular-animate.min.js
- * @require /bower_components/angular-ui-router/release/angular-ui-router.min.js
- * @require /bower_components/angular-ui-select/dist/select.min.js
- *
- */
-
 // Declare app level module which depends on views, and components
 angular.module('yhtml5', [
         'ui.router',
