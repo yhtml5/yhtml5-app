@@ -18,7 +18,7 @@ angular.module('yhtml5.appList', ['ui.bootstrap', 'ngAnimate'])
             $scope.animationsEnabled = !$scope.animationsEnabled;
         };
         //get json
-        var appListURL = __uri('../../server/init.json')
+        var appListURL = '/server/init.json'
 
         $http.get('../../server/init.json')
             .success(function(response) {

@@ -16,7 +16,8 @@ fis.match('/components/**/(*.{png,gif,jpg,jpeg})', {
     release: '${project.static}/img/$1'
 });
 fis.match('/components/**/(iconfont.*)', {
-    release: '${project.static}/iconfont/$1'
+    release: '${project.static}/iconfont/$1',
+    url:'/iconfont/$1'//本地打开路径 整合到 local
 });
 fis.match('/bower_components/**/(*.{js,css})', {
     release: '${project.static}/lib/$1'
@@ -56,8 +57,8 @@ fis.match('{/server/author.css,/components/**/*.css}', {
 fis.match('{/static/**,/components/**/*.{png,gif,jpg,jpeg}}', {
     useHash: true
 })
-fis.match('/static/*/**', {
-    domain: ''
+fis.match('{/static/**,/components/**/*.{png,gif,jpg,jpeg},/components/**/(iconfont.*)}', {
+    domain: '.'
 });
 /*************************CDN规范*****************************/
 
