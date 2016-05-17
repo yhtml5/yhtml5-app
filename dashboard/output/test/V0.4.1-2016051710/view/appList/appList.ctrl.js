@@ -19,8 +19,7 @@ angular.module('yhtml5.appList', ['ui.bootstrap', 'ngAnimate'])
         };
         //get json
         var appListURL = '/server/init.json'
-
-        $http.get('../../server/init.json')
+        $http.get('/front/homePage/console.htm')
             .success(function(response) {
                 $scope.userApps = response.userApps //$scope.names 为一个数组
             })

@@ -244,7 +244,7 @@
             ]
         },
         "p2": {
-            "uri": "./static/index_3a8e18237.js",
+            "uri": "./static/index_7b08c1f68.js",
             "type": "js",
             "has": [
                 "server/author.js",
