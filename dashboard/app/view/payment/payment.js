@@ -1,10 +1,6 @@
 'use strict';
-/*
- * @require ../../app.js
- *
- */
-angular.module('yhtml5.nav', ['ui.bootstrap', 'ngAnimate', 'ui.router']) //可以不加ui模块？
-	.controller('yhtml5.nav', function($scope, $http, $uibModal) {
+angular.module('yhtml5.navMain', ['ui.bootstrap', 'ngAnimate', 'ui.router']) //可以不加ui模块？
+	.controller('yhtml5.navMain', function($scope, $http, $uibModal) {
 		$scope.userVerify = true
 		$scope.userCenter = true
 		$scope.toggle = function() {

@@ -1,8 +1,4 @@
 'use strict';
-/*
- * @require ../../app.js
- *
- */
 angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate'])
     .controller('yhtml5.user', function($scope, $uibModal) {
         $scope.userPersonFormEnabled = true

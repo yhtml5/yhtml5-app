@@ -1,8 +1,4 @@
 'use strict';
-/*
- * @require ../../app.js
- *
- */
 angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate'])
 	.controller('yhtml5.appsetting', function($scope, $uibModal) {
 		$scope.animationsEnabled = true;

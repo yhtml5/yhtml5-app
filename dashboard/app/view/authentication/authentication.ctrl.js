@@ -1,8 +1,4 @@
 'use strict';
-/*
- * @require ../../app.js
- *
- */
 angular.module('yhtml5.authentication', ['ui.bootstrap', 'ngAnimate'])
 	.controller('yhtml5.authentication', function($scope, $uibModal, $state) {
 		$scope.isStep1 = true

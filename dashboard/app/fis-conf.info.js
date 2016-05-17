@@ -4,11 +4,13 @@
  *    fis.set("project.ignore", ['**', '**',]); 忽略的文件
  *    安装插件 npm install [-g] fis3-postpackager-loader
  *    fis3-postpackager-loader 分析 __RESOURCE_MAP__ 结构，来解决资源加载问题？
+ *    media 默认为dev
+ *    fis配置都是相对于fis-conf.js文件的绝对定位
+ *
  *
  * === path ===
  *    "/"为绝对路径,  "./"相对当前目录， "../"上级目录
  *    $0 代表的是 match 到的整个字符串
- *    release输出相对于fis-conf.js文件的绝对定位
  *    js里的资源定位需要加上__uri() //不是__url()
  *    domain设置域名，相对路径配置"."
  *

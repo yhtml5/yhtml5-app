@@ -1,9 +1,4 @@
 'use strict';
-/*
- * @require ../../app.js
- *
- */
-
 angular.module('yhtml5.account', ['ui.bootstrap', 'ngAnimate'])
     .controller('yhtml5.account', function($scope, $http, $uibModal) {
         //get json

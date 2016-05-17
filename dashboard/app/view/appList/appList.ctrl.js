@@ -1,8 +1,4 @@
 'use strict';
-/*
- * @require ../../app.js
- *
- */
 angular.module('yhtml5.appList', ['ui.bootstrap', 'ngAnimate'])
     .controller('yhtml5.appList', function($scope, $http, $uibModal) {
         //appList add modal

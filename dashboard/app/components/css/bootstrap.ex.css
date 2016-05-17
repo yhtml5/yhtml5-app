@@ -1,6 +1,4 @@
-/* Expand bootstrap style
- * ====================== */
-
+/*==================== Expand bootstrap ====================*/
 .y-ellipsis {
     overflow: hidden;
     text-overflow: ellipsis;
