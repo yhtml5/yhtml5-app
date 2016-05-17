@@ -251,39 +251,11 @@
     color: #777;
 }
 
-.y-pc {
-    font-size: 120px;
-}
-
-.y-jisufahuo {
-    font-size: 120px;
-}
-
 .y-slide-font {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
     max-width: 1200px;
-}
-
-#fp-nav ul li {
-    height: 14px !important;
-    margin-bottom: 10px !important;
-    width: 14px !important;
-}
-
-#fp-nav ul li a span {
-    background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
-    border: 1px solid #6090b6 !important;
-    height: 14px !important;
-    left: 0 !important;
-    margin: 0 !important;
-    top: 0 !important;
-    width: 14px !important;
-}
-
-#fp-nav ul li .active span {
-    background: #6090b6 none repeat scroll 0 0 !important;
 }
 
 .y-box-sm {
