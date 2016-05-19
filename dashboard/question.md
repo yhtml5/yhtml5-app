@@ -40,9 +40,9 @@
  - [] fis3 处理ng-src问题，文件路径，md5戳问题
       **手动配置路径，依赖目录规范
       **__uri() 获取路径
-
-
-
+ - [] angular repeat 绑定json数据中的一个值与class对应
+      ** ng-class="{'icon-pc':x.appType == 1}"
+ - [] 跨域问题，使用jsonp或者设置响应头
 
 
 ### 性能优化

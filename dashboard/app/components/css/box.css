@@ -36,6 +36,10 @@
     margin-top: 20px;
 }
 
+.y-mt30 {
+    margin-top: 30px;
+}
+
 .y-mt40 {
     margin-top: 40px;
 }
@@ -63,7 +67,9 @@
 .y-mb0 {
     margin-bottom: 0px;
 }
-
+.y-mb10 {
+    margin-bottom: 10px;
+}
 .y-mb20 {
     margin-bottom: 20px;
 }

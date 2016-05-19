@@ -18,11 +18,15 @@ angular.module('yhtml5.appList', ['ui.bootstrap', 'ngAnimate'])
             $scope.animationsEnabled = !$scope.animationsEnabled;
         };
         //get json
-        var appListURL = __uri('../../server/init.json')
-        $http.get('../../server/init.json')
+        //      var localURL = __uri('../../server/init2.json');
+        //      var domainURL = 'http://admin.jubaobar.com/front/homePage/console.htm?callback=JSON_CALLBACK';
+//      $http.jsonp('http://admin.jubaobar.com/front/homePage/console.htm?callback=JSON_CALLBACK')
+        $http.get('http://admin.jubaobar.com/front/homePage/console.htm')
             .success(function(response) {
-                $scope.userApps = response.userApps //$scope.names 为一个数组
+                console.log(response.data.appTradeInfoList);
+                $scope.userApps = response.data.appTradeInfoList;
             })
+
     })
     .controller('ModalInstanceCtrl', function($scope, $uibModalInstance) {
         $scope.cancel = function() {
