@@ -1,6 +1,11 @@
 'use strict';
 angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate'])
     .controller('yhtml5.user', function($scope, $uibModal) {
+        $http.get('http://admin.jubaobar.com/front/user/person/info.htm')
+            .success(function(response) {
+                console.log(response.data);
+                $scope.userApps = response.data;
+            })
         $scope.userPersonFormEnabled = true
         $scope.userPersonUpdate = true
         $scope.userPersonSave = true

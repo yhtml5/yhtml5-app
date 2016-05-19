@@ -1,10 +1,6 @@
 'use strict';
 angular.module('yhtml5.appList', ['ui.bootstrap', 'ngAnimate'])
     .controller('yhtml5.appList', function($scope, $http, $uibModal) {
-        //appList add modal
-        //$scope.appTypes = ['PC', 'WAP', 'Android', 'IOS'];
-        //$scope.appTypeSelect = $scope.appTypes[0];
-        //modal
         $scope.animationsEnabled = true;
         $scope.open = function(size) {
             var modalInstance = $uibModal.open({
