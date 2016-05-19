@@ -1,6 +1,28 @@
 'use strict';
 angular.module('yhtml5.account', ['ui.bootstrap', 'ngAnimate'])
-    .controller('yhtml5.account', function($scope, $http, $uibModal) {
+    .controller('yhtml5.account', function($scope, $http, $uibModal, Upload, $timeout) {
+        /*上传文件*/
+        $scope.uploadPic = function(file) {
+            file.upload = Upload.upload({
+                url: 'https://yhtml5.com',
+                data: {
+                    username: $scope.username,
+                    file: file
+                },
+            });
+            file.upload.then(function(response) {
+                $timeout(function() {
+                    file.result = response.data;
+                });
+            }, function(response) {
+                if (response.status > 0)
+                    $scope.errorMsg = response.status + ': ' + response.data;
+            }, function(evt) {
+                // Math.min is to fix IE which reports 200% sometimes
+                file.progress = Math.min(100, parseInt(100.0 * evt.loaded / evt.total));
+            });
+        }
+
         //get json
         $http.get(__uri("../../server/account.record.json"))
             .success(function(response) {

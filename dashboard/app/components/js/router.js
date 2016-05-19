@@ -12,7 +12,8 @@ angular.module('yhtml5', [
         'yhtml5.appsetting',
         'yhtml5.account',
         'yhtml5.authentication',
-        'yhtml5.user'
+        'yhtml5.user',
+        'ngFileUpload'
     ])
     .config(function($stateProvider, $urlRouterProvider) {
         $urlRouterProvider

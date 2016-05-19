@@ -43,6 +43,9 @@
  - [] angular repeat 绑定json数据中的一个值与class对应
       ** ng-class="{'icon-pc':x.appType == 1}"
  - [] 跨域问题，使用jsonp或者设置响应头
+ - [] http开发常见问题：
+      ** 访问本地文件
+      ** 跨域问题 XMLHttpRequest cannot load | Access-Control-Allow-Origin
 
 
 ### 性能优化
