@@ -1,3 +1,12 @@
+<form action="">
+    <div>姓名:<input name="name" ng-model="current.name" /></div>
+    <div>密码:<input name="pass" ng-model="current.pass" /></div>
+    <p ng-bind="current.name + current.pass"></p>
+    <div>
+
+        <button ng-click="commit()">commit</button>
+    </div>
+</form>
 <div class="panel">
     <div class="panel-heading">
         <div class="row">
@@ -47,7 +56,7 @@
                         <div class="form-group">
                             <label for="" class="col-sm-3 control-label">签约号</label>
                             <div class="col-sm-9">
-                                <input class="form-control" type="text" name="" id="" value="{{userInfo.userName}}" placeholder="工信部备案人真实姓名">
+                                <input class="form-control" type="text" name="" id="" ng-model="current.name" value="{{userInfo.userName}}" placeholder="工信部备案人真实姓名">
                             </div>
                         </div>
                     </div>
@@ -189,18 +198,13 @@
                     </div>
                     <div class="col-sm-4" ng-if="userInfo.companyType == 2">
                         <div class="y-upload-img" ngf-select ng-model="picFile" name="file" accept="image/*" ngf-max-size="2MB" required ngf-model-invalid="errorFile">
-                            <h2>请选择图片</h2>
-                            <img ng-show="myForm.file.$valid" class="img-responsive img-rounded center-block" ngf-thumbnail="picFile">
+                            <h1 class="y-mt60"><small>请选择文件</small></h1>
+                            <img class="img-responsive img-rounded" ngf-thumbnail="picFile">
+                            <p ng-show="myForm.file.$error.maxSize">文件大小超过{{errorFile.size / 1000000|number:1}}MB，最大支持2M</p>
                         </div>
                         <h4 class="y-fs16">文网文等辅助文件（非必要上传文件）
                             <button type="" class="btn btn-link">示例图片</button>
                         </h4>
-                    </div>
-                    <div class="col-sm-8">
-                        <img ng-show="myForm.file.$valid" ngf-thumbnail="picFile" class="thumb">
-                        <input class="form-group y-mt6 y-mlr0" type="file" ngf-select ng-model="picFile" name="file" accept="image/*" ngf-max-size="2MB" required ngf-model-invalid="errorFile">
-                        <p ng-show="myForm.file.$error.maxSize">File too large {{errorFile.size / 1000000|number:1}}MB: max 2M</p>
-                        <button type="button" class="btn y-btn-blue center-block" ng-disabled="!myForm.$valid" ng-click="uploadPic(picFile)">下一步</button>
                     </div>
             </fieldset>
         </form>

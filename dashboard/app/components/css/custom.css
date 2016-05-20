@@ -1,8 +1,21 @@
 /*==================== custom bootstrap ====================*/
 
-.y-upload-img{
-
+.y-upload-img {
+    border-radius: 6px;
+    border: 1px solid #999;
+    background-color: #fbfbfb;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 180px;
 }
+
+.y-upload-img img {
+    margin-top: -109px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .sidebar {
     position: fixed;
     top: 90px;
@@ -128,6 +141,7 @@
     color: #099fdd;
 }
 
+
 /* header style
  * ============ */
 
@@ -212,10 +226,6 @@
 .y-header-search {
     height: 36px;
 }
-
-
-
-
 
 
 /*

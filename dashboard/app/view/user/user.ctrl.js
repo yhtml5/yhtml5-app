@@ -3,9 +3,27 @@ angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate'])
     .controller('yhtml5.user', function($scope, $uibModal, $http, Upload, $timeout) {
         $http.get('http://admin.jubaobar.com/front/user/person/info.htm')
             .success(function(response) {
-                console.log(response.data);
+                console.log(response);
                 $scope.userInfo = response.data;
             })
+        data = [{
+            key1: 'value1',
+            key2: 'value2'
+        }]
+        $http({
+            method: "post",
+            url: "http://admin.jubaobar.com/front/authentication/businessInformation.htm",
+            params: {
+                "userName": data
+            }
+        }).success(function(res) {
+            $scope.savingBase = false;
+            if (res.resultCode == 0) {
+                $scope.app.proxy_base_objectid = res.objectid;
+                $scope.view.state = $scope.view.stateMachine["fullfill_base"];
+                $anchorScroll();
+            }
+        })
         $scope.userPersonFormEnabled = true
         $scope.userPersonUpdate = true
         $scope.userPersonSave = true
@@ -16,17 +34,36 @@ angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate'])
         }
         $scope.animationsEnabled = true;
         $scope.userPersonFormSave = function(size) {
-            $scope.userPersonFormEnabled = true
-            $scope.userPersonUpdate = true
-            $scope.userPersonSave = true
-            var modalInstance = $uibModal.open({
-                animation: $scope.animationsEnabled,
-                templateUrl: 'noteSimple.html',
-                controller: 'userPersonNoteSimpleCtrl',
-                size: size
-            })
-        }
-        $scope.userAccountFormSave = function(size) {
+                $scope.userPersonFormEnabled = true
+                $scope.userPersonUpdate = true
+                $scope.userPersonSave = true
+                var modalInstance = $uibModal.open({
+                    animation: $scope.animationsEnabled,
+                    templateUrl: 'noteSimple.html',
+                    controller: 'userPersonNoteSimpleCtrl',
+                    size: size
+                })
+            }
+            /*上传文件*/
+        $scope.userAccountFormSave = function(file) {
+            file.upload = Upload.upload({
+                url: 'https://admin.jubaobar.com/api/upload/imageupload.htm',
+                data: {
+                    username: $scope.username,
+                    file: file
+                },
+            });
+            file.upload.then(function(response) {
+                $timeout(function() {
+                    file.result = response.data;
+                });
+            }, function(response) {
+                if (response.status > 0)
+                    $scope.errorMsg = response.status + ': ' + response.data;
+            }, function(evt) {
+                // Math.min is to fix IE which reports 200% sometimes
+                file.progress = Math.min(100, parseInt(100.0 * evt.loaded / evt.total));
+            });
             $scope.userPersonFormEnabled = true
             $scope.userPersonUpdate = true
             $scope.userPersonSave = true
@@ -34,7 +71,7 @@ angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate'])
                 animation: $scope.animationsEnabled,
                 templateUrl: 'noteSimple.html',
                 controller: 'userAccountNoteSimpleCtrl',
-                size: size
+                size: lg
             })
         }
         $scope.userPasswordLoginSave = function(size) {
@@ -76,26 +113,6 @@ angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate'])
                 if (response.status > 0) $scope.errorMsg = response.status + ': ' + response.data;
             }, function(evt) {
                 $scope.progress = parseInt(100.0 * evt.loaded / evt.total);
-            });
-        } /*上传文件*/
-        $scope.uploadPic = function(file) {
-            file.upload = Upload.upload({
-                url: 'https://yhtml5.com',
-                data: {
-                    username: $scope.username,
-                    file: file
-                },
-            });
-            file.upload.then(function(response) {
-                $timeout(function() {
-                    file.result = response.data;
-                });
-            }, function(response) {
-                if (response.status > 0)
-                    $scope.errorMsg = response.status + ': ' + response.data;
-            }, function(evt) {
-                // Math.min is to fix IE which reports 200% sometimes
-                file.progress = Math.min(100, parseInt(100.0 * evt.loaded / evt.total));
             });
         }
         $scope.saveBaseInfo = function() {
