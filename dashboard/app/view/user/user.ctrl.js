@@ -6,24 +6,6 @@ angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate'])
                 console.log(response);
                 $scope.userInfo = response.data;
             })
-        data = [{
-            key1: 'value1',
-            key2: 'value2'
-        }]
-        $http({
-            method: "post",
-            url: "http://admin.jubaobar.com/front/authentication/businessInformation.htm",
-            params: {
-                "userName": data
-            }
-        }).success(function(res) {
-            $scope.savingBase = false;
-            if (res.resultCode == 0) {
-                $scope.app.proxy_base_objectid = res.objectid;
-                $scope.view.state = $scope.view.stateMachine["fullfill_base"];
-                $anchorScroll();
-            }
-        })
         $scope.userPersonFormEnabled = true
         $scope.userPersonUpdate = true
         $scope.userPersonSave = true
@@ -37,6 +19,41 @@ angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate'])
                 $scope.userPersonFormEnabled = true
                 $scope.userPersonUpdate = true
                 $scope.userPersonSave = true
+                $http({
+                    method: "post",
+                    url: "http://admin.jubaobar.com/front/authentication/businessInformation.htm",
+                    params: {
+                        companyType: $scope.userInfo.companyType,
+                        subCompanyType: $scope.userInfo.subCompanyType,
+                        userName: $scope.userInfo.userName,
+                        businessType: $scope.userInfo.businessType,
+                        companyName: $scope.userInfo.companyName,
+                        companyAddress: $scope.userInfo.companyAddress,
+                        licenseNo: $scope.userInfo.licenseNo,
+                        contactName: $scope.userInfo.contactName,
+                        contactTelephone: $scope.userInfo.contactTelephone,
+                        contactQQ: $scope.userInfo.contactQQ,
+                        contactProvId: $scope.userInfo.contactProvId,
+                        contactCityId: $scope.userInfo.contactCityId,
+                        contactAddress: $scope.userInfo.contactAddress,
+                        idCard: $scope.userInfo.idCard,
+                        idCardPic: $scope.userInfo.idCardPic,
+                        idCardFrontPic: $scope.userInfo.idCardFrontPic,
+                        idCardReversePic: $scope.userInfo.idCardReversePic,
+                        licensePic: $scope.userInfo.licensePic,
+                        taxCertPic: $scope.userInfo.taxCertPic,
+                        orgCodeCertPic: $scope.userInfo.orgCodeCertPic,
+                        openPermitPic: $scope.userInfo.openPermitPic,
+                        otherTypePic: $scope.userInfo.otherTypePic
+                    }
+                }).success(function(res) {
+                    $scope.savingBase = false;
+                    if (res.resultCode == 0) {
+                        $scope.app.proxy_base_objectid = res.objectid;
+                        $scope.view.state = $scope.view.stateMachine["fullfill_base"];
+                        $anchorScroll();
+                    }
+                })
                 var modalInstance = $uibModal.open({
                     animation: $scope.animationsEnabled,
                     templateUrl: 'noteSimple.html',

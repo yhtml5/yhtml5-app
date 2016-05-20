@@ -6,7 +6,12 @@
 .y-mt0 {
     margin-top: 0px;
 }
-
+.y-mt-160 {
+    margin-top: -160px;
+}
+.y-mt-80 {
+    margin-top: -60px;
+}
 .y-mt-60 {
     margin-top: -60px;
 }

@@ -1,12 +1,3 @@
-<form action="">
-    <div>姓名:<input name="name" ng-model="current.name" /></div>
-    <div>密码:<input name="pass" ng-model="current.pass" /></div>
-    <p ng-bind="current.name + current.pass"></p>
-    <div>
-
-        <button ng-click="commit()">commit</button>
-    </div>
-</form>
 <div class="panel">
     <div class="panel-heading">
         <div class="row">
@@ -56,7 +47,7 @@
                         <div class="form-group">
                             <label for="" class="col-sm-3 control-label">签约号</label>
                             <div class="col-sm-9">
-                                <input class="form-control" type="text" name="" id="" ng-model="current.name" value="{{userInfo.userName}}" placeholder="工信部备案人真实姓名">
+                                <input class="form-control" type="text" name="" id="" ng-model="userInfo.userName" value="{{userInfo.userName}}" placeholder="工信部备案人真实姓名">
                             </div>
                         </div>
                     </div>
@@ -65,7 +56,7 @@
                             <label for="" class="col-sm-3 control-label">经营范围</label>
                             <div class="col-sm-8">
                                 <select class="form-control" ng-model="proxyInfo.base.product_category" ng-options="key as key for (key,value) in businessType" ng-change="proxyInfo.base.product_category_sub='';" required="">
-                                    <option value="{{userInfo.businessType}}">请选择经营范围</option>
+                                    <option ng-model="userInfo.businessType" value="{{userInfo.businessType}}">请选择经营范围</option>
                                 </select>
                             </div>
                         </div>
@@ -77,7 +68,7 @@
                         <div class="form-group">
                             <label for="" class="col-sm-3 control-label">联系人姓名</label>
                             <div class="col-sm-9">
-                                <input class="form-control" type="text" name="" id="" value="{{userInfo.contactName}}" placeholder="请输入联系人">
+                                <input class="form-control" type="text" name="" id="" ng-model="userInfo.contactName" value="{{userInfo.contactName}}" placeholder="请输入联系人">
                             </div>
                         </div>
                     </div>
@@ -85,7 +76,7 @@
                         <div class="form-group">
                             <label for="" class="col-sm-3 control-label">联系电话</label>
                             <div class="col-sm-8">
-                                <input class="form-control" type="text" name="" id="" value="{{userInfo.contactTelephone}}" placeholder="请输入电话">
+                                <input class="form-control" type="text" name="" id="" ng-model="userInfo.contactTelephone" value="{{userInfo.contactTelephone}}" placeholder="请输入电话">
                             </div>
                         </div>
                     </div>
@@ -95,7 +86,7 @@
                         <div class="form-group">
                             <label for="" class="col-sm-3 control-label">邮箱</label>
                             <div class="col-sm-9">
-                                <input class="form-control" type="text" name="" id="" value="{{userInfo.contactEmail}}" placeholder="请输入Email地址">
+                                <input class="form-control" type="text" name="" id="" ng-model="userInfo.contactEmail" value="{{userInfo.contactEmail}}" placeholder="请输入Email地址">
                             </div>
                         </div>
                     </div>
@@ -103,7 +94,7 @@
                         <div class="form-group">
                             <label for="" class="col-sm-3 control-label">QQ</label>
                             <div class="col-sm-8">
-                                <input class="form-control" type="text" name="" id="" value="{{userInfo.contactQQ}}" placeholder="请输入QQ号">
+                                <input class="form-control" type="text" name="" id="" ng-model="userInfo.contactQQ" value="{{userInfo.contactQQ}}" placeholder="请输入QQ号">
                             </div>
                         </div>
                     </div>
@@ -148,7 +139,7 @@
                         <div class="form-group">
                             <label for="" class="col-sm-3 control-label">身份证号</label>
                             <div class="col-sm-9">
-                                <input class="form-control" type="text" name="" id="" value="{{userInfo.idCard}}" placeholder="请输入身份证号">
+                                <input class="form-control" type="text" name="" id="" ng-model="userInfo.idCard" value="{{userInfo.idCard}}" placeholder="请输入身份证号">
                             </div>
                         </div>
                     </div>
