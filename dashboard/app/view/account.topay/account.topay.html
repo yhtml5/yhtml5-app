@@ -103,11 +103,11 @@
                             <p ng-show="myForm.file.$error.maxSize">File too large {{errorFile.size / 1000000|number:1}}MB: max 2M</p>
                             <button class="btn btn-danger" ng-click="picFile = null" ng-show="picFile">删除文件</button>
                         </div>
-                        <div class="progress" ng-show="picFile.progress >= 0">
+                        <!--<div class="progress" ng-show="picFile.progress >= 0">
                             <div style="width:{{picFile.progress}}%" ng-bind="picFile.progress + '%'"></div>
                         </div>
                         <span ng-show="picFile.result">Upload Successful</span>
-                        <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
+                        <span class="err" ng-show="errorMsg">{{errorMsg}}</span>-->
                     </div>
                 </fieldset>
             </form>
