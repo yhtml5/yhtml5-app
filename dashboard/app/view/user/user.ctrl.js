@@ -1,11 +1,18 @@
 'use strict';
-angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate','ngFileUpload'])
+angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate', 'ngFileUpload'])
     .controller('yhtml5.user', function($scope, $uibModal, $http, Upload, $timeout) {
-        $scope.userInfo = {}
+        $scope.userInfoSent = {
+            base: {
+                contactProvId: "",
+                contactCityId: "",
+                contactAddress: ""
+            }
+        }
         $http.get('http://admin.jubaobar.com/front/user/person/info.htm')
             .success(function(response) {
                 console.log(response);
                 $scope.userInfo = response.data;
+                console.log(response.data.contactProvIdShow);
             })
         $scope.userPersonFormEnabled = true
         $scope.userPersonUpdate = true
@@ -16,10 +23,10 @@ angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate','ngFileUpload'])
             $scope.userPersonSave = false
         }
         $scope.animationsEnabled = true;
-        $scope.userPersonFormSave = function(size,file,upload) {
-            $scope.userPersonFormEnabled = true
-            $scope.userPersonUpdate = true
-            $scope.userPersonSave = true
+        $scope.userPersonFormSave = function(size, file, upload) {
+            $scope.userPersonFormEnabled = true;
+            $scope.userPersonUpdate = true;
+            $scope.userPersonSave = true;
             $http({
                 method: "post",
                 url: "http://admin.jubaobar.com/front/authentication/businessInformation.htm",
@@ -27,17 +34,20 @@ angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate','ngFileUpload'])
                     companyType: $scope.userInfo.companyType,
                     subCompanyType: $scope.userInfo.subCompanyType,
                     userName: $scope.userInfo.userName,
-                    businessType: $scope.userInfo.businessType,
+                    businessType1: $scope.userInfo.businessType1,
+                    businessType2: $scope.userInfo.businessType2,
+                    businessTypeAll: $scope.userInfo.businessType1 + "/" + $scope.userInfo.businessType2,
                     companyName: $scope.userInfo.companyName,
                     companyAddress: $scope.userInfo.companyAddress,
                     licenseNo: $scope.userInfo.licenseNo,
                     contactName: $scope.userInfo.contactName,
+                    contactEmail: $scope.userInfo.contactEmail,
                     contactTelephone: $scope.userInfo.contactTelephone,
                     contactQQ: $scope.userInfo.contactQQ,
-                    contactProvId: $scope.contactProvId,
-                    contactCityId: $scope.contactCityId,
-                    contactAddress: $scope.contactAddress,
-                    //                      contactAddressDetail: 0,
+                    contactProvId: $scope.userInfo.contactProvId,
+                    contactCityId: $scope.userInfo.contactCityId,
+                    contactAddress: $scope.userInfo.contactAddress,
+                    contactAddressAll: $scope.userInfo.contactProvId + $scope.userInfo.contactCityId + $scope.userInfo.contactAddress,
                     idCard: $scope.userInfo.idCard,
                     idCardPic: $scope.userInfo.idCardPic,
                     idCardFrontPic: $scope.userInfo.idCardFrontPic,
@@ -46,7 +56,8 @@ angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate','ngFileUpload'])
                     taxCertPic: $scope.userInfo.taxCertPic,
                     orgCodeCertPic: $scope.userInfo.orgCodeCertPic,
                     openPermitPic: $scope.userInfo.openPermitPic,
-                    otherTypePic: $scope.userInfo.otherTypePic
+                    otherTypePic: $scope.userInfo.otherTypePic,
+                    companyId: $scope.userInfo.companyId
                 }
             }).success(function(res) {
                 $scope.savingBase = false;
@@ -56,30 +67,26 @@ angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate','ngFileUpload'])
                     $anchorScroll();
                 }
             })
-//          file.upload = Upload.upload({
-//              url: 'http://admin.jubaobar.com/api/upload/imageupload.htm',
-//              data: {
-//                  username: $scope.username,
-//                  file: file
-//              },
-//          });
-//          file.upload.then(function(response) {
-//              $timeout(function() {
-//                  file.result = response.data;
-//              });
-//          }, function(response) {
-//              if (response.status > 0)
-//                  $scope.errorMsg = response.status + ': ' + response.data;
-//          }, function(evt) {
-//              // Math.min is to fix IE which reports 200% sometimes
-//              file.progress = Math.min(100, parseInt(100.0 * evt.loaded / evt.total));
-//          });
-            var modalInstance = $uibModal.open({
-                animation: $scope.animationsEnabled,
-                templateUrl: 'noteSimple.html',
-                controller: 'userPersonNoteSimpleCtrl',
-                size: size
-            })
+            $scope.uploadPic = function(file) {
+                file.upload = Upload.upload({
+                    url: 'http://admin.jubaobar.com/api/upload/imageupload.htm',
+                    data: {
+                        username: $scope.username,
+                        file: file
+                    },
+                });
+                file.upload.then(function(response) {
+                    $timeout(function() {
+                        file.result = response.data;
+                    });
+                }, function(response) {
+                    if (response.status > 0)
+                        $scope.errorMsg = response.status + ': ' + response.data;
+                }, function(evt) {
+                    // Math.min is to fix IE which reports 200% sometimes
+                    file.progress = Math.min(100, parseInt(100.0 * evt.loaded / evt.total));
+                })
+            };
         }
         $scope.userAccountFormSave = function(size) {
             $scope.userPersonFormEnabled = true
@@ -116,137 +123,81 @@ angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate','ngFileUpload'])
                 size: size
             })
         };
-        // upload
-        $scope.upload = function(dataUrl, name) {
-            Upload.upload({
-                url: 'http://admin.jubaopay.com/api/upload/imageupload.htm',
-                data: {
-                    file: Upload.dataUrltoBlob(dataUrl, name)
-                },
-            }).then(function(response) {
-                $timeout(function() {
-                    $scope.result = response.data;
-                });
-            }, function(response) {
-                if (response.status > 0) $scope.errorMsg = response.status + ': ' + response.data;
-            }, function(evt) {
-                $scope.progress = parseInt(100.0 * evt.loaded / evt.total);
-            });
+        console.log($scope.businessType)
+        $scope.banks = [{
+            id: 100,
+            bank: "中国邮政储蓄银行"
+        }, {
+            id: 102,
+            bank: "中国工商银行"
+        }, {
+            id: 103,
+            bank: "中国农业银行"
+        }, {
+            id: 104,
+            bank: "中国银行"
+        }, {
+            id: 105,
+            bank: "中国建设银行"
+        }, {
+            id: 301,
+            bank: "交通银行"
+        }, {
+            id: 302,
+            bank: "中信银行"
+        }, {
+            id: 303,
+            bank: "中国光大银行"
+        }, {
+            id: 304,
+            bank: "华夏银行"
+        }, {
+            id: 305,
+            bank: "中国民生银行"
+        }, {
+            id: 306,
+            bank: "广东发展银行"
+        }, {
+            id: 307,
+            bank: "平安银行"
+        }, {
+            id: 308,
+            bank: "招商银行"
+        }, {
+            id: 309,
+            bank: "兴业银行"
+        }, {
+            id: 310,
+            bank: "浦东发展银行"
+        }, {
+            id: 317,
+            bank: "渤海银行"
+        }, {
+            id: 1000,
+            bank: "北京银行"
+        }, {
+            id: 1003,
+            bank: "宁波银行"
+        }, {
+            id: 1004,
+            bank: "上海银行"
+        }, {
+            id: 1007,
+            bank: "杭州银行"
+        }];
+        $scope.businessTypes = {
+            "数字娱乐": ["网络游戏/网页游戏/手机网游", "互联网应用/无线互联网应用（小说/杀毒等）", "直销行业", "SNS社区/微博", "软件/下载", "其他互联网", "视频网站/社区", "  虚拟增值"],
+            "快消连锁": ["餐饮/娱乐休闲/美容/保健/生活服务等连锁行业", "连锁加盟（食品/饮料/化妆品/服装/日用百货等）", "网上商城（B2C,C2C）", "网上批发（B2B）", "团购（C2B）", "其他连锁零售", "批发市场", "物流配送/快递"],
+            "电信运营": ["运营商（移动、联通、电信、铁通等）", " 其他与运营商合作的项目", " 运营商合作厅", "网上批发（B2B）"],
+            "航空旅游": ["机票/火车票代理商", "旅行社/旅游网/旅游平台（OTA）", "旅游局/景区门票", "其他商业旅行", "航空公司", "分销平台", "差旅公司（TMC）", "租车行业", "GDS", "平台化订房中心"],
+            "行政教育": ["政府考试/人才培训/检测认证/非税业务", "机构教育/学校/学术/研究", "顾问/信息咨询", "出版社", "会议会务", "其他行政教育行业"],
+            "保险": ["保险公司", "保险代理公司", "其他保险行业"],
+            "基金": ["基金行业", "其他基金行业"],
+            "P2P": [],
+            "跨境业务": ["货物贸易", "服务贸易"],
+            "现货业务": ["现货交易所", "现货商城", "其他现货行业"],
+            "其他": ["酒店行业（包括度假）", "会展行业", "医疗行业", "彩票行业", "物业行业", "其他行业"],
         }
-        $scope.saveBaseInfo = function() {
-            if (Object.getOwnPropertyNames($scope.view.stateMachine).length <= 0) {
-                $scope.util.alertMsg("还未选择渠道", "error");
-                return;
-            }
-            if ($scope.savingBase) {
-                return;
-            }
-            if (!!$scope.app.proxy_base_objectid) {
-                //$scope.view.state = "choose_channel";
-                //$location.hash('anchor_top');
-                //$anchorScroll();
-                //return;
-                for (var i in $scope.proxyImage.base) {
-                    $scope.proxyImage.base[i] = true;
-                }
-            }
-            console.log("$scope.proxyInfo: " + $scope.proxyInfo);
-            for (var i in $scope.proxyInfo.base) {
-                if (!$scope.proxyInfo.base[i]) {
-                    if (i == "contact_qq" && !$scope.proxyInfo.base.contact_wx) {
-                        $scope.util.alertMsg("联系人QQ、联系人微信必须填写一项", "warning");
-                        return;
-                    } else if (i == "contact_wx") {
-                        continue;
-                    }
-                    $scope.util.alertMsg($scope.proxyInfoNames[i] + "未设置", "warning");
-                    return;
-                }
-            }
-            for (var i in $scope.proxyInfo.base.contact_address) {
-                if (!$scope.proxyInfo.base.contact_address[i]) {
-                    $scope.util.alertMsg($scope.proxyInfoNames.contact_address[i] + "未设置", "warning");
-                    return;
-                }
-            }
-            //TODO: 文件上传检测
-            for (var i in $scope.proxyImage.base) {
-                if (!$scope.proxyImage.base[i]) {
-                    $scope.util.alertMsg($scope.proxyInfoNames[i] + "未上传", "warning");
-                    return;
-                }
-            }
-            $scope.savingBase = true;
-            console.log($scope.proxyInfo.base.product_category_sub);
-            $http.post(u.getDataPath("appapply") + "baseinfo.save.php", {
-                appId: $scope.app.objectid,
-                objectid: !!$scope.app.proxy_base_objectid ? $scope.app.proxy_base_objectid : "",
-                company_phone: $scope.proxyInfo.base.company_phone,
-                contact_name: $scope.proxyInfo.base.contact_name,
-                contact_phone: $scope.proxyInfo.base.contact_phone,
-                contact_email: $scope.proxyInfo.base.contact_email,
-                contact_qq: $scope.proxyInfo.base.contact_qq,
-                contact_wx: $scope.proxyInfo.base.contact_wx,
-                contact_address_province: $scope.proxyInfo.base.contact_address_province,
-                contact_address_city: $scope.proxyInfo.base.contact_address_city,
-                contact_address_district: $scope.proxyInfo.base.contact_address_district,
-                contact_address_detail: $scope.proxyInfo.base.contact_address_detail,
-                contact_address: ($scope.proxyInfo.base.contact_address_province + $scope.proxyInfo.base.contact_address_city + $scope.proxyInfo.base.contact_address_district + $scope.proxyInfo.base.contact_address_detail),
-                bank_name: $scope.proxyInfo.base.bank_name,
-                bank_account: $scope.proxyInfo.base.bank_account,
-                bank_username: $scope.proxyInfo.base.bank_username,
-                product_category: $scope.proxyInfo.base.product_category,
-                product_category_sub: $scope.proxyInfo.base.product_category_sub,
-                proxy_channel_email: $scope.proxyInfo.base.proxy_channel_email
-            }).success(function(res) {
-                $scope.savingBase = false;
-                if (res.resultCode == 0) {
-                    $scope.app.proxy_base_objectid = res.objectid;
-                    $scope.view.state = $scope.view.stateMachine["fullfill_base"];
-                    //$location.hash('anchor_top');
-                    // call $anchorScroll()
-                    $anchorScroll();
-                }
-            })
-        };
-        $scope.businessType = {
-            "电商/团购": ["团购", "海淘", "线上商超"],
-            "线下零售": ["超市便利店", "自动贩卖机", "百货", "其他综合零售"],
-            "生活/家居": ["家居/建材/装饰/布艺类商城", "家用电器", "计生用品", "美妆/护肤/个人护理", "工艺品/盆栽/室内装饰品", "汽车/摩托/自行车/其他交通工具/配件/改装"],
-            "餐饮/食品": ["普通食品", "保健品/滋补品", "餐饮"],
-            "时尚": ["服饰类商城/服饰配件/箱包", "礼品/鲜花/纪念品", "户外/运动/健身器材/安防", "乐器", "手表/钟表/眼镜", "黄金珠宝/钻石/玉石", "饰品"],
-            "生活/咨询服务": ["咨询/法律咨询/金融咨询等", "家政/婚庆服务/摄影服务", "印刷/维修服务/排版/刻板", "丧葬行业", "广告公司", "会展服务/活动策划", "办证/刻章", "开锁工具", "报社/出版社 ", "电台/电视台", "人才中介机构/招聘/猎头", "职业社交/婚介/交友", "网上生活服务平台"],
-            "数码": ["数码产品", "办公设备"],
-            "机票/旅游": ["旅行社", "旅游服务平台", "航空公司", "机票代理", "旅馆/酒店/景区/度假区"],
-            "网络虚拟服务": ["门户/资讯/论坛", "视频/网络小说/在线图书/音乐", "域名/建站/主机/代码", "搜索引擎/网络广告/网络推广/视频制作", "游戏/点卡/金币"],
-            "软件": ["软件"],
-            "教育/培训": ["教育/培训/考试缴费/学费", "公立院校", "私立院校"],
-            "机械/电子": ["保健器械", "医疗器械", "电子元器件/仪器仪表/机械设备及配件"],
-            "母婴/玩具": ["母婴用品/儿童玩具", "母婴类商城"],
-            "娱乐/健身服务": ["美容/健身类会所", "俱乐部/高尔夫球场/休闲会所", "游艺厅/KTV/网吧"],
-            "医疗": ["药品", "保健信息咨询/心理咨询/体检卡 ", "私立/民营医院/诊所", "公立医院", "挂号平台", "亲子鉴定/催眠", "中草药原材料"],
-            "票务": ["影票/演唱会/赛事等娱乐票务", "火车票/船票/车票等交通票务"],
-            "平台商": ["平台商"],
-            "书籍/音像/文具": ["书籍/音像", "文具"],
-            "房地产": ["房产预售", "房屋中介"],
-            "收藏/宠物": ["宠物/宠物食品", "非文物类收藏品", "文物经营", "文物拍卖", "文物复制品销售/典当"],
-            "苗木/绿化": ["苗木种植", "园林绿化", "化肥/农用药剂等"],
-            "交通运输服务类": ["铁路货物运输", "道路运输", "水路运输", "海运", "港口经营/港口理货", "航空运输", "租车"],
-            "其他生活缴费": ["有线电视缴费", "停车场", "物业管理费", "城市交通卡", "其他生活缴费"],
-            "公益": ["公益"],
-            "装饰": ["室内装饰设计服务"],
-            "保险": ["保险公司", "保险代理公司", "保险经纪公司", "保险公估公司", "保险兼业代理公司"],
-            "通信": ["电信运营商", "宽带收费", "话费通讯"],
-            "金融": ["财经资讯", "股票软件类"],
-            "快递/货运服务": ["物流/快递公司"],
-            "众筹": ["众筹"],
-            "彩票": ["彩票"],
-            "直销": ["直销业务"],
-            "公共事业缴费": ["水电煤缴费/交通罚款等生活缴费", "事业单位"],
-            "预付卡": ["单用途预付卡"],
-            "数字娱乐": ["彩铃"],
-            "其他": ["其他行业"]
-        };
         $scope.division = {
             "北京市": {
                 "北京市": ["东城区", "西城区", "崇文区", "宣武区", "朝阳区", "丰台区", "石景山区", "海淀区", "门头沟区", "房山区", "通州区", "顺义区", "昌平区", "大兴区", "怀柔区", "平谷区", "密云县", "延庆县"]

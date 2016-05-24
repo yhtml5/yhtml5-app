@@ -22,7 +22,6 @@ angular.module('yhtml5.appList', ['ui.bootstrap', 'ngAnimate'])
                 console.log(response.data);
                 $scope.userApps = response.data.appTradeInfoList;
             })
-
     })
     .controller('ModalInstanceCtrl', function($scope, $uibModalInstance) {
         $scope.cancel = function() {
