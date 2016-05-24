@@ -1,10 +1,10 @@
-<div class="container y-body y-mt-30">
+<div class="container y-body y-mt-30" ng-controller="yhtml5.account">
 	<div class="row y-account-head y-mlr0">
 		<div class="col-xs-12 col-sm-4">
 			<div class="y-account-head-money">
 				<span><i class="iconfont y-fs30">&#xe610;</i></span>
 				<span class="y-font-b">&nbsp;&nbsp;账户余额:</span>
-				<span class="y-ellipsis">174万</span>
+				<span class="y-ellipsis" ng-bind="account.balanceOfAccount"></span>
 			</div>
 			<div class="y-mb20">
 				<div class="btn-group">
@@ -19,14 +19,12 @@
 			<div class="row y-mt40">
 				<div class="col-xs-6 y-transition-color-info">
 					<p>可提现金额</p>
-					<div class="y-box-sm y-transition-border-color-info">
-						176万
+					<div class="y-box-sm y-transition-border-color-info" ng-bind="account.canCashOutAmount">
 					</div>
 				</div>
 				<div class="col-xs-6 y-transition-color-info">
 					<p>提现中金额</p>
-					<div class="y-box-sm y-transition-border-color-info">
-						88万
+					<div class="y-box-sm y-transition-border-color-info" ng-bind="account.onCashOutAmount">
 					</div>
 				</div>
 			</div>
@@ -35,14 +33,12 @@
 			<div class="row y-mt40">
 				<div class="col-xs-6 y-transition-color-info">
 					<p>收款总金额</p>
-					<div class="y-box-sm y-transition-border-color-info">
-						1760万
+					<div class="y-box-sm y-transition-border-color-info" ng-bind="account.allReviceAmount">
 					</div>
 				</div>
 				<div class="col-xs-6 y-transition-color-info">
 					<p>结算总金额</p>
-					<div class="y-box-sm y-transition-border-color-info">
-						880万
+					<div class="y-box-sm y-transition-border-color-info" ng-bind="account.alreadyCashOutAmount">
 					</div>
 				</div>
 			</div>

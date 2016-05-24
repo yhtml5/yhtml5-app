@@ -15,36 +15,42 @@
             <div class="form-group">
                 <label for="name" class="col-sm-4 control-label">收款方姓名</label>
                 <div class="col-xs-12 col-sm-6">
-                    <input type="text" class="form-control" name="" id="" value="" placeholder="请核实对方姓名...">
+                    <input type="text" class="form-control" name="" id="" value="" ng-model="accountName" placeholder="请核实对方姓名...">
                 </div>
             </div>
             <div class="form-group">
                 <label for="websiteDomain" class="col-sm-4 control-label">账户类型</label>
                 <div class="col-sm-6">
                     <label class="radio-inline">
-						<input type="radio" name="accountClass" id="" value="1" checked="">个人
+						<input type="radio" ng-model="accountType" name="accountClass" id="" value="1" checked>个人
 					</label>
                     <label class="radio-inline">
-						<input type="radio" name="accountClass" id="" value="2">企业
+						<input type="radio" ng-model="accountType" name="accountClass" id="" value="2">企业
 					</label>
                 </div>
             </div>
-            <div class="form-group">
+<!--        <div class="form-group">
                 <label for="" class="col-sm-4 control-label">身份证号</label>
                 <div class="col-sm-6">
                     <input type="text" class="form-control" name="" id="" value="" placeholder="请输入身份证号...">
                 </div>
-            </div>
+            </div> -->
             <div class="form-group">
                 <label for="" class="col-sm-4 control-label">收款方开户行</label>
                 <div class="col-sm-6">
-                    <select class="form-control" ng-model="bank" ng-options="x.bank for x in banks"></select>
+                    <select class="form-control" name="" ng-model="bankBranch">
+						<option value="">中国银行</option>
+						<option value="">建设银行</option>
+						<option value="">工商银行</option>
+						<option value="">农业银行</option>
+					</select>
+					<!--<select class="form-control" ng-model="bank" ng-options="x.bank for x in banks"></select>-->
                 </div>
             </div>
             <div class="form-group">
                 <label for="" class="col-sm-4 control-label">收款方银行卡号</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="" id="" value="" placeholder="请输入卡号...">
+                    <input type="text" class="form-control" name="" id="" value="" ng-model="accountNum" placeholder="请输入卡号...">
                 </div>
             </div>
             <div class="form-group">
@@ -56,19 +62,19 @@
             <div class="form-group">
                 <label for="" class="col-sm-4 control-label">开户行支行名称</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="" id="" value="" placeholder="请输入开户行支行名称...">
+                    <input type="text" class="form-control" name="" id="" value="" ng-model="bankBranch" placeholder="请输入开户行支行名称...">
                 </div>
             </div>
             <div class="form-group">
                 <label for="" class="col-sm-4 control-label">打款金额</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="" id="" value="" placeholder="请输入金额数...">
+                    <input type="text" class="form-control" name="" id="" value="" ng-model="withdrawAmount" placeholder="请输入金额数...">
                 </div>
             </div>
             <div class="form-group">
                 <label for="" class="col-sm-4 control-label">打款原因</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="" id="" value="" placeholder="">
+                    <input type="text" class="form-control" name="" id="" value="" ng-model="remark" placeholder="">
                 </div>
             </div>
         </form>
@@ -124,18 +130,20 @@
                 <div class="form-group">
                     <label class="col-sm-4 control-label">银行卡信息：</label>
                     <div class="col-sm-7">
-                        <p class="y-color-red">招商银行</p>
-                        <p>沈贤丁（********2113）<span class="label label-info">签约账户</span>
+                        <p class="y-color-red" ng-bind="bankBranch"></p>
+                        <p>
+                           <span ng-bind="accountName"></span>
+                           <span class="label label-info">签约账户</span>
                         </p>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-4 control-label">提现金额：</label>
                     <div class="col-sm-7">
-                        <p>2,324.00 元</p>
+                        <p ng-bind="withdrawAmount"></p>
                     </div>
                 </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label class="col-sm-4 control-label">商家实付：</label>
                     <div class="col-sm-7">
                         <p>5,324.00 元</p>
@@ -146,7 +154,7 @@
                     <div class="col-sm-7">
                         <p>324.00 元</p>
                     </div>
-                </div>
+                </div> -->
                 <div class="form-group">
                     <label class="col-sm-4 control-label">安全密码：</label>
                     <div class="col-sm-4">
