@@ -13,6 +13,7 @@ angular.module('yhtml5', [
         'yhtml5.account',
         'yhtml5.authentication',
         'yhtml5.user',
+        'yhtml5.payment',
         'ngFileUpload'
     ])
     .config(function($stateProvider, $urlRouterProvider) {
@@ -150,6 +151,9 @@ angular.module('yhtml5', [
                 views: {
                     "content": {
                         templateUrl: "view/appsetting.info/appsetting.info.html"
+                    },
+                    "modal": {
+                        templateUrl: "view/noteSimple/noteSimple.html"
                     }
                 }
             })
