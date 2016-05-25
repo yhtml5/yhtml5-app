@@ -1,0 +1,31 @@
+{
+	"message": "",
+	"result": "0",
+	"num": "",
+	"data": {
+		"appTradeInfoList": [
+			{
+				"appName": "濂崇帇鎸傛満-Android",
+				"todayOrderNum": 0,
+				"todayMoneyNum": "",
+				"appType": 1
+			}, {
+				"appName": "濂崇帇鎸傛満-PC",
+				"todayOrderNum": 0,
+				"todayMoneyNum": "",
+				"appType": 3
+			}, {
+				"appName": "濂崇帇鎸傛満-WAP",
+				"todayOrderNum": 0,
+				"todayMoneyNum": "",
+				"appType": 2
+			}, {
+				"appName": "濂崇帇鎸傛満-PC1",
+				"todayOrderNum": 0,
+				"todayMoneyNum": "",
+				"appType": 4
+			}
+		],
+		"state": 1
+	}
+}
