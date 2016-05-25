@@ -113,12 +113,12 @@
                                 <h5 ng-bind="userInfo.contactAddress"></h5>
                             </div>-->
                             <div class="col-sm-3">
-                                <select class="form-control" ng-model="userInfo.contactProvId" ng-options="key as key for (key,value) in data.division" ng-change="userInfo.contactCityId='';userInfo.contactAddress='';">
+                                <select class="form-control" ng-model="userInfo.contactProvId" ng-options="key as key for (key,value) in data.division" ng-change="userInfo.contactCityId=''">
                                     <option value="">省</option>
                                 </select>
                             </div>
                             <div class="col-sm-3">
-                                <select class="form-control" ng-model="userInfo.contactCityId" ng-options="key as key for (key,value) in data.division[userInfo.contactProvId]" ng-change="userInfo.contactAddress=''">
+                                <select class="form-control" ng-model="userInfo.contactCityId" ng-options="key as key for (key,value) in data.division[userInfo.contactProvId]" ng-change="">
                                     <option value="">市</option>
                                 </select>
                             </div>

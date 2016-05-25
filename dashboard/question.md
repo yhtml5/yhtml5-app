@@ -50,6 +50,12 @@
       ** 使用provider、factory、service
  - [] select默认值为空
 
+ ### 联调
+ - [] #/user/person 通讯地址省、市默认显示数据 参考#/user/account/ 开户行所在地（select默认值为空）
+ - [] #/account/ $http请求时间过长，请求俩次
+ - [] 响应头中文乱码问题
+
+
 ### 性能优化
  - [] 减少标签嵌套深度
  - [] 选择器高复用、可维护写法优先、适当减少选择器
