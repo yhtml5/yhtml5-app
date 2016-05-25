@@ -2,7 +2,7 @@
     <div class="panel-heading">
         <div class="row">
             <div class="col-sm-6">
-                <h3>结算信息</h3>
+                <h3>结算信息+{{data.name}}</h3>
             </div>
             <div class="col-sm-6 text-xs-right">
                 <button type="button" class="btn btn-default y-mt15 y-mr20" ng-click="userPersonFormTotal()" ng-show="userPersonUpdate">修改</button>
@@ -46,11 +46,12 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="" class="col-sm-3 control-label">开户银行</label>
                             <div class="col-sm-8">
-                                <select class="form-control" ng-model="bank" ng-options="x.bank for x in banks">
+                                <select class="form-control" ng-model="bank" ng-options="x.bank for x in data.banks">
                                    <option value="">开户银行</option>
                                 </select>
                             </div>

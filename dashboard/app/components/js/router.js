@@ -7,6 +7,7 @@
 angular.module('yhtml5', [
         'ui.router',
         'controllers',
+        'factory',
         'yhtml5.nav',
         'yhtml5.appList',
         'yhtml5.appsetting',

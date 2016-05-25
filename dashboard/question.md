@@ -46,7 +46,9 @@
  - [] http开发常见问题：
       ** 访问本地文件
       ** 跨域问题 XMLHttpRequest cannot load | Access-Control-Allow-Origin
-
+ - [] 不同controller之间传参
+      ** 使用provider、factory、service
+ - [] select默认值为空
 
 ### 性能优化
  - [] 减少标签嵌套深度
