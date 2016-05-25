@@ -1,0 +1,39 @@
+{
+    "resultCode":200,
+    "errMsg":"hello world"
+    "downloadRecord": [
+        {
+            "sdkName": "Android",
+            "sdkNote": "（SDK开发包）",
+            "sdkClass": "icon-iconanzhuo"
+        }, {
+            "sdkName": "Android",
+            "sdkNote": "（SDK开发包）",
+            "sdkClass": "icon-iconanzhuo"
+        }, {
+            "sdkName": "Android",
+            "sdkNote": "（SDK开发包）",
+            "sdkClass": "icon-iconanzhuo"
+        }, {
+            "sdkName": "Android",
+            "sdkNote": "（SDK开发包）",
+            "sdkClass": "icon-iconanzhuo"
+        }, {
+            "sdkName": "Android",
+            "sdkNote": "（SDK开发包）",
+            "sdkClass": "icon-iconanzhuo"
+        }, {
+            "sdkName": "Android",
+            "sdkNote": "（SDK开发包）",
+            "sdkClass": "icon-iconanzhuo"
+        }, {
+            "sdkName": "Android",
+            "sdkNote": "（SDK开发包）",
+            "sdkClass": "icon-iconanzhuo"
+        }, {
+            "sdkName": "Android",
+            "sdkNote": "（SDK开发包）",
+            "sdkClass": "icon-iconanzhuo"
+        }
+    ]
+}
