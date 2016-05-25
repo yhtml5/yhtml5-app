@@ -1,10 +1,10 @@
-<div class="container y-body y-mt-30">
+<div class="container y-body y-mt-30" ng-controller="yhtml5.payment">
 	<div class="panel panel-default y-dashboard-payment" data-page="dashboard-payment">
 		<div class="panel-heading">
 			<div class="row">
 				<div class="col-xs-6 col-xs-push-1 col-sm-2 col-sm-push-0 col-md-2 y-panel-title">支付查询</div>
 				<div class="col-xs-6 col-xs-pull-1 col-sm-3 col-sm-pull-0 col-md-2 y-lh52">
-					<button class="btn y-btn-blue">导出</button>
+					<button class="btn y-btn-blue" ng-click="paymentExportExcel()">导出</button>
 					<button class="btn y-btn-blue">刷新</button>
 				</div>
 				<div class="col-xs-12 col-sm-7 col-md-7 col-md-push-1 col-lg-push-2 y-lh52">

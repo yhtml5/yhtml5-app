@@ -53,44 +53,24 @@
                     <tr class="y-fs16">
                         <th class="text-xs-center">产品名称</th>
                         <th class="text-xs-center">费率</th>
-                        <th class="text-xs-center">结算费</th>
+<!--                         <th class="text-xs-center">结算费</th> -->
                         <th class="text-xs-center">结算周期</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody  ng-repeat="x in appsetting">
+                
                     <tr>
-                        <td class="text-xs-center">支付宝扫码支付</td>
-                        <td class="text-xs-center">3.5%</td>
-                        <td>
+                        <td class="text-xs-center" ng-bind="x.payMethodName"></td>
+                        <td class="text-xs-center" ng-bind="x.appRate"></td>
+<!--                         <td>
                             <ul class="y-mb0">
                                 <li>交易金额*0.5%; 单笔结算≤5万</li>
                                 <li>最低2元/笔，最高100/笔</li>
                             </ul>
-                        </td>
-                        <td class="text-xs-center">T+1</td>
+                        </td> -->
+                        <td class="text-xs-center" ng-bind="x.clearingCycle"></td>
                     </tr>
-                    <tr>
-                        <td class="text-xs-center">支付宝扫码支付</td>
-                        <td class="text-xs-center">3.5%</td>
-                        <td>
-                            <ul class="y-mb0">
-                                <li>交易金额*0.5%; 单笔结算≤5万</li>
-                                <li>最低2元/笔，最高100/笔</li>
-                            </ul>
-                        </td>
-                        <td class="text-xs-center">T+1</td>
-                    </tr>
-                    <tr>
-                        <td class="text-xs-center">支付宝扫码支付</td>
-                        <td class="text-xs-center">3.5%</td>
-                        <td>
-                            <ul class="y-mb0">
-                                <li>交易金额*0.5%; 单笔结算≤5万</li>
-                                <li>最低2元/笔，最高100/笔</li>
-                            </ul>
-                        </td>
-                        <td class="text-xs-center">T+1</td>
-                    </tr>
+
                 </tbody>
             </table>
         </div>
