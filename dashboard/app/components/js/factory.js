@@ -1,7 +1,7 @@
 'use strict';
 angular.module('factory', [])
     .factory('Data', function() {
-        accountRecord =[{
+        accountRecord = [{
             "time": "2016-02-26 19:21:45",
             "name": "Kyle1",
             "account": "yhtml5",
@@ -13,10 +13,10 @@ angular.module('factory', [])
             "payed": "10W",
             "fee": "3%",
             "state": "已结算",
-            "timedone":"2016-02-27 19:21:45",
+            "timedone": "2016-02-27 19:21:45",
             "class": "提现",
             "canal": "Data"
-        },{
+        }, {
             "time": "2016-02-26 19:21:45",
             "name": "Kyle2",
             "account": "yhtml5",
@@ -28,10 +28,10 @@ angular.module('factory', [])
             "payed": "10W",
             "fee": "3%",
             "state": "已结算",
-            "timedone":"2016-02-27 19:21:45",
+            "timedone": "2016-02-27 19:21:45",
             "class": "提现",
             "canal": "Data"
-        },{
+        }, {
             "time": "2016-02-26 19:21:45",
             "name": "Kyle3",
             "account": "yhtml5",
@@ -43,10 +43,10 @@ angular.module('factory', [])
             "payed": "10W",
             "fee": "3%",
             "state": "已结算",
-            "timedone":"2016-02-27 19:21:45",
+            "timedone": "2016-02-27 19:21:45",
             "class": "提现",
             "canal": "Data"
-        },{
+        }, {
             "time": "2016-02-26 19:21:45",
             "name": "Kyle4",
             "account": "yhtml5",
@@ -58,10 +58,10 @@ angular.module('factory', [])
             "payed": "10W",
             "fee": "3%",
             "state": "已结算",
-            "timedone":"2016-02-27 19:21:45",
+            "timedone": "2016-02-27 19:21:45",
             "class": "提现",
             "canal": "Data"
-        },{
+        }, {
             "time": "2016-02-26 19:21:45",
             "name": "Kyle5",
             "account": "yhtml5",
@@ -73,10 +73,10 @@ angular.module('factory', [])
             "payed": "10W",
             "fee": "3%",
             "state": "已结算",
-            "timedone":"2016-02-27 19:21:45",
+            "timedone": "2016-02-27 19:21:45",
             "class": "提现",
             "canal": "Data"
-        },{
+        }, {
             "time": "2016-02-26 19:21:45",
             "name": "Kyle6",
             "account": "yhtml5",
@@ -88,10 +88,10 @@ angular.module('factory', [])
             "payed": "10W",
             "fee": "3%",
             "state": "已结算",
-            "timedone":"2016-02-27 19:21:45",
+            "timedone": "2016-02-27 19:21:45",
             "class": "提现",
             "canal": "Data"
-        },{
+        }, {
             "time": "2016-02-26 19:21:45",
             "name": "Kyle7",
             "account": "yhtml5",
@@ -103,10 +103,10 @@ angular.module('factory', [])
             "payed": "10W",
             "fee": "3%",
             "state": "已结算",
-            "timedone":"2016-02-27 19:21:45",
+            "timedone": "2016-02-27 19:21:45",
             "class": "提现",
             "canal": "Data"
-        },{
+        }, {
             "time": "2016-02-26 19:21:45",
             "name": "Kyle8",
             "account": "yhtml5",
@@ -118,10 +118,10 @@ angular.module('factory', [])
             "payed": "10W",
             "fee": "3%",
             "state": "已结算",
-            "timedone":"2016-02-27 19:21:45",
+            "timedone": "2016-02-27 19:21:45",
             "class": "提现",
             "canal": "Data"
-        },{
+        }, {
             "time": "2016-02-26 19:21:45",
             "name": "Kyle9",
             "account": "yhtml5",
@@ -133,11 +133,26 @@ angular.module('factory', [])
             "payed": "10W",
             "fee": "3%",
             "state": "已结算",
-            "timedone":"2016-02-27 19:21:45",
+            "timedone": "2016-02-27 19:21:45",
             "class": "提现",
             "canal": "Data"
-        }
-    ];
+        }];
+        accountRecord2 = [{
+            "time": "2016-02-26 19:21:45",
+            "name": "Kyle1",
+            "account": "yhtml5",
+            "bank": "人民银行",
+            "subbranch": "杭州支行",
+            "province": "浙江省",
+            "city": "杭州市",
+            "pay": "200W",
+            "payed": "10W",
+            "fee": "3%",
+            "state": "已结算",
+            "timedone": "2016-02-27 19:21:45",
+            "class": "提现",
+            "canal": "Data"
+        }];
         banks = [{
             id: 100,
             bank: "中国邮政储蓄银行"

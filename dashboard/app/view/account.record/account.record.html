@@ -71,7 +71,7 @@
         </div>
         <!--y-dashboard-payment-table-->
         <p class="text-info visible-xs">左右滑动显示完整的表格内容</p>
-        <uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="" boundary-links="true" force-ellipses="true" previous-text="上一页" next-text="下一页" first-text="首页" last-text="末页"></uib-pagination>
+        <uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" max-size="maxSize" class="" boundary-links="true" force-ellipses="true" previous-text="上一页" next-text="下一页" first-text="首页" last-text="末页"></uib-pagination>
     </div>
     <script type="text/ng-template" id="accountTopayDelete.html">
         <div class="modal-body">

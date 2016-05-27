@@ -7,16 +7,25 @@ angular.module('yhtml5.account', ['ui.bootstrap', 'ngAnimate', 'factory', 'ngFil
                 $scope.accountRecord = response.accountRecord
             });
         $scope.totalItems = 64;
-        $scope.currentPage = 6;
+        $scope.currentPage = 1;
+        $scope.maxSize = 5;
         $scope.setPage = function(pageNo) {
             $scope.currentPage = pageNo;
         };
         $scope.pageChanged = function() {
             $log.log('Page changed to: ' + $scope.currentPage);
+            $http({
+                method: "post",
+                url: __uri("../../server/account.record.json"),
+                params: {
+                    currentPage: $scope.currentPage
+                }
+            }).success(function(response) {
+                $scope.accountRecord = response.accountRecord2
+            });
         };
-        $scope.maxSize = 5;
-//      $scope.bigTotalItems = 175;
-//      $scope.bigCurrentPage = 1;
+        //      $scope.bigTotalItems = 175;
+        //      $scope.bigCurrentPage = 1;
         $http({
             method: "post",
             url: "http://admin.jubaobar.com/front/CashFlow/Record.htm",
