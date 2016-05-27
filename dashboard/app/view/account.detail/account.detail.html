@@ -51,12 +51,52 @@
 					</div>
 				</form>
 			</div>
+
+			<!-- 白豆腐账户明细导出 查询 -->
+
 			<div class="col-xs-6 col-sm-2 y-mt15">
-				<button class="btn y-btn-blue">查询</button>
-				<button class="btn y-btn-blue">导出</button>
+				<button class="btn y-btn-blue" ng-click="accountSelect()">查询</button>
+				<button class="btn y-btn-blue" ng-click="accountExportExcel()">导出</button>
 			</div>
 		</div>
 		<!--row-->
+	</div>
+	<div class="panel-body">
+		<div class="table-responsive">
+			<table class="table table-striped table-hover table-condensed table-bordered y-table-md">
+				<thead>
+					<tr>
+						<th>交易时间</th>
+						<th>流水号</th>
+						<th>交易类型</th>
+						<th>收入</th>
+						<th>支出</th>
+						<th>账户余额</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="data in accountdetail">
+						<td ng-bind="data.finishTime"></td>
+						<td ng-bind="data.transNo"></td>
+						<td ng-bind="data.changeType"></td>
+						<td ng-bind="data.income" class="text-success"></td>
+						<td ng-bind="data.expense" class="text-danger"></td>
+						<td ng-bind="data.balance"></td>
+						<td>
+							<button type="button" class="btn btn-link" ng-click="accountDetailMoreOpen()">详情</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- 白豆腐账户明细导出 查询 -->
+
+		<!--<div class="col-xs-6 col-sm-2 y-mt15">
+				<button class="btn y-btn-blue">查询</button>
+				<button class="btn y-btn-blue">导出</button>
+			</div>
+	</div>
 	</div>
 	<div class="panel-body">
 		<div class="table-responsive">
@@ -86,7 +126,8 @@
 					</tr>
 				</tbody>
 			</table>
-		</div>
+		</div>-->
+
 		<!--y-dashboard-payment-table-->
 		<p class="text-info visible-xs">左右滑动显示完整的表格内容</p>
 		<div class="text-center">
