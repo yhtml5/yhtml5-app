@@ -86,10 +86,10 @@ angular.module('yhtml5.account', ['ui.bootstrap', 'ngAnimate', 'factory', 'ngFil
                 params: {
                     accountName: $scope.accountName,
                     accountNum: $scope.accountNum,
-                    bankId: '2255',
+                    bankId: $scope.bank.id,
                     bankBranch: $scope.bankBranch,
-                    bankProvId: "3355",
-                    bankCityId: "4455",
+                    bankProvId: $scope.bankProvId,
+                    bankCityId: $scope.bankCityId,
                     accountType: $scope.accountType,
                     remark: $scope.remark,
                     withdrawAmount: $scope.withdrawAmount

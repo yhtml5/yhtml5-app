@@ -1,10 +1,10 @@
 'use strict';
 angular.module('yhtml5.payment', ['ui.bootstrap', 'ngAnimate', 'ui.router']) //可以不加ui模块？
 	.controller('yhtml5.payment', function($scope, $http, $uibModal) {
-		$http.get('http://admin.jubaobar.com/front/payment/query.htm')
+		$http.get('http://admin.jubaobar.com/front/payment/index.htm')
 			.success(function(response) {
 				console.log(response.data.appTradeInfoList);
-				$scope.userApps = response.data.appTradeInfoList;
+				$scope.userTrades = response.data.page;
 			})
 			/** Writed By 银燕 支付订单导出功能 */
 		$scope.paymentExportExcel = function(size) {

@@ -111,6 +111,77 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate'])
 				controller: 'appsettingChannelPointcardCtrl',
 				size: size
 			})
+		};
+		/** Writed by 银燕 应用通知地址我 */
+		$scope.appsettingApiInformUrlOpen = function(size) {
+			var modalInstance = $uibModal.open({
+				animation: $scope.animationsEnabled,
+				templateUrl: 'appsettingApiInformUrl.html',
+				controller: 'appsettingApiInformUrlCtrl',
+				size: size
+			})
+		}
+		/** Writed by 银燕 重新支付地址 */
+		$scope.appsettingApiRepayUrlOpen = function(size) {
+			var modalInstance = $uibModal.open({
+				animation: $scope.animationsEnabled,
+				templateUrl: 'appsettingApiRepayUrl.html',
+				controller: 'appsettingApiRepayUrlCtrl',
+				size: size
+			})
+		}
+	})
+	/** Writed by 银燕 应用通知地址 */
+	.controller('appsettingApiInformUrlCtrl', function($scope, $http, $uibModalInstance, $uibModal) {
+		$scope.appsettingApiInformUrlSave = function(size) {
+			$http({
+                method: "post",
+                url: "http://admin.jubaobar.com/front/appsetting/api/informURL/save.htm",
+                params: {
+                	callbackurl: $scope.callbackurl,
+                	returnurl: $scope.returnurl
+                }
+            }).success(function(res) {
+            	console.log("保存成功");
+            	$uibModalInstance.dismiss('cancel');
+            }).error(function(res) {
+                console.log("保存失败")
+            })
+			var modalInstance = $uibModal.open({
+				animation: $scope.animationsEnabled,
+				templateUrl: 'noteSimple.html',
+				controller: 'appsettingApiInformUrlCtrl',
+				size: size
+			})
+		}
+		$scope.cancel = function() {
+			$uibModalInstance.dismiss('cancel');
+		}
+	})
+	/** Writed by 银燕 重新支付地址 */
+	.controller('appsettingApiRepayUrlCtrl', function($scope, $http, $uibModalInstance, $uibModal) {
+		$scope.appsettingApiRepayUrlSave = function(size) {
+			$http({
+                method: "post",
+                url: "http://admin.jubaobar.com/front/appsetting/api/rePayURL/save.htm",
+                params: {
+                	payurl: $scope.payurl
+                }
+            }).success(function(res) {
+            	console.log("保存成功");
+            	$uibModalInstance.dismiss('cancel');
+            }).error(function(res) {
+                console.log("保存失败")
+            })
+			var modalInstance = $uibModal.open({
+				animation: $scope.animationsEnabled,
+				templateUrl: 'noteSimple.html',
+				controller: 'appsettingApiRepayUrlCtrl',
+				size: size
+			})
+		}
+		$scope.cancel = function() {
+			$uibModalInstance.dismiss('cancel');
 		}
 	})
 	.controller('appsettingCanalResetCtrl', function($scope, $uibModalInstance) {

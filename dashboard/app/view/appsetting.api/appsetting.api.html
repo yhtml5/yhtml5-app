@@ -51,7 +51,7 @@
 				<p>设置支付结果通知地址，以及支付成功后页面回跳地址</p>
 			</div>
 			<div class="col-sm-3  col-sm-push-3 text-xs-center">
-				<button class="btn btn-default">修改</button>
+				<button class="btn btn-default" ng-click="appsettingApiInformUrlOpen()">修改</button>
 			</div>
 		</div>
 		<hr>
@@ -61,10 +61,60 @@
 				<p>当用户支付失败时，点击“重新支付”时跳转到的支付页面</p>
 			</div>
 			<div class="col-sm-3  col-sm-push-3 text-xs-center">
-				<button class="btn btn-default">设置</button>
+				<button class="btn btn-default" ng-click="appsettingApiRepayUrlOpen()">设置</button>
 			</div>
 		</div>
 		<hr>
 	</div>
+	<script type="text/ng-template" id="appsettingApiInformUrl.html">
+		<div class="modal-header y-modal-header-default">
+			<h3 class="y-mg0 center-block">通知地址
+			    <button type="button" class="close" ng-click="cancel()">
+			        <span aria-hidden="true">&times;</span>
+		        </button>
+			</h3>
+		</div>
+		<div class="modal-body y-pt20">
+			<form class="form-horizontal" action="" method="">
+				<div class="form-group">
+					<label class="col-sm-4 control-label">通知地址：</label>
+					<div class="col-sm-7">
+						<input class="form-control" type="text" name="" id="" value="" ng-model="callbackurl" />
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-4 control-label">页面回调地址：</label>
+					<div class="col-sm-7">
+						<input class="form-control" type="text" name="" id="" value="" ng-model="returnurl" />
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="modal-footer y-modal-footer-default">
+			<button type="button" class="btn y-btn-blue center-block" ng-click="appsettingApiInformUrlSave()">确认</button>
+		</div>
+	</script>
+	<script type="text/ng-template" id="appsettingApiRepayUrl.html">
+		<div class="modal-header y-modal-header-default">
+			<h3 class="y-mg0 center-block">重新支付地址
+			    <button type="button" class="close" ng-click="cancel()">
+			        <span aria-hidden="true">&times;</span>
+		        </button>
+			</h3>
+		</div>
+		<div class="modal-body y-pt20">
+			<form class="form-horizontal" action="" method="">
+				<div class="form-group">
+					<label class="col-sm-4 control-label">重新支付地址：</label>
+					<div class="col-sm-7">
+						<input class="form-control" type="text" name="" id="" value="" ng-model="payurl" />
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="modal-footer y-modal-footer-default">
+			<button type="button" class="btn y-btn-blue center-block" ng-click="appsettingApiRepayUrlSave()">确认</button>
+		</div>
+	</script>
 </div>
 <!--panel-->

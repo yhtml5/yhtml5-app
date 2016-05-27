@@ -34,8 +34,6 @@ angular.module('yhtml5.appList', ['ui.bootstrap', 'ngAnimate'])
                 method: "post",
                 url: "http://admin.jubaobar.com/front/appbanage/save.htm",
                 params: {
-                    appId: "test123456789",
-                    partnerId: "15111830332155681475",
                     appType: $scope.data.appType,
                     appName: $scope.data.appName,
                     appUrl: $scope.data.appUrl,

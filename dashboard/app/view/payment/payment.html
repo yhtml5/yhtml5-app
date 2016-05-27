@@ -63,23 +63,21 @@
 							<th>支付金额</th>
 							<th>付款方</th>
 							<th>支付时间</th>
-							<th>结算状态</th>
-							<th>结算金额</th>
+<!-- 						<th>结算状态</th>
+							<th>结算金额</th> -->
 							<th>操作</th>
 						</tr>
 					</thead>
-					<tbody data-js="repeat1">
+					<tbody data-js="repeat1" ng-repeat="x in userTrades.entityList">
 						<tr>
-							<td>Data</td>
-							<td>Data</td>
-							<td>Data</td>
-							<td>Data</td>
-							<td>Data</td>
-							<td>Data</td>
-							<td>Data</td>
-							<td>Data</td>
-							<td>Data</td>
-							<td>Data</td>
+							<td ng-bind="x.createTime"></td>
+							<td ng-bind="payId"></td>
+							<td ng-bind="x.orderNo"></td>
+							<td ng-bind="x.payType"></td>
+							<td ng-bind="x.state"></td>
+							<td ng-bind="x.amount"></td>
+							<td ng-bind="x.payerName"></td>
+							<td ng-bind="x.paySucTime"></td>
 							<td>
 								<button type="button" class="btn btn-info" data-toggle="modal">补发通知</button>
 							</td>
