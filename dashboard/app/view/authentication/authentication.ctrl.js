@@ -2,10 +2,23 @@
 angular.module('yhtml5.authentication', ['ui.bootstrap', 'ngAnimate', 'factory'])
 	.controller('yhtml5.authentication', function($scope, $uibModal, $state, $http, Upload, $timeout, Data) {
 		$scope.data = Data;
-		$scope.userInfo = {};
+        console.log("factory data : ", Data);
+        $scope.userInfo=$scope.data.userInfo;
+        console.log("data.userInfo : ", $scope.userInfo);
 		$scope.userAccount = {};
 		$scope.bank = {};
-		$scope.isStep1 = true
+
+
+
+		======================
+
+
+
+
+
+
+
+		$scope.isStep1 = true;
 		$scope.toStep1 = function() {
 			$scope.isStep1 = true
 			$scope.isStep2 = false
@@ -20,48 +33,49 @@ angular.module('yhtml5.authentication', ['ui.bootstrap', 'ngAnimate', 'factory']
 			$scope.isStep1 = true
 			$scope.isStep2 = true
 			$scope.isStep3 = true
+			/** ======================================== writed by Yangjb 实名认证 Start========================================= */
+            /** 基本信息 **/
+            $http({
+                method: "post",
+                url: "http://admin.jubaobar.com/front/authentication/businessInformation.htm",
+                params: {
+                    companyType: $scope.userInfo.companyType,
+                    subCompanyType: $scope.userInfo.subCompanyType,
+                    userName: $scope.userInfo.userName,
+                    businessType: $scope.userInfo.businessType1,
+                    businessType2: $scope.userInfo.businessType2,
+                    businessTypeAll: $scope.userInfo.businessType1 + "/" + $scope.userInfo.businessType2,
+                    companyName: $scope.userInfo.companyName,
+                    companyAddress: $scope.userInfo.companyAddress,
+                    licenseNo: $scope.userInfo.licenseNo,
+                    contactName: $scope.userInfo.contactName,
+                    contactEmail: $scope.userInfo.contactEmail,
+                    contactTelephone: $scope.userInfo.contactTelephone,
+                    contactQQ: $scope.userInfo.contactQQ,
+                    contactProvId: $scope.userInfo.contactProvId,
+                    contactCityId: $scope.userInfo.contactCityId,
+                    contactAddress: $scope.userInfo.contactAddress,
+                    contactAddressAll: $scope.userInfo.contactProvId + $scope.userInfo.contactCityId + $scope.userInfo.contactAddress,
+                    idCard: $scope.userInfo.idCard,
+                    idCardPic: $scope.userInfo.idCardPic,
+                    idCardFrontPic: $scope.userInfo.idCardFrontPic,
+                    idCardReversePic: $scope.userInfo.idCardReversePic,
+                    licensePic: $scope.userInfo.licensePic,
+                    taxCertPic: $scope.userInfo.taxCertPic,
+                    orgCodeCertPic: $scope.userInfo.orgCodeCertPic,
+                    openPermitPic: $scope.userInfo.openPermitPic,
+                    otherTypePic: $scope.userInfo.otherTypePic
+                }
+            }).success(function(res) {
+                $scope.savingBase = false;
+                if (res.resultCode == 0) {
+                    console.log("应用信息保存成功")
+                }
+            });
 		}
 		$scope.animationsEnabled = true;
 		$scope.authenticationAccountConfirmOpen = function(size) {
-			/** ======================================== writed by Yangjb 实名认证 Start========================================= */
-			/** 基本信息 **/
-			$http({
-				method: "post",
-				url: "http://admin.jubaobar.com/front/authentication/businessInformation.htm",
-				params: {
-					companyType: $scope.userInfo.companyType,
-					subCompanyType: $scope.userInfo.subCompanyType,
-					userName: $scope.userInfo.userName,
-					businessType: $scope.userInfo.businessType1,
-					businessType2: $scope.userInfo.businessType2,
-					businessTypeAll: $scope.userInfo.businessType1 + "/" + $scope.userInfo.businessType2,
-					companyName: $scope.userInfo.companyName,
-					companyAddress: $scope.userInfo.companyAddress,
-					licenseNo: $scope.userInfo.licenseNo,
-					contactName: $scope.userInfo.contactName,
-					contactEmail: $scope.userInfo.contactEmail,
-					contactTelephone: $scope.userInfo.contactTelephone,
-					contactQQ: $scope.userInfo.contactQQ,
-					contactProvId: $scope.userInfo.contactProvId,
-					contactCityId: $scope.userInfo.contactCityId,
-					contactAddress: $scope.userInfo.contactAddress,
-					contactAddressAll: $scope.userInfo.contactProvId + $scope.userInfo.contactCityId + $scope.userInfo.contactAddress,
-					idCard: $scope.userInfo.idCard,
-					idCardPic: $scope.userInfo.idCardPic,
-					idCardFrontPic: $scope.userInfo.idCardFrontPic,
-					idCardReversePic: $scope.userInfo.idCardReversePic,
-					licensePic: $scope.userInfo.licensePic,
-					taxCertPic: $scope.userInfo.taxCertPic,
-					orgCodeCertPic: $scope.userInfo.orgCodeCertPic,
-					openPermitPic: $scope.userInfo.openPermitPic,
-					otherTypePic: $scope.userInfo.otherTypePic
-				}
-			}).success(function(res) {
-				$scope.savingBase = false;
-				if (res.resultCode == 0) {
-					console.log("应用信息保存成功")
-				}
-			});
+
 
 			/** 结算信息 **/
 			$http({

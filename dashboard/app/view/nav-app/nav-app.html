@@ -1,5 +1,6 @@
 <nav class="navbar y-navbar-info navbar-fixed-top" ng-controller="yhtml5.nav">
     <div class="container-fluid">
+
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -8,7 +9,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-            <a class="navbar-brand y-header-logo" href="#" onclick="javascript:return false;" ui-sref="dashboard">
+            <a class="navbar-brand y-header-logo" ui-sref="dashboard">
                 <img src="../../components/nav/logo-sdk.png?__inline">
             </a>
         </div>
@@ -17,23 +18,29 @@
             <ul class="breadcrumb hidden-xs y-mb10" role="tablist">
                 <li class="active">
                     <a href="index.html"><i class="iconfont y-dashboard-iconfont-home">&#xe606;</i>首页</a></li>
-                <li class="dropdown j-dashboard-header-app">
-                    <a href="#test1" class="dropdown-toggle" data-toggle="dropdown">
-                        <span class="y-ellipsis">应用1</span><b class="caret"></b></a>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
-                        <li><a href="#" tabindex="-1" data-toggle="tab">应用1</a></li>
-                        <li><a href="#" tabindex="-1" data-toggle="tab">应用3</a></li>
-                        <li><a href="#" tabindex="-1" data-toggle="tab">应用4</a></li>
+                <li>
+                    <span uib-dropdown on-toggle="toggled(open)">
+                        <a href id="simple-dropdown" uib-dropdown-toggle>
+                            <span class="y-ellipsis">应用&nbsp;</span><b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+                        <li ng-repeat="choice in items">
+                            <a href="">{{choice}}</a>
+                        </li>
                     </ul>
+                    </span>
                 </li>
-                <li class="dropdown j-dashboard-header-function">
-                    <a href="#test1" class="dropdown-toggle" data-toggle="dropdown">
-                        <span class="y-ellipsis">支付</span><b class="caret"></b></a>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
-                        <li><a href="#" tabindex="-1" data-toggle="tab" data-target=".d-dashboard-payment">支付</a></li>
-                        <li><a href="#" tabindex="-1" data-toggle="tab" data-target=".d-dashboard-analyse">分析</a></li>
-                        <li><a href="#" tabindex="-1" data-toggle="tab" data-target=".d-dashboard-set">设置</a></li>
+                <li>
+                    <span uib-dropdown on-toggle="toggled(open)">
+                        <a href id="simple-dropdown" uib-dropdown-toggle>
+                            <span class="y-ellipsis">功能&nbsp;</span><b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                        <li role="menuitem"><a ui-sref="payment">支付</a></li>
+                        <li role="menuitem"><a ui-sref="###">分析</a></li>
+                        <li role="menuitem"><a ui-sref="appsetting.info">设置</a></li>
                     </ul>
+                    </span>
                 </li>
             </ul>
             <a class="nav navbar-brand navbar-right y-header-close" href="#" onclick="javascript:return false;" ng-click="toggle()">

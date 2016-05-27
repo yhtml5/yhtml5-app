@@ -1,7 +1,7 @@
 'use strict';
 angular.module('factory', [])
     .factory('Data', function() {
-
+        userInfo = {};
         accountRecord = [{
             "time": "2016-02-26 19:21:45",
             "name": "Kyle1",
@@ -636,6 +636,7 @@ angular.module('factory', [])
             name: "Ting",
             banks,
             businessTypes,
-            division
+            division,
+            userInfo
         }
     });

@@ -49,11 +49,17 @@
  - [] 不同controller之间传参
       ** 使用provider、factory、service
  - [] select默认值为空
+ - [] 创建应用后，刷新页面
+ - [] 商户后台页面走不通的地方，页面还唯有的
 
  ### 联调
  - [] #/user/person 通讯地址省、市默认显示数据 参考#/user/account/ 开户行所在地（select默认值为空）
  - [] #/account/ $http请求时间过长，请求俩次
  - [] 响应头中文乱码问题
+ - [] #/authentication/person、#/authentication/account分部提交数据
+ - [] #/account/record、#/account/detail、#/payment 表单page
+ - [] #/account/topay  开户银行，开户银行所在地优化
+ - [] #/appsetting/api 通知地址、支付地址弹窗
 
 
 ### 性能优化
