@@ -17,7 +17,7 @@ fis.match('/components/**/(*.{png,gif,jpg,jpeg})', {
 });
 fis.match('/components/**/(iconfont.*)', {
     release: '${project.static}/iconfont/$1',
-    url:'/iconfont/$1'//本地打开路径 整合到 local
+    url:'/iconfont/$1'
 });
 fis.match('/bower_components/**/(*.{js,css})', {
     release: '${project.static}/lib/$1'

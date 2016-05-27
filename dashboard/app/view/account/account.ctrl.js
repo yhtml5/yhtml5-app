@@ -1,11 +1,27 @@
 'use strict';
-angular.module('yhtml5.account', ['ui.bootstrap', 'ngAnimate'])
-    .controller('yhtml5.account', function($scope, $http, $uibModal, Upload, $timeout) {
+angular.module('yhtml5.account', ['ui.bootstrap', 'ngAnimate', 'factory', 'ngFileUpload'])
+    .controller('yhtml5.account', function($scope, $http, $uibModal, Upload, $timeout, $log, Data) {
+        //      $scope.accountRecord = accountRecord;
+        $http.get(__uri("../../server/account.record.json"))
+            .success(function(response) {
+                $scope.accountRecord = response.accountRecord
+            });
+        $scope.totalItems = 64;
+        $scope.currentPage = 6;
+        $scope.setPage = function(pageNo) {
+            $scope.currentPage = pageNo;
+        };
+        $scope.pageChanged = function() {
+            $log.log('Page changed to: ' + $scope.currentPage);
+        };
+        $scope.maxSize = 5;
+//      $scope.bigTotalItems = 175;
+//      $scope.bigCurrentPage = 1;
         $http({
             method: "post",
-            url: "http://admin.jubaobar.com/front/CashFlow/Record.htm"
+            url: "http://admin.jubaobar.com/front/CashFlow/Record.htm",
         }).success(function(response) {
-            console.log(response.data);
+            console.log("历史记录为：", response.data);
             $scope.account = response.data;
         });
         /*上传文件*/
@@ -29,11 +45,6 @@ angular.module('yhtml5.account', ['ui.bootstrap', 'ngAnimate'])
                 file.progress = Math.min(100, parseInt(100.0 * evt.loaded / evt.total));
             });
         }
-        //get json
-        $http.get(__uri("../../server/account.record.json"))
-            .success(function(response) {
-                $scope.accountRecord = response.accountRecord //$scope.names 为一个数组
-            });
         $http.get(__uri("../../server/account.detail.json"))
             .success(function(response) {
                 $scope.accountDetail = response.accountDetail //$scope.names 为一个数组
