@@ -2,8 +2,9 @@
 angular.module('yhtml5.user', ['ngFileUpload', 'factory'])
 	.controller('yhtml5.user', function($scope, $uibModal, $http, Upload, $timeout, Data) {
 		$scope.data = Data;
+		$scope.banks = Data.banks;
 		console.log("factory data : ", Data);
-		$scope.bank = {};
+		console.log("banks : ", banks);
 		$http.get('http://admin.jubaobar.com/front/myAccount/queryAccountMessage.htm')
 			.success(function(response) {
 				$scope.userAccount = response.data;

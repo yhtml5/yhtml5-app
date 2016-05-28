@@ -51,9 +51,13 @@
                         <div class="form-group">
                             <label for="" class="col-sm-3 control-label">开户银行</label>
                             <div class="col-sm-8">
-                                <select class="form-control" ng-model="bank" ng-options="x.bank for x in data.banks">
+                                <select class="form-control" ng-model="bank" ng-options="obj.bank for obj in banks">
                                       <option value="">开户银行</option>
                                 </select>
+                                <p class="text-danger"> {{ bank }}</p>
+                                <p class="text-danger"> {{ bank.id }}</p>
+                                <p class="text-danger"> {{ bank.bank }}</p>
+                                <br> {{banks}}
                             </div>
                         </div>
                     </div>
