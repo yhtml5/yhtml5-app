@@ -60,6 +60,10 @@
  - [] #/account/record、#/account/detail、#/payment 表单page
  - [] #/account/topay  开户银行，开户银行所在地优化
  - [] #/appsetting/api 通知地址、支付地址弹窗
+ - [] #user/password 忘记密码联调
+ - [] #appseting/info 保存发送表单
+ - [] #account/record 表单状态、数据
+ - [] #account/detail 查询导出
 
 
 ### 性能优化

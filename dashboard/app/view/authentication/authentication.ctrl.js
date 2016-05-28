@@ -10,10 +10,7 @@ angular.module('yhtml5.authentication', ['ui.bootstrap', 'ngAnimate', 'factory']
 
 
 
-		======================
-
-
-
+//		======================
 
 
 

@@ -233,7 +233,7 @@ angular.module('yhtml5.user', ['ngFileUpload', 'factory'])
 			$uibModalInstance.dismiss('cancel');
 		}
 	})
-	.controller('userPasswordSecurityRetrieveCtrl', function($scope, $uibModalInstance, $uibModal) {
+	.controller('userPasswordSecurityRetrieveCtrl', function($scope, $uibModalInstance, $uibModal,$http) {
 		$scope.passwordFormEnabled = true;
 		$scope.newPasswordFormEnabled = false;
 			//		$scope.next = function() {

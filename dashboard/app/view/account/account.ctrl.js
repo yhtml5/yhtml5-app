@@ -26,13 +26,13 @@ angular.module('yhtml5.account', ['ui.bootstrap', 'ngAnimate', 'factory', 'ngFil
 		};
 		//      $scope.bigTotalItems = 175;
 		//      $scope.bigCurrentPage = 1;
-		//		$http({
-		//			method: "post",
-		//			url: "http://admin.jubaobar.com/front/CashFlow/Record.htm",
-		//		}).success(function(response) {
-		//			console.log("历史记录为：", response.data);
-		//			$scope.account = response.data;
-		//		});
+				$http({
+					method: "post",
+					url: "http://admin.jubaobar.com/front/CashFlow/Record.htm",
+				}).success(function(response) {
+					console.log("历史记录为：", response.data);
+					$scope.account = response.data;
+				});
 		/*白豆腐      历史记录*/
 		$http({
 			method: "post",
@@ -78,7 +78,7 @@ angular.module('yhtml5.account', ['ui.bootstrap', 'ngAnimate', 'factory', 'ngFil
                     $anchorScroll();
                 }
             });
-        	
+
             var modalInstance = $uibModal.open({
                 animation: $scope.animationsEnabled,
                 templateUrl: 'accountTopayConfirm.html',
