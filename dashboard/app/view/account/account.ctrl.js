@@ -1,7 +1,7 @@
 'use strict';
 angular.module('yhtml5.account', ['ui.bootstrap', 'ngAnimate', 'factory', 'ngFileUpload'])
 	.controller('yhtml5.account', function($scope, $http, $uibModal, Upload, $timeout, $log, Data) {
-		//      $scope.accountRecord = accountRecord;
+		//      $scope.accountRecord = accountRecord;s'co
 		$http.get(__uri("../../server/account.record.json"))
 			.success(function(response) {
 				$scope.accountRecord = response.accountRecord

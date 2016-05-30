@@ -23,7 +23,7 @@ angular.module('yhtml5.appList', ['ui.bootstrap', 'ngAnimate'])
                 $scope.userApps = response.data.appTradeInfoList;
             })
     })
-    .controller('ModalInstanceCtrl', function($scope, $http, $uibModalInstance, $uibModal) {
+    .controller('ModalInstanceCtrl', function($state,$scope, $http, $uibModalInstance, $uibModal) {
         /** ============================== Writed By 银燕 创建应用 Start ==========================*/
         $scope.data = {};
         $scope.userAppFormSave = function(size) {
@@ -43,15 +43,18 @@ angular.module('yhtml5.appList', ['ui.bootstrap', 'ngAnimate'])
                     webICP: $scope.data.webICP
                 }
             }).success(function(res) {
-//              if (res.result = 0) {
-                    console.log("应用信息保存成功");
-                    $uibModalInstance.dismiss('cancel');
-//              }
+                //              if (res.result = 0) {
+                console.log("应用信息保存成功1");
+                $uibModalInstance.dismiss('cancel');
+                $state.reload('dashboard');
+                console.log("页面刷新成功");
+                //              }
             }).error(function(res) {
                 console.log("保存失败")
             })
         };
         $scope.cancel = function() {
             $uibModalInstance.dismiss('cancel');
+
         }
     });
