@@ -7,14 +7,6 @@ angular.module('yhtml5.authentication', ['ui.bootstrap', 'ngAnimate', 'factory']
         console.log("data.userInfo : ", $scope.userInfo);
 		$scope.userAccount = {};
 		$scope.bank = {};
-
-
-
-//		======================
-
-
-
-
 		$scope.isStep1 = true;
 		$scope.toStep1 = function() {
 			$scope.isStep1 = true
