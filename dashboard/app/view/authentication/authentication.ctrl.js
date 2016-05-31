@@ -1,6 +1,6 @@
 'use strict';
 angular.module('yhtml5.authentication', ['ui.bootstrap', 'ngAnimate', 'factory'])
-    .controller('yhtml5.authentication', function($scope, $uibModal, $state, $http, Upload, $timeout, Data) {
+    .controller('yhtml5.authentication', function($scope, $uibModal, $state, $http, Upload, $interval,$timeout, Data) {
         $scope.data = Data;
         console.log("factory data : ", Data);
         $scope.userInfo = $scope.data.userInfo;

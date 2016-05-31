@@ -10,7 +10,6 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
         }).success(function(response) {
             $scope.appsetting = response.data;
         });
-
         /** =============================== 银燕 应用信息 =============================== B**/
         $http({
             method: "post",
@@ -80,8 +79,7 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
                 })
             }
             /** =============================== 银燕 应用信息 =============================== E**/
-
-        /** =============================== 银燕 删除应用 =============================== B**/
+            /** =============================== 银燕 删除应用 =============================== B**/
         $scope.appsettingDeleteOpen = function(size) {
                 var modalInstance = $uibModal.open({
                     animation: $scope.animationsEnabled,
@@ -91,7 +89,6 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
                 })
             }
             /** =============================== 银燕 删除应用 =============================== E**/
-
         $scope.animationsEnabled = true;
         $scope.appsettingCanalResetOpen = function(size) {
             var modalInstance = $uibModal.open({
@@ -211,14 +208,14 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
                     console.log("删除成功");
                     $uibModalInstance.dismiss('cancel');
                     $state.reload('dashboard');
+                    var modalInstance = $uibModal.open({
+                        animation: $scope.animationsEnabled,
+                        templateUrl: 'noteSimple.html',
+                        controller: 'appsettingInfoNoteSimpleCtrl',
+                        size: size
+                    })
                 }).error(function(res) {
                     console.log("保存失败")
-                })
-                var modalInstance = $uibModal.open({
-                    animation: $scope.animationsEnabled,
-                    templateUrl: 'noteSimple.html',
-                    controller: 'appsettingInfoNoteSimpleCtrl',
-                    size: size
                 })
             }
             /** ======================= 删除应用 ======================= E**/
