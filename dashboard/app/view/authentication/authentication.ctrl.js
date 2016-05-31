@@ -14,7 +14,7 @@ angular.module('yhtml5.authentication', ['ui.bootstrap', 'ngAnimate', 'factory']
                 $scope.isStep3 = false
             }
             // ========= 倒计时 =========
-        var second = 60;
+        var second = 6;
         $scope.num = "(" + second + ")";
         $scope.isDisabled = true;
 //      timePromise = undefined;

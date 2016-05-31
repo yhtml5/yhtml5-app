@@ -168,13 +168,13 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
         $scope.appsettingDeleteSendMSG = function(size) {
                 // ========= 倒计时 =========
                 $scope.isDisabled = false;
-                var second = 60;
+                var second = 6;
                 timePromise = undefined;
                 timePromise = $interval(function() {
                     if (second <= 0) {
                         $interval.cancel(timePromise);
                         timePromise = undefined;
-                        second = 60;
+                        second = 6;
                         $scope.buttonText = "重发验证码";
                         $scope.isDisabled = false;
                     } else {
