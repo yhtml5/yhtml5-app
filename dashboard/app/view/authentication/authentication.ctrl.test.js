@@ -4,16 +4,16 @@ angular.module('yhtml5.authentication', ['ui.bootstrap', 'ngAnimate', 'factory']
         $scope.data = Data;
         console.log("factory data : ", Data);
         $scope.userInfo = $scope.data.userInfo;
-        console.log("data.userInfo : ", $scope.userInfo);
+        console.log("data.userInfo : ", $scope.userInfo); << << << < HEAD
         $scope.userAccount = {};
         $scope.bank = {};
         $scope.isStep1 = true;
         $scope.toStep1 = function() {
-            $scope.isStep1 = true
-            $scope.isStep2 = false
-            $scope.isStep3 = false
-        };
-        // ========= 倒计时 =========
+                $scope.isStep1 = true
+                $scope.isStep2 = false
+                $scope.isStep3 = false
+            }
+            // ========= 倒计时 =========
         var second = 6;
         $scope.num = "(" + second + ")";
         $scope.isDisabled = true;
@@ -31,16 +31,10 @@ angular.module('yhtml5.authentication', ['ui.bootstrap', 'ngAnimate', 'factory']
             }
         }, 1000, 0);
         $scope.toStep2 = function() {
-            /** 基本信息 **/
-            $http.get('http://admin.jubaobar.com/front/user/person/info.htm')
-                .success(function(response) {
-                    $scope.userInfo = response.data;
-                    console.log(response.data.contactProvIdShow);
-                });
-            $scope.isStep1 = true
-            $scope.isStep2 = true
-            $scope.isStep3 = false
-        }
+            $scope.isStep1 = true;
+            $scope.isStep2 = true;
+            $scope.isStep3 = false;
+        };
         $scope.toStep3 = function() {
             /** ======================================== writed by Yangjb 实名认证 Start========================================= */
             /** 基本信息 **/
@@ -51,8 +45,8 @@ angular.module('yhtml5.authentication', ['ui.bootstrap', 'ngAnimate', 'factory']
                     companyType: $scope.userInfo.companyType,
                     subCompanyType: $scope.userInfo.subCompanyType,
                     userName: $scope.userInfo.userName,
-                    businessType: $scope.userInfo.businessType1.dictCode,
-                    businessSubType: $scope.userInfo.businessType2.dictCode,
+                    businessType: $scope.userInfo.businessType1,
+                    businessSubType: $scope.userInfo.businessType2,
                     businessTypeAll: $scope.userInfo.businessType1 + "/" + $scope.userInfo.businessType2,
                     companyName: $scope.userInfo.companyName,
                     companyAddress: $scope.userInfo.companyAddress,
@@ -61,10 +55,10 @@ angular.module('yhtml5.authentication', ['ui.bootstrap', 'ngAnimate', 'factory']
                     contactEmail: $scope.userInfo.contactEmail,
                     contactTelephone: $scope.userInfo.contactTelephone,
                     contactQQ: $scope.userInfo.contactQQ,
-                    contactProvId: $scope.userInfo.contactProvId.id,
-                    contactCityId: $scope.userInfo.contactCityId.id,
+                    contactProvId: $scope.userInfo.contactProvId,
+                    contactCityId: $scope.userInfo.contactCityId,
                     contactAddress: $scope.userInfo.contactAddress,
-                    contactAddressAll: $scope.userInfo.contactProvId.name + $scope.userInfo.contactCityId.name + $scope.userInfo.contactAddress,
+                    contactAddressAll: $scope.userInfo.contactProvId + $scope.userInfo.contactCityId + $scope.userInfo.contactAddress,
                     idCard: $scope.userInfo.idCard,
                     idCardPic: $scope.userInfo.idCardPic,
                     idCardFrontPic: $scope.userInfo.idCardFrontPic,
@@ -73,8 +67,7 @@ angular.module('yhtml5.authentication', ['ui.bootstrap', 'ngAnimate', 'factory']
                     taxCertPic: $scope.userInfo.taxCertPic,
                     orgCodeCertPic: $scope.userInfo.orgCodeCertPic,
                     openPermitPic: $scope.userInfo.openPermitPic,
-                    otherTypePic: $scope.userInfo.otherTypePic,
-                    companyId: $scope.userInfo.companyId
+                    otherTypePic: $scope.userInfo.otherTypePic
                 }
             }).success(function(res) {
                 $scope.savingBase = false;

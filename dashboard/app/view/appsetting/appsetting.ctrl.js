@@ -9,7 +9,7 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
             }
         }).success(function(response) {
             $scope.appsetting = response.data;
-        })
+        });
 
         /** =============================== 银燕 应用信息 =============================== B**/
         $http({
@@ -161,7 +161,7 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
         }
     })
     /** Writed by 银燕 删除应用 */
-    .controller('appsettingDeleteCtrl', function($scope, $http, $interval,$uibModalInstance, $uibModal, $state) {
+    .controller('appsettingDeleteCtrl', function($scope, $http, $interval, $uibModalInstance, $uibModal, $state) {
         $scope.appDel = {};
         /** ====================== 获取验证码 ======================= B**/
         $scope.buttonText = "获取验证码";
