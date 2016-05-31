@@ -1,6 +1,15 @@
 'use strict';
-angular.module('yhtml5.appList', ['ui.bootstrap', 'ngAnimate'])
-    .controller('yhtml5.appList', function($scope, $http, $uibModal) {
+angular.module('yhtml5.appList', ['ui.bootstrap', 'ngAnimate', 'factory'])
+    .controller('yhtml5.appList', function($scope, $http, $uibModal, Data) {
+        $scope.dataInit = Data;
+        console.log("Data:", Data);
+        Data.obj.fetchUserDetails().success(function(response) {
+            console.log("applist9 :", response.data);
+            $scope.userApps = response.data.appTradeInfoList;
+        });
+
+
+
         $scope.animationsEnabled = true;
         $scope.open = function(size) {
             var modalInstance = $uibModal.open({
@@ -22,9 +31,10 @@ angular.module('yhtml5.appList', ['ui.bootstrap', 'ngAnimate'])
                 console.log("applist :", response.data);
                 $scope.userApps = response.data.appTradeInfoList;
             })
+
     })
-    .controller('ModalInstanceCtrl', function($state,$scope, $http, $uibModalInstance, $uibModal, $state) {
-    	/** ============================== Writed By 银燕 创建应用 Start ==========================*/
+    .controller('ModalInstanceCtrl', function($state, $scope, $http, $uibModalInstance, $uibModal, $state) {
+        /** ============================== Writed By 银燕 创建应用 Start ==========================*/
         $scope.data = {};
         $scope.userAppFormSave = function(size) {
             $scope.userPersonFormEnabled = true;
@@ -43,17 +53,17 @@ angular.module('yhtml5.appList', ['ui.bootstrap', 'ngAnimate'])
                     webICP: $scope.data.webICP
                 }
             }).success(function(res) {
-              if (res.result = '0') {
+                if (res.result = '0') {
                     console.log("应用信息保存成功");
                     $uibModalInstance.dismiss('cancel');
                     $state.reload('dashboard');
-              }
+                }
             }).error(function(res) {
                 console.log("保存失败")
             })
         };
         $scope.cancel = function() {
-            $uibModalInstance.dismiss('cancel');
-        }
-        /** ============================== Writed By 银燕 创建应用 End ==========================*/
+                $uibModalInstance.dismiss('cancel');
+            }
+            /** ============================== Writed By 银燕 创建应用 End ==========================*/
     });

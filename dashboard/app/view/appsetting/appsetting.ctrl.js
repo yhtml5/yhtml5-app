@@ -10,7 +10,7 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
         }).success(function(response) {
             $scope.appsetting = response.data;
         })
-        
+
         /** =============================== 银燕 应用信息 =============================== B**/
 		$http({
 			method: "post",
@@ -61,9 +61,17 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
 				controller: 'appsettingInfoNoteSimpleCtrl',
 				size: size
 			})
-		}
+		};
+		$scope.appsettingApiPasswordOpen = function(size) {
+            var modalInstance = $uibModal.open({
+                animation: $scope.animationsEnabled,
+                templateUrl: 'appsettingApiPassword.html',
+                controller: 'appsettingApiPasswordCtrl',
+                size: size
+            })
+        }
 		/** =============================== 银燕 应用信息 =============================== E**/
-		
+
 		/** =============================== 银燕 删除应用 =============================== B**/
 		$scope.appsettingDeleteOpen = function(size) {
 			var modalInstance = $uibModal.open({
@@ -74,7 +82,7 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
 			})
 		}
 		/** =============================== 银燕 删除应用 =============================== E**/
-        
+
         $scope.animationsEnabled = true;
         $scope.appsettingCanalResetOpen = function(size) {
             var modalInstance = $uibModal.open({
@@ -240,6 +248,11 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
                 size: size
             })
         }
+        $scope.cancel = function() {
+            $uibModalInstance.dismiss('cancel');
+        }
+    })
+    .controller('appsettingApiPasswordCtrl', function($scope, $uibModalInstance) {
         $scope.cancel = function() {
             $uibModalInstance.dismiss('cancel');
         }

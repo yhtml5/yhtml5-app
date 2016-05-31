@@ -1,4 +1,5 @@
 'use strict';
+
 angular.module('yhtml5.account', ['ui.bootstrap', 'ngAnimate', 'factory', 'ngFileUpload'])
 	.controller('yhtml5.account', function($scope, $http, $uibModal, Upload, $timeout, $log, Data) {
 		/** =======================  银燕 账户结算统计 Start ======================== **/
@@ -11,7 +12,7 @@ angular.module('yhtml5.account', ['ui.bootstrap', 'ngAnimate', 'factory', 'ngFil
             }
 		});
 		/** =======================  银燕 账户结算统计 End ======================== **/
-		
+
 		/** =======================  银燕 历史记录 分页控件 Start ======================== **/
 		$http({
 			method: "post",
@@ -45,7 +46,7 @@ angular.module('yhtml5.account', ['ui.bootstrap', 'ngAnimate', 'factory', 'ngFil
 			$scope.currentPage = pageNo;
 		};
 		/** =======================  银燕 历史记录 分页控件 End   ======================== **/
-		
+
 		/** =======================  writed by 白豆腐  账户明细 | Add 银燕 分页控件 Start ======================== */
 		$scope.detail ={};
 		$scope.accountSelect = function(size) {
@@ -67,7 +68,7 @@ angular.module('yhtml5.account', ['ui.bootstrap', 'ngAnimate', 'factory', 'ngFil
 					$scope.detail.maxSize = 5;
 			});
 		}
-		
+
 		$scope.detail_pageChanged = function() {
 			$log.log('Page changed to: ' + $scope.detail.currentPage);
 			$http({
@@ -91,7 +92,7 @@ angular.module('yhtml5.account', ['ui.bootstrap', 'ngAnimate', 'factory', 'ngFil
 			});
 		};
 		/** =======================  writed by 白豆腐  账户明细 | Add 银燕 分页控件 End   ======================== */
-		
+
 		/** writed by 白豆腐  账户明细导出 */
         $scope.accountExportExcel = function(size) {
         	$http({
@@ -120,7 +121,7 @@ angular.module('yhtml5.account', ['ui.bootstrap', 'ngAnimate', 'factory', 'ngFil
                 size: size
             })
         }
-        
+
 		/*上传文件*/
 		$scope.uploadPic = function(file) {
 			file.upload = Upload.upload({
@@ -166,7 +167,7 @@ angular.module('yhtml5.account', ['ui.bootstrap', 'ngAnimate', 'factory', 'ngFil
 				size: size
 			})
 		};
-		
+
 		$scope.accountTopayConfirmOpen = function(size) {
 			/** writed by yangjb 代付信息录入 */
 			$http({
