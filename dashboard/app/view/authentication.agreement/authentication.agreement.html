@@ -3,6 +3,7 @@
 		<link rel="import" href="../../components/serviceAgreement/serviceAgreement.html?__inline">
 	</div>
 	<div class="y-mt40 y-pb60 text-sm-center">
-		<button type="button" class="btn y-btn-blue" ui-sref="authentication.person" ng-click="toStep2()">同意签约协议</button>
+		<button type="button" ng-disabled="isDisabled" class="btn y-btn-blue" ui-sref="authentication.person" ng-click="toStep2()">同意签约协议<span ng-bind="num"></span></button>
+		<!--<button type="button" ng-disabled="isDisabled" ng-click="send()" class="btn btn-info" ng-bind="buttonText">获取验证码</button>-->
 	</div>
 </div>
