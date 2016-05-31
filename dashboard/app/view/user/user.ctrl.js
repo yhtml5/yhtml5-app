@@ -1,9 +1,8 @@
 'use strict';
 angular.module('yhtml5.user', ['ngFileUpload', 'factory'])
 	.controller('yhtml5.user', function($scope, $uibModal, $http, Upload, $timeout, Data) {
-		$scope.data = Data;
+		$scope.dataInit = Data;
 		$scope.banks = Data.banks;
-		$scope.businessTypes2 = Data.businessTypes2;
 		console.log("factory data : ", Data);
 		console.log("banks : ", banks);
 		$http.get('http://admin.jubaobar.com/front/myAccount/queryAccountMessage.htm')

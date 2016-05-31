@@ -51,22 +51,19 @@
 							</div>
 						</div>
 					</div>
-
 					<div class="col-sm-6">
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">经营范围</label>
 							<div class="col-sm-4">
-								<select class="form-control" ng-model="userInfo.businessType1" ng-options="obj.name for obj in businessTypes2" ng-change="userInfo.businessType2=''">
+								<select class="form-control" ng-model="businessType1" ng-options="obj.name for obj in datas.businessTypes" ng-change="test2=''">
                                     <option value="">请选择经营范围</option>
                                 </select>
 							</div>
-							{{userInfo.businessType1}}
 							<div class="col-sm-4">
-								<select class="form-control" ng-model="userInfo.businessType2" ng-options="obj.name for obj in userInfo.businessType1.children">
+								<select class="form-control" ng-model="businessType2" ng-options="x.name for x in businessType1.children">
                                     <option value="">请选择经营范围</option>
                                 </select>
 							</div>
-							{{userInfo.businessType2}}
 						</div>
 					</div>
 				</div>
