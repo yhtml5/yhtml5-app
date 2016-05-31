@@ -10,79 +10,71 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
         }).success(function(response) {
             $scope.appsetting = response.data;
         })
-        $http.get('http://admin.jubaobar.com/front/user/person/info.htm')
-            .success(function(response) {
-                console.log(response);
-                $scope.userInfo = response.data;
-            })
-        /*白豆腐应用信息*/
-        $http({
-                method: "post",
-                url: "http://admin.jubaobar.com/front/appemanage/appdetatls.htm",
-                params: {
-                    id: 32
-                }
-            }).success(function(response) {
-                $scope.appInfo = response.data;
-            })
-            /*白豆腐应用信息*/
-
-
-        $scope.appsettingInfoFormEnabled = true
-        $scope.appsettingInfoUpdate = true
-        $scope.appsettingInfoSave = true
-        $scope.appsettingInfoFormTotal = function() {
-            $scope.appsettingInfoFormEnabled = !$scope.appsettingInfoFormEnabled
-            $scope.appsettingInfoUpdate = false
-            $scope.appsettingInfoSave = false
-        }
-        $scope.animationsEnabled = true;
-        $scope.appsettingInfoFormSave = function(size) {
-            $scope.appsettingInfoFormEnabled = true
-            $scope.appsettingInfoUpdate = true
-            $scope.appsettingInfoSave = true
-            $http({
-                method: "post",
-                url: "http://admin.jubaobar.com/front/authentication/businessInformation.htm",
-                params: {
-                    companyType: $scope.userInfo.companyType,
-                    subCompanyType: $scope.userInfo.subCompanyType,
-                    userName: $scope.userInfo.userName,
-                    businessType: $scope.userInfo.businessType,
-                    companyName: $scope.userInfo.companyName,
-                    companyAddress: $scope.userInfo.companyAddress,
-                    licenseNo: $scope.userInfo.licenseNo,
-                    contactName: $scope.userInfo.contactName,
-                    contactTelephone: $scope.userInfo.contactTelephone,
-                    contactQQ: $scope.userInfo.contactQQ,
-                    contactProvId: $scope.userInfo.contactProvId,
-                    contactCityId: $scope.userInfo.contactCityId,
-                    contactAddress: $scope.userInfo.contactAddress,
-                    idCard: $scope.userInfo.idCard,
-                    idCardPic: $scope.userInfo.idCardPic,
-                    idCardFrontPic: $scope.userInfo.idCardFrontPic,
-                    idCardReversePic: $scope.userInfo.idCardReversePic,
-                    licensePic: $scope.userInfo.licensePic,
-                    taxCertPic: $scope.userInfo.taxCertPic,
-                    orgCodeCertPic: $scope.userInfo.orgCodeCertPic,
-                    openPermitPic: $scope.userInfo.openPermitPic,
-                    otherTypePic: $scope.userInfo.otherTypePic
-                }
-            }).success(function(res) {
-                $scope.savingBase = false;
-                if (res.resultCode == 0) {
-                    $scope.app.proxy_base_objectid = res.objectid;
-                    $scope.view.state = $scope.view.stateMachine["fullfill_base"];
-                    $anchorScroll();
-                }
-            })
-            var modalInstance = $uibModal.open({
-                animation: $scope.animationsEnabled,
-                templateUrl: 'noteSimple.html',
-                controller: 'appsettingInfoNoteSimpleCtrl',
-                size: size
-            })
-        }
+        
+        /** =============================== 银燕 应用信息 =============================== B**/
+		$http({
+			method: "post",
+			url: "http://admin.jubaobar.com/front/appemanage/appdetatls.htm",
+			params: {
+				id: 1
+			}
+		}).success(function(response) {
+			$scope.appInfo = response.data;
+		});
+		$scope.appsettingInfoFormEnabled = true
+		$scope.appsettingInfoUpdate = true
+		$scope.appsettingInfoSave = true
+		$scope.appsettingInfoFormTotal = function() {
+			$scope.appsettingInfoFormEnabled = !$scope.appsettingInfoFormEnabled
+			$scope.appsettingInfoUpdate = false
+			$scope.appsettingInfoSave = false
+		}
+		$scope.animationsEnabled = true;
+		$scope.appsettingInfoFormSave = function(size) {
+			$scope.appsettingInfoFormEnabled = true
+			$scope.appsettingInfoUpdate = true
+			$scope.appsettingInfoSave = true
+			$http({
+				method: "post",
+				url: "http://admin.jubaobar.com/front/appemanage/editappdetatls.htm",
+				params: {
+					id: 1,
+					appType: $scope.appInfo.appType,
+                    appName: $scope.appInfo.appName,
+                    appUrl: $scope.appInfo.appUrl,
+                    signature: $scope.appInfo.signature,
+                    appPackage: $scope.appInfo.appPackage,
+                    bundleId: $scope.appInfo.bundleId,
+                    webIcp: $scope.appInfo.webIcp
+				}
+			}).success(function(res) {
+				$scope.savingBase = false;
+				if (res.resultCode == 0) {
+					$scope.app.proxy_base_objectid = res.objectid;
+					$scope.view.state = $scope.view.stateMachine["fullfill_base"];
+					$anchorScroll();
+				}
+			})
+			var modalInstance = $uibModal.open({
+				animation: $scope.animationsEnabled,
+				templateUrl: 'noteSimple.html',
+				controller: 'appsettingInfoNoteSimpleCtrl',
+				size: size
+			})
+		}
+		/** =============================== 银燕 应用信息 =============================== E**/
+		
+		/** =============================== 银燕 删除应用 =============================== B**/
+		$scope.appsettingDeleteOpen = function(size) {
+			var modalInstance = $uibModal.open({
+				animation: $scope.animationsEnabled,
+				templateUrl: 'appsettingDeleteForm.html',
+				controller: 'appsettingDeleteCtrl',
+				size: size
+			})
+		}
+		/** =============================== 银燕 删除应用 =============================== E**/
+        
         $scope.animationsEnabled = true;
         $scope.appsettingCanalResetOpen = function(size) {
             var modalInstance = $uibModal.open({
@@ -151,6 +143,54 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
             })
         }
     })
+    /** Writed by 银燕 删除应用 */
+	.controller('appsettingDeleteCtrl', function($scope, $http, $uibModalInstance, $uibModal, $state) {
+		$scope.appDel={};
+		/** ====================== 获取验证码 ======================= B**/
+		$scope.appsettingDeleteSendMSG = function(size) {
+			$http({
+				method: "post",
+				url: "http://admin.jubaobar.com/front/common/getSmsCode.htm",
+				params: {
+					smsChannel: 17
+				}
+			}).success(function(response) {
+				if (res.result == 0) {
+					$scope.appDel = response.data;
+				}
+			});
+		}
+		/** ====================== 获取验证码 ======================= E**/
+		/** ======================= 删除应用 ======================= B**/
+		$scope.appDel ={};
+		$scope.appsettingDeleteConfirm = function(size) {
+			$http({
+				method: "post",
+				url: "http://admin.jubaobar.com/front/app/delete.htm",
+				params: {
+					id: 158,
+					securityCode:$scope.appDel.password,
+					smsCode:$scope.appDel.authCode
+				}
+			}).success(function(res) {
+				console.log("删除成功");
+				$uibModalInstance.dismiss('cancel');
+                $state.reload('dashboard');
+			}).error(function(res) {
+				console.log("保存失败")
+			})
+			var modalInstance = $uibModal.open({
+				animation: $scope.animationsEnabled,
+				templateUrl: 'noteSimple.html',
+				controller: 'appsettingApiInformUrlCtrl',
+				size: size
+			})
+		}
+		/** ======================= 删除应用 ======================= E**/
+		$scope.cancel = function() {
+			$uibModalInstance.dismiss('cancel');
+		}
+	})
     /** Writed by 银燕 应用通知地址 */
     .controller('appsettingApiInformUrlCtrl', function($scope, $http, $uibModalInstance, $uibModal) {
         $scope.appsettingApiInformUrlSave = function(size) {

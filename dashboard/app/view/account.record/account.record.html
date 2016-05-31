@@ -52,69 +52,25 @@
 				</thead>
 				<tbody>
 					<tr ng-repeat="data in accountmanage">
-						<td ng-bind="data.cashOutStartTime">Data</td>
-						<td ng-bind="data.accountName">Data</td>
-						<td ng-bind="data.accountNumber">Data</td>
-						<td ng-bind="data.bankName">Data</td>
-						<td ng-bind="data.bankBrachName">Data</td>
-						<td ng-bind="data.bankProvince">Data</td>
-						<td ng-bind="data.bankCity">Data</td>
-						<td ng-bind="data.merchantActualPayList" class="text-primary">Data</td>
-						<td ng-bind="data.merchantActualCollectionList" class="text-danger">Data</td>
-						<td ng-bind="data.jubaoFeeList" class="text-primary">Data</td>
-						<td ng-bind="data.payState" class="text-success">Data</td>
-						<td ng-bind="data.payType">Data</td>
-						<td ng-bind="data.cashOutEndTime">Data</td>
-						<td ng-bind="data.payChannel">Data</td>
+						<td ng-bind="data.cashOutStartTime"></td>
+						<td ng-bind="data.accountName"></td>
+						<td ng-bind="data.accountNumber"></td>
+						<td ng-bind="data.bankName"></td>
+						<td ng-bind="data.bankBrachName"></td>
+						<td ng-bind="data.bankProvince"></td>
+						<td ng-bind="data.bankCity"></td>
+						<td ng-bind="data.merchantActualPayList" class="text-primary"></td>
+						<td ng-bind="data.merchantActualCollectionList" class="text-danger"></td>
+						<td ng-bind="data.jubaoFeeList" class="text-primary"></td>
+						<td ng-bind="data.payState" class="text-success"></td>
+						<td ng-bind="data.payType"></td>
+						<td ng-bind="data.cashOutEndTime"></td>
+						<td ng-bind="data.payChannel"></td>
 						<td><a href="###" onclick="javascript:return false" class="text-danger" ng-click="accountTopayDeleteOpen()">删除</a></td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
-		<!-- 白豆腐历史记录 -->
-		<!--<div class="panel-body">
-        <div class="table-responsive">
-            <table class="table table-striped table-hover table-condensed table-bordered y-table-md">
-                <thead>
-                    <tr>
-                        <th>提现时间</th>
-                        <th>姓名</th>
-                        <th>帐号</th>
-                        <th>银行</th>
-                        <th>分行</th>
-                        <th>省份</th>
-                        <th>城市</th>
-                        <th>商家实付</th>
-                        <th>商家实收</th>
-                        <th>手续费</th>
-                        <th>状态</th>
-                        <th>种类</th>
-                        <th>处理时间</th>
-                        <th>出款通道</th>
-                        <th>操作</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr ng-repeat="data in accountRecord">
-                        <td ng-bind="data.time">Data</td>
-                        <td ng-bind="data.name">Data</td>
-                        <td ng-bind="data.account">Data</td>
-                        <td ng-bind="data.bank">Data</td>
-                        <td ng-bind="data.subbranch">Data</td>
-                        <td ng-bind="data.province">Data</td>
-                        <td ng-bind="data.city">Data</td>
-                        <td ng-bind="data.pay" class="text-primary">Data</td>
-                        <td ng-bind="data.payed" class="text-danger">Data</td>
-                        <td ng-bind="data.fee" class="text-primary">Data</td>
-                        <td ng-bind="data.state" class="text-success">Data</td>
-                        <td ng-bind="data.class">Data</td>
-                        <td ng-bind="data.timedone">Data</td>
-                        <td ng-bind="data.canal">Data</td>
-                        <td><a href="###" onclick="javascript:return false" class="text-danger" ng-click="accountTopayDeleteOpen()">删除</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>-->
 		<p class="text-info visible-xs">左右滑动显示完整的表格内容</p>
 		<uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" max-size="maxSize" class="" boundary-links="true" force-ellipses="true" previous-text="上一页" next-text="下一页" first-text="首页" last-text="末页"></uib-pagination>
 	</div>

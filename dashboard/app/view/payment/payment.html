@@ -87,17 +87,7 @@
 			</div>
 			<!--y-dashboard-payment-table-->
 			<p class="text-info visible-xs">左右滑动显示完整的表格内容</p>
-			<div class="text-center">
-				<ul class="pagination">
-					<li><a href="#">&laquo;&nbsp;上一页</a></li>
-					<li class="active"><a href="#">1</a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">...</a></li>
-					<li><a href="#">下一页&nbsp;&raquo;</a></li>
-				</ul>
-			</div>
+			<uib-pagination total-items="trade.totalItems" ng-model="trade.currentPage" ng-change="trade_pageChanged()" max-size="trade.maxSize" class="" boundary-links="true" force-ellipses="true" previous-text="上一页" next-text="下一页" first-text="首页" last-text="末页"></uib-pagination>
 		</div>
 	</div>
 </div>

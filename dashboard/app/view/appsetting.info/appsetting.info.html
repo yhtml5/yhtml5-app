@@ -13,15 +13,14 @@
     </div>
     <div class="panel-body">
         <form action="" class="form-horizontal" name="myForm">
-            <fieldset ng-disabled="appsettingInfoFormEnabled">
-                <input type="text" name="" id="" value="" ng-model="appType" placeholder="请输入1、2、3、4">
-                <div class="" ng-if="appType == 1">
+			<fieldset ng-disabled="appsettingInfoFormEnabled">
+                <div class="" ng-if="appInfo.appType == 1 || appInfo.appType == 2">
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="" class="col-sm-3 control-label">网站名称：</label>
-                                <div class="col-sm-4">
-                                    <input class="form-control" type="text" name="" id="" ng-model="appInfo.appName" value="{{userInfo.contactName}}" placeholder="请输入网站名称">
+                                <label for="" class="col-sm-4 control-label">网站名称：</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" type="text" name="" id="" ng-model="appInfo.appName" placeholder="请输入网站名称">
                                 </div>
                             </div>
                         </div>
@@ -29,9 +28,9 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="" class="col-sm-3 control-label">网站域名：</label>
-                                <div class="col-sm-4">
-                                    <input class="form-control" type="text" name="" id="" ng-model="appInfo.appUrl" value="{{userInfo.contactTelephone}}" placeholder="请输入网站域名">
+                                <label for="" class="col-sm-4 control-label">网站域名：</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" type="text" name="" id="" ng-model="appInfo.appUrl" placeholder="请输入网站域名...">
                                 </div>
                             </div>
                         </div>
@@ -39,16 +38,92 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="" class="col-sm-3 control-label">网站ICP证备案号：</label>
-                                <div class="col-sm-4">
-                                    <input class="form-control" type="text" name="" id="" ng-model="appInfo.webIcp" value="{{userInfo.contactTelephone}}" placeholder="请输入ICP备案号">
+                                <label for="" class="col-sm-4 control-label">网站ICP证备案号：</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" type="text" name="" id="" ng-model="appInfo.webIcp" placeholder="请输入ICP备案号...">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </fieldset>
-        </form>
+                <div class="" ng-if="appInfo.appType == 3">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="" class="col-sm-3 control-label">应用名称：</label>
+                                <div class="col-sm-4">
+                                    <input class="form-control" type="text" name="" id="" ng-model="appInfo.appName" placeholder="请输入应用名称...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="" class="col-sm-3 control-label">应用下载路径：</label>
+                                <div class="col-sm-4">
+                                    <input class="form-control" type="text" name="" id="" ng-model="appInfo.appUrl" placeholder="请输入应用下载路径...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="" class="col-sm-3 control-label">应用签名：</label>
+                                <div class="col-sm-4">
+                                    <input class="form-control" type="text" name="" id="" ng-model="appInfo.signature" placeholder="请输入应用签名...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="" class="col-sm-3 control-label">应用包名：</label>
+                                <div class="col-sm-4">
+                                    <input class="form-control" type="text" name="" id="" ng-model="appInfo.appPackage" placeholder="请输入应用包名...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="" ng-if="appInfo.appType == 4">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="" class="col-sm-3 control-label">应用名称：</label>
+                                <div class="col-sm-4">
+                                    <input class="form-control" type="text" name="" id="" ng-model="appInfo.appName" placeholder="请输入应用名称...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="" class="col-sm-3 control-label">应用下载路径：</label>
+                                <div class="col-sm-4">
+                                    <input class="form-control" type="text" name="" id="" ng-model="appInfo.appUrl" placeholder="请输入应用下载路径...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="" class="col-sm-3 control-label">Bundle ID：</label>
+                                <div class="col-sm-4">
+                                    <input class="form-control" type="text" name="" id="" ng-model="appInfo.bundleId" placeholder="请输入应用BundleID...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</fieldset>
+			
+			<button type="button" class="btn btn-default y-mt15 y-mr20" ng-click="appsettingDeleteOpen()">删除</button>
+		</form>
         <h4 class="y-mt40 y-mb40">已开通支付通道&nbsp;&nbsp;&nbsp;
 		    <button type="button" class="btn btn-info" ng-click="appsettingInfoChannelOpen()">支持的支付通道</button>
 		</h4>

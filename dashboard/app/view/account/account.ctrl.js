@@ -1,64 +1,98 @@
 'use strict';
 angular.module('yhtml5.account', ['ui.bootstrap', 'ngAnimate', 'factory', 'ngFileUpload'])
 	.controller('yhtml5.account', function($scope, $http, $uibModal, Upload, $timeout, $log, Data) {
-		//      $scope.accountRecord = accountRecord;s'co
-		$http.get(__uri("../../server/account.record.json"))
-			.success(function(response) {
-				$scope.accountRecord = response.accountRecord
-			});
-		$scope.totalItems = 64;
-		$scope.currentPage = 1;
-		$scope.maxSize = 5;
-		$scope.setPage = function(pageNo) {
-			$scope.currentPage = pageNo;
-		};
+		/** =======================  银燕 账户结算统计 Start ======================== **/
+		$http({
+			method: "post",
+			url: "http://admin.jubaobar.com/front/cashFlow/record.htm"
+		}).success(function(response) {
+			if (response.result == 0) {
+				$scope.account = response.data;
+            }
+		});
+		/** =======================  银燕 账户结算统计 End ======================== **/
+		
+		/** =======================  银燕 历史记录 分页控件 Start ======================== **/
+		$http({
+			method: "post",
+			url: "http://admin.jubaobar.com/front/cashFlow/queryPayTypeAndTime.htm"
+		}).success(function(response) {
+			if (response.result == 0) {
+				$scope.accountmanage = response.data.entityList;
+				$scope.totalItems = response.data.totalRecords;
+				$scope.currentPage = response.data.currentPage;
+				$scope.maxSize = 5;
+            }
+		});
 		$scope.pageChanged = function() {
 			$log.log('Page changed to: ' + $scope.currentPage);
 			$http({
 				method: "post",
-				url: __uri("../../server/account.record.json"),
+				url: "http://admin.jubaobar.com/front/cashFlow/queryPayTypeAndTime.htm",
 				params: {
-					currentPage: $scope.currentPage
+					pageNo: $scope.currentPage
 				}
 			}).success(function(response) {
-				$scope.accountRecord = response.accountRecord2
+				if (response.result == 0) {
+					$scope.accountmanage = response.data.entityList;
+					$scope.totalItems = response.data.totalRecords;
+					$scope.currentPage = response.data.currentPage;
+					$scope.maxSize = 5;
+	            }
 			});
 		};
-		//      $scope.bigTotalItems = 175;
-		//      $scope.bigCurrentPage = 1;
-				$http({
-					method: "post",
-					url: "http://admin.jubaobar.com/front/CashFlow/Record.htm",
-				}).success(function(response) {
-					console.log("历史记录为：", response.data);
-					$scope.account = response.data;
-				});
-		/*白豆腐      历史记录*/
-		$http({
-			method: "post",
-			url: "http://admin.jubaobar.com/front/CashFlow/Record.htm"
-		}).success(function(response) {
-			console.log(response.data);
-			$scope.accountmanage = response.data.billDataList;
-		});
-		/** writed by 白豆腐  账户明细 */
+		$scope.setPage = function(pageNo) {
+			$scope.currentPage = pageNo;
+		};
+		/** =======================  银燕 历史记录 分页控件 End   ======================== **/
+		
+		/** =======================  writed by 白豆腐  账户明细 | Add 银燕 分页控件 Start ======================== */
+		$scope.detail ={};
 		$scope.accountSelect = function(size) {
-				$http({
-					method: "post",
-					url: "http://admin.jubaobar.com/front/accounting/accountdetails.htm",
-					params: {
-						pageNo: $scope.pageNo,
-						startTime: $scope.startTime,
-						endTime: $scope.endTime,
-						transNo: $scope.transNo,
-						cashDirection: $scope.cashDirection,
-						changeType: $scope.changeType
-					}
-				}).success(function(response) {
-					$scope.accountdetail = response.data;
-				});
-			}
-		 /** writed by 白豆腐  账户明细导出 */
+			$http({
+				method: "post",
+				url: "http://admin.jubaobar.com/front/accounting/accountdetails.htm",
+				params: {
+					pageNo: $scope.currentPage,
+					startTime: $scope.startTime,
+					endTime: $scope.endTime,
+					transNo: $scope.transNo,
+					cashDirection: $scope.cashDirection,
+					changeType: $scope.changeType
+				}
+			}).success(function(response) {
+					$scope.accountdetail = response.data.entityList;
+					$scope.detail.totalItems = response.data.totalRecords;
+					$scope.detail.currentPage = response.data.currentPage;
+					$scope.detail.maxSize = 5;
+			});
+		}
+		
+		$scope.detail_pageChanged = function() {
+			$log.log('Page changed to: ' + $scope.detail.currentPage);
+			$http({
+				method: "post",
+				url: "http://admin.jubaobar.com/front/accounting/accountdetails.htm",
+				params: {
+					pageNo: $scope.detail.currentPage,
+					startTime: $scope.detail.startTime,
+					endTime: $scope.detail.endTime,
+					transNo: $scope.detail.transNo,
+					cashDirection: $scope.detail.cashDirection,
+					changeType: $scope.detail.changeType
+				}
+			}).success(function(response) {
+				if (response.result == 0) {
+					$scope.accountdetail = response.data.entityList;
+					$scope.detail.totalItems = response.data.totalRecords;
+					$scope.detail.currentPage = response.data.currentPage;
+					$scope.detail.maxSize = 5;
+	            }
+			});
+		};
+		/** =======================  writed by 白豆腐  账户明细 | Add 银燕 分页控件 End   ======================== */
+		
+		/** writed by 白豆腐  账户明细导出 */
         $scope.accountExportExcel = function(size) {
         	$http({
                 method: "post",
@@ -86,7 +120,8 @@ angular.module('yhtml5.account', ['ui.bootstrap', 'ngAnimate', 'factory', 'ngFil
                 size: size
             })
         }
-			/*上传文件*/
+        
+		/*上传文件*/
 		$scope.uploadPic = function(file) {
 			file.upload = Upload.upload({
 				url: 'https://yhtml5.com',
@@ -131,35 +166,7 @@ angular.module('yhtml5.account', ['ui.bootstrap', 'ngAnimate', 'factory', 'ngFil
 				size: size
 			})
 		};
-		/** writed by 白豆腐  账户明细导出 */
-		$scope.accountExportExcel = function(size) {
-				$http({
-					method: "post",
-					url: "http://admin.jubaobar.com/front/accounting/exportaccountdetails.htm",
-					params: {
-						startTime: $scope.startTime,
-						endTime: $scope.endTime,
-						transNo: $scope.transNo,
-						cashDirection: $scope.cashDirection,
-						changeType: $scope.changeType
-					}
-				}).success(function(res) {
-					$scope.savingBase = false;
-					if (res.resultCode == 0) {
-						$scope.app.proxy_base_objectid = res.objectid;
-						$scope.view.state = $scope.view.stateMachine["fullfill_base"];
-						$anchorScroll();
-					}
-				});
-
-				var modalInstance = $uibModal.open({
-					animation: $scope.animationsEnabled,
-					templateUrl: 'accountTopayConfirm.html',
-					controller: 'accountTopayConfirmCtrl',
-					size: size
-				})
-			}
-			/** writed by 白豆腐  账户明细导出 */
+		
 		$scope.accountTopayConfirmOpen = function(size) {
 			/** writed by yangjb 代付信息录入 */
 			$http({
