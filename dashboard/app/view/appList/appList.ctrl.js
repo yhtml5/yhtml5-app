@@ -4,12 +4,9 @@ angular.module('yhtml5.appList', ['ui.bootstrap', 'ngAnimate', 'factory'])
         $scope.dataInit = Data;
         console.log("Data:", Data);
         Data.obj.fetchUserDetails().success(function(response) {
-            console.log("applist9 :", response.data);
+            console.log("applist10 :", response.data);
             $scope.userApps = response.data.appTradeInfoList;
         });
-
-
-
         $scope.animationsEnabled = true;
         $scope.open = function(size) {
             var modalInstance = $uibModal.open({

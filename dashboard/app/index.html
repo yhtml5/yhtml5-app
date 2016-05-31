@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!-->
 <html lang="zh-CN" ng-app="yhtml5" ng-controller="controllers" class="no-js">
     <!--<![endif]-->
+
     <head>
         <link rel="import" href="components/head/head.html?__inline">
     </head>
@@ -16,6 +17,7 @@
         <![endif]-->
         <header class="y-header" ui-view="nav"></header>
         <div ui-view="content"></div>
+        <div ui-view="modal"></div>
 
         <!--  css
         @require /server/author.css
@@ -35,7 +37,6 @@
         @require /components/appList-display/appList-display.css
         @require /components/helpCenter/helpCenter.css
         -->
-
 
         <!--  js
         @require /server/author.js

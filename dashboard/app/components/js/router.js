@@ -144,6 +144,9 @@ angular.module('yhtml5', [
                     },
                     "content": {
                         templateUrl: "view/appsetting/appsetting.html"
+                    },
+                    "modal": {
+                        templateUrl: "view/noteSimple/noteSimple.html"
                     }
                 }
             })
@@ -152,9 +155,6 @@ angular.module('yhtml5', [
                 views: {
                     "content": {
                         templateUrl: "view/appsetting.info/appsetting.info.html"
-                    },
-                    "modal": {
-                        templateUrl: "view/noteSimple/noteSimple.html"
                     }
                 }
             })

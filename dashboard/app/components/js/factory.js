@@ -666,8 +666,13 @@ angular.module('factory', [])
         }];
         var obj = {};
         obj.fetchUserDetails = function() {
-            return $http.get('http://admin.jubaobar.com/front/homePage/console.htm');
-        }
+            return $http.get('http://admin.jubaobar.com/front/homePage/console.htm')
+                .success(function(response) {
+                    console.log("applist9 :", response.data);
+                    userApps = response.data.appTradeInfoList;
+                    return userApps
+                })
+        };
         return {
             obj,
             banks,

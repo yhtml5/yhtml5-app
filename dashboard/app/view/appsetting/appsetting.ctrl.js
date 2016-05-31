@@ -62,11 +62,20 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
 				size: size
 			})
 		};
+		// ========== #appsetting/api ==========
 		$scope.appsettingApiPasswordOpen = function(size) {
             var modalInstance = $uibModal.open({
                 animation: $scope.animationsEnabled,
                 templateUrl: 'appsettingApiPassword.html',
                 controller: 'appsettingApiPasswordCtrl',
+                size: size
+            })
+        }
+		$scope.appsettingApiTestOpen = function(size) {
+            var modalInstance = $uibModal.open({
+                animation: $scope.animationsEnabled,
+                templateUrl: 'appsettingApiTest.html',
+                controller: 'appsettingApiTestCtrl',
                 size: size
             })
         }
@@ -190,7 +199,7 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
 			var modalInstance = $uibModal.open({
 				animation: $scope.animationsEnabled,
 				templateUrl: 'noteSimple.html',
-				controller: 'appsettingApiInformUrlCtrl',
+				controller: 'appsettingInfoNoteSimpleCtrl',
 				size: size
 			})
 		}
@@ -218,7 +227,7 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
             var modalInstance = $uibModal.open({
                 animation: $scope.animationsEnabled,
                 templateUrl: 'noteSimple.html',
-                controller: 'appsettingApiInformUrlCtrl',
+                controller: 'appsettingInfoNoteSimpleCtrl',
                 size: size
             })
         }
@@ -244,7 +253,7 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
             var modalInstance = $uibModal.open({
                 animation: $scope.animationsEnabled,
                 templateUrl: 'noteSimple.html',
-                controller: 'appsettingApiRepayUrlCtrl',
+                controller: 'appsettingInfoNoteSimpleCtrl',
                 size: size
             })
         }
@@ -252,7 +261,13 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
             $uibModalInstance.dismiss('cancel');
         }
     })
+    // ========= #appsetting/api ==========
     .controller('appsettingApiPasswordCtrl', function($scope, $uibModalInstance) {
+        $scope.cancel = function() {
+            $uibModalInstance.dismiss('cancel');
+        }
+    })
+    .controller('appsettingApiTestCtrl', function($scope, $uibModalInstance) {
         $scope.cancel = function() {
             $uibModalInstance.dismiss('cancel');
         }
