@@ -13,7 +13,7 @@
     </div>
     <div class="panel-body">
         <form action="" class="form-horizontal" name="myForm">
-			<fieldset ng-disabled="appsettingInfoFormEnabled">
+            <fieldset ng-disabled="appsettingInfoFormEnabled">
                 <div class="" ng-if="appInfo.appType == 1 || appInfo.appType == 2">
                     <div class="row">
                         <div class="col-sm-6">
@@ -120,19 +120,21 @@
                         </div>
                     </div>
                 </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="" class="col-sm-3 control-label">删除应用：</label>
-                                <div class="col-sm-4">
-                                   <h4><small>删除App后无法恢复请谨慎操作</small></h4>
-                                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="" class="col-sm-3 col-sm-push-1 control-label">删除应用：</label>
+                            <div class="col-sm-4 col-sm-push-1">
+                                <h4><small>删除App后无法恢复请谨慎操作</small></h4>
+                            </div>
+                            <div class="col-sm-2 col-sm-push-1">
                                 <button type="button" class="btn btn-danger y-mt10" ng-click="appsettingDeleteOpen()">删除</button>
                             </div>
                         </div>
                     </div>
-			</fieldset>
-		</form>
+                </div>
+            </fieldset>
+        </form>
         <h4 class="y-mt40 y-mb40">已开通支付通道&nbsp;&nbsp;&nbsp;
 		    <button type="button" class="btn btn-info" ng-click="appsettingInfoChannelOpen()">支持的支付通道</button>
 		</h4>
@@ -165,36 +167,37 @@
         </div>
     </div>
     <script type="text/ng-template" id="appsettingDeleteForm.html">
-		<div class="modal-header y-modal-header-default">
-			<h3 class="y-mg0">删除应用
+        <div class="modal-header y-modal-header-default">
+            <h3 class="y-mg0">删除应用
                 <button type="button" class="close" ng-click="cancel()">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </h3>
-		</div>
-		<div class="modal-body y-pt30">
-			<form class="form-horizontal" action="" method="">
-				<div class="form-group">
-					<label class="col-sm-3 control-label">安全密码</label>
-					<div class="col-sm-6">
-						<input class="form-control" type="password" ng-model="appDel.password" name="" id="" value="" placeholder="请输入安全密码">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-3 control-label">短信验证码</label>
-					<div class="col-sm-6">
-						<input class="form-control" type="text" ng-model="appDel.authCode" name="" id="" value="" placeholder="请输入短信验证码">
-					</div>
-					<div class="col-sm-3">
-						<button type="" ng-click="appsettingDeleteSendMSG()" class="btn btn-default">发送验证码</button>
-					</div>
-				</div>
-			</form>
-		</div>
-		<div class="modal-footer y-modal-footer-default text-xs-center">
-			<button type="button" class="btn y-btn-blue" ng-click="appsettingDeleteConfirm()">确认</button>
-		</div>
-	</script>
+        </div>
+        <div class="modal-body y-pt30">
+            <form class="form-horizontal" action="" method="">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">安全密码</label>
+                    <div class="col-sm-6">
+                        <input class="form-control" type="password" ng-model="appDel.password" name="" id="" value="" placeholder="请输入安全密码">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">短信验证码</label>
+                    <div class="col-sm-6">
+                        <input class="form-control" type="text" ng-model="appDel.authCode" name="" id="" value="" placeholder="请输入短信验证码">
+                    </div>
+                    <div class="col-sm-3">
+                        <button type="button" ng-disabled="isDisabled" ng-click="appsettingDeleteSendMSG()" class="btn btn-info" ng-bind="buttonText"></button>
+                        <!--<button type="button" ng-disabled="isDisabled" ng-click="send()" class="btn btn-info" ng-bind="buttonText">获取验证码</button>-->
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer y-modal-footer-default text-xs-center">
+            <button type="button" class="btn y-btn-blue" ng-click="appsettingDeleteConfirm()">确认</button>
+        </div>
+    </script>
     <script type="text/ng-template" id="appsettingInfoChannel.html">
         <div class="modal-header y-modal-header-default">
             <h3 class="y-mg0">支付通道
