@@ -1,3 +1,310 @@
+;/*!/server/author.js*/
+/*=============================================================================
+ * Author:Kyle|张大漾
+ * Website:http://yhtml5.com
+ * Gihub:https://github.com/yhtml5
+ * Description: A Website disgned by AngularJS Boostrap and NodeJS
+ *              It requires AngularJS 1.5.x or higher and it has been tested
+ *              Do something awesome and have fun !
+ *=============================================================================*/
+
+;/*!/components/js/ctrl.js*/
+/*
+ * @require components/js/router.js
+ *
+ */
+'use strict';
+angular.module('controllers', ['ui.bootstrap', 'ngAnimate'])
+    .controller('controllers', function($scope, $uibModal) {
+        $scope.animationsEnabled = true;
+        $scope.smsConfirmOpen = function(size) {
+            var modalInstance = $uibModal.open({
+                animation: $scope.animationsEnabled,
+                templateUrl: 'smsConfirm.html',
+                controller: 'smsConfirmCtrl',
+                size: size
+            })
+        }
+    })
+    .controller('smsConfirmCtrl', function($scope, $uibModalInstance) {
+        $scope.cancel = function() {
+            $uibModalInstance.dismiss('cancel');
+        }
+    })
+;/*!/components/js/router.js*/
+/*
+ * @require components/js/ctrl.js
+ * @require bower_components/angular-ui-router/release/angular-ui-router.js
+ */
+'use strict';
+// Declare app level module which depends on views, and components
+angular.module('yhtml5', [
+        'ui.router',
+        'controllers',
+        'factory',
+        'yhtml5.nav',
+        'yhtml5.appList',
+        'yhtml5.appsetting',
+        'yhtml5.account',
+        'yhtml5.authentication',
+        'yhtml5.user',
+        'yhtml5.payment',
+        'ngFileUpload'
+    ])
+    .config(function($stateProvider, $urlRouterProvider) {
+        $urlRouterProvider
+        //.when('/dashboard/*', '/dashboard')
+            .otherwise("/authentication/agreement")
+        $stateProvider
+            .state('dashboard', {
+                url: "/dashboard",
+                views: {
+                    "nav": {
+                        templateUrl: "view/nav-main/nav-main.html"
+                    },
+                    "content": {
+                        templateUrl: "view/appList/appList.html"
+                    }
+                }
+            })
+            .state('account', {
+                url: "/account",
+                views: {
+                    "nav": {
+                        templateUrl: "view/nav-main/nav-main.html"
+                    },
+                    "content": {
+                        templateUrl: "view/account/account.html"
+                    }
+                }
+            })
+            .state('account.record', {
+                url: "/record",
+                views: {
+                    "content": {
+                        templateUrl: "view/account.record/account.record.html"
+                    }
+
+                }
+            })
+            .state('account.withdraw', {
+                url: "/withdraw",
+                views: {
+                    "content": {
+                        templateUrl: "view/account.withdraw/account.withdraw.html"
+                    }
+
+                }
+            })
+            .state('account.detail', {
+                url: "/detail",
+                views: {
+                    "content": {
+                        templateUrl: "view/account.detail/account.detail.html"
+                    }
+
+                }
+            })
+            .state('account.topay', {
+                url: "/topay",
+                views: {
+                    "content": {
+                        templateUrl: "view/account.topay/account.topay.html"
+                    }
+
+                }
+            })
+            //======== real-name authentication ========
+            .state('authentication', {
+                url: "/authentication",
+                views: {
+                    "nav": {
+                        templateUrl: "view/nav-authentication/nav-authentication.html"
+                    },
+                    "content": {
+                        templateUrl: "view/authentication/authentication.html"
+                    }
+                }
+            })
+            .state('authentication.agreement', {
+                url: "/agreement",
+                views: {
+                    "content": {
+                        templateUrl: "view/authentication.agreement/authentication.agreement.html"
+                    }
+                }
+            })
+            .state('authentication.person', {
+                url: "/person",
+                views: {
+                    "content": {
+                        templateUrl: "view/authentication.person/authentication.person.html"
+                    }
+                }
+            })
+            .state('authentication.company', {
+                url: "/company",
+                views: {
+                    "content": {
+                        templateUrl: "view/authentication.company/authentication.company.html"
+                    }
+                }
+            })
+            .state('authentication.account', {
+                url: "/account",
+                views: {
+                    "content": {
+                        templateUrl: "view/authentication.account/authentication.account.html"
+                    }
+                }
+            })
+            //======== app ========
+            .state('payment', {
+                url: "/payment",
+                views: {
+                    "nav": {
+                        templateUrl: "view/nav-app/nav-app.html"
+                    },
+                    "content": {
+                        templateUrl: "view/payment/payment.html"
+                    }
+                }
+            })
+            .state('appsetting', {
+                url: "/appsetting",
+                views: {
+                    "nav": {
+                        templateUrl: "view/nav-app/nav-app.html"
+                    },
+                    "content": {
+                        templateUrl: "view/appsetting/appsetting.html"
+                    }
+                }
+            })
+            .state('appsetting.info', {
+                url: "/info",
+                views: {
+                    "content": {
+                        templateUrl: "view/appsetting.info/appsetting.info.html"
+                    },
+                    "modal": {
+                        templateUrl: "view/noteSimple/noteSimple.html"
+                    }
+                }
+            })
+            .state('appsetting.channel', {
+                url: "/channel",
+                views: {
+                    "content": {
+                        templateUrl: "view/appsetting.channel/appsetting.channel.html"
+                    }
+                }
+            })
+            .state('appsetting.api', {
+                url: "/api",
+                views: {
+                    "content": {
+                        templateUrl: "view/appsetting.api/appsetting.api.html"
+                    }
+                }
+            })
+            .state('appsetting.canal', {
+                url: "/canal",
+                views: {
+                    "content": {
+                        templateUrl: "view/appsetting.canal/appsetting.canal.html"
+                    },
+                    "modal": {
+                        templateUrl: "view/smsConfirm/smsConfirm.html"
+                    }
+                }
+            })
+            //======== user ========
+            .state('user', {
+                url: "/user",
+                views: {
+                    "nav": {
+                        templateUrl: "view/nav-main/nav-main.html"
+                    },
+                    "content": {
+                        templateUrl: "view/user/user.html"
+                    }
+                }
+            })
+            .state('user.person', {
+                url: "/person",
+                views: {
+                    "content": {
+                        templateUrl: "view/user.person/user.person.html"
+                    },
+                    "modal": {
+                        templateUrl: "view/noteSimple/noteSimple.html"
+                    }
+                }
+            })
+            .state('user.account', {
+                url: "/account",
+                views: {
+                    "content": {
+                        templateUrl: "view/user.account/user.account.html"
+                    },
+                    "modal": {
+                        templateUrl: "view/noteSimple/noteSimple.html"
+                    }
+                }
+            })
+            .state('user.password', {
+                url: "/password",
+                views: {
+                    "content": {
+                        templateUrl: "view/user.password/user.password.html"
+                    },
+                    "modal": {
+                        templateUrl: "view/noteSimple/noteSimple.html"
+                    }
+                }
+            })
+            .state('user.data', {
+                url: "/data",
+                views: {
+                    "content": {
+                        templateUrl: "view/user.data/user.data.html"
+                    },
+                    "modal": {
+                        templateUrl: "view/noteSimple/noteSimple.html"
+                    }
+                }
+            })
+            .state('user.agreement', {
+                url: "/agreement",
+                views: {
+                    "content": {
+                        templateUrl: "view/user.agreement/user.agreement.html"
+                    }
+                }
+            })
+            //======== public ========
+            .state('smsConfirm', {
+                url: "/smsConfirm",
+                views: {
+                    "content": {
+                        templateUrl: "view/smsConfirm/smsConfirm.html"
+                    }
+                }
+            })
+            .state('undeveloped', {
+                url: "/undeveloped",
+                views: {
+                    "nav": {
+                        templateUrl: "view/nav-main/nav-main.html"
+                    },
+                    "content": {
+                        templateUrl: "view/undeveloped/undeveloped.html"
+                    }
+                }
+            })
+    })
+;/*!/components/js/factory.js*/
 'use strict';
 angular.module('factory', [])
     .factory('Data', function() {
@@ -671,3 +978,1152 @@ angular.module('factory', [])
             businessTypes2
         }
     });
+;/*!/view/nav/nav.ctrl.js*/
+/*
+ * @require components/js/ctrl.js
+ *
+ */
+'use strict';
+angular.module('yhtml5.nav', ['ui.bootstrap', 'ngAnimate', 'ui.router']) //可以不加ui模块？
+    .controller('yhtml5.nav', function($scope, $http, $uibModal, $log) {
+        $scope.items = [
+            '极品飞车',
+            '极品装备',
+            '极品女友'
+        ];
+        $scope.status = {
+            isopen: false
+        };
+        $scope.toggled = function(open) {
+            $log.log('Dropdown is now: ', open);
+        };
+        $scope.toggleDropdown = function($event) {
+            $event.preventDefault();
+            $event.stopPropagation();
+            $scope.status.isopen = !$scope.status.isopen;
+        };
+        $scope.appendToEl = angular.element(document.querySelector('#dropdown-long-content'));
+        $scope.userVerify = true
+        $scope.userCenter = true
+        $scope.toggle = function() {
+            $scope.userCenter = !$scope.userCenter
+        }
+        $scope.animationsEnabled = true;
+        $scope.open = function(size) {
+            var modalInstance = $uibModal.open({
+                animation: $scope.animationsEnabled,
+                templateUrl: 'helpCenter.html',
+                controller: 'ModalInstanceCtrl',
+                size: size
+            })
+        };
+        $scope.toggleAnimation = function() {
+            $scope.animationsEnabled = !$scope.animationsEnabled;
+        };
+    })
+    .controller('ModalInstanceCtrl', function($scope, $uibModalInstance) {
+        $scope.cancel = function() {
+            $uibModalInstance.dismiss('cancel');
+        };
+    });
+
+// Please note that $uibModalInstance represents a modal window (instance) dependency.
+// It is not the same as the $uibModal service used above.
+;/*!/view/account/account.ctrl.js*/
+'use strict';
+angular.module('yhtml5.account', ['ui.bootstrap', 'ngAnimate', 'factory', 'ngFileUpload'])
+	.controller('yhtml5.account', function($scope, $http, $uibModal, Upload, $timeout, $log, Data) {
+		/** =======================  银燕 账户结算统计 Start ======================== **/
+		$http({
+			method: "post",
+			url: "http://admin.jubaobar.com/front/cashFlow/record.htm"
+		}).success(function(response) {
+			if (response.result == 0) {
+				$scope.account = response.data;
+            }
+		});
+		/** =======================  银燕 账户结算统计 End ======================== **/
+		
+		/** =======================  银燕 历史记录 分页控件 Start ======================== **/
+		$http({
+			method: "post",
+			url: "http://admin.jubaobar.com/front/cashFlow/queryPayTypeAndTime.htm"
+		}).success(function(response) {
+			if (response.result == 0) {
+				$scope.accountmanage = response.data.entityList;
+				$scope.totalItems = response.data.totalRecords;
+				$scope.currentPage = response.data.currentPage;
+				$scope.maxSize = 5;
+            }
+		});
+		$scope.pageChanged = function() {
+			$log.log('Page changed to: ' + $scope.currentPage);
+			$http({
+				method: "post",
+				url: "http://admin.jubaobar.com/front/cashFlow/queryPayTypeAndTime.htm",
+				params: {
+					pageNo: $scope.currentPage
+				}
+			}).success(function(response) {
+				if (response.result == 0) {
+					$scope.accountmanage = response.data.entityList;
+					$scope.totalItems = response.data.totalRecords;
+					$scope.currentPage = response.data.currentPage;
+					$scope.maxSize = 5;
+	            }
+			});
+		};
+		$scope.setPage = function(pageNo) {
+			$scope.currentPage = pageNo;
+		};
+		/** =======================  银燕 历史记录 分页控件 End   ======================== **/
+		
+		/** =======================  writed by 白豆腐  账户明细 | Add 银燕 分页控件 Start ======================== */
+		$scope.detail ={};
+		$scope.accountSelect = function(size) {
+			$http({
+				method: "post",
+				url: "http://admin.jubaobar.com/front/accounting/accountdetails.htm",
+				params: {
+					pageNo: $scope.currentPage,
+					startTime: $scope.startTime,
+					endTime: $scope.endTime,
+					transNo: $scope.transNo,
+					cashDirection: $scope.cashDirection,
+					changeType: $scope.changeType
+				}
+			}).success(function(response) {
+					$scope.accountdetail = response.data.entityList;
+					$scope.detail.totalItems = response.data.totalRecords;
+					$scope.detail.currentPage = response.data.currentPage;
+					$scope.detail.maxSize = 5;
+			});
+		}
+		
+		$scope.detail_pageChanged = function() {
+			$log.log('Page changed to: ' + $scope.detail.currentPage);
+			$http({
+				method: "post",
+				url: "http://admin.jubaobar.com/front/accounting/accountdetails.htm",
+				params: {
+					pageNo: $scope.detail.currentPage,
+					startTime: $scope.detail.startTime,
+					endTime: $scope.detail.endTime,
+					transNo: $scope.detail.transNo,
+					cashDirection: $scope.detail.cashDirection,
+					changeType: $scope.detail.changeType
+				}
+			}).success(function(response) {
+				if (response.result == 0) {
+					$scope.accountdetail = response.data.entityList;
+					$scope.detail.totalItems = response.data.totalRecords;
+					$scope.detail.currentPage = response.data.currentPage;
+					$scope.detail.maxSize = 5;
+	            }
+			});
+		};
+		/** =======================  writed by 白豆腐  账户明细 | Add 银燕 分页控件 End   ======================== */
+		
+		/** writed by 白豆腐  账户明细导出 */
+        $scope.accountExportExcel = function(size) {
+        	$http({
+                method: "post",
+                url: "http://admin.jubaobar.com/front/accounting/exportaccountdetails.htm",
+                params: {
+                	startTime: $scope.startTime,
+                	endTime: $scope.endTime,
+                	transNo: $scope.transNo,
+                	cashDirection: $scope.cashDirection,
+                	changeType: $scope.changeType
+                }
+            }).success(function(res) {
+                $scope.savingBase = false;
+                if (res.resultCode == 0) {
+                    $scope.app.proxy_base_objectid = res.objectid;
+                    $scope.view.state = $scope.view.stateMachine["fullfill_base"];
+                    $anchorScroll();
+                }
+            });
+
+            var modalInstance = $uibModal.open({
+                animation: $scope.animationsEnabled,
+                templateUrl: 'accountTopayConfirm.html',
+                controller: 'accountTopayConfirmCtrl',
+                size: size
+            })
+        }
+        
+		/*上传文件*/
+		$scope.uploadPic = function(file) {
+			file.upload = Upload.upload({
+				url: 'https://yhtml5.com',
+				data: {
+					username: $scope.username,
+					file: file
+				},
+			});
+			file.upload.then(function(response) {
+				$timeout(function() {
+					file.result = response.data;
+				});
+			}, function(response) {
+				if (response.status > 0)
+					$scope.errorMsg = response.status + ': ' + response.data;
+			}, function(evt) {
+				// Math.min is to fix IE which reports 200% sometimes
+				file.progress = Math.min(100, parseInt(100.0 * evt.loaded / evt.total));
+			});
+		}
+		$http.get("/server/account.detail.json")
+			.success(function(response) {
+				$scope.accountDetail = response.accountDetail //$scope.names 为一个数组
+			});
+		$scope.animationsEnabled = true;
+		$scope.toggleAnimation = function() {
+			$scope.animationsEnabled = !$scope.animationsEnabled;
+		}
+		$scope.accountDetailMoreOpen = function(size) {
+			var modalInstance = $uibModal.open({
+				animation: $scope.animationsEnabled,
+				templateUrl: 'accountDetailMore.html',
+				controller: 'accountDetailMoreCtrl',
+				size: size
+			})
+		};
+		$scope.accountTopayBatchOpen = function(size) {
+			var modalInstance = $uibModal.open({
+				animation: $scope.animationsEnabled,
+				templateUrl: 'accountTopayBatch.html',
+				controller: 'accountTopayBatchCtrl',
+				size: size
+			})
+		};
+		
+		$scope.accountTopayConfirmOpen = function(size) {
+			/** writed by yangjb 代付信息录入 */
+			$http({
+				method: "post",
+				url: "http://admin.jubaobar.com/front/cashFlow/payForAnotherInformation.htm",
+				params: {
+					accountName: $scope.accountName,
+					accountNum: $scope.accountNum,
+					bankId: $scope.bank.id,
+					bankBranch: $scope.bankBranch,
+					bankProvId: $scope.bankProvId,
+					bankCityId: $scope.bankCityId,
+					accountType: $scope.accountType,
+					remark: $scope.remark,
+					withdrawAmount: $scope.withdrawAmount
+				}
+			}).success(function(res) {
+				$scope.savingBase = false;
+				if (res.resultCode == 0) {
+					$scope.app.proxy_base_objectid = res.objectid;
+					$scope.view.state = $scope.view.stateMachine["fullfill_base"];
+					$anchorScroll();
+				}
+			});
+			var modalInstance = $uibModal.open({
+				animation: $scope.animationsEnabled,
+				templateUrl: 'accountTopayConfirm.html',
+				controller: 'accountTopayConfirmCtrl',
+				size: size
+			})
+		};
+		$scope.accountTopayDeleteOpen = function(size) {
+			var modalInstance = $uibModal.open({
+				animation: $scope.animationsEnabled,
+				templateUrl: 'accountTopayDelete.html',
+				controller: 'accountTopayDeleteCtrl',
+				size: size
+			})
+		};
+		$scope.realNameRemindOpen = function(size) {
+			$http({
+				method: "post",
+				url: "http://admin.jubaobar.com/front/cashFlow/withdrawRecord.htm",
+				params: {
+					payAmount: $scope.payAmount
+				}
+			}).success(function(res) {
+				$scope.savingBase = false;
+				if (res.resultCode == 0) {
+					$scope.app.proxy_base_objectid = res.objectid;
+					$scope.view.state = $scope.view.stateMachine["fullfill_base"];
+					$anchorScroll();
+				}
+			});
+			var modalInstance = $uibModal.open({
+				animation: $scope.animationsEnabled,
+				templateUrl: 'realNameRemind.html',
+				controller: 'realNameRemindCtrl',
+				size: size
+			})
+		};
+
+	})
+	.controller('accountDetailMoreCtrl', function($scope, $uibModalInstance) {
+		$scope.cancel = function() {
+			$uibModalInstance.dismiss('cancel');
+		};
+	})
+	.controller('accountTopayBatchCtrl', function($scope, $uibModalInstance) {
+		$scope.cancel = function() {
+			$uibModalInstance.dismiss('cancel');
+		};
+	})
+	.controller('accountTopayConfirmCtrl', function($scope, $uibModalInstance) {
+		$scope.cancel = function() {
+			$uibModalInstance.dismiss('cancel');
+		};
+	})
+	.controller('accountTopayDeleteCtrl', function($scope, $uibModalInstance) {
+		$scope.cancel = function() {
+			$uibModalInstance.dismiss('cancel');
+		};
+	})
+	.controller('realNameRemindCtrl', function($scope, $uibModalInstance) {
+		$scope.cancel = function() {
+			$uibModalInstance.dismiss('cancel');
+		};
+	})
+;/*!/view/appList/appList.ctrl.js*/
+'use strict';
+angular.module('yhtml5.appList', ['ui.bootstrap', 'ngAnimate'])
+    .controller('yhtml5.appList', function($scope, $http, $uibModal) {
+        $scope.animationsEnabled = true;
+        $scope.open = function(size) {
+            var modalInstance = $uibModal.open({
+                animation: $scope.animationsEnabled,
+                templateUrl: 'appList-add.html',
+                controller: 'ModalInstanceCtrl',
+                size: size
+            })
+        };
+        $scope.toggleAnimation = function() {
+            $scope.animationsEnabled = !$scope.animationsEnabled;
+        };
+        //get json
+        //      var localURL = __uri('../../server/init2.json');
+        //      var domainURL = 'http://admin.jubaobar.com/front/homePage/console.htm?callback=JSON_CALLBACK';
+        //      $http.jsonp('http://admin.jubaobar.com/front/homePage/console.htm?callback=JSON_CALLBACK')
+        $http.get('http://admin.jubaobar.com/front/homePage/console.htm')
+            .success(function(response) {
+                console.log("applist :", response.data);
+                $scope.userApps = response.data.appTradeInfoList;
+            })
+    })
+    .controller('ModalInstanceCtrl', function($state,$scope, $http, $uibModalInstance, $uibModal, $state) {
+    	/** ============================== Writed By 银燕 创建应用 Start ==========================*/
+        $scope.data = {};
+        $scope.userAppFormSave = function(size) {
+            $scope.userPersonFormEnabled = true;
+            $scope.userPersonUpdate = true;
+            $scope.userPersonSave = true;
+            $http({
+                method: "post",
+                url: "http://admin.jubaobar.com/front/appbanage/save.htm",
+                params: {
+                    appType: $scope.appTypeSelect,
+                    appName: $scope.data.appName,
+                    appUrl: $scope.data.appUrl,
+                    signature: $scope.data.signature,
+                    appPackage: $scope.data.appPackage,
+                    bundleId: $scope.data.bundleId,
+                    webICP: $scope.data.webICP
+                }
+            }).success(function(res) {
+              if (res.result = '0') {
+                    console.log("应用信息保存成功");
+                    $uibModalInstance.dismiss('cancel');
+                    $state.reload('dashboard');
+              }
+            }).error(function(res) {
+                console.log("保存失败")
+            })
+        };
+        $scope.cancel = function() {
+            $uibModalInstance.dismiss('cancel');
+        }
+        /** ============================== Writed By 银燕 创建应用 End ==========================*/
+    });
+;/*!/view/appsetting/appsetting.ctrl.js*/
+'use strict';
+angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
+    .controller('yhtml5.appsetting', function($scope, $uibModal, $http) {
+       $http({
+            method: "get",
+            url: "http://admin.jubaobar.com/front/appsetting/channel/app/find.htm",
+            params: {
+                appId: "1482479002"
+            }
+        }).success(function(response) {
+            $scope.appsetting = response.data;
+        })
+        
+        /** =============================== 银燕 应用信息 =============================== B**/
+		$http({
+			method: "post",
+			url: "http://admin.jubaobar.com/front/appemanage/appdetatls.htm",
+			params: {
+				id: 1
+			}
+		}).success(function(response) {
+			$scope.appInfo = response.data;
+		});
+		$scope.appsettingInfoFormEnabled = true
+		$scope.appsettingInfoUpdate = true
+		$scope.appsettingInfoSave = true
+		$scope.appsettingInfoFormTotal = function() {
+			$scope.appsettingInfoFormEnabled = !$scope.appsettingInfoFormEnabled
+			$scope.appsettingInfoUpdate = false
+			$scope.appsettingInfoSave = false
+		}
+		$scope.animationsEnabled = true;
+		$scope.appsettingInfoFormSave = function(size) {
+			$scope.appsettingInfoFormEnabled = true
+			$scope.appsettingInfoUpdate = true
+			$scope.appsettingInfoSave = true
+			$http({
+				method: "post",
+				url: "http://admin.jubaobar.com/front/appemanage/editappdetatls.htm",
+				params: {
+					id: 1,
+					appType: $scope.appInfo.appType,
+                    appName: $scope.appInfo.appName,
+                    appUrl: $scope.appInfo.appUrl,
+                    signature: $scope.appInfo.signature,
+                    appPackage: $scope.appInfo.appPackage,
+                    bundleId: $scope.appInfo.bundleId,
+                    webIcp: $scope.appInfo.webIcp
+				}
+			}).success(function(res) {
+				$scope.savingBase = false;
+				if (res.resultCode == 0) {
+					$scope.app.proxy_base_objectid = res.objectid;
+					$scope.view.state = $scope.view.stateMachine["fullfill_base"];
+					$anchorScroll();
+				}
+			})
+			var modalInstance = $uibModal.open({
+				animation: $scope.animationsEnabled,
+				templateUrl: 'noteSimple.html',
+				controller: 'appsettingInfoNoteSimpleCtrl',
+				size: size
+			})
+		}
+		/** =============================== 银燕 应用信息 =============================== E**/
+		
+		/** =============================== 银燕 删除应用 =============================== B**/
+		$scope.appsettingDeleteOpen = function(size) {
+			var modalInstance = $uibModal.open({
+				animation: $scope.animationsEnabled,
+				templateUrl: 'appsettingDeleteForm.html',
+				controller: 'appsettingDeleteCtrl',
+				size: size
+			})
+		}
+		/** =============================== 银燕 删除应用 =============================== E**/
+        
+        $scope.animationsEnabled = true;
+        $scope.appsettingCanalResetOpen = function(size) {
+            var modalInstance = $uibModal.open({
+                animation: $scope.animationsEnabled,
+                templateUrl: 'appsettingCanalReset.html',
+                controller: 'appsettingCanalResetCtrl',
+                size: size
+            })
+        }
+        $scope.appsettingCanalCreateOpen = function(size) {
+            var modalInstance = $uibModal.open({
+                animation: $scope.animationsEnabled,
+                templateUrl: 'appsettingCanalCreate.html',
+                controller: 'appsettingCanalCreateCtrl',
+                size: size
+            })
+        }
+        $scope.appsettingChannelAgreementOpen = function(size) {
+            var modalInstance = $uibModal.open({
+                animation: $scope.animationsEnabled,
+                templateUrl: 'appsettingChannelAgreement.html',
+                controller: 'appsettingChannelAgreementCtrl',
+                size: size
+            })
+        }
+        $scope.appsettingChannelRechanrgecardOpen = function(size) {
+            var modalInstance = $uibModal.open({
+                animation: $scope.animationsEnabled,
+                templateUrl: 'appsettingChannelRechanrgecard.html',
+                controller: 'appsettingChannelRechanrgecardCtrl',
+                size: size
+            })
+        }
+        $scope.appsettingChannelPointcardOpen = function(size) {
+            var modalInstance = $uibModal.open({
+                animation: $scope.animationsEnabled,
+                templateUrl: 'appsettingChannelPointcard.html',
+                controller: 'appsettingChannelPointcardCtrl',
+                size: size
+            })
+        };
+        /** Writed by 银燕 应用通知地址我 */
+        $scope.appsettingApiInformUrlOpen = function(size) {
+                var modalInstance = $uibModal.open({
+                    animation: $scope.animationsEnabled,
+                    templateUrl: 'appsettingApiInformUrl.html',
+                    controller: 'appsettingApiInformUrlCtrl',
+                    size: size
+                })
+            }
+            /** Writed by 银燕 重新支付地址 */
+        $scope.appsettingApiRepayUrlOpen = function(size) {
+            var modalInstance = $uibModal.open({
+                animation: $scope.animationsEnabled,
+                templateUrl: 'appsettingApiRepayUrl.html',
+                controller: 'appsettingApiRepayUrlCtrl',
+                size: size
+            })
+        }
+        $scope.appsettingInfoChannelOpen = function(size) {
+            var modalInstance = $uibModal.open({
+                animation: $scope.animationsEnabled,
+                templateUrl: 'appsettingInfoChannel.html',
+                controller: 'appsettingInfoChannelCtrl',
+                size: size
+            })
+        }
+    })
+    /** Writed by 银燕 删除应用 */
+	.controller('appsettingDeleteCtrl', function($scope, $http, $uibModalInstance, $uibModal, $state) {
+		$scope.appDel={};
+		/** ====================== 获取验证码 ======================= B**/
+		$scope.appsettingDeleteSendMSG = function(size) {
+			$http({
+				method: "post",
+				url: "http://admin.jubaobar.com/front/common/getSmsCode.htm",
+				params: {
+					smsChannel: 17
+				}
+			}).success(function(response) {
+				if (res.result == 0) {
+					$scope.appDel = response.data;
+				}
+			});
+		}
+		/** ====================== 获取验证码 ======================= E**/
+		/** ======================= 删除应用 ======================= B**/
+		$scope.appDel ={};
+		$scope.appsettingDeleteConfirm = function(size) {
+			$http({
+				method: "post",
+				url: "http://admin.jubaobar.com/front/app/delete.htm",
+				params: {
+					id: 158,
+					securityCode:$scope.appDel.password,
+					smsCode:$scope.appDel.authCode
+				}
+			}).success(function(res) {
+				console.log("删除成功");
+				$uibModalInstance.dismiss('cancel');
+                $state.reload('dashboard');
+			}).error(function(res) {
+				console.log("保存失败")
+			})
+			var modalInstance = $uibModal.open({
+				animation: $scope.animationsEnabled,
+				templateUrl: 'noteSimple.html',
+				controller: 'appsettingApiInformUrlCtrl',
+				size: size
+			})
+		}
+		/** ======================= 删除应用 ======================= E**/
+		$scope.cancel = function() {
+			$uibModalInstance.dismiss('cancel');
+		}
+	})
+    /** Writed by 银燕 应用通知地址 */
+    .controller('appsettingApiInformUrlCtrl', function($scope, $http, $uibModalInstance, $uibModal) {
+        $scope.appsettingApiInformUrlSave = function(size) {
+            $http({
+                method: "post",
+                url: "http://admin.jubaobar.com/front/appsetting/api/informURL/save.htm",
+                params: {
+                    callbackurl: $scope.callbackurl,
+                    returnurl: $scope.returnurl
+                }
+            }).success(function(res) {
+                console.log("保存成功");
+                $uibModalInstance.dismiss('cancel');
+            }).error(function(res) {
+                console.log("保存失败")
+            })
+            var modalInstance = $uibModal.open({
+                animation: $scope.animationsEnabled,
+                templateUrl: 'noteSimple.html',
+                controller: 'appsettingApiInformUrlCtrl',
+                size: size
+            })
+        }
+        $scope.cancel = function() {
+            $uibModalInstance.dismiss('cancel');
+        }
+    })
+    /** Writed by 银燕 重新支付地址 */
+    .controller('appsettingApiRepayUrlCtrl', function($scope, $http, $uibModalInstance, $uibModal) {
+        $scope.appsettingApiRepayUrlSave = function(size) {
+            $http({
+                method: "post",
+                url: "http://admin.jubaobar.com/front/appsetting/api/rePayURL/save.htm",
+                params: {
+                    payurl: $scope.payurl
+                }
+            }).success(function(res) {
+                console.log("保存成功");
+                $uibModalInstance.dismiss('cancel');
+            }).error(function(res) {
+                console.log("保存失败")
+            })
+            var modalInstance = $uibModal.open({
+                animation: $scope.animationsEnabled,
+                templateUrl: 'noteSimple.html',
+                controller: 'appsettingApiRepayUrlCtrl',
+                size: size
+            })
+        }
+        $scope.cancel = function() {
+            $uibModalInstance.dismiss('cancel');
+        }
+    })
+    .controller('appsettingCanalResetCtrl', function($scope, $uibModalInstance) {
+        $scope.cancel = function() {
+            $uibModalInstance.dismiss('cancel');
+        }
+    })
+    .controller('appsettingCanalCreateCtrl', function($scope, $uibModalInstance) {
+        $scope.cancel = function() {
+            $uibModalInstance.dismiss('cancel');
+        }
+    })
+    .controller('appsettingChannelAgreementCtrl', function($scope, $uibModalInstance) {
+        $scope.cancel = function() {
+            $uibModalInstance.dismiss('cancel');
+        }
+    })
+    .controller('appsettingChannelRechanrgecardCtrl', function($scope, $uibModalInstance) {
+        $scope.cancel = function() {
+            $uibModalInstance.dismiss('cancel');
+        }
+    })
+    .controller('appsettingChannelPointcardCtrl', function($scope, $uibModalInstance) {
+        $scope.cancel = function() {
+            $uibModalInstance.dismiss('cancel');
+        }
+    })
+    .controller('appsettingInfoNoteSimpleCtrl', function($scope, $uibModalInstance) {
+        $scope.text = "资料修改成功，信息正在审核中，请耐心等候！"
+        $scope.isInfo = true
+        $scope.cancel = function() {
+            $uibModalInstance.dismiss('cancel');
+        }
+    })
+    .controller('appsettingInfoChannelCtrl', function($scope, $uibModalInstance,Data) {
+        $scope.data = Data;
+        console.log("factory data : ", Data);
+        $scope.channels=$scope.data.channels;
+        console.log("data.channels : ", $scope.channels);
+        $scope.cancel = function() {
+            $uibModalInstance.dismiss('cancel');
+        }
+    })
+;/*!/view/authentication/authentication.ctrl.js*/
+'use strict';
+angular.module('yhtml5.authentication', ['ui.bootstrap', 'ngAnimate', 'factory'])
+	.controller('yhtml5.authentication', function($scope, $uibModal, $state, $http, Upload, $timeout, Data) {
+		$scope.data = Data;
+        console.log("factory data : ", Data);
+        $scope.userInfo=$scope.data.userInfo;
+        console.log("data.userInfo : ", $scope.userInfo);
+		$scope.userAccount = {};
+		$scope.bank = {};
+		$scope.isStep1 = true;
+		$scope.toStep1 = function() {
+			$scope.isStep1 = true
+			$scope.isStep2 = false
+			$scope.isStep3 = false
+		}
+		$scope.toStep2 = function() {
+			$scope.isStep1 = true
+			$scope.isStep2 = true
+			$scope.isStep3 = false
+		}
+		$scope.toStep3 = function() {
+			/** ======================================== writed by Yangjb 实名认证 Start========================================= */
+			/** 基本信息 **/
+			$http({
+				method: "post",
+				url: "http://admin.jubaobar.com/front/authentication/businessInformation.htm",
+				params: {
+					companyType: $scope.userInfo.companyType,
+					subCompanyType: $scope.userInfo.subCompanyType,
+					userName: $scope.userInfo.userName,
+					businessType: $scope.userInfo.businessType1,
+					businessSubType: $scope.userInfo.businessType2,
+					businessTypeAll: $scope.userInfo.businessType1 + "/" + $scope.userInfo.businessType2,
+					companyName: $scope.userInfo.companyName,
+					companyAddress: $scope.userInfo.companyAddress,
+					licenseNo: $scope.userInfo.licenseNo,
+					contactName: $scope.userInfo.contactName,
+					contactEmail: $scope.userInfo.contactEmail,
+					contactTelephone: $scope.userInfo.contactTelephone,
+					contactQQ: $scope.userInfo.contactQQ,
+					contactProvId: $scope.userInfo.contactProvId,
+					contactCityId: $scope.userInfo.contactCityId,
+					contactAddress: $scope.userInfo.contactAddress,
+					contactAddressAll: $scope.userInfo.contactProvId + $scope.userInfo.contactCityId + $scope.userInfo.contactAddress,
+					idCard: $scope.userInfo.idCard,
+					idCardPic: $scope.userInfo.idCardPic,
+					idCardFrontPic: $scope.userInfo.idCardFrontPic,
+					idCardReversePic: $scope.userInfo.idCardReversePic,
+					licensePic: $scope.userInfo.licensePic,
+					taxCertPic: $scope.userInfo.taxCertPic,
+					orgCodeCertPic: $scope.userInfo.orgCodeCertPic,
+					openPermitPic: $scope.userInfo.openPermitPic,
+					otherTypePic: $scope.userInfo.otherTypePic
+				}
+			}).success(function(res) {
+				$scope.savingBase = false;
+				if (res.result == 0) {
+					console.log("应用信息保存成功");
+					$http.get('http://admin.jubaobar.com/front/myAccount/queryAccountMessage.htm')
+		            .success(function(response) {
+		                $scope.userAccount = response.data;
+		            });
+				}
+			});
+			/** ======================================== writed by Yangjb 实名认证 End========================================= */
+
+			$scope.isStep1 = true
+			$scope.isStep2 = true
+			$scope.isStep3 = true
+		}
+		$scope.animationsEnabled = true;
+		$scope.authenticationAccountConfirmOpen = function(size) {
+			/** ======================================== writed by Yangjb 实名认证 Start========================================= */
+			/** 结算信息 **/
+			$http({
+				method: "post",
+				url: "http://admin.jubaobar.com/front/authentication/settleAccountMessage.htm",
+				params: {
+					accountname: $scope.userAccount.accountname,
+					accounttype: $scope.userAccount.accounttype,
+					accountnum: $scope.userAccount.accountnum,
+					bankid: $scope.bank.id,
+					bankname: $scope.bank.bank,
+					bankprov: $scope.userAccount.bankprov,
+					bankcity: $scope.userAccount.bankcity,
+					bankbranch: $scope.userAccount.bankbranch,
+					alipayname: $scope.userAccount.alipayname,
+					alipay: $scope.userAccount.alipay,
+					id: $scope.userAccount.id
+				}
+			}).success(function(res) {
+				$scope.savingBase = false;
+				if (res.resultCode == 0) {
+					$scope.app.proxy_base_objectid = res.objectid;
+					$scope.view.state = $scope.view.stateMachine["fullfill_base"];
+					$anchorScroll();
+				}
+			});
+			/** ======================================== writed by Yangjb 实名认证 End========================================= */
+			var modalInstance = $uibModal.open({
+				animation: $scope.animationsEnabled,
+				templateUrl: 'authenticationAccountConfirm.html',
+				controller: 'authenticationAccountConfirmCtrl',
+				size: size
+			})
+		};
+	})
+	.controller('authenticationAccountConfirmCtrl', function($scope, $uibModalInstance) {
+		$scope.cancel = function() {
+			$uibModalInstance.dismiss('cancel');
+		}
+	})
+;/*!/view/user/user.ctrl.js*/
+'use strict';
+angular.module('yhtml5.user', ['ngFileUpload', 'factory'])
+	.controller('yhtml5.user', function($scope, $uibModal, $http, Upload, $timeout, Data) {
+		$scope.data = Data;
+		$scope.banks = Data.banks;
+		$scope.businessTypes2 = Data.businessTypes2;
+		console.log("factory data : ", Data);
+		console.log("banks : ", banks);
+		$http.get('http://admin.jubaobar.com/front/myAccount/queryAccountMessage.htm')
+			.success(function(response) {
+				$scope.userAccount = response.data;
+			});
+		$scope.userAccountFormSave = function(size) {
+			$scope.userPersonFormEnabled = true
+			$scope.userPersonUpdate = true
+			$scope.userPersonSave = true;
+			$http({
+				method: "post",
+				url: "http://admin.jubaobar.com/front/authentication/settleAccountMessage.htm",
+				params: {
+					accountname: $scope.userAccount.accountname,
+					accounttype: $scope.userAccount.accounttype,
+					accountnum: $scope.userAccount.accountnum,
+					bankid: $scope.bank.id,
+					bankname: $scope.bank.bank,
+					bankprov: $scope.userAccount.bankprov,
+					bankcity: $scope.userAccount.bankcity,
+					bankbranch: $scope.userAccount.bankbranch,
+					alipayname: $scope.userAccount.alipayname,
+					alipay: $scope.userAccount.alipay,
+					id: $scope.userAccount.id
+				}
+			}).success(function(res) {
+				$scope.savingBase = false;
+				if (res.resultCode == 0) {
+					$scope.app.proxy_base_objectid = res.objectid;
+					$scope.view.state = $scope.view.stateMachine["fullfill_base"];
+					$anchorScroll();
+				}
+			})
+			var modalInstance = $uibModal.open({
+				animation: $scope.animationsEnabled,
+				templateUrl: 'noteSimple.html',
+				controller: 'userAccountNoteSimpleCtrl',
+				size: size
+			})
+		};
+		$http.get('http://admin.jubaobar.com/front/user/person/info.htm')
+			.success(function(response) {
+				console.log(response);
+				$scope.userInfo = response.data;
+				console.log(response.data.contactProvIdShow);
+			});
+		$scope.userPersonFormEnabled = true
+		$scope.userPersonUpdate = true
+		$scope.userPersonSave = true
+		$scope.userPersonFormTotal = function() {
+			$scope.userPersonFormEnabled = !$scope.userPersonFormEnabled
+			$scope.userPersonUpdate = false
+			$scope.userPersonSave = false
+		};
+		$scope.animationsEnabled = true;
+		$scope.userPersonFormSave = function(size, file, upload) {
+			$scope.userPersonFormEnabled = true;
+			$scope.userPersonUpdate = true;
+			$scope.userPersonSave = true;
+			$http({
+				method: "post",
+				url: "http://admin.jubaobar.com/front/authentication/businessInformation.htm",
+				params: {
+					companyType: $scope.userInfo.companyType,
+					subCompanyType: $scope.userInfo.subCompanyType,
+					userName: $scope.userInfo.userName,
+					businessType: $scope.userInfo.businessType1,
+                    businessSubType: $scope.userInfo.businessType2,
+					businessTypeAll: $scope.userInfo.businessType1 + "/" + $scope.userInfo.businessType2,
+					companyName: $scope.userInfo.companyName,
+					companyAddress: $scope.userInfo.companyAddress,
+					licenseNo: $scope.userInfo.licenseNo,
+					contactName: $scope.userInfo.contactName,
+					contactEmail: $scope.userInfo.contactEmail,
+					contactTelephone: $scope.userInfo.contactTelephone,
+					contactQQ: $scope.userInfo.contactQQ,
+					contactProvId: $scope.userInfo.contactProvId,
+					contactCityId: $scope.userInfo.contactCityId,
+					contactAddress: $scope.userInfo.contactAddress,
+					contactAddressAll: $scope.userInfo.contactProvId + $scope.userInfo.contactCityId + $scope.userInfo.contactAddress,
+					idCard: $scope.userInfo.idCard,
+					idCardPic: $scope.userInfo.idCardPic,
+					idCardFrontPic: $scope.userInfo.idCardFrontPic,
+					idCardReversePic: $scope.userInfo.idCardReversePic,
+					licensePic: $scope.userInfo.licensePic,
+					taxCertPic: $scope.userInfo.taxCertPic,
+					orgCodeCertPic: $scope.userInfo.orgCodeCertPic,
+					openPermitPic: $scope.userInfo.openPermitPic,
+					otherTypePic: $scope.userInfo.otherTypePic,
+					companyId: $scope.userInfo.companyId
+				}
+			}).success(function(res) {
+				$scope.savingBase = false;
+				if (res.resultCode == 0) {
+					console.log("应用信息保存成功")
+				}
+			});
+			var modalInstance = $uibModal.open({
+				animation: $scope.animationsEnabled,
+				templateUrl: 'noteSimple.html',
+				controller: 'userPersonNoteSimpleCtrl',
+				size: size
+			});
+			$scope.uploadPic = function(file) {
+				file.upload = Upload.upload({
+					url: 'http://admin.jubaobar.com/api/upload/imageupload.htm',
+					data: {
+						username: $scope.username,
+						file: file
+					},
+				});
+				file.upload.then(function(response) {
+					$timeout(function() {
+						file.result = response.data;
+					});
+				}, function(response) {
+					if (response.status > 0)
+						$scope.errorMsg = response.status + ': ' + response.data;
+				}, function(evt) {
+					// Math.min is to fix IE which reports 200% sometimes
+					file.progress = Math.min(100, parseInt(100.0 * evt.loaded / evt.total));
+				})
+			};
+		}
+		$scope.userAccountFormSave = function(size) {
+			$scope.userPersonFormEnabled = true
+			$scope.userPersonUpdate = true
+			$scope.userPersonSave = true
+			var modalInstance = $uibModal.open({
+				animation: $scope.animationsEnabled,
+				templateUrl: 'noteSimple.html',
+				controller: 'userAccountNoteSimpleCtrl',
+				size: size
+			})
+		};
+		//		$scope.userPasswordLoginSave = function(size) {
+		//				var modalInstance = $uibModal.open({
+		//					animation: $scope.animationsEnabled,
+		//					templateUrl: 'noteSimple.html',
+		//					controller: 'userPasswordLoginCtrl',
+		//					size: size
+		//				})
+		//			}
+		//		$scope.userPasswordSecuritySave = function(size) {
+		//			var modalInstance = $uibModal.open({
+		//				animation: $scope.animationsEnabled,
+		//				templateUrl: 'noteSimple.html',
+		//				controller: 'userPasswordSecurityCtrl',
+		//				size: size
+		//			})
+		//		};
+		/** writed by 白豆腐  密码修改*/
+		$scope.data = {};
+		$scope.userPasswordLoginSave = function(size) {
+				console.log($scope.data.confirmPwd)
+				$http({
+					method: "post",
+					url: "http://admin.jubaobar.com/front/pwd/update.htm",
+					params: {
+						loginPwd: $scope.data.loginPwd,
+						confirmPwd: $scope.data.confirmPwd
+					}
+				}).success(function() {
+
+				})
+				var modalInstance = $uibModal.open({
+					animation: $scope.animationsEnabled,
+					templateUrl: 'noteSimple.html',
+					controller: 'userPasswordLoginCtrl',
+					size: size
+				})
+			}
+			/** writed by 白豆腐  安全密码修改*/
+		$scope.userPasswordSecuritySave = function(size) {
+				console.log($scope.data.safetyPwd)
+				$http({
+					method: "post",
+					url: "http://admin.jubaobar.com/front/safetypwd/update.htm",
+					params: {
+						safetyPwd: $scope.data.safetyPwd,
+						confirmSafetyPwd: $scope.data.confirmSafetyPwd
+					}
+				}).success(function() {
+
+				})
+				var modalInstance = $uibModal.open({
+					animation: $scope.animationsEnabled,
+					templateUrl: 'noteSimple.html',
+					controller: 'userPasswordSecurityCtrl',
+					size: size
+				})
+			}
+			/** writed by 白豆腐  安全密码修改*/
+		$scope.userPasswordSecurityRetrieveOpen = function(size) {
+			var modalInstance = $uibModal.open({
+				animation: $scope.animationsEnabled,
+				templateUrl: 'userPasswordSecurityRetrieve.html',
+				controller: 'userPasswordSecurityRetrieveCtrl',
+				size: size
+			})
+		};
+	})
+	.controller('userPersonNoteSimpleCtrl', function($scope, $uibModalInstance) {
+		$scope.text = "资料修改成功，信息正在审核中，请耐心等候！"
+		$scope.isInfo = true
+		$scope.cancel = function() {
+			$uibModalInstance.dismiss('cancel');
+		}
+	})
+	.controller('userAccountNoteSimpleCtrl', function($scope, $uibModalInstance) {
+		$scope.text = "结算信息修改成功！"
+		$scope.isInfo = true
+		$scope.cancel = function() {
+			$uibModalInstance.dismiss('cancel');
+		}
+	})
+	.controller('userPasswordLoginCtrl', function($scope, $uibModalInstance) {
+		$scope.text = "登录密码修改成功！"
+		$scope.isInfo = true
+		$scope.cancel = function() {
+			$uibModalInstance.dismiss('cancel');
+		}
+	})
+	.controller('userPasswordSecurityCtrl', function($scope, $uibModalInstance) {
+		$scope.text = "安全密码修改成功！"
+		$scope.isInfo = true
+		$scope.cancel = function() {
+			$uibModalInstance.dismiss('cancel');
+		}
+	})
+	.controller('userPasswordSecurityRetrieveCtrl', function($scope, $uibModalInstance, $uibModal,$http) {
+		$scope.passwordFormEnabled = true;
+		$scope.newPasswordFormEnabled = false;
+			//		$scope.next = function() {
+			//			$scope.passwordFormEnabled = false
+			//			$scope.newPasswordFormEnabled = true
+			//			$scope.isNext = true
+			//			$scope.isConfirm = true
+			//		}
+			//		$scope.cancel = function() {
+			//			$uibModalInstance.dismiss('cancel');
+			//		}
+			//		$scope.animationsEnabled = true;
+			//		$scope.confirm = function(size) {
+			//			$uibModalInstance.dismiss('cancel');
+			//			var modalInstance = $uibModal.open({
+			//				animation: $scope.animationsEnabled,
+			//				templateUrl: 'noteSimple.html',
+			//				controller: 'userPasswordSecurityCtrl',
+			//				size: size
+			//			})
+			//		};
+			/* writed by 白豆腐  找回安全密码*/
+		$scope.next = function(size) {
+			$scope.passwordFormEnabled = false
+			$scope.newPasswordFormEnabled = true
+			$scope.isNext = true
+			$scope.isConfirm = true
+			console.log($scope.data.pwdAnswer)
+			console.log($scope.data.authCode)
+			$http({
+				method: "post",
+				url: "http://admin.jubaobar.com/front/safetypwd/find.htm",
+				params: {
+					pwdAnswer: $scope.data.pwdAnswer,
+					authCode: $scope.data.authCode
+				}
+			}).success(function(response) {
+
+			})
+		};
+		/* writed by 白豆腐  找回安全密码*/
+
+		/* writed by 白豆腐  发送验证码   */
+		$scope.cancel = function() {
+			$uibModalInstance.dismiss('cancel');
+			$http({
+				method: "post",
+				url: "http://admin.jubaobar.com/front/safetypwd/sendCode.htm",
+			}).success(function() {})
+		}
+		$scope.animationsEnabled = true;
+		/* writed by 白豆腐  发送验证码   */
+
+		/* writed by 白豆腐  重设安全密码*/
+		$scope.confirm = function(size) {
+			$uibModalInstance.dismiss('cancel');
+			console.log($scope.data.newSafetyPwd)
+			console.log($scope.data.confirmPwd)
+			$http({
+				method: "post",
+				url: "http://admin.jubaobar.com/front/safetypwd/reset.htm",
+				params: {
+					newSafetyPwd: $scope.data.newSafetyPwd,
+					confirmPwd: $scope.data.confirmPwd
+				}
+			}).success(function() {})
+			var modalInstance = $uibModal.open({
+				animation: $scope.animationsEnabled,
+				templateUrl: 'noteSimple.html',
+				controller: 'userPasswordSecurityCtrl',
+				size: size
+			})
+		};
+		/* writed by 白豆腐  重设安全密码*/
+	});
+;/*!/view/payment/payment.js*/
+'use strict';
+angular.module('yhtml5.payment', ['ui.bootstrap', 'ngAnimate', 'ui.router']) //可以不加ui模块？
+	.controller('yhtml5.payment', function($scope, $http, $uibModal) {
+		/** ======================= 支付订单 银燕 分页控件 Start ======================== **/
+		$scope.trade ={};
+		$http({
+			method: "post",
+			url: "http://admin.jubaobar.com/front/payment/index.htm"
+		}).success(function(response) {
+			if (response.result == 0) {
+				$scope.userTrades = response.data.page;
+				$scope.trade.totalItems = response.data.page.totalRecords;
+				$scope.trade.currentPage = response.data.page.currentPage;
+				$scope.trade.maxSize = 5;
+            }
+		});
+		$scope.trade_pageChanged = function() {
+			$log.log('Page changed to: ' + $scope.trade.currentPage);
+			$http({
+				method: "post",
+				url: "http://admin.jubaobar.com/front/payment/query.htm",
+				params: {
+					pageNo: $scope.trade.currentPage
+				}
+			}).success(function(response) {
+				if (response.result == 0) {
+					$scope.userTrades = response.data.page;
+					$scope.trade.totalItems = response.data.page.totalRecords;
+					$scope.trade.currentPage = response.data.page.currentPage;
+					$scope.trade.maxSize = 5;
+	            }
+			});
+		};
+		/** ======================= 支付订单 银燕 分页控件 End   ======================== **/
+		
+		/** Writed By 银燕 支付订单导出功能 */
+		$scope.paymentExportExcel = function(size) {
+			$http({
+				method: "post",
+				url: "http://admin.jubaobar.com/front/payment/export.htm",
+				params: {
+					topQueryField: $scope.topQueryField,
+					topQueryParam: $scope.topQueryParam,
+					fromDate: $scope.fromDate,
+					toDate: $scope.toDate,
+					payState: $scope.payState,
+					payType: $scope.payType
+				}
+			}).success(function(res) {
+				$scope.savingBase = false;
+				if (res.resultCode == 0) {
+					$scope.app.proxy_base_objectid = res.objectid;
+					$scope.view.state = $scope.view.stateMachine["fullfill_base"];
+					$anchorScroll();
+				}
+			});
+			var modalInstance = $uibModal.open({
+				animation: $scope.animationsEnabled,
+				templateUrl: 'accountTopayConfirm.html',
+				controller: 'accountTopayConfirmCtrl',
+				size: size
+			})
+		}
+	});
