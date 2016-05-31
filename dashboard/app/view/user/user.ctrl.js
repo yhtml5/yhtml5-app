@@ -1,13 +1,38 @@
 'use strict';
-angular.module('yhtml5.user', ['ngFileUpload', 'factory'])
+angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate', 'ngFileUpload', 'factory'])
 	.controller('yhtml5.user', function($scope, $uibModal, $http, Upload, $timeout, Data) {
 		$scope.dataInit = Data;
 		$scope.banks = Data.banks;
-		console.log("factory data : ", Data);
-		console.log("banks : ", banks);
+		
+		/** ========================= 银燕 获取 经营范围、地市字典 ========================= B**/
+		$http.get("http://admin.jubaobar.com/front/common/region/all.htm")
+        .success(function(response) {
+        	$scope.dataInit.division = response.data;
+    	});
+		$http.get("http://admin.jubaobar.com/front/homePage/queryEnumData.htm")
+        .success(function(response) {
+        	console.log(angular.isArray(response.data));
+        	$scope.dataInit.businessTypes = response.data;
+    	});
+		/** ========================= 银燕 获取 经营范围、地市字典 ========================= **/
+		
+		$scope.bankSelect = {};
+		$scope.bankprovAccount = {};
+		$scope.bankcityAccount = {};
 		$http.get('http://admin.jubaobar.com/front/myAccount/queryAccountMessage.htm')
 			.success(function(response) {
 				$scope.userAccount = response.data;
+				$scope.bankSelect.id = $scope.userAccount.bankid;
+				$scope.bankSelect.bank = $scope.userAccount.bankname;
+				$scope.bankprovAccount.id = $scope.userAccount.bankprov;
+				$scope.bankcityAccount.id = $scope.userAccount.bankcity;
+				$http({
+					method: "post",
+					url: "http://admin.jubaobar.com/front/common/region/get.htm",
+					params: {id : $scope.userAccount.bankprov}
+				}).success(function(response) {
+					$scope.bankprovAccount = response.data;
+				});
 			});
 		$scope.userAccountFormSave = function(size) {
 			$scope.userPersonFormEnabled = true
@@ -20,10 +45,10 @@ angular.module('yhtml5.user', ['ngFileUpload', 'factory'])
 					accountname: $scope.userAccount.accountname,
 					accounttype: $scope.userAccount.accounttype,
 					accountnum: $scope.userAccount.accountnum,
-					bankid: $scope.bank.id,
-					bankname: $scope.bank.bank,
-					bankprov: $scope.userAccount.bankprov,
-					bankcity: $scope.userAccount.bankcity,
+					bankid: $scope.bankSelect.id,
+					bankname: $scope.bankSelect.bank,
+					bankprov: $scope.bankprovAccount.id,
+					bankcity: $scope.bankcityAccount.id,
 					bankbranch: $scope.userAccount.bankbranch,
 					alipayname: $scope.userAccount.alipayname,
 					alipay: $scope.userAccount.alipay,
@@ -44,11 +69,36 @@ angular.module('yhtml5.user', ['ngFileUpload', 'factory'])
 				size: size
 			})
 		};
+		
+		$scope.businessTypeUser = {};
+		$scope.businessSubTypeUser = {};
+		$scope.provUser = {};
+		$scope.cityUser = {};
 		$http.get('http://admin.jubaobar.com/front/user/person/info.htm')
 			.success(function(response) {
 				console.log(response);
 				$scope.userInfo = response.data;
 				console.log(response.data.contactProvIdShow);
+				$scope.businessTypeUser.dictCode = $scope.userInfo.businessType;
+				$scope.businessSubTypeUser.dictCode = $scope.userInfo.businessSubType;
+				$scope.provUser.id = $scope.userInfo.contactProvId;
+				$scope.cityUser.id = $scope.userInfo.contactCityId;
+				$http({
+					method: "post",
+					url: "http://admin.jubaobar.com/front/common/dict/type.htm",
+					params: {dictType : "businessSubType"}
+				}).success(function(response) {
+					$scope.businessTypeUser.subList = response.data;
+				});
+				
+				$scope.dataInit.businessTypes[]
+				$http({
+					method: "post",
+					url: "http://admin.jubaobar.com/front/common/region/get.htm",
+					params: {id : $scope.userInfo.contactProvId}
+				}).success(function(response) {
+					$scope.provUser = response.data;
+				});
 			});
 		$scope.userPersonFormEnabled = true
 		$scope.userPersonUpdate = true
@@ -70,8 +120,8 @@ angular.module('yhtml5.user', ['ngFileUpload', 'factory'])
 					companyType: $scope.userInfo.companyType,
 					subCompanyType: $scope.userInfo.subCompanyType,
 					userName: $scope.userInfo.userName,
-					businessType: $scope.userInfo.businessType1,
-                    businessSubType: $scope.userInfo.businessType2,
+					businessType: $scope.userInfo.businessType1.dictCode,
+                    businessSubType: $scope.userInfo.businessType2.dictCode,
 					businessTypeAll: $scope.userInfo.businessType1 + "/" + $scope.userInfo.businessType2,
 					companyName: $scope.userInfo.companyName,
 					companyAddress: $scope.userInfo.companyAddress,
@@ -80,10 +130,10 @@ angular.module('yhtml5.user', ['ngFileUpload', 'factory'])
 					contactEmail: $scope.userInfo.contactEmail,
 					contactTelephone: $scope.userInfo.contactTelephone,
 					contactQQ: $scope.userInfo.contactQQ,
-					contactProvId: $scope.userInfo.contactProvId,
-					contactCityId: $scope.userInfo.contactCityId,
+					contactProvId: $scope.provUser.id,
+					contactCityId: $scope.cityUser.id,
 					contactAddress: $scope.userInfo.contactAddress,
-					contactAddressAll: $scope.userInfo.contactProvId + $scope.userInfo.contactCityId + $scope.userInfo.contactAddress,
+					contactAddressAll: $scope.userInfo.contactProvId.name + $scope.userInfo.contactCityId.name + $scope.userInfo.contactAddress,
 					idCard: $scope.userInfo.idCard,
 					idCardPic: $scope.userInfo.idCardPic,
 					idCardFrontPic: $scope.userInfo.idCardFrontPic,
@@ -128,17 +178,7 @@ angular.module('yhtml5.user', ['ngFileUpload', 'factory'])
 				})
 			};
 		}
-		$scope.userAccountFormSave = function(size) {
-			$scope.userPersonFormEnabled = true
-			$scope.userPersonUpdate = true
-			$scope.userPersonSave = true
-			var modalInstance = $uibModal.open({
-				animation: $scope.animationsEnabled,
-				templateUrl: 'noteSimple.html',
-				controller: 'userAccountNoteSimpleCtrl',
-				size: size
-			})
-		};
+
 		//		$scope.userPasswordLoginSave = function(size) {
 		//				var modalInstance = $uibModal.open({
 		//					animation: $scope.animationsEnabled,

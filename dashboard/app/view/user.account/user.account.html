@@ -51,7 +51,7 @@
                         <div class="form-group">
                             <label for="" class="col-sm-3 control-label">开户银行</label>
                             <div class="col-sm-8">
-                                <select class="form-control" ng-model="bank" ng-options="obj.bank for obj in banks">
+                                <select class="form-control" ng-model="bankSelect" ng-options="obj.bank for obj in banks">
                                       <option value="">开户银行</option>
                                 </select>
                             </div>
@@ -62,13 +62,13 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="" class="col-sm-3 control-label">开户行所在地</label>
-                            <div class="col-sm-3">
-                                <select class="form-control" ng-model="userAccount.bankprov" ng-options="key as key for (key,value) in data.division" ng-change="contactCityId='';">
+                            <div class="col-sm-4">
+                                <select class="form-control" ng-model="bankprovAccount" ng-options="obj.name for obj in dataInit.division track by obj.id" ng-change="bankcityAccount;">
                                     <option value="">开户行所在省</option>
                                 </select>
                             </div>
-                            <div class="col-sm-3">
-                                <select class="form-control" ng-model="userAccount.bankcity" ng-options="key as key for (key,value) in data.division[userAccount.bankprov]">
+                            <div class="col-sm-4">
+                                <select class="form-control" ng-model="bankcityAccount" ng-options="x.name for x in bankprovAccount.children track by x.id">
                                     <option value="">开户行所在市</option>
                                 </select>
                             </div>

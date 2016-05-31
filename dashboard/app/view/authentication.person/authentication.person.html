@@ -43,12 +43,12 @@
                         <div class="form-group">
                             <label for="" class="col-sm-3 control-label">经营范围</label>
                             <div class="col-sm-4">
-                                <select class="form-control" ng-model="userInfo.businessType1" ng-options="key as key for (key,value) in data.businessTypes" ng-change="userInfo.businessType2=''">
+                                <select class="form-control" ng-model="userInfo.businessType1" ng-options="obj.dictValue for obj in dataInit.businessTypes" ng-change="test2=''">
                                     <option value="">请选择经营范围</option>
                                 </select>
                             </div>
                             <div class="col-sm-4">
-                                <select class="form-control" ng-model="userInfo.businessType2" ng-options="value as value for value in data.businessTypes[userInfo.businessType1]">
+                                <select class="form-control" ng-model="userInfo.businessType2" ng-options="x.dictValue for x in userInfo.businessType1.subList">
                                     <option value="">请选择经营范围</option>
                                 </select>
                             </div>
@@ -128,12 +128,12 @@
                         <div class="form-group">
                             <label for="" class="col-sm-3 control-label">通讯地址</label>
                             <div class="col-sm-4">
-                                <select class="form-control" ng-model="userInfo.contactProvId" ng-options="key as key for (key,value) in data.division" ng-change="userInfo.contactCityId=''">
+                                <select class="form-control" ng-model="userInfo.contactProvId" ng-options="obj.name for obj in dataInit.division" ng-change="userInfo.contactCityId=''">
                                     <option value="">省</option>
                                 </select>
                             </div>
                             <div class="col-sm-4">
-                                <select class="form-control" ng-model="userInfo.contactCityId" ng-options="key as key for (key,value) in data.division[userInfo.contactProvId]" ng-change="">
+                                <select class="form-control" ng-model="userInfo.contactCityId" ng-options="x.name for x in userInfo.contactProvId.children" ng-change="">
                                     <option value="">市</option>
                                 </select>
                             </div>

@@ -55,12 +55,12 @@
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">经营范围</label>
 							<div class="col-sm-4">
-								<select class="form-control" ng-model="businessType1" ng-options="obj.name for obj in dataInit.businessTypes" ng-change="test2=''">
+								<select class="form-control" ng-model="businessTypeUser" ng-options="obj.dictValue for obj in dataInit.businessTypes track by obj.dictCode" ng-change="test2=''">
                                     <option value="">请选择经营范围</option>
                                 </select>
 							</div>
 							<div class="col-sm-4">
-								<select class="form-control" ng-model="businessType2" ng-options="x.name for x in businessType1.children">
+								<select class="form-control" ng-model="businessSubTypeUser" ng-options="x.dictValue for x in businessTypeUser.subList track by x.dictCode">
                                     <option value="">请选择经营范围</option>
                                 </select>
 							</div>
@@ -142,12 +142,12 @@
                                 <h5 ng-bind="userInfo.contactAddress"></h5>
                             </div>-->
 							<div class="col-sm-3">
-								<select class="form-control" ng-model="userInfo.contactProvId" ng-options="key as key for (key,value) in data.division" ng-change="userInfo.contactCityId=''">
+								<select class="form-control" ng-model="provUser" ng-options="obj.name for obj in dataInit.division track by obj.id" ng-change="cityUser=''">
                                     <option value="">省</option>
                                 </select>
 							</div>
 							<div class="col-sm-3">
-								<select class="form-control" ng-model="userInfo.contactCityId" ng-options="key as key for (key,value) in data.division[userInfo.contactProvId]" ng-change="">
+								<select class="form-control" ng-model="cityUser" ng-options="x.name for x in provUser.children track by x.id" ng-change="">
                                     <option value="">市</option>
                                 </select>
 							</div>
