@@ -181,24 +181,19 @@ angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate', 'ngFileUpload', 'fac
                     file.progress = Math.min(100, parseInt(100.0 * evt.loaded / evt.total));
                 })
             };
-        }
-
-        //		$scope.userPasswordLoginSave = function(size) {
-        //				var modalInstance = $uibModal.open({
-        //					animation: $scope.animationsEnabled,
-        //					templateUrl: 'noteSimple.html',
-        //					controller: 'userPasswordLoginCtrl',
-        //					size: size
-        //				})
-        //			}
-        //		$scope.userPasswordSecuritySave = function(size) {
-        //			var modalInstance = $uibModal.open({
-        //				animation: $scope.animationsEnabled,
-        //				templateUrl: 'noteSimple.html',
-        //				controller: 'userPasswordSecurityCtrl',
-        //				size: size
-        //			})
-        //		};
+        };
+        // ==== check password
+        var vm = $scope.vm = {
+            show_error: false,
+            user: {}
+        };
+        vm.submit = function(userPasswordLoginForm) {
+            vm.show_error = true;
+            userPasswordLoginForm.$setDirty();
+            if (userPasswordLoginForm.$valid) {
+                alert("提交成功！");
+            }
+        };
         /** writed by 白豆腐  密码修改*/
         $scope.data = {};
         $scope.userPasswordLoginSave = function(size) {

@@ -1,32 +1,3 @@
 ﻿{
-	"message": "success",
-	"result": "0",
-	"num": "1",
-	"data": {
-		"companyAddress": "æ·±åœ³å¸‚å—å±±åŒºæ¡ƒå›­è·¯ç”°åŽ¦å›½é™…ä¸­å¿ƒBåº§Bå±‚1318",
-		"orgCodeCertPic": "http://img.jubaobar.cn/wjb/728173/default/1447855578946.jpg",
-		"idCardPic": "",
-		"openPermitPic": "http://img.jubaobar.cn/wjb/728173/default/1447855586222.jpg",
-		"licenseNo": "440301109080106",
-		"taxCertPic": "http://img.jubaobar.cn/wjb/728173/default/1447855567163.jpg",
-		"contactProvIdShow": 440000,
-		"userName": "æ·±åœ³éƒ½å¸‚çŽ‹å¦ƒæœé¥°æœ‰é™å…¬å¸",
-		"contactTelephone": "13059185820",
-		"contactQQ": "9029430",
-		"idCard": "",
-		"contactEmail": "mingririr@gmail.com",
-		"idCardReversePic": "",
-		"businessType": 2,
-		"subCompanyType": 2,
-		"companyName": "æ·±åœ³éƒ½å¸‚çŽ‹å¦ƒæœé¥°æœ‰é™å…¬å¸",
-		"otherTypePic": "",
-		"contactCityIdShow": 440100,
-		"idCardFrontPic": "",
-		"contactName": "è€¿åˆ©åˆ©",
-		"companyType": 2,
-		"companyId": 518,
-		"contactAddress": "è¶Šç§€åŒº å¹¿ä¹å¤§é©¬è·¯16å·",
-		"licensePic": "http://img.jubaobar.cn/wjb/728173/default/1447855554625.jpg"
-
-	}
+	"hello":1
 }
