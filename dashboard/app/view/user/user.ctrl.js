@@ -4,17 +4,41 @@ angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate', 'ngFileUpload', 'fac
         $scope.dataInit = Data;
         $scope.banks = Data.banks;
 
-        /** ========================= 银燕 获取 经营范围、地市字典 ========================= B**/
-        $http.get("http://admin.jubaobar.com/front/common/region/all.htm")
-            .success(function(response) {
-                $scope.dataInit.division = response.data;
-            });
-        $http.get("http://admin.jubaobar.com/front/homePage/queryEnumData.htm")
-            .success(function(response) {
-                console.log(angular.isArray(response.data));
-                $scope.dataInit.businessTypes = response.data;
-            });
-        /** ========================= 银燕 获取 经营范围、地市字典 ========================= **/
+		/** ========================= 银燕 获取 经营范围、地市字典 ========================= B**/
+		$scope.citiesLookup = {};
+		$scope.busiSubTypesLookup = {};
+		$scope.citiesLookup = $http.get("http://admin.jubaobar.com/front/common/region/all.htm")
+        .success(function(response) {
+        	$scope.dataInit.division = response.data;
+        	angular.forEach(response.data, function (province) {
+    	        var cities = [];
+    	        angular.forEach(province.children, function (city) {
+    	            cities.push({
+    	            	id: city.id,
+    	                name: city.name
+    	            });
+    	        });
+    	        $scope.citiesLookup[province.id] = cities;
+    	    });
+        	return $scope.citiesLookup;
+    	});
+		
+		$scope.busiSubTypesLookup = $http.get("http://admin.jubaobar.com/front/homePage/queryEnumData.htm")
+        .success(function(response) {
+        	$scope.dataInit.businessTypes = response.data;
+        	angular.forEach(response.data, function (busiType) {
+    	        var busiSubTypes = [];
+    	        angular.forEach(busiType.subList, function (subType) {
+    	        	busiSubTypes.push({
+    	        		dictCode: subType.dictCode,
+    	        		dictValue: subType.dictValue
+    	            });
+    	        });
+    	        $scope.busiSubTypesLookup[busiType.dictCode] = busiSubTypes;
+    	    });
+        	return $scope.busiSubTypesLookup;
+    	});
+		/** ========================= 银燕 获取 经营范围、地市字典 ========================= **/
 
         $scope.bankSelect = {};
         $scope.bankprovAccount = {};
@@ -26,15 +50,7 @@ angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate', 'ngFileUpload', 'fac
                 $scope.bankSelect.bank = $scope.userAccount.bankname;
                 $scope.bankprovAccount.id = $scope.userAccount.bankprov;
                 $scope.bankcityAccount.id = $scope.userAccount.bankcity;
-                $http({
-                    method: "post",
-                    url: "http://admin.jubaobar.com/front/common/region/get.htm",
-                    params: {
-                        id: $scope.userAccount.bankprov
-                    }
-                }).success(function(response) {
-                    $scope.bankprovAccount = response.data;
-                });
+                $scope.bankprovAccount.children = $scope.citiesLookup[$scope.userAccount.bankprov] || [];
             });
         $scope.userAccountFormSave = function(size) {
             $scope.userPersonFormEnabled = true
@@ -84,25 +100,8 @@ angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate', 'ngFileUpload', 'fac
                 $scope.businessSubTypeUser.dictCode = $scope.userInfo.businessSubType;
                 $scope.provUser.id = $scope.userInfo.contactProvId;
                 $scope.cityUser.id = $scope.userInfo.contactCityId;
-                $http({
-                    method: "post",
-                    url: "http://admin.jubaobar.com/front/common/dict/type.htm",
-                    params: {
-                        dictType: "businessSubType"
-                    }
-                }).success(function(response) {
-                    $scope.businessTypeUser.subList = response.data;
-                });
-                $scope.dataInit.businessTypes = [];
-                $http({
-                    method: "post",
-                    url: "http://admin.jubaobar.com/front/common/region/get.htm",
-                    params: {
-                        id: $scope.userInfo.contactProvId
-                    }
-                }).success(function(response) {
-                    $scope.provUser = response.data;
-                });
+                $scope.businessTypeUser.subList = $scope.busiSubTypesLookup[$scope.userInfo.businessType] || [];
+				$scope.provUser.children = $scope.citiesLookup[$scope.userInfo.contactProvId] || [];
             });
         $scope.userPersonFormEnabled = true
         $scope.userPersonUpdate = true
