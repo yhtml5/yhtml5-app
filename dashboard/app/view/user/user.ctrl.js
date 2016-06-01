@@ -182,21 +182,37 @@ angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate', 'ngFileUpload', 'fac
                 })
             };
         };
-        // ==== check password
+        // ====== check password demo ======
         var vm = $scope.vm = {
             show_error: false,
             user: {}
         };
-        vm.submit = function(userPasswordLoginForm) {
+        vm.userPasswordLoginSave = function(userPasswordLoginForm, size) {
             vm.show_error = true;
             userPasswordLoginForm.$setDirty();
             if (userPasswordLoginForm.$valid) {
-                alert("提交成功！");
+                $scope.data = {};
+                console.log($scope.data.confirmPwd)
+                $http({
+                    method: "post",
+                    url: "http://admin.jubaobar.com/front/pwd/update.htm",
+                    params: {
+                        loginPwd: $scope.data.loginPwd,
+                        confirmPwd: $scope.data.confirmPwd
+                    }
+                }).success(function() {
+                    var modalInstance = $uibModal.open({
+                        animation: $scope.animationsEnabled,
+                        templateUrl: 'noteSimple.html',
+                        controller: 'userPasswordLoginCtrl',
+                        size: size
+                    })
+                })
             }
         };
+        // ====== end ======
         /** writed by 白豆腐  密码修改*/
-        $scope.data = {};
-        $scope.userPasswordLoginSave = function(size) {
+        $scope.userPasswordLoginSave1 = function(size) {
                 $scope.data = {};
                 console.log($scope.data.confirmPwd)
                 $http({
@@ -218,6 +234,7 @@ angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate', 'ngFileUpload', 'fac
             }
             /** writed by 白豆腐  安全密码修改*/
         $scope.userPasswordSecuritySave = function(size) {
+                $scope.data = {};
                 console.log($scope.data.safetyPwd)
                 $http({
                     method: "post",
