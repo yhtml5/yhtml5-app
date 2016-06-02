@@ -48,9 +48,10 @@
       ** 跨域问题 XMLHttpRequest cannot load | Access-Control-Allow-Origin
  - [] 不同controller之间传参
       ** 使用provider、factory、service
+      ** 使用$rootScope
  - [] select默认值为空
  - [] 创建应用后，刷新页面
- - [] 商户后台页面走不通的地方，页面还唯有的
+ - [] 商户后台页面走不通的地方，页面还未开发的
 
  ### 联调
  - [] #/user/person 通讯地址省、市默认显示数据 参考#/user/account/ 开户行所在地（select默认值为空）
