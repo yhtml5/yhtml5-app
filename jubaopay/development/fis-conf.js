@@ -142,7 +142,7 @@ fis.media('cdn')
 //      useHash: false,
 //  })
     .match('{/static/**,/bower_components/**,/view/**,*.png,*.jpg,iconfont.*}', {
-        domain: 'http://static.jubaobar.cn/project/jubaopay',
+        domain: 'http://static.jubaobar.cn/project/jubaopay/V0.2-2016060203',
     });
 
 ///*************************CDN规范*****************************/
