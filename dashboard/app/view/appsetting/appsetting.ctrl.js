@@ -63,6 +63,37 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
                 size: size
             })
         };
+        /** =============================== 银燕 技术对接 =============================== B**/
+        $scope.appApiInformUrlUpdate = true;
+        $scope.appApiInformUrlSave = true;
+        $scope.appApiRepayUrlUpdate = true;
+        $scope.appApiRepayUrlSave = true;
+        $http({
+            method: "post",
+            url: "http://admin.jubaobar.com/front/appsetting/api/info.htm",
+            params: {
+                id: 31470
+            }
+        }).success(function(response) {
+            if(response.result == '0'){
+            	$scope.appApi = response.data;
+            	if($scope.appApi.callBackURL == '' || $scope.appApi.callBackURL == null){
+            		$scope.appApiInformUrlUpdate = false;
+                    $scope.appApiInformUrlSave = true;
+            	}else{
+            		$scope.appApiInformUrlUpdate = true;
+                    $scope.appApiInformUrlSave = false;
+            	}
+            	if($scope.appApi.repeatPayURL == '' || $scope.appApi.repeatPayURL == null){
+            		$scope.appApiRepayUrlUpdate = false;
+                    $scope.appApiRepayUrlSave = true;
+            	}else{
+            		$scope.appApiRepayUrlUpdate = true;
+                    $scope.appApiRepayUrlSave = false;
+            	}
+            }
+        });
+        /** =============================== 银燕 技术对接 =============================== E**/
         // ========== #appsetting/api ==========
         $scope.appsettingApiPasswordOpen = function(size) {
             var modalInstance = $uibModal.open({
@@ -279,9 +310,30 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
         }
     })
     // ========= #appsetting/api ==========
-    .controller('appsettingApiPasswordCtrl', function($scope, $uibModalInstance) {
+    .controller('appsettingApiPasswordCtrl', function($scope, $http, $uibModalInstance, $uibModal) {
+    	$http({
+            method: "post",
+            url: "http://admin.jubaobar.com/front/appsetting/api/pk/info.htm",
+            params: {}
+        }).success(function(response) {
+            if(response.result == '0'){
+            	$scope.staticPassword = response.data.staticPassword;
+            }
+        });
         $scope.cancel = function() {
             $uibModalInstance.dismiss('cancel');
+        }
+        
+        $scope.appsettingApiPasswordDownload = function(type) {
+        	$http({
+                method: "post",
+                url: "http://admin.jubaobar.com/front/appsetting/api/pk/download.htm",
+                params: {
+                	keyType: type
+                }
+            }).success(function(data,status,headers) {
+            	
+            });
         }
     })
     .controller('appsettingApiTestCtrl', function($scope, $uibModalInstance) {

@@ -191,67 +191,61 @@ angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate', 'ngFileUpload', 'fac
             userPasswordLoginForm.$setDirty();
             if (userPasswordLoginForm.$valid) {
                 $scope.data = {};
-                console.log($scope.data.confirmPwd)
                 $http({
                     method: "post",
                     url: "http://admin.jubaobar.com/front/pwd/update.htm",
                     params: {
-                        loginPwd: $scope.data.loginPwd,
-                        confirmPwd: $scope.data.confirmPwd
+                        loginPwd: $scope.vm.user.loginPwd,
+                        newPwd: $scope.vm.user.password,
+                        confirmPwd: $scope.vm.user.repeatPassword
                     }
-                }).success(function() {
-                    var modalInstance = $uibModal.open({
+                }).success(function(res) {
+                	var rslt= 'userPasswordLoginFailCtrl';
+                	if(res.result=='0'){
+                		rslt= 'userPasswordLoginCtrl';
+                	}
+                	var modalInstance = $uibModal.open({
                         animation: $scope.animationsEnabled,
                         templateUrl: 'noteSimple.html',
-                        controller: 'userPasswordLoginCtrl',
+                        controller: rslt,
                         size: size
-                    })
+                    });
                 })
             }
         };
         // ====== end ======
-        /** writed by 白豆腐  密码修改*/
-        $scope.userPasswordLoginSave1 = function(size) {
-                $scope.data = {};
-                console.log($scope.data.confirmPwd)
-                $http({
-                    method: "post",
-                    url: "http://admin.jubaobar.com/front/pwd/update.htm",
-                    params: {
-                        loginPwd: $scope.data.loginPwd,
-                        confirmPwd: $scope.data.confirmPwd
-                    }
-                }).success(function() {
-
-                })
-                var modalInstance = $uibModal.open({
-                    animation: $scope.animationsEnabled,
-                    templateUrl: 'noteSimple.html',
-                    controller: 'userPasswordLoginCtrl',
-                    size: size
-                })
-            }
             /** writed by 白豆腐  安全密码修改*/
-        $scope.userPasswordSecuritySave = function(size) {
+        var safe = $scope.safe = {
+                show_error: false,
+                user: {}
+            };
+        safe.userPasswordSecuritySave = function(userPasswordSafeForm, size) {
+        	safe.show_error = true;
+        	userPasswordSafeForm.$setDirty();
+            if (userPasswordSafeForm.$valid) {
                 $scope.data = {};
-                console.log($scope.data.safetyPwd)
                 $http({
                     method: "post",
                     url: "http://admin.jubaobar.com/front/safetypwd/update.htm",
                     params: {
-                        safetyPwd: $scope.data.safetyPwd,
-                        confirmSafetyPwd: $scope.data.confirmSafetyPwd
+                    	safetypwd: $scope.safe.user.safetyPwd,
+                    	newSafetyPwd: $scope.safe.user.newSafetyPwd,
+                    	confirmSafetyPwd: $scope.safe.user.repeatSafetyPwd
                     }
-                }).success(function() {
-
-                })
-                var modalInstance = $uibModal.open({
-                    animation: $scope.animationsEnabled,
-                    templateUrl: 'noteSimple.html',
-                    controller: 'userPasswordSecurityCtrl',
-                    size: size
+                }).success(function(res) {
+                	var rslt= 'userPasswordSecurityFailCtrl';
+                	if(res.result=='0'){
+                		rslt= 'userPasswordSecurityCtrl';
+                	}
+                	var modalInstance = $uibModal.open({
+                        animation: $scope.animationsEnabled,
+                        templateUrl: 'noteSimple.html',
+                        controller: rslt,
+                        size: size
+                    });
                 })
             }
+        };
             /** writed by 白豆腐  安全密码修改*/
         $scope.userPasswordSecurityRetrieveOpen = function(size) {
             var modalInstance = $uibModal.open({
@@ -285,6 +279,20 @@ angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate', 'ngFileUpload', 'fac
     })
     .controller('userPasswordSecurityCtrl', function($scope, $uibModalInstance) {
         $scope.text = "安全密码修改成功！"
+        $scope.isInfo = true
+        $scope.cancel = function() {
+            $uibModalInstance.dismiss('cancel');
+        }
+    })
+    .controller('userPasswordLoginFailCtrl', function($scope, $uibModalInstance) {
+        $scope.text = "用户不存在或者登录密码错误！"
+        $scope.isInfo = true
+        $scope.cancel = function() {
+            $uibModalInstance.dismiss('cancel');
+        }
+    })
+    .controller('userPasswordSecurityFailCtrl', function($scope, $uibModalInstance) {
+        $scope.text = "用户不存在或者安全密码错误！"
         $scope.isInfo = true
         $scope.cancel = function() {
             $uibModalInstance.dismiss('cancel');
