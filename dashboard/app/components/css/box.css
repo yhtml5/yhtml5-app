@@ -117,7 +117,9 @@
 .y-ml20 {
     margin-left: 20px;
 }
-
+.y-mr-2{
+    margin-right: -2px !important;
+}
 .y-mr20 {
     margin-right: 20px;
 }

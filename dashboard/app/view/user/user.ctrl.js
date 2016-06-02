@@ -4,41 +4,41 @@ angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate', 'ngFileUpload', 'fac
         $scope.dataInit = Data;
         $scope.banks = Data.banks;
 
-		/** ========================= 银燕 获取 经营范围、地市字典 ========================= B**/
-		$scope.citiesLookup = {};
-		$scope.busiSubTypesLookup = {};
-		$scope.citiesLookup = $http.get("http://admin.jubaobar.com/front/common/region/all.htm")
-        .success(function(response) {
-        	$scope.dataInit.division = response.data;
-        	angular.forEach(response.data, function (province) {
-    	        var cities = [];
-    	        angular.forEach(province.children, function (city) {
-    	            cities.push({
-    	            	id: city.id,
-    	                name: city.name
-    	            });
-    	        });
-    	        $scope.citiesLookup[province.id] = cities;
-    	    });
-        	return $scope.citiesLookup;
-    	});
-		
-		$scope.busiSubTypesLookup = $http.get("http://admin.jubaobar.com/front/homePage/queryEnumData.htm")
-        .success(function(response) {
-        	$scope.dataInit.businessTypes = response.data;
-        	angular.forEach(response.data, function (busiType) {
-    	        var busiSubTypes = [];
-    	        angular.forEach(busiType.subList, function (subType) {
-    	        	busiSubTypes.push({
-    	        		dictCode: subType.dictCode,
-    	        		dictValue: subType.dictValue
-    	            });
-    	        });
-    	        $scope.busiSubTypesLookup[busiType.dictCode] = busiSubTypes;
-    	    });
-        	return $scope.busiSubTypesLookup;
-    	});
-		/** ========================= 银燕 获取 经营范围、地市字典 ========================= **/
+        /** ========================= 银燕 获取 经营范围、地市字典 ========================= B**/
+        $scope.citiesLookup = {};
+        $scope.busiSubTypesLookup = {};
+        $scope.citiesLookup = $http.get("http://admin.jubaobar.com/front/common/region/all.htm")
+            .success(function(response) {
+                $scope.dataInit.division = response.data;
+                angular.forEach(response.data, function(province) {
+                    var cities = [];
+                    angular.forEach(province.children, function(city) {
+                        cities.push({
+                            id: city.id,
+                            name: city.name
+                        });
+                    });
+                    $scope.citiesLookup[province.id] = cities;
+                });
+                return $scope.citiesLookup;
+            });
+
+        $scope.busiSubTypesLookup = $http.get("http://admin.jubaobar.com/front/homePage/queryEnumData.htm")
+            .success(function(response) {
+                $scope.dataInit.businessTypes = response.data;
+                angular.forEach(response.data, function(busiType) {
+                    var busiSubTypes = [];
+                    angular.forEach(busiType.subList, function(subType) {
+                        busiSubTypes.push({
+                            dictCode: subType.dictCode,
+                            dictValue: subType.dictValue
+                        });
+                    });
+                    $scope.busiSubTypesLookup[busiType.dictCode] = busiSubTypes;
+                });
+                return $scope.busiSubTypesLookup;
+            });
+        /** ========================= 银燕 获取 经营范围、地市字典 ========================= **/
 
         $scope.bankSelect = {};
         $scope.bankprovAccount = {};
@@ -101,7 +101,7 @@ angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate', 'ngFileUpload', 'fac
                 $scope.provUser.id = $scope.userInfo.contactProvId;
                 $scope.cityUser.id = $scope.userInfo.contactCityId;
                 $scope.businessTypeUser.subList = $scope.busiSubTypesLookup[$scope.userInfo.businessType] || [];
-				$scope.provUser.children = $scope.citiesLookup[$scope.userInfo.contactProvId] || [];
+                $scope.provUser.children = $scope.citiesLookup[$scope.userInfo.contactProvId] || [];
             });
         $scope.userPersonFormEnabled = true
         $scope.userPersonUpdate = true
@@ -160,26 +160,30 @@ angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate', 'ngFileUpload', 'fac
                 controller: 'userPersonNoteSimpleCtrl',
                 size: size
             });
-            $scope.uploadPic = function(file) {
-                file.upload = Upload.upload({
-                    url: 'http://admin.jubaobar.com/api/upload/imageupload.htm',
-                    data: {
-                        username: $scope.username,
-                        file: file
-                    },
+        };
+        console.log("I'll send picture");
+        $scope.uploadPic = function(file) {
+            console.log("I'll send picture");
+            // 上传图片
+            file.upload = Upload.upload({
+                url: 'http://admin.jubaobar.com/api/upload/imageupload.htm',
+                data: {
+                    username: $scope.username,
+                    file: file,
+                    id: 1
+                },
+            });
+            file.upload.then(function(response) {
+                $timeout(function() {
+                    file.result = response.data;
                 });
-                file.upload.then(function(response) {
-                    $timeout(function() {
-                        file.result = response.data;
-                    });
-                }, function(response) {
-                    if (response.status > 0)
-                        $scope.errorMsg = response.status + ': ' + response.data;
-                }, function(evt) {
-                    // Math.min is to fix IE which reports 200% sometimes
-                    file.progress = Math.min(100, parseInt(100.0 * evt.loaded / evt.total));
-                })
-            };
+            }, function(response) {
+                if (response.status > 0)
+                    $scope.errorMsg = response.status + ': ' + response.data;
+            }, function(evt) {
+                // Math.min is to fix IE which reports 200% sometimes
+                file.progress = Math.min(100, parseInt(100.0 * evt.loaded / evt.total));
+            });
         };
         // ====== check password demo ======
         var vm = $scope.vm = {
@@ -200,11 +204,11 @@ angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate', 'ngFileUpload', 'fac
                         confirmPwd: $scope.vm.user.repeatPassword
                     }
                 }).success(function(res) {
-                	var rslt= 'userPasswordLoginFailCtrl';
-                	if(res.result=='0'){
-                		rslt= 'userPasswordLoginCtrl';
-                	}
-                	var modalInstance = $uibModal.open({
+                    var rslt = 'userPasswordLoginFailCtrl';
+                    if (res.result == '0') {
+                        rslt = 'userPasswordLoginCtrl';
+                    }
+                    var modalInstance = $uibModal.open({
                         animation: $scope.animationsEnabled,
                         templateUrl: 'noteSimple.html',
                         controller: rslt,
@@ -214,30 +218,30 @@ angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate', 'ngFileUpload', 'fac
             }
         };
         // ====== end ======
-            /** writed by 白豆腐  安全密码修改*/
+        /** writed by 白豆腐  安全密码修改*/
         var safe = $scope.safe = {
-                show_error: false,
-                user: {}
-            };
+            show_error: false,
+            user: {}
+        };
         safe.userPasswordSecuritySave = function(userPasswordSafeForm, size) {
-        	safe.show_error = true;
-        	userPasswordSafeForm.$setDirty();
+            safe.show_error = true;
+            userPasswordSafeForm.$setDirty();
             if (userPasswordSafeForm.$valid) {
                 $scope.data = {};
                 $http({
                     method: "post",
                     url: "http://admin.jubaobar.com/front/safetypwd/update.htm",
                     params: {
-                    	safetypwd: $scope.safe.user.safetyPwd,
-                    	newSafetyPwd: $scope.safe.user.newSafetyPwd,
-                    	confirmSafetyPwd: $scope.safe.user.repeatSafetyPwd
+                        safetypwd: $scope.safe.user.safetyPwd,
+                        newSafetyPwd: $scope.safe.user.newSafetyPwd,
+                        confirmSafetyPwd: $scope.safe.user.repeatSafetyPwd
                     }
                 }).success(function(res) {
-                	var rslt= 'userPasswordSecurityFailCtrl';
-                	if(res.result=='0'){
-                		rslt= 'userPasswordSecurityCtrl';
-                	}
-                	var modalInstance = $uibModal.open({
+                    var rslt = 'userPasswordSecurityFailCtrl';
+                    if (res.result == '0') {
+                        rslt = 'userPasswordSecurityCtrl';
+                    }
+                    var modalInstance = $uibModal.open({
                         animation: $scope.animationsEnabled,
                         templateUrl: 'noteSimple.html',
                         controller: rslt,
@@ -246,7 +250,7 @@ angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate', 'ngFileUpload', 'fac
                 })
             }
         };
-            /** writed by 白豆腐  安全密码修改*/
+        /** writed by 白豆腐  安全密码修改*/
         $scope.userPasswordSecurityRetrieveOpen = function(size) {
             var modalInstance = $uibModal.open({
                 animation: $scope.animationsEnabled,
