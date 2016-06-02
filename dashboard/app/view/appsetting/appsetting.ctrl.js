@@ -1,6 +1,8 @@
 'use strict';
 angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
-    .controller('yhtml5.appsetting', function($scope, $uibModal, $http, $interval) {
+    .controller('yhtml5.appsetting', function($scope, $rootScope, $uibModal, $http, $interval) {
+        $scope.rootUserApp = $rootScope.rootUserApp;
+        console.log("rootUserApp", $rootScope.rootUserApp);
         $http({
             method: "get",
             url: "http://admin.jubaobar.com/front/appsetting/channel/app/find.htm",

@@ -1,6 +1,6 @@
 'use strict';
 angular.module('yhtml5.appList', ['ui.bootstrap', 'ngAnimate', 'factory'])
-    .controller('yhtml5.appList', function($scope, $http, $uibModal, Data) {
+    .controller('yhtml5.appList', function($scope, $rootScope, $http, $uibModal, Data) {
         $scope.dataInit = Data;
         console.log("Data:", Data);
         Data.obj.fetchUserDetails().success(function(response) {
@@ -26,9 +26,14 @@ angular.module('yhtml5.appList', ['ui.bootstrap', 'ngAnimate', 'factory'])
         $http.get('http://admin.jubaobar.com/front/homePage/console.htm')
             .success(function(response) {
                 console.log("applist :", response.data);
-                $scope.userApps = response.data.appTradeInfoList;
+                $rootScope.userApps = response.data.appTradeInfoList;
             })
-
+        $scope.getRootUserAppIndex = function(userAppIndex) {
+            console.log("userAppIndex", $scope.userApps[userAppIndex]);
+            $rootScope.rootUserApp = $scope.userApps[userAppIndex];
+        };
+        //      console.log("scope", $scope.userApps)
+        //      console.log("rootScope", $rootScope.nameDemo)
     })
     .controller('ModalInstanceCtrl', function($state, $scope, $http, $uibModalInstance, $uibModal, $state) {
         /** ============================== Writed By 银燕 创建应用 Start ==========================*/

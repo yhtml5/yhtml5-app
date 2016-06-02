@@ -1,21 +1,66 @@
-- [x] 基础模块
-    - [x] 组件
-        - [x] Ali iconfont (V3)
-        - [x] appList-add
-        - [x] appList-display
+- [x] 商户后台
+     - [x] view
+        - [x] 界面路由系统（UI-Router）
+        - [x] account 结算管理综合
+        - [x] account.detail 账户明细
+        - [x] account.record 历史记录
+        - [-] account.topay (联调)
+        - [-] account.withdraw (联调)
+        - [x] appList 首页应用列表
+        - [x] appsetting 应用设置综合
+        - [-] appsetting.api 技术对接(联调)
+        - [-] appsetting.canal 支付通道(P2)
+        - [-] appsetting.channel 渠道管理(P2)
+        - [x] appsetting.info 应用信息
+        - [x] authentication 实名认证综合
+        - [-] authentication.account 结算信息(联调)
+        - [x] authentication.agreement 技术协议
+        - [x] authentication.person 技术协议
+        - [-] nav-app 应用内导航栏(联调)
+        - [x] nav-main 主导航
+        - [x] nav-authentication 实名认证导航
+        - [x] noteSimple 提示弹窗, 需要传入文本信息 成功失败状态
+        - [-] payment 支付管理(联调)
+        - [x] smsComfirm 短信确认弹窗
+        - [x] user 用户中心综合
+        - [x] user.account 结算信息
+        - [x] user.agreement 技术协议
+        - [-] user.data 隐私数据(联调)
+        - [-] user.password 密码管理(联调)
+        - [x] user.person 基本信息
+    - [x] components
+        - [x] ali iconfont 字体图标
+        - [x] appList-add 增加应用
+        - [x] appList-display 应用列表
+        - [x] serviceAgreement 技术协议
+        - [-] userPanel 导航栏用户中心 (联调)
         - [x] head
-        - [x] helpCenter (V3)
+        - [-] helpCenter 帮助中心 (需要提供固定 URL)--0.1H
         - [x] nav
-    - [x] view
-        - [x] appList    
-        - [x] nav-main (V3)
-        - [x] payment
-        - [x] undevelopment  
+        - [x] css: animation, base, box, cover, custom
+        - [-] jsvascript: ctrl, directive, factory, filter, router, test
+        - [x] 省市联动组件,经营范围联动组件,银行列表组件
+        - [-] 上传文件功能，限制上传内容、大小、格式
+        - [x] 翻页组件
+        - [x] 倒计时组件, 发送验证码, 同意协议
+        - [x] 表单验证组件: 文本,电话,邮箱,俩次确认,输入为空等等验证
+        - [-] 不同页面传递参数功能
+        - [-] 搜索功能
+        - [-] 日期组件
+        - [-] 登录退出功能(联调)
     - [x] 构建
-        - [ ] securityCheck    
-        - [x] 界面路由（UI-Router）
         - [x] 构建本地服务器
-        - [x] 虚拟服务端数据（json） 
+        - [x] 虚拟服务端数据
+        - [x] bower 依赖包管理
+        - [x] npm node工具包管理
+        - [x] node 环境
+        - [x] fis3 前端构建工具
+        - [x] output 文件产出
+        - [x] e2e-test 端对端测试
+
+============================================================
+
+### 产品文档
 - [x] 实名认证
     - [ ] 商户管理-技术协议
     - [ ] 商户签约-基本信息（个人）
@@ -23,12 +68,12 @@
     - [ ] 商户签约-基本信息（图片上传）
     - [ ] 商户签约-结算信息
     - [ ] 商户签约-提交成功提醒
-- [x] 控制台  
+- [x] 控制台
     - [x] 应用展示组件
     - [x] 应用添加(pc / wap)
     - [x] 应用添加(android)
     - [x] 应用添加(ios)
-- [x] 我的账户  
+- [x] 我的账户
     - [ ] 基本信息（个人呈现）
     - [ ] 基本信息（个人修改）
     - [ ] 基本信息（企业呈现）
@@ -47,12 +92,12 @@
     - [ ] 隐私数据删除提醒
     - [ ] 隐私数据删除确认
     - [ ] 技术协议
-- [x] 应用设置  
+- [x] 应用设置
     - [ ] 应用信息（pc / wap）
     - [ ] 应用信息（android）
     - [ ] 应用信息（ios）
     - [ ] 支付通道
-        - [ ] 点卡支付    
+        - [ ] 点卡支付
         - [ ] 充值卡支付
         - [ ] 支付宝支付
     - [ ] 技术对接（pc / wap）
@@ -63,10 +108,10 @@
     - [ ] 渠道管理列表
     - [ ] 渠道删除确认
     - [ ] 渠道添加
-    - [ ] 渠道密码重置  
-- [x] 支付管理  
+    - [ ] 渠道密码重置
+- [x] 支付管理
     - [x] 支付查询
-- [x] 结算管理  
+- [x] 结算管理
     - [x] 实名认证提醒
     - [x] 结算管理(new)
     - [x] 提现模块
@@ -77,3 +122,5 @@
     - [x] 删除体现记录
     - [x] 账户明细
     - [x] 交易详情
+ - [x] 优化
+    - [ ] IE兼容性
