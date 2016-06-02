@@ -180,7 +180,7 @@
             ]
         },
         "p2": {
-            "uri": "http://static.jubaobar.cn/project/jubaopay/V0.2-2016060203/static/yhtml5_f8e07fdc.js",
+            "uri": "http://static.jubaobar.cn/project/jubaopay/V0.2-2016060203/static/yhtml5_127e1ec0.js",
             "type": "js",
             "has": [
                 "server/author.js",

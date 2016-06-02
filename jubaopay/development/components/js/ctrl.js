@@ -187,16 +187,16 @@ angular.module('controllers', ['ui.bootstrap', 'ngAnimate'])
             "name": "杜晓涵",
             "des": "4年产品顾问经验，曾服务过手游、页游、端游和工具类APP等200个多个项目。",
             "emaill": "chenlin.xu@jubaobar.com",
-            "img":"http://static.jubaobar.cn/project/jubaopay/static/img/girl1.jpg"
+            "img":"http://static.jubaobar.cn/project/jubaopay/res/img/girl1.jpg"
         },{
             "name": "玲珑",
             "des": "4年产品顾问经验，曾服务过手游、页游、端游和工具类APP等200个多个项目。",
             "emaill": "rong.ling@jubaobar.com",
-            "img":"http://static.jubaobar.cn/project/jubaopay/static/img/girl2.jpg"
+            "img":"http://static.jubaobar.cn/project/jubaopay/res/img/girl2.jpg"
         },{
             "name": "杨小佳",
             "des": "5年产品顾问经验，曾服务过手游、页游、端游和工具类APP等300个多个项目，经验丰富，服务到位。",
             "emaill": "yu.duan@jubaobar.com",
-            "img":"http://static.jubaobar.cn/project/jubaopay/static/img/girl3.jpg"
+            "img":"http://static.jubaobar.cn/project/jubaopay/res/img/girl3.jpg"
         }]
     });
