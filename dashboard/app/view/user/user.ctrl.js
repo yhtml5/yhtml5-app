@@ -302,34 +302,47 @@ angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate', 'ngFileUpload', 'fac
             $uibModalInstance.dismiss('cancel');
         }
     })
+    .controller('userPWDSafeInputFailCtrl', function($scope, $uibModalInstance) {
+        $scope.text = "录入文本框不能空!"
+        $scope.isInfo = true
+        $scope.cancel = function() {
+            $uibModalInstance.dismiss('cancel');
+        }
+    })
+    .controller('userPWDSafeExistFailCtrl', function($scope, $uibModalInstance) {
+        $scope.text = "用户不存在或者安全问题答案错误!"
+        $scope.isInfo = true
+        $scope.cancel = function() {
+            $uibModalInstance.dismiss('cancel');
+        }
+    })
+    .controller('userPWDSafeAuthCodeFailCtrl', function($scope, $uibModalInstance) {
+        $scope.text = "短信验证码错误!"
+        $scope.isInfo = true
+        $scope.cancel = function() {
+            $uibModalInstance.dismiss('cancel');
+        }
+    })
+    .controller('userPWDSafeResetFailCtrl', function($scope, $uibModalInstance) {
+        $scope.text = "安全密码重置错误!"
+        $scope.isInfo = true
+        $scope.cancel = function() {
+            $uibModalInstance.dismiss('cancel');
+        }
+    })
     .controller('userPasswordSecurityRetrieveCtrl', function($scope, $uibModalInstance, $uibModal, $interval, $http) {
         $scope.passwordFormEnabled = true;
         $scope.newPasswordFormEnabled = false;
-        //		$scope.next = function() {
-        //			$scope.passwordFormEnabled = false
-        //			$scope.newPasswordFormEnabled = true
-        //			$scope.isNext = true
-        //			$scope.isConfirm = true
-        //		}
-        //		$scope.cancel = function() {
-        //			$uibModalInstance.dismiss('cancel');
-        //		}
-        //		$scope.animationsEnabled = true;
-        //		$scope.confirm = function(size) {
-        //			$uibModalInstance.dismiss('cancel');
-        //			var modalInstance = $uibModal.open({
-        //				animation: $scope.animationsEnabled,
-        //				templateUrl: 'noteSimple.html',
-        //				controller: 'userPasswordSecurityCtrl',
-        //				size: size
-        //			})
-        //		};
         $scope.buttonText = "获取验证码";
         $scope.send = function() {
+        	/* writed by 白豆腐  发送验证码   */
+            $http({
+                method: "post",
+                url: "http://admin.jubaobar.com/front/safetypwd/sendCode.htm",
+            }).success(function() {})
+            
             // ========= 倒计时 =========
-            //          $scope.buttonText = "获取验证码";
             $scope.isDisabled = false;
-            //          $scope.paraevent = true;
             var second = 60;
             timePromise = undefined;
             timePromise = $interval(function() {
@@ -339,7 +352,6 @@ angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate', 'ngFileUpload', 'fac
                     second = 60;
                     $scope.buttonText = "重发验证码";
                     $scope.isDisabled = false;
-                    //                  $scope.paraevent = true;
                 } else {
                     $scope.buttonText = second + "秒后可重发";
                     $scope.isDisabled = true;
@@ -348,57 +360,88 @@ angular.module('yhtml5.user', ['ui.bootstrap', 'ngAnimate', 'ngFileUpload', 'fac
             }, 1000, 0);
         };
         /* writed by 白豆腐  找回安全密码*/
-        $scope.next = function(size) {
-            $scope.data = {};
-            $scope.passwordFormEnabled = false
-            $scope.newPasswordFormEnabled = true
-            $scope.isNext = true
-            $scope.isConfirm = true
-            console.log($scope.data.pwdAnswer)
-            console.log($scope.data.authCode)
-            $http({
-                method: "post",
-                url: "http://admin.jubaobar.com/front/safetypwd/find.htm",
-                params: {
-                    pwdAnswer: $scope.data.pwdAnswer,
-                    authCode: $scope.data.authCode
-                }
-            }).success(function(response) {
-
-            })
+    	$scope.forget = {show_error: false};
+        $http.get('http://admin.jubaobar.com/front/safetypwd/showfindpwd.htm')
+        .success(function(response) {
+        	$scope.forget.pwdQuestion = response.data;
+        });
+        $scope.next = function(forgetSafePasswordForm,size) {
+        	$scope.forget.show_error = true;
+        	forgetSafePasswordForm.$setDirty();
+            if (forgetSafePasswordForm.$valid) {
+                $http({
+                    method: "post",
+                    url: "http://admin.jubaobar.com/front/safetypwd/find.htm",
+                    params: {
+                        pwdAnswer: $scope.forget.pwdAnswer,
+                        authCode: $scope.forget.authCode
+                    }
+                }).success(function(response) {
+                	if(response.result =='0'){
+                		$scope.newPasswordFormEnabled = true;
+                    	$scope.isConfirm = true;
+                    	$scope.passwordFormEnabled = false;
+                        $scope.isNext = true;
+                	}else {
+                		$scope.passwordFormEnabled = true;
+                		$scope.newPasswordFormEnabled = false;
+                		$scope.isNext = false;
+                		$scope.isConfirm = false;
+                		var rslt= 'userPWDSafeInputFailCtrl';
+                		if(response.result =='1'){
+                			rslt= 'userPWDSafeExistFailCtrl';
+                		}else if(response.result =='6'){
+                			rslt= 'userPWDSafeAuthCodeFailCtrl';
+                		}
+                    	var modalInstance = $uibModal.open({
+                            animation: $scope.animationsEnabled,
+                            templateUrl: 'noteSimple.html',
+                            controller: rslt,
+                            size: size
+                        });
+                	}
+                })
+            }
         };
-        /* writed by 白豆腐  找回安全密码*/
 
-        /* writed by 白豆腐  发送验证码   */
         $scope.cancel = function() {
-            $uibModalInstance.dismiss('cancel');
-            $http({
-                method: "post",
-                url: "http://admin.jubaobar.com/front/safetypwd/sendCode.htm",
-            }).success(function() {})
+        	$uibModalInstance.dismiss('cancel');
         }
+        
         $scope.animationsEnabled = true;
-        /* writed by 白豆腐  发送验证码   */
 
         /* writed by 白豆腐  重设安全密码*/
-        $scope.confirm = function(size) {
-            $uibModalInstance.dismiss('cancel');
-            console.log($scope.data.newSafetyPwd)
-            console.log($scope.data.confirmPwd)
-            $http({
-                method: "post",
-                url: "http://admin.jubaobar.com/front/safetypwd/reset.htm",
-                params: {
-                    newSafetyPwd: $scope.data.newSafetyPwd,
-                    confirmPwd: $scope.data.confirmPwd
-                }
-            }).success(function() {})
-            var modalInstance = $uibModal.open({
-                animation: $scope.animationsEnabled,
-                templateUrl: 'noteSimple.html',
-                controller: 'userPasswordSecurityCtrl',
-                size: size
-            })
+        $scope.reset = {show_error: false};
+        $scope.confirm = function(resetSafePasswordForm, size) {
+        	$scope.reset.show_error = true;
+        	resetSafePasswordForm.$setDirty();
+            if (resetSafePasswordForm.$valid) {
+                $http({
+	                method: "post",
+	                url: "http://admin.jubaobar.com/front/safetypwd/reset.htm",
+	                params: {
+	                	newSafetyPwd: $scope.reset.newSafetyPwd,
+	                	confirmPwd: $scope.reset.confirmPwd
+	                }
+                }).success(function(response) {
+                	if(response.result == '0'){
+                		var modalInstance = $uibModal.open({
+                            animation: $scope.animationsEnabled,
+                            templateUrl: 'noteSimple.html',
+                            controller: 'userPasswordSecurityCtrl',
+                            size: size
+                        })
+                        $uibModalInstance.dismiss('cancel');
+                	}else{
+                		var modalInstance = $uibModal.open({
+                            animation: $scope.animationsEnabled,
+                            templateUrl: 'noteSimple.html',
+                            controller: 'userPWDSafeResetFailCtrl',
+                            size: size
+                        })
+                	}
+                });
+            }
         };
         /* writed by 白豆腐  重设安全密码*/
     });
