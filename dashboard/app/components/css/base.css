@@ -47,9 +47,11 @@
 .y-cl099fdd {
     color: #099fdd;
 }
-.y-fs14{
+
+.y-fs14 {
     font-size: 14px !important;
 }
+
 .y-fs16 {
     font-size: 16px;
 }
@@ -61,9 +63,11 @@
 .y-fs24 {
     font-size: 24px;
 }
+
 .y-fs26 {
     font-size: 26px;
 }
+
 .y-fs30 {
     font-size: 30px;
 }
@@ -89,6 +93,10 @@
 }
 
 .y-fwn {
+    font-weight: 400;
+}
+
+.y-fw-n {
     font-weight: 400;
 }
 

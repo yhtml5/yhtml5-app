@@ -18,6 +18,9 @@ angular.module('yhtml5', [
         'yhtml5.payment',
         'ngFileUpload'
     ])
+    .config(['$compileProvider', function($compileProvider) {
+        $compileProvider.aHrefSanitizationWhitelist(/^\s*(|blob|):/);
+    }])
     .config(function($stateProvider, $urlRouterProvider) {
         $urlRouterProvider
         //.when('/dashboard/*', '/dashboard')

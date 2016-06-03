@@ -31,6 +31,7 @@ angular.module('yhtml5.appList', ['ui.bootstrap', 'ngAnimate', 'factory'])
         $scope.getRootUserAppIndex = function(userAppIndex) {
             console.log("userAppIndex", $scope.userApps[userAppIndex]);
             $rootScope.rootUserApp = $scope.userApps[userAppIndex];
+            $scope.appIdDemo = "appIdDemo";
         };
         //      console.log("scope", $scope.userApps)
         //      console.log("rootScope", $rootScope.nameDemo)

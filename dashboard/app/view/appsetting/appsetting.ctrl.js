@@ -1,8 +1,16 @@
 'use strict';
 angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
-    .controller('yhtml5.appsetting', function($scope, $rootScope, $uibModal, $http, $interval) {
+    .controller('yhtml5.appsetting', function($scope, $state, $rootScope, $uibModal, $http, $interval) {
         $scope.rootUserApp = $rootScope.rootUserApp;
         console.log("rootUserApp", $rootScope.rootUserApp);
+        // If freshen browser,I'll go to dashboard
+        $scope.goToApplist = function() {
+            if ($scope.rootUserApp == undefined) {
+                $state.go('dashboard');
+                console.log("I'll go to index")
+            }
+        };
+        $scope.goToApplist()
         $http({
             method: "get",
             url: "http://admin.jubaobar.com/front/appsetting/channel/app/find.htm",
@@ -58,6 +66,7 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
             })
             var modalInstance = $uibModal.open({
                 animation: $scope.animationsEnabled,
+                backdrop: 'static',
                 templateUrl: 'noteSimple.html',
                 controller: 'appsettingInfoNoteSimpleCtrl',
                 size: size
@@ -75,22 +84,22 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
                 id: 31470
             }
         }).success(function(response) {
-            if(response.result == '0'){
-            	$scope.appApi = response.data;
-            	if($scope.appApi.callBackURL == '' || $scope.appApi.callBackURL == null){
-            		$scope.appApiInformUrlUpdate = false;
+            if (response.result == '0') {
+                $scope.appApi = response.data;
+                if ($scope.appApi.callBackURL == '' || $scope.appApi.callBackURL == null) {
+                    $scope.appApiInformUrlUpdate = false;
                     $scope.appApiInformUrlSave = true;
-            	}else{
-            		$scope.appApiInformUrlUpdate = true;
+                } else {
+                    $scope.appApiInformUrlUpdate = true;
                     $scope.appApiInformUrlSave = false;
-            	}
-            	if($scope.appApi.repeatPayURL == '' || $scope.appApi.repeatPayURL == null){
-            		$scope.appApiRepayUrlUpdate = false;
+                }
+                if ($scope.appApi.repeatPayURL == '' || $scope.appApi.repeatPayURL == null) {
+                    $scope.appApiRepayUrlUpdate = false;
                     $scope.appApiRepayUrlSave = true;
-            	}else{
-            		$scope.appApiRepayUrlUpdate = true;
+                } else {
+                    $scope.appApiRepayUrlUpdate = true;
                     $scope.appApiRepayUrlSave = false;
-            	}
+                }
             }
         });
         /** =============================== 银燕 技术对接 =============================== E**/
@@ -98,6 +107,7 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
         $scope.appsettingApiPasswordOpen = function(size) {
             var modalInstance = $uibModal.open({
                 animation: $scope.animationsEnabled,
+                backdrop: 'static',
                 templateUrl: 'appsettingApiPassword.html',
                 controller: 'appsettingApiPasswordCtrl',
                 size: size
@@ -106,6 +116,7 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
         $scope.appsettingApiTestOpen = function(size) {
                 var modalInstance = $uibModal.open({
                     animation: $scope.animationsEnabled,
+                    backdrop: 'static',
                     templateUrl: 'appsettingApiTest.html',
                     controller: 'appsettingApiTestCtrl',
                     size: size
@@ -116,6 +127,7 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
         $scope.appsettingDeleteOpen = function(size) {
                 var modalInstance = $uibModal.open({
                     animation: $scope.animationsEnabled,
+                    backdrop: 'static',
                     templateUrl: 'appsettingDeleteForm.html',
                     controller: 'appsettingDeleteCtrl',
                     size: size
@@ -126,6 +138,7 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
         $scope.appsettingCanalResetOpen = function(size) {
             var modalInstance = $uibModal.open({
                 animation: $scope.animationsEnabled,
+                backdrop: 'static',
                 templateUrl: 'appsettingCanalReset.html',
                 controller: 'appsettingCanalResetCtrl',
                 size: size
@@ -134,6 +147,7 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
         $scope.appsettingCanalCreateOpen = function(size) {
             var modalInstance = $uibModal.open({
                 animation: $scope.animationsEnabled,
+                backdrop: 'static',
                 templateUrl: 'appsettingCanalCreate.html',
                 controller: 'appsettingCanalCreateCtrl',
                 size: size
@@ -142,6 +156,7 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
         $scope.appsettingChannelAgreementOpen = function(size) {
             var modalInstance = $uibModal.open({
                 animation: $scope.animationsEnabled,
+                backdrop: 'static',
                 templateUrl: 'appsettingChannelAgreement.html',
                 controller: 'appsettingChannelAgreementCtrl',
                 size: size
@@ -150,6 +165,7 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
         $scope.appsettingChannelRechanrgecardOpen = function(size) {
             var modalInstance = $uibModal.open({
                 animation: $scope.animationsEnabled,
+                backdrop: 'static',
                 templateUrl: 'appsettingChannelRechanrgecard.html',
                 controller: 'appsettingChannelRechanrgecardCtrl',
                 size: size
@@ -158,6 +174,7 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
         $scope.appsettingChannelPointcardOpen = function(size) {
             var modalInstance = $uibModal.open({
                 animation: $scope.animationsEnabled,
+                backdrop: 'static',
                 templateUrl: 'appsettingChannelPointcard.html',
                 controller: 'appsettingChannelPointcardCtrl',
                 size: size
@@ -167,6 +184,7 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
         $scope.appsettingApiInformUrlOpen = function(size) {
                 var modalInstance = $uibModal.open({
                     animation: $scope.animationsEnabled,
+                    backdrop: 'static',
                     templateUrl: 'appsettingApiInformUrl.html',
                     controller: 'appsettingApiInformUrlCtrl',
                     size: size
@@ -176,6 +194,7 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
         $scope.appsettingApiRepayUrlOpen = function(size) {
             var modalInstance = $uibModal.open({
                 animation: $scope.animationsEnabled,
+                backdrop: 'static',
                 templateUrl: 'appsettingApiRepayUrl.html',
                 controller: 'appsettingApiRepayUrlCtrl',
                 size: size
@@ -184,6 +203,7 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
         $scope.appsettingInfoChannelOpen = function(size) {
             var modalInstance = $uibModal.open({
                 animation: $scope.animationsEnabled,
+                backdrop: 'static',
                 templateUrl: 'appsettingInfoChannel.html',
                 controller: 'appsettingInfoChannelCtrl',
                 size: size
@@ -198,13 +218,13 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
         $scope.appsettingDeleteSendMSG = function(size) {
                 // ========= 倒计时 =========
                 $scope.isDisabled = false;
-                var second = 6;
+                var second = 60;
                 timePromise = undefined;
                 timePromise = $interval(function() {
                     if (second <= 0) {
                         $interval.cancel(timePromise);
                         timePromise = undefined;
-                        second = 6;
+                        second = 60;
                         $scope.buttonText = "重发验证码";
                         $scope.isDisabled = false;
                     } else {
@@ -243,6 +263,7 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
                     $state.reload('dashboard');
                     var modalInstance = $uibModal.open({
                         animation: $scope.animationsEnabled,
+                        backdrop: 'static',
                         templateUrl: 'noteSimple.html',
                         controller: 'appsettingInfoNoteSimpleCtrl',
                         size: size
@@ -274,6 +295,7 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
             })
             var modalInstance = $uibModal.open({
                 animation: $scope.animationsEnabled,
+                backdrop: 'static',
                 templateUrl: 'noteSimple.html',
                 controller: 'appsettingInfoNoteSimpleCtrl',
                 size: size
@@ -300,6 +322,7 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
             })
             var modalInstance = $uibModal.open({
                 animation: $scope.animationsEnabled,
+                backdrop: 'static',
                 templateUrl: 'noteSimple.html',
                 controller: 'appsettingInfoNoteSimpleCtrl',
                 size: size
@@ -311,28 +334,28 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
     })
     // ========= #appsetting/api ==========
     .controller('appsettingApiPasswordCtrl', function($scope, $http, $uibModalInstance, $uibModal) {
-    	$http({
+        $http({
             method: "post",
             url: "http://admin.jubaobar.com/front/appsetting/api/pk/info.htm",
             params: {}
         }).success(function(response) {
-            if(response.result == '0'){
-            	$scope.staticPassword = response.data.staticPassword;
+            if (response.result == '0') {
+                $scope.staticPassword = response.data.staticPassword;
             }
         });
         $scope.cancel = function() {
             $uibModalInstance.dismiss('cancel');
         }
-        
+
         $scope.appsettingApiPasswordDownload = function(type) {
-        	$http({
+            $http({
                 method: "post",
                 url: "http://admin.jubaobar.com/front/appsetting/api/pk/download.htm",
                 params: {
-                	keyType: type
+                    keyType: type
                 }
-            }).success(function(data,status,headers) {
-            	
+            }).success(function(data, status, headers) {
+
             });
         }
     })
