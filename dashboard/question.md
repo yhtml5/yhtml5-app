@@ -65,6 +65,8 @@
  - [] #appseting/info 保存发送表单
  - [] #account/record 表单状态、数据
  - [] #account/detail 查询导出
+ - [] 省市, 经营范围, 银行公共组件
+ - [] 上传文件控件
 
 
 ### 性能优化

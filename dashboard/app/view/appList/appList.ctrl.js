@@ -44,8 +44,11 @@ angular.module('yhtml5.appList', ['ui.bootstrap', 'ngAnimate', 'factory'])
             $scope.userPersonUpdate = true;
             $scope.userPersonSave = true;
             $http({
-                method: "post",
+                method: "get",
                 url: "http://admin.jubaobar.com/front/appbanage/save.htm",
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                },
                 params: {
                     appType: $scope.appTypeSelect,
                     appName: $scope.data.appName,
@@ -62,7 +65,8 @@ angular.module('yhtml5.appList', ['ui.bootstrap', 'ngAnimate', 'factory'])
                     $state.reload('dashboard');
                 }
             }).error(function(res) {
-                console.log("保存失败")
+                console.log("保存失败");
+
             })
         };
         $scope.cancel = function() {

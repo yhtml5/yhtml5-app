@@ -2,7 +2,7 @@
 	"name": "FW-Dashboard",
 	"description": "A starter project for AngularJS",
 	"version": "0.1.1",
-	"homepage": "https://github.com/angular/angular-seed",
+	"homepage": "",
 	"license": "MIT",
 	"private": true,
 	"dependencies": {
@@ -17,6 +17,7 @@
 		"bootstrap": "~3.3.x",
 		"html5-boilerplate": "~5.2.0",
 		"ng-file-upload-shim": "~12.0.x",
-		"ng-file-upload": "~12.0.x"
+		"ng-file-upload": "~12.0.x",
+		""
 	}
 }
