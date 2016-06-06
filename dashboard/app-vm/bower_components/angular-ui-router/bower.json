@@ -26,6 +26,6 @@
     "Gruntfile.js",
     "files.js"
   ],
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.5",
   "homepage": "http://angular-ui.github.com/ui-router"
 }

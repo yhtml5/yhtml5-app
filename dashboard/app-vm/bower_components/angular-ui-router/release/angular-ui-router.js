@@ -1,6 +1,6 @@
 /*!
  * State-based routing for AngularJS
- * @version v1.0.0-alpha.4
+ * @version v1.0.0-alpha.5
  * @link http://angular-ui.github.com/ui-router
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
@@ -72,10 +72,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	__export(__webpack_require__(1));
 	__export(__webpack_require__(53));
 	__export(__webpack_require__(54));
-	__webpack_require__(56);
+	__export(__webpack_require__(56));
 	__webpack_require__(57);
 	__webpack_require__(58);
 	__webpack_require__(59);
+	__webpack_require__(60);
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.default = "ui.router";
 
@@ -133,7 +134,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	"use strict";
 	var predicates_1 = __webpack_require__(4);
 	var hof_1 = __webpack_require__(5);
-	var angular = window.angular || {};
+	var w = typeof window === 'undefined' ? {} : window;
+	var angular = w.angular || {};
 	exports.fromJson = angular.fromJson || JSON.parse.bind(JSON);
 	exports.toJson = angular.toJson || JSON.stringify.bind(JSON);
 	exports.copy = angular.copy || _copy;
@@ -1054,7 +1056,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return str;
 	}
 	exports.padString = padString;
-	exports.kebobString = function (camelCase) { return camelCase.replace(/([A-Z])/g, function ($1) { return "-" + $1.toLowerCase(); }); };
+	function kebobString(camelCase) {
+	    return camelCase
+	        .replace(/^([A-Z])/, function ($1) { return $1.toLowerCase(); }) // replace first char
+	        .replace(/([A-Z])/g, function ($1) { return "-" + $1.toLowerCase(); }); // replace rest
+	}
+	exports.kebobString = kebobString;
 	function _toJson(obj) {
 	    return JSON.stringify(obj);
 	}
@@ -1062,8 +1069,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return predicates_1.isString(json) ? JSON.parse(json) : json;
 	}
 	function promiseToString(p) {
-	    if (hof_1.is(rejectFactory_1.TransitionRejection)(p.reason))
-	        return p.reason.toString();
 	    return "Promise(" + JSON.stringify(p) + ")";
 	}
 	function functionToString(fn) {
@@ -1077,10 +1082,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return _fn && _fn.toString() || "undefined";
 	}
 	exports.fnToString = fnToString;
+	var isTransitionRejectionPromise = rejectFactory_1.Rejection.isTransitionRejectionPromise;
 	var stringifyPattern = hof_1.pattern([
 	    [hof_1.not(predicates_1.isDefined), hof_1.val("undefined")],
 	    [predicates_1.isNull, hof_1.val("null")],
 	    [predicates_1.isPromise, promiseToString],
+	    [isTransitionRejectionPromise, function (x) { return x._transitionRejection.toString(); }],
+	    [hof_1.is(rejectFactory_1.Rejection), hof_1.invoke("toString")],
 	    [hof_1.is(transition_1.Transition), hof_1.invoke("toString")],
 	    [hof_1.is(resolvable_1.Resolvable), hof_1.invoke("toString")],
 	    [predicates_1.isInjectable, functionToString],
@@ -1099,6 +1107,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return JSON.stringify(o, function (key, val) { return format(val); }).replace(/\\"/g, '"');
 	}
 	exports.stringify = stringify;
+	/** Returns a function that splits a string on a character or substring */
+	exports.beforeAfterSubstr = function (char) { return function (str) {
+	    if (!str)
+	        return ["", ""];
+	    var idx = str.indexOf(char);
+	    if (idx === -1)
+	        return [str, ""];
+	    return [str.substr(0, idx), str.substr(idx + 1)];
+	}; };
 
 
 /***/ },
@@ -1117,55 +1134,56 @@ return /******/ (function(modules) { // webpackBootstrap
 	    RejectType[RejectType["IGNORED"] = 5] = "IGNORED";
 	})(exports.RejectType || (exports.RejectType = {}));
 	var RejectType = exports.RejectType;
-	var TransitionRejection = (function () {
-	    function TransitionRejection(type, message, detail) {
-	        common_1.extend(this, {
-	            type: type,
-	            message: message,
-	            detail: detail
-	        });
+	var Rejection = (function () {
+	    function Rejection(type, message, detail) {
+	        this.type = type;
+	        this.message = message;
+	        this.detail = detail;
 	    }
-	    TransitionRejection.prototype.toString = function () {
+	    Rejection.prototype.toString = function () {
 	        var detailString = function (d) { return d && d.toString !== Object.prototype.toString ? d.toString() : strings_1.stringify(d); };
 	        var type = this.type, message = this.message, detail = detailString(this.detail);
 	        return "TransitionRejection(type: " + type + ", message: " + message + ", detail: " + detail + ")";
 	    };
-	    return TransitionRejection;
-	}());
-	exports.TransitionRejection = TransitionRejection;
-	var RejectFactory = (function () {
-	    function RejectFactory() {
-	    }
-	    RejectFactory.prototype.superseded = function (detail, options) {
+	    Rejection.prototype.toPromise = function () {
+	        return common_1.extend(coreservices_1.services.$q.reject(this), { _transitionRejection: this });
+	    };
+	    /** Returns true if the obj is a rejected promise created from the `asPromise` factory */
+	    Rejection.isTransitionRejectionPromise = function (obj) {
+	        return obj && (typeof obj.then === 'function') && obj._transitionRejection instanceof Rejection;
+	    };
+	    /** Returns a TransitionRejection due to transition superseded */
+	    Rejection.superseded = function (detail, options) {
 	        var message = "The transition has been superseded by a different transition (see detail).";
-	        var reason = new TransitionRejection(RejectType.SUPERSEDED, message, detail);
+	        var rejection = new Rejection(RejectType.SUPERSEDED, message, detail);
 	        if (options && options.redirected) {
-	            reason.redirected = true;
+	            rejection.redirected = true;
 	        }
-	        return common_1.extend(coreservices_1.services.$q.reject(reason), { reason: reason });
+	        return rejection;
 	    };
-	    RejectFactory.prototype.redirected = function (detail) {
-	        return this.superseded(detail, { redirected: true });
+	    /** Returns a TransitionRejection due to redirected transition */
+	    Rejection.redirected = function (detail) {
+	        return Rejection.superseded(detail, { redirected: true });
 	    };
-	    RejectFactory.prototype.invalid = function (detail) {
+	    /** Returns a TransitionRejection due to invalid transition */
+	    Rejection.invalid = function (detail) {
 	        var message = "This transition is invalid (see detail)";
-	        var reason = new TransitionRejection(RejectType.INVALID, message, detail);
-	        return common_1.extend(coreservices_1.services.$q.reject(reason), { reason: reason });
+	        return new Rejection(RejectType.INVALID, message, detail);
 	    };
-	    RejectFactory.prototype.ignored = function (detail) {
+	    /** Returns a TransitionRejection due to ignored transition */
+	    Rejection.ignored = function (detail) {
 	        var message = "The transition was ignored.";
-	        var reason = new TransitionRejection(RejectType.IGNORED, message, detail);
-	        return common_1.extend(coreservices_1.services.$q.reject(reason), { reason: reason });
+	        return new Rejection(RejectType.IGNORED, message, detail);
 	    };
-	    RejectFactory.prototype.aborted = function (detail) {
+	    /** Returns a TransitionRejection due to aborted transition */
+	    Rejection.aborted = function (detail) {
 	        // TODO think about how to encapsulate an Error() object
 	        var message = "The transition has been aborted.";
-	        var reason = new TransitionRejection(RejectType.ABORTED, message, detail);
-	        return common_1.extend(coreservices_1.services.$q.reject(reason), { reason: reason });
+	        return new Rejection(RejectType.ABORTED, message, detail);
 	    };
-	    return RejectFactory;
+	    return Rejection;
 	}());
-	exports.RejectFactory = RejectFactory;
+	exports.Rejection = Rejection;
 
 
 /***/ },
@@ -1185,7 +1203,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	var module_2 = __webpack_require__(17);
 	var module_3 = __webpack_require__(20);
 	var module_4 = __webpack_require__(40);
-	var transitionCount = 0, REJECT = new module_1.RejectFactory();
+	var rejectFactory_1 = __webpack_require__(10);
+	var transitionCount = 0;
 	var stateSelf = hof_1.prop("self");
 	/**
 	 * The representation of a transition between two states.
@@ -1444,8 +1463,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	        // Run the success/error hooks *after* the Transition promise is settled.
 	        this.promise.then(runSuccessHooks, runErrorHooks);
 	        var syncResult = runSynchronousHooks(hookBuilder.getOnBeforeHooks());
-	        if (module_1.TransitionHook.isRejection(syncResult)) {
-	            var rejectReason = syncResult.reason;
+	        if (rejectFactory_1.Rejection.isTransitionRejectionPromise(syncResult)) {
+	            syncResult.catch(function () { return 0; }); // issue #2676
+	            var rejectReason = syncResult._transitionRejection;
 	            this._deferred.reject(rejectReason);
 	            return this.promise;
 	        }
@@ -1456,8 +1476,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	        if (this.ignored()) {
 	            trace_1.trace.traceTransitionIgnored(this);
-	            var ignored = REJECT.ignored();
-	            this._deferred.reject(ignored.reason);
+	            this._deferred.reject(rejectFactory_1.Rejection.ignored());
 	            return this.promise;
 	        }
 	        // When the chain is complete, then resolve or reject the deferred
@@ -1473,7 +1492,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            return coreservices_1.services.$q.reject(error);
 	        };
 	        trace_1.trace.traceTransitionStart(this);
-	        var chain = hookBuilder.asyncHooks().reduce(function (_chain, step) { return _chain.then(step.invokeStep); }, syncResult);
+	        var chain = hookBuilder.asyncHooks().reduce(function (_chain, step) { return _chain.then(step.invokeHook.bind(step)); }, syncResult);
 	        chain.then(resolve, reject);
 	        return this.promise;
 	    };
@@ -1560,11 +1579,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	function uiViewString(viewData) {
 	    if (!viewData)
 	        return 'ui-view (defunct)';
-	    return "ui-view id#" + viewData.id + ", contextual name '" + viewData.name + "@" + viewData.creationContext + "', fqn: '" + viewData.fqn + "'";
+	    return "[ui-view#" + viewData.id + " tag in template from '" + (viewData.creationContext.name || '(root)') + "' state]: fqn: '" + viewData.fqn + "', name: '" + viewData.name + "@" + viewData.creationContext + "')";
 	}
 	/** @hidden */
 	var viewConfigString = function (viewConfig) {
-	    return ("ViewConfig targeting ui-view: '" + viewConfig.viewDecl.$uiViewName + "@" + viewConfig.viewDecl.$uiViewContextAnchor + "', context: '" + viewConfig.viewDecl.$context.name + "'");
+	    return ("[ViewConfig from '" + (viewConfig.viewDecl.$context.name || '(root)') + "' state]: target ui-view: '" + viewConfig.viewDecl.$uiViewName + "@" + viewConfig.viewDecl.$uiViewContextAnchor + "'");
 	};
 	/** @hidden */
 	function normalizedCat(input) {
@@ -1765,13 +1784,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    Trace.prototype.traceViewServiceEvent = function (event, viewConfig) {
 	        if (!this.enabled(Category.VIEWCONFIG))
 	            return;
-	        console.log("$view.ViewConfig: " + event + " " + viewConfigString(viewConfig));
+	        console.log("VIEWCONFIG: " + event + " " + viewConfigString(viewConfig));
 	    };
 	    /** called by ui-router code */
 	    Trace.prototype.traceViewServiceUiViewEvent = function (event, viewData) {
 	        if (!this.enabled(Category.VIEWCONFIG))
 	            return;
-	        console.log("$view.ViewConfig: " + event + " " + uiViewString(viewData));
+	        console.log("VIEWCONFIG: " + event + " " + uiViewString(viewData));
 	    };
 	    return Trace;
 	}());
@@ -2159,7 +2178,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	var coreservices_1 = __webpack_require__(6);
 	var rejectFactory_1 = __webpack_require__(10);
 	var module_1 = __webpack_require__(17);
-	var REJECT = new rejectFactory_1.RejectFactory();
 	var defaultOptions = {
 	    async: true,
 	    rejectIfSuperseded: true,
@@ -2176,42 +2194,47 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.resolveContext = resolveContext;
 	        this.options = options;
 	        this.isSuperseded = function () { return _this.options.current() !== _this.options.transition; };
+	        this.options = common_1.defaults(options, defaultOptions);
+	    }
+	    TransitionHook.prototype.invokeHook = function (moreLocals) {
+	        var _this = this;
+	        var _a = this, options = _a.options, fn = _a.fn, resolveContext = _a.resolveContext;
+	        var locals = common_1.extend({}, this.locals, moreLocals);
+	        trace_1.trace.traceHookInvocation(this, options);
+	        if (options.rejectIfSuperseded && this.isSuperseded()) {
+	            return rejectFactory_1.Rejection.superseded(options.current()).toPromise();
+	        }
+	        // TODO: Need better integration of returned promises in synchronous code.
+	        if (!options.async) {
+	            var hookResult = resolveContext.invokeNow(fn, locals, options);
+	            return this.handleHookResult(hookResult);
+	        }
+	        return resolveContext.invokeLater(fn, locals, options).then(function (val) { return _this.handleHookResult(val); });
+	    };
+	    ;
+	    /**
+	     * This method handles the return value of a Transition Hook.
+	     *
+	     * A hook can return false, a redirect (TargetState), or a promise (which may resolve to false or a redirect)
+	     */
+	    TransitionHook.prototype.handleHookResult = function (hookResult) {
+	        var _this = this;
+	        if (!predicates_1.isDefined(hookResult))
+	            return undefined;
 	        /**
-	         * Handles transition abort and transition redirect. Also adds any returned resolvables
-	         * to the pathContext for the current pathElement.  If the transition is rejected, then a rejected
-	         * promise is returned here, otherwise undefined is returned.
+	         * Handles transition superseded, transition aborted and transition redirect.
 	         */
-	        this.mapHookResult = hof_1.pattern([
+	        var mapHookResult = hof_1.pattern([
 	            // Transition is no longer current
-	            [this.isSuperseded, function () { return REJECT.superseded(_this.options.current()); }],
+	            [this.isSuperseded, function () { return rejectFactory_1.Rejection.superseded(_this.options.current()).toPromise(); }],
 	            // If the hook returns false, abort the current Transition
-	            [hof_1.eq(false), function () { return REJECT.aborted("Hook aborted transition"); }],
+	            [hof_1.eq(false), function () { return rejectFactory_1.Rejection.aborted("Hook aborted transition").toPromise(); }],
 	            // If the hook returns a Transition, halt the current Transition and redirect to that Transition.
-	            [hof_1.is(module_1.TargetState), function (target) { return REJECT.redirected(target); }],
+	            [hof_1.is(module_1.TargetState), function (target) { return rejectFactory_1.Rejection.redirected(target).toPromise(); }],
 	            // A promise was returned, wait for the promise and then chain another hookHandler
 	            [predicates_1.isPromise, function (promise) { return promise.then(_this.handleHookResult.bind(_this)); }]
 	        ]);
-	        this.invokeStep = function (moreLocals) {
-	            var _a = _this, options = _a.options, fn = _a.fn, resolveContext = _a.resolveContext;
-	            var locals = common_1.extend({}, _this.locals, moreLocals);
-	            trace_1.trace.traceHookInvocation(_this, options);
-	            if (options.rejectIfSuperseded && _this.isSuperseded()) {
-	                return REJECT.superseded(options.current());
-	            }
-	            // TODO: Need better integration of returned promises in synchronous code.
-	            if (!options.async) {
-	                var hookResult = resolveContext.invokeNow(fn, locals, options);
-	                return _this.handleHookResult(hookResult);
-	            }
-	            return resolveContext.invokeLater(fn, locals, options).then(_this.handleHookResult.bind(_this));
-	        };
-	        this.options = common_1.defaults(options, defaultOptions);
-	    }
-	    TransitionHook.prototype.handleHookResult = function (hookResult) {
-	        if (!predicates_1.isDefined(hookResult))
-	            return undefined;
-	        trace_1.trace.traceHookResult(hookResult, undefined, this.options);
-	        var transitionResult = this.mapHookResult(hookResult);
+	        var transitionResult = mapHookResult(hookResult);
 	        if (transitionResult)
 	            trace_1.trace.traceHookResult(hookResult, transitionResult, this.options);
 	        return transitionResult;
@@ -2232,24 +2255,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var results = [];
 	        for (var i = 0; i < hooks.length; i++) {
 	            try {
-	                results.push(hooks[i].invokeStep(locals));
+	                results.push(hooks[i].invokeHook(locals));
 	            }
 	            catch (exception) {
-	                if (!swallowExceptions)
-	                    return REJECT.aborted(exception);
-	                console.log("Swallowed exception during synchronous hook handler: " + exception); // TODO: What to do here?
+	                if (!swallowExceptions) {
+	                    return rejectFactory_1.Rejection.aborted(exception).toPromise();
+	                }
+	                console.error("Swallowed exception during synchronous hook handler: " + exception); // TODO: What to do here?
 	            }
 	        }
-	        var rejections = results.filter(TransitionHook.isRejection);
+	        var rejections = results.filter(rejectFactory_1.Rejection.isTransitionRejectionPromise);
 	        if (rejections.length)
 	            return rejections[0];
 	        return results
-	            .filter(hof_1.not(TransitionHook.isRejection))
 	            .filter(predicates_1.isPromise)
 	            .reduce(function (chain, promise) { return chain.then(hof_1.val(promise)); }, coreservices_1.services.$q.when());
-	    };
-	    TransitionHook.isRejection = function (hookResult) {
-	        return hookResult && hookResult.reason instanceof rejectFactory_1.TransitionRejection && hookResult;
 	    };
 	    return TransitionHook;
 	}());
@@ -3118,7 +3138,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                decode: valFromString,
 	                is: hof_1.is(String),
 	                pattern: /.*/,
-	                equals: hof_1.val(true)
+	                equals: function (a, b) { return a == b; } // allow coersion for null/undefined/""
 	            },
 	            "string": {
 	                encode: valToString,
@@ -3253,9 +3273,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	/** @module state */ /** for typedoc */
-	var hof_1 = __webpack_require__(5);
-	var param_1 = __webpack_require__(21);
 	var rejectFactory_1 = __webpack_require__(10);
 	var targetState_1 = __webpack_require__(27);
 	var viewHooks_1 = __webpack_require__(28);
@@ -3312,13 +3329,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    TransitionManager.prototype.transRejected = function (error) {
 	        var _a = this, transition = _a.transition, $state = _a.$state, $q = _a.$q;
 	        // Handle redirect and abort
-	        if (error instanceof rejectFactory_1.TransitionRejection) {
+	        if (error instanceof rejectFactory_1.Rejection) {
 	            if (error.type === rejectFactory_1.RejectType.IGNORED) {
-	                // Update $stateParmas/$state.params/$location.url if transition ignored, but dynamic params have changed.
-	                var dynamic = $state.$current.parameters().filter(hof_1.prop('dynamic'));
-	                if (!param_1.Param.equals(dynamic, $state.params, transition.params())) {
-	                    this.updateUrl();
-	                }
+	                this.$urlRouter.update();
 	                return $state.current;
 	            }
 	            if (error.type === rejectFactory_1.RejectType.SUPERSEDED && error.redirected && error.detail instanceof targetState_1.TargetState) {
@@ -3335,7 +3348,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var transition = this.transition;
 	        var _a = this, $urlRouter = _a.$urlRouter, $state = _a.$state;
 	        var options = transition.options();
-	        var toState = transition.$to();
 	        if (options.location && $state.$current.navigable) {
 	            $urlRouter.push($state.$current.navigable.url, $state.params, { replace: options.location === 'replace' });
 	        }
@@ -3852,7 +3864,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	            previousQueueLength[state.name] = queue.length;
 	            if (orphanIdx >= 0 && prev === queue.length) {
 	                // Wait until two consecutive iterations where no additional states were dequeued successfully.
-	                throw new Error("Cannot register orphaned state '" + state.name + "'");
+	                // throw new Error(`Cannot register orphaned state '${state.name}'`);
+	                return states;
 	            }
 	            else if (orphanIdx < 0) {
 	                orphans.push(state);
@@ -3871,7 +3884,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            return;
 	        $urlRouterProvider.when(state.url, ['$match', '$stateParams', function ($match, $stateParams) {
 	                if ($state.$current.navigable !== state || !common_1.equalForKeys($match, $stateParams)) {
-	                    $state.transitionTo(state, $match, { inherit: true });
+	                    $state.transitionTo(state, $match, { inherit: true, location: false });
 	                }
 	            }]);
 	    };
@@ -3900,7 +3913,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            url: '^',
 	            views: null,
 	            params: {
-	                '#': { value: null, type: 'hash' }
+	                '#': { value: null, type: 'hash', dynamic: true }
 	            },
 	            abstract: true
 	        };
@@ -3956,7 +3969,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.stateRegistry = stateRegistry;
 	        this.stateProvider = stateProvider;
 	        this.globals = globals;
-	        this.rejectFactory = new rejectFactory_1.RejectFactory();
 	        var getters = ['current', '$current', 'params', 'transition'];
 	        var boundFns = Object.keys(StateService.prototype).filter(function (key) { return getters.indexOf(key) === -1; });
 	        common_3.bindFunctions(StateService.prototype, this, this, boundFns);
@@ -3995,7 +4007,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var latest = latestThing();
 	        var $from$ = pathFactory_1.PathFactory.makeTargetState(fromPath);
 	        var callbackQueue = new queue_1.Queue([].concat(this.stateProvider.invalidCallbacks));
-	        var rejectFactory = this.rejectFactory;
 	        var $q = coreservices_1.services.$q, $injector = coreservices_1.services.$injector;
 	        var invokeCallback = function (callback) { return $q.when($injector.invoke(callback, null, { $to$: $to$, $from$: $from$ })); };
 	        var checkForRedirect = function (result) {
@@ -4006,15 +4017,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	            // Recreate the TargetState, in case the state is now defined.
 	            target = _this.target(target.identifier(), target.params(), target.options());
 	            if (!target.valid())
-	                return rejectFactory.invalid(target.error());
+	                return rejectFactory_1.Rejection.invalid(target.error()).toPromise();
 	            if (latestThing() !== latest)
-	                return rejectFactory.superseded();
+	                return rejectFactory_1.Rejection.superseded().toPromise();
 	            return _this.transitionTo(target.identifier(), target.params(), target.options());
 	        };
 	        function invokeNextCallback() {
 	            var nextCallback = callbackQueue.dequeue();
 	            if (nextCallback === undefined)
-	                return rejectFactory.invalid($to$.error());
+	                return rejectFactory_1.Rejection.invalid($to$.error()).toPromise();
 	            return invokeCallback(nextCallback).then(checkForRedirect).then(function (result) { return result || invokeNextCallback(); });
 	        }
 	        return invokeNextCallback();
@@ -4424,7 +4435,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	    PathFactory.applyViewConfigs = function ($view, path) {
 	        return path.map(function (node) {
-	            return common_1.extend(node, { views: common_1.values(node.state.views || {}).map(function (view) { return $view.createViewConfig(node, view); }) });
+	            var viewDecls = common_1.values(node.state.views || {});
+	            var viewConfigs = viewDecls.map(function (view) { return $view.createViewConfig(node, view); }).reduce(common_1.unnestR, []);
+	            return common_1.extend(node, { views: viewConfigs });
 	        });
 	    };
 	    /**
@@ -5942,6 +5955,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	             * A ViewConfig has a target ui-view name and a context anchor.  The ui-view name can be a simple name, or
 	             * can be a segmented ui-view path, describing a portion of a ui-view fqn.
 	             *
+	             * In order for a ui-view to match ViewConfig, ui-view's $type must match the ViewConfig's $type
+	             *
 	             * If the ViewConfig's target ui-view name is a simple name (no dots), then a ui-view matches if:
 	             * - the ui-view's name matches the ViewConfig's target name
 	             * - the ui-view's context matches the ViewConfig's anchor
@@ -5987,6 +6002,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	             *   the tail of the ui-view's fqn "default.bar"
 	             */
 	            var matches = function (uiView) { return function (viewConfig) {
+	                // Don't supply an ng1 ui-view with an ng2 ViewConfig, etc
+	                if (uiView.$type !== viewConfig.viewDecl.$type)
+	                    return false;
 	                // Split names apart from both viewConfig and uiView into segments
 	                var vc = viewConfig.viewDecl;
 	                var vcSegments = vc.$uiViewName.split(".");
@@ -6042,7 +6060,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var cfgFactory = this._viewConfigFactories[decl.$type];
 	        if (!cfgFactory)
 	            throw new Error("ViewService: No view config factory registered for type " + decl.$type);
-	        return cfgFactory(node, decl);
+	        var cfgs = cfgFactory(node, decl);
+	        return predicates_1.isArray(cfgs) ? cfgs : [cfgs];
 	    };
 	    /**
 	     * De-registers a ViewConfig.
@@ -6273,6 +6292,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var trace_1 = __webpack_require__(12);
 	var viewsBuilder_1 = __webpack_require__(54);
 	var templateFactory_1 = __webpack_require__(55);
+	var resolvesBuilder_1 = __webpack_require__(56);
 	/** @hidden */
 	var app = angular.module("ui.router.angular1", []);
 	/**
@@ -6397,6 +6417,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    router = new router_1.UIRouter();
 	    // Apply ng1 `views` builder to the StateBuilder
 	    router.stateRegistry.decorator("views", viewsBuilder_1.ng1ViewsBuilder);
+	    router.stateRegistry.decorator("resolve", resolvesBuilder_1.ng1ResolveBuilder);
 	    router.viewService.viewConfigFactory('ng1', viewsBuilder_1.ng1ViewConfigFactory);
 	    // Bind LocationConfig.hashPrefix to $locationProvider.hashPrefix
 	    common_1.bindFunctions($locationProvider, coreservices_1.services.locationConfig, $locationProvider, ['hashPrefix']);
@@ -6569,12 +6590,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	            if (nonCompKeys.map(function (key) { return predicates_1.isDefined(config[key]); }).reduce(common_1.anyTrueR, false)) {
 	                throw new Error("Cannot combine: " + compKeys.join("|") + " with: " + nonCompKeys.join("|") + " in stateview: 'name@" + state.name + "'");
 	            }
-	            // Dynamically build a template like "<component-name input1='$resolve.foo'></component-name>"
+	            // Dynamically build a template like "<component-name input1='::$resolve.foo'></component-name>"
 	            config.templateProvider = ['$injector', function ($injector) {
 	                    var resolveFor = function (key) { return config.bindings && config.bindings[key] || key; };
 	                    var prefix = angular.version.minor >= 3 ? "::" : "";
-	                    var attrs = getComponentInputs($injector, config.component)
-	                        .map(function (key) { return (strings_1.kebobString(key) + "='" + prefix + "$resolve." + resolveFor(key) + "'"); }).join(" ");
+	                    var attributeTpl = function (input) {
+	                        var attrName = strings_1.kebobString(input.name);
+	                        var resolveName = resolveFor(input.name);
+	                        if (input.type === '@')
+	                            return attrName + "='{{" + prefix + "$resolve." + resolveName + "}}'";
+	                        return attrName + "='" + prefix + "$resolve." + resolveName + "'";
+	                    };
+	                    var attrs = getComponentInputs($injector, config.component).map(attributeTpl).join(" ");
 	                    var kebobName = strings_1.kebobString(config.component);
 	                    return "<" + kebobName + " " + attrs + "></" + kebobName + ">";
 	                }];
@@ -6591,27 +6618,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return views;
 	}
 	exports.ng1ViewsBuilder = ng1ViewsBuilder;
-	// for ng 1.2 style, process the scope: { input: "=foo" } object
+	// for ng 1.2 style, process the scope: { input: "=foo" }
+	// for ng 1.3 through ng 1.5, process the component's bindToController: { input: "=foo" } object
 	var scopeBindings = function (bindingsObj) { return Object.keys(bindingsObj || {})
-	    .map(function (key) { return [key, /^[=<](.*)/.exec(bindingsObj[key])]; })
-	    .filter(function (tuple) { return predicates_1.isDefined(tuple[1]); })
-	    .map(function (tuple) { return tuple[1][1] || tuple[0]; }); };
-	// for ng 1.3+ bindToController or 1.5 component style, process a $$bindings object
-	var bindToCtrlBindings = function (bindingsObj) { return Object.keys(bindingsObj || {})
-	    .filter(function (key) { return !!/[=<]/.exec(bindingsObj[key].mode); })
-	    .map(function (key) { return bindingsObj[key].attrName; }); };
+	    .map(function (key) { return [key, /^([=<@])[?]?(.*)/.exec(bindingsObj[key])]; }) // [ 'input', [ '=foo', '=', 'foo' ] ]
+	    .filter(function (tuple) { return predicates_1.isDefined(tuple) && predicates_1.isDefined(tuple[1]); }) // skip malformed values
+	    .map(function (tuple) { return ({ name: tuple[1][2] || tuple[0], type: tuple[1][1] }); }); }; // { name: ('foo' || 'input'), type: '=' }
 	// Given a directive definition, find its object input attributes
 	// Use different properties, depending on the type of directive (component, bindToController, normal)
 	var getBindings = function (def) {
 	    if (predicates_1.isObject(def.bindToController))
 	        return scopeBindings(def.bindToController);
-	    if (def.$$bindings && def.$$bindings.bindToController)
-	        return bindToCtrlBindings(def.$$bindings.bindToController);
-	    if (def.$$isolateBindings)
-	        return bindToCtrlBindings(def.$$isolateBindings);
 	    return scopeBindings(def.scope);
 	};
-	// Gets all the directive(s)' inputs ('=' and '<')
+	// Gets all the directive(s)' inputs ('@', '=', and '<')
 	function getComponentInputs($injector, name) {
 	    var cmpDefs = $injector.get(name + "Directive"); // could be multiple
 	    if (!cmpDefs || !cmpDefs.length)
@@ -6751,6 +6771,29 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 56 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var common_1 = __webpack_require__(3);
+	var predicates_1 = __webpack_require__(4);
+	/**
+	 * This is a [[StateBuilder.builder]] function for angular1 `resolve:` block on a [[Ng1StateDeclaration]].
+	 *
+	 * When the [[StateBuilder]] builds a [[State]] object from a raw [[StateDeclaration]], this builder
+	 * handles the `resolve` property with logic specific to angular-ui-router (ng1).
+	 */
+	function ng1ResolveBuilder(state) {
+	    var resolve = {};
+	    common_1.forEach(state.resolve || {}, function (resolveFn, name) {
+	        resolve[name] = predicates_1.isString(resolveFn) ? [resolveFn, function (x) { return x; }] : resolveFn;
+	    });
+	    return resolve;
+	}
+	exports.ng1ResolveBuilder = ng1ResolveBuilder;
+
+
+/***/ },
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -7147,7 +7190,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 57 */
+/* 58 */
 /***/ function(module, exports) {
 
 	/** @module state */ /** for typedoc */
@@ -7194,7 +7237,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 58 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/** @module ng1_directives */ /** for typedoc */
@@ -7202,6 +7245,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var common_1 = __webpack_require__(3);
 	var predicates_1 = __webpack_require__(4);
 	var trace_1 = __webpack_require__(12);
+	var viewsBuilder_1 = __webpack_require__(54);
 	var rejectFactory_1 = __webpack_require__(10);
 	var hof_1 = __webpack_require__(5);
 	var strings_1 = __webpack_require__(9);
@@ -7373,6 +7417,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                return function (scope, $element, attrs) {
 	                    var previousEl, currentEl, currentScope, unregister, onloadExp = attrs.onload || '', autoScrollExp = attrs.autoscroll, renderer = getRenderer(attrs, scope), viewConfig = undefined, inherited = $element.inheritedData('$uiView') || rootData, name = $interpolate(attrs.uiView || attrs.name || '')(scope) || '$default';
 	                    var activeUIView = {
+	                        $type: 'ng1',
 	                        id: directive.count++,
 	                        name: name,
 	                        fqn: inherited.$uiView.fqn ? inherited.$uiView.fqn + "." + name : name,
@@ -7384,6 +7429,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    };
 	                    trace_1.trace.traceUiViewEvent("Linking", activeUIView);
 	                    function configUpdatedCallback(config) {
+	                        if (config && !(config instanceof viewsBuilder_1.Ng1ViewConfig))
+	                            return;
 	                        if (configsEqual(viewConfig, config))
 	                            return;
 	                        trace_1.trace.traceUiViewConfigUpdated(activeUIView, config && config.viewDecl && config.viewDecl.$context);
@@ -7574,7 +7621,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 59 */
+/* 60 */
 /***/ function(module, exports) {
 
 	"use strict";

@@ -15,10 +15,10 @@ import {UrlRouter} from "../url/urlRouter";
 
 import {TransitionOptions} from "../transition/interface";
 import {TransitionService, defaultTransOpts} from "../transition/transitionService";
-import {RejectFactory} from "../transition/rejectFactory";
+import {Rejection} from "../transition/rejectFactory";
 import {Transition} from "../transition/transition";
 
-import {StateOrName, StateDeclaration} from "./interface";
+import {StateOrName, StateDeclaration, TransitionPromise} from "./interface";
 import {StateRegistry} from "./stateRegistry";
 import {State} from "./stateObject";
 import {TargetState} from "./targetState";
@@ -39,8 +39,6 @@ export class StateService {
   get params()      { return this.globals.params; }
   get current()     { return this.globals.current; }
   get $current()    { return this.globals.$current; }
-
-  private rejectFactory = new RejectFactory();
 
   constructor(private $view: ViewService,
               private $urlRouter: UrlRouter,
@@ -66,7 +64,6 @@ export class StateService {
     let latest = latestThing();
     let $from$ = PathFactory.makeTargetState(fromPath);
     let callbackQueue = new Queue<Function>([].concat(this.stateProvider.invalidCallbacks));
-    let rejectFactory = this.rejectFactory;
     let {$q, $injector} = services;
 
     const invokeCallback = (callback: Function) => $q.when($injector.invoke(callback, null, { $to$, $from$ }));
@@ -79,15 +76,15 @@ export class StateService {
       // Recreate the TargetState, in case the state is now defined.
       target = this.target(target.identifier(), target.params(), target.options());
 
-      if (!target.valid()) return rejectFactory.invalid(target.error());
-      if (latestThing() !== latest) return rejectFactory.superseded();
+      if (!target.valid()) return Rejection.invalid(target.error()).toPromise();
+      if (latestThing() !== latest) return Rejection.superseded().toPromise();
 
       return this.transitionTo(target.identifier(), target.params(), target.options());
     };
 
     function invokeNextCallback() {
       let nextCallback = callbackQueue.dequeue();
-      if (nextCallback === undefined) return rejectFactory.invalid($to$.error());
+      if (nextCallback === undefined) return Rejection.invalid($to$.error()).toPromise();
       return invokeCallback(nextCallback).then(checkForRedirect).then(result => result || invokeNextCallback());
     }
 
@@ -213,14 +210,14 @@ export class StateService {
    * - *resolve error* - when an error has occurred with a `resolve`
    *
    */
-  go(to: StateOrName, params: RawParams, options: TransitionOptions): Promise<State> {
+  go(to: StateOrName, params?: RawParams, options?: TransitionOptions): TransitionPromise {
     let defautGoOpts = { relative: this.$current, inherit: true };
     let transOpts = defaults(options, defautGoOpts, defaultTransOpts);
     return this.transitionTo(to, params, transOpts);
   };
 
   /** Factory method for creating a TargetState */
-  target(identifier: StateOrName, params: ParamsOrArray, options: TransitionOptions = {}): TargetState {
+  target(identifier: StateOrName, params?: ParamsOrArray, options: TransitionOptions = {}): TargetState {
     // If we're reloading, find the state object to reload from
     if (isObject(options.reload) && !(<any>options.reload).name)
       throw new Error('Invalid reload state object');
@@ -271,7 +268,7 @@ export class StateService {
    * @returns {promise} A promise representing the state of the new transition. See
    * {@link ui.router.state.$state#methods_go $state.go}.
    */
-  transitionTo(to: StateOrName, toParams: RawParams = {}, options: TransitionOptions = {}): Promise<State> {
+  transitionTo(to: StateOrName, toParams: RawParams = {}, options: TransitionOptions = {}): TransitionPromise {
     let transHistory = this.globals.transitionHistory;
     options = defaults(options, defaultTransOpts);
     options = extend(options, { current: transHistory.peekTail.bind(transHistory)});

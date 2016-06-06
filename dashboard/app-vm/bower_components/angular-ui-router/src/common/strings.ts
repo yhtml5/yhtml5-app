@@ -1,7 +1,7 @@
 /** @module common_strings */ /** */
 
 import {isString, isArray, isDefined, isNull, isPromise, isInjectable, isObject} from "./predicates";
-import {TransitionRejection} from "../transition/rejectFactory";
+import {Rejection} from "../transition/rejectFactory";
 import {IInjectable, identity} from "./common";
 import {pattern, is, not, val, invoke} from "./hof";
 import {Transition} from "../transition/transition";
@@ -35,7 +35,11 @@ export function padString(length: number, str: string) {
   return str;
 }
 
-export const kebobString = (camelCase: string) => camelCase.replace(/([A-Z])/g, $1 => "-"+$1.toLowerCase());
+export function kebobString(camelCase: string) {
+  return camelCase
+      .replace(/^([A-Z])/, $1 => $1.toLowerCase()) // replace first char
+      .replace(/([A-Z])/g, $1 => "-" + $1.toLowerCase()); // replace rest
+}
 
 function _toJson(obj) {
   return JSON.stringify(obj);
@@ -47,7 +51,6 @@ function _fromJson(json) {
 
 
 function promiseToString(p) {
-  if (is(TransitionRejection)(p.reason)) return p.reason.toString();
   return `Promise(${JSON.stringify(p)})`;
 }
 
@@ -62,15 +65,18 @@ export function fnToString(fn: IInjectable) {
   return _fn && _fn.toString() || "undefined";
 }
 
+const isTransitionRejectionPromise = Rejection.isTransitionRejectionPromise;
 
 let stringifyPattern = pattern([
-  [not(isDefined),            val("undefined")],
-  [isNull,                    val("null")],
-  [isPromise,                 promiseToString],
-  [is(Transition),            invoke("toString")],
-  [is(Resolvable),            invoke("toString")],
-  [isInjectable,              functionToString],
-  [val(true),                 identity]
+  [not(isDefined),                  val("undefined")],
+  [isNull,                          val("null")],
+  [isPromise,                       promiseToString],
+  [isTransitionRejectionPromise,    x => x._transitionRejection.toString()],
+  [is(Rejection),                   invoke("toString")],
+  [is(Transition),                  invoke("toString")],
+  [is(Resolvable),                  invoke("toString")],
+  [isInjectable,                    functionToString],
+  [val(true),                       identity]
 ]);
 
 export function stringify(o) {
@@ -87,3 +93,10 @@ export function stringify(o) {
   return JSON.stringify(o, (key, val) => format(val)).replace(/\\"/g, '"');
 }
 
+/** Returns a function that splits a string on a character or substring */
+export const beforeAfterSubstr = char => str => {
+  if (!str) return ["", ""];
+  let idx = str.indexOf(char);
+  if (idx === -1) return [str, ""];
+  return [str.substr(0, idx), str.substr(idx + 1)];
+};

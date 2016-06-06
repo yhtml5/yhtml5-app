@@ -55,7 +55,7 @@ fis.match('{/server/author.css,/components/**/*.css}', {
     packTo: '${project.static}/index.css'
 })
 fis.match('{/static/**,/components/**/*.{png,gif,jpg,jpeg}}', {
-    useHash: true
+    useHash: false
 })
 fis.match('{/static/**,/components/**/*.{png,gif,jpg,jpeg},/components/**/(iconfont.*)}', {
     domain: '.'

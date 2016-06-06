@@ -4,7 +4,7 @@ import {Param} from "../../params/param";
 
 import {TreeChanges} from "../../transition/interface";
 import {Transition} from "../../transition/transition";
-import {TransitionRejection, RejectType} from "../../transition/rejectFactory";
+import {Rejection, RejectType} from "../../transition/rejectFactory";
 
 import {StateDeclaration} from "../interface";
 import {StateService} from "../stateService";
@@ -76,13 +76,9 @@ export class TransitionManager {
   transRejected(error): (StateDeclaration|Promise<any>) {
     let {transition, $state, $q} = this;
     // Handle redirect and abort
-    if (error instanceof TransitionRejection) {
+    if (error instanceof Rejection) {
       if (error.type === RejectType.IGNORED) {
-        // Update $stateParmas/$state.params/$location.url if transition ignored, but dynamic params have changed.
-        let dynamic = $state.$current.parameters().filter(prop('dynamic'));
-        if (!Param.equals(dynamic, $state.params, transition.params())) {
-          this.updateUrl();
-        }
+        this.$urlRouter.update();
         return $state.current;
       }
 
@@ -104,7 +100,6 @@ export class TransitionManager {
     let transition = this.transition;
     let {$urlRouter, $state} = this;
     let options = transition.options();
-    var toState = transition.$to();
 
     if (options.location && $state.$current.navigable) {
       $urlRouter.push($state.$current.navigable.url, $state.params, { replace: options.location === 'replace' });

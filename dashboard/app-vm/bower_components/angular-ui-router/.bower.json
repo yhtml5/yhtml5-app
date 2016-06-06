@@ -26,13 +26,13 @@
     "Gruntfile.js",
     "files.js"
   ],
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.5",
   "homepage": "http://angular-ui.github.com/ui-router",
-  "_release": "1.0.0-alpha.4",
+  "_release": "1.0.0-alpha.5",
   "_resolution": {
     "type": "version",
-    "tag": "1.0.0-alpha.4",
-    "commit": "5325ad3dca8a0d326ddfa223e4eb576f4674f180"
+    "tag": "1.0.0-alpha.5",
+    "commit": "ff374b2da2aa5349e26a04fc3fe4cb9239a0c34c"
   },
   "_source": "https://github.com/angular-ui/angular-ui-router-bower.git",
   "_target": "~1.0.x",
