@@ -1,4 +1,4 @@
-﻿var calendar = {
+var calendar = {
     config: {
         id: null,
         ok: null,
