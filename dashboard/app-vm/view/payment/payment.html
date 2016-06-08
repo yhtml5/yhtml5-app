@@ -12,40 +12,46 @@
                         <button type="button" class="btn y-btn-blue dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                            <span class="j-date">选择日期</span><span class="caret"></span></button>
                         <ul class="dropdown-menu j-menu-date">
-                            <li><a href="#">今日</a></li>
-                            <li><a href="#">昨日</a></li>
-                            <li><a href="#">近7日</a></li>
-                            <li><a href="#">近30日</a></li>
-                            <li><a href="#">全部</a></li>
+                            <li><a href="#" onclick="javascript:return false;">今日</a></li>
+                            <li><a href="#" onclick="javascript:return false;">昨日</a></li>
+                            <li><a href="#" onclick="javascript:return false;">近7日</a></li>
+                            <li><a href="#" onclick="javascript:return false;">近30日</a></li>
+                            <li><a href="#" onclick="javascript:return false;">全部</a></li>
                         </ul>
                     </div>
                     <div class="btn-group" role="group">
                         <button type="button" class="btn y-btn-blue dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                           <span class="j-pay">支付状态</span><span class="caret"></span></button>
+                           <span class="j-pay-btn">支付状态</span>&nbsp;<span class="caret"></span></button>
                         <ul class="dropdown-menu j-menu-pay">
-                            <li><a href="#">全部</a></li>
-                            <li><a href="#">支付成功</a></li>
-                            <li><a href="#">支付失败</a></li>
+                            <li><a href="#" onclick="javascript:return false;">全部</a></li>
+                            <li><a href="#" onclick="javascript:return false;">支付成功</a></li>
+                            <li><a href="#" onclick="javascript:return false;">支付失败</a></li>
                         </ul>
                     </div>
                     <div class="btn-group" role="group">
                         <button type="button" class="btn y-btn-blue dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                            <span class="j-settlement">结算状态</span><span class="caret"></span></button>
                         <ul class="dropdown-menu j-menu-settlement">
-                            <li><a href="#">全部</a></li>
-                            <li><a href="#">结算成功</a></li>
-                            <li><a href="#">结算失败</a></li>
+                            <li><a href="#" onclick="javascript:return false;">全部</a></li>
+                            <li><a href="#" onclick="javascript:return false;">结算成功</a></li>
+                            <li><a href="#" onclick="javascript:return false;">结算失败</a></li>
                         </ul>
                     </div>
                     <div class="btn-group" role="group">
                         <button type="button" class="btn y-btn-blue dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                            <span class="j-channel">全部渠道</span><span class="caret"></span></button>
                         <ul class="dropdown-menu j-menu-channel">
-                            <li><a href="#">全部</a></li>
-                            <li><a href="#">应用宝</a></li>
-                            <li><a href="#">豌豆荚</a></li>
+                            <li><a href="#" onclick="javascript:return false;">全部</a></li>
+                            <li><a href="#" onclick="javascript:return false;">应用宝</a></li>
+                            <li><a href="#" onclick="javascript:return false;">豌豆荚</a></li>
                         </ul>
                     </div>
+                    <!--下拉更新文字demo-->
+                    <script type="text/javascript">
+                        $('.dropdown-menu li').click(function() {
+                            $('.j-pay-btn,.j-settlement,.j-channel,.j-settlement').text($(this).text());
+                        })
+                    </script>
                 </div>
             </div>
             <!--row-->
@@ -99,6 +105,6 @@
                     <li><a href="#">下一页&nbsp;&raquo;</a></li>
                 </ul>
             </div>
-            </div>
+        </div>
     </div>
 </div>
