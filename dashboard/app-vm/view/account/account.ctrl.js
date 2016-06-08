@@ -2,30 +2,6 @@
 
 angular.module('yhtml5.account', ['ui.bootstrap', 'ngAnimate', 'factory'])
     .controller('yhtml5.account', function($scope, $http, $uibModal, $timeout, $log, Data) {
-        /** =======================  银燕 账户结算统计 Start ======================== **/
-        $scope.pageChanged = function() {
-            $log.log('Page changed to: ' + $scope.currentPage);
-            $http({
-                method: "post",
-                url: "http://admin.jubaobar.com/front/cashFlow/queryPayTypeAndTime.htm",
-                params: {
-                    pageNo: $scope.currentPage
-                }
-            }).success(function(response) {
-                if (response.result == 0) {
-                    $scope.accountmanage = response.data.entityList;
-                    $scope.totalItems = response.data.totalRecords;
-                    $scope.currentPage = response.data.currentPage;
-                    $scope.maxSize = 5;
-                }
-            });
-        };
-        $scope.setPage = function(pageNo) {
-            $scope.currentPage = pageNo;
-        };
-        /** =======================  银燕 历史记录 分页控件 End   ======================== **/
-
-        /** =======================  writed by 白豆腐  账户明细 | Add 银燕 分页控件 Start ======================== */
         $scope.detail = {};
         $scope.accountSelect = function(size) {
             $http({
