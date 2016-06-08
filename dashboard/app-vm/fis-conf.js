@@ -34,6 +34,7 @@ fis.match('{/map.json,fis-conf.*,/bower.json}', {
 fis.match('/server/**', {
     release: '/config/$0'
 });
+
 /*************************打包规范*****************************/
 
 // 因为是纯前端项目，依赖不能自断被加载进来，所以这里需要借助一个 loader 来完成，
@@ -50,6 +51,9 @@ fis.match('/bower_components/**/*.js', {
 })
 fis.match('{/server/author.js,/components/**/*.js,/view/**/*.js}', {
     packTo: '${project.static}/index.js'
+})
+fis.match('/components/js/vm.js', {
+    packTo: '${project.static}/$0'
 })
 fis.match('/bower_components/**/*.css', {
     packTo: '${project.static}/yhtml5.css'

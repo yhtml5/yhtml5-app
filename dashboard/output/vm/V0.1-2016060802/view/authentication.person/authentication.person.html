@@ -1,0 +1,240 @@
+<div class="y-bg-fff y-pt60">
+    <div class="container">
+        <form action="" class="form-horizontal">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="" class="col-sm-3 control-label">商户性质</label>
+                        <div class="col-sm-8">
+                            <label for="" class="radio-inline">
+								<input type="radio" ng-model="userInfo.companyType" name="merchantNature" id="" value="1" checked="">&nbsp;个人
+							</label>
+                            <label for="" class="radio-inline">
+								<input type="radio" ng-model="userInfo.companyType" name="merchantNature" id="" value="2">&nbsp;企业
+							</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="" class="col-sm-3 control-label">商户类型</label>
+                        <div class="col-sm-8">
+                            <label for="" class="radio-inline">
+								<input type="radio" ng-model="userInfo.subCompanyType" name="merchantClass" id="" value="1" checked="">&nbsp;应用提供商
+							</label>
+                            <label for="" class="radio-inline">
+								<input type="radio" ng-model="userInfo.subCompanyType" name="merchantClass" id="" value="2">&nbsp;渠道分销商
+							</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- =============================== writed by Yangjb 实名认证 Start =============================== -->
+            <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="" class="col-sm-3 control-label">签约名</label>
+                            <div class="col-sm-8">
+                                <input class="form-control" type="text" name="" id="" ng-model="userInfo.userName" value="" placeholder="工信部备案人真实姓名">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="" class="col-sm-3 control-label">经营范围</label>
+                            <div class="col-sm-4">
+                                <select class="form-control" ng-model="userInfo.businessType1" ng-options="obj.dictValue for obj in dataInit.businessTypes" ng-change="test2=''">
+                                    <option value="">请选择经营范围</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+                                <select class="form-control" ng-model="userInfo.businessType2" ng-options="x.dictValue for x in userInfo.businessType1.subList">
+                                    <option value="">请选择经营范围</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="row" ng-if="userInfo.companyType == 2">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="" class="col-sm-3 control-label">企业名称</label>
+                        <div class="col-sm-8">
+                            <input class="form-control" type="text" name="" id="" ng-model="userInfo.companyName" value="" placeholder="请输入企业名称">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="" class="col-sm-3 control-label">企业经营地址</label>
+                        <div class="col-sm-8">
+                            <input class="form-control" type="text" name="" id="" ng-model="userInfo.companyAddress" value="" placeholder="请输入企业经营地址">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" ng-if="userInfo.companyType == 2">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="" class="col-sm-3 control-label">营业执照号</label>
+                        <div class="col-sm-8">
+                            <input class="form-control" type="text" name="" id="" ng-model="userInfo.licenseNo" value="" placeholder="请输入营业执照号">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- =============================== writed by Yangjb 实名认证  End =============================== -->
+            <hr>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="" class="col-sm-3 control-label">联系人姓名</label>
+                        <div class="col-sm-8">
+                            <input class="form-control" type="text" name="" id="" ng-model="userInfo.contactName" value="" placeholder="请输入联系人">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="" class="col-sm-3 control-label">联系电话</label>
+                        <div class="col-sm-8">
+                            <input class="form-control" type="text" name="" id="" ng-model="userInfo.contactTelephone" value="" placeholder="请输入电话">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="" class="col-sm-3 control-label">邮箱</label>
+                        <div class="col-sm-8">
+                            <input class="form-control" type="text" name="" id="" ng-model="userInfo.contactEmail" value="" placeholder="请输入Email地址">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="" class="col-sm-3 control-label">QQ</label>
+                        <div class="col-sm-8">
+                            <input class="form-control" type="text" name="" id="" ng-model="userInfo.contactQQ" value="" placeholder="请输入QQ号">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <!-- =============================== writed by Yangjb 实名认证 Start =============================== -->
+            <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="" class="col-sm-3 control-label">通讯地址</label>
+                            <div class="col-sm-4">
+                                <select class="form-control" ng-model="userInfo.contactProvId" ng-options="obj.name for obj in dataInit.division" ng-change="userInfo.contactCityId=''">
+                                    <option value="">省</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+                                <select class="form-control" ng-model="userInfo.contactCityId" ng-options="x.name for x in userInfo.contactProvId.children" ng-change="">
+                                    <option value="">市</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <!-- =============================== writed by Yangjb 实名认证 End =============================== -->
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <div class="col-sm-8 col-sm-push-3">
+                            <input class="form-control" type="text" name="" id="" value="" ng-model="userInfo.contactAddress" placeholder="请详细到镇、街道">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="" class="col-sm-3 control-label">身份证号</label>
+                        <div class="col-sm-8">
+                            <input class="form-control" type="text" name="" id="" ng-model="userInfo.idCard" value="" placeholder="请输入身份证号">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row y-mt60 y-mb40">
+                <div class="col-sm-4 text-xs-center">
+                    <img class="img-responsive img-rounded center-block y-wd60" src="./static/img/css3-html5-js-logo_a62c45abb.png">
+                    <h4 class="y-fs16">证件照片
+						<small>
+							<a href="###">示例图片</a>
+						</small>
+					</h4>
+                </div>
+                <div class="col-sm-4 text-xs-center">
+                    <img class="img-responsive img-rounded center-block y-wd60" src="./static/img/css3-html5-js-logo_a62c45abb.png">
+                    <h4 class="y-fs16">身份证正面
+						<small>
+							<a href="###">示例图片</a>
+						</small>
+					</h4>
+                </div>
+                <div class="col-sm-4 text-xs-center">
+                    <img class="img-responsive img-rounded center-block y-wd60" src="./static/img/css3-html5-js-logo_a62c45abb.png">
+                    <h4 class="y-fs16">身份证反面
+						<small>
+							<a href="###">示例图片</a>
+						</small>
+					</h4>
+                </div>
+				<div class="col-sm-4 text-xs-center" ng-if="userInfo.companyType == 2">
+				    <img class="img-responsive img-rounded center-block y-wd60" src="./static/img/css3-html5-js-logo_a62c45abb.png">
+				    <h4 class="y-fs16">营业执照
+				        <small>
+							<a href="###">示例图片</a>
+						</small>
+				    </h4>
+				</div>
+				<div class="col-sm-4 text-xs-center" ng-if="userInfo.companyType == 2">
+				    <img class="img-responsive img-rounded center-block y-wd60" src="./static/img/css3-html5-js-logo_a62c45abb.png">
+				    <h4 class="y-fs16">税务登记证
+				        <small>
+							<a href="###">示例图片</a>
+						</small>
+				    </h4>
+				</div>
+				<div class="col-sm-4 text-xs-center" ng-if="userInfo.companyType == 2">
+				    <img class="img-responsive img-rounded center-block y-wd60" src="./static/img/css3-html5-js-logo_a62c45abb.png">
+				    <h4 class="y-fs16">组织结构代码证
+				        <small>
+							<a href="###">示例图片</a>
+						</small>
+				    </h4>
+				</div>
+				<div class="col-sm-4 text-xs-center" ng-if="userInfo.companyType == 2">
+				    <img class="img-responsive img-rounded center-block y-wd60" src="./static/img/css3-html5-js-logo_a62c45abb.png">
+				    <h4 class="y-fs16">开户许可证
+				        <small>
+							<a href="###">示例图片</a>
+						</small>
+				    </h4>
+				</div>
+				<div class="col-sm-4 text-xs-center" ng-if="userInfo.companyType == 2">
+				    <div class="y-upload-img" ngf-select ng-model="picFile" name="file" accept="image/*" ngf-max-size="2MB" required ngf-model-invalid="errorFile">
+				        <h1 class="y-mt60"><small>请选择文件</small></h1>
+				        <img class="img-responsive img-rounded" ngf-thumbnail="picFile">
+				        <p ng-show="myForm.file.$error.maxSize">文件大小超过{{errorFile.size / 1000000|number:1}}MB，最大支持2M</p>
+				    </div>
+				    <h4 class="y-fs16">文网文等辅助文件（非必要上传文件）
+				        <small>
+							<a href="###">示例图片</a>
+						</small>
+				    </h4>
+				</div>
+            </div>
+        </form>
+    </div>
+    <div class="y-mt40 y-pb60 text-sm-center">
+        <button type="button " class="btn y-btn-blue" ui-sref="authentication.account" ng-click="toStep3()">下一步</button>
+    </div>
+</div>

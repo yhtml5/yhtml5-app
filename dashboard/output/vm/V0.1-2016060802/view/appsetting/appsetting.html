@@ -1,0 +1,67 @@
+<div class="" ng-controller="yhtml5.appsetting">
+    <div class="container-fluid y-mt120">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar text-xs-center">
+                <img class="img-responsive img-rounded center-block" width="200px" height="200px" src="./static/img/html5.png">
+                <h3>{{rootUserApp.appName}}</p></h3>
+                <ul class="nav nav-sidebar y-mt30">
+                    <li ui-sref-active="active">
+                        <a ui-sref="appsetting.info" class="row">
+                            <div class="col-sm-2">
+                                <i class="iconfont y-fs26">&#xe608;</i>
+                            </div>
+                            <div class="col-sm-8">
+                                <h4>应用信息</h4>
+                            </div>
+                            <div class="col-sm-2">
+                                <i class="iconfont y-fs26">&#xe623;</i>
+                            </div>
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <!--<a ui-sref="appsetting.channel" class="row">-->
+                        <a ui-sref="###" class="row">
+                            <div class="col-sm-2">
+                                <i class="iconfont y-fs26">&#xe61e;</i>
+                            </div>
+                            <div class="col-sm-8">
+                                <h4>支付通道</h4>
+                            </div>
+                            <div class="col-sm-2">
+                                <i class="iconfont y-fs26">&#xe623;</i>
+                            </div>
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="appsetting.api" class="row">
+                            <div class="col-sm-2">
+                                <i class="iconfont y-fs26">&#xe621;</i>
+                            </div>
+                            <div class="col-sm-8">
+                                <h4>技术对接</h4>
+                            </div>
+                            <div class="col-sm-2">
+                                <i class="iconfont y-fs26">&#xe623;</i>
+                            </div>
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <!--<a ui-sref="appsetting.canal" class="row">-->
+                        <a ui-sref="###" class="row">
+                            <div class="col-sm-2">
+                                <i class="iconfont y-fs26">&#xe626;</i>
+                            </div>
+                            <div class="col-sm-8">
+                                <h4>渠道管理</h4>
+                            </div>
+                            <div class="col-sm-2">
+                                <i class="iconfont y-fs26">&#xe623;</i>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-9 col-sm-push-3 col-md-10 col-md-push-2" ui-view="content"></div>
+        </div>
+    </div>
+</div>
