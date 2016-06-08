@@ -1,0 +1,56 @@
+/*
+ * @require ../head/head.css
+ */
+
+
+/* panel-add style
+ * =============== */
+
+.y-panel-add {
+	vertical-align: middle;
+	line-height: 300px;
+	height: 372px;
+	margin-top: 60px;
+}
+
+.y-panel-add i {
+	font-size: 80px;
+	-webkit-transition: font-size 0.3s ease-out 0s;
+	-moz-transition: font-size 0.3s ease-out 0s;
+	transition: font-size 0.3s ease-out 0s;
+}
+
+.y-panel-add i:hover,
+.y-panel-add i:focus {
+	color: #099fdd;
+	font-size: 120px;
+}
+
+.animate-switch-container {
+	position: relative;
+	background: white;
+	min-height: 240px;
+}
+/*
+.animate-switch {
+	padding: 10px;
+}*/
+
+.animate-switch.ng-animate {
+	transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.animate-switch.ng-leave.ng-leave-active,
+.animate-switch.ng-enter {
+	opacity: 0;
+}
+
+.animate-switch.ng-leave,
+.animate-switch.ng-enter.ng-enter-active {
+	opacity: 1;
+}
