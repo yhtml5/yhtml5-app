@@ -26,26 +26,10 @@ angular.module('yhtml5', [
             .otherwise("/authentication/agreement")
         $stateProvider
             .state('dashboard', {
-                url: "/dashboard",
-                views: {
-                    "nav": {
-                        templateUrl: "view/nav-main/nav-main.html"
-                    },
-                    "content": {
-                        templateUrl: "view/appList/appList.html"
-                    }
-                }
+                url: "/dashboard"
             })
             .state('account', {
-                url: "/account",
-                views: {
-                    "nav": {
-                        templateUrl: "view/nav-main/nav-main.html"
-                    },
-                    "content": {
-                        templateUrl: "view/account/account.html"
-                    }
-                }
+                url: "/account"
             })
             .state('account.record', {
                 url: "/record",
