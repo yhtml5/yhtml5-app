@@ -2,7 +2,7 @@
 angular.module('yhtml5.account', ['ui.bootstrap', 'ngAnimate', 'factory'])
     .controller('yhtml5.account', function($scope, $http, $uibModal, $timeout, $log, Data) {
         $scope.detail = {};
-        $http.get(__uri("../../server/account.detail.json"))
+        $http.get("../../server/account.detail.json")
             .success(function(response) {
                 $scope.accountDetail = response.accountDetail //$scope.names 为一个数组
             });
