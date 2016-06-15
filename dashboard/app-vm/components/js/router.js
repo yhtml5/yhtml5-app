@@ -237,7 +237,7 @@ angular.module('yhtml5', [
                 url: "/data",
                 views: {
                     "content": {
-                        templateUrl: "view/user.data/user.data.html"
+                        templateUrl: "view/user.data/user.data.vm"
                     },
                     "modal": {
                         templateUrl: "view/noteSimple/noteSimple.html"
