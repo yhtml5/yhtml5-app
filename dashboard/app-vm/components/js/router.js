@@ -12,7 +12,6 @@ angular.module('yhtml5', [
         'yhtml5.nav',
         'yhtml5.appList',
         'yhtml5.appsetting',
-        'yhtml5.account',
         'yhtml5.authentication',
         'yhtml5.user',
         'yhtml5.payment'
@@ -34,6 +33,7 @@ angular.module('yhtml5', [
                     "content": {
                         templateUrl: "view/appList/appList.html"
                     }
+
                 }
             })
             .state('account', {

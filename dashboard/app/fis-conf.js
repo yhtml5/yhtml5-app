@@ -17,7 +17,7 @@ fis.match('/components/**/(*.{png,gif,jpg,jpeg})', {
 });
 fis.match('/components/**/(iconfont.*)', {
     release: '${project.static}/iconfont/$1',
-    url:'/iconfont/$1'
+    url: '/iconfont/$1'
 });
 fis.match('/bower_components/**/(*.{js,css})', {
     release: '${project.static}/lib/$1'
@@ -28,7 +28,7 @@ fis.match('/bower_components/**/fonts/(**)', {
 fis.match('{/components/**/*.css,/components/**/*.js}', {
     release: '${project.static}/$&'
 });
-fis.match('{/map.json,fis-conf.*}', {
+fis.match('{/map.json,fis-conf.*,/bower.json}', {
     release: '/config/$0'
 });
 /*************************打包规范*****************************/

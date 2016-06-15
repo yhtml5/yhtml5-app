@@ -240,6 +240,24 @@
                         </span>
                         <span ng-show="picFile.result">Upload Successful</span>
                         <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
+
+                        <!--<form name="myForm" class="form-horizontal y-mt15" action="" method="">
+                            <fieldset>
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label" for="">付款文件</label>
+                                    <div class="col-sm-8">
+                                        <input class="form-group y-mt6 y-mlr0" type="file" ngf-select ng-model="picFile" name="file" accept="image/*" ngf-max-size="2MB" required ngf-model-invalid="errorFile">
+                                        <p class="text-left">模板文件下载：
+                                            <button type="button" class="btn btn-link">xls文件</button>
+                                        </p>
+                                        <p class="text-danger" ng-show="myForm.file.$error.required">请选择一个文件</p>
+                                        <p ng-show="myForm.file.$error.maxSize">File too large {{errorFile.size / 1000000|number:1}}MB: max 2M</p>
+                                        <button class="btn btn-danger" ng-click="picFile = null" ng-show="picFile">删除文件</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>-->
+
                     </div>
                 </div>
             </fieldset>
