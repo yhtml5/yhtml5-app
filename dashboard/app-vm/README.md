@@ -33,7 +33,9 @@
    - [x] 20160613 account.topay 重写批量代付弹窗,批量复合弹窗
    - [x] 20160613 account.withdraw 用jquery重写弹窗
    - [x] 20160613 payment 增加日期控件; 优化视图UI,表格显示; 重写补发通知弹窗
+   - [x] 20160613 account.topay 重写单笔复核弹窗, 优化radio选项
    - [x] 20160615 user.data 重写tab标签切换,优化试图UI
+
 
 
 ### jQuery命名规范
