@@ -151,6 +151,21 @@
             "type": "js",
             "pkg": "p3"
         },
+        "bower_components/blueimp-file-upload/js/vendor/jquery.ui.widget.js": {
+            "uri": "/static/lib/jquery.ui.widget.js",
+            "type": "js",
+            "pkg": "p3"
+        },
+        "bower_components/blueimp-file-upload/js/jquery.iframe-transport.js": {
+            "uri": "/static/lib/jquery.iframe-transport.js",
+            "type": "js",
+            "pkg": "p3"
+        },
+        "bower_components/blueimp-file-upload/js/jquery.fileupload.js": {
+            "uri": "/static/lib/jquery.fileupload.js",
+            "type": "js",
+            "pkg": "p3"
+        },
         "components/js/router.js": {
             "uri": "/static/components/js/router.js",
             "type": "js",
@@ -271,7 +286,10 @@
                 "bower_components/angular/angular.js",
                 "bower_components/angular-bootstrap/ui-bootstrap-tpls.js",
                 "bower_components/angular-animate/angular-animate.js",
-                "bower_components/angular-ui-router/release/angular-ui-router.js"
+                "bower_components/angular-ui-router/release/angular-ui-router.js",
+                "bower_components/blueimp-file-upload/js/vendor/jquery.ui.widget.js",
+                "bower_components/blueimp-file-upload/js/jquery.iframe-transport.js",
+                "bower_components/blueimp-file-upload/js/jquery.fileupload.js"
             ]
         },
         "p4": {
