@@ -1,0 +1,270 @@
+<div class="panel">
+    <div class="panel-heading">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>基本信息</h3>
+            </div>
+            <div class="col-sm-6 text-xs-right">
+                <button type="button" class="btn btn-default y-mt15 y-mr20">修改</button>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="panel-body y-pd30 y-mt-30">
+        <form action="" class="form-horizontal" name="myForm">
+            <fieldset disabled>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="" class="col-sm-3 control-label">商户性质</label>
+                            <div class="col-sm-8">
+                                <label class="radio-inline">
+								    <input type="radio" ng-model="userInfo.companyType" value="1">&nbsp;个人
+							    </label>
+                                <label class="radio-inline">
+								    <input type="radio" ng-model="userInfo.companyType" value="2">&nbsp;企业
+							    </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="" class="col-sm-3 control-label">商户类型</label>
+                            <div class="col-sm-8">
+                                <label class="radio-inline">
+								<input type="radio" ng-model="userInfo.subCompanyType" value="1">&nbsp;应用提供商
+							</label>
+                                <label class="radio-inline">
+								<input type="radio" ng-model="userInfo.subCompanyType" value="2">&nbsp;渠道分销商
+							</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="" class="col-sm-3 control-label">签约名</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="text" name="" id="" ng-model="userInfo.userName" value="" placeholder="工信部备案人真实姓名">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="" class="col-sm-3 control-label">经营范围</label>
+                            <div class="col-sm-4">
+                                <select class="form-control" ng-model="businessTypeUser" ng-options="obj.dictValue for obj in dataInit.businessTypes track by obj.dictCode" ng-change="test2=''">
+                                    <option value="">请选择经营范围</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+                                <select class="form-control" ng-model="businessSubTypeUser" ng-options="x.dictValue for x in businessTypeUser.subList track by x.dictCode">
+                                    <option value="">请选择经营范围</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- =============================== writed by Yangjb “商户性质”不同页面不同 Start =============================== -->
+                <div class="row" ng-if="userInfo.companyType == 2">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="" class="col-sm-3 control-label">企业名称</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="text" name="" id="" ng-model="userInfo.companyName" value="" placeholder="请输入企业名称">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="" class="col-sm-3 control-label">企业经营地址</label>
+                            <div class="col-sm-8">
+                                <input class="form-control" type="text" name="" id="" ng-model="userInfo.companyAddress" value="" placeholder="请输入企业经营地址">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" ng-if="userInfo.companyType == 2">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="" class="col-sm-3 control-label">营业执照号</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="text" name="" id="" ng-model="userInfo.licenseNo" value="" placeholder="请输入营业执照号">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- =============================== writed by Yangjb “商户性质”不同页面不同 End =============================== -->
+                <hr>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="" class="col-sm-3 control-label">联系人姓名</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="text" name="" id="" ng-model="userInfo.contactName" value="" placeholder="请输入联系人">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="" class="col-sm-3 control-label">联系电话</label>
+                            <div class="col-sm-8">
+                                <input class="form-control" type="text" name="" id="" ng-model="userInfo.contactTelephone" value="" placeholder="请输入电话">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="" class="col-sm-3 control-label">邮箱</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="text" name="" id="" ng-model="userInfo.contactEmail" value="" placeholder="请输入Email地址">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="" class="col-sm-3 control-label">QQ</label>
+                            <div class="col-sm-8">
+                                <input class="form-control" type="text" name="" id="" ng-model="userInfo.contactQQ" value="" placeholder="请输入QQ号">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="" class="col-sm-3 control-label">通讯地址</label>
+                            <!--<div class="col-sm-8">
+                                <h5 ng-bind="userInfo.contactAddress"></h5>
+                            </div>-->
+                            <div class="col-sm-3">
+                                <select class="form-control" ng-model="provUser" ng-options="obj.name for obj in dataInit.division track by obj.id" ng-change="cityUser=''">
+                                    <option value="">省</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-3">
+                                <select class="form-control" ng-model="cityUser" ng-options="x.name for x in provUser.children track by x.id" ng-change="">
+                                    <option value="">市</option>
+                                </select>
+                            </div>
+                            <!--<div class="col-sm-3">
+                                <select class="form-control" ng-model="userInfo.contactAddress" ng-options="value as value for value in division[userInfo.contactProvId][userInfo.contactCityId]" ng-change="userInfo.contactAddressDetail=''">
+                                    <option value="">区</option>
+                                </select>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-9 col-sm-push-3">
+                                <input class="form-control" placeholder="请详细到镇、街道" ng-model="userInfo.contactAddress" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="" class="col-sm-3 control-label">身份证号</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="text" name="" id="" ng-model="userInfo.idCard" value="" placeholder="请输入身份证号">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row y-mt60 y-mb40 text-xs-center">
+                    <div class="col-sm-4">
+                        <img class="img-responsive img-rounded center-block y-wd60" src="./static/img/css3-html5-js-logo.png">
+                        <h4 class="y-fs16">证件照片
+						    <button type="" class="btn btn-link">示例图片</button>
+					    </h4>
+                    </div>
+                    <div class="col-sm-4">
+                        <img class="img-responsive img-rounded center-block y-wd60" src="./static/img/css3-html5-js-logo.png">
+                        <h4 class="y-fs16">身份证正面
+						   <button type="" class="btn btn-link">示例图片</button>
+					    </h4>
+                    </div>
+                    <div class="col-sm-4">
+                        <img class="img-responsive img-rounded center-block y-wd60" src="./static/img/css3-html5-js-logo.png">
+                        <h4 class="y-fs16">身份证反面
+					     	<button type="" class="btn btn-link">示例图片</button>
+					    </h4>
+                    </div>
+                    <div class="col-sm-4" ng-if="userInfo.companyType == 2">
+                        <img class="img-responsive img-rounded center-block y-wd60" src="./static/img/css3-html5-js-logo.png">
+                        <h4 class="y-fs16">营业执照
+                            <button type="" class="btn btn-link">示例图片</button>
+                        </h4>
+                    </div>
+                    <div class="col-sm-4" ng-if="userInfo.companyType == 2">
+                        <img class="img-responsive img-rounded center-block y-wd60" src="./static/img/css3-html5-js-logo.png">
+                        <h4 class="y-fs16">税务登记证
+                            <button type="" class="btn btn-link">示例图片</button>
+                        </h4>
+                    </div>
+                    <div class="col-sm-4" ng-if="userInfo.companyType == 2">
+                        <img class="img-responsive img-rounded center-block y-wd60" src="./static/img/css3-html5-js-logo.png">
+                        <h4 class="y-fs16">组织结构代码证
+                            <button type="" class="btn btn-link">示例图片</button>
+                        </h4>
+                    </div>
+                    <div class="col-sm-4" ng-if="userInfo.companyType == 2">
+                        <img class="img-responsive img-rounded center-block y-wd60" src="./static/img/css3-html5-js-logo.png">
+                        <h4 class="y-fs16">开户许可证
+                            <button type="" class="btn btn-link">示例图片</button>
+                        </h4>
+                    </div>
+
+                    <div class="col-sm-4">
+    <div class="y-upload-img">
+        <h1 class="y-mt60"><small>请选择文件</small></h1>
+        <img class="img-responsive img-rounded" ngf-thumbnail="picFile">
+        </div>
+    <h4 class="y-fs16">文网文等辅助文件（非必要上传文件）
+        <button type="button" class="btn btn-link">示例图片</button>
+    </h4>
+</div>
+                </div>
+            </fieldset>
+        </form>
+        <!--<div class="modal fade" y-modal="upload-pic" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header y-modal-header-default">
+                        <h3 class="y-mg0">上传图片
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </h3>
+                    </div>
+                    <div class="modal-body">
+                        <form name="myForm" class="form-horizontal y-mt15" action="" method="">
+                            <fieldset>
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label" for="">选择文件</label>
+                                    <div class="col-sm-8">
+                                        <input class="y-mt10" type="file" name="">
+                                        <p class="text-left y-mt10">模板文件下载：
+                                            <button type="button" class="btn btn-link">.xls文件</button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="modal-footer y-modal-footer-default">
+                        <button type="button" class="btn y-btn-blue center-block" y-open="accountTopayComplexBtn">下一步</button>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+    </div>
+</div>
+<!--panel-->

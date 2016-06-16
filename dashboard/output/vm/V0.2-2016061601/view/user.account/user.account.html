@@ -1,0 +1,110 @@
+<div class="panel" ng-controller="yhtml5.user">
+    <div class="panel-heading">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>结算信息</h3>
+            </div>
+            <div class="col-sm-6 text-xs-right">
+                <button type="button" class="btn btn-default y-mt15 y-mr20" ng-click="userPersonFormTotal()" ng-show="userPersonUpdate">修改</button>
+                <button type="button" class="btn btn-default y-mt15 y-mr20" ng-click="userAccountFormSave()" ng-hide="userPersonSave">保存</button>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="panel-body y-pd30 y-mt-30">
+        <form action="" class="form-horizontal">
+            <fieldset ng-disabled="userPersonFormEnabled">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="" class="col-sm-3 control-label">开户名</label>
+                            <div class="col-sm-8">
+
+                                <h5 ng-bind="userAccount.accountname"></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="" class="col-sm-3 control-label">账户类型</label>
+                            <div class="col-sm-8">
+                                <label for="" class="radio-inline">
+                                <input type="radio" ng-model="userAccount.accounttype" name="merchantClass" id="" value="1" checked>&nbsp;个人
+                            </label>
+                                <label for="" class="radio-inline">
+                                <input type="radio" ng-model="userAccount.accounttype" name="merchantClass" id="" value="2">&nbsp;企业
+                            </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="" class="col-sm-3 control-label">开户帐号</label>
+                            <div class="col-sm-8">
+                                <input class="form-control" type="text" name="" id="" value="" ng-model="userAccount.accountnum" placeholder="请输入开户帐号">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="" class="col-sm-3 control-label">开户银行</label>
+                            <div class="col-sm-8">
+                                <select class="form-control" ng-model="bankSelect" ng-options="obj.bank for obj in banks">
+                                      <option value="">开户银行</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="" class="col-sm-3 control-label">开户行所在地</label>
+                            <div class="col-sm-4">
+                                <select class="form-control" ng-model="bankprovAccount" ng-options="obj.name for obj in dataInit.division track by obj.id" ng-change="bankcityAccount;">
+                                    <option value="">开户行所在省</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+                                <select class="form-control" ng-model="bankcityAccount" ng-options="x.name for x in bankprovAccount.children track by x.id">
+                                    <option value="">开户行所在市</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="" class="col-sm-3 control-label">分支行</label>
+                            <div class="col-sm-8">
+                                <input class="form-control" type="text" name="" id="" value="" ng-model="userAccount.bankbranch" placeholder="请输入分支行">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="" class="col-sm-3 control-label">支付宝名称</label>
+                            <div class="col-sm-8">
+
+                                <h5 ng-bind="userAccount.alipayname"></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="" class="col-sm-3 control-label">支付宝帐号</label>
+                            <div class="col-sm-8">
+                                <input class="form-control" type="text" name="" id="" value="" ng-model="userAccount.alipay" placeholder="请输入电话">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+<!--panel-->

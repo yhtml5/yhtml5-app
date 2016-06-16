@@ -1,0 +1,16 @@
+<div class="" ng-controller="yhtml5.authentication">
+	<div class="container-fluid y-mt160 y-mb40">
+		<ul class="y-progress-step">
+			<li ng-class="{'active':isStep1}">
+				<span class="y-turn-blue">技术协议</span>
+			</li>
+			<li ng-class="{'active':isStep2}">
+				<span class="y-turn-blue">基本信息</span>
+			</li>
+			<li ng-class="{'active':isStep3}">
+				<span class="y-turn-blue">结算信息</span>
+			</li>
+		</ul>
+	</div>
+	<div ui-view="content"></div>
+</div>

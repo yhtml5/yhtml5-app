@@ -5,15 +5,14 @@
                 <h3>基本信息</h3>
             </div>
             <div class="col-sm-6 text-xs-right">
-                <button type="button" class="btn btn-default y-mt15 y-mr20" ng-click="userPersonFormTotal()" ng-show="userPersonUpdate">修改</button>
-                <button type="button" class="btn btn-default y-mt15 y-mr20" ng-click="userPersonFormSave()" ng-hide="userPersonSave">保存</button>
+                <button type="button" class="btn btn-default y-mt15 y-mr20">修改</button>
             </div>
         </div>
         <hr>
     </div>
     <div class="panel-body y-pd30 y-mt-30">
         <form action="" class="form-horizontal" name="myForm">
-            <fieldset ng-disabled="userPersonFormEnabled">
+            <fieldset disabled>
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
@@ -223,10 +222,41 @@
                         </h4>
                     </div>
 
-                    <link rel="import" href="../../components/upload-pic/upload-pic.html?__inline"/>
+                    <link rel="import" href="../../components/upload-pic/upload-pic.html?__inline" />
                 </div>
             </fieldset>
         </form>
+        <!--<div class="modal fade" y-modal="upload-pic" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header y-modal-header-default">
+                        <h3 class="y-mg0">上传图片
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </h3>
+                    </div>
+                    <div class="modal-body">
+                        <form name="myForm" class="form-horizontal y-mt15" action="" method="">
+                            <fieldset>
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label" for="">选择文件</label>
+                                    <div class="col-sm-8">
+                                        <input class="y-mt10" type="file" name="">
+                                        <p class="text-left y-mt10">模板文件下载：
+                                            <button type="button" class="btn btn-link">.xls文件</button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="modal-footer y-modal-footer-default">
+                        <button type="button" class="btn y-btn-blue center-block" y-open="accountTopayComplexBtn">下一步</button>
+                    </div>
+                </div>
+            </div>
+        </div>-->
     </div>
 </div>
 <!--panel-->
