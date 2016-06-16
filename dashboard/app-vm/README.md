@@ -40,7 +40,7 @@
 
 ### jQuery命名规范
    动词代表触发事件对象, 名词代表响应事件的实体, 用属性选择器获取内容
-   (尽量避免使用class属性当做操作dom的属性, id选择器仅当元素唯一时使用)
+   (尽量避免使用class属性选择器当做操作dom的节点, id选择器仅当元素唯一时使用)
    - [x] Event object: y-open="demoFormBtn"
    - [x] contant: y-modal="demoForm", y-tab="demo"
    - [x] get attribute: $('[y-open="demoFormBtn"], [y-modal="demoForm"], .y-open, #y-open')
