@@ -5,8 +5,8 @@
                 <h3>代付</h3>
             </div>
             <!--<div class="col-xs-6 col-sm-4 col-sm-pull-1 y-mt15">
-
             </div>-->
+
             <div class="col-xs-12 col-sm-3 col-sm-push-7 y-mt15">
                 <button type="button" class="btn y-btn-blue" y-open='accountTopayMoreBtn'>批量代付</button>
                 <button type="button" class="btn y-btn-blue" y-open='accountTopayCheckBtn'>复核</button>
@@ -247,7 +247,7 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header y-modal-header-default">
-                    <h3 class="y-mg0">结算明细
+                    <h3 class="y-mg0">复核
                         <button type="button" class="close" data-dismiss="modal">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -285,6 +285,12 @@
                             <thead>
                                 <tr>
                                     <th></th>
+                                    <th>
+                                        <label class="">
+                                             <input type="checkbox" id="inlineCheckbox1" value="option1">
+                                             <span class="y-ml2">全选</span>
+                                        </label>
+                                    </th>
                                     <th>发起时间</th>
                                     <th>姓名</th>
                                     <th>帐号</th>
@@ -306,6 +312,9 @@
                                             <span class="y-mr4 glyphicon glyphicon-plus"></span><span class="text">展开</span>
                                         </a>
                                     </td>
+                                    <td>
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1">
+                                    </td>
                                     <td>2011-11-11 11:11</td>
                                     <td>1417376255@qq.com</td>
                                     <td>yhtml5</td>
@@ -320,9 +329,9 @@
                                     <td>打款原因</td>
                                 </tr>
                                 <tr class="y-dp-n" y-modal="accountTopayComplexDetail">
-                                    <td>
-                                        <!--<span class="glyphicon glyphicon-minus"></span>-->
-                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
                                     <td>data</td>
                                     <td>data</td>
                                     <td>data</td>
@@ -341,7 +350,7 @@
                     </div>
                     <p class="text-info visible-sm">左右滑动显示完整的表格内容</p>
                     <uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" max-size="maxSize" class="" boundary-links="true" force-ellipses="true" previous-text="上一页" next-text="下一页" first-text="首页" last-text="末页"></uib-pagination>
-                    </div>
+                </div>
                 <div class="modal-footer y-modal-footer-default">
                     <button type="button" class="btn y-btn-blue">复核通过</button>
                     <button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
@@ -408,7 +417,7 @@
                     </form>
                 </div>
                 <div class="modal-footer y-modal-footer-default">
-                    <button type="button" class="btn y-btn-blue center-block" >下一步</button>
+                    <button type="button" class="btn y-btn-blue center-block">下一步</button>
                 </div>
             </div>
         </div>
@@ -419,7 +428,7 @@
         $("[y-modal='accountTopayMore']").modal('toggle')
         console.log("open accountTopayMore");
     });
-    $("[y-open='accountTopayComplexBtn']").click(function() {
+    $("[y-open='accountTopayComplexBtn'],[y-open='accountTopayNextBtn']").click(function() {
         $("[y-modal='accountTopayMore']").modal('hide')
         $("[y-modal='accountTopayComplex']").modal('show')
         console.log("open accountTopayComplex");
@@ -433,10 +442,10 @@
         $("[y-modal='accountTopayComplexDetail']").fadeToggle();
         console.log("open accountTopayComplexDetail")
     });
-    $("[y-open='accountTopayNextBtn']").click(function() {
-        $("[y-modal='accountTopayNext']").modal('toggle')
-        console.log("open accountTopayNext");
-    });
+    //  $("[y-open='accountTopayNextBtn']").click(function() {
+    //      $("[y-modal='accountTopayNext']").modal('toggle')
+    //      console.log("open accountTopayNext");
+    //  });
     $("[y-open='accountTopayCheckBtn']").click(function() {
         $("[y-modal='accountTopayCheck']").modal('show')
         console.log("open accountTopayCheck");

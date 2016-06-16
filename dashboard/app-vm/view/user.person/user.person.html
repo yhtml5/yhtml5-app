@@ -222,43 +222,8 @@
                             <button type="" class="btn btn-link">示例图片</button>
                         </h4>
                     </div>
-                    <div class="col-sm-4" ng-if="userInfo.companyType == 2">
-                        <div class="y-upload-img" ngf-select ng-model="picFile" name="file" accept="image/*" ngf-max-size="2MB" required ngf-model-invalid="errorFile">
-                            <h1 class="y-mt60" ng-show="myForm.file.$error.required"><small>请选择文件</small></h1>
-                            <!--<input type="text" name="userName" ng-model="username" size="31" required>
-                            <i ng-show="myForm.userName.$error.required">*required</i>-->
-                            <img class="img-responsive img-rounded" ngf-thumbnail="picFile">
-                            <p ng-show="myForm.file.$error.maxSize">文件大小超过{{errorFile.size / 1000000|number:1}}MB，最大支持2M</p>
-                        </div>
-                        <button class="btn btn-danger y-mt20" ng-click="picFile = null" ng-show="picFile">移除</button>
-                        <h4 class="y-fs16">文网文等辅助文件（非必要上传文件）
-                            <button type="button" class="btn btn-link">示例图片</button>
-                        </h4>
-                        <button class="center-block btn btn-info" ng-disabled="!myForm.$valid" ng-click="uploadPic(picFile)">Submit</button>
-                        <span class="progress" ng-show="picFile.progress >= 0">
-                            <div style="width:{{picFile.progress}}%" ng-bind="picFile.progress + '%'"></div>
-                        </span>
-                        <span ng-show="picFile.result">Upload Successful</span>
-                        <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
 
-                        <!--<form name="myForm" class="form-horizontal y-mt15" action="" method="">
-                            <fieldset>
-                                <div class="form-group">
-                                    <label class="col-sm-4 control-label" for="">付款文件</label>
-                                    <div class="col-sm-8">
-                                        <input class="form-group y-mt6 y-mlr0" type="file" ngf-select ng-model="picFile" name="file" accept="image/*" ngf-max-size="2MB" required ngf-model-invalid="errorFile">
-                                        <p class="text-left">模板文件下载：
-                                            <button type="button" class="btn btn-link">xls文件</button>
-                                        </p>
-                                        <p class="text-danger" ng-show="myForm.file.$error.required">请选择一个文件</p>
-                                        <p ng-show="myForm.file.$error.maxSize">File too large {{errorFile.size / 1000000|number:1}}MB: max 2M</p>
-                                        <button class="btn btn-danger" ng-click="picFile = null" ng-show="picFile">删除文件</button>
-                                    </div>
-                                </div>
-                            </fieldset>
-                        </form>-->
-
-                    </div>
+                    <link rel="import" href="../../components/upload-pic/upload-pic.html?__inline"/>
                 </div>
             </fieldset>
         </form>

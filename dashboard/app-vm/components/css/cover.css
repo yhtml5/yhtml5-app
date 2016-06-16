@@ -27,5 +27,11 @@ body {
 }
 
 .datetimepicker {
-   margin-top: 140px;
+    margin-top: 140px;
+}
+
+@media (min-width:992px) {
+    .modal-lg {
+        width: 1140px;
+    }
 }

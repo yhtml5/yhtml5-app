@@ -3,7 +3,7 @@
  *
  */
 'use strict';
-angular.module('yhtml5.nav', ['ui.bootstrap', 'ngAnimate', 'ui.router']) //可以不加ui模块？
+angular.module('yhtml5.nav', ['ui.bootstrap', 'ngAnimate', 'ui.router'])
     .controller('yhtml5.nav', function($scope, $http, $uibModal, $log) {
         $scope.items = [
             '极品飞车',
