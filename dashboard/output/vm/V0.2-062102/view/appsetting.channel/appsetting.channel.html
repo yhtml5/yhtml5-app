@@ -1,0 +1,230 @@
+<div class="panel">
+	<div class="panel-heading">
+		<h3 class="row">
+	        	<div class="col-sm-3">
+	            支付通道
+	        	</div>
+	        	<div class="col-sm-6 col-sm-push-3 text-xs-right">
+	           	<small>咨询电话: 0571-86800282</small>
+	        	</div>
+		</h3>
+		<hr>
+	</div>
+	<div class="panel-body">
+		<div class="table-responsive y-mt15">
+			<table class="table table-striped table-hover table-condensed table-bordered">
+				<thead>
+					<tr class="y-fs16">
+						<th class="text-xs-center">产品名称</th>
+						<th class="text-xs-center">费率</th>
+						<th class="text-xs-center">结算费</th>
+						<th class="text-xs-center">结算周期</th>
+						<th class="text-xs-center">操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="text-xs-center">支付宝扫码支付</td>
+						<td class="text-xs-center">3.5%</td>
+						<td>
+							<ul class="y-mb0">
+								<li>交易金额*0.5%; 单笔结算≤5万</li>
+								<li>最低2元/笔，最高100/笔</li>
+							</ul>
+						</td>
+						<td class="text-xs-center">T+1</td>
+						<td class="text-xs-center">
+							<button type="button" class="btn btn-link" ng-click="appsettingChannelAgreementOpen()">申请</button>
+						</td>
+					</tr>
+					<tr>
+						<td class="text-xs-center">充值卡支付</td>
+						<td class="text-xs-center">3.5%</td>
+						<td>
+							<ul class="y-mb0">
+								<li>交易金额*0.5%; 单笔结算≤5万</li>
+								<li>最低2元/笔，最高100/笔</li>
+							</ul>
+						</td>
+						<td class="text-xs-center">T+1</td>
+						<td class="text-xs-center">
+							<button type="button" class="btn btn-link text-danger" ng-click="appsettingChannelRechanrgecardOpen('lg')">查看</button>
+						</td>
+					</tr>
+					<tr>
+						<td class="text-xs-center">点卡支付</td>
+						<td class="text-xs-center">3.5%</td>
+						<td>
+							<ul class="y-mb0">
+								<li>交易金额*0.5%; 单笔结算≤5万</li>
+								<li>最低2元/笔，最高100/笔</li>
+							</ul>
+						</td>
+						<td class="text-xs-center">T+1</td>
+						<td class="text-xs-center">
+							<button type="button" class="btn btn-link text-danger" ng-click="appsettingChannelPointcardOpen('lg')">申请</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<script type="text/ng-template" id="appsettingChannelAgreement.html">
+		<div class="modal-header y-modal-header-default">
+			<h3 class="y-mg0">支付宝产品开通协议
+			    <button type="button" class="close" ng-click="cancel()">
+			        <span aria-hidden="true">&times;</span>
+		        </button>
+			</h3>
+		</div>
+		<div class="modal-body y-pt20">
+			<div class="text-xs-center">
+				<br> 支付宝协议
+				<br> 支付宝协议
+				<br> 支付宝协议
+			</div>
+		</div>
+		<div class="modal-footer y-modal-footer-default">
+			<div class="checkbox text-xs-center">
+				<label>
+	                <input type="checkbox">同意
+	        		    <span class="y-color-blue">《支付宝支付产品开通协议》</span>
+       	    	    </label>
+			</div>
+			<button type="button" class="btn y-btn-blue center-block">同意并开通</button>
+		</div>
+	</script>
+	<script type="text/ng-template" id="appsettingChannelRechanrgecard.html">
+		<div class="modal-header y-modal-header-default">
+			<h3 class="y-mg0">充值卡支付
+			    <button type="button" class="close" ng-click="cancel()">
+			        <span aria-hidden="true">&times;</span>
+		        </button>
+			</h3>
+		</div>
+		<div class="modal-body y-pt20">
+			<div class="table-responsive y-mt15">
+				<table class="table table-striped table-hover table-condensed table-bordered">
+					<thead>
+						<tr class="y-fs16">
+							<th class="text-xs-center">产品名称</th>
+							<th class="text-xs-center">费率</th>
+							<th class="text-xs-center">结算费</th>
+							<th class="text-xs-center">结算周期</th>
+							<th class="text-xs-center">开通情况</th>
+							<th class="text-xs-center">操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="text-xs-center">骏网一卡通支付</td>
+							<td class="text-xs-center">3.5%</td>
+							<td>
+								<ul class="y-mb0">
+									<li>交易金额*0.5%; 单笔结算≤5万</li>
+									<li>最低2元/笔，最高100/笔</li>
+								</ul>
+							</td>
+							<td class="text-xs-center">T+1</td>
+							<td class="text-xs-center y-color-blue">已开通</td>
+							<td class="text-xs-center">
+								<input type="checkbox" name="" id="" value="">
+							</td>
+						</tr>
+						<tr>
+							<td class="text-xs-center">骏网一卡通支付</td>
+							<td class="text-xs-center">3.5%</td>
+							<td>
+								<ul class="y-mb0">
+									<li>交易金额*0.5%; 单笔结算≤5万</li>
+									<li>最低2元/笔，最高100/笔</li>
+								</ul>
+							</td>
+							<td class="text-xs-center">T+1</td>
+							<td class="text-xs-center y-color-blue">已开通</td>
+							<td class="text-xs-center">
+								<input type="checkbox" name="" id="" value="">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="modal-footer y-modal-footer-default">
+			<div class="checkbox text-xs-center">
+				<label>
+	                <input type="checkbox">同意
+	        		    <span class="y-color-blue">《充值卡支付产品开通协议》</span>
+       	    	    </label>
+			</div>
+			<button type="button" class="btn y-btn-blue center-block">同意并开通</button>
+		</div>
+	</script>
+	<script type="text/ng-template" id="appsettingChannelPointcard.html">
+		<div class="modal-header y-modal-header-default">
+			<h3 class="y-mg0">点卡支付支付
+			    <button type="button" class="close" ng-click="cancel()">
+			        <span aria-hidden="true">&times;</span>
+		        </button>
+			</h3>
+		</div>
+		<div class="modal-body y-pt20">
+			<div class="table-responsive y-mt15">
+				<table class="table table-striped table-hover table-condensed table-bordered">
+					<thead>
+						<tr class="y-fs16">
+							<th class="text-xs-center">产品名称</th>
+							<th class="text-xs-center">费率</th>
+							<th class="text-xs-center">结算费</th>
+							<th class="text-xs-center">结算周期</th>
+							<th class="text-xs-center">开通情况</th>
+							<th class="text-xs-center">操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="text-xs-center">骏网一卡通支付</td>
+							<td class="text-xs-center">3.5%</td>
+							<td>
+								<ul class="y-mb0">
+									<li>交易金额*0.5%; 单笔结算≤5万</li>
+									<li>最低2元/笔，最高100/笔</li>
+								</ul>
+							</td>
+							<td class="text-xs-center">T+1</td>
+							<td class="text-xs-center text-danger">未开通</td>
+							<td class="text-xs-center">
+								<input type="checkbox" name="" id="" value="">
+							</td>
+						</tr>
+						<tr>
+							<td class="text-xs-center">骏网一卡通支付</td>
+							<td class="text-xs-center">3.5%</td>
+							<td>
+								<ul class="y-mb0">
+									<li>交易金额*0.5%; 单笔结算≤5万</li>
+									<li>最低2元/笔，最高100/笔</li>
+								</ul>
+							</td>
+							<td class="text-xs-center">T+1</td>
+							<td class="text-xs-center y-color-blue">已开通</td>
+							<td class="text-xs-center">
+								<input type="checkbox" name="" id="" value="">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="modal-footer y-modal-footer-default">
+			<div class="checkbox text-xs-center">
+				<label>
+	                <input type="checkbox">同意
+	        		    <span class="y-color-blue">《充值卡支付产品开通协议》</span>
+       	    	    </label>
+			</div>
+			<button type="button" class="btn y-btn-blue center-block">同意并开通</button>
+		</div>
+	</script>
+</div>
+<!--panel-->

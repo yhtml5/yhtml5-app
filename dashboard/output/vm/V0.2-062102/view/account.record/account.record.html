@@ -1,0 +1,132 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="row">
+            <div class="col-sm-2">
+                <h3>历史纪录</h3>
+            </div>
+            <div class="form-inline col-sm-6 col-sm-push-2 y-mt14">
+                <span class="y-fs16 y-mr10">创建时间:</span>
+                <input size="16" type="text" value="2016-06-07 20:00" readonly class="form_datetime form-control y-bg-fff">
+                <span>-</span>
+                <input size="16" type="text" value="2016-06-07 20:00" readonly class="form_datetime form-control y-bg-fff">
+            </div>
+            <div class="col-sm-3 col-sm-push-1 y-mt14">
+                <button class="btn y-btn-blue">导出</button>
+                <button class="btn y-btn-blue">刷新</button>
+            </div>
+        </div>
+        <!--row-->
+    </div>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table table-striped table-hover table-bordered y-ws-n y-table-md">
+                <thead>
+                    <tr>
+
+                        <th></th>
+                        <th>提现时间</th>
+                        <th>姓名</th>
+                        <th>帐号</th>
+                        <th>银行</th>
+                        <th>分行</th>
+                        <th>省份</th>
+                        <th>城市</th>
+                        <th>商家实付</th>
+                        <th>商家实收</th>
+                        <th>手续费</th>
+                        <th>状态</th>
+                        <th>种类</th>
+                        <th>处理时间</th>
+                        <th>出款通道</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="">
+                            <a href="#" onclick="javascript:return false" class="y-cl099fdd js-accountRecordDetail-btn">
+                                <span class="y-mr4 glyphicon glyphicon-plus"></span><span class="text">展开</span>
+                            </a>
+                        </td>
+                        <td>
+                            2011-11-11 11:11
+                        </td>
+                        <td>1417376255@qq.com</td>
+                        <td>yhtml5</td>
+                        <td>622786916148714</td>
+                        <td>中国银行</td>
+                        <td>下沙支行</td>
+                        <td>浙江省</td>
+                        <td class="text-primary">1,234,232</td>
+                        <td class="text-danger">2000.22</td>
+                        <td class="text-primary">5%</td>
+                        <td class="text-success">已结算</td>
+                        <td>提现</td>
+                        <td>2011-11-11 11:11</td>
+                        <td>支付宝</td>
+                        <td>
+                            <a href="#" onclick="javascript:return false" class="text-danger" data-toggle="modal" y-open="accountRecordDemoBtn">删除</a>
+                            <!--<button class="btn btn-link" type="button">
+                               详情
+                            </button>-->
+                        </td>
+                    </tr>
+                    <tr class="y-dp-n js-accountRecordDetail-con">
+                        <td></td>
+                        <td>
+                            <!--<span class="glyphicon glyphicon-minus"></span>-->
+                        </td>
+                        <td>data</td>
+                        <td>data</td>
+                        <td>data</td>
+                        <td>data</td>
+                        <td>data</td>
+                        <td>data</td>
+                        <td class="text-primary">data</td>
+                        <td class="text-danger">data</td>
+                        <td class="text-primary">data</td>
+                        <td class="text-success">data</td>
+                        <td>data</td>
+                        <td>data</td>
+                        <td>data</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="text-info visible-sm">左右滑动显示完整的表格内容</p>
+        <uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" max-size="maxSize" class="" boundary-links="true" force-ellipses="true" previous-text="上一页" next-text="下一页" first-text="首页" last-text="末页"></uib-pagination>
+    </div>
+
+    <!-- 用jquery重写弹窗 -->
+    <div class="modal fade" y-modal="accountRecordDemo" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h3 class="text-center">确认删除本条提示记录？</h3>
+                    <div class="modal-footer text-xs-center">
+                        <button type="button" class="btn btn-danger">确认</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(".form_datetime").datetimepicker({
+            language: 'zh-CN',
+            format: "yyyy-mm-dd hh:ii",
+            autoclose: true,
+            todayBtn: true,
+            minView: 1,
+            inline: true
+        });
+        $("[y-open='accountRecordDemoBtn']").click(function(){
+            $("[y-modal='accountRecordDemo']").modal('toggle')
+            console.log("open modal");
+        });
+        $('.js-accountRecordDetail-btn').click(function() {
+            $('.js-accountRecordDetail-con').fadeToggle();
+            console.log("click")
+        })
+    </script>

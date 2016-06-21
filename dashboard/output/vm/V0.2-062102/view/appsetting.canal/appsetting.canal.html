@@ -1,0 +1,153 @@
+<div class="panel" ng-controller="yhtml5.appsetting">
+	<div class="panel-heading">
+		<h3>渠道管理</h3>
+		<hr>
+	</div>
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="input-group">
+					<input type="text" class="form-control y-hl36" name="" id="" value="" placeholder="渠道号、渠道名称...">
+					<span class="input-group-btn">
+						<button type="button" class="btn btn-default">
+                            <i class="iconfont">&#xe611;</i>
+						</button>
+					</span>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<button type="button" class="btn btn-default">帮助文档</button>
+			</div>
+			<div class="col-sm-3 col-sm-push-3">
+				<button type="button" class="btn y-btn-blue" ng-click="appsettingCanalCreateOpen()">创建渠道</button>
+			</div>
+		</div>
+		<div class="table-responsive y-mt30">
+			<table class="table table-striped table-hover table-condensed table-bordered">
+				<thead>
+					<tr class="y-fs16">
+						<th class="text-xs-center">渠道号</th>
+						<th class="text-xs-center">邮箱</th>
+						<th class="text-xs-center">渠道名称</th>
+						<th class="text-xs-center">注册日期</th>
+						<th class="text-xs-center">最后登录时间</th>
+						<th class="text-xs-center">操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="text-xs-center">31234</td>
+						<td class="text-xs-center">google.com</td>
+						<td class="text-xs-center">机锋（渠道）</td>
+						<td class="text-xs-center">2016-2-1 10:20:30</td>
+						<td class="text-xs-center">2016-2-2 10:20:30</td>
+						<td class="text-xs-center">
+							<button type="button" class="btn btn-default" ng-click="appsettingCanalResetOpen('sm')">重置密码</button>
+							<button type="button" class="btn btn-default" ui-sref="payment">查看</button>
+							<button type="button" class="btn btn-danger" ng-click="smsConfirmOpen()">删除</button>
+						</td>
+					</tr>
+					<tr>
+						<td class="text-xs-center">31234</td>
+						<td class="text-xs-center">google.com</td>
+						<td class="text-xs-center">机锋（渠道）</td>
+						<td class="text-xs-center">2016-2-1 10:20:30</td>
+						<td class="text-xs-center">2016-2-2 10:20:30</td>
+						<td class="text-xs-center">
+							<button type="button" class="btn btn-default">重置密码</button>
+							<button type="button" class="btn btn-default">查看</button>
+							<button type="button" class="btn btn-danger">删除</button>
+						</td>
+					</tr>
+					<tr>
+						<td class="text-xs-center">31234</td>
+						<td class="text-xs-center">google.com</td>
+						<td class="text-xs-center">机锋（渠道）</td>
+						<td class="text-xs-center">2016-2-1 10:20:30</td>
+						<td class="text-xs-center">2016-2-2 10:20:30</td>
+						<td class="text-xs-center">
+							<button type="button" class="btn btn-default">重置密码</button>
+							<button type="button" class="btn btn-default">查看</button>
+							<button type="button" class="btn btn-danger">删除</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<script type="text/ng-template" id="appsettingCanalReset.html">
+		<div class="modal-header y-modal-header-default">
+			<h3 class="y-mg0">重置密码
+			    <button type="button" class="close" ng-click="cancel()">
+			        <span aria-hidden="true">&times;</span>
+		        </button>
+			</h3>
+		</div>
+		<div class="modal-body y-pt20">
+			<form class="form-horizontal" action="" method="">
+				<div class="form-group">
+					<label class="col-sm-5 control-label">新密码</label>
+					<div class="col-sm-6">
+						<input class="form-control" type="password" name="" id="" value="" />
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-5 control-label">确认密码</label>
+					<div class="col-sm-6">
+						<input class="form-control" type="text" name="" id="" value="" />
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="modal-footer y-modal-footer-default">
+			<button type="button" class="btn y-btn-blue center-block">确认</button>
+		</div>
+	</script>
+	<script type="text/ng-template" id="appsettingCanalCreate.html">
+		<div class="modal-header y-modal-header-default">
+			<h3 class="y-mg0">渠道添加
+			    <button type="button" class="close" ng-click="cancel()">
+			        <span aria-hidden="true">&times;</span>
+		        </button>
+			</h3>
+		</div>
+		<div class="modal-body y-pt20">
+			<form class="form-horizontal" action="" method="">
+				<div class="form-group">
+					<label class="col-sm-4 control-label">邮箱</label>
+					<div class="col-sm-6">
+						<input class="form-control" type="text" name="" id="" value="" placeholder="邮箱不能为空">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-4 control-label">密码</label>
+					<div class="col-sm-6">
+						<input class="form-control" type="password" name="" id="" value="" placeholder="请输入密码">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-4 control-label">确认密码</label>
+					<div class="col-sm-6">
+						<input class="form-control" type="password" name="" id="" value="" placeholder="请再输入密码">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-4 control-label">渠道名称</label>
+					<div class="col-sm-6">
+						<input class="form-control" type="password" name="" id="" value="" placeholder="请输入渠道名称">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-4 control-label">联系电话</label>
+					<div class="col-sm-6">
+						<input class="form-control" type="password" name="" id="" value="" placeholder="请输入联系电话">
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="modal-footer y-modal-footer-default">
+			<button type="button" class="btn y-btn-blue center-block">确认</button>
+		</div>
+	</script>
+</div>
+<!--panel-->
