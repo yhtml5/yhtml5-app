@@ -1,0 +1,3 @@
+console.log("%c AliPay %c Copyright \xa9 2004-%s", 'font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;font-size:64px;color:#00bbee;-webkit-text-fill-color:#00bbee;-webkit-text-stroke: 1px #00bbee;', "font-size:12px;color:#999999;", (new Date).getFullYear())
+console.log("%c " + t, "color:#333;font-size:16px;");
+console.log("We work hard to contribute our work back to the web, mobile, big data, & new technology.");
