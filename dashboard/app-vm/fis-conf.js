@@ -19,14 +19,17 @@ fis.match('/components/**/(iconfont.*)', {
     release: '${project.static}/iconfont/$1',
     url: '/iconfont/$1'
 });
+fis.match('{/components/**/*.css,/components/**/*.js}', {
+    release: '${project.static}/$&'
+});
 fis.match('/bower_components/**/(*.{js,css})', {
     release: '${project.static}/lib/$1'
 });
 fis.match('/bower_components/**/fonts/(**)', {
     release: '${project.static}/lib/$1'
 });
-fis.match('{/components/**/*.css,/components/**/*.js}', {
-    release: '${project.static}/$&'
+fis.match('/view/appsetting/appstting.ctrl.test.js' ,{
+    release: false
 });
 fis.match('{/map.json,fis-conf.*,/bower.json}', {
     release: '/config/$0'
@@ -34,7 +37,6 @@ fis.match('{/map.json,fis-conf.*,/bower.json}', {
 fis.match('/server/**', {
     release: '/config/$0'
 });
-
 /*************************打包规范*****************************/
 
 // 因为是纯前端项目，依赖不能自断被加载进来，所以这里需要借助一个 loader 来完成，
@@ -67,6 +69,15 @@ fis.match('{/static/**,/components/**/*.{png,gif,jpg,jpeg}}', {
 fis.match('{/static/**,/components/**/*.{png,gif,jpg,jpeg},/components/**/(iconfont.*)}', {
     domain: '.'
 });
+/*************************VM 版本*****************************/
+fis.media('vm')
+    .match('/view/appsetting/appstting.ctrl.js', {
+        release: false
+    })
+    .match('/view/appsetting/appstting.ctrl.test.js', {
+        release: true
+    })
+
 /*************************CDN规范*****************************/
 
 // optimize
