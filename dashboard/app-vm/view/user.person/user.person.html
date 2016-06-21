@@ -1,8 +1,14 @@
+<style>
+
+</style>
+
+
+
 <div class="panel">
     <div class="panel-heading">
         <div class="row">
             <div class="col-sm-6">
-                <h3>基本信息</h3>
+                <h3>基本信息1</h3>
             </div>
             <div class="col-sm-6 text-xs-right">
                 <button type="button" class="btn btn-default y-mt15 y-mr20">修改</button>
@@ -182,7 +188,24 @@
                     <div class="col-sm-4">
                         <img class="img-responsive img-rounded center-block y-wd60" src="../../components/public/css3-html5-js-logo.png">
                         <h4 class="y-fs16">证件照片
-						    <button type="" class="btn btn-link">示例图片</button>
+						    <button type="button" class="btn btn-link infopic">示例图片</button>
+
+
+                            <div class="modal fade" y-modal="infopic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-body" data-dismiss="modal">
+                                            <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+                                            <div style="padding: 20px">
+                                                <img src="scsfz.jpg" alt="我是图片" width="100%">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
 					    </h4>
                     </div>
                     <div class="col-sm-4">
@@ -267,6 +290,11 @@
         $("[y-modal='uploadPic']").modal('show')
         console.log("open uploadPic");
     });
+
+    $(".infopic").click(function () {
+        $("[y-modal='infopic']").modal('show');
+    });
+
     $(function() {
         $('#fileupload').fileupload({
             dataType: 'json',
