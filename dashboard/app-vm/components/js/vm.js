@@ -9,5 +9,4 @@ $(function() {
     $('.dropdown-menu li').click(function() {
         $('.j-pay-btn,.j-settlement,.j-channel,.j-settlement').text($(this).text());
     });
-    console.log("hello world")
 })
