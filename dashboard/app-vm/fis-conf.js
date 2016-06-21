@@ -3,7 +3,7 @@ fis.set('project.md5Length', 9);
 fis.set('project.md5Connector ', '_');
 fis.set('project.name', 'yhtml5');
 fis.set('project.static', '/static');
-fis.set('project.ignore', ['**/*.test.js', '*.psd', '.git/**', '/components/**', '/bower_components/**']);
+fis.set('project.ignore', ['**/*.test.*', '*.psd', '.git/**', '/components/**', '/bower_components/**']);
 
 /*************************目录规范*****************************/
 //fis.match('**.**', {

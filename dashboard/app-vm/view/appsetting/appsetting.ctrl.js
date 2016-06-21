@@ -1,35 +1,7 @@
 'use strict';
-angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
+angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate',])
     .controller('yhtml5.appsetting', function($scope, $state, $rootScope, $uibModal, $http, $interval) {
         $scope.rootUserApp = $rootScope.rootUserApp;
-        console.log("rootUserApp", $rootScope.rootUserApp);
-        // If freshen browser,I'll go to dashboard
-        $scope.goToApplist = function() {
-            if ($scope.rootUserApp == undefined) {
-                $state.go('dashboard');
-                console.log("I'll go to index")
-            }
-        };
-        $scope.goToApplist()
-        $http({
-            method: "get",
-            url: "http://admin.jubaobar.com/front/appsetting/channel/app/find.htm",
-            params: {
-                appId: "1482479002"
-            }
-        }).success(function(response) {
-            $scope.appsetting = response.data;
-        });
-        /** =============================== 银燕 应用信息 =============================== B**/
-        $http({
-            method: "post",
-            url: "http://admin.jubaobar.com/front/appemanage/appdetatls.htm",
-            params: {
-                id: 1
-            }
-        }).success(function(response) {
-            $scope.appInfo = response.data;
-        });
         $scope.appsettingInfoFormEnabled = true
         $scope.appsettingInfoUpdate = true
         $scope.appsettingInfoSave = true
@@ -43,27 +15,6 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
             $scope.appsettingInfoFormEnabled = true
             $scope.appsettingInfoUpdate = true
             $scope.appsettingInfoSave = true
-            $http({
-                method: "post",
-                url: "http://admin.jubaobar.com/front/appemanage/editappdetatls.htm",
-                params: {
-                    id: 1,
-                    appType: $scope.appInfo.appType,
-                    appName: $scope.appInfo.appName,
-                    appUrl: $scope.appInfo.appUrl,
-                    signature: $scope.appInfo.signature,
-                    appPackage: $scope.appInfo.appPackage,
-                    bundleId: $scope.appInfo.bundleId,
-                    webIcp: $scope.appInfo.webIcp
-                }
-            }).success(function(res) {
-                $scope.savingBase = false;
-                if (res.resultCode == 0) {
-                    $scope.app.proxy_base_objectid = res.objectid;
-                    $scope.view.state = $scope.view.stateMachine["fullfill_base"];
-                    $anchorScroll();
-                }
-            })
             var modalInstance = $uibModal.open({
                 animation: $scope.animationsEnabled,
                 backdrop: 'static',
@@ -72,38 +23,10 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
                 size: size
             })
         };
-        /** =============================== 银燕 技术对接 =============================== B**/
         $scope.appApiInformUrlUpdate = true;
         $scope.appApiInformUrlSave = true;
         $scope.appApiRepayUrlUpdate = true;
         $scope.appApiRepayUrlSave = true;
-        $http({
-            method: "post",
-            url: "http://admin.jubaobar.com/front/appsetting/api/info.htm",
-            params: {
-                id: 31470
-            }
-        }).success(function(response) {
-            if (response.result == '0') {
-                $scope.appApi = response.data;
-                if ($scope.appApi.callBackURL == '' || $scope.appApi.callBackURL == null) {
-                    $scope.appApiInformUrlUpdate = false;
-                    $scope.appApiInformUrlSave = true;
-                } else {
-                    $scope.appApiInformUrlUpdate = true;
-                    $scope.appApiInformUrlSave = false;
-                }
-                if ($scope.appApi.repeatPayURL == '' || $scope.appApi.repeatPayURL == null) {
-                    $scope.appApiRepayUrlUpdate = false;
-                    $scope.appApiRepayUrlSave = true;
-                } else {
-                    $scope.appApiRepayUrlUpdate = true;
-                    $scope.appApiRepayUrlSave = false;
-                }
-            }
-        });
-        /** =============================== 银燕 技术对接 =============================== E**/
-        // ========== #appsetting/api ==========
         $scope.appsettingApiPasswordOpen = function(size) {
             var modalInstance = $uibModal.open({
                 animation: $scope.animationsEnabled,
@@ -114,26 +37,23 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
             })
         }
         $scope.appsettingApiTestOpen = function(size) {
-                var modalInstance = $uibModal.open({
-                    animation: $scope.animationsEnabled,
-                    backdrop: 'static',
-                    templateUrl: 'appsettingApiTest.html',
-                    controller: 'appsettingApiTestCtrl',
-                    size: size
-                })
-            }
-            /** =============================== 银燕 应用信息 =============================== E**/
-            /** =============================== 银燕 删除应用 =============================== B**/
+            var modalInstance = $uibModal.open({
+                animation: $scope.animationsEnabled,
+                backdrop: 'static',
+                templateUrl: 'appsettingApiTest.html',
+                controller: 'appsettingApiTestCtrl',
+                size: size
+            })
+        };
         $scope.appsettingDeleteOpen = function(size) {
-                var modalInstance = $uibModal.open({
-                    animation: $scope.animationsEnabled,
-                    backdrop: 'static',
-                    templateUrl: 'appsettingDeleteForm.html',
-                    controller: 'appsettingDeleteCtrl',
-                    size: size
-                })
-            }
-            /** =============================== 银燕 删除应用 =============================== E**/
+            var modalInstance = $uibModal.open({
+                animation: $scope.animationsEnabled,
+                backdrop: 'static',
+                templateUrl: 'appsettingDeleteForm.html',
+                controller: 'appsettingDeleteCtrl',
+                size: size
+            })
+        };
         $scope.animationsEnabled = true;
         $scope.appsettingCanalResetOpen = function(size) {
             var modalInstance = $uibModal.open({
@@ -180,17 +100,15 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
                 size: size
             })
         };
-        /** Writed by 银燕 应用通知地址我 */
         $scope.appsettingApiInformUrlOpen = function(size) {
-                var modalInstance = $uibModal.open({
-                    animation: $scope.animationsEnabled,
-                    backdrop: 'static',
-                    templateUrl: 'appsettingApiInformUrl.html',
-                    controller: 'appsettingApiInformUrlCtrl',
-                    size: size
-                })
-            }
-            /** Writed by 银燕 重新支付地址 */
+            var modalInstance = $uibModal.open({
+                animation: $scope.animationsEnabled,
+                backdrop: 'static',
+                templateUrl: 'appsettingApiInformUrl.html',
+                controller: 'appsettingApiInformUrlCtrl',
+                size: size
+            })
+        }
         $scope.appsettingApiRepayUrlOpen = function(size) {
             var modalInstance = $uibModal.open({
                 animation: $scope.animationsEnabled,
@@ -210,7 +128,6 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
             })
         }
     })
-    /** Writed by 银燕 删除应用 */
     .controller('appsettingDeleteCtrl', function($scope, $http, $interval, $uibModalInstance, $uibModal, $state) {
         $scope.appDel = {};
         /** ====================== 获取验证码 ======================= B**/
@@ -271,14 +188,12 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
                 }).error(function(res) {
                     console.log("保存失败")
                 })
-            }
-            /** ======================= 删除应用 ======================= E**/
-        $scope.cancel = function() {
+            };
+            $scope.cancel = function() {
             $uibModalInstance.dismiss('cancel');
         }
     })
-    /** Writed by 银燕 应用通知地址 */
-    .controller('appsettingApiInformUrlCtrl', function($scope, $http, $uibModalInstance, $uibModal) {
+     .controller('appsettingApiInformUrlCtrl', function($scope, $http, $uibModalInstance, $uibModal) {
         $scope.appsettingApiInformUrlSave = function(size) {
             $http({
                 method: "post",
@@ -305,7 +220,6 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
             $uibModalInstance.dismiss('cancel');
         }
     })
-    /** Writed by 银燕 重新支付地址 */
     .controller('appsettingApiRepayUrlCtrl', function($scope, $http, $uibModalInstance, $uibModal) {
         $scope.appsettingApiRepayUrlSave = function(size) {
             $http({
@@ -332,7 +246,6 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
             $uibModalInstance.dismiss('cancel');
         }
     })
-    // ========= #appsetting/api ==========
     .controller('appsettingApiPasswordCtrl', function($scope, $http, $uibModalInstance, $uibModal) {
         $http({
             method: "post",

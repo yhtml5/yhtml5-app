@@ -19,7 +19,6 @@ angular.module('yhtml5.appList', ['ui.bootstrap', 'ngAnimate'])
             $scope.userPersonFormEnabled = true;
             $scope.userPersonUpdate = true;
             $scope.userPersonSave = true;
-            console.log("应用信息保存成功");
             $uibModalInstance.dismiss('cancel');
             $state.reload('dashboard');
         };
