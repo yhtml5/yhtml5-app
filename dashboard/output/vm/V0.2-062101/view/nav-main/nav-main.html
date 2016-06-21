@@ -1,0 +1,116 @@
+<nav class="navbar y-navbar-info navbar-fixed-top" ng-controller="yhtml5.nav">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+            <a class="navbar-brand y-header-logo" href="#" onclick="javascript:return false;" ui-sref="dashboard">
+                <img src="data:image/png;base64,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">
+            </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse y-mt15" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav text-center" role="tablist">
+                <li role="presentation" class="active" ui-sref-active="active" ui-sref="dashboard">
+                    <a href="###" onclick="javascript:return false;">首页</a></li>
+                <li role="presentation" ui-sref-active="active" ui-sref="account.withdraw">
+                    <a href="###" onclick="javascript:return false;">结算管理</a>
+                </li>
+                <li class="y-ml2" role="presentation">
+                    <a href="###" onclick="javascript:return false;" ng-click="open()">帮助</a>
+                </li>
+            </ul>
+            <a class="nav navbar-brand navbar-right y-header-close" href="#" onclick="javascript:return false;" ng-click="toggle()">
+                <i class="iconfont">&#xe608;</i>
+            </a>
+            <form class="navbar-form pull-right" role="search" action="" method="">
+                <div class="input-group hidden-sm">
+    <span class="input-group-btn" uib-dropdown is-open="status.isopen">
+    <button id="single-button" type="button" class="btn btn-default y-mr-2" uib-dropdown-toggle ng-disabled="disabledDemo">
+        付款方&nbsp;<span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+        <li role="menuitem"><a ui-sref="###">商户订单号</a></li>
+        <li role="menuitem"><a ui-sref="###">聚宝订单号</a></li>
+        <li role="menuitem"><a ui-sref="###">付款方</a></li>
+    </ul>
+    </span>
+    <input type="text" class="form-control" id="" value="" placeholder="付款方名称、订单号">
+    <span class="input-group-btn">
+        <button class="btn btn-default" type="button">
+           <i class="iconfont y-fs14">&#xe611;</i>
+        </button>
+    </span>
+</div>
+            </form>
+            <div class="y-card-nav" ng-hide="userCenter">
+	<p>1417376255@qq.com</p>
+	<!--<button class="btn btn-success">已认证</button>-->
+	<button class="btn btn-danger" ui-sref="authentication.agreement">认证中</button>
+	<div class="">
+		<a href="###" ui-sref="user.person">我的账户</a>丨<a href="###">退出</a>
+	</div>
+</div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+    <script type="text/ng-template" id="helpCenter.html">
+	<div class=" y-help-center d-help-center" role="dialog" aria-labelledby="help-center">
+		<div class="modal-header y-modal-header-default">
+			<button type="button" class="close" ng-click="cancel()">
+			    <span aria-hidden="true">&times;</span>
+			</button>
+			<h3 class="modal-title" id="myModalLabel">帮助中心</h3>
+		</div>
+		<div class="modal-body">
+			<div class="list-group">
+				<a href="#" class="list-group-item active row">
+					<div class="col-xs-3 col-xs-push-1">
+						<i class="iconfont">&#xe604;</i>
+					</div>
+					<div class="col-xs-9 col-xs-pull-1">
+						Android SDK demo下载
+					</div>
+				</a>
+				<a href="#" class="list-group-item row">
+					<div class="col-xs-3 col-xs-push-1">
+						<i class="iconfont">&#xe616;</i>
+					</div>
+					<div class="col-xs-9 col-xs-pull-1">
+						IOS SDK demo下载
+					</div>
+				</a>
+				<a href="#" class="list-group-item row">
+					<div class="col-xs-3 col-xs-push-1">
+						<i class="iconfont">&#xe61b;</i>
+					</div>
+					<div class="col-xs-9 col-xs-pull-1">
+						pc/wap demo下载
+					</div>
+				</a>
+				<a href="#" class="list-group-item row">
+					<div class="col-xs-3 col-xs-push-1">
+						<i class="iconfont">&#xe618;</i>
+					</div>
+					<div class="col-xs-9 col-xs-pull-1">
+						渠道管理帮助文档
+					</div>
+				</a>
+				<a href="#" class="list-group-item row">
+					<div class="col-xs-3 col-xs-push-1">
+						<i class="iconfont">&#xe615;</i>
+					</div>
+					<div class="col-xs-9 col-xs-pull-1">
+						在线支持 4000385908
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</script>
+</nav>
