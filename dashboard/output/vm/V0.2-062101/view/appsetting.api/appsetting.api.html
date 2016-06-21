@@ -1,0 +1,231 @@
+<div class="panel">
+    <div class="panel-heading row">
+        <div class="col-sm-6">
+            <h3>应用信息</h3>
+        </div>
+    </div>
+    <hr>
+    <div class="panel-body y-pd30">
+        <!--根据条件显示 demo-->
+        <input class="" type="text" ng-model="appTypeDemo" placeholder="请输入1,2,3">
+        <div class="row" ng-if="appTypeDemo == 1">
+            <div class="col-sm-6">
+                <h4>客户端技术接入包</h4>
+            </div>
+            <div class="col-sm-6 col-sm-pull-1 text-xs-right">
+                <button type="button" class="btn btn-default btn-lg">下载</button>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-6">
+                <h4>技术接入包</h4>
+            </div>
+            <div class="col-sm-6 col-sm-pull-1 text-xs-right">
+                <button type="button" class="btn btn-default btn-lg">JAVA</button>
+                <button type="button" class="btn btn-default btn-lg">PHP</button>
+                <button type="button" class="btn btn-default btn-lg">.NET/C#</button>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-6">
+                <h4>商户号（PARTNER_ID）</h4>
+                <p>对接必需字段，是商户身份标志，具有唯一性</p>
+            </div>
+            <div class="col-sm-6 text-xs-right">
+                <h4 ng-bind="appApi.partnerId"></h4>
+                <p>测试号：test_25061428331481887536</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-6">
+                <h4>应用号（APP_ID）</h4>
+                <p>对接必需字段，是应用的身份标志，具有唯一性</p>
+            </div>
+            <div class="col-sm-6 text-xs-right">
+                <h4 ng-bind="appApi.appId"></h4>
+                <p>测试号：test_8un5iPyH4K085O8u</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-6">
+                <h4>商户密钥</h4>
+                <p>查看商户公钥、私钥，商户密钥用来验证您发送到聚宝云计费的订单信息、支付结果通知真实与否等信息</p>
+            </div>
+            <div class="col-sm-3  col-sm-push-3 text-xs-center">
+                <button class="btn btn-default" ng-click="appsettingApiPasswordOpen()">查看</button>
+                <br>
+                <button class="btn btn-link" ng-click="appsettingApiTestOpen()">测试密钥</button>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-6">
+                <h4>通知地址</h4>
+                <p>设置支付结果通知地址，以及支付成功后页面回跳地址</p>
+            </div>
+            <div class="col-sm-3  col-sm-push-3 text-xs-center">
+                <button class="btn btn-default" ng-click="appsettingApiInformUrlOpen()" ng-show="appApiInformUrlUpdate">修改</button>
+                <button class="btn btn-default" ng-click="appsettingApiInformUrlOpen()" ng-show="appApiInformUrlSave">设置</button>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-6">
+                <h4>重新支付地址</h4>
+                <p>当用户支付失败时，点击“重新支付”时跳转到的支付页面</p>
+            </div>
+            <div class="col-sm-3  col-sm-push-3 text-xs-center">
+                <button class="btn btn-default" ng-click="appsettingApiRepayUrlOpen()" ng-show="appApiRepayUrlUpdate">修改</button>
+                <button class="btn btn-default" ng-click="appsettingApiRepayUrlOpen()" ng-show="appApiRepayUrlSave">设置</button>
+            </div>
+        </div>
+        <hr ng-if="appApi.appType == 1 || appApi.appType == 2">
+    </div>
+    <script type="text/ng-template" id="appsettingApiPassword.html">
+        <div class="modal-header y-modal-header-default">
+            <h3 class="y-mg0 center-block">商户私钥
+                <button type="button" class="close" ng-click="cancel()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </h3>
+        </div>
+        <div class="modal-body y-pt20">
+            <div class="row">
+                <div class="col-sm-3 col-sm-push-1 text-xs-center">
+                    <h4>私钥：</h4>
+                    <h4><small>(PHP .NET)</small></h4>
+                </div>
+                <div class="col-sm-2">
+                    <button type="button" class="btn btn-default y-mt10 center-block" ng-click="appsettingApiPasswordDownload('private')">下载</button>
+                </div>
+                <div class="col-sm-3 col-sm-push-1 text-xs-center">
+                    <h4>私钥：</h4>
+                    <h4><small>(JAVA)</small></h4>
+                </div>
+                <div class="col-sm-2">
+                    <button type="button" class="btn btn-default y-mt10 center-block" ng-click="appsettingApiPasswordDownload('pkcsPrivate')">下载</button>
+                </div>
+            </div>
+            <div class="row y-mt20">
+                <div class="form-group">
+                    <label for="" class="col-sm-3 col-sm-push-1 control-label text-right">静态密码：</label>
+                    <div class="col-sm-4 col-sm-push-1">
+                        <input class="form-control" type="text" readonly name="" id="" ng-model="staticPassword" value="">
+                    </div>
+                    <div class="col-sm-2 col-sm-push-1">
+                        <button type="button" class="btn btn-default center-block">复制</button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row y-mt20">
+                <div class="col-sm-10 col-sm-push-1">
+                    <p><b>公钥：</b><span class="text-danger">非对称加密中，直接公布给对方的密钥串，主要用于加密</span></p>
+                    <p><b>私钥：</b><span class="text-danger">非对称加密中，只留给自己用的密钥串，主要用于解密和数字签名</span></p>
+                    <p><b>静态密码：</b><span class="text-danger">在加密中混入静态密码串，确保数据的双重安全</span></p>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script type="text/ng-template" id="appsettingApiTest.html">
+        <div class="modal-header y-modal-header-default">
+            <h3 class="y-mg0 center-block">测试私钥
+                <button type="button" class="close" ng-click="cancel()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </h3>
+        </div>
+        <div class="modal-body y-pt20">
+            <div class="row">
+                <div class="col-sm-3 col-sm-push-1 text-xs-center">
+                    <h4>私钥</h4>
+                    <h4><small>(PHP .NET)</small></h4>
+                </div>
+                <div class="col-sm-2">
+                    <button type="button" class="btn btn-default y-mt10 center-block">下载</button>
+                </div>
+                <div class="col-sm-3 col-sm-push-1 text-xs-center">
+                    <h4>私钥</h4>
+                    <h4><small>(JAVA)</small></h4>
+                </div>
+                <div class="col-sm-2">
+                    <button type="button" class="btn btn-default y-mt10 center-block">下载</button>
+                </div>
+            </div>
+            <div class="row y-mt20">
+                <div class="form-group">
+                    <label for="" class="col-sm-3 col-sm-push-1 control-label text-right">静态密码：</label>
+                    <div class="col-sm-4 col-sm-push-1">
+                        <input class="form-control" type="text" name="" id="" value="asdfghjklqweryuio">
+                    </div>
+                    <div class="col-sm-2 col-sm-push-1">
+                        <button type="button" class="btn btn-default center-block">下载</button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row y-mt20">
+                <div class="col-sm-10 col-sm-push-1">
+                    <p><b>公钥：</b><span class="text-danger">非对称加密中，直接公布给对方的密钥串，主要用于加密</span></p>
+                    <p><b>私钥：</b><span class="text-danger">非对称加密中，只留给自己用的密钥串，主要用于解密和数字签名</span></p>
+                    <p><b>静态密码：</b><span class="text-danger">在加密中混入静态密码串，确保数据的双重安全</span></p>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script type="text/ng-template" id="appsettingApiInformUrl.html">
+        <div class="modal-header y-modal-header-default">
+            <h3 class="y-mg0 center-block">通知地址
+			    <button type="button" class="close" ng-click="cancel()">
+			        <span aria-hidden="true">&times;</span>
+		        </button>
+			</h3>
+        </div>
+        <div class="modal-body y-pt20">
+            <form class="form-horizontal" action="" method="">
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">通知地址：</label>
+                    <div class="col-sm-7">
+                        <input class="form-control" type="text" name="" id="" value="" ng-model="callbackurl" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">页面回调地址：</label>
+                    <div class="col-sm-7">
+                        <input class="form-control" type="text" name="" id="" value="" ng-model="returnurl" />
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer y-modal-footer-default">
+            <button type="button" class="btn y-btn-blue center-block" ng-click="appsettingApiInformUrlSave()">确认</button>
+        </div>
+    </script>
+    <script type="text/ng-template" id="appsettingApiRepayUrl.html">
+        <div class="modal-header y-modal-header-default">
+            <h3 class="y-mg0 center-block">重新支付地址
+			    <button type="button" class="close" ng-click="cancel()">
+			        <span aria-hidden="true">&times;</span>
+		        </button>
+			</h3>
+        </div>
+        <div class="modal-body y-pt20">
+            <form class="form-horizontal" action="" method="">
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">重新支付地址：</label>
+                    <div class="col-sm-7">
+                        <input class="form-control" type="text" name="" id="" value="" ng-model="payurl" />
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer y-modal-footer-default">
+            <button type="button" class="btn y-btn-blue center-block" ng-click="appsettingApiRepayUrlSave()">确认</button>
+        </div>
+    </script>
+</div>
+<!--panel-->
