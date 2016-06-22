@@ -1,4 +1,3 @@
-//@require factory.js
 'use strict';
 angular.module('factory', [])
     .factory('Channels',function(){
