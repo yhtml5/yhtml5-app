@@ -152,28 +152,6 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
         }
         $scope.appDel = {};
         $scope.appsettingDeleteConfirm = function(size) {
-            $http({
-                method: "post",
-                url: "http://admin.jubaobar.com/front/app/delete.htm",
-                params: {
-                    id: 158,
-                    securityCode: $scope.appDel.password,
-                    smsCode: $scope.appDel.authCode
-                }
-            }).success(function(res) {
-                console.log("删除成功");
-                $uibModalInstance.dismiss('cancel');
-                $state.reload('dashboard');
-                var modalInstance = $uibModal.open({
-                    animation: $scope.animationsEnabled,
-                    backdrop: 'static',
-                    templateUrl: 'noteSimple.html',
-                    controller: 'appsettingInfoNoteSimpleCtrl',
-                    size: size
-                })
-            }).error(function(res) {
-                console.log("保存失败")
-            })
         };
         $scope.cancel = function() {
             $uibModalInstance.dismiss('cancel');
@@ -208,29 +186,12 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
         }
     })
     .controller('appsettingApiPasswordCtrl', function($scope, $http, $uibModalInstance, $uibModal) {
-        $http({
-            method: "post",
-            url: "http://admin.jubaobar.com/front/appsetting/api/pk/info.htm",
-            params: {}
-        }).success(function(response) {
-            if (response.result == '0') {
-                $scope.staticPassword = response.data.staticPassword;
-            }
-        });
-        $scope.cancel = function() {
+         $scope.cancel = function() {
             $uibModalInstance.dismiss('cancel');
         }
 
         $scope.appsettingApiPasswordDownload = function(type) {
-            $http({
-                method: "post",
-                url: "http://admin.jubaobar.com/front/appsetting/api/pk/download.htm",
-                params: {
-                    keyType: type
-                }
-            }).success(function(data, status, headers) {
 
-            });
         }
     })
     .controller('appsettingApiTestCtrl', function($scope, $uibModalInstance) {
@@ -271,9 +232,8 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
         }
     })
     .controller('appsettingInfoChannelCtrl', function($scope, $uibModalInstance, Channels) {
-        $scope.data = Channels;
-        $scope.channels = $scope.data.channels;
-        console.log("data.channels : ", $scope.channels);
+        console.log('Channels:',Channels)
+        $scope.channels = Channels;
         $scope.cancel = function() {
             $uibModalInstance.dismiss('cancel');
         }

@@ -4,6 +4,7 @@ angular.module('yhtml5.appList', ['ui.bootstrap', 'ngAnimate'])
         $scope.animationsEnabled = true;
         $scope.open = function(size) {
             var modalInstance = $uibModal.open({
+                backdrop: 'static',
                 animation: $scope.animationsEnabled,
                 templateUrl: 'appList-add.html',
                 controller: 'ModalInstanceCtrl',

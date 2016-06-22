@@ -4,7 +4,6 @@ fis.set('project.md5Connector ', '_');
 fis.set('project.name', 'yhtml5');
 fis.set('project.static', '/static');
 fis.set('project.ignore', ['**/*.test.*', '*.psd', '.git/**', '/components/**', '/bower_components/**']);
-
 /*************************目录规范*****************************/
 //fis.match('**.**', {
 //  useCache: false

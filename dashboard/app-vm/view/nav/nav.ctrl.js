@@ -30,6 +30,7 @@ angular.module('yhtml5.nav', ['ui.bootstrap', 'ngAnimate', 'ui.router'])
         $scope.animationsEnabled = true;
         $scope.open = function(size) {
             var modalInstance = $uibModal.open({
+                backdrop: 'static',
                 animation: $scope.animationsEnabled,
                 templateUrl: 'helpCenter.html',
                 controller: 'ModalInstanceCtrl',
