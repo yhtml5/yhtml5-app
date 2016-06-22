@@ -1,14 +1,13 @@
 <style>
-
+    .popover-width{
+        width: 245px;
+    }
 </style>
-
-
-
 <div class="panel">
     <div class="panel-heading">
         <div class="row">
             <div class="col-sm-6">
-                <h3>基本信息1</h3>
+                <h3>基本信息</h3>
             </div>
             <div class="col-sm-6 text-xs-right">
                 <button type="button" class="btn btn-default y-mt15 y-mr20">修改</button>
@@ -182,16 +181,14 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="row y-mt60 y-mb40 text-xs-center">
                     <div class="col-sm-4">
-                        <!--<img class="img-responsive img-rounded center-block y-wd60" src="../../components/public/css3-html5-js-logo.png">-->
-                        <div class="y-upload-img" y-open="uploadPic">
+                        <div class="y-upload-img popover-one" y-open="uploadPic" data-toggle="popover" data-content="<ul class='popover-width'><li>身份证上的<span class='text-danger'>所有信息清晰可见</span>，必须能<span class='text-danger'>看清证件号码</span>。</li><li>照片需免冠，建议未化妆，手持证见人的<span class='text-danger'>五官清晰可见</span>。</li><li>照片内容真实有效，不得做任何修改</li><li>支持<span class='text-danger'>.jpg .jpeg .bmp .gif</span>格式照片大小<span class='text-danger'>不超过2M</span></li></ul>">
                             <h1 class="y-mt60"><small>请选择文件</small></h1>
                         </div>
                         <h4 class="y-fs16">证件照片
-						    <button type="button" class="btn btn-link infopicone">示例图片</button>
-
-
+						    <button type="button" class="btn btn-link" y-click="infopicone">示例图片</button>
                             <div class="modal fade" y-modal="infopicone" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
@@ -201,17 +198,14 @@
                                     </div>
                                 </div>
                             </div>
-
-
 					    </h4>
                     </div>
                     <div class="col-sm-4">
-                        <!--<img class="img-responsive img-rounded center-block y-wd60" src="../../components/public/css3-html5-js-logo.png">-->
-                        <div class="y-upload-img" y-open="uploadPic">
+                        <div class="y-upload-img popover-two" y-open="uploadPic" data-toggle="popover" data-content="<ul class='popover-width'><li>支持<span class='text-danger'>.jpg .jpeg .bmp .gif</span>格式照片</li><li>大小不超过<span class='text-danger'>2M</span></li></ul>">
                             <h1 class="y-mt60"><small>请选择文件</small></h1>
                         </div>
                         <h4 class="y-fs16">身份证正面
-						   <button type="button" class="btn btn-link infopictwo">示例图片</button>
+						   <button type="button" class="btn btn-link" y-click="infopictwo">示例图片</button>
                             <div class="modal fade" y-modal="infopictwo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
@@ -222,14 +216,14 @@
                                 </div>
                             </div>
 					    </h4>
+
                     </div>
                     <div class="col-sm-4">
-                        <!--<img class="img-responsive img-rounded center-block y-wd60" src="../../components/public/css3-html5-js-logo.png">-->
-                        <div class="y-upload-img" y-open="uploadPic">
+                        <div class="y-upload-img popover-two" y-open="uploadPic" data-toggle="popover" data-placement="left" data-content="<ul class='popover-width'><li>支持<span class='text-danger'>.jpg .jpeg .bmp .gif</span>格式照片</li><li>大小不超过<span class='text-danger'>2M</span></li></ul>">
                             <h1 class="y-mt60"><small>请选择文件</small></h1>
                         </div>
                         <h4 class="y-fs16">身份证反面
-					     	<button type="button" class="btn btn-link infopicthree">示例图片</button>
+					     	<button type="button" class="btn btn-link" y-click="infopicthree">示例图片</button>
                             <div class="modal fade" y-modal="infopicthree" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
@@ -243,11 +237,11 @@
                     </div>
                     <div class="col-sm-4">
                         <!--<img class="img-responsive img-rounded center-block y-wd60" src="../../components/public/css3-html5-js-logo.png">-->
-                        <div class="y-upload-img" y-open="uploadPic">
+                        <div class="y-upload-img popover-two" y-open="uploadPic" data-toggle="popover" data-content="<ul class='popover-width'><li>支持<span class='text-danger'>.jpg .jpeg .bmp .gif</span>格式照片</li><li>大小不超过<span class='text-danger'>2M</span></li></ul>">
                             <h1 class="y-mt60"><small>请选择文件</small></h1>
                         </div>
                         <h4 class="y-fs16">营业执照
-                            <button type="button" class="btn btn-link infopicfour">示例图片</button>
+                            <button type="button" class="btn btn-link" y-click="infopicfour">示例图片</button>
                             <div class="modal fade" y-modal="infopicfour" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
@@ -260,12 +254,11 @@
                         </h4>
                     </div>
                     <div class="col-sm-4">
-                        <!--<img class="img-responsive img-rounded center-block y-wd60" src="../../components/public/css3-html5-js-logo.png">-->
-                        <div class="y-upload-img" y-open="uploadPic">
+                        <div class="y-upload-img popover-two" y-open="uploadPic" data-toggle="popover" data-content="<ul class='popover-width'><li>支持<span class='text-danger'>.jpg .jpeg .bmp .gif</span>格式照片</li><li>大小不超过<span class='text-danger'>2M</span></li></ul>">
                             <h1 class="y-mt60"><small>请选择文件</small></h1>
                         </div>
                         <h4 class="y-fs16">税务登记证
-                            <button type="button" class="btn btn-link infopicfive">示例图片</button>
+                            <button type="button" class="btn btn-link" y-click="infopicfive">示例图片</button>
                             <div class="modal fade" y-modal="infopicfive" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
@@ -279,11 +272,11 @@
                     </div>
                     <div class="col-sm-4">
                         <!--<img class="img-responsive img-rounded center-block y-wd60" src="../../components/public/css3-html5-js-logo.png">-->
-                        <div class="y-upload-img" y-open="uploadPic">
+                        <div class="y-upload-img popover-two" y-open="uploadPic" data-toggle="popover" data-placement="left" data-content="<ul class='popover-width''><li>支持<span class='text-danger'>.jpg .jpeg .bmp .gif</span>格式照片</li><li>大小不超过<span class='text-danger'>2M</span></li></ul>">
                             <h1 class="y-mt60"><small>请选择文件</small></h1>
                         </div>
                         <h4 class="y-fs16">组织结构代码证
-                            <button type="button" class="btn btn-link infopicsix">示例图片</button>
+                            <button type="button" class="btn btn-link" y-click="infopicsix">示例图片</button>
                             <div class="modal fade" y-modal="infopicsix" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
@@ -297,11 +290,11 @@
                     </div>
                     <div class="col-sm-4">
                         <!--<img class="img-responsive img-rounded center-block y-wd60" src="../../components/public/css3-html5-js-logo.png">-->
-                        <div class="y-upload-img" y-open="uploadPic">
+                        <div class="y-upload-img popover-two" y-open="uploadPic" data-toggle="popover" data-content="<ul class='popover-width'><li>支持<span class='text-danger'>.jpg .jpeg .bmp .gif</span>格式照片</li><li>大小不超过<span class='text-danger'>2M</span></li></ul>">
                             <h1 class="y-mt60"><small>请选择文件</small></h1>
                         </div>
                         <h4 class="y-fs16">开户许可证
-                            <button type="button" class="btn btn-link infopicseven">示例图片</button>
+                            <button type="button" class="btn btn-link" y-click="infopicseven">示例图片</button>
                             <div class="modal fade" y-modal="infopicseven" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
@@ -315,11 +308,11 @@
                     </div>
                     <div class="col-sm-4">
                     <!--<link rel="import" href="../../components/upload-pic/upload-pic.html?__inline" />-->
-                        <div class="y-upload-img" y-open="uploadPic">
+                        <div class="y-upload-img popover-two" y-open="uploadPic" data-toggle="popover" data-content="<ul style='width:240px'><li>支持<span class='text-danger'>.jpg .jpeg .bmp .gif</span>格式照片</li><li>大小不超过<span class='text-danger'>2M</span></li></ul>">
                             <h1 class="y-mt60"><small>请选择文件</small></h1>
                         </div>
                         <h4 class="y-fs16">文网文等辅助文件（非必要上传文件）
-                            <button type="button" class="btn btn-link infopiceight">示例图片</button>
+                            <button type="button" class="btn btn-link" y-click="infopiceight">示例图片</button>
                             <div class="modal fade" y-modal="infopiceight" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
@@ -341,39 +334,39 @@
 <!--panel-->
 <script>
     $("[y-open='uploadPic']").click(function() {
-        $("[y-modal='uploadPic']").modal('show')
+        $("[y-modal='uploadPic']").modal('show');
         console.log("open uploadPic");
     });
 
-    $(".infopicone").click(function () {
+    $("[y-click='infopicone']").click(function () {
         $("[y-modal='infopicone']").modal('show');
     });
 
-    $(".infopictwo").click(function () {
+    $("[y-click='infopictwo']").click(function () {
         $("[y-modal='infopictwo']").modal('show');
     });
 
-    $(".infopicthree").click(function () {
+    $("[y-click='infopicthree']").click(function () {
         $("[y-modal='infopicthree']").modal('show');
     });
 
-    $(".infopicfour").click(function () {
+    $("[y-click='infopicfour']").click(function () {
         $("[y-modal='infopicfour']").modal('show');
     });
 
-    $(".infopicfive").click(function () {
+    $("[y-click='infopicfive']").click(function () {
         $("[y-modal='infopicfive']").modal('show');
     });
 
-    $(".infopicsix").click(function () {
+    $("[y-click='infopicsix']").click(function () {
         $("[y-modal='infopicsix']").modal('show');
     });
 
-    $(".infopicseven").click(function () {
+    $("[y-click='infopicseven']").click(function () {
         $("[y-modal='infopicseven']").modal('show');
     });
 
-    $(".infopiceight").click(function () {
+    $("[y-click='infopiceight']").click(function () {
         $("[y-modal='infopiceight']").modal('show');
     });
 
@@ -390,5 +383,9 @@
                 );
             }
         });
+
+        $(".popover-one").popover({trigger:'hover' ,html:true});
+        $(".popover-two").popover({trigger:'hover' ,html:true});
+
     });
 </script>
