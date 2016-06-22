@@ -1,0 +1,47 @@
+<div class="modal fade" y-modal="uploadPic" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header y-modal-header-default">
+                <h3 class="y-mg0">上传图片
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </h3>
+            </div>
+            <div class="modal-body">
+                <form name="myForm" class="form-horizontal y-mt15" action="" method="">
+                    <fieldset>
+                        <div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a role="tab" data-target="[y-tab='loacal']" data-toggle="tab">本地上传</a></li>
+                                <li role="presentation"><a aria-controls="profile" role="tab" data-target="[y-tab='net']" data-toggle="tab">网络上传</a></li>
+                            </ul>
+                            <div class="tab-content y-mt40 y-mb30">
+                                <div role="tabpanel" class="tab-pane form-group active" y-tab="loacal">
+                                    <div class="col-sm-7 col-sm-push-1">
+                                        <input type="file" name="" data-url="server/" multiple>
+                                    </div>
+                                    <!--<div class="col-sm-6 col-sm-push-4">
+                                        <div class="progress y-mt20">
+                                            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                            </div>
+                                        </div>
+                                    </div>-->
+                                </div>
+                                <div role="tabpanel" class="tab-pane form-group" y-tab="net">
+                                    <label class="col-sm-3 control-label" for="">图片url地址</label>
+                                    <div class="col-sm-7">
+                                        <input class="form-control" type="text" name="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="modal-footer y-modal-footer-default">
+                <button type="button" class="btn y-btn-blue center-block">确认</button>
+            </div>
+        </div>
+    </div>
+</div>

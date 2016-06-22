@@ -1,0 +1,97 @@
+<div class="panel">
+    <div class="panel-heading">
+        <h3>隐私数据4</h3>
+        <hr>
+    </div>
+    <div class="panel-body y-pd30 y-mt-30">
+        <form name="outerForm" class="tab-form-demo form-horizontal">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#" onclick="javascript:return false;" aria-controls="home" role="tab" data-toggle="tab" data-target="[y-tab='home']">订单数据</a></li>
+                <li role="presentation"><a href="#" onclick="javascript:return false;" aria-controls="profile" role="tab" data-toggle="tab" data-target="[y-tab='profile']">提现数据</a></li>
+                <li role="presentation"><a href="#" onclick="javascript:return false;" aria-controls="messages" role="tab" data-toggle="tab" data-target="[y-tab='messages']">代付数据</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" y-tab="home">
+                    <div class="form-group y-mt40">
+                        <label class="col-xs-4 col-sm-3 control-label">应用：</label>
+                        <div class="col-xs-4 col-sm-4">
+                            <select class="form-control">
+                                <option>全部</option>
+                                <option>全部1</option>
+                                <option>全部2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-4 col-sm-3 control-label">订单创建时间：</label>
+                        <div class="col-xs-2 col-sm-2">
+                            <input type="text" value="起始时间" class="form-control">
+                        </div>
+                        <div class="col-xs-2 col-sm-2 pull-left">
+                            <input type="text" value="截止时间" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-4 col-sm-3 control-label">订单结算状态：</label>
+                        <div class="col-xs-2 col-sm-2">
+                            <select class="form-control">
+                                <option>已结算</option>
+                                <option>未结算</option>
+                                <option>结算中</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" y-tab="profile">
+                    <div class="form-group y-mt40">
+                        <label class="col-xs-4 col-sm-3 control-label">提现发起时间：</label>
+                        <div class="col-xs-2 col-sm-2">
+                            <input type="text" value="全部" class="form-control">
+                        </div>
+                        <span class="pull-left">—</span>
+                        <div class="col-xs-2 col-sm-2 pull-left">
+                            <input type="text" value="全部" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-4 col-sm-3 control-label">提现状态：</label>
+                        <div class="col-xs-2">
+                            <select class="form-control">
+                                <option>已结算</option>
+                                <option>未结算</option>
+                                <option>结算中</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" y-tab="messages">
+                    <div class="form-group y-mt40">
+                        <label class="col-xs-4 col-sm-3 control-label">提现发起时间：</label>
+                        <div class="col-xs-2 col-sm-2">
+                            <input type="datetime" value="2015-02-24" class="form-control">
+                        </div>
+                        <span class="pull-left">—</span>
+                        <div class="col-xs-2 col-sm-2 pull-left">
+                            <input type="datetime" value="2015-03-24" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group y-mt20">
+                <label class="col-xs-2 col-sm-3 control-label"></label>
+                <div class="col-xs-10 col-sm-5">
+                    <label class="well y-fw-n">
+                        <input type="checkbox">&nbsp;&nbsp;隐私数据删除后，将<span class="text-danger">无法恢复</span>，
+                            本人承诺由此引发的一切后果（包括但不限于项目对不上，影响自己清算等），均由本人承担，与聚宝云聚酸平台无关。
+                        </label>
+                </div>
+            </div>
+            <hr>
+            <div class="col-xs-10 col-sm-5">
+                <button type="button" class="btn btn-info pull-right">同意协议，确认删除</button>
+            </div>
+        </form>
+    </div>
+</div>
+<!--panel-->
