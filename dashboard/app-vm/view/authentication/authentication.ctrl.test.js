@@ -2,9 +2,7 @@
 angular.module('yhtml5.authentication', ['ui.bootstrap', 'ngAnimate', 'factory'])
     .controller('yhtml5.authentication', function($scope, $uibModal, $state, $http, Upload, $timeout, Data) {
         $scope.data = Data;
-        console.log("factory data : ", Data);
         $scope.userInfo = $scope.data.userInfo;
-        console.log("data.userInfo : ", $scope.userInfo); << << << < HEAD
         $scope.userAccount = {};
         $scope.bank = {};
         $scope.isStep1 = true;
