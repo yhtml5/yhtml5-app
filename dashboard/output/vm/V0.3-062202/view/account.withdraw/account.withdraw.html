@@ -1,0 +1,54 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="text-xl-left y-ml20">提现</h3>
+    </div>
+    <div class="panel-body y-mt30">
+        <!--<div class="row">
+			<div class="col-sm-3 col-sm-push-1 text-right">
+				<h4>可提现金额(元)</h4>
+			</div>
+			<div class="col-sm-3 col-sm-3">
+				<h4 class="text-truncate text-danger">1743.45</h4>
+			</div>
+		</div>-->
+        <form class="form-horizontal" action="">
+            <div class="form-group">
+                <label for="withdraw-cash" class="col-xs-12 col-sm-3 col-sm-push-1 control-label">提现金额</label>
+                <div class="col-xs-12 col-sm-5 col-sm-push-1">
+                    <input type="text" class="form-control" name="" id="withdraw-cash" value=""  placeholder="请您输入金额...">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-sm-push-4 text-left">
+                <p class="y-text-red">注：余额满1000元才能提现</p>
+                <p>提现之后，资金将在下一个工作日到账，每日限额50万</p>
+            </div>
+        </form>
+    </div>
+    <div class="panel-footer">
+        <button type="button" class="btn btn-info" y-open="realNameModalBtn">下一步</button>
+    </div>
+    <div class="modal fade" y-modal="realNameModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h3 class="text-center">请先完成实名认证才可进行操作！</h3>
+            </div>
+            <div class="modal-footer text-xs-center">
+                <button type="button" class="btn y-btn-blue">认证</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+    var a = 1
+    $("[y-open='realNameModalBtn']").click(function() {
+        if (a == 1) {
+            $("[y-modal='realNameModal']").modal('toggle')
+            console.log("open realNameModal");
+        } else {
+           console.log("nothing");
+        }
+    });
+</script>
