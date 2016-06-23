@@ -79,7 +79,6 @@
 
 .y-navbar-info .navbar-nav > li > a {
     color: #333;
-    border-radius: 6px;
     font-size: 16px;
 }
 
@@ -87,14 +86,19 @@
 .y-navbar-info .navbar-nav > li > a:focus {
     color: #099fdd;
     background-color: transparent;
+    border-bottom: 4px solid #099fdd;
 }
 
 .y-navbar-info .navbar-nav > .active > a,
 .y-navbar-info .navbar-nav > .active > a:hover,
 .y-navbar-info .navbar-nav > .active > a:focus {
-    color: #fff;
-    background-color: #099fdd;
+    /*color: #333;*/
+    /*background-color: #099fdd;*/
+    border-bottom: 4px solid #099fdd;
 }
+
+
+
 
 .y-navbar-info .navbar-toggle {
     border-color: #099fdd;

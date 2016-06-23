@@ -133,6 +133,8 @@
     margin-left: 20px;
 }
 
+
+
 .y-mr-2 {
     margin-right: -2px !important;
 }
@@ -142,6 +144,10 @@
 
 .y-mr10 {
     margin-right: 10px;
+}
+
+.y-mr15{
+    margin-right: 15px;
 }
 
 .y-mr20 {
@@ -191,9 +197,11 @@
 .y-pb20 {
     padding-bottom: 20px;
 }
-
-.y-pb20 {
-    padding-bottom: 20px;
+.y-pb26{
+    padding-bottom: 26px !important;
+}
+.y-pb30 {
+    padding-bottom: 30px;
 }
 
 .y-pb40 {

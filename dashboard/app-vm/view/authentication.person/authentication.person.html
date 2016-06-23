@@ -304,7 +304,7 @@
 				    </h4>
 				</div>
 				<div class="col-sm-4 text-xs-center">
-				    <div class="y-upload-img" ngf-select ng-model="picFile" name="file" accept="image/*" ngf-max-size="2MB" required ngf-model-invalid="errorFile">
+				    <div class="y-upload-img" ngf-select ng-model="picFile" name="file" accept="image/*" ngf-max-size="2MB" required ngf-model-invalid="errorFile" y-open="uploadPic">
 				        <h1 class="y-mt60"><small>请选择文件</small></h1>
 				        <img class="img-responsive img-rounded" ngf-thumbnail="picFile">
 				        <p ng-show="myForm.file.$error.maxSize">文件大小超过{{errorFile.size / 1000000|number:1}}MB，最大支持2M</p>
@@ -327,6 +327,7 @@
             </div>
         </form>
     </div>
+    <link rel="import" href="../../components/upload-pic/upload-pic-modal.html?__inline" />
     <div class="y-mt40 y-pb60 text-sm-center">
         <button type="button " class="btn y-btn-blue" ui-sref="authentication.account" ng-click="toStep3()">下一步</button>
     </div>
