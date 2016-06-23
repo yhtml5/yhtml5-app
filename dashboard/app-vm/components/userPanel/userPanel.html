@@ -1,4 +1,4 @@
-<div class="y-card-nav y-dp-n" y-card="opencard">
+<div class="y-card-nav y-dp-n" y-card="card">
 	<p>1417376255@qq.com</p>
 	<!--<button class="btn btn-success">已认证</button>-->
 	<button class="btn btn-danger" ui-sref="authentication.agreement">认证中</button>
@@ -8,11 +8,11 @@
 </div>
 <script>
 	$(function () {
-		$("[y-open='opencard']").click(function () {
-			$("[y-card='opencard']").fadeIn();
+		$("[y-open='card']").mouseover(function () {
+			$("[y-card='card']").fadeIn();
 		});
-		$("[y-card='opencard']"&&"[y-close='closecard']").mouseleave(function () {
-			$("[y-card='opencard']").fadeOut();
+		$("[y-card='card'],[y-close='card']").mouseleave(function () {
+			$("[y-card='card']").fadeOut();
 		})
 	})
 </script>
