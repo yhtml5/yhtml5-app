@@ -1,6 +1,11 @@
 ## 简介
    * 本版本使用jquery替代Angular指令, 使用VM java模板替换angular model, $scope, server
-
+   * VM + JQuery 实现web系统
+    * 优点: 开发人员多,
+    * 缺点:
+          - [x] 每一次需求更改,前端开发好,后台需要做对应模板更新,容易遇到前端开发的效果与层实际效果不一致
+          - [x] 后端写的js没法做统一优化(格式化, 压缩, 合并, 代码冗余)
+          - [x] 需要经常沟通
 ### vm版本说明
    - [-] 去除factory.js,
    - [-] 去除angular相关指令: ng-model, ng-bind, ng-init, ng-click
@@ -39,7 +44,7 @@
    - [x] 20160613 payment 增加日期控件; 优化视图UI,表格显示; 重写补发通知弹窗
    - [x] 20160613 account.topay 重写单笔复核弹窗, 优化radio选项
    - [x] 20160615 user.data 重写tab标签切换,优化试图UI
-
+   - [x] 20160623 user, appsetting更新默认图片
 
 
 
