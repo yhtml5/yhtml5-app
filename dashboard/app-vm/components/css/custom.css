@@ -24,10 +24,9 @@
     margin-right: auto;
 }
 
-
 .sidebar {
     position: fixed;
-    top: 184px;
+    top: 84px;
     bottom: 0;
     left: 0;
     z-index: 1000;

@@ -2,6 +2,7 @@
  * @require ../../components/js/ctrl.js
  *
  */
+
 'use strict';
 angular.module('yhtml5.nav', ['ui.bootstrap', 'ngAnimate', 'ui.router'])
     .controller('yhtml5.nav', function($scope, $http, $uibModal, $log) {
@@ -24,9 +25,6 @@ angular.module('yhtml5.nav', ['ui.bootstrap', 'ngAnimate', 'ui.router'])
         $scope.appendToEl = angular.element(document.querySelector('#dropdown-long-content'));
         $scope.userVerify = true
         $scope.userCenter = true
-        $scope.toggle = function() {
-            $scope.userCenter = !$scope.userCenter
-        }
         $scope.animationsEnabled = true;
         $scope.open = function(size) {
             var modalInstance = $uibModal.open({

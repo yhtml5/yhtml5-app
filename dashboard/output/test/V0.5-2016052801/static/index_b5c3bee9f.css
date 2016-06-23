@@ -1243,7 +1243,7 @@ fieldset[disabled] .y-btn-red.focus {
 .y-card-nav {
 	position: absolute;
 	top: 80px;
-	right: 5%;
+	right: 0;
 	width: 240px;
 	background-color: #fff;
 	text-align: center;
