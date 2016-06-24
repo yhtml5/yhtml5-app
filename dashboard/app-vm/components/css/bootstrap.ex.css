@@ -118,6 +118,10 @@
     border-color: #e7e7e7;
 }
 
+.y-btn-border{
+    border: 1px solid #d1d1d1;
+}
+
 .y-btn-blue {
     color: #fff;
     background-color: #099fdd;
