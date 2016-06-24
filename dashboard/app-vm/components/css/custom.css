@@ -282,3 +282,8 @@
     border: solid 1px #666;
     border-radius: 4px;
 }
+
+.y-tr-light{
+    border-top: 2px solid #ddd;
+    background-color:#EFEFEF;
+}
