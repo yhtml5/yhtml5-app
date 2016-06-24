@@ -75,7 +75,7 @@ fis.match('{/static/**,/components/**/*.{png,gif,jpg,jpeg},/components/**/(iconf
 //  .match('/components/js/router.vm.js', {
 //      release: true
 //  })
-//项目发布 请注释angular-ui
+
 /*************************CDN规范*****************************/
 
 // optimize
