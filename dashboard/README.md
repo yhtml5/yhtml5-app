@@ -7,22 +7,21 @@
 ![author]
 
 
-
 ### Quick Links
-- [Getting Started](#Starting)
+- [Getting Started](#Getting-Started)
     - [Prerequisites](#Prerequisites)
-    - [Clone Dashboard](#Clone Dashboard)
-    - [Install Dependencies](#Install Despendencies)
-    - [Run the Application](#Run the Application)
+    - [Clone Dashboard](#Clone-Dashboard)
+    - [Install Dependencies](#Install-Despendencies)
+    - [Run the Application](#Run-the-Application)
 - [项目简介](#项目简介)
     - [项目进度](https://github.com/yhtml5/FW-Dashboard/issues?q=%E4%BB%BB%E5%8A%A1+is%3Aopen)
     - [changeLog](https://github.com/yhtml5/FW-Dashboard/blob/master/changeLog.md)
     - [项目特点](#项目特点)
     - [浏览器兼容性](#浏览器兼容性)
 - [目录说明](#目录说明)
-    - [Directory Layout](#Directory Layout) 
+    - [Directory Layout](#Directory-Layout) 
 
-## Starting
+## Getting Started  
 To get you started you can simply clone the angular-seed repository and install the dependencies:
 
 ### Prerequisites
@@ -87,8 +86,6 @@ fis3 release -wl
 
 Now browse to the app at `http://localhost:8080`.
 
-
-
 ## 项目简介  
 
 ### 项目特点  
@@ -115,9 +112,9 @@ Now browse to the app at `http://localhost:8080`.
   * IE8+
 
 
-#### [changeLog](https://github.com/yhtml5/FW-Dashboard/blob/master/changeLog.md)
-#### [开发问题](https://github.com/yhtml5/FW-Dashboard/blob/master/question.md)
-#### [项目进度 88%](https://github.com/yhtml5/FW-Dashboard/issues?q=%E4%BB%BB%E5%8A%A1+is%3Aopen) 
+#### [changeLog]
+#### [开发问题]
+#### [项目进度 88%]
 
 
 ## 目录说明
@@ -205,3 +202,6 @@ Now browse to the app at `http://localhost:8080`.
 [Build Status]:https://img.shields.io/travis/twbs/bootstrap/master.svg
 [downloads total]:https://img.shields.io/github/downloads/atom/atom/total.svg
 [author]:https://img.shields.io/badge/author-yhtml5-blue.svg
+[changeLog]:https://github.com/yhtml5/FW-Dashboard/blob/master/changeLog.md
+[开发问题]:https://github.com/yhtml5/FW-Dashboard/blob/master/question.md
+[项目进度 88%]:https://github.com/yhtml5/FW-Dashboard/issues?q=%E4%BB%BB%E5%8A%A1+is%3Aopen
