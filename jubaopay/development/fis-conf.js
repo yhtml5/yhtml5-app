@@ -100,13 +100,6 @@ fis.media('cdn')
     .match('{/components/**,/bower_components/**}', {
         release: '/dist/$0',
     })
-    .match('{index.html,/components/**/*.js,/components/**/*.css,/view/**/*.js,/view/**/*.css,/view/**/*.html}', {
-        optimizer: fis.plugin('htmlmin', {
-            removeComments: true,
-            collapseWhitespace: true,
-            minifyJS: true
-        })
-    })
     .match('::package', {
         postpackager: fis.plugin('loader', {
             resourceType: 'commonJs',
@@ -114,16 +107,16 @@ fis.media('cdn')
         })
     })
     .match('/bower_components/**/*.css', {
-        packTo: '/static/index.css',
-    })
-    .match('/bower_components/**/*.js', {
-        packTo: '/static/index.js',
-    })
-    .match('{node.css,/server/author.css,/components/**/*.css,/view/**/*.css}', {
         packTo: '/static/yhtml5.css',
     })
-    .match('{node.js,/server/author.js,/components/**/*.js,/view/**/*.js}', {
+    .match('/bower_components/**/*.js', {
         packTo: '/static/yhtml5.js',
+    })
+    .match('{node.css,/server/author.css,/components/**/*.css,/view/**/*.css}', {
+        packTo: '/static/index.css',
+    })
+    .match('{node.js,/server/author.js,/components/**/*.js,/view/**/*.js}', {
+        packTo: '/static/index.js',
     })
     .match('{*.gif,*.png,*.jpg}', {
         release: '/static/img/$1',
@@ -141,8 +134,16 @@ fis.media('cdn')
 //      release: '/static/img/$0',
 //      useHash: false,
 //  })
+    .match('{index.html,/view/**/*.html,/components/**/*.js,/components/**/*.css,/view/**/*.js,/view/**/*.css}', {
+        optimizer: fis.plugin('htmlminify', {
+            removeComments: true,
+            collapseWhitespace: true,
+            minifyJS: true
+        })
+    })
     .match('{/static/**,/bower_components/**,/view/**,*.png,*.jpg,iconfont.*}', {
-        domain: 'http://static.jubaobar.cn/project/jubaopay/V0.2-2016060203',
+        domain: '.'
+        // domain: 'http://static.jubaobar.cn/project/jubaopay/V0.2-2016060203',
     });
 
 ///*************************CDN规范*****************************/

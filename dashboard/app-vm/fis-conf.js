@@ -64,6 +64,7 @@ fis.match('{/server/author.css,/components/**/*.css}', {
 fis.match('{/static/**,/components/**/*.{png,gif,jpg,jpeg}}', {
     useHash: false
 })
+
 fis.match('{/static/**,/components/**/*.{png,gif,jpg,jpeg},/components/**/(iconfont.*)}', {
     domain: '.'
 });
@@ -87,6 +88,9 @@ fis.media('pro')
             margin: '15'
         })
     })
+    .match("**.html", {
+        optimizer: fis.plugin("htmlminify")
+    })
     .match('{/static/**,**.{gif,png}}', {
         useHash: true
     })
@@ -105,7 +109,7 @@ fis.media('pro')
     })
     //去掉依赖声明文本
     .match('*.html', {
-        optimizer: (function(content) {
+        optimizer: (function (content) {
             return content.replace(/<!--([\s\s]*?)-->/g, "")
         })
     })
