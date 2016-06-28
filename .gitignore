@@ -49,8 +49,10 @@ Temporary Items
 
 logs/*
 !.gitkeep
+dashboard/production/
 dashboard/node_modules/
 dashboard/app/bower_components/
+
 tmp
 .DS_Store
 .idea
