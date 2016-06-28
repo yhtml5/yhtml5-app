@@ -1,36 +1,37 @@
-## FW-Dashboard - A CRUD System that required angularJS Bootstrap Jquery
+## Dashboard - A CRUD System that required angularJS Bootstrap NodeJS
+
+![npm version]
+![node version]
+![Build Status]
+![downloads total]
+![author]
 
 
-![npm version](https://img.shields.io/npm/v/npm.svg)
-![node version](https://img.shields.io/badge/node-v4.3.2-blue.svg)
-![Build Status](https://img.shields.io/travis/twbs/bootstrap/master.svg)
-![downloads total](https://img.shields.io/github/downloads/atom/atom/total.svg)
-![author](https://img.shields.io/badge/author-yhtml5-blue.svg)
+### Quick Links
+- [Introduction](#introduction)
+    - [project progress]  
+    - [changeLog](https://github.com/yhtml5/FW-Dashboard/blob/master/changeLog.md)
+    - [Features](#features)
+    - [Browser Compatibility](#browser-compatibility)
+    - [Directory Layout](#directory-layout) 
+- [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Clone Dashboard](#clone-dashboard)
+    - [Install Dependencies](#install-dependencies)
+    - [Run the Application](#run-the-application)
+    
 
+## Introduction  
 
+### Features  
+  * Automagically wire-up dependencies installed with Bower
+  * 遵循百度前端开发规范(待翻译)
+  * 样式结构、模板引擎、业务逻辑解耦(待翻译)
+  * 前后端分离，使用json等交互数据(待翻译)
+  * 全端支持，全面支持浏览器、IOS、Android、HybirdApp、windows、Mac、Linux、TV(待翻译)
+  * Etc,etc
 
-
-
-### 快速链接
-- [项目简介](#项目简介)
-    - [项目进度](https://github.com/yhtml5/FW-Dashboard/issues?q=%E4%BB%BB%E5%8A%A1+is%3Aopen)
-    - [更新日志](https://github.com/yhtml5/FW-Dashboard/blob/master/changeLog.md)
-    - [项目特点](#项目特点)
-    - [技术栈](#技术栈)
-    - [浏览器兼容性](#浏览器兼容性)
-- [目录说明](#目录说明)
-    - [开发目录结构](#开发目录结构) 
-
-
-## 项目简介  
-
-### 项目特点  
-  * 遵循百度前端开发规范
-  * 样式结构、模板引擎、业务逻辑解耦
-  * 前后端分离，使用json等交互数据
-  * 全端支持，全面支持浏览器、IOS、Android、HybirdApp、windows、Mac、Linux、TV
-
-### 技术栈  
+### Technology stack
 
   * AngularJS
   * AngularUI
@@ -38,36 +39,87 @@
   * AngularUI-Router
   * Bootstrap
   * EchartJS 
-  * Fis3（前端构建工具）
-  * html5-boilerplate（兼容IE）
-  * ProtractorJS（测试工具）
+  * Fis3
+  * html5-boilerplate
+  * ProtractorJS
   * NodeJS 
-  * NwJS
-   
-### 前端集成解决方案
- 
-前端技术元素非常丰富，包括开发规范、模块化开发、组件化开发、组件仓库、性能优化、项目部署、开发流程、开发工具、兼容测试，  
 
-![前端构建](https://camo.githubusercontent.com/4c1358dc162d8b8e9594c771e5ecdde258670784/687474703a2f2f68746d6c6a732e62302e7570616979756e2e636f6d2f75706c6f6164732f313339383339343738313135352d515132303134303432352d312e706e67)
-  
-  
-### 浏览器兼容性
-  * 主流现代浏览器
+### Browser Compatibility
+  * modern browsers: chrome, firefox, safari, Microsoft Edge  
   * IE8+
+  * Etc,etc
+
+#### [changeLog] 
+#### [problem]
+#### [project progress]
 
 
-#### [更新日志](https://github.com/yhtml5/FW-Dashboard/blob/master/changeLog.md)
-#### [开发问题](https://github.com/yhtml5/FW-Dashboard/blob/master/question.md)
-#### [项目进度 38%](https://github.com/yhtml5/FW-Dashboard/issues?q=%E4%BB%BB%E5%8A%A1+is%3Aopen) 
+## Getting Started  
+To get you started you can simply clone the angular-seed repository and install the dependencies:
 
+### Prerequisites
 
-## 目录说明
-  * app 开发目录
-  * design 设计稿存放处
-  * node_modules NodeJS工具包
-  * output 项目输出
+You need git to clone the Dashboard repository. You can get git from
+[http://git-scm.com/](http://git-scm.com/).
 
-### 开发目录结构
+We also use a number of node.js tools to initialize and test Dashboard. You must have node.js and
+its package manager (npm) installed.  You can get them from [http://nodejs.org/](http://nodejs.org/).
+
+### Clone Dashboard
+
+Clone the Dashboard repository using [git][git]:
+
+```
+git clone https://github.com/yhtml5/YHTML5-WEB.git
+cd YHTML5-WEB\dashboard
+```
+
+If you just want to start a new project without the dashboard commit history then you can do:
+
+```bash
+git clone --depth=1 https://github.com/yhtml5/YHTML5-WEB.git <your-project-name>
+```
+
+The `depth=1` tells git to only pull down one commit worth of historical data.
+
+### Install Dependencies  
+
+We have two kinds of dependencies in this project: tools and angular framework code.  The tools help
+us manage and test the application.
+
+* We get the tools we depend upon via `npm`, the [node package manager][npm].
+* We get the angular code via `bower`, a [client-side code package manager][bower].
+
+We have preconfigured `npm` to automatically run `bower` so we can simply do:
+
+```
+npm install
+```
+
+Behind the scenes this will also call `bower install`.  You should find that you have two new
+folders in your project.
+
+* `node_modules` - contains the npm packages for the tools we need
+* `app/bower_components` - contains the angular framework files
+
+*Note that the `bower_components` folder would normally be installed in the root folder but
+dashboard changes this location through the `.bowerrc` file.  Putting it in the app folder makes
+it easier to serve the files by a webserver.*
+
+### Run the Application
+
+We have preconfigured the project with a simple development web server.  The simplest way to start
+this server is:
+
+```
+cd YHTML5-WEB\dashboard\app 
+fis3 server start
+fis3 release -wl
+```
+
+Now browse to the app at `http://localhost:8080`.
+
+### Directory Layout
 ```
 |____components
 | |____footer
@@ -133,3 +185,20 @@
 | |____index.html
 ```
 
+[git]: http://git-scm.com/
+[bower]: http://bower.io
+[npm]: https://www.npmjs.org/
+[node]: http://nodejs.org
+[protractor]: https://github.com/angular/protractor
+[jasmine]: http://jasmine.github.io
+[karma]: http://karma-runner.github.io
+[travis]: https://travis-ci.org/
+[http-server]: https://github.com/nodeapps/http-server
+[npm version]:https://img.shields.io/npm/v/npm.svg
+[node version]:https://img.shields.io/badge/node-v4.3.2-blue.svg
+[Build Status]:https://img.shields.io/travis/twbs/bootstrap/master.svg
+[downloads total]:https://img.shields.io/github/downloads/atom/atom/total.svg
+[author]:https://img.shields.io/badge/author-yhtml5-blue.svg
+[changeLog]:https://github.com/yhtml5/FW-Dashboard/blob/master/changeLog.md
+[problem]:https://github.com/yhtml5/FW-Dashboard/blob/master/question.md
+[project progress]:https://github.com/yhtml5/FW-Dashboard/issues?q=%E4%BB%BB%E5%8A%A1+is%3Aopen

@@ -9,10 +9,16 @@
         <li role="menuitem"><a ui-sref="###">付款方</a></li>
     </ul>
     </span>
-    <input type="text" class="form-control" id="" value="" placeholder="付款方名称、订单号">
+    <input type="text" class="form-control" id="placeholderDemo" value="" placeholder="付款方名称、订单号">
     <span class="input-group-btn">
         <button class="btn btn-default" type="button">
            <i class="iconfont y-fs14">&#xe611;</i>
         </button>
     </span>
 </div>
+<script>
+    $(".dropdown-menu li a").click(function() {
+        var a = $(this).text()
+        $("#placeholderDemo").attr('placeholder', a)
+    })
+</script>
