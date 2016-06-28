@@ -118,6 +118,9 @@
 .y-mb180 {
     margin-bottom: 180px;
 }
+.y-ml-30{
+    margin-left: -30px;
+}
 .y-ml-1 {
     margin-left: -1px;
 }
@@ -134,7 +137,9 @@
 }
 
 
-
+.y-mr-20{
+    margin-right: -20px;
+ }
 .y-mr-2 {
     margin-right: -2px !important;
 }
@@ -152,6 +157,9 @@
 
 .y-mr20 {
     margin-right: 20px;
+}
+.y-mr30{
+    margin-right: 30px;
 }
 
 .y-mlr0 {
