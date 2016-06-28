@@ -1,6 +1,6 @@
 <div class="y-bg-fff y-pt60">
     <div class="container">
-        <form action="" class="form-horizontal">
+        <form action="" class="form-horizontal" id="defaultForm">
             <div class="row">
                 <div class="col-sm-6">
                     <div class="form-group">
@@ -106,7 +106,7 @@
                     <div class="form-group">
                         <label for="" class="col-sm-3 control-label">邮箱</label>
                         <div class="col-sm-8">
-                            <input class="form-control" type="email" name="" id="emailcheck" ng-model="userInfo.contactEmail" value="" placeholder="请输入Email地址">
+                            <input class="form-control" type="email" name="email" id="emailcheck" ng-model="userInfo.contactEmail" value="" placeholder="请输入Email地址">
                         </div>
                     </div>
                 </div>
@@ -371,20 +371,35 @@
         $(this).val($(this).val().replace(/\D|^0/g,''));
     });
 
-    $("#emailcheck").focusout(function(){
-        if($("#emailcheck").val()==""){
-            $("#emailcheck").parent().addClass("has-error");
+//    $("#emailcheck").focusout(function(){
+//        if($("#emailcheck").val()==""){
+//            $("#emailcheck").parent().addClass("has-error");
+//
+//        }else {
+//            $("#emailcheck").parent().removeClass("has-error");
+//        }
+//        var email = $("#emailcheck").val();
+//        if (!email.match(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/)){
+//            $("#emailcheck").parent().addClass("has-error");
+//        }else {
+//            $("#emailcheck").parent().removeClass("has-error");
+//        }
+//    })
 
-        }else {
-            $("#emailcheck").parent().removeClass("has-error");
+    $('#defaultForm').bootstrapValidator({
+        message: 'This value is not valid',
+        fields: {
+            email: {
+                validators: {
+                    notEmpty: {
+                        message: 'The email address is required and can\'t be empty'
+                    },
+                    emailAddress: {
+                        message: 'The input is not a valid email address'
+                    }
+                }
+            }
         }
-        var email = $("#emailcheck").val();
-        if (!email.match(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/)){
-            $("#emailcheck").parent().addClass("has-error");
-        }else {
-            $("#emailcheck").parent().removeClass("has-error");
-        }
-    })
-
+    });
 
 </script>
