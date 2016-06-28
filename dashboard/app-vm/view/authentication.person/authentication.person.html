@@ -7,11 +7,13 @@
                         <label for="" class="col-sm-3 control-label">商户性质</label>
                         <div class="col-sm-8">
                             <label for="" class="radio-inline">
-								<input type="radio" ng-model="userInfo.companyType" name="merchantNature" id="" value="1" checked="">&nbsp;个人
-							</label>
+                                <input type="radio" ng-model="userInfo.companyType" name="merchantNature" id=""
+                                       value="1" checked="">&nbsp;个人
+                            </label>
                             <label for="" class="radio-inline">
-								<input type="radio" ng-model="userInfo.companyType" name="merchantNature" id="" value="2">&nbsp;企业
-							</label>
+                                <input type="radio" ng-model="userInfo.companyType" name="merchantNature" id=""
+                                       value="2">&nbsp;企业
+                            </label>
                         </div>
                     </div>
                 </div>
@@ -20,46 +22,52 @@
                         <label for="" class="col-sm-3 control-label">商户类型</label>
                         <div class="col-sm-8">
                             <label for="" class="radio-inline">
-								<input type="radio" ng-model="userInfo.subCompanyType" name="merchantClass" id="" value="1" checked="">&nbsp;应用提供商
-							</label>
+                                <input type="radio" ng-model="userInfo.subCompanyType" name="merchantClass" id=""
+                                       value="1" checked="">&nbsp;应用提供商
+                            </label>
                             <label for="" class="radio-inline">
-								<input type="radio" ng-model="userInfo.subCompanyType" name="merchantClass" id="" value="2">&nbsp;渠道分销商
-							</label>
+                                <input type="radio" ng-model="userInfo.subCompanyType" name="merchantClass" id=""
+                                       value="2">&nbsp;渠道分销商
+                            </label>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="" class="col-sm-3 control-label">签约名</label>
-                            <div class="col-sm-8">
-                                <input class="form-control" type="text" name="" id="" ng-model="userInfo.userName" value="" placeholder="工信部备案人真实姓名">
-                            </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="" class="col-sm-3 control-label">签约名</label>
+                        <div class="col-sm-8">
+                            <input class="form-control" type="text" name="" id="" ng-model="userInfo.userName" value=""
+                                   placeholder="工信部备案人真实姓名">
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="" class="col-sm-3 control-label">经营范围</label>
-                            <div class="col-sm-4">
-                                <select class="form-control" ng-model="userInfo.businessType1" ng-options="obj.dictValue for obj in dataInit.businessTypes" ng-change="test2=''">
-                                    <option value="">请选择经营范围</option>
-                                </select>
-                            </div>
-                            <div class="col-sm-4">
-                                <select class="form-control" ng-model="userInfo.businessType2" ng-options="x.dictValue for x in userInfo.businessType1.subList">
-                                    <option value="">请选择经营范围</option>
-                                </select>
-                            </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="" class="col-sm-3 control-label">经营范围</label>
+                        <div class="col-sm-4">
+                            <select class="form-control" ng-model="userInfo.businessType1"
+                                    ng-options="obj.dictValue for obj in dataInit.businessTypes" ng-change="test2=''">
+                                <option value="">请选择经营范围</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <select class="form-control" ng-model="userInfo.businessType2"
+                                    ng-options="x.dictValue for x in userInfo.businessType1.subList">
+                                <option value="">请选择经营范围</option>
+                            </select>
                         </div>
                     </div>
+                </div>
             </div>
             <div class="row" ng-if="userInfo.companyType == 2">
                 <div class="col-sm-6">
                     <div class="form-group">
                         <label for="" class="col-sm-3 control-label">企业名称</label>
                         <div class="col-sm-8">
-                            <input class="form-control" type="text" name="" id="" ng-model="userInfo.companyName" value="" placeholder="请输入企业名称">
+                            <input class="form-control" type="text" name="" id="" ng-model="userInfo.companyName"
+                                   value="" placeholder="请输入企业名称">
                         </div>
                     </div>
                 </div>
@@ -67,7 +75,8 @@
                     <div class="form-group">
                         <label for="" class="col-sm-3 control-label">企业经营地址</label>
                         <div class="col-sm-8">
-                            <input class="form-control" type="text" name="" id="" ng-model="userInfo.companyAddress" value="" placeholder="请输入企业经营地址">
+                            <input class="form-control" type="text" name="" id="" ng-model="userInfo.companyAddress"
+                                   value="" placeholder="请输入企业经营地址">
                         </div>
                     </div>
                 </div>
@@ -77,7 +86,8 @@
                     <div class="form-group">
                         <label for="" class="col-sm-3 control-label">营业执照号</label>
                         <div class="col-sm-8">
-                            <input class="form-control" type="text" name="" id="" ng-model="userInfo.licenseNo" value="" placeholder="请输入营业执照号">
+                            <input class="form-control" type="text" name="" id="" ng-model="userInfo.licenseNo" value=""
+                                   placeholder="请输入营业执照号">
                         </div>
                     </div>
                 </div>
@@ -88,7 +98,8 @@
                     <div class="form-group">
                         <label for="" class="col-sm-3 control-label">联系人姓名</label>
                         <div class="col-sm-8">
-                            <input class="form-control" type="text" name="" id="" ng-model="userInfo.contactName" value="" placeholder="请输入联系人">
+                            <input class="form-control" type="text" name="" id="" ng-model="userInfo.contactName"
+                                   value="" placeholder="请输入联系人">
                         </div>
                     </div>
                 </div>
@@ -96,7 +107,8 @@
                     <div class="form-group">
                         <label for="" class="col-sm-3 control-label">联系电话</label>
                         <div class="col-sm-8">
-                            <input class="form-control" type="text" name="" id="textlength" ng-model="userInfo.contactTelephone" value="" placeholder="请输入电话" maxlength="11">
+                            <input class="form-control" type="text" name="" id="textlength"
+                                   ng-model="userInfo.contactTelephone" value="" placeholder="请输入电话" maxlength="11">
                         </div>
                     </div>
                 </div>
@@ -114,35 +126,40 @@
                     <div class="form-group">
                         <label for="" class="col-sm-3 control-label">QQ</label>
                         <div class="col-sm-8">
-                            <input class="form-control" type="text" name="" id="" ng-model="userInfo.contactQQ" value="" placeholder="请输入QQ号">
+                            <input class="form-control" type="text" name="" id="" ng-model="userInfo.contactQQ" value=""
+                                   placeholder="请输入QQ号">
                         </div>
                     </div>
                 </div>
             </div>
             <hr>
             <div class="row">
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="" class="col-sm-3 control-label">通讯地址</label>
-                            <div class="col-sm-4">
-                                <select class="form-control" ng-model="userInfo.contactProvId" ng-options="obj.name for obj in dataInit.division" ng-change="userInfo.contactCityId=''">
-                                    <option value="">省</option>
-                                </select>
-                            </div>
-                            <div class="col-sm-4">
-                                <select class="form-control" ng-model="userInfo.contactCityId" ng-options="x.name for x in userInfo.contactProvId.children" ng-change="">
-                                    <option value="">市</option>
-                                </select>
-                            </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="" class="col-sm-3 control-label">通讯地址</label>
+                        <div class="col-sm-4">
+                            <select class="form-control" ng-model="userInfo.contactProvId"
+                                    ng-options="obj.name for obj in dataInit.division"
+                                    ng-change="userInfo.contactCityId=''">
+                                <option value="">省</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <select class="form-control" ng-model="userInfo.contactCityId"
+                                    ng-options="x.name for x in userInfo.contactProvId.children" ng-change="">
+                                <option value="">市</option>
+                            </select>
                         </div>
                     </div>
+                </div>
             </div>
 
             <div class="row">
                 <div class="col-sm-6">
                     <div class="form-group">
                         <div class="col-sm-8 col-sm-push-3">
-                            <input class="form-control" type="text" name="" id="" value="" ng-model="userInfo.contactAddress" placeholder="请详细到镇、街道">
+                            <input class="form-control" type="text" name="" id="" value=""
+                                   ng-model="userInfo.contactAddress" placeholder="请详细到镇、街道">
                         </div>
                     </div>
                 </div>
@@ -153,7 +170,8 @@
                     <div class="form-group">
                         <label for="" class="col-sm-3 control-label">身份证号</label>
                         <div class="col-sm-8">
-                            <input class="form-control" type="text" name="" id="" ng-model="userInfo.idCard" value="" placeholder="请输入身份证号">
+                            <input class="form-control" type="text" name="" id="" ng-model="userInfo.idCard" value=""
+                                   placeholder="请输入身份证号">
                         </div>
                     </div>
                 </div>
@@ -162,13 +180,16 @@
                 <div class="col-sm-4 text-xs-center">
                     <!--<img class="img-responsive img-rounded center-block y-wd60" src="./static/img/css3-html5-js-logo_a62c45abb.png">-->
                     <div class="y-upload-img" y-open="uploadPic">
-                        <h1 class="y-mt60"><small>请选择文件</small></h1>
+                        <h1 class="y-mt60">
+                            <small>请选择文件</small>
+                        </h1>
                     </div>
                     <h4 class="y-fs16">证件照片
-						<small>
-							<a href="###" onclick="javascript:return false" y-click="infopicone">示例图片</a>
-						</small>
-                        <div class="modal fade" y-modal="infopicone" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <small>
+                            <a href="###" onclick="javascript:return false" y-click="infopicone">示例图片</a>
+                        </small>
+                        <div class="modal fade" y-modal="infopicone" tabindex="-1" role="dialog"
+                             aria-labelledby="myModalLabel">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-body" data-dismiss="modal">
@@ -177,18 +198,21 @@
                                 </div>
                             </div>
                         </div>
-					</h4>
+                    </h4>
                 </div>
                 <div class="col-sm-4 text-xs-center">
                     <!--<img class="img-responsive img-rounded center-block y-wd60" src="./static/img/css3-html5-js-logo_a62c45abb.png">-->
                     <div class="y-upload-img" y-open="uploadPic">
-                        <h1 class="y-mt60"><small>请选择文件</small></h1>
+                        <h1 class="y-mt60">
+                            <small>请选择文件</small>
+                        </h1>
                     </div>
                     <h4 class="y-fs16">身份证正面
-						<small>
-							<a href="###" onclick="javascript:return false" y-click="infopictwo">示例图片</a>
-						</small>
-                        <div class="modal fade" y-modal="infopictwo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <small>
+                            <a href="###" onclick="javascript:return false" y-click="infopictwo">示例图片</a>
+                        </small>
+                        <div class="modal fade" y-modal="infopictwo" tabindex="-1" role="dialog"
+                             aria-labelledby="myModalLabel">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-body" data-dismiss="modal">
@@ -197,18 +221,21 @@
                                 </div>
                             </div>
                         </div>
-					</h4>
+                    </h4>
                 </div>
                 <div class="col-sm-4 text-xs-center">
                     <!--<img class="img-responsive img-rounded center-block y-wd60" src="./static/img/css3-html5-js-logo_a62c45abb.png">-->
                     <div class="y-upload-img" y-open="uploadPic">
-                        <h1 class="y-mt60"><small>请选择文件</small></h1>
+                        <h1 class="y-mt60">
+                            <small>请选择文件</small>
+                        </h1>
                     </div>
                     <h4 class="y-fs16">身份证反面
-						<small>
+                        <small>
                             <a href="###" onclick="javascript:return false" y-click="infopicthree">示例图片</a>
-						</small>
-                        <div class="modal fade" y-modal="infopicthree" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        </small>
+                        <div class="modal fade" y-modal="infopicthree" tabindex="-1" role="dialog"
+                             aria-labelledby="myModalLabel">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-body" data-dismiss="modal">
@@ -217,18 +244,21 @@
                                 </div>
                             </div>
                         </div>
-					</h4>
+                    </h4>
                 </div>
-				<div class="col-sm-4 text-xs-center">
-				    <!--<img class="img-responsive img-rounded center-block y-wd60" src="./static/img/css3-html5-js-logo_a62c45abb.png">-->
+                <div class="col-sm-4 text-xs-center">
+                    <!--<img class="img-responsive img-rounded center-block y-wd60" src="./static/img/css3-html5-js-logo_a62c45abb.png">-->
                     <div class="y-upload-img" y-open="uploadPic">
-                        <h1 class="y-mt60"><small>请选择文件</small></h1>
+                        <h1 class="y-mt60">
+                            <small>请选择文件</small>
+                        </h1>
                     </div>
-				    <h4 class="y-fs16">营业执照
-				        <small>
+                    <h4 class="y-fs16">营业执照
+                        <small>
                             <a href="###" onclick="javascript:return false" y-click="infopicfour">示例图片</a>
-						</small>
-                        <div class="modal fade" y-modal="infopicfour" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        </small>
+                        <div class="modal fade" y-modal="infopicfour" tabindex="-1" role="dialog"
+                             aria-labelledby="myModalLabel">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-body" data-dismiss="modal">
@@ -237,18 +267,21 @@
                                 </div>
                             </div>
                         </div>
-				    </h4>
-				</div>
-				<div class="col-sm-4 text-xs-center">
-				    <!--<img class="img-responsive img-rounded center-block y-wd60" src="./static/img/css3-html5-js-logo_a62c45abb.png">-->
+                    </h4>
+                </div>
+                <div class="col-sm-4 text-xs-center">
+                    <!--<img class="img-responsive img-rounded center-block y-wd60" src="./static/img/css3-html5-js-logo_a62c45abb.png">-->
                     <div class="y-upload-img" y-open="uploadPic">
-                        <h1 class="y-mt60"><small>请选择文件</small></h1>
+                        <h1 class="y-mt60">
+                            <small>请选择文件</small>
+                        </h1>
                     </div>
-				    <h4 class="y-fs16">税务登记证
-				        <small>
+                    <h4 class="y-fs16">税务登记证
+                        <small>
                             <a href="###" onclick="javascript:return false" y-click="infopicfive">示例图片</a>
-						</small>
-                        <div class="modal fade" y-modal="infopicfive" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        </small>
+                        <div class="modal fade" y-modal="infopicfive" tabindex="-1" role="dialog"
+                             aria-labelledby="myModalLabel">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-body" data-dismiss="modal">
@@ -257,18 +290,21 @@
                                 </div>
                             </div>
                         </div>
-				    </h4>
-				</div>
-				<div class="col-sm-4 text-xs-center">
-				    <!--<img class="img-responsive img-rounded center-block y-wd60" src="./static/img/css3-html5-js-logo_a62c45abb.png">-->
+                    </h4>
+                </div>
+                <div class="col-sm-4 text-xs-center">
+                    <!--<img class="img-responsive img-rounded center-block y-wd60" src="./static/img/css3-html5-js-logo_a62c45abb.png">-->
                     <div class="y-upload-img" y-open="uploadPic">
-                        <h1 class="y-mt60"><small>请选择文件</small></h1>
+                        <h1 class="y-mt60">
+                            <small>请选择文件</small>
+                        </h1>
                     </div>
-				    <h4 class="y-fs16">组织结构代码证
-				        <small>
+                    <h4 class="y-fs16">组织结构代码证
+                        <small>
                             <a href="###" onclick="javascript:return false" y-click="infopicsix">示例图片</a>
-						</small>
-                        <div class="modal fade" y-modal="infopicsix" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        </small>
+                        <div class="modal fade" y-modal="infopicsix" tabindex="-1" role="dialog"
+                             aria-labelledby="myModalLabel">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-body" data-dismiss="modal">
@@ -277,18 +313,21 @@
                                 </div>
                             </div>
                         </div>
-				    </h4>
-				</div>
-				<div class="col-sm-4 text-xs-center">
-				    <!--<img class="img-responsive img-rounded center-block y-wd60" src="./static/img/css3-html5-js-logo_a62c45abb.png">-->
+                    </h4>
+                </div>
+                <div class="col-sm-4 text-xs-center">
+                    <!--<img class="img-responsive img-rounded center-block y-wd60" src="./static/img/css3-html5-js-logo_a62c45abb.png">-->
                     <div class="y-upload-img" y-open="uploadPic">
-                        <h1 class="y-mt60"><small>请选择文件</small></h1>
+                        <h1 class="y-mt60">
+                            <small>请选择文件</small>
+                        </h1>
                     </div>
-				    <h4 class="y-fs16">开户许可证
-				        <small>
+                    <h4 class="y-fs16">开户许可证
+                        <small>
                             <a href="###" onclick="javascript:return false" y-click="infopicseven">示例图片</a>
-						</small>
-                        <div class="modal fade" y-modal="infopicseven" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        </small>
+                        <div class="modal fade" y-modal="infopicseven" tabindex="-1" role="dialog"
+                             aria-labelledby="myModalLabel">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-body" data-dismiss="modal">
@@ -297,19 +336,23 @@
                                 </div>
                             </div>
                         </div>
-				    </h4>
-				</div>
-				<div class="col-sm-4 text-xs-center">
-				    <div class="y-upload-img" ngf-select ng-model="picFile" name="file" accept="image/*" ngf-max-size="2MB" required ngf-model-invalid="errorFile" y-open="uploadPic">
-				        <h1 class="y-mt60"><small>请选择文件</small></h1>
-				        <img class="img-responsive img-rounded" ngf-thumbnail="picFile">
-				        <p ng-show="myForm.file.$error.maxSize">文件大小超过{{errorFile.size / 1000000|number:1}}MB，最大支持2M</p>
-				    </div>
-				    <h4 class="y-fs16">文网文等辅助文件（非必要上传文件）
-				        <small>
+                    </h4>
+                </div>
+                <div class="col-sm-4 text-xs-center">
+                    <div class="y-upload-img" ngf-select ng-model="picFile" name="file" accept="image/*"
+                         ngf-max-size="2MB" required ngf-model-invalid="errorFile" y-open="uploadPic">
+                        <h1 class="y-mt60">
+                            <small>请选择文件</small>
+                        </h1>
+                        <img class="img-responsive img-rounded" ngf-thumbnail="picFile">
+                        <p ng-show="myForm.file.$error.maxSize">文件大小超过{{errorFile.size / 1000000|number:1}}MB，最大支持2M</p>
+                    </div>
+                    <h4 class="y-fs16">文网文等辅助文件（非必要上传文件）
+                        <small>
                             <a href="###" onclick="javascript:return false" y-click="infopiceight">示例图片</a>
-						</small>
-                        <div class="modal fade" y-modal="infopiceight" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        </small>
+                        <div class="modal fade" y-modal="infopiceight" tabindex="-1" role="dialog"
+                             aria-labelledby="myModalLabel">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-body" data-dismiss="modal">
@@ -318,19 +361,21 @@
                                 </div>
                             </div>
                         </div>
-				    </h4>
-				</div>
+                    </h4>
+                </div>
             </div>
         </form>
     </div>
-    <link rel="import" href="../../components/upload-pic/upload-pic-modal.html?__inline" />
+    <link rel="import" href="../../components/upload-pic/upload-pic-modal.html?__inline"/>
     <div class="y-mt40 y-pb60 text-sm-center">
-        <button type="button " class="btn y-btn-blue" id="btnext" ui-sref="authentication.account" ng-click="toStep3()">下一步</button>
+        <button type="button " class="btn y-btn-blue" id="btnext" ui-sref="authentication.account" ng-click="toStep3()">
+            下一步
+        </button>
     </div>
 </div>
 
 <script>
-    $("[y-open='uploadPic']").click(function() {
+    $("[y-open='uploadPic']").click(function () {
         $("[y-modal='uploadPic']").modal('show');
         console.log("open uploadPic");
     });
@@ -367,10 +412,11 @@
         $("[y-modal='infopiceight']").modal('show');
     });
 
-    $("#textlength").keyup(function(){
-        $(this).val($(this).val().replace(/\D|^0/g,''));
+    $("#textlength").keyup(function () {
+        $(this).val($(this).val().replace(/\D|^0/g, ''));
     });
 
+<<<<<<< HEAD
 //    $("#emailcheck").focusout(function(){
 //        if($("#emailcheck").val()==""){
 //            $("#emailcheck").parent().addClass("has-error");
@@ -401,5 +447,22 @@
             }
         }
     });
+=======
+    $("#emailcheck").focusout(function () {
+        if ($("#emailcheck").val() == "") {
+            $("#emailcheck").parent().addClass("has-error");
+
+        } else {
+            $("#emailcheck").parent().removeClass("has-error");
+        }
+        var email = $("#emailcheck").val();
+        if (!email.match(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/)) {
+            $("#emailcheck").parent().addClass("has-error");
+        } else {
+            $("#emailcheck").parent().removeClass("has-error");
+        }
+    })
+
+>>>>>>> 5b53b035186d9bec6b379c3deb34f82860d3faba
 
 </script>
