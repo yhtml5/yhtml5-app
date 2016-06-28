@@ -6,23 +6,54 @@
 ![downloads total]
 ![author]
 
-
-
-### Quick Links  
-- [Getting Started](#Starting)
-    - [Prerequisites](#Prerequisites)
-    - [Clone Dashboard](#Clone Dashboard)
-    - [Install Dependencies](#Install Despendencies)
-    - [Run the Application](#Run the Application)
-- [项目简介](#项目简介)
-    - [项目进度](https://github.com/yhtml5/FW-Dashboard/issues?q=%E4%BB%BB%E5%8A%A1+is%3Aopen)
+### Quick Links
+- [Introduction](#introduction)
+    - [project progress]  
     - [changeLog](https://github.com/yhtml5/FW-Dashboard/blob/master/changeLog.md)
-    - [项目特点](#项目特点)
-    - [浏览器兼容性](#浏览器兼容性)
-- [目录说明](#目录说明)
-    - [Directory Layout](#Directory Layout) 
+    - [Features](#features)
+    - [Browser Compatibility](#browser-compatibility)
+    - [Directory Layout](#directory-layout) 
+- [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Clone Dashboard](#clone-dashboard)
+    - [Install Dependencies](#install-dependencies)
+    - [Run the Application](#run-the-application)
+    
 
-## Starting  
+## Introduction  
+
+### Features  
+  * Automagically wire-up dependencies installed with Bower
+  * 遵循百度前端开发规范(待翻译)
+  * 样式结构、模板引擎、业务逻辑解耦(待翻译)
+  * 前后端分离，使用json等交互数据(待翻译)
+  * 全端支持，全面支持浏览器、IOS、Android、HybirdApp、windows、Mac、Linux、TV(待翻译)
+  * Etc,etc
+
+### Technology stack
+
+  * AngularJS
+  * AngularUI
+  * AngularUI-bootstrap
+  * AngularUI-Router
+  * Bootstrap
+  * EchartJS 
+  * Fis3
+  * html5-boilerplate
+  * ProtractorJS
+  * NodeJS 
+
+### Browser Compatibility
+  * modern browsers: chrome, firefox, safari, Microsoft Edge  
+  * IE8+
+  * Etc,etc
+
+#### [changeLog] 
+#### [problem]
+#### [project progress]
+
+## Getting Started  
+
 To get you started you can simply clone the angular-seed repository and install the dependencies:
 
 ### Prerequisites  
@@ -86,44 +117,6 @@ fis3 release -wl
 ```
 
 Now browse to the app at `http://localhost:8080`.
-
-
-
-## 项目简介  
-
-### 项目特点  
-  * 遵循百度前端开发规范
-  * 样式结构、模板引擎、业务逻辑解耦
-  * 前后端分离，使用json等交互数据
-  * 全端支持，全面支持浏览器、IOS、Android、HybirdApp、windows、Mac、Linux、TV
-
-### 技术栈  
-
-  * AngularJS
-  * AngularUI
-  * AngularUI-bootstrap
-  * AngularUI-Router
-  * Bootstrap
-  * EchartJS 
-  * Fis3（前端构建工具）
-  * html5-boilerplate（兼容IE）
-  * ProtractorJS（测试工具）
-  * NodeJS 
-   
-### 浏览器兼容性
-  * 主流现代浏览器
-  * IE8+
-
-
-#### [changeLog](https://github.com/yhtml5/FW-Dashboard/blob/master/changeLog.md)
-#### [开发问题](https://github.com/yhtml5/FW-Dashboard/blob/master/question.md)
-#### [项目进度 88%](https://github.com/yhtml5/FW-Dashboard/issues?q=%E4%BB%BB%E5%8A%A1+is%3Aopen) 
-
-
-## 目录说明
-  * app 开发目录
-  * node_modules NodeJS工具包
-  * output 项目输出
 
 ### Directory Layout
 ```
@@ -205,3 +198,6 @@ Now browse to the app at `http://localhost:8080`.
 [Build Status]:https://img.shields.io/travis/twbs/bootstrap/master.svg
 [downloads total]:https://img.shields.io/github/downloads/atom/atom/total.svg
 [author]:https://img.shields.io/badge/author-yhtml5-blue.svg
+[changeLog]:https://github.com/yhtml5/FW-Dashboard/blob/master/changeLog.md
+[problem]:https://github.com/yhtml5/FW-Dashboard/blob/master/question.md
+[project progress]:https://github.com/yhtml5/FW-Dashboard/issues?q=%E4%BB%BB%E5%8A%A1+is%3Aopen
