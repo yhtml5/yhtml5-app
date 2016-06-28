@@ -29,7 +29,12 @@
 ### V1.0 Beta
   * 更新阿里图标
   * 更新下载链接为cdn地址
-
+  * http://www.jubaopay.com/#/download 这个页面中的下载链接 
+    http://static.jubaobar.cn/
+    都改成：
+    http://fwstatic.oss-cn-hangzhou.aliyuncs.com/
+  * view url, 下载链接 都改成__uri()
+  * 解决 girl 图片问题
 
 
 
