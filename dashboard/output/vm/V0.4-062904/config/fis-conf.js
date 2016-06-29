@@ -1,4 +1,3 @@
-//输出前请注释 angular-ui
 //======== 设置项目属性 set为覆盖不是叠加
 fis.set('project.md5Length', 9);
 fis.set('project.md5Connector ', '_');

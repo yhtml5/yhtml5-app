@@ -1,0 +1,48 @@
+<div class="container y-body y-mt-30">
+	<div class="row y-account-head y-mlr0">
+		<div class="col-xs-12 col-sm-4">
+			<div class="y-account-head-money">
+				<span><i class="iconfont y-fs30">&#xe610;</i></span>
+				<span class="y-font-b">&nbsp;&nbsp;账户余额:</span>
+				<span class="y-ellipsis">200,333,11</span>
+			</div>
+			<div class="y-mb20">
+				<div class="btn-group">
+					<button class="btn btn-default y-btn-sm-sm" ui-sref-active="y-btn-blue" ui-sref="account.withdraw">提现</button>
+					<button class="btn btn-default y-btn-sm-sm" ui-sref-active="y-btn-blue" ui-sref="account.topay">代付</button>
+					<button class="btn btn-default y-btn-sm-sm" ui-sref-active="y-btn-blue" ui-sref="account.detail">账户明细</button>
+					<button class="btn btn-default y-btn-sm-sm" ui-sref-active="y-btn-blue" ui-sref="account.record">历史记录</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-6 col-sm-4 y-account-head-center y-border-none-xs">
+			<div class="row y-mt40">
+				<div class="col-xs-6 y-transition-color-info">
+					<p>可提现金额</p>
+					<div class="y-box-sm y-transition-border-color-info">123,445,666
+					</div>
+				</div>
+				<div class="col-xs-6 y-transition-color-info">
+					<p>提现中金额</p>
+					<div class="y-box-sm y-transition-border-color-info">123,445,666
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-6 col-sm-4 y-account-head-right">
+			<div class="row y-mt40">
+				<div class="col-xs-6 y-transition-color-info">
+					<p>收款总金额</p>
+					<div class="y-box-sm y-transition-border-color-info">123,445,666
+					</div>
+				</div>
+				<div class="col-xs-6 y-transition-color-info">
+					<p>结算总金额</p>
+					<div class="y-box-sm y-transition-border-color-info">123,445,666
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div ui-view="content"></div>
+</div>
