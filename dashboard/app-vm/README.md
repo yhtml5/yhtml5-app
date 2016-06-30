@@ -51,6 +51,8 @@
    - [x] 20160623 nav 优化导航栏导航位置，样式
    - [x] 20160623 user.account 信息结算模块和隐私数据模块优化试图UI
    - [x] 20160624 appsetting.info 表格样式修改; 应用信息增加显示; 内容为空时字体图片修改显示
+   - [x] 20160630 serviceAgreement 协议内容修改
+   - [x] 20160630 authentication.person 表单控件联系电话和邮箱添加验证信息
 
 
 ### jQuery命名规范
