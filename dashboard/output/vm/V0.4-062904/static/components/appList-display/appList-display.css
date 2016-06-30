@@ -1,0 +1,86 @@
+/* panel-display style
+ * =================== */
+
+.y-app-icon {
+	background-color: #fff;
+	width: 68px;
+	height: 68px;
+	margin: auto;
+	position: relative;
+	margin-top: -40px;
+	border-radius: 50%;
+}
+
+.y-app-icon i {
+	display: inline-block;
+}
+
+.icon-android {
+	color: #a4ca39;
+	font-size: 48px;
+	margin-top: -2px;
+}
+
+.icon-ios,
+.icon-ios1 {
+	color: #36b5ea;
+	font-size: 48px;
+	margin-top: -2px;
+}
+
+.icon-pc {
+	color: #36b5ea;
+	font-size: 40px;
+	margin-top: 4px;
+}
+
+.icon-h501 {
+	color: #faa96d;
+	font-size: 48px;
+	margin-top: 4px;
+}
+
+.y-panel-display {
+	height: 381px;
+}
+
+@media (min-width: 1200px) {
+	.y-panel-display {
+		width: 94%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.y-panel-display-money i,
+.y-panel-display-user i {
+	font-size: 40px;
+	color: #3a3a3a;
+}
+
+.y-panel-display-money p,
+.y-panel-display-user p {
+	font-size: 16px;
+	margin-top: -4px;
+	font-weight: bold;
+}
+
+.y-panel-display .y-num {
+	font-size: 20px;
+	line-height: 80px;
+	vertical-align: middle;
+}
+
+.y-panel-display-set i {
+	color: #099fdd;
+	font-size: 30px;
+}
+
+.y-panel-display-set p {
+	font-weight: bold;
+}
+
+.y-panel-display-set a {
+	text-decoration: none;
+	color: #3a3a3a;
+}
