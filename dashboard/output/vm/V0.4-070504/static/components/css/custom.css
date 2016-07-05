@@ -287,3 +287,19 @@
     border-top: 2px solid #ddd;
     background-color:#EFEFEF;
 }
+
+.y-wtb95{
+    width: 95%;
+}
+
+.y-wt74{
+    width: 74px;
+}
+
+.y-out-none:focus{
+    outline: none;
+    border-bottom:  none !important;
+    color: #000 !important;
+}
+
+
