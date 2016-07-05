@@ -113,6 +113,15 @@
         </div>
     </div>
     <script type="text/javascript">
+        var d = new Date();
+        var vYear = d.getFullYear();
+        var vMon = d.getMonth() + 1;
+        var vDay = d.getDate();
+        var h = d.getHours();
+        var m = d.getMinutes();
+        yToday=vYear+'-'+(vMon<10 ? "0" + vMon : vMon)+(vDay<10 ? "-"+ vDay : vDay)+' '+(h<10 ? "0"+ h : h)+':'+(m<10 ? "0" + m : m);
+        console.log(yToday);
+        $(".form_datetime").val(yToday)
         $(".form_datetime").datetimepicker({
             language: 'zh-CN',
             format: "yyyy-mm-dd hh:ii",
