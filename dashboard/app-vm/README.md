@@ -53,6 +53,8 @@
    - [x] 20160624 appsetting.info 表格样式修改; 应用信息增加显示; 内容为空时字体图片修改显示
    - [x] 20160630 serviceAgreement 协议内容修改
    - [x] 20160630 authentication.person 表单控件添加联系电话和邮箱的验证信息
+   - [x] 20160705 appsetting.api 应用设置-技术对接页面优化
+   - [x] 20160705 nav.main 导航优化
 
 
 ### jQuery命名规范
