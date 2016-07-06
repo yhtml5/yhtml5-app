@@ -1,0 +1,173 @@
+<div class="container y-body y-mt-30">
+    <div class="panel panel-default y-dashboard-payment" data-page="dashboard-payment">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-sm-2 y-panel-title">支付查询</div>
+                <!--<div class="col-sm-2 col-sm-push-8 y-lh52">
+                    <button class="btn y-btn-blue" ng-click="paymentExportExcel()">导出</button>
+                    <button class="btn y-btn-blue">刷新</button>
+                </div>-->
+            </div>
+            <!--row-->
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="form-inline col-sm-5">
+                    <!--<span class="y-fs16">创建时间:</span>-->
+                    <!--<button type="button" class="btn y-btn-blue dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+                        <!--<span class="j-pay-btn">支付状态</span>&nbsp;<span class="caret"></span></button>-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn y-btn-bgcafe9ff dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 创建时间 <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">支付时间</a></li>
+                        </ul>
+                    </div>
+                    <input size="16" type="text" value="2016-06-07 20:00" readonly class="form_datetime form-control y-bg-fff">
+                    <span>-</span>
+                    <input size="16" type="text" value="2016-06-07 20:00" readonly class="form_datetime form-control y-bg-fff">
+                </div>
+                <div class="form-inline col-sm-2 y-ml-30 y-mr30">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn y-btn-bgcafe9ff dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           <span class="j-pay-btn">支付状态</span>&nbsp;<span class="caret"></span></button>
+                        <ul class="dropdown-menu j-menu-pay">
+                            <li><a href="#" onclick="javascript:return false;">全部</a></li>
+                            <li><a href="#" onclick="javascript:return false;">支付成功</a></li>
+                            <li><a href="#" onclick="javascript:return false;">支付失败</a></li>
+                        </ul>
+                    </div>
+
+                    <!--<div class="btn-group" role="group">-->
+                        <!--<button type="button" class="btn y-btn-blue dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+                           <!--<span class="j-settlement">结算状态</span><span class="caret"></span></button>-->
+                        <!--<ul class="dropdown-menu j-menu-settlement">-->
+                            <!--<li><a href="#" onclick="javascript:return false;">全部</a></li>-->
+                            <!--<li><a href="#" onclick="javascript:return false;">结算成功</a></li>-->
+                            <!--<li><a href="#" onclick="javascript:return false;">结算失败</a></li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                    <!--<div class="btn-group" role="group">-->
+                        <!--<button type="button" class="btn y-btn-blue dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+                           <!--<span class="j-channel">全部渠道</span><span class="caret"></span></button>-->
+                        <!--<ul class="dropdown-menu j-menu-channel">-->
+                            <!--<li><a href="#" onclick="javascript:return false;">全部</a></li>-->
+                            <!--<li><a href="#" onclick="javascript:return false;">应用宝</a></li>-->
+                            <!--<li><a href="#" onclick="javascript:return false;">豌豆荚</a></li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+
+                </div>
+                <div class="col-sm-3 y-mr-20">
+                    <input type="text" class="form-control" placeholder="请输入付款方查询">
+                </div>
+                <div class="col-sm-1">
+                    <button class="btn y-btn-blue">查询</button>
+
+                </div>
+                <div class="col-sm-1">
+
+                    <button class="btn y-btn-blue">导出</button>
+                </div>
+            </div>
+            <div class="table-responsive y-mt20">
+                <table class="table table-striped table-hover table-condensed table-bordered y-table-md">
+                    <thead>
+                        <tr>
+                            <th>创建时间</th>
+                            <th>客户订单号</th>
+                            <th>聚宝订单号</th>
+                            <th>支付方式</th>
+                            <th>支付状态</th>
+                            <th>支付金额</th>
+                            <th>付款方</th>
+                            <th>支付时间</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>data</td>
+                            <td>data</td>
+                            <td>data</td>
+                            <td>data</td>
+                            <td>data</td>
+                            <td>data</td>
+                            <td>data</td>
+                            <td>data</td>
+                            <td>
+                                <button type="button" class="btn btn-info" data-toggle="modal" y-open="paymentDemoBtn">补发通知</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--y-dashboard-payment-table-->
+            <p class="text-info visible-sm">左右滑动显示完整的表格内容</p>
+            <div class="text-center">
+                <ul class="pagination">
+                    <li><a href="#">&laquo;&nbsp;上一页</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">...</a></li>
+                    <li><a href="#">下一页&nbsp;&raquo;</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 用jquery重写弹窗 -->
+<div class="modal fade" y-modal="paymentDemo" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header y-modal-header-default">
+                <h3 class="y-mg0">安全确认
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </h3>
+            </div>
+            <div class="modal-body y-pt30">
+                <form class="form-horizontal" action="" method="">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">安全密码</label>
+                        <div class="col-sm-4">
+                            <input class="form-control" type="password" name="" id="" value="" placeholder="请输入密码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">短信验证码</label>
+                        <div class="col-sm-4">
+                            <input class="form-control" type="text" name="" id="" value="" placeholder="请输入验证码">
+                        </div>
+                        <div class="col-sm-4">
+                            <button type="button" class="btn y-btn-blue">发送验证码</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer y-modal-footer-default">
+                <button type="button" class="btn y-btn-blue center-block">确认</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(".form_datetime").datetimepicker({
+        language: 'zh-CN',
+        format: "yyyy-mm-dd hh:ii",
+        autoclose: true,
+        todayBtn: true,
+        minView: 1,
+        inline: true
+    });
+    $("[y-open='paymentDemoBtn']").click(function(){
+            $("[y-modal='paymentDemo']").modal('toggle')
+            console.log("open modal");
+        });
+    $('.dropdown-menu li').click(function() {
+        $('.j-pay-btn,.j-settlement,.j-channel,.j-settlement').text($(this).text());
+    })
+</script>
