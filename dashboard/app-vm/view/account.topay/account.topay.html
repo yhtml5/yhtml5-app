@@ -19,16 +19,18 @@
             <div class="form-group">
                 <label for="name" class="col-sm-4 control-label">收款方姓名</label>
                 <div class="col-xs-12 col-sm-6">
-                        <input type="text" class="form-control dropdown-toggle" name="" id="" value="" ng-model="accountName" placeholder="请核实对方姓名..." data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <ul class="dropdown-menu y-ul-stl">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
+                        <input type="text" class="form-control dropdown-toggle" y-open="demo1" name="" id="" value="" ng-model="accountName" placeholder="请核实对方姓名..." data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="y-select">
+                            <ul class="dropdown-menu y-pt-s" y-dropdown="user" style="width: 100%">
+                                <li><a href="#" >Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
                 </div>
-            </div>
-            <div class="form-group">
+                  </div>
+                <div class="form-group">
                 <label for="websiteDomain" class="col-sm-4 control-label">账户类型</label>
                 <div class="col-sm-6 text-left">
                     <label class="radio-inline">
@@ -455,5 +457,9 @@
     $("[y-open='accountTopayCheckBtn']").click(function() {
         $("[y-modal='accountTopayCheck']").modal('show')
         console.log("open accountTopayCheck");
+    });
+    $("[y-open='demo1']").click(function() {
+        $("[y-dropdown='user']").toggle()
+        console.log("open user");
     });
 </script>

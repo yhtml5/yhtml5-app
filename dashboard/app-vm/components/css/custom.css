@@ -301,9 +301,15 @@
     border-bottom:  none !important;
     color: #000 !important;
 }
-.y-ul-stl{
-    left: auto;
-    width: 95%;
+
+
+.y-select{
+    width: 100%;
+    padding: 0 15px;
+    margin-left: -15px;
+    position: absolute;
+    z-index: 2;
 }
-
-
+.y-select ul{
+    width: 100%;
+}

@@ -223,3 +223,6 @@
 .y-pb180 {
     padding-bottom: 180px;
 }
+.y-pt-s{
+    position: static;
+}
