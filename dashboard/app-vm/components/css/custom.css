@@ -301,5 +301,9 @@
     border-bottom:  none !important;
     color: #000 !important;
 }
+.y-ul-stl{
+    left: auto;
+    width: 95%;
+}
 
 
