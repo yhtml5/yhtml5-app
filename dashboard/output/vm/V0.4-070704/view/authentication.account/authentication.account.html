@@ -1,0 +1,108 @@
+<div class="y-bg-fff y-pt60">
+	<div class="container">
+		<form action="" class="form-horizontal">
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">开户名</label>
+						<div class="col-sm-8">
+							<h5 ng-bind="userAccount.accountname">kyle</h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">账户类型</label>
+						<div class="col-sm-8">
+							<label for="" class="radio-inline">
+								<input type="radio" ng-model="userAccount.accounttype" name="merchantClass" id="" value="1" checked="">&nbsp;个人
+							</label>
+							<label for="" class="radio-inline">
+								<input type="radio" ng-model="userAccount.accounttype" name="merchantClass" id="" value="2">&nbsp;企业
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">开户帐号</label>
+						<div class="col-sm-8">
+							<input class="form-control" type="text" name="" id="" value="" ng-model="userAccount.accountnum" placeholder="请输入开户帐号">
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+				<!-- =============================== writed by Yangjb 开户银行 Start =============================== -->
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">开户银行</label>
+						<div class="col-sm-8">
+                                <select class="form-control" ng-model="bank" ng-options="x.bank for x in data.banks">
+                                      <option value="">开户银行</option>
+                                </select>
+                        </div>
+					</div>
+				<!-- =============================== writed by Yangjb 开户银行 End =============================== -->	
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+				<!-- =============================== writed by Yangjb 开户行所在地 Start =============================== -->
+					<div class="form-group">
+                    	<label for="" class="col-sm-3 control-label">开户行所在地</label>
+                    	<div class="col-sm-4">
+                        	<select class="form-control" ng-model="userAccount.bankprov" ng-options="key as key for (key,value) in data.division" ng-change="contactCityId='';">
+                            	<option value="">开户行所在省</option>
+                        	</select>
+                    	</div>
+                     	<div class="col-sm-4">
+                        	<select class="form-control" ng-model="userAccount.bankcity" ng-options="key as key for (key,value) in data.division[userAccount.bankprov]">
+                             	<option value="">开户行所在市</option>
+                        	</select>
+                    	</div>
+                    </div>
+                <!-- =============================== writed by Yangjb 开户行所在地 End =============================== -->    
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">分支行</label>
+						<div class="col-sm-8">
+							<input class="form-control" type="text" name="" id="" value="" ng-model="userAccount.bankbranch" placeholder="请输入分支行">
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">联系人姓名</label>
+						<div class="col-sm-8">
+							<h5 ng-bind="userAccount.alipayname">青木</h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">支付宝帐号</label>
+						<div class="col-sm-8">
+							<input class="form-control" type="text" name="" id="" value="" ng-model="userAccount.alipay" placeholder="请输入电话">
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="y-mt40 y-pb60 text-sm-center">
+		<button type="button " class="btn y-btn-blue" ng-click="authenticationAccountConfirmOpen()">提交审核</button>
+	</div>
+	<script type="text/ng-template" id="authenticationAccountConfirm.html">
+		<div class="modal-body">
+			<h3 class="text-center">提交成功，资料正在审核中，请耐心等待...</h3>
+		</div>
+		<div class="modal-footer text-xs-center">
+			<button type="button" class="btn btn-danger" ng-click="cancel()" ui-sref="dashboard">确认</button>
+		</div>
+	</script>
+</div>

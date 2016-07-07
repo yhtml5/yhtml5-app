@@ -1,0 +1,18 @@
+<div class="y-card-nav y-dp-n" y-card="card">
+	<p>1417376255@qq.com</p>
+	<!--<button class="btn btn-success">已认证</button>-->
+	<button class="btn btn-danger" ui-sref="authentication.agreement">认证中</button>
+	<div class="">
+		<a href="#" ui-sref="user.person">我的账户</a>丨<a href="#">退出</a>
+	</div>
+</div>
+<script>
+	$(function () {
+		$("[y-open='card']").mouseover(function () {
+			$("[y-card='card']").fadeIn();
+		});
+		$("[y-card='card'],[y-close='card']").mouseleave(function () {
+			$("[y-card='card']").fadeOut();
+		})
+	})
+</script>
