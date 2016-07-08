@@ -10,7 +10,6 @@ angular.module('yhtml5', [
         'factory',
         'directive',
         'yhtml5.nav',
-        'yhtml5.appList',
         'yhtml5.appsetting',
         'yhtml5.authentication'
     ])
