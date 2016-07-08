@@ -189,12 +189,20 @@
                     <label class="col-sm-4 control-label">通知地址：</label>
                     <div class="col-sm-7">
                         <input class="form-control" type="text" name="" id="" value="" ng-model="callbackurl" />
+                        <small>
+                            聚宝云计费服务器向商户服务器通知支付成功的消息URL<br>
+                            例如http://www.jubaopay.com
+                        </small>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-4 control-label">页面回调地址：</label>
                     <div class="col-sm-7">
                         <input class="form-control" type="text" name="" id="" value="" ng-model="returnurl" />
+                        <small>
+                            用户返回商户支付成功页面的URL<br>
+                            例如 http://www.jubaopay.com
+                        </small>
                     </div>
                 </div>
             </form>
@@ -217,6 +225,10 @@
                     <label class="col-sm-4 control-label">重新支付地址：</label>
                     <div class="col-sm-7">
                         <input class="form-control" type="text" name="" id="" value="" ng-model="payurl" />
+                        <small>
+                            用户返回商户页面重新下单的URL<br>
+                            例如 http://www.jubaopay.com/
+                        </small>
                     </div>
                 </div>
             </form>

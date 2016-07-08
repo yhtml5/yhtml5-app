@@ -24,15 +24,15 @@
                         <label for="userName" class="col-sm-3 control-label">应用平台</label>
                         <div class="col-xs-12 col-sm-8">
                             <select class="form-control" y-select="system" name="userName">
-                                <option value="1" num=1>PC</option>
-                                <option value="2" num=2>WAP</option>
-                                <option value="3" num=3>Android</option>
-                                <option value="4" num=4>IOS</option>
+                                <option value="1" >PC</option>
+                                <option value="2">WAP</option>
+                                <option value="3">Android</option>
+                                <option value="4">IOS</option>
                             </select>
                         </div>
                     </div>
                     <div class="appType">
-                        <div y-appType="pc">
+                        <div y-appType="1">
                             <div class="form-group">
                                 <label for="websiteName" class="col-sm-3 control-label">网站名称</label>
                                 <div class="col-xs-12 col-sm-8">
@@ -57,7 +57,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div y-appType="wap" class="y-dp-n">
+                        <div y-appType="2" class="y-dp-n">
                             <div class="form-group">
                                 <label for="websiteName" class="col-sm-3 control-label">WAP名称</label>
                                 <div class="col-xs-12 col-sm-8">
@@ -82,7 +82,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div y-appType="android" class="y-dp-n">
+                        <div y-appType="3" class="y-dp-n">
                             <div class="form-group">
                                 <label for="websiteName" class="col-sm-3 control-label">应用名称</label>
                                 <div class="col-xs-12 col-sm-8">
@@ -114,7 +114,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div y-appType="ios" class="y-dp-n">
+                        <div y-appType="4" class="y-dp-n">
                             <div class="form-group">
                                 <label for="websiteName" class="col-sm-3 control-label">应用名称</label>
                                 <div class="col-xs-12 col-sm-8">
@@ -153,18 +153,7 @@
     $(function () {
         $("[y-select='system']").on('change', function () {
             var a = $(this).find("option:selected").attr('value');
-            if (a === '2') {
-                $("[y-appType='wap']").fadeIn().siblings().hide();
-            }
-            else if (a === '3') {
-                $("[y-appType='android']").fadeIn().siblings().hide();
-            }
-            else if (a === '4') {
-                $("[y-appType='ios']").fadeIn().siblings().hide();
-            }
-            else {
-                $("[y-appType='pc']").fadeIn().siblings().hide();
-            }
+            $("[y-appType = "+a+"]").fadeIn().siblings().hide();
         })
     })
 </script>

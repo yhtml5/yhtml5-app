@@ -60,6 +60,9 @@
    - [x] 20160706 account.topay  --收款方姓名处修改下拉菜单样式
    - [x] 20160707 user.person, appsetting  --删除内联样式
    - [x] 20160708 appList-add --用jquery重写弹框和下拉框
+   - [x] 20160708 appsetting.api --添加通知地址和重新支付地址的文字说明
+   - [x] 20160708 404.html --404html页面增加
+   - [x] 20160708 user.person、authentication.person --实名认证填写基本信息添加图片时排版优化
 
 
 
