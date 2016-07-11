@@ -4,14 +4,14 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <label for="" class="col-sm-3 control-label">商户性质</label>
+                        <label class="col-sm-3 control-label">商户性质</label>
                         <div class="col-sm-8">
-                            <label for="" class="radio-inline">
-                                <input type="radio" ng-model="userInfo.companyType" name="merchantNature" id=""
+                            <label for="merchantNature" class="radio-inline">
+                                <input type="radio" ng-model="userInfo.companyType" name="merchantNature"
                                        value="1" checked="">&nbsp;个人
                             </label>
-                            <label for="" class="radio-inline">
-                                <input type="radio" ng-model="userInfo.companyType" name="merchantNature" id=""
+                            <label for="merchantNature" class="radio-inline">
+                                <input type="radio" ng-model="userInfo.companyType" name="merchantNature"
                                        value="2">&nbsp;企业
                             </label>
                         </div>
@@ -22,11 +22,11 @@
                         <label for="" class="col-sm-3 control-label">商户类型</label>
                         <div class="col-sm-8">
                             <label for="" class="radio-inline">
-                                <input type="radio" ng-model="userInfo.subCompanyType" name="merchantClass" id=""
+                                <input type="radio" ng-model="userInfo.subCompanyType" name="merchantClass"
                                        value="1" checked="">&nbsp;应用提供商
                             </label>
                             <label for="" class="radio-inline">
-                                <input type="radio" ng-model="userInfo.subCompanyType" name="merchantClass" id=""
+                                <input type="radio" ng-model="userInfo.subCompanyType" name="merchantClass"
                                        value="2">&nbsp;渠道分销商
                             </label>
                         </div>
@@ -38,7 +38,7 @@
                     <div class="form-group">
                         <label for="" class="col-sm-3 control-label">签约名</label>
                         <div class="col-sm-8">
-                            <input class="form-control" type="text" name="" id="" ng-model="userInfo.userName" value=""
+                            <input class="form-control" type="text" name=""  ng-model="userInfo.userName" value=""
                                    placeholder="工信部备案人真实姓名">
                         </div>
                     </div>
@@ -66,7 +66,7 @@
                     <div class="form-group">
                         <label for="" class="col-sm-3 control-label">企业名称</label>
                         <div class="col-sm-8">
-                            <input class="form-control" type="text" name="" id="" ng-model="userInfo.companyName"
+                            <input class="form-control" type="text" name=""  ng-model="userInfo.companyName"
                                    value="" placeholder="请输入企业名称">
                         </div>
                     </div>
@@ -75,7 +75,7 @@
                     <div class="form-group">
                         <label for="" class="col-sm-3 control-label">企业经营地址</label>
                         <div class="col-sm-8">
-                            <input class="form-control" type="text" name="" id="" ng-model="userInfo.companyAddress"
+                            <input class="form-control" type="text" name=""  ng-model="userInfo.companyAddress"
                                    value="" placeholder="请输入企业经营地址">
                         </div>
                     </div>
@@ -86,7 +86,7 @@
                     <div class="form-group">
                         <label for="" class="col-sm-3 control-label">营业执照号</label>
                         <div class="col-sm-8">
-                            <input class="form-control" type="text" name="" id="" ng-model="userInfo.licenseNo" value=""
+                            <input class="form-control" type="text" name=""  ng-model="userInfo.licenseNo" value=""
                                    placeholder="请输入营业执照号">
                         </div>
                     </div>
@@ -98,7 +98,7 @@
                     <div class="form-group">
                         <label for="" class="col-sm-3 control-label">联系人姓名</label>
                         <div class="col-sm-8">
-                            <input class="form-control" type="text" name="" id="" ng-model="userInfo.contactName"
+                            <input class="form-control" type="text" name=""  ng-model="userInfo.contactName"
                                    value="" placeholder="请输入联系人">
                         </div>
                     </div>
@@ -107,7 +107,7 @@
                     <div class="form-group">
                         <label for="" class="col-sm-3 control-label">联系电话</label>
                         <div class="col-sm-8">
-                            <input class="form-control" type="text" name="phoneNumber" id=""
+                            <input class="form-control" type="text" name="phoneNumber"
                                    ng-model="userInfo.contactTelephone" value="" placeholder="请输入电话">
                         </div>
                     </div>
@@ -119,8 +119,8 @@
                         <label for="" class="col-sm-3 control-label">邮箱</label>
                         <div class="col-sm-8">
 
-                            <input class="form-control" type="email" name="email" id="" ng-model="userInfo.contactEmail" value="" placeholder="请输入Email地址">
-
+                            <input class="form-control" type="email" name="email"  ng-model="userInfo.contactEmail"
+                                   value="" placeholder="请输入Email地址">
 
 
                         </div>
@@ -130,7 +130,7 @@
                     <div class="form-group">
                         <label for="" class="col-sm-3 control-label">QQ</label>
                         <div class="col-sm-8">
-                            <input class="form-control" type="text" name="" id="" ng-model="userInfo.contactQQ" value=""
+                            <input class="form-control" type="text" name=""  ng-model="userInfo.contactQQ" value=""
                                    placeholder="请输入QQ号">
                         </div>
                     </div>
@@ -162,7 +162,7 @@
                 <div class="col-sm-6">
                     <div class="form-group">
                         <div class="col-sm-8 col-sm-push-3">
-                            <input class="form-control" type="text" name="" id="" value=""
+                            <input class="form-control" type="text" name=""  value=""
                                    ng-model="userInfo.contactAddress" placeholder="请详细到镇、街道">
                         </div>
                     </div>
@@ -174,7 +174,7 @@
                     <div class="form-group">
                         <label for="" class="col-sm-3 control-label">身份证号</label>
                         <div class="col-sm-8">
-                            <input class="form-control" type="text" name="" id="" ng-model="userInfo.idCard" value=""
+                            <input class="form-control" type="text" name=""  ng-model="userInfo.idCard" value=""
                                    placeholder="请输入身份证号">
                         </div>
                     </div>
@@ -379,49 +379,47 @@
 </div>
 
 <script>
-    $("[y-open='uploadPic']").click(function () {
-        $("[y-modal='uploadPic']").modal('show');
-        console.log("open uploadPic");
-    });
+    $(document).ready(function () {
+        $("[y-open='uploadPic']").click(function () {
+            $("[y-modal='uploadPic']").modal('show');
+            console.log("open uploadPic");
+        });
 
-    $("[y-click='infopicone']").click(function () {
-        $("[y-modal='infopicone']").modal('show');
-    });
+        $("[y-click='infopicone']").click(function () {
+            $("[y-modal='infopicone']").modal('show');
+        });
 
-    $("[y-click='infopictwo']").click(function () {
-        $("[y-modal='infopictwo']").modal('show');
-    });
+        $("[y-click='infopictwo']").click(function () {
+            $("[y-modal='infopictwo']").modal('show');
+        });
 
-    $("[y-click='infopicthree']").click(function () {
-        $("[y-modal='infopicthree']").modal('show');
-    });
+        $("[y-click='infopicthree']").click(function () {
+            $("[y-modal='infopicthree']").modal('show');
+        });
 
-    $("[y-click='infopicfour']").click(function () {
-        $("[y-modal='infopicfour']").modal('show');
-    });
+        $("[y-click='infopicfour']").click(function () {
+            $("[y-modal='infopicfour']").modal('show');
+        });
 
-    $("[y-click='infopicfive']").click(function () {
-        $("[y-modal='infopicfive']").modal('show');
-    });
+        $("[y-click='infopicfive']").click(function () {
+            $("[y-modal='infopicfive']").modal('show');
+        });
 
-    $("[y-click='infopicsix']").click(function () {
-        $("[y-modal='infopicsix']").modal('show');
-    });
+        $("[y-click='infopicsix']").click(function () {
+            $("[y-modal='infopicsix']").modal('show');
+        });
 
-    $("[y-click='infopicseven']").click(function () {
-        $("[y-modal='infopicseven']").modal('show');
-    });
+        $("[y-click='infopicseven']").click(function () {
+            $("[y-modal='infopicseven']").modal('show');
+        });
 
-    $("[y-click='infopiceight']").click(function () {
-        $("[y-modal='infopiceight']").modal('show');
-    });
+        $("[y-click='infopiceight']").click(function () {
+            $("[y-modal='infopiceight']").modal('show');
+        });
 
-    $("#textlength").keyup(function () {
-        $(this).val($(this).val().replace(/\D|^0/g, ''));
-    });
-
-
-    $(document).ready(function() {
+        $("#textlength").keyup(function () {
+            $(this).val($(this).val().replace(/\D|^0/g, ''));
+        });
         $('#defaultForm').formValidation({
             message: 'This value is not valid',
             framework: 'bootstrap',
