@@ -113,6 +113,9 @@
 .y-fw-n {
     font-weight: 400;
 }
+.y-ht100{
+    height: 100%;
+}
 
 .y-ht36 {
     height: 36px
@@ -168,6 +171,7 @@
 .y-wd60 {
     width: 60%;
 }
+
 
 .y-wd80 {
     width: 80%;

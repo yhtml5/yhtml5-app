@@ -207,8 +207,11 @@
                 <div class="col-sm-4 text-xs-center">
                     <!--<img class="img-responsive img-rounded center-block y-wd60" src="./static/img/css3-html5-js-logo_a62c45abb.png">-->
                     <div class="y-upload-img" y-open="uploadPic">
-
-                            <img src="../../components/public/zm2.jpg" alt="我是图片">
+                        <!--<h1 class="y-mt60">-->
+                            <!--<small>请选择文件</small>-->
+                        <!--</h1>-->
+                        <img  class="img demoImg" src="../../components/public/scsfz.jpg" alt="我是图片">
+                            <!--<img src="../../components/public/zm2.jpg" alt="我是图片">-->
 
                     </div>
                     <h4 class="y-fs16">身份证正面
@@ -446,6 +449,28 @@
                 }
             }
         });
+
+        function resizeImg() {
+            var img_width = $(".y-upload-img img").width();
+            var img_height = $(".y-upload-img img").height();
+            console.log(img_width,img_height)
+            var margin_top = (180 - img_height) / 2 - 1;
+            if (img_width >= img_height) {
+                $(".y-upload-img").addClass("y-wt70");
+                $(".y-upload-img img").css({
+                    "margin-top": margin_top + "px"
+                })
+            }
+            else {
+                $(".y-upload-img").addClass("center-block", "y-ht100");
+            }
+        }
+        $(".y-upload-img img").on("load",function () {
+            resizeImg();
+        });
+        $(window).resize(function () {
+            resizeImg();
+        })
     });
 
 </script>

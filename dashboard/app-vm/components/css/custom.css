@@ -20,10 +20,10 @@
 
 
 .y-upload-img img {
-    /*margin-left: auto;*/
-    /*margin-right: auto;*/
+    margin-left: auto;
+    margin-right: auto;
     max-width: 100%;
-    max-height: 180px;
+    max-height: 178px;
     border-radius: 6px;
 }
 
