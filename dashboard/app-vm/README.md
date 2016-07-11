@@ -59,6 +59,7 @@
    - [x] 20160705 account.topay  --收款方姓名处增加下拉框
    - [x] 20160706 account.topay  --收款方姓名处修改下拉菜单样式
    - [x] 20160707 user.person, appsetting  --删除内联样式
+   - [x] 20160708 appList-add --用jquery重写弹框和下拉框
 
 
 
