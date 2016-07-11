@@ -319,6 +319,8 @@ fieldset[disabled] .y-btn-red.focus {
     text-align: left;
     margin-top: 8px;
     color: #f25050;
+    font-size:10px;
+    margin-left:-32px;
 }
 
 .y-card-md {
