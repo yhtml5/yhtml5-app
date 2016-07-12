@@ -1,0 +1,20 @@
+/*
+ * === footer ===
+ */
+
+.y-footer {
+    width: 100%;
+    background: #444;
+    color: #fff;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+.y-footer-bt {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background: #2f2f2f;
+    color: #fff;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
