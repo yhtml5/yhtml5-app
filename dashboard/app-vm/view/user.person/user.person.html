@@ -388,19 +388,19 @@
 
 
         function resizeImg() {
-            var img_width = $(".y-upload-img img").width();
-            var img_height = $(".y-upload-img img").height();
-            console.log(img_width,img_height);
-            var margin_top = (180 - img_height) / 2 - 1;
-            if (img_width >= img_height) {
-
-                $(".y-upload-img img").css({
-                    "margin-top": margin_top + "px"
-                })
-            }
-            else {
-                $(".y-upload-img").addClass("y-ht100");
-            }
+            $(".y-upload-img").find("img").each(function(){
+                var w = $(this).width();
+                var h = $(this).height();
+                var margin_top = (180 - h) / 2 - 1;
+                if (w >= h) {
+                    $(this).css({
+                        "margin-top": margin_top + "px"
+                    });
+                    console.log('<'+w,h+'>')
+                }  else {
+                    $(this).addClass("y-ht100");
+                }
+            });
         }
         $(".y-upload-img img").on("load",function () {
             resizeImg();
