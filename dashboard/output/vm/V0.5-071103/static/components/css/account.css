@@ -1,0 +1,43 @@
+/*==================== account ====================*/
+
+.y-account-head {
+	background-color: #f5f5f5;
+	box-shadow: 0 0 9px 5px rgba(0, 0, 0, 0.06);
+	-webkit-transition: box-shadow 0.3s ease-out 0s;
+	-moz-transition: box-shadow 0.3s ease-out 0s;
+	transition: box-shadow 0.3s ease-out 0s;
+	border: solid 1px #eee;
+	border-radius: 4px;
+	margin-bottom: 30px;
+}
+
+.y-account-head:hover,
+.y-account-head:focus {
+	-webkit-box-shadow: 0 0 11px 7px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 11px 7px rgba(0, 0, 0, 0.1);
+}
+
+.y-account-head-money {
+	font-size: 18px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	-webkit-transition: color 0.4s ease-out 0s;
+	-moz-transition: color 0.4s ease-out 0s;
+	transition: color 0.4s ease-out 0s;
+}
+
+.y-account-head-money:hover,
+.y-account-head-money:focus {
+	color: #099fdd;
+}
+
+.y-account-head-center {
+	height: 160px;
+	border: solid 1px #cacaca;
+	border-top: none;
+	border-bottom: none;
+}
+.y-account-head-center p,
+.y-account-head-right p{
+	font-weight: 700;
+}
