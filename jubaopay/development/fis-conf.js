@@ -142,8 +142,8 @@ fis.media('cdn')
         })
     })
     .match('{/static/**,/bower_components/**,/view/**,*.png,*.jpg,iconfont.*}', {
-        domain: 'https://static.jubaobar.cn/project/jubaopay/V0.3-071201'
-        // domain: 'https://static.jubaobar.cn/project/jubaopay/V0.3-071201',
+        domain: 'https://static.jubaobar.cn/project/jubaopay/V0.3-071202'
+        // domain: 'https://static.jubaobar.cn/project/jubaopay/V0.3-071202',
     });
 
 ///*************************CDN规范*****************************/
