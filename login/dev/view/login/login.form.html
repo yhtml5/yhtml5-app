@@ -1,0 +1,44 @@
+<div class="container">
+    <img class="y-logo" src="logo.png" alt="logo">
+    <form action="" class="form" name="myform">
+        <p class="y-pw-error">密码输入错误</p>
+        <div class="y-input-group">
+            <img src="user.png?__inline" alt="user">
+            <input type="text" class="y-input" placeholder="输入用户名">
+        </div>
+        <div class="y-input-group">
+            <img src="psd.png?__inline" alt="psd">
+            <input type="password" class="y-input" placeholder="输入密码">
+        </div>
+        <div class="y-input-group y-position">
+            <input type="text" class="y-input-check" placeholder="输入验证码">
+            <input type="button" class="y-btn-check" value="发送验证码" name="code" onclick="showtime(60)">
+        </div>
+        <div class="y-input-group y-position">
+            <button class="y-btn-login" type="button">登录</button>
+        </div>
+    </form>
+</div>
+<script>
+    'use strict';
+    function showtime(t){
+        document.myform.code.disabled=true;
+        for(var i=1;i<=t;i++) {
+            window.setTimeout("update_p(" + i + ","+t+")", i * 1000);
+        }
+    }
+    function update_p(num,t) {
+        if(num === t) {
+            document.myform.code.value =" 重新发送 ";
+            document.myform.code.style.backgroundColor="#fa5c0d";
+            document.myform.code.style.cursor="pointer";
+            document.myform.code.disabled=false;
+        }
+        else {
+            var printnr = t-num;
+            document.myform.code.style.backgroundColor="#959595";
+            document.myform.code.style.cursor="not-allowed";
+            document.myform.code.value = " (" + printnr +")s后重新发送";
+        }
+    }
+</script>

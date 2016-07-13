@@ -68,7 +68,7 @@ $(function() {
 		}
 	}
 	urlIdActive();
-	/* login.html
+	/* index.html
 	 * ============= */
 	function loginHide() {
 		var loginHide = $(".js-header-nav-active").html();

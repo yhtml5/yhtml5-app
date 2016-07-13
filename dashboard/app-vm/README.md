@@ -63,6 +63,7 @@
    - [x] 20160708 appsetting.api --添加通知地址和重新支付地址的文字说明
    - [x] 20160708 404.html --404html页面增加
    - [x] 20160711 user.person、authentication.person --实名认证填写基本信息添加图片时排版优化
+   - [x] 20160713 helpCenter --帮助调整
 
 
 
