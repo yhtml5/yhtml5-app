@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>运营后台</title>
+    <meta name="description" content="">
+    <meta name="author" content="qichao" />
+    <meta name="description" content=" ">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="HandheldFriendly" content="true">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="shortcut-icon.png" type="image/x-icon">
+    <!--STYLE_PLACEHOLDER-->
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: #1b1e28;
+            text-align: center;
+            margin: 0 auto;
+            font-family: "Microsoft YaHei UI";
+        }
+        .container{
+            margin-top: 200px;
+            height:440px;
+            background-color: #12131e;
+        }
+        .y-logo{
+            margin-top: 20px;
+        }
+        .y-pw-error{
+            width: 370px;
+            color: #fa5c0d;
+            font-size: 18px;
+            margin: 16px auto 12px auto ;
+            text-align: left;
+        }
+        .y-input{
+            width: 330px;
+            padding-left: 50px;
+            margin-bottom: 24px;
+            border-radius: 6px;
+            margin-left: -6px;
+        }
+        .y-input-group input,
+        .y-input-group button{
+            font-size: 18px;
+            height: 50px;
+            border: none;
+            outline: none;
+        }
+        .y-input-check{
+            width: 210px;
+            padding-left: 20px;
+            margin-bottom: 24px;
+            border-radius: 6px 0 0 6px;
+            left: 0;
+        }
+        .y-btn-check{
+            width: 150px;
+            background-color: #fa5c0d;
+            color:  #fff;
+            padding-right: 2px;
+            margin-top: 1px;
+            margin-left: -8px;
+            border-radius: 0 6px 6px 0;
+            cursor: pointer;
+        }
+        .y-input-group img{
+            position: relative;
+            display: inline-block;
+            margin-right: -35px;
+            margin-bottom: -10px;
+        }
+        .y-position{
+            margin-left: -8px;
+        }
+        .y-btn-login{
+            width: 380px;
+            background-color: #fa5c0d;
+            border-radius: 6px;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <img class="y-logo" src="logo.png?__inline" alt="logo">
+    <form action="" class="form" name="myform">
+        <p class="y-pw-error">密码输入错误</p>
+        <div class="y-input-group">
+            <img src="user.png?__inline" alt="user">
+            <input type="text" class="y-input" placeholder="输入用户名">
+        </div>
+        <div class="y-input-group">
+            <img src="psd.png?__inline" alt="psd">
+            <input type="password" class="y-input" placeholder="输入密码">
+        </div>
+        <div class="y-input-group y-position">
+            <input type="text" class="y-input-check" placeholder="输入验证码">
+            <input type="button" class="y-btn-check" value="发送验证码" name="code" onclick="showtime(60)">
+        </div>
+        <div class="y-input-group y-position">
+            <button class="y-btn-login" type="button">登录</button>
+        </div>
+    </form>
+</div>
+<script>
+    'use strict';
+    function showtime(t){
+        document.myform.code.disabled=true;
+        for(var i=1;i<=t;i++) {
+            window.setTimeout("update_p(" + i + ","+t+")", i * 1000);
+        }
+    }
+    function update_p(num,t) {
+        if(num === t) {
+            document.myform.code.value =" 重新发送 ";
+            document.myform.code.style.backgroundColor="#fa5c0d";
+            document.myform.code.style.cursor="pointer";
+            document.myform.code.disabled=false;
+        }
+        else {
+            var printnr = t-num;
+            document.myform.code.style.backgroundColor="#959595";
+            document.myform.code.style.cursor="not-allowed";
+            document.myform.code.value = " (" + printnr +")s后重新发送";
+        }
+    }
+</script>
+</body>
+</html>
