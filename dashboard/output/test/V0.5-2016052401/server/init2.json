@@ -1,8 +1,0 @@
-userApps({
-"appName": "测试应用1",
-"totalMoneyNum": "1234",
-"userPayNum": "111",
-"appIcon": "icon-android",
-"todayMoneyNum": "1,021,756.50",
-"todayOrderNum": "11112"
-})
