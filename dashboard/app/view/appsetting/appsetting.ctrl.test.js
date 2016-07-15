@@ -194,7 +194,7 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
                         $scope.appDel = response.data;
                     }
                 });
-            }
+            };
             /** ====================== 获取验证码 ======================= E**/
             /** ======================= 删除应用 ======================= B**/
         $scope.appDel = {};
@@ -213,14 +213,14 @@ angular.module('yhtml5.appsetting', ['ui.bootstrap', 'ngAnimate', 'factory'])
                     $state.reload('dashboard');
                 }).error(function(res) {
                     console.log("保存失败")
-                })
+                });
                 var modalInstance = $uibModal.open({
                     animation: $scope.animationsEnabled,
                     templateUrl: 'noteSimple.html',
                     controller: 'appsettingInfoNoteSimpleCtrl',
                     size: size
                 })
-            }
+            };
             /** ======================= 删除应用 ======================= E**/
         $scope.cancel = function() {
             $uibModalInstance.dismiss('cancel');
