@@ -7,21 +7,14 @@ fis.set('project.ignore', ['*.test.*', '*.psd', '.git/**', '/**/demo.*']);
 fis.set('project.files', [
     'fis-conf.js', 'index.html', 'map.json',
     '/components/**', '/server/*', '/view/**',
-    '/bower_components/angular/angular{.,.min.}js',
-    '/bower_components/angular-ui-router/release/angular-ui-router{.,.min.}js',
-    '/bower_components/bootstrap/dist/**/{bootstrap{.,.min.}{css,js},glyphicons-halflings-regular.*}'
+    '/bower_components/bootstrap/dist/**/{bootstrap.min.{css,js},glyphicons-halflings-regular.*}',
+    '/bower_components/jquery/dist/jquery.js'
 ]);
 
 /************************* 目录规范 *****************************/
 
 fis.match('/bower_components/bootstrap/dist/(**)', {
     release: '/vendor/bootstrap/$1'
-});
-fis.match('/bower_components/(angular/**)', {
-    release: '/vendor/$1'
-});
-fis.match('/bower_components/angular-ui-router/release/(**)', {
-    release: '/vendor/angular/$1'
 });
 fis.match('/components/**', {
     release: '/vendor/$0'
@@ -45,16 +38,16 @@ fis.match('::package', {
     })
 });
 /*** public resourse ***/
-fis.match('/bower_components/{angular/angular,angular-ui-router/release/angular-ui-router}.js', {
+fis.match('/bower_components/{jquery,bootstrap}/dist/**/*.js', {
     packTo: '${project.static}/yhtml5.js',
 });
-fis.match('/bower_components/angular/angular.js', {
+fis.match('/bower_components/jquery/dist/*', {
     packOrder: -99
 });
-fis.match('/bower_components/angular-ui-router/release/angular-ui-router.js', {
+fis.match('/bower_components/bootstrap/dist/js/*', {
     packOrder: -98
 });
-fis.match('/bower_components/bootstrap/dist/css/bootstrap.css', {
+fis.match('/bower_components/bootstrap/dist/css/*', {
     packTo: '${project.static}/yhtml5.css'
 });
 
