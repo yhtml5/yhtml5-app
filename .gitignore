@@ -1,3 +1,14 @@
+logs/*
+!.gitkeep
+dashboard/production/
+dashboard/node_modules/
+dashboard/app/bower_components/
+crm/app/bower_components/
+
+tmp
+.DS_Store
+.idea
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
@@ -47,12 +58,4 @@ Temporary Items
 .apdisk
 
 
-logs/*
-!.gitkeep
-dashboard/production/
-dashboard/node_modules/
-dashboard/app/bower_components/
 
-tmp
-.DS_Store
-.idea

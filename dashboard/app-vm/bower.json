@@ -18,6 +18,7 @@
     "smalot-bootstrap-datetimepicker": "^2.3.11",
     "blueimp-file-upload": "jquery-file-upload#^9.12.5",
     "form.validation": "*",
-    "Selectivity.js": "selectivity#^2.1.0"
+    "Selectivity.js": "selectivity#^2.1.0",
+    "clipboard": "^1.5.12"
   }
 }
