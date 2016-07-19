@@ -64,6 +64,8 @@
    - [x] 20160708 404.html --404html页面增加
    - [x] 20160711 user.person、authentication.person --实名认证填写基本信息添加图片时排版优化
    - [x] 20160713 helpCenter --帮助调整
+   - [x] 20160714 appsetting.api --商户私钥排版优化
+   - [x] 20160715 empty --内容为空的图标已更换
 
 
 

@@ -93,33 +93,38 @@
         </div>
         <div class="modal-body y-pt20">
             <div class="row">
-                <div class="col-sm-3 col-sm-push-1 text-xs-center">
-                    <h4>私钥：</h4>
-                    <h4><small>(PHP .NET)</small></h4>
+                <div class="col-sm-4 col-sm-push-1">
+                    <h4>私钥：(PHP .NET)</h4>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-2 col-sm-push-5" style="">
                     <button type="button" class="btn btn-default y-mt10 center-block" ng-click="appsettingApiPasswordDownload('private')">下载</button>
                 </div>
-                <div class="col-sm-3 col-sm-push-1 text-xs-center">
-                    <h4>私钥：</h4>
-                    <h4><small>(JAVA)</small></h4>
+            </div>
+            <hr class="y-mt10 y-mb12">
+            <div class="row">
+                <div class="col-sm-4 col-sm-push-1">
+                    <h4>私钥：(JAVA)</h4>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-2 col-sm-push-5">
                     <button type="button" class="btn btn-default y-mt10 center-block" ng-click="appsettingApiPasswordDownload('pkcsPrivate')">下载</button>
                 </div>
             </div>
+            <hr class="y-mt10 y-mb12">
             <div class="row y-mt20">
                 <div class="form-group">
-                    <label for="" class="col-sm-3 col-sm-push-1 control-label text-right">静态密码：</label>
                     <div class="col-sm-4 col-sm-push-1">
+                        <h4>静态密码：</h4>
+                    </div>
+
+                    <div class="col-sm-5 col-sm-pull-1">
                         <input class="form-control" type="text" readonly name="" id="" ng-model="staticPassword" value="">
                     </div>
-                    <div class="col-sm-2 col-sm-push-1">
+                    <div class="col-sm-2">
                         <button type="button" class="btn btn-default center-block">复制</button>
                     </div>
                 </div>
             </div>
-            <hr>
+            <hr class="y-mt10 y-mb12">
             <div class="row y-mt20">
                 <div class="col-sm-10 col-sm-push-1">
                     <p><b>公钥：</b><span class="text-danger">非对称加密中，直接公布给对方的密钥串，主要用于加密</span></p>
@@ -139,33 +144,39 @@
         </div>
         <div class="modal-body y-pt20">
             <div class="row">
-                <div class="col-sm-3 col-sm-push-1 text-xs-center">
-                    <h4>私钥</h4>
-                    <h4><small>(PHP .NET)</small></h4>
+                <div class="col-sm-4 col-sm-push-1">
+                    <h4>私钥(PHP .NET)</h4>
+                    <!--<h4><small></small></h4>-->
                 </div>
-                <div class="col-sm-2">
-                    <button type="button" class="btn btn-default y-mt10 center-block">下载</button>
-                </div>
-                <div class="col-sm-3 col-sm-push-1 text-xs-center">
-                    <h4>私钥</h4>
-                    <h4><small>(JAVA)</small></h4>
-                </div>
-                <div class="col-sm-2">
+                <div class="col-sm-2 col-sm-push-5">
                     <button type="button" class="btn btn-default y-mt10 center-block">下载</button>
                 </div>
             </div>
+            <hr class="y-mt10 y-mb12">
+            <div class="row">
+                <div class="col-sm-4 col-sm-push-1">
+                    <h4>私钥(JAVA)</h4>
+                    <!--<h4><small></small></h4>-->
+                </div>
+                <div class="col-sm-2 col-sm-push-5">
+                    <button type="button" class="btn btn-default y-mt10 center-block">下载</button>
+                </div>
+            </div>
+            <hr class="y-mt10 y-mb12">
             <div class="row y-mt20">
                 <div class="form-group">
-                    <label for="" class="col-sm-3 col-sm-push-1 control-label text-right">静态密码：</label>
                     <div class="col-sm-4 col-sm-push-1">
+                        <h4>静态密码：</h4>
+                    </div>
+                    <div class="col-sm-5 col-sm-pull-1">
                         <input class="form-control" type="text" name="" id="" value="asdfghjklqweryuio">
                     </div>
-                    <div class="col-sm-2 col-sm-push-1">
+                    <div class="col-sm-2">
                         <button type="button" class="btn btn-default center-block">下载</button>
                     </div>
                 </div>
             </div>
-            <hr>
+            <hr class="y-mt10 y-mb12">
             <div class="row y-mt20">
                 <div class="col-sm-10 col-sm-push-1">
                     <p><b>公钥：</b><span class="text-danger">非对称加密中，直接公布给对方的密钥串，主要用于加密</span></p>
