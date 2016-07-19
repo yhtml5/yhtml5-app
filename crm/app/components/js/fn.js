@@ -1,8 +1,4 @@
-/************************* Ctrl *****************************/
-angular.module('controllers', [])
-    .controller('controllers', function($scope) {
-
-    })
-    .controller('smsConfirmCtrl', function($scope) {
-
-    })
+/*
+ * @require ../../server/author.js
+ */
+/************  fn  ************/
