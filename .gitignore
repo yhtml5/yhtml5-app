@@ -3,7 +3,6 @@ logs/*
 dashboard/production/
 dashboard/node_modules/
 dashboard/app/bower_components/
-crm/app/bower_components/
 
 tmp
 .DS_Store
