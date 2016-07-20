@@ -2,7 +2,6 @@
  * @require router.js
  *
  */
-'use strict';
 angular.module('controllers', ['ui.bootstrap', 'ngAnimate'])
     .controller('controllers', function($scope, $uibModal) {
         $scope.animationsEnabled = true;

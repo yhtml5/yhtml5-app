@@ -1,4 +1,3 @@
-'use strict';
 angular.module('factory', [])
     .factory('Data', function($http) {
         businessTypes = [{
