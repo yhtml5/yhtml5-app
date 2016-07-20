@@ -1,29 +1,33 @@
 # Project's development progress
 
-
-- [ ] 商户后台-登录
-     - [ ] 收款账号管理
-        - [ ] 添加收款账号
-        - [ ] 删除
-        - [ ] 修改
-        - [ ] 冻结
-        - [ ] 解冻
-
-     - [ ] 交易记录
-        - [ ] 手动补单
-
-     - [ ] 账户管理
-        - [ ] 账户明细
-        - [ ] 充值
-
-     - [ ] 对接包下载
-         - [ ] 侦测系统安装包
-         - [ ] java/.net/php语言包
-         - [ ] 对接文档
-
-
-
-
-
+- [x] 收银台
+    - [ ] payDemo  --付款demo
+    - [-] scanPay  --扫描付款
+    - [-] scanPay.pickup  --提货
+    - [ ] modal.close  --浏览器关闭
+    - [ ] modal.notice  --各类提示    
+- [x] CRM System
+    - [ ] login  --登录页
+    - [-] payee  --收款账号管理
+    - [-] payee.add  --添加收款账号
+    - [ ] payee.delete  --删除
+    - [ ] payee.modified  --修改
+    - [ ] payee.freeze  --冻结
+    - [ ] payee.unfreeze  --解冻
+    - [-] record  --交易记录
+    - [-] record.order  --手动补单
+    - [ ] account  --账户管理
+    - [ ] account.detail  --`账户明细
+    - [ ] account.pay  --充值
+    - [ ] download  --对接包下载
+    - [ ] download.card  ---对接包  
+- [x] components
+    - [x] ali iconfont  --字体图标
+    - [-] userPanel  --导航栏用户中心 
+    - [-] head/nav  --UI组件
+    - [ ] search/date  --UI组件
+    - [x] animation, base, box, custom  --css模块 
+    - [x] fn.js, do.js  --js模块
+    - [ ] 表单验证组件: 文本,电话,邮箱,俩次确认,输入为空等等验证
 
  
