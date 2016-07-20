@@ -7,7 +7,7 @@
     - [ ] modal.close  --浏览器关闭
     - [ ] modal.notice  --各类提示    
 - [x] CRM System
-    - [ ] login  --登录页
+    - [x] login  --登录页
     - [-] payee  --收款账号管理
     - [-] payee.add  --添加收款账号
     - [ ] payee.delete  --删除

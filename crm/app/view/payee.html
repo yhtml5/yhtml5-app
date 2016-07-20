@@ -23,12 +23,12 @@
                 <h2 class="y-fwb y-cl3f3f3f">收款账户管理</h2>
             </div>
             <div class="col-xs-6 text-right">
-                <button type="button" class="y-btn-info">添加收款账户</button>
+                <button type="button" class="y-btn-info" data-toggle="modal" data-target=".bs-modal">添加收款账户</button>
             </div>
         </div>
         <hr>
         <div class="table-responsive y-mt36">
-            <table class="table table-bordered text-center y-table-default" style="font-size: 14px">
+            <table class="table table-bordered text-center y-table-default">
                 <tr class="y-ht65">
                     <td>支付宝账号</td>
                     <td>智能收款切换额度(元)</td>
@@ -44,7 +44,7 @@
                     <td class="y-btn-link">
                         <button type="button" class="btn btn-link">修改</button>
                         <button type="button" class="btn btn-link">删除</button>
-                        <button type="button" class="btn btn-link" data-toggle="modal" data-target=".bs-example-modal-lg">冻结</button>
+                        <button type="button" class="btn btn-link" data-toggle="modal" data-target="[y-modal='payee.modified']">冻结</button>
                     </td>
                 </tr>
                 <tr class="y-ht65">
@@ -62,28 +62,90 @@
         </div>
     </div>
 </div>
-
-
-
-<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>-->
-
-<div class="modal fade bs-example-modal-lg y-mt120" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+<div class="modal fade  y-mt120" y-modal="payee.modified" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
     <div class="modal-dialog modal-lg">
         <div class="modal-content y-ht354">
             <div class="modal-header y-bgf3 y-top-radio6">
                 <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
                 <h2 class="modal-title y-cl5d y-ml40" id="myModalLabel">冻结提醒</h2>
             </div>
-            <div class="modal-body text-center y-fs20 y-cle5614b y-mt80">
+            <div class="modal-body text-center y-fs20 y-cle5614b y-mt60">
                 确定要冻结该收款账号吗？
             </div>
-            <div class="modal-footer y-border-none y-text-center">
-                <button type="button" class="btn btn-info y-btn-footer" style="width: 110px;border: 1px solid red" data-dismiss="modal">确定</button>
-                <button type="button" class="btn btn-default y-btn-footer">返回</button>
+            <div class="modal-footer y-border-none y-text-center y-btn-footer y-mt40">
+                <button type="button" class="btn btn-info" data-dismiss="modal">确定</button>
+                <button type="button" class="btn btn-default">返回</button>
             </div>
         </div>
     </div>
 </div>
+<div class="modal bs-modal fade y-mt120" id="" y-modal="payee.add" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content y-modal-form">
+            <div class="modal-header y-bgf3 y-top-radio6">
+                <h3 class="modal-title y-cl5d y-ml40" id="myLargeModalLabel">添加收款账户</h3>
+            </div>
+            <div class="modal-body text-center">
+                <form class="form-horizontal">
+                    <div class="form-group ">
+                        <label for="alipayAccount" class="col-sm-3 control-label">支付宝账号：</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="alipayAccount" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="alipayCode" class="col-sm-3 control-label">支付宝二维码：</label>
+                        <div class="col-sm-6">
+                            <input type="file" id="alipayCode" placeholder="">
+                        </div>
+                        <div class="col-sm-2 col-sm-pull-3" y-popoper="uploadQRcode">
+                            <a href="#" class="y-cl45c65d y-fs14">如何上传？</a>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="noopsycheMoney" class="col-sm-3 control-label">智能收款切换额度(元)：</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="noopsycheMoney" placeholder="">
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="#" class="y-cl45c65d y-fs14">智能收取款是什么？</a>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="gatheringOrder" class="col-sm-3 control-label">收款顺序:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="gatheringOrder" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="status" class="col-sm-3 control-label">状态:</label>
+                        <div class="col-sm-2 y-pt7 y-ml-30">
+                              <input type="checkbox" id="status" class="" checked>&nbsp; &nbsp;启用
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-push-4 col-sm-1 y-btn-footer-save">
+                            <button type="submit" class="btn btn-default y-clfff">保存</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <img src="../view/payee/ewmsm1.jpg" alt="" y-img="ewmsml" class="y-hide y-position-fixed y-mt-300 y-ml100 y-boxsh-clca" width="700" height="364">
+            <div class="y-popoper-ul" y-popoper="noopsycheMoney">
+                <ul class="y-hide">
+                    <li>智能收取切换额度;</li>
+                    <li>当某个支付宝账号收款额度达到设置额度后，自动切换到下一个账号;</li>
+                    <li>通过实名认证，收款额度不限;</li>
+                    <li>只通过银行卡认证，但未通过实名认证，单笔1万，单月5万;</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 
 <link rel="import" href="footer/index.html?__inline">

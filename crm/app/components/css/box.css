@@ -35,7 +35,9 @@
 .y-mt-10 {
     margin-top: -10px;
 }
-
+.y-mt-300{
+    margin-top: -300px;
+}
 .y-mt10 {
     margin-top: 10px;
 }
@@ -127,13 +129,21 @@
 .y-mb180 {
     margin-bottom: 180px;
 }
+.y-ml-60{
+    margin-left: -60px;
+}
 .y-ml-33{
     margin-left: -33px;
+}
+.y-ml-30{
+    margin-left: -30px;
 }
 .y-ml2 {
     margin-left: 2px;
 }
-
+.y-ml100 {
+    margin-left: 100px;
+}
 .y-ml20 {
     margin-left: 20px;
 }
@@ -173,7 +183,9 @@
 .y-pt0 {
     padding-top: 0px;
 }
-
+.y-pt7{
+    padding-top: 7px;
+}
 .y-pt20 {
     padding-top: 20px;
 }
@@ -211,6 +223,7 @@
 .y-pb180 {
     padding-bottom: 180px;
 }
+
 .y-pl15{
     padding-left: 15px;
 }
@@ -222,4 +235,7 @@
 }
 .y-pl55{
     padding-left: 55px;
+}
+.y-pl-15{
+    padding-left: -15px;
 }
