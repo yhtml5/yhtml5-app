@@ -3,7 +3,7 @@
  */
 
 /*==================== custom bootstrap ====================*/
-.y-container{
+.y-container-full{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -48,3 +48,39 @@
     text-align: center;
     line-height: 150px;
 }
+.y-btn-info{
+    width: 150px;
+    height: 50px;
+    color: #2a9fde;
+    font-size: 18px;
+    border: 1px solid #2a9fde;
+    background-color: #fff;
+    border-radius: 2px;
+}
+.y-btn-link button{
+    padding: 0;
+    color: #0880c4;
+}
+.y-table-default tr:first-child{
+    background-color: #f3f3f3;
+}
+.y-table-default td{
+    width: 324px;
+    line-height: 65px !important;
+    font-size: 14px;
+    color: #3f3f3f;
+}
+.y-top-radio6{
+    border-radius: 6px 6px 0 0;
+}
+.y-border-none{
+    border: none;
+}
+.y-text-center{
+    text-align: center;
+}
+/*.y-btn-footer{*/
+    /*width: 110px;*/
+    /*height: 44px;*/
+    /*font-size: 20px;*/
+/*}*/

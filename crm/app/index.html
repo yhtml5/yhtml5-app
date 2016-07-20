@@ -1,41 +1,92 @@
 <link rel="import" href="components/head/index.html?__inline">
 <link rel="import" href="components/ie/index.html?__inline">
-<!--<p>hello world</p>-->
-<div class="y-container">
-<div class="y-login">
-    <div class="y-center text-center">
-        <img class="y-mt36" src="view/login/fklogo1.png" alt="logo" height="55">
+<div class="container y-wt100">
+    <div class="row">
+        <nav class="navbar navbar-default y-ht106 y-bg40aaf2">
+            <div class="col-md-2 y-lh106 y-pl55">
+                <img src="view/payee/sklogo2.png" alt="logo" width="174" height="64">
+            </div>
+            <div class="col-md-8 y-pl35 y-mt28 y-ml-33">
+                <ul class="nav navbar-nav y-fs18">
+                    <li><a href="#" class="y-clfe">交易记录</a></li>
+                    <li><a href="#" class="y-clfe">收款账号管理</a></li>
+                    <li><a href="#" class="y-clfe">对接包下载</a></li>
+                    <li><a href="#" class="y-clfe">账户管理</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 y-lh106 text-right">
+                <img src="view/payee/grzx1.png" alt="" width="56" height="56">
+            </div>
+        </nav>
     </div>
-    <!--<div class="y-mt32 y-mb8">-->
-        <p class="y-mt32 y-mb8 col-xs-offset-3 y-clff0000">密码输入错误</p>
-    <!--</div>-->
+    <div class="center-block y-wt95 y-mt20">
+        <div class="row y-mb30">
+            <div class="col-xs-6">
+                <h2 class="y-fwb y-cl3f3f3f">收款账户管理</h2>
+            </div>
+            <div class="col-xs-6 text-right">
+                <button type="button" class="y-btn-info">添加收款账户</button>
+            </div>
+        </div>
+        <hr>
+        <div class="table-responsive y-mt36">
+            <table class="table table-bordered text-center y-table-default" style="font-size: 14px">
+                <tr class="y-ht65">
+                    <td>支付宝账号</td>
+                    <td>智能收款切换额度(元)</td>
+                    <td>收款顺序</td>
+                    <td>状态</td>
+                    <td>操作</td>
+                </tr>
+                <tr class="y-ht65">
+                    <td style="line-height: 65px">13554775555</td>
+                    <td class="y-lh65">200,000</td>
+                    <td>1</td>
+                    <td>正常</td>
+                    <td class="y-btn-link">
+                        <button type="button" class="btn btn-link">修改</button>
+                        <button type="button" class="btn btn-link">删除</button>
+                        <button type="button" class="btn btn-link" data-toggle="modal" data-target=".bs-example-modal-lg">冻结</button>
+                    </td>
+                </tr>
+                <tr class="y-ht65">
+                    <td>13454544555</td>
+                    <td>300,000</td>
+                    <td>3</td>
+                    <td class="y-clec4828">冻结</td>
+                    <td class="y-btn-link">
+                        <button type="button" class="btn btn-link">修改</button>
+                        <button type="button" class="btn btn-link">删除</button>
+                        <button type="button" class="btn btn-link">正常</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
 
-    <div class="row center-block">
-        <div class="col-xs-1 col-xs-offset-2">
-            <i class="icon iconfont y-fs24 y-cl26a2e9">&#xe606;</i>
+
+
+<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>-->
+
+<div class="modal fade bs-example-modal-lg y-mt120" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content y-ht354">
+            <div class="modal-header y-bgf3 y-top-radio6">
+                <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+                <h2 class="modal-title y-cl5d y-ml40" id="myModalLabel">冻结提醒</h2>
+            </div>
+            <div class="modal-body text-center y-fs20 y-cle5614b y-mt80">
+                确定要冻结该收款账号吗？
+            </div>
+            <div class="modal-footer y-border-none y-text-center y-btn-footer">
+                <button type="button" class="btn btn-info" data-dismiss="modal">确定</button>
+                <button type="button" class="btn btn-default">返回</button>
+            </div>
         </div>
-            <input type="text" class="" placeholder="输入用户名">
-    </div>
-    <div class="row center-block">
-        <div class="col-xs-1 col-xs-offset-2">
-            <i class="icon iconfont y-fs24 y-cl26a2e9">&#xe605;</i>
-        </div>
-            <input type="password" class="" placeholder="输入密码">
-    </div>
-    <div class="row center-block">
-        <div class="col-xs-1 col-xs-offset-2">
-            <i class="icon iconfont y-fs24 y-cl26a2e9">&#xe607;</i>
-        </div>
-            <input type="text" class="y-check y-mr14" placeholder="输入验证码">
-            <img id="code" src="view/login/yzm.png" width="106" height="44">
-            <a class="y-cl26a2e9 y-fs16" href="javascript:changeimg()">看不清，换一张 </a>
-    </div>
-    <div class="center-block">
-        <button class="col-xs-offset-3" type="button">登录</button>
     </div>
 </div>
-</div>
-<div class="y-footer">
-    <p>杭州凡伟网络科技有限公司   ICP备案号：浙ICP备12040171   版权所有 2016  jubaopay.com   All Rights Reseved</p>
-</div>
+
+
+<link rel="import" href="view/footer/index.html?__inline">
 <link rel="import" href="components/required/index.html?__inline">

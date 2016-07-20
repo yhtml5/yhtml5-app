@@ -51,7 +51,9 @@
 .y-mt20 {
     margin-top: 20px;
 }
-
+.y-mt28 {
+    margin-top: 28px;
+}
 .y-mt30 {
     margin-top: 30px;
 }
@@ -99,7 +101,9 @@
 .y-mb20 {
     margin-bottom: 20px;
 }
-
+.y-mb30 {
+    margin-bottom: 30px;
+}
 .y-mb40 {
     margin-bottom: 40px;
 }
@@ -123,13 +127,18 @@
 .y-mb180 {
     margin-bottom: 180px;
 }
-
+.y-ml-33{
+    margin-left: -33px;
+}
 .y-ml2 {
     margin-left: 2px;
 }
 
 .y-ml20 {
     margin-left: 20px;
+}
+.y-ml40 {
+    margin-left: 40px;
 }
 .y-mr-2{
     margin-right: -2px !important;
@@ -201,4 +210,16 @@
 
 .y-pb180 {
     padding-bottom: 180px;
+}
+.y-pl15{
+    padding-left: 15px;
+}
+.y-pl25{
+    padding-left: 25px;
+}
+.y-pl35{
+    padding-left: 35px;
+}
+.y-pl55{
+    padding-left: 55px;
 }
