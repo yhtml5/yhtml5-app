@@ -32,7 +32,7 @@ fis.match('/**/({glyphicons-halflings-regular.*,iconfont.{eot, svg, ttf, woff}})
     url: '/iconfont/$1',
     domain: '.'
 });
-fis.match('/{map.json,fis-conf.*}', {
+fis.match('{/map.json,/fis-conf.*}', {
     release: '/config/$0'
 });
 /************************* 打包规范 *****************************/
