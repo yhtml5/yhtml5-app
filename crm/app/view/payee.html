@@ -1,0 +1,90 @@
+<link rel="import" href="../components/head/index.html?__inline">
+<link rel="import" href="../components/ie/index.html?__inline">
+<div class="container-fluid">
+        <nav class="row navbar navbar-default y-navbar-main">
+            <div class="col-md-2">
+                <img class="img-responsive" src="payee/sklogo2.png" alt="logo" width="174" height="64">
+            </div>
+            <div class="col-md-8 y-nav-ul">
+                <ul class="nav navbar-nav y-fs18">
+                    <li><a href="#">交易记录</a></li>
+                    <li><a href="#">收款账号管理</a></li>
+                    <li><a href="#">对接包下载</a></li>
+                    <li><a href="#">账户管理</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 text-right">
+                <img src="payee/grzx1.png" alt="" width="56" height="56">
+            </div>
+        </nav>
+    <div class="center-block y-wt95 y-mt20">
+        <div class="row y-mb30">
+            <div class="col-xs-6">
+                <h2 class="y-fwb y-cl3f3f3f">收款账户管理</h2>
+            </div>
+            <div class="col-xs-6 text-right">
+                <button type="button" class="y-btn-info">添加收款账户</button>
+            </div>
+        </div>
+        <hr>
+        <div class="table-responsive y-mt36">
+            <table class="table table-bordered text-center y-table-default" style="font-size: 14px">
+                <tr class="y-ht65">
+                    <td>支付宝账号</td>
+                    <td>智能收款切换额度(元)</td>
+                    <td>收款顺序</td>
+                    <td>状态</td>
+                    <td>操作</td>
+                </tr>
+                <tr class="y-ht65">
+                    <td style="line-height: 65px">13554775555</td>
+                    <td class="y-lh65">200,000</td>
+                    <td>1</td>
+                    <td>正常</td>
+                    <td class="y-btn-link">
+                        <button type="button" class="btn btn-link">修改</button>
+                        <button type="button" class="btn btn-link">删除</button>
+                        <button type="button" class="btn btn-link" data-toggle="modal" data-target=".bs-example-modal-lg">冻结</button>
+                    </td>
+                </tr>
+                <tr class="y-ht65">
+                    <td>13454544555</td>
+                    <td>300,000</td>
+                    <td>3</td>
+                    <td class="y-clec4828">冻结</td>
+                    <td class="y-btn-link">
+                        <button type="button" class="btn btn-link">修改</button>
+                        <button type="button" class="btn btn-link">删除</button>
+                        <button type="button" class="btn btn-link">正常</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>-->
+
+<div class="modal fade bs-example-modal-lg y-mt120" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content y-ht354">
+            <div class="modal-header y-bgf3 y-top-radio6">
+                <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+                <h2 class="modal-title y-cl5d y-ml40" id="myModalLabel">冻结提醒</h2>
+            </div>
+            <div class="modal-body text-center y-fs20 y-cle5614b y-mt80">
+                确定要冻结该收款账号吗？
+            </div>
+            <div class="modal-footer y-border-none y-text-center">
+                <button type="button" class="btn btn-info y-btn-footer" style="width: 110px;border: 1px solid red" data-dismiss="modal">确定</button>
+                <button type="button" class="btn btn-default y-btn-footer">返回</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<link rel="import" href="footer/index.html?__inline">
+<link rel="import" href="../components/required/index.html?__inline">
