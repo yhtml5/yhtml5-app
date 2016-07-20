@@ -1,4 +1,3 @@
-'use strict';
 angular.module('factory', [])
     .factory('Banks', function() {
         banks = [{
