@@ -5,15 +5,15 @@ fis.set('project.name', 'yhtml5');
 fis.set('project.static', '/static');
 fis.set('project.ignore', ['*.test.*', '*.psd', '.git/**', '/**/demo.*']);
 fis.set('project.files', [
-    '/fis-conf.js', '/map.json','*.yhtml5',
+    '/fis-conf.js', '/map.json',
     '/components/**', '/server/*', '/view/**',
     '/bower_components/bootstrap/dist/**/{bootstrap.min.{css,js},glyphicons-halflings-regular.*}',
     '/bower_components/jquery/dist/jquery.min.js'
 ]);
 
 /************************* 目录规范 *****************************/
-fis.match('*.yhtml5', {
-    rExt: '.html'
+fis.match('/view/(*.html)', {
+    release: '/$1'
 });
 fis.match('/bower_components/(**)', {
     release: '/vendor/$1'
@@ -24,15 +24,17 @@ fis.match('/components/**', {
 fis.match('/{components,bower_components}/**/(*.{png,gif,jpg,jpeg,svg})', {
     release: '${project.static}/img/$1'
 });
+fis.match('/**/(*.design.*)', {
+    release: '/vendor/design/$1'
+});
 fis.match('/**/({glyphicons-halflings-regular.*,iconfont.{eot, svg, ttf, woff}})', {
     release: '${project.static}/iconfont/$1',
     url: '/iconfont/$1',
-    domain: '.'//----------
+    domain: '.'
 });
-fis.match('{/map.json,fis-conf.*}', {
+fis.match('{/map.json,/fis-conf.*}', {
     release: '/config/$0'
 });
-
 /************************* 打包规范 *****************************/
 fis.match('::package', {
     postpackager: fis.plugin('loader', {
@@ -61,18 +63,13 @@ fis.match('{/server/author.js, /components/**/*.js}', {
 fis.match('{/server/author.css,/components/**/*.css}', {
     packTo: '${project.static}/index.css'
 });
+
 /************************* Pro规范 *****************************/
 
 fis.media('pro')
     .match('/{static/**,{components,bower_components}/**/*.{png,gif,jpg,jpeg,eot,ttf,woff,woff2,svg}}', {
         useHash: true,
         domain: '.'
-    })
-    //html 去除注释
-    .match('{/index.html,/view/*.html}', {
-        optimizer: function (content) {
-            return content.replace(/<!--([\s\S]*?)-->/g, '');
-        }
     })
     //css 自动补充兼容性 https://github.com/ai/browserslist#queries
     .match('/components/**/*.css', {
