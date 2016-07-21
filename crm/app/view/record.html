@@ -4,20 +4,46 @@
     <link rel="import" href="nav/index.html?__inline">
     <div class="center-block y-wt-p-95 y-mt-20">
         <div class="row y-mb-30">
-            <div class="col-xs-3">
+            <div class="col-xs-1">
                 <h2 class="y-fw-b y-cl-3f">交易记录</h2>
-
             </div>
-            <div class="col-xs-3">
-                <p>预存款余额:<span>50,000.00</span>元</p>
+            <div class="col-xs-2 y-cl-666 y-fs-18 y-mt-15 y-pl-15">
+                <p>预存款余额:&nbsp;<span class="y-fs-30 y-cl-ff6305 ">50,000.00</span>&nbsp;&nbsp;元</p>
             </div>
-            <div class="col-xs-3 text-right y-mt-20">
+            <div class="col-xs-4 y-mt-15">
+                <button type="button" class="y-btn y-btn-lg y-btn-blue-primary">充&nbsp;&nbsp;值</button>
+                <button type="button" class="y-btn y-btn-lg y-btn-blue-outline">账户明细</button>
+            </div>
+            <div class="col-xs-5 text-right y-mt-20">
                 <button type="button" class="y-btn y-btn-lg y-btn-blue-outline" data-toggle="modal" data-target=".bs-modal">手动补单</button>
             </div>
         </div>
         <hr>
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="">交易时间：</label>
+                <input type="text" class="form-control" id="" placeholder="">-
+                <input type="text" class="form-control" id="" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="">商户订单号：</label>
+                <input type="text" class="form-control" id="" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="">支付宝订单号：</label>
+                <input type="text" class="form-control" id="" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="">平台订单号：</label>
+                <input type="text" class="form-control" id="" placeholder="">
+            </div>
+            <button type="submit" class="btn btn-default">查询</button>
+        </form>
     </div>
+
 </div>
+
+
 
 <link rel="import" href="footer/index.html?__inline">
 <link rel="import" href="../components/required/index.html?__inline">
