@@ -79,3 +79,4 @@
 
 ### 注意事项
    * 输出前注释angular-ui
+   * datetimepicker 获取时区在ie firefox下显示异常,已修改源码包
