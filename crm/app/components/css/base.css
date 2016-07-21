@@ -56,6 +56,10 @@
     color: #fefefe !important;
 }
 
+.y-cl45c65d {
+    color: #45c65d;;
+}
+
 .y-cl5d {
     color: #5d5d5d;
 }
@@ -188,6 +192,10 @@
     display: none;
 }
 
+.y-position-fixed {
+    position: fixed;
+}
+
 .y-lh30 {
     line-height: 30px;
 }
@@ -208,11 +216,12 @@
     min-height: 300px;
 }
 
-.y-mglr-4{
-    margin-left:4px ;
-    margin-right:4px ;
+.y-mglr-4 {
+    margin-left: 4px;
+    margin-right: 4px;
 
 }
+
 .y-wt60 {
     width: 60%;
 }
@@ -253,4 +262,8 @@
     .y-l-sm {
         left: 15%;
     }
+}
+
+.y-boxsh-clca {
+    box-shadow: -4px -4px 6px #cacaca;
 }
