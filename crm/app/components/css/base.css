@@ -22,13 +22,14 @@
 .y-bgc-f6 {
     background-color: #f6f6f6;
 }
+
 .y-bgc-eb {
     background-color: #ebebeb;
 }
+
 .y-bgc-fff {
     background-color: #fff;
 }
-
 
 .y-cl-099fdd {
     color: #099fdd;
@@ -93,15 +94,12 @@
     color: #ff6305;
 }
 .y-cl-fe {
-     color: #fefefe !important;
- }
+    color: #fefefe !important;
+}
 
 .y-cl-fff {
     color: #fff;
 }
-
-
-
 
 .y-fs-14 {
     font-size: 14px !important;
@@ -158,7 +156,6 @@
 .y-fw-n {
     font-weight: 400;
 }
-
 
 .y-ht-36 {
     height: 36px
@@ -240,16 +237,6 @@
 
 .y-wt-240 {
     width: 240px;
-}
-
-.y-l-p-sm {
-    left: 15%;
-}
-
-@media (min-width: 420px) {
-    .y-l-p-sm {
-        left: 15%;
-    }
 }
 
 .y-boxsh-cl-ca {

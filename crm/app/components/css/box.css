@@ -4,21 +4,30 @@
 
 /*==================== box ====================*/
 
-.y-mg-0{
+.y-mg-0 {
     margin: 0;
 }
+
 .y-mt-0 {
     margin-top: 0px;
 }
-.y-mt-n-300{
+
+.y-mt-20 {
+    margin-top: 20px;
+}
+
+.y-mt-n-300 {
     margin-top: -300px;
 }
+
 .y-mt-n-160 {
     margin-top: -160px;
 }
+
 .y-mt-n-80 {
     margin-top: -80px;
 }
+
 .y-mt-n-60 {
     margin-top: -60px;
 }
@@ -54,18 +63,23 @@
 .y-mt-20 {
     margin-top: 20px;
 }
+
 .y-mt-28 {
     margin-top: 28px;
 }
+
 .y-mt-30 {
     margin-top: 30px;
 }
-.y-mt-32{
+
+.y-mt-32 {
     margin-top: 32px;
 }
+
 .y-mt-36 {
     margin-top: 36px;
 }
+
 .y-mt-40 {
     margin-top: 40px;
 }
@@ -85,9 +99,11 @@
 .y-mt-120 {
     margin-top: 120px;
 }
-.y-mt-150{
+
+.y-mt-150 {
     margin-top: 150px;
 }
+
 .y-mt-160 {
     margin-top: 160px;
 }
@@ -95,18 +111,23 @@
 .y-mb-0 {
     margin-bottom: 0px;
 }
+
 .y-mb-8 {
     margin-bottom: 8px;
 }
+
 .y-mb-10 {
     margin-bottom: 10px;
 }
+
 .y-mb-20 {
     margin-bottom: 20px;
 }
+
 .y-mb-30 {
     margin-bottom: 30px;
 }
+
 .y-mb-40 {
     margin-bottom: 40px;
 }
@@ -130,25 +151,31 @@
 .y-mb-180 {
     margin-bottom: 180px;
 }
-.y-ml-n-60{
+
+.y-ml-n-60 {
     margin-left: -60px;
 }
-.y-ml-n-33{
+
+.y-ml-n-33 {
     margin-left: -33px;
 }
-.y-ml-n-30{
+
+.y-ml-n-30 {
     margin-left: -30px;
 }
 
 .y-ml-2 {
     margin-left: 2px;
 }
+
 .y-ml-20 {
     margin-left: 20px;
 }
+
 .y-ml-40 {
     margin-left: 40px;
 }
+
 .y-ml-100 {
     margin-left: 100px;
 }
@@ -156,12 +183,15 @@
 .y-mr-14 {
     margin-right: 14px;
 }
+
 .y-mr-20 {
     margin-right: 20px;
 }
-.y-mr-n-2{
+
+.y-mr-n-2 {
     margin-right: -2px !important;
 }
+
 .y-mlr-0 {
     margin-left: 0 !important;
     margin-right: 0 !important;
@@ -185,9 +215,11 @@
 .y-pt-0 {
     padding-top: 0px;
 }
-.y-pt-7{
+
+.y-pt-7 {
     padding-top: 7px;
 }
+
 .y-pt-20 {
     padding-top: 20px;
 }
@@ -195,9 +227,11 @@
 .y-pd-30 {
     padding: 30px;
 }
+
 .y-pd-36 {
     padding: 36px;
 }
+
 .y-pt-40 {
     padding-top: 40px;
 }
@@ -209,7 +243,6 @@
 .y-pb-20 {
     padding-bottom: 20px;
 }
-
 
 .y-pb-40 {
     padding-bottom: 40px;
@@ -223,18 +256,22 @@
     padding-bottom: 180px;
 }
 
-.y-pl-15{
+.y-pl-15 {
     padding-left: 15px;
 }
-.y-pl-25{
+
+.y-pl-25 {
     padding-left: 25px;
 }
-.y-pl-35{
+
+.y-pl-35 {
     padding-left: 35px;
 }
-.y-pl-55{
+
+.y-pl-55 {
     padding-left: 55px;
 }
-.y-pl-n-15{
+
+.y-pl-n-15 {
     padding-left: -15px;
 }
