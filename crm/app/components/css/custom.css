@@ -167,6 +167,11 @@
     margin-bottom: 20px;
     list-style: none;
     font-size: 14px;
+    color: #999;
+}
+
+.y-breadcrumb-pay .iconfont {
+
 }
 
 .y-breadcrumb-pay .y-breadcrumb-title {
@@ -175,7 +180,6 @@
 
 .y-breadcrumb-pay > li {
     display: inline;
-    color: #999;
 }
 
 .y-breadcrumb-pay > li + li:before {
@@ -187,6 +191,16 @@
 
 .y-breadcrumb-pay > .active {
     color: #ff9a2d;
+}
+
+.y-notice-pay {
+    margin-top: 14px;
+    width: 530px;
+    height: 50px;
+    background-color: #ff0000;
+    color: #fff;
+    padding: 6px;
+    font-size: 32px;
 }
 
 .y-qrcode {
