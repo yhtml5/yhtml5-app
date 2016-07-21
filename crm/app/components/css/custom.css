@@ -152,28 +152,31 @@
     margin-top: 25px;
 }
 
-.y-progress-pay {
-    padding: 8px 15px;
+.y-breadcrumb-pay {
+    padding: 8px 15px 8px 0;
     margin-bottom: 20px;
     list-style: none;
     font-size: 14px;
 }
 
-.y-progress-pay .step-0 {
+.y-breadcrumb-pay .y-breadcrumb-title {
     color: #666;
 }
 
-.y-progress-pay > li{
+.y-breadcrumb-pay > li{
     display: inline;
     color: #999;
 }
 
-.y-progress-pay > li + li:before {
-    padding: 0 0 4px 6px;
+.y-breadcrumb-pay > li + li:before {
+    padding: 0 6px 0 4px;
     color: #ccc;
     content: ">";
-    font-size: 14px;
+    font-size: 16px;
 }
-.y-progress-pay > .active {
-    color: #777;
+.y-breadcrumb-pay > .active {
+    color: #ff9a2d;
+}
+.y-qrcode{
+    width: 250px;
 }
