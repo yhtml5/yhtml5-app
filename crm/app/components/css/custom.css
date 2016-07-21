@@ -122,12 +122,12 @@
     text-align: center;
 }
 
-.y-btn-footer button, .y-btn-footer-save button {
-    width: 110px;
-    height: 44px;
-    font-size: 20px;
-    border-radius: 2px;
-}
+/*.y-btn-footer button, .y-btn-footer-save button {*/
+    /*width: 110px;*/
+    /*height: 44px;*/
+    /*font-size: 20px;*/
+    /*border-radius: 2px;*/
+/*}*/
 
 .y-btn-footer button:first-child, .y-btn-footer-save button {
     margin-right: 48px;

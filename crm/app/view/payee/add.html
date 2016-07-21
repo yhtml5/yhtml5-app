@@ -1,0 +1,66 @@
+<div class="modal bs-modal fade y-mt120" id="" y-modal="payee.add" tabindex="-1" role="dialog"
+     aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content y-modal-form">
+            <div class="modal-header y-bgf3 y-top-radio6">
+                <h3 class="modal-title y-cl5d y-ml40" id="myLargeModalLabel">添加收款账户</h3>
+            </div>
+            <div class="modal-body text-center">
+                <form class="form-horizontal">
+                    <div class="form-group ">
+                        <label for="alipayAccount" class="col-sm-3 control-label">支付宝账号：</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="alipayAccount" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="alipayCode" class="col-sm-3 control-label">支付宝二维码：</label>
+                        <div class="col-sm-6">
+                            <input type="file" id="alipayCode" placeholder="">
+                        </div>
+                        <div class="col-sm-2 col-sm-pull-3" y-popoper="uploadQRcode">
+                            <a href="#" class="y-cl45c65d y-fs14">如何上传？</a>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="noopsycheMoney" class="col-sm-3 control-label">智能收款切换额度(元)：</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="noopsycheMoney" placeholder="">
+                        </div>
+                        <div class="col-sm-3" y-popoper="noopsycheMoney">
+                            <a href="#" class="y-cl45c65d y-fs14">智能收取款是什么？</a>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="gatheringOrder" class="col-sm-3 control-label">收款顺序:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="gatheringOrder" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="status" class="col-sm-3 control-label">状态:</label>
+                        <div class="col-sm-2 y-pt7 y-ml-30">
+                            <input type="checkbox" id="status" class="" checked>&nbsp; &nbsp;启用
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-push-3 col-sm-1 y-btn-footer-save">
+                            <button type="submit" class="y-btn y-btn-lg y-btn-blue-primary">保&nbsp;&nbsp;存</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <img src="ewmsm1.jpg" alt="" y-popoper="ewmsml"
+                 class="y-hide y-position-fixed y-mt-300 y-ml100 y-boxsh-clca" width="700" height="364">
+            <div class="y-popoper-ul y-hide" y-popoper="infoUl">
+                <ul class="">
+                    <li>智能收取切换额度;</li>
+                    <li>当某个支付宝账号收款额度达到设置额度后，自动切换到下一个账号;</li>
+                    <li>通过实名认证，收款额度不限;</li>
+                    <li class="y-cle54545 y-pt20">只通过银行卡认证，但未通过实名认证，单笔1万，单月5万;</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

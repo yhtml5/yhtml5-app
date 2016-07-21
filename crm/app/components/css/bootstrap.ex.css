@@ -42,60 +42,49 @@ body {
     text-indent: 2em;
 }
 
-.btn-default {
-    color: #333;
-    background-color: #fff;
-    border-color: #ccc;
+.y-btn{
+    display: inline-block;
+    padding: 0.375rem 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border:1px solid #40aaf2;
+    border-radius: 2px;
 }
-.btn-default:focus,
-.btn-default.focus {
-    color: #333;
-    background-color: #e6e6e6;
-    border-color: #8c8c8c;
+.y-btn-lg{
+    padding: 0.7rem 2rem;
+    font-size: 1.25em;
+    line-height: 1.33333;
 }
-.btn-default:hover {
-    color: #333;
-    background-color: #e6e6e6;
-    border-color: #adadad;
+.y-btn-blue-outline{
+    color: #40aaf2;
+    background-color: transparent;
 }
-.btn-default:active,
-.btn-default.active,
-.open > .dropdown-toggle.btn-default {
-    color: #333;
-    background-color: #e6e6e6;
-    border-color: #adadad;
-}
-.btn-default:active:hover,
-.btn-default.active:hover,
-.open > .dropdown-toggle.btn-default:hover,
-.btn-default:active:focus,
-.btn-default.active:focus,
-.open > .dropdown-toggle.btn-default:focus,
-.btn-default:active.focus,
-.btn-default.active.focus,
-.open > .dropdown-toggle.btn-default.focus {
-    color: #333;
-    background-color: #d4d4d4;
-    border-color: #8c8c8c;
-}
-.btn-default:active,
-.btn-default.active,
-.open > .dropdown-toggle.btn-default {
-    background-image: none;
-}
-.btn-default.disabled:hover,
-.btn-default[disabled]:hover,
-fieldset[disabled] .btn-default:hover,
-.btn-default.disabled:focus,
-.btn-default[disabled]:focus,
-fieldset[disabled] .btn-default:focus,
-.btn-default.disabled.focus,
-.btn-default[disabled].focus,
-fieldset[disabled] .btn-default.focus {
-    background-color: #fff;
-    border-color: #ccc;
-}
-.btn-default .badge {
+.y-btn-blue-outline:hover{
     color: #fff;
-    background-color: #333;
+    background-color: #40aaf2;
+    border-color: #40aaf2;
+}
+.y-btn-blue-primary{
+    color: #fff;
+    background-color: #40aaf2;
+}
+.y-btn-blue-primary:hover{
+    color: #fcfcfc;
+    background-color: #3987c8;
+    border-color: #3987c8;
+.}
+.y-btn-gray-default{
+    color: #ababab;
+    background-color: transparent;
+    border-color: #ababab;
+}
+.y-btn-gray-default:hover{
+    color: #fff;
+    background-color: #ababab;
+    border-color: #ababab;
 }
