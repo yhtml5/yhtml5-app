@@ -18,10 +18,14 @@ $(function () {
         $("[y-popoper='infoUl']").fadeOut();
     })
     $("[y-carousel='scanPayDemo']").carousel({
-        interval: 5000
+        interval: 4000
     })
-
-    
+    $("[y-carousel='scanPayDemo']").on('slid.bs.carousel', function () {
+        a = $("[y-carousel='scanPayDemo'] .carousel-inner > .active").attr("y-value")
+        console.log(a)
+        $(".y-breadcrumb-pay li").removeClass("active")
+        $(".y-breadcrumb-pay li:eq("+a+")").addClass("active")
+    })
 });
 
 
