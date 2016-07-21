@@ -6,10 +6,25 @@
 
 $(function () {
     $("[y-popoper='uploadQRcode'] a").mouseenter(function () {
-        $("[y-img='ewmsml']").fadeIn();
+        $("[y-popoper='ewmsml']").fadeIn();
     });
     $("[y-popoper='uploadQRcode'] a").mouseleave(function () {
-        $("[y-img='ewmsml']").fadeOut();
+        $("[y-popoper='ewmsml']").fadeOut();
     });
+
+
+
+    $("[y-popoper='noopsycheMoney']").mouseenter(function () {
+        $("[y-popoper='infoUl']").fadeIn();
+    })
+    $("[y-popoper='noopsycheMoney']").mouseleave(function () {
+        $("[y-popoper='infoUl']").fadeOut();
+    })
+
+
+    
 });
-  
+
+
+
+

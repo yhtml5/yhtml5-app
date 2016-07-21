@@ -124,9 +124,12 @@
     margin-bottom: 14px;
 }
 .y-popoper-ul{
-    width: 400px;
+    width: 340px;
     background-color: #F5F5F5;
-    margin-left: 100px;
+    margin-left: 520px;
+    margin-top: -260px;
+    position: fixed;
+    z-index: 999;
 
 }
 .y-popoper-ul ul{
@@ -135,5 +138,6 @@
     padding-left: 10px;
     border: 1px solid #d3d3d3;
     list-style: none;
-    box-shadow: -2px 2px 4px #e3e3e3;
+    box-shadow: -2px 2px 2px #e3e3e3;
+
 }
