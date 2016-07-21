@@ -12,40 +12,58 @@
     background-color: #f6f6f6;
 }
 
+.y-bg-f2 {
+    background-color: #f2f2f2;
+}
+
 .y-bg-fff {
     background-color: #fff;
 }
+
 .y-bgf3 {
     background-color: #f3f3f3;
 }
+
 .y-bg-ebebeb {
     background-color: #ebebeb;
 }
-.y-bg40aaf2{
+
+.y-bg40aaf2 {
     background-color: #40aaf2;
 }
+
 .y-color-white {
     color: #fff;
 }
-.y-cl26a2e9{
+
+.y-cl26a2e9 {
     color: #26a2e9;
 }
-.y-cl3f3f3f{
+
+.y-cl3f3f3f {
     color: #3f3f3f;
 }
+
+.y-clff0000 {
+    color: #ff0000;
+}
+
 .y-clfff {
     color: #fff;
 }
 
-.y-clfe{
+.y-clfe {
     color: #fefefe !important;
 }
-.y-cl45c65d{
+
+.y-cl45c65d {
     color: #45c65d;;
 }
-.y-cl5d{
+
+.y-cl5d {
     color: #5d5d5d;
 }
+
 .y-cl666 {
     color: #666;
 }
@@ -57,21 +75,30 @@
 .y-cld3 {
     color: #d3d3d3
 }
+
 .y-cld9 {
     color: #d9d9d9
 }
-.y-clff0000{
+
+.y-clff0000 {
     color: #ff0000;
 }
-.y-cle5614b{
+
+.y-cle5614b {
     color: #e5614b;
 }
+<<<<<<< HEAD
 .y-cle54545{
     color: #e54545;
 }
 .y-clec4828{
+=======
+
+.y-clec4828 {
+>>>>>>> 0189b51f571e95721eeb340fb5e438ce3756089c
     color: #ec4828 !important;
 }
+
 .y-clf5 {
     color: #f5f5f5
 }
@@ -95,9 +122,11 @@
 .y-fs18 {
     font-size: 18px;
 }
+
 .y-fs20 {
     font-size: 20px;
 }
+
 .y-fs24 {
     font-size: 24px;
 }
@@ -112,6 +141,10 @@
 
 .y-fs36 {
     font-size: 36px;
+}
+
+.y-fs40 {
+    font-size: 40px;
 }
 
 .y-fs50 {
@@ -139,17 +172,21 @@
 }
 
 .y-ht36 {
-     height: 36px
- }
-.y-ht65{
+    height: 36px
+}
+
+.y-ht65 {
     height: 65px
 }
-.y-ht106{
+
+.y-ht106 {
     height: 106px
 }
-.y-ht354{
+
+.y-ht354 {
     height: 354px
 }
+
 .y-ht660 {
     height: 660px;
 }
@@ -161,7 +198,8 @@
 .y-hide {
     display: none;
 }
-.y-position-fixed{
+
+.y-position-fixed {
     position: fixed;
 }
 
@@ -172,15 +210,23 @@
 .y-lh52 {
     line-height: 52px;
 }
+
 .y-lh65 {
     line-height: 65px !important;
 }
-.y-lh106{
+
+.y-lh106 {
     line-height: 106px;
 }
 
 .y-mh300 {
     min-height: 300px;
+}
+
+.y-mglr-4 {
+    margin-left: 4px;
+    margin-right: 4px;
+
 }
 
 .y-wt60 {
@@ -194,12 +240,15 @@
 .y-wt80 {
     width: 80%;
 }
-.y-wt95{
+
+.y-wt95 {
     width: 95%;
 }
-.y-wt100{
+
+.y-wt100 {
     width: 100%;
 }
+
 .y-wt240 {
     width: 240px;
 }
@@ -216,11 +265,12 @@
     left: 15%;
 }
 
-@media (min-width:420px) {
+@media (min-width: 420px) {
     .y-l-sm {
         left: 15%;
     }
 }
-.y-boxsh-clca{
+
+.y-boxsh-clca {
     box-shadow: -4px -4px 6px #cacaca;
 }

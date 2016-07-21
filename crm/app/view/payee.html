@@ -1,22 +1,7 @@
 <link rel="import" href="../components/head/index.html?__inline">
 <link rel="import" href="../components/ie/index.html?__inline">
 <div class="container-fluid">
-        <nav class="row navbar navbar-default y-navbar-main">
-            <div class="col-md-2">
-                <img class="img-responsive" src="payee/sklogo2.png" alt="logo" width="174" height="64">
-            </div>
-            <div class="col-md-8 y-nav-ul">
-                <ul class="nav navbar-nav y-fs18">
-                    <li><a href="#">交易记录</a></li>
-                    <li><a href="#">收款账号管理</a></li>
-                    <li><a href="#">对接包下载</a></li>
-                    <li><a href="#">账户管理</a></li>
-                </ul>
-            </div>
-            <div class="col-md-2 text-right">
-                <img src="payee/grzx1.png" alt="" width="56" height="56">
-            </div>
-        </nav>
+    <link rel="import" href="nav/index.html?__inline">
     <div class="center-block y-wt95 y-mt20">
         <div class="row y-mb30">
             <div class="col-xs-6">
@@ -44,7 +29,9 @@
                     <td class="y-btn-link">
                         <button type="button" class="btn btn-link">修改</button>
                         <button type="button" class="btn btn-link">删除</button>
-                        <button type="button" class="btn btn-link" data-toggle="modal" data-target="[y-modal='payee.modified']">冻结</button>
+                        <button type="button" class="btn btn-link" data-toggle="modal"
+                                data-target="[y-modal='payee.modified']">冻结
+                        </button>
                     </td>
                 </tr>
                 <tr class="y-ht65">
@@ -62,7 +49,10 @@
         </div>
     </div>
 </div>
-<div class="modal fade  y-mt120" y-modal="payee.modified" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+
+
+<div class="modal fade  y-mt120" y-modal="payee.modified" tabindex="-1" role="dialog"
+     aria-labelledby="myLargeModalLabel">
     <div class="modal-dialog modal-lg">
         <div class="modal-content y-ht354">
             <div class="modal-header y-bgf3 y-top-radio6">
@@ -79,7 +69,8 @@
         </div>
     </div>
 </div>
-<div class="modal bs-modal fade y-mt120" id="" y-modal="payee.add" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+<div class="modal bs-modal fade y-mt120" id="" y-modal="payee.add" tabindex="-1" role="dialog"
+     aria-labelledby="myLargeModalLabel">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content y-modal-form">
             <div class="modal-header y-bgf3 y-top-radio6">
@@ -120,7 +111,7 @@
                     <div class="form-group">
                         <label for="status" class="col-sm-3 control-label">状态:</label>
                         <div class="col-sm-2 y-pt7 y-ml-30">
-                              <input type="checkbox" id="status" class="" checked>&nbsp; &nbsp;启用
+                            <input type="checkbox" id="status" class="" checked>&nbsp; &nbsp;启用
                         </div>
                     </div>
 
@@ -132,9 +123,16 @@
                 </form>
 
             </div>
+<<<<<<< HEAD
             <img src="../view/payee/ewmsm1.jpg" alt="" y-popoper="ewmsml" class="y-hide y-position-fixed y-mt-300 y-ml100 y-boxsh-clca" width="700" height="364">
             <div class="y-popoper-ul y-hide" y-popoper="infoUl">
                 <ul class="">
+=======
+            <img src="../view/payee/ewmsm1.jpg" alt="" y-img="ewmsml"
+                 class="y-hide y-position-fixed y-mt-300 y-ml100 y-boxsh-clca" width="700" height="364">
+            <div class="y-popoper-ul" y-popoper="noopsycheMoney">
+                <ul class="y-hide">
+>>>>>>> 0189b51f571e95721eeb340fb5e438ce3756089c
                     <li>智能收取切换额度;</li>
                     <li>当某个支付宝账号收款额度达到设置额度后，自动切换到下一个账号;</li>
                     <li>通过实名认证，收款额度不限;</li>
@@ -144,9 +142,5 @@
         </div>
     </div>
 </div>
-
-
-
-
 <link rel="import" href="footer/index.html?__inline">
 <link rel="import" href="../components/required/index.html?__inline">

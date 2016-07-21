@@ -3,52 +3,88 @@
  */
 
 /*==================== custom bootstrap ====================*/
-.y-container-full{
+.y-bgfull-md {
+    width: 100%;
+    padding-top: 28px;
+    padding-bottom: 60px;
+}
+
+.y-bgfull-sm {
+    width: 100%;
+    height: 56px;
+    background-color: #f2f2f2;
+}
+
+.y-bgfull-sm .row {
+    margin-top: 8px;
+}
+
+.y-container-full {
     width: 100%;
     height: 100%;
     position: absolute;
     background-color: #f8f8f8;
     min-height: 400px;
 }
-.y-login{
+
+.y-logo-ali {
+    height: 66px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0px 0px 10px #888;
+}
+
+.y-logo-ali img {
+    width: 290px;
+    margin-top: 4px;
+}
+
+.y-login {
     width: 674px;
     height: 510px;
     margin: 130px auto;
     background-color: #fff;
-    box-shadow: 4px 6px 6px rgba(219,219,219,0.6);
+    box-shadow: 4px 6px 6px rgba(219, 219, 219, 0.6);
 }
+
 .y-login input,
-.y-login button{
+.y-login button {
     width: 336px;
     height: 44px;
     border-radius: 2px;
 }
-.y-login input{
+
+.y-login input {
     border: 1px solid #dedede;
     background-color: #f4f4f4;
     padding-left: 10px;
     margin-bottom: 30px;
 }
-.y-login .y-check{
+
+.y-login .y-check {
     width: 210px;
 }
-.y-login button{
+
+.y-login button {
     background-color: #26a2e9;
     border: none;
     font-size: 18px;
     color: #fff;
 }
-.y-footer{
+
+.y-footer {
     width: 100%;
     height: 150px;
     position: fixed;
-    background-color:#f3f3f3;
+    background-color: #f3f3f3;
     z-index: 3;
     bottom: 0;
     text-align: center;
     line-height: 150px;
 }
-.y-btn-info{
+
+.y-btn-info {
     width: 150px;
     height: 50px;
     color: #2a9fde;
@@ -57,74 +93,126 @@
     background-color: #fff;
     border-radius: 2px;
 }
-.y-btn-link button{
+
+.y-btn-link button {
     padding: 0;
     color: #0880c4;
 }
-.y-table-default tr:first-child{
+
+.y-table-default tr:first-child {
     background-color: #f3f3f3;
 }
-.y-table-default td{
+
+.y-table-default td {
     width: 324px;
     line-height: 65px !important;
     font-size: 14px;
     color: #3f3f3f;
 }
-.y-top-radio6{
+
+.y-top-radio6 {
     border-radius: 6px 6px 0 0;
 }
-.y-border-none{
+
+.y-border-none {
     border: none;
 }
-.y-text-center{
+
+.y-text-center {
     text-align: center;
 }
 
-.y-btn-footer button,.y-btn-footer-save button{
+.y-btn-footer button, .y-btn-footer-save button {
     width: 110px;
     height: 44px;
     font-size: 20px;
     border-radius: 2px;
 }
-.y-btn-footer button:first-child,.y-btn-footer-save button{
+
+.y-btn-footer button:first-child, .y-btn-footer-save button {
     margin-right: 48px;
     background-color: #26a2e9;
 }
-.y-btn-footer button:last-child{
+
+.y-btn-footer button:last-child {
     margin-left: 48px;
 }
-.y-navbar-main{
+
+.y-navbar-main {
     height: 106px;
     background-color: #40aaf2;
 }
-.y-navbar-main div:first-child img{
+
+.y-navbar-main div:first-child img {
     margin-top: 21px;
     margin-left: 55px;
 }
-.y-navbar-main .y-nav-ul{
+
+.y-navbar-main .y-nav-ul {
     padding-left: 35px;
     margin-top: 28px;
     margin-left: -33px;
 }
-.y-navbar-main .y-nav-ul a{
+
+.y-navbar-main .y-nav-ul a {
     color: #fefefe !important;
 }
-.y-navbar-main div:last-child img{
+
+.y-navbar-main div:last-child img {
     margin-top: 25px;
 }
 
-.y-modal-form form{
+.y-breadcrumb-pay {
+    padding: 8px 15px 8px 0;
+    margin-bottom: 20px;
+    list-style: none;
+    font-size: 14px;
+}
+
+.y-breadcrumb-pay .y-breadcrumb-title {
+    color: #666;
+}
+
+.y-breadcrumb-pay > li {
+    display: inline;
+    color: #999;
+}
+
+.y-breadcrumb-pay > li + li:before {
+    padding: 0 6px 0 4px;
+    color: #ccc;
+    content: ">";
+    font-size: 16px;
+}
+
+.y-breadcrumb-pay > .active {
+    color: #ff9a2d;
+}
+
+.y-qrcode {
+    width: 250px;
+}
+
+.y-modal-form form {
     font-size: 16px;
     color: #5d5d5d;
 }
-.y-modal-form form div:first-child{
+
+.y-modal-form form div:first-child {
     margin-top: 20px;
 }
-.y-modal-form form div{
+
+.y-modal-form form div {
     margin-bottom: 14px;
 }
+<<<<<<< HEAD
 .y-popoper-ul{
     width: 340px;
+=======
+
+.y-popoper-ul {
+    width: 400px;
+>>>>>>> 0189b51f571e95721eeb340fb5e438ce3756089c
     background-color: #F5F5F5;
     margin-left: 520px;
     margin-top: -260px;
@@ -132,7 +220,8 @@
     z-index: 999;
 
 }
-.y-popoper-ul ul{
+
+.y-popoper-ul ul {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
