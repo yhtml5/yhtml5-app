@@ -23,38 +23,54 @@
             <div class="col-sm-8 col-sm-push-1">
                 <ul class="y-breadcrumb-pay">
                     <span class="y-breadcrumb-title">支付流程演示: </span>
-                    <li class="">
+                    <li class="" data-target="[y-carousel='scanPayDemo']" data-slide-to="0">
                         <i class="iconfont">&#xe609;</i>
                         扫一扫
                     </li>
-                    <li class="">
+                    <li class="" data-target="[y-carousel='scanPayDemo']" data-slide-to="1">
                         <i class="iconfont">&#xe60a;</i>
                         选择转账
                     </li>
-                    <li class="active">
+                    <li class="active" data-target="[y-carousel='scanPayDemo']" data-slide-to="2">
                         <i class="iconfont">&#xe60b;</i>
                         输入充值金额和备注内容
                     </li>
                 </ul>
                 <img class="y-qrcode" src="scanPay/QR-code.jpg" alt="">
-                <h4 class="y-clff0000 y-fwb">备注内容
-                    <span class="y-mglr-4">:</span>
-                    <span class="y-fs40">FKB001</span>
+                <h4 class="y-cl-ff0000 y-fw-b">备注内容&nbsp;:&nbsp;
+                    <span class="y-fs-40">FKB001</span>
                 </h4>
                 <h1 class="y-notice-pay">
                     支付宝转账时, 请务必填写备注内容 !
                 </h1>
-                <p class="y-fs16 y-cl666">如未正确填写备注内容导致充值不到账,请在付款成功后,点此
+                <p class="y-fs-16 y-cl-66 y-mt-20">如未正确填写备注内容导致充值不到账,请在付款成功后,点此
                     <button class="btn btn-info y-ml-2">提现</button>
                 </p>
+            </div>
+            <div class="col-sm-4">
+                <div y-carousel="scanPayDemo" class="carousel slide y-carousel-default" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img class="" src="scanPay/1.gif" alt="">
+                        </div>
+                        <div class="item">
+                            <img class="" src="scanPay/2.gif" alt="">
+                        </div>
+                        <div class="item">
+                            <img class="" src="scanPay/3.gif" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<footer class="">
+<footer class="y-bgc-66 ">
     <div class="container">
-
+        <p class="y-fs-16 y-cl66">收款宝</p>
+        <p y-fs16 y-cl666></p>
+        <p y-fs16 y-cl666></p>
     </div>
 </footer>
 

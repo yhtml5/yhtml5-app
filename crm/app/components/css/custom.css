@@ -123,10 +123,10 @@
 }
 
 /*.y-btn-footer button, .y-btn-footer-save button {*/
-    /*width: 110px;*/
-    /*height: 44px;*/
-    /*font-size: 20px;*/
-    /*border-radius: 2px;*/
+/*width: 110px;*/
+/*height: 44px;*/
+/*font-size: 20px;*/
+/*border-radius: 2px;*/
 /*}*/
 
 .y-btn-footer button:first-child, .y-btn-footer-save button {
@@ -180,6 +180,7 @@
 
 .y-breadcrumb-pay > li {
     display: inline;
+    cursor: pointer;
 }
 
 .y-breadcrumb-pay > li + li:before {
@@ -191,6 +192,14 @@
 
 .y-breadcrumb-pay > .active {
     color: #ff9a2d;
+}
+
+.y-carousel-default {
+
+}
+
+.y-carousel-default img {
+    width: 300px;
 }
 
 .y-notice-pay {
