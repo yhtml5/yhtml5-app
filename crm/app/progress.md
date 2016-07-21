@@ -10,10 +10,10 @@
 - [x] CRM System
     - [x] login  --登录页
     - [x] payee  --收款账号管理
-    - [-] payee.add  --添加收款账号
+    - [x] payee.add  --添加收款账号
     - [ ] payee.delete  --删除
     - [ ] payee.modified  --修改
-    - [ ] payee.freeze  --冻结
+    - [x] payee.freeze  --冻结
     - [ ] payee.unfreeze  --解冻
     - [-] record  --交易记录
     - [-] record.order  --手动补单
