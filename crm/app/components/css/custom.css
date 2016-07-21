@@ -205,14 +205,9 @@
 .y-modal-form form div {
     margin-bottom: 14px;
 }
-<<<<<<< HEAD
-.y-popoper-ul{
-    width: 340px;
-=======
 
 .y-popoper-ul {
-    width: 400px;
->>>>>>> 0189b51f571e95721eeb340fb5e438ce3756089c
+    width: 340px;
     background-color: #F5F5F5;
     margin-left: 520px;
     margin-top: -260px;
