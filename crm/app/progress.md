@@ -3,10 +3,10 @@
 ### production document
 - [x] 收银台
     - [ ] payDemo  --付款demo
-    - [-] scanPay  --扫描付款
+    - [x] scanPay  --扫描付款
     - [-] scanPay.pickup  --提货
     - [ ] modal.close  --浏览器关闭
-    - [ ] modal.notice  --各类提示    
+    - [x] modal.notice  --各类提示    
 - [x] CRM System
     - [x] login  --登录页
     - [x] payee  --收款账号管理
@@ -39,6 +39,7 @@
    - [x] 2016.07.20  payee  --开发收款账号管理页面
    - [x] 2016.07.21  payee.add、payee.freeze  --开发添加收款账号页面和冻结页面
    - [x] 2016.07.22  record、record.order、userPanel  --开发交易记录页面、手动补单压面和导航栏用户中心
+   
    
 ### problem
    - [x] 设计一致性原则, 同一个button, table, 

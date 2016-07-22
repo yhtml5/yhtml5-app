@@ -1,7 +1,7 @@
 <link rel="import" href="../components/head/index.html?__inline">
 <body class="y-bgc-f2">
 <link rel="import" href="../components/ie/index.html?__inline">
-<header class="y-logo-ali">
+<header class="y-logo-sm">
     <div class="container">
         <img src="scanPay/logo-alipay.jpg" alt="">
     </div>
@@ -42,18 +42,25 @@
                 <h1 class="y-notice-pay">
                     支付宝转账时, 请务必填写备注内容 !
                 </h1>
-                <p class="y-fs-16 y-cl-666 y-mt-30 y-mb-30">如未正确填写备注内容导致充值不到账,请在付款成功后,点此
-                    <button class="btn btn-info y-ml-2">提现</button>
+                <p class="y-fs-16 y-cl-666 y-mt-30">如未正确填写备注内容导致充值不到账,请在付款成功后,点此
+                    <button type="button" class="y-btn y-btn-info-outline y-ml-2" data-toggle="modal"
+                            data-target="[y-modal='scanPay.pickup']">提现
+                    </button>
                 </p>
+                <p class="y-fs-16 y-cl-666 y-mb-30">已完成备注转账支付，则
+                    <a href="index.html" class="y-btn y-btn-info-outline y-ml-2">返回商户</a>
+                    <a href="payDemo.html" class="y-btn y-btn-info-outline y-ml-2">付款Demo</a>
+                    <button type="button" class="y-btn y-btn-info-outline y-ml-2" data-toggle="modal"
+                            data-target="[y-modal='notice.simple']">
+                        异常弹窗
+                    </button>
+                </p>
+                <link rel="import" href="scanPay/pickup.html?__inline">
+                <link rel="import" href="notice/simple.html?__inline">
             </div>
             <div class="col-sm-4">
                 <div y-carousel="scanPayDemo" class="carousel slide y-carousel-default y-mt-20"
                      data-ride="carousel">
-                    <!--<ul class="carousel-indicators y-ml-n-10">-->
-                    <!--<li data-target="[y-carousel='scanPayDemo']" value="0" data-slide-to="0" class="active"></li>-->
-                    <!--<li data-target="[y-carousel='scanPayDemo']" value="0" data-slide-to="1"></li>-->
-                    <!--<li data-target="[y-carousel='scanPayDemo']" value="0" data-slide-to="2"></li>-->
-                    <!--</ul>-->
                     <div class="carousel-inner" role="listbox">
                         <div class="item active" y-value="0">
                             <img class="" src="scanPay/1.gif" alt="">
@@ -65,24 +72,20 @@
                             <img class="" src="scanPay/3.gif" alt="">
                         </div>
                     </div>
-                    <a class="y-left carousel-control" href="###" data-target="[y-carousel='scanPayDemo']" role="button"
+                    <a class="y-left carousel-control" href="#" onclick="javascript:return false;"
+                       data-target="[y-carousel='scanPayDemo']" role="button"
                        data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
+                        <i class="iconfont">&#xe60f;</i>
                     </a>
-                    <a class="right carousel-control" href="###" data-target="[y-carousel='scanPayDemo']" role="button"
+                    <a class="y-right carousel-control" href="#" onclick="javascript:return false;"
+                       data-target="[y-carousel='scanPayDemo']" role="button"
                        data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
+                        <i class="iconfont">&#xe60e;</i>
                     </a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<footer class="y-footer-md">
-    <p class="">收款宝只提供支付技术解决方案,不提供资金托管个结算,转账后将立即到达指定的账户</p>
-    <p>如果您在支付过程中产生任何问题,请直接联系商家咨询情况!</p>
-    <p>杭州凡伟网络科技有限公司&nbsp;ICP备案号：浙ICP备12040171&nbsp;&nbsp;版权所有&nbsp;2016&nbsp;&nbsp;jubaopay.com&nbsp;&nbsp;All&nbsp;Rights&nbsp;Reseved</p>
-</footer>
+<link rel="import" href="footer/notice.html?__inline">
 <link rel="import" href="../components/required/index.html?__inline">
