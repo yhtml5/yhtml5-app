@@ -4,7 +4,7 @@
 
 /*================= base ====================*/
 .y-bgc-40aaf2 {
-    background-color: #40aaf2;
+    background-color: #40aaf2 !important;
 }
 
 .y-bgc-666 {
@@ -100,6 +100,11 @@
 .y-cl-fff {
     color: #fff;
 }
+
+.y-bd-cl-40aaf2{
+    border-color: #40aaf2 !important;
+}
+
 
 .y-fs-14 {
     font-size: 14px !important;

@@ -47,7 +47,12 @@
 .y-mt-n-10 {
     margin-top: -10px;
 }
-
+.y-mt-5 {
+    margin-top: 5px;
+}
+.y-mt-8 {
+    margin-top: 8px;
+}
 .y-mt-10 {
     margin-top: 10px;
 }
@@ -278,4 +283,7 @@
 
 .y-pl-n-15 {
     padding-left: -15px;
+}
+.y-pr-40{
+    padding-right: 40px;
 }

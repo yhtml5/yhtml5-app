@@ -7,3 +7,6 @@ function changeimg() {
     now = new Date();
     myimg.src = "yzm.php?code=" + now.getTime();
 }
+function getUrl() {
+
+}
