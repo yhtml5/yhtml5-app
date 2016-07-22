@@ -300,11 +300,14 @@
 .y-modal-content label {
     font-weight: 400;
 }
+<<<<<<< HEAD
+=======
 
 /*1111111111111*/
 .y-modal-content form div:first-child {
     margin-top: 20px;
 }
+>>>>>>> 55d24b87b935cd02fb389ae3db81c5dc89ce174c
 
 .y-modal-content form div {
     margin-bottom: 14px;
