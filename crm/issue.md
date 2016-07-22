@@ -13,3 +13,7 @@
 * y-mt-pn-60   -- {margin-top:-60%}
 
 #### Object-Oriented demo 
+* y-btn 
+* y-btn-info
+* y-btn-lg
+* y-btn-disable
