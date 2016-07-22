@@ -83,6 +83,15 @@
 
 }
 
+
+.y-footer-md{
+    width: 100%;
+    color: #666;
+    text-align: center;
+    padding-top: 40px;
+
+}
+
 .y-btn-info {
     width: 150px;
     height: 50px;
