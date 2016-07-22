@@ -40,7 +40,7 @@
 }
 
 .y-cl-3f {
-    color: #3f3f3f;
+    color: #3f3f3f !important;
 }
 
 .y-cl-45c65d {
@@ -91,7 +91,7 @@
     color: #ff0000;
 }
 .y-cl-ff6305{
-    color: #ff6305;
+    color: #ff6305 !important;
 }
 .y-cl-fe {
     color: #fefefe !important;
@@ -234,7 +234,9 @@
 .y-wt-p-100 {
     width: 100%;
 }
-
+.y-ht-p-100 {
+    height: 100%;
+}
 .y-wt-240 {
     width: 240px;
 }

@@ -25,7 +25,7 @@
 - [x] components
     - [x] ali iconfont  --字体图标
     - [-] userPanel  --导航栏用户中心 
-    - [-] head/nav  --UI组件
+    - [x] head/nav  --UI组件
     - [ ] search/date  --UI组件
     - [x] animation, base, box, custom  --css模块 
     - [x] fn.js, do.js  --js模块
