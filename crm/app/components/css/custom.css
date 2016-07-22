@@ -21,7 +21,10 @@
     max-width: 400px;
     height: 300px;
 }
-
+.y-moadl-body-sm{
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
 .y-bgfull-md {
     width: 100%;
     padding-top: 28px;
