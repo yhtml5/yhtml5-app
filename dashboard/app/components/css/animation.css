@@ -11,10 +11,10 @@
 }
 
 .y-transition-color-info {
-    -webkit-transition: color 0.4s ease-out 0s;
-    -moz-transition: color 0.4s ease-out 0s;
-    transition: color 0.4s ease-out 0s;
-}
+     -webkit-transition: color 0.4s ease-out 0s;
+     -moz-transition: color 0.4s ease-out 0s;
+     transition: color 0.4s ease-out 0s;
+ }
 
 .y-transition-color-info:hover,
 .y-transition-color-info:focus {

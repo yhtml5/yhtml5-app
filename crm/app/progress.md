@@ -15,8 +15,8 @@
     - [ ] payee.modified  --修改
     - [x] payee.freeze  --冻结
     - [ ] payee.unfreeze  --解冻
-    - [-] record  --交易记录
-    - [-] record.order  --手动补单
+    - [x] record  --交易记录
+    - [x] record.order  --手动补单
     - [ ] account  --账户管理
     - [ ] account.detail  --`账户明细
     - [ ] account.pay  --充值
@@ -24,7 +24,7 @@
     - [ ] download.card  ---对接包  
 - [x] components
     - [x] ali iconfont  --字体图标
-    - [-] userPanel  --导航栏用户中心 
+    - [x] userPanel  --导航栏用户中心
     - [x] head/nav  --UI组件
     - [ ] search/date  --UI组件
     - [x] animation, base, box, custom  --css模块 
@@ -34,7 +34,11 @@
 ### development
    - [x] 2016.07.19  Scaffolding front-end project
    - [x] 2016.07.19  create css, js module && UI components
+   - [x] 2016.07.19  index  --开发登录页面
    - [x] 2016.07.20  scanPay  --开发扫码支付页面
+   - [x] 2016.07.20  payee  --开发收款账号管理页面
+   - [x] 2016.07.21  payee.add、payee.freeze  --开发添加收款账号页面和冻结页面
+   - [x] 2016.07.22  record、record.order、userPanel  --开发交易记录页面、手动补单压面和导航栏用户中心
    
    
 ### problem
