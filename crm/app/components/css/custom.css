@@ -97,6 +97,14 @@
     padding: 0;
     color: #0880c4;
 }
+
+.table .y-td-sm{
+    max-width: 50px;
+}
+.table .y-td-md{
+    max-width: 100px;
+}
+
 .y-table-default-13 td{
     /*max-width: 80px !important;*/
     max-width: 50px !important;
