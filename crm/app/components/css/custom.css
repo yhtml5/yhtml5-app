@@ -247,9 +247,6 @@
 .y-modal-content label{
     font-weight: 400;
 }
-.y-modal-content form div:first-child {
-    margin-top: 20px;
-}
 
 .y-modal-content form div {
     margin-bottom: 14px;

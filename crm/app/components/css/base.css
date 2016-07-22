@@ -189,9 +189,11 @@
 .y-hide {
     display: none;
 }
-
-.y-position-fixed {
-    position: fixed;
+.y-position-relative{
+    position: relative;
+}
+.y-position-absolute {
+    position: absolute;
 }
 
 .y-lh-30 {
@@ -244,6 +246,9 @@
 }
 .y-wt-240 {
     width: 240px;
+}
+.y-wt-868{
+    width: 868px;
 }
 
 .y-boxsh-cl-ca {
