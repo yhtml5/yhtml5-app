@@ -70,9 +70,9 @@ S.Drawing = (function () {
     }
 }());
 S.UI = (function () {
-    var commands = document.querySelector('.commands'),
-        overlay = document.querySelector('.overlay'),
-        canvas = document.querySelector('.canvas'),
+    // commands = document.querySelector('.commands'),
+    // overlay = document.querySelector('.overlay'),
+    var canvas = document.querySelector('.canvas'),
         interval,
         isTouch = false, //('ontouchstart' in window || navigator.msMaxTouchPoints),
         currentAction,
@@ -82,19 +82,23 @@ S.UI = (function () {
         firstAction = true,
         sequence = [],
         cmd = '#';
+
     function formatTime(date) {
         var h = date.getHours(),
             m = date.getMinutes(),
             m = m < 10 ? '0' + m : m;
         return h + ':' + m;
     }
+
     function getValue(value) {
         return value && value.split(' ')[1];
     }
+
     function getAction(value) {
         value = value && value.split(' ')[0];
         return value && value[0] === cmd && value.substring(1);
     }
+
     function timedAction(fn, delay, max, reverse) {
         clearInterval(interval);
         currentAction = reverse ? max : 1;
@@ -110,12 +114,14 @@ S.UI = (function () {
             }, delay);
         }
     }
+
     function reset(destroy) {
         clearInterval(interval);
         sequence = [];
         time = null;
         destroy && S.Shape.switchShape(S.ShapeBuilder.letter(''));
     }
+
     function performAction(value) {
         var action,
             value,
@@ -130,7 +136,6 @@ S.UI = (function () {
                 case 'countdown':
                     value = parseInt(value) || 10;
                     value = value > 0 ? value : 10;
-
                     timedAction(function (index) {
                         if (index === 0) {
                             if (sequence.length === 0) {
@@ -179,23 +184,7 @@ S.UI = (function () {
         }, 2000, sequence.length);
     }
 
-    function bindEvents() {
-        document.body.addEventListener('keydown', function (e) {
-            // input.focus();
-            if (e.keyCode === 13) {
-                firstAction = false;
-                reset();
-                performAction(input.value);
-            }
-        });
-        canvas.addEventListener('click', function (e) {
-            overlay.classList.remove('overlay--visible');
-        });
-    }
-
     function init() {
-        bindEvents();
-        // input.focus();
         isTouch && document.body.classList.add('touch');
     }
 
@@ -540,7 +529,6 @@ S.Shape = (function () {
                 }
             }
         },
-
         render: function () {
             for (var d = 0; d < dots.length; d++) {
                 dots[d].render();

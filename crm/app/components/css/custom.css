@@ -54,7 +54,7 @@
     font-weight: 400;
 }
 
-.y-logo {
+.y-logo-sm {
     height: 66px;
     width: 100%;
     position: relative;
@@ -63,7 +63,7 @@
     background-color: #fff;
 }
 
-.y-logo img {
+.y-logo-sm img {
     width: 290px;
     margin-top: 4px;
 }
