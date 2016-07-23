@@ -235,7 +235,12 @@
 .y-show {
     display: block;
 }
-
+.y-td-n{
+    text-decoration: none;
+}
+.y-td-n:hover{
+    text-decoration: none;
+}
 .y-top-180 {
     top: 180px
 }

@@ -53,6 +53,32 @@ $(function () {
         $(this).fadeOut(1000);
         $("[y-card='quickLink']").fadeIn(2000)
     });
+    $('#defaultForm').formValidation({
+        message: 'This value is not valid',
+        framework: 'bootstrap',
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        locale: 'zh_CN',
+        fields: {
+            email: {
+                validators: {
+                    emailAddress: {}
+                }
+            },
+            phoneNumber: {
+                validators: {
+                    notEmpty: {},
+                    digits: {},
+                    phone: {
+                        country: 'CN'
+                    }
+                }
+            }
+        }
+    });
     /*function: changing active when url changed*/
 });
 
