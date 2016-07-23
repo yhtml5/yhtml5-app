@@ -1,5 +1,6 @@
 /*
  * @require fn.js
+ * @require shape-shifter.js
  */
 /************  do  ************/
 $(function () {
