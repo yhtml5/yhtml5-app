@@ -191,7 +191,9 @@
 .y-ml-40 {
     margin-left: 40px;
 }
-
+.y-ml-60 {
+    margin-left: 60px !important;
+}
 .y-ml-100 {
     margin-left: 100px;
 }
