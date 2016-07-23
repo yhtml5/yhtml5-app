@@ -271,13 +271,13 @@
 .y-ht-p-100 {
     height: 100%;
 }
-
+.y-ht-868{
+    height: 868px;
+}
 .y-wt-240 {
     width: 240px;
 }
-.y-wt-868{
-    width: 868px;
-}
+
 
 .y-boxsh-cl-ca {
     box-shadow: -4px -4px 6px #cacaca;

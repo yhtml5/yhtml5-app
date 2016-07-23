@@ -22,7 +22,7 @@ $(function () {
     });
     $("[y-carousel='scanPayDemo']").on('slid.bs.carousel', function () {
         a = $("[y-carousel='scanPayDemo'] .carousel-inner > .active").attr("y-value")
-        console.log(a)
+        console.log(a);
         $(".y-breadcrumb-pay li").removeClass("active");
         $(".y-breadcrumb-pay li:eq(" + a + ")").addClass("active")
     });
@@ -31,14 +31,20 @@ $(function () {
     });
     $("[y-navbar='float.window']").mouseleave(function () {
         $("[y-navbar='float.window']").fadeOut();
-    })
+    });
+    $("[y-popoper='show.code']") .mouseenter(function () {
+        $("[y-popoper='modified.code'] img").fadeIn();
+    });
+    $("[y-popoper='show.code']") .mouseleave(function () {
+        $("[y-popoper='modified.code'] img").fadeOut();
+    });
     $("[y-button='quickLink']").click(function () {
-        $(this).fadeOut(1000)
+        $(this).fadeOut(1000);
         S.init();
         setTimeout(function () {
             $("[y-card='quickLink']").fadeIn(2000)
         }, 9000);
-    })
+    });
     /*function: changing active when url changed*/
 });
 

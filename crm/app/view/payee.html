@@ -34,8 +34,10 @@
                             <td>1</td>
                             <td>正常</td>
                             <td class="y-btn-link">
-                                <button type="button" class="btn btn-link">修改</button>
-                                <button type="button" class="btn btn-link">删除</button>
+                                <button type="button" class="btn btn-link" data-toggle="modal"
+                                        data-target="[y-modal='payee.modified']">修改</button>
+                                <button type="button" class="btn btn-link" data-toggle="modal"
+                                        data-target="[y-modal='payee.delete']">删除</button>
                                 <button type="button" class="btn btn-link" data-toggle="modal"
                                         data-target="[y-modal='payee.freeze']">冻结
                                 </button>
@@ -49,7 +51,8 @@
                             <td class="y-btn-link">
                                 <button type="button" class="btn btn-link">修改</button>
                                 <button type="button" class="btn btn-link">删除</button>
-                                <button type="button" class="btn btn-link">正常</button>
+                                <button type="button" class="btn btn-link" data-toggle="modal"
+                                        data-target="[y-modal='payee.unfreeze']">解冻</button>
                             </td>
                         </tr>
                     </tbody>
@@ -59,7 +62,11 @@
         </div>
     </div>
 </div>
-<link rel="import" href="../view/payee/freeze.html?__inline">
 <link rel="import" href="../view/payee/add.html?__inline">
+<link rel="import" href="payee/payee.freeze.html?__inline">
+<link rel="import" href="payee/payee.unfreeze.html?__inline">
+<link rel="import" href="payee/payee.delete.html?__inline">
+<link rel="import" href="payee/payee.modified.html?__inline">
+
 <link rel="import" href="footer/index.html?__inline">
 <link rel="import" href="../components/required/index.html?__inline">

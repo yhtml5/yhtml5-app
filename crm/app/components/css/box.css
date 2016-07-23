@@ -15,7 +15,9 @@
 .y-mt-20 {
     margin-top: 20px;
 }
-
+.y-mt-n-540 {
+    margin-top: -540px;
+}
 .y-mt-n-300 {
     margin-top: -300px;
 }
@@ -46,6 +48,9 @@
 
 .y-mt-n-10 {
     margin-top: -10px;
+}
+.y-mt-3 {
+    margin-top: 3px;
 }
 .y-mt-5 {
     margin-top: 5px;
@@ -187,6 +192,9 @@
 
 .y-ml-100 {
     margin-left: 100px;
+}
+.y-ml-330 {
+    margin-left: 330px;
 }
 
 .y-mr-14 {
