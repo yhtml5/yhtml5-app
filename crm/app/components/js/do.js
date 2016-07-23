@@ -4,10 +4,10 @@
 /************  do  ************/
 $(function () {
     $("[y-popoper='uploadQRcode'] a").mouseenter(function () {
-        $("[y-popoper='ewmsml'] img").fadeIn();
+        $("[y-popoper='payee.ewmsml'] img").fadeIn();
     });
     $("[y-popoper='uploadQRcode'] a").mouseleave(function () {
-        $("[y-popoper='ewmsml'] img").fadeOut();
+        $("[y-popoper='payee.ewmsml'] img").fadeOut();
     });
     $("[y-popoper='noopsycheMoney']").mouseenter(function () {
         $("[y-popoper='infoUl']").fadeIn();
@@ -19,23 +19,25 @@ $(function () {
         interval: 4000
     });
     $("[y-carousel='scanPayDemo']").on('slid.bs.carousel', function () {
-        a = $("[y-carousel='scanPayDemo'] .carousel-inner > .active").attr("y-value")
+        a = $("[y-carousel='scanPayDemo'] .carousel-inner > .active").attr("y-value");
         console.log(a);
         $(".y-breadcrumb-pay li").removeClass("active");
         $(".y-breadcrumb-pay li:eq(" + a + ")").addClass("active")
     });
-    $("[y-navbar='user.img']").mouseenter(function () {
-        $("[y-navbar='float.window']").fadeIn();
+
+    $("[y-navbar='nav.user.img']").mouseover(function () {
+        $("[y-navbar='nav.float.window']").fadeIn();
     });
-    $("[y-navbar='float.window']").mouseleave(function () {
-        $("[y-navbar='float.window']").fadeOut();
+    $("[y-close='nav.userPanel']").mouseleave(function () {
+        $("[y-navbar='nav.float.window']").fadeOut();
     });
-    $("[y-popoper='show.code']").mouseenter(function () {
-        $("[y-popoper='modified.code'] img").fadeIn();
+    $("[y-popoper='payee.modified.show.QRcode']").mouseenter(function () {
+        $("[y-popoper='payee.modified.QRcode'] img").fadeIn();
     });
-    $("[y-popoper='show.code']").mouseleave(function () {
-        $("[y-popoper='modified.code'] img").fadeOut();
+    $("[y-popoper='payee.modified.show.QRcode']").mouseleave(function () {
+        $("[y-popoper='payee.modified.QRcode'] img").fadeOut();
     });
+
     $("[y-button='quickLinkStart']").click(function () {
         $(this).fadeOut(1000);
         setTimeout(function () {

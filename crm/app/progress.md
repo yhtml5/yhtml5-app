@@ -12,7 +12,7 @@
     - [x] payee  --收款账号管理
     - [x] payee.add  --添加收款账号
     - [x] payee.delete  --删除
-    - [ ] payee.modified  --修改
+    - [x] payee.modified  --修改
     - [x] payee.freeze  --冻结
     - [x] payee.unfreeze  --解冻
     - [x] record  --交易记录
