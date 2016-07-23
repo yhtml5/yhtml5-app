@@ -43,12 +43,24 @@
     background-color: #fff !important;
 }
 
-.y-container-full {
+.y-login-bg {
     width: 100%;
     height: 800px;
     padding-top: 130px;
     background-color: #f8f8f8;
     min-height: 400px;
+}
+.y-login-logo{
+    margin-top: 36px;
+}
+.y-login-icon{
+    padding-left: 35px;
+    padding-top: 4px;
+
+}
+.y-login-icon i{
+    font-size: 24px;
+    color: #26a2e9;
 }
 
 .y-lable-default {
@@ -78,7 +90,12 @@
     background-color: #fff;
     box-shadow: 4px 6px 6px rgba(219, 219, 219, 0.6);
 }
-
+.y-login-invalid{
+    margin-top: 32px;
+    margin-bottom: 8px;
+    color: #ff0000;
+    padding-left: 16px;
+}
 .y-login input,
 .y-login button {
     width: 336px;
@@ -92,11 +109,16 @@
     padding-left: 10px;
     margin-bottom: 30px;
 }
-
-.y-login .y-check {
-    width: 210px;
+.y-input-invalid {
+    width: 210px !important;
+    margin-right: 14px;
 }
-
+.y-login-change{
+    color: #26a2e9;
+    font-size: 16px;
+    text-decoration: none !important;
+    margin-left: 10px;
+}
 .y-login button {
     background-color: #26a2e9;
     border: none;
@@ -332,7 +354,7 @@
     font-weight: 400;
 }
 
-.y-nav-page li a {
+.y-pagination li a {
     color: #3f3f3f;
 }
 
@@ -384,7 +406,7 @@
     background-color: #ffffff;
     text-align: center;
     padding-top: 34px;
-    position: fixed;
+    position: absolute;
     z-index: 9999;
     right: 0;
     top: 90px;;
@@ -422,5 +444,11 @@
     *display: inline;
     *zoom: 1;
     text-decoration: none !important;
+}
+
+.y-pre-fund{
+    color: #666666;
+    font-size: 18px;
+    margin-top: 15px;
 }
 
