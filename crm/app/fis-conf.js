@@ -8,7 +8,8 @@ fis.set('project.files', [
     '/fis-conf.js', '/map.json',
     '/components/**', '/server/*', '/view/**',
     '/bower_components/bootstrap/dist/**/{bootstrap.min.{css,js},glyphicons-halflings-regular.*}',
-    '/bower_components/jquery/dist/jquery.min.js'
+    '/bower_components/jquery/dist/jquery.min.js',
+    '/bower_components/form.validation/dist/js/{formValidation.min,framework/bootstrap.min,language/zh_CN}.js',
 ]);
 
 /************************* 目录规范 *****************************/
@@ -21,7 +22,7 @@ fis.match('/bower_components/(**)', {
 fis.match('/components/**', {
     release: '/vendor/$0'
 });
-fis.match('/{components,bower_components}/**/(*.{png,gif,jpg,jpeg,svg})', {
+fis.match('/{components,bower_components,view}/**/(*.{png,gif,jpg,jpeg,svg})', {
     release: '${project.static}/img/$1'
 });
 fis.match('/**/(*.design.*)', {
@@ -43,6 +44,9 @@ fis.match('::package', {
     })
 });
 /*** public resourse ***/
+fis.match('/bower_components/{jquery,bootstrap,form.validation}/dist{/**/,/}*.js', {
+    packTo: '${project.static}/yhtml5.js',
+});
 fis.match('/bower_components/{jquery,bootstrap}/dist{/**/,/}*.min.js', {
     packTo: '${project.static}/yhtml5.js',
 });
