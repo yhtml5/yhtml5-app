@@ -21,10 +21,12 @@
     max-width: 400px;
     height: 300px;
 }
-.y-moadl-body-sm{
+
+.y-moadl-body-sm {
     padding-top: 60px;
     padding-bottom: 80px;
 }
+
 .y-bgfull-md {
     width: 100%;
     padding-top: 28px;
@@ -50,15 +52,18 @@
     background-color: #f8f8f8;
     min-height: 400px;
 }
-.y-login-logo{
+
+.y-login-logo {
     margin-top: 36px;
 }
-.y-login-icon{
+
+.y-login-icon {
     padding-left: 35px;
     padding-top: 4px;
 
 }
-.y-login-icon i{
+
+.y-login-icon i {
     font-size: 24px;
     color: #26a2e9;
 }
@@ -90,12 +95,14 @@
     background-color: #fff;
     box-shadow: 4px 6px 6px rgba(219, 219, 219, 0.6);
 }
-.y-login-invalid{
+
+.y-login-invalid {
     margin-top: 32px;
     margin-bottom: 8px;
     color: #ff0000;
     padding-left: 16px;
 }
+
 .y-login input,
 .y-login button {
     width: 336px;
@@ -109,16 +116,19 @@
     padding-left: 10px;
     margin-bottom: 30px;
 }
+
 .y-input-invalid {
     width: 210px !important;
     margin-right: 14px;
 }
-.y-login-change{
+
+.y-login-change {
     color: #26a2e9;
     font-size: 16px;
     text-decoration: none !important;
     margin-left: 10px;
 }
+
 .y-login button {
     background-color: #26a2e9;
     border: none;
@@ -137,6 +147,13 @@
     text-align: center;
     padding-top: 60px;
     padding-bottom: 60px;
+}
+
+.y-quickLinks {
+    margin-bottom: 40px;
+    margin-top: -60px;
+    font-size: 32px;
+    color: #4c7dd4;
 }
 
 .y-footer-md {
@@ -446,7 +463,7 @@
     text-decoration: none !important;
 }
 
-.y-pre-fund{
+.y-pre-fund {
     color: #666666;
     font-size: 18px;
     margin-top: 15px;

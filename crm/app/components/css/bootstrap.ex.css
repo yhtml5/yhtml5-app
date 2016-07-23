@@ -69,11 +69,13 @@ body {
     font-size: 20px;
     line-height: 1.33333;
 }
+
 .y-btn-sm {
     padding: 6px 14px;
     font-size: 16px;
     line-height: 1;
 }
+
 .y-btn-info-outline {
     color: #40aaf2;
     background-color: transparent;
@@ -94,7 +96,6 @@ body {
     color: #fcfcfc;
     background-color: #3987c8;
     border-color: #3987c8;
-.
 }
 
 .y-btn-default {

@@ -30,8 +30,7 @@ fis.match('/**/(*.design.*)', {
 });
 fis.match('/**/({glyphicons-halflings-regular.*,iconfont.{eot, svg, ttf, woff}})', {
     release: '${project.static}/iconfont/$1',
-    url: '/iconfont/$1',
-    domain: '.'
+    url: '/iconfont/$1'
 });
 fis.match('/{map.json,fis-conf.*}', {
     release: '/config/$0'
@@ -71,7 +70,7 @@ fis.match('{/server/author.css,/components/**/*.css}', {
 /************************* Pro规范 *****************************/
 
 fis.media('pro')
-    .match('/{static/**,{components,bower_components}/**/*.{png,gif,jpg,jpeg,eot,ttf,woff,woff2,svg}}', {
+    .match('/{static/**,{components,bower_components,view}/**/*.{png,gif,jpg,jpeg,eot,ttf,woff,woff2,svg}}', {
         useHash: true,
         domain: '.'
     })
