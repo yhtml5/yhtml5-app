@@ -243,10 +243,6 @@
     border-bottom: 6px solid #fff;
 }
 
-.y-active {
-    border-bottom: 6px solid #fff;
-}
-
 .y-navbar-main .y-navbar-nav a {
     color: #fefefe !important;
 }
@@ -389,9 +385,9 @@
     left: 240px;
 }
 
-.y-nav-page .y-active a,
-.y-nav-page .y-active a:focus,
-.y-nav-page .y-active a:hover {
+.y-pagination .y-active a,
+.y-pagination .y-active a:focus,
+.y-pagination .y-active a:hover {
     z-index: 3;
     color: #fff;
     cursor: default;
