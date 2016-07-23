@@ -1,9 +1,7 @@
 /*
  * @require fn.js
  */
-
 /************  do  ************/
-
 $(function () {
     $("[y-popoper='uploadQRcode'] a").mouseenter(function () {
         $("[y-popoper='ewmsml'] img").fadeIn();
@@ -32,18 +30,26 @@ $(function () {
     $("[y-navbar='float.window']").mouseleave(function () {
         $("[y-navbar='float.window']").fadeOut();
     });
-    $("[y-popoper='show.code']") .mouseenter(function () {
+    $("[y-popoper='show.code']").mouseenter(function () {
         $("[y-popoper='modified.code'] img").fadeIn();
     });
-    $("[y-popoper='show.code']") .mouseleave(function () {
+    $("[y-popoper='show.code']").mouseleave(function () {
         $("[y-popoper='modified.code'] img").fadeOut();
     });
-    $("[y-button='quickLink']").click(function () {
+    $("[y-button='quickLinkStart']").click(function () {
         $(this).fadeOut(1000);
+        setTimeout(function () {
+            $("[y-button='quickLinkSlip']").fadeIn()
+        }, 1000);
         S.init();
         setTimeout(function () {
+            $("[y-button='quickLinkSlip']").fadeOut();
             $("[y-card='quickLink']").fadeIn(2000)
         }, 9000);
+    });
+    $("[y-button='quickLinkSlip']").click(function () {
+        $(this).fadeOut(1000);
+        $("[y-card='quickLink']").fadeIn(2000)
     });
     /*function: changing active when url changed*/
 });
