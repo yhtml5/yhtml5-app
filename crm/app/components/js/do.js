@@ -38,7 +38,6 @@ $(function () {
     $("[y-popoper='payee.modified.show.QRcode']").mouseleave(function () {
         $("[y-popoper='payee.modified.QRcode'] img").fadeOut();
     });
-
     $("[y-button='quickLinkStart']").click(function () {
         $(this).fadeOut(1000);
         setTimeout(function () {
