@@ -30,7 +30,8 @@ fis.match('/**/(*.design.*)', {
 });
 fis.match('/**/({glyphicons-halflings-regular.*,iconfont.{eot, svg, ttf, woff}})', {
     release: '${project.static}/iconfont/$1',
-    url: '/iconfont/$1'
+    url: '/iconfont/$1',
+    domain: '.'
 });
 fis.match('/{map.json,fis-conf.*}', {
     release: '/config/$0'
@@ -81,6 +82,14 @@ fis.media('pro')
             "cascade": true
         })
     })
+.match('/{components/**/*.css', {
+    optimizer: fis.plugin('htmlminify', {
+        removeComments: true,
+        collapseWhitespace: true,
+        minifyCSS: true
+    })
+})
+
 // .match('/{{components,view}/**/*.{html,css},index.html}', {
 //     optimizer: fis.plugin('htmlminify', {
 //         removeComments: true,

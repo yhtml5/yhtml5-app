@@ -30,7 +30,9 @@
 .y-bgc-fff {
     background-color: #fff;
 }
-
+.y-bt-p-10{
+     bottom: 10%;
+}
 .y-cl-099fdd {
     color: #099fdd;
 }
