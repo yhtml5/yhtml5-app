@@ -5,8 +5,13 @@
     - [ ] payDemo  --付款demo
     - [x] scanPay  --扫描付款
     - [x] scanPay.pickup  --提货
+<<<<<<< HEAD
+    - [x] modal.close  --浏览器关闭
+    - [x] modal.notice  --各类提示    
+=======
     - [ ] notice.danger  --浏览器关闭
     - [x] notice.simple  --各类提示    
+>>>>>>> e6479a0b4ab4f2e121fdbd0788cb41fad008b13a
 - [x] CRM System
     - [x] login  --登录页
     - [x] payee  --收款账号管理
@@ -17,8 +22,8 @@
     - [x] payee.unfreeze  --解冻
     - [x] record  --交易记录
     - [x] record.order  --手动补单
-    - [ ] account  --账户管理
-    - [ ] account.detail  --`账户明细
+    - [x] account  --账户管理
+    - [x ] account.detail  --`账户明细
     - [ ] account.pay  --充值
     - [ ] download  --对接包下载
     - [ ] download.card  ---对接包  
