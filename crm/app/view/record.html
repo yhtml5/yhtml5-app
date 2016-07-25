@@ -24,36 +24,33 @@
                 </div>
             </div>
             <hr>
-
-            <form class="form-horizontal">
-                <div class="form-group">
-                    <label for="a" class="col-lg-1 control-label">交易时间：</label>
-                    <div class="col-lg-1">
-                        <input type="text" class="form-control" id="a" placeholder="text">
-                        <div>-</div>
-                    </div>
-                    <div class="col-lg-1">
-                        <input type="text" class="form-control" id="inputEmail3" placeholder="text">
-                    </div>
-                    <label for="b" class="col-lg-1 control-label">商户订单号：</label>
-                    <div class="col-lg-1">
-                        <input type="text" class="form-control" id="b" placeholder="text">
-                    </div>
-                    <label for="b" class="col-lg-1 control-label">支付宝订单号：</label>
-                    <div class="col-lg-1">
-                        <input type="text" class="form-control" id="b" placeholder="text">
-                    </div>
-                    <label for="b" class="col-lg-1 control-label">平台订单号：</label>
-                    <div class="col-lg-1">
-                        <input type="text" class="form-control" id="b" placeholder="text">
-                    </div>
-                    <label class="col-lg-1 control-label">状态：</label>
-                    <div class="col-lg-1 input-group">
-                        <input type="text" class="form-control" aria-label="...">
+            <form class="form-inline">
+                <div class="form-group y-mb-20">
+                    <label>交易时间：</label>
+                    <input type="text" class="form-control" placeholder="">-
+                    <input type="text" class="form-control" placeholder="">
+                </div>
+                <div class="form-group y-mb-20">
+                    <label>商户订单号：</label>
+                    <input type="text" class="form-control" placeholder="">
+                </div>
+                <div class="form-group y-mb-20">
+                    <label>支付宝订单号：</label>
+                    <input type="text" class="form-control" placeholder="">
+                </div>
+                <div class="form-group y-mb-20">
+                    <label>平台订单号：</label>
+                    <input type="text" class="form-control" placeholder="">
+                </div>
+                <div class="form-group y-mb-20">
+                    <label>状态：</label>
+                    <div class="input-group">
+                        <input type="text" y-input="record.status" class="form-control" aria-label="..." value="22222">
                         <div class="input-group-btn">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false"><span class="caret"></span></button>
-                            <ul class="dropdown-menu dropdown-menu-right">
+                                    aria-haspopup="true" aria-expanded="false"><span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right" y-menu="record.status">
                                 <li><a href="#">Action</a></li>
                                 <li><a href="#">Another action</a></li>
                                 <li><a href="#">Something else here</a></li>
@@ -62,56 +59,52 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="btn-group col-lg-1 y-ml-n-30">
-                        <button type="submit" class="btn btn-default">查询</button>
-                    </div>
+                    <button type="submit" class="btn btn-default">查询</button>
                 </div>
             </form>
-            <br>
-            <div class="row">
-                <form class="form-inline y-input-wt-150">
-                    <div class="form-group col-sm-3">
-                        <label>交易时间：</label>
-                        <input type="text" class="form-control" placeholder="">-
-                        <input type="text" class="form-control" placeholder="">
-                    </div>
-                    <div class="form-group col-sm-2 y-ml-n-30">
-                        <label>商户订单号：</label>
-                        <input type="text" class="form-control" placeholder="">
-                    </div>
-                    <div class="form-group col-sm-2 y-ml-n-33">
-                        <label>支付宝订单号：</label>
-                        <input type="text" class="form-control" placeholder="">
-                    </div>
-                    <div class="form-group col-sm-2">
-                        <label>平台订单号：</label>
-                        <input type="text" class="form-control" placeholder="">
-                    </div>
-                    <div class="form-group col-sm-2 y-ml-n-30">
-                        <label>状态：</label>
-                        <div class="input-group">
-                            <input type="text" class="form-control" aria-label="...">
-                            <div class="input-group-btn">
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
-                                        aria-haspopup="true" aria-expanded="false"><span class="caret"></span></button>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="#">Separated link</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="btn-group col-sm-1 y-ml-n-30">
-                        <button type="submit" class="btn btn-default">查询</button>
-                    </div>
-                </form>
-            </div>
+            <!--<div class="row">-->
+            <!--<form class="form-inline y-input-wt-150">-->
+            <!--<div class="form-group col-sm-3">-->
+            <!--<label>交易时间：</label>-->
+            <!--<input type="text" class="form-control" placeholder="">- -->
+            <!--<input type="text" class="form-control" placeholder="">-->
+            <!--</div>-->
+            <!--<div class="form-group col-sm-2 y-ml-n-30">-->
+            <!--<label>商户订单号：</label>-->
+            <!--<input type="text" class="form-control" placeholder="">-->
+            <!--</div>-->
+            <!--<div class="form-group col-sm-2 y-ml-n-33">-->
+            <!--<label>支付宝订单号：</label>-->
+            <!--<input type="text" class="form-control" placeholder="">-->
+            <!--</div>-->
+            <!--<div class="form-group col-sm-2">-->
+            <!--<label>平台订单号：</label>-->
+            <!--<input type="text" class="form-control" placeholder="">-->
+            <!--</div>-->
+            <!--<div class="form-group col-sm-2 y-ml-n-30">-->
+            <!--<label>状态：</label>-->
+            <!--<div class="input-group">-->
+            <!--<input type="text" class="form-control" aria-label="...">-->
+            <!--<div class="input-group-btn">-->
+            <!--<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"-->
+            <!--aria-haspopup="true" aria-expanded="false"><span class="caret"></span></button>-->
+            <!--<ul class="dropdown-menu dropdown-menu-right">-->
+            <!--<li><a href="#">Action</a></li>-->
+            <!--<li><a href="#">Another action</a></li>-->
+            <!--<li><a href="#">Something else here</a></li>-->
+            <!--<li role="separator" class="divider"></li>-->
+            <!--<li><a href="#">Separated link</a></li>-->
+            <!--</ul>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="btn-group col-sm-1 y-ml-n-30">-->
+            <!--<button type="submit" class="btn btn-default">查询</button>-->
+            <!--</div>-->
+            <!--</form>-->
+            <!--</div>-->
 
-
-            <div class="table-responsive y-mt-36 y-table-responsive">
+            <div class="table-responsive y-mt-10 y-table-responsive">
                 <table class="table table-bordered text-center y-table-default y-table-default-13">
                     <thead>
                     <tr class="">
