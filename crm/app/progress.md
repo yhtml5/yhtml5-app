@@ -5,8 +5,8 @@
     - [ ] payDemo  --付款demo
     - [x] scanPay  --扫描付款
     - [x] scanPay.pickup  --提货
-    - [ ] modal.close  --浏览器关闭
-    - [x] modal.notice  --各类提示    
+    - [ ] notice.danger  --浏览器关闭
+    - [x] notice.simple  --各类提示    
 - [x] CRM System
     - [x] login  --登录页
     - [x] payee  --收款账号管理

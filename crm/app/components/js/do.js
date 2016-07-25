@@ -38,18 +38,18 @@ $(function () {
     $("[y-popoper='payee.modified.show.QRcode']").mouseleave(function () {
         $("[y-popoper='payee.modified.QRcode'] img").fadeOut();
     });
-    $("[y-button='quickLinkStart']").click(function () {
+    $("[y-card='quickLinkStart']").click(function () {
         $(this).fadeOut(1000);
-        setTimeout(function () {
-            $("[y-button='quickLinkSlip']").fadeIn()
+        setTimeout(function (){
+            $("[y-card='quickLinkSlip']").fadeIn()
         }, 1000);
         S.init();
         setTimeout(function () {
-            $("[y-button='quickLinkSlip']").fadeOut();
+            $("[y-card='quickLinkSlip']").fadeOut();
             $("[y-card='quickLink']").fadeIn(2000)
         }, 9000);
     });
-    $("[y-button='quickLinkSlip']").click(function () {
+    $("[y-card='quickLinkSlip']").click(function () {
         $(this).fadeOut(1000);
         $("[y-card='quickLink']").fadeIn(2000)
     });
