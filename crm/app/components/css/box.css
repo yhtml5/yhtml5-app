@@ -281,7 +281,9 @@
 .y-pb-180 {
     padding-bottom: 180px;
 }
-
+.y-pb-290 {
+    padding-bottom: 290px !important;
+}
 .y-pl-15 {
     padding-left: 15px;
 }

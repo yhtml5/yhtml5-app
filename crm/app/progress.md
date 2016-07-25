@@ -4,8 +4,8 @@
 - [x] 收银台
     - [ ] payDemo  --付款demo
     - [x] scanPay  --扫描付款
-    - [-] scanPay.pickup  --提货
-    - [ ] modal.close  --浏览器关闭
+    - [x] scanPay.pickup  --提货
+    - [x] modal.close  --浏览器关闭
     - [x] modal.notice  --各类提示    
 - [x] CRM System
     - [x] login  --登录页
@@ -17,8 +17,8 @@
     - [x] payee.unfreeze  --解冻
     - [x] record  --交易记录
     - [x] record.order  --手动补单
-    - [ ] account  --账户管理
-    - [ ] account.detail  --`账户明细
+    - [x] account  --账户管理
+    - [x ] account.detail  --`账户明细
     - [ ] account.pay  --充值
     - [ ] download  --对接包下载
     - [ ] download.card  ---对接包  

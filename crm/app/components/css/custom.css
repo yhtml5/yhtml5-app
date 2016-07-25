@@ -482,9 +482,26 @@
     text-decoration: none !important;
 }
 
-.y-pre-fund {
+.y-record-left p{
     color: #666666;
     font-size: 18px;
-    margin-top: 15px;
+    margin-top: 18px;
+    margin-left: 20px;
+    float: left;
+}
+.y-record-left p span{
+    font-size: 24px;
+    color: #ff6305;
+}
+.y-record-left h2,p,button{
+    margin-left: 20px;
+    float: left;
+}
+.y-record-left h2{
+    font-weight: 700;
+    color: #3f3f3f;
+}
+.y-record-left button{
+    margin-top: 10px;
 }
 
