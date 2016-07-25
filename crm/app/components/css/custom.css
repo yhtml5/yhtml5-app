@@ -256,7 +256,8 @@
     height: 76px;
 }
 
-.y-navbar-main .y-navbar-nav .y-active a {
+.y-navbar-main .y-navbar-nav .y-active a,
+.y-navbar-main .y-navbar-nav a:hover{
     border-bottom: 6px solid #fff;
 }
 
@@ -343,9 +344,12 @@
     font-weight: 400;
     text-align: right;
  }
-.y-form-content p,label{
+.y-form-content p{
     font-size: 18px;
 
+}
+.y-form-content label{
+    font-size: 18px;
 }
 .y-form-content p{
     color: #999999;
