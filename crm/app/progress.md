@@ -4,7 +4,7 @@
 - [x] 收银台
     - [ ] payDemo  --付款demo
     - [x] scanPay  --扫描付款
-    - [-] scanPay.pickup  --提货
+    - [x] scanPay.pickup  --提货
     - [ ] modal.close  --浏览器关闭
     - [x] modal.notice  --各类提示    
 - [x] CRM System
@@ -34,12 +34,16 @@
 ### development
    - [x] 2016.07.19  Scaffolding front-end project
    - [x] 2016.07.19  create css, js module && UI components
-   - [x] 2016.07.19  index  --开发登录页面
+   - [x] 2016.07.19  index  --项目首页
+   - [x] 2016.07.19  login  --开发登录页面
    - [x] 2016.07.20  scanPay  --开发扫码支付页面
+   - [x] 2016.07.20  scanPay.pickup  --开发提货页面
+   - [x] 2016.07.20  modal.notice  --各类提示弹窗
    - [x] 2016.07.20  payee  --开发收款账号管理页面
    - [x] 2016.07.21  payee.add、payee.freeze  --开发添加收款账号页面和冻结页面
-   - [x] 2016.07.22  record、record.order、userPanel  --开发交易记录页面、手动补单压面和导航栏用户中心
-   
+   - [x] 2016.07.22  record、record.order、userPanel  --开发交易记录页面、手动补单压面
+   - [x] 2016.07.22  userPanel  --开发用户中心等UI组件
+        
    
 ### problem
    - [x] 设计一致性原则, 同一个button, table, 
