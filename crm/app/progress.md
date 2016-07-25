@@ -2,16 +2,12 @@
 
 ### production document
 - [x] 收银台
-    - [ ] payDemo  --付款demo
+    - [x] payDemo  --付款demo
     - [x] scanPay  --扫描付款
     - [x] scanPay.pickup  --提货
-<<<<<<< HEAD
-    - [x] modal.close  --浏览器关闭
-    - [x] modal.notice  --各类提示    
-=======
-    - [ ] notice.danger  --浏览器关闭
+    - [x] notice.danger  --浏览器关闭
     - [x] notice.simple  --各类提示    
->>>>>>> e6479a0b4ab4f2e121fdbd0788cb41fad008b13a
+
 - [x] CRM System
     - [x] login  --登录页
     - [x] payee  --收款账号管理
@@ -23,18 +19,18 @@
     - [x] record  --交易记录
     - [x] record.order  --手动补单
     - [x] account  --账户管理
-    - [x ] account.detail  --`账户明细
-    - [ ] account.pay  --充值
-    - [ ] download  --对接包下载
-    - [ ] download.card  ---对接包  
+    - [x] account.detail  --`账户明细
+    - [-] account.pay  --充值
+    - [x] download  --对接包下载
+    - [x] download.card  ---对接包
 - [x] components
     - [x] ali iconfont  --字体图标
     - [x] userPanel  --导航栏用户中心
     - [x] head/nav  --UI组件
-    - [ ] search/date  --UI组件
+    - [-] search/date  --UI组件
     - [x] animation, base, box, custom  --css模块 
     - [x] fn.js, do.js  --js模块
-    - [ ] 表单验证组件: 文本,电话,邮箱,俩次确认,输入为空等等验证
+    - [-] 表单验证组件: 文本,电话,邮箱,俩次确认,输入为空等等验证
 
 ### development
    - [x] 2016.07.19  Scaffolding front-end project
