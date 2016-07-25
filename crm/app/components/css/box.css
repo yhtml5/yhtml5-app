@@ -138,7 +138,7 @@
 }
 
 .y-mb-20 {
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
 }
 
 .y-mb-30 {
