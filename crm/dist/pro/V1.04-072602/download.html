@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>商户后台</title>
+    <meta name="description" content="">
+    <meta name="author" content="yhtml5.com"/>
+    <meta name="keywords" content="">
+    <meta name="description" content=" ">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="HandheldFriendly" content="true">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="./static/img/shortcut-icon.png" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="./static/yhtml5.css" />
+    <link rel="stylesheet" type="text/css" href="./static/index.css" />
+</head>
+
+<body class="y-bgc-f3">
+<!--[if lt IE 9]>
+<div class="text-center y-mt80">
+    <h2 class="" style="display: inline">hi,您使用的浏览器版本过低</h2>
+    <h5 class="y-mt20">请<a href="http://browsehappy.com/">升级您的浏览器</a>获取更好的体验</h5>
+</div>
+<![endif]-->
+<div class="y-bgfull-lg">
+    <div class="container-fluid">
+        <nav class="row navbar navbar-default y-navbar-main y-position-relative" y-close="nav.userPanel">
+    <div class="col-sm-10">
+        <img class="y-logo" src="./static/img/sklogo2.png" alt="logo">
+        <ul class="nav navbar-nav y-navbar-nav">
+            <li><a href="../record.html">交易记录</a></li>
+            <li><a href="../payee.html">收款账号管理</a></li>
+            <li><a href="../download.html">对接包下载</a></li>
+            <li><a href="../account.html">账户管理</a></li>
+        </ul>
+    </div>
+    <div class="col-sm-2 text-right y-pr-40 y-mt-26">
+        <img src="./static/img/grzx1.png" alt="user" width="56" height="56" y-navbar="nav.user.img">
+    </div>
+    <div class="y-float-window y-hide" y-navbar="nav.float.window">
+    <h5 class="y-cl-666">用户名fdgdfg</h5>
+    <a href="../login.html" class="btn btn-link y-mt-23">退出</a>
+</div>
+
+</nav>
+
+
+
+
+        <div class="center-block y-wt-p-95">
+            <div class="row y-mb-30">
+                <div class="col-sm-2">
+                    <h2 class="y-fw-b y-cl-3f">对接包下载</h2>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="center-block y-wt-p-80">
+    <div class="col-sm-3 y-mt-30 y-mb-40">
+        <div class="row y-card">
+            <i class="icon iconfont">&#xe602;</i>
+            <h4 class="y-mt-15">侦测系统安装包</h4>
+            <a href="#" class="y-btn y-btn-info-outline y-mt-26">点击下载</a>
+        </div>
+    </div>
+    <div class="col-sm-3 y-mt-30 y-mb-40">
+        <div class="row y-card">
+            <i class="icon iconfont">&#xe604;</i>
+            <h4 class="y-mt-15">Java对接包</h4>
+            <a href="#" class="y-btn y-btn-info-outline y-mt-26">点击下载</a>
+        </div>
+    </div>
+    <div class="col-sm-3 y-mt-30 y-mb-40">
+        <div class="row y-card">
+            <i class="icon iconfont">&#xe603;</i>
+            <h4 class="y-mt-15">.Net对接包</h4>
+            <a href="#" class="y-btn y-btn-info-outline y-mt-26">点击下载</a>
+        </div>
+    </div>
+    <div class="col-sm-3 y-mt-30 y-mb-40">
+        <div class="row y-card">
+            <i class="icon iconfont">&#xe600;</i>
+            <h4 class="y-mt-15">PHP对接包</h4>
+            <a href="#" class="y-btn y-btn-info-outline y-mt-26">点击下载</a>
+        </div>
+    </div>
+    <div class="col-sm-3 y-mt-30 y-mb-40">
+        <div class="row y-card">
+            <i class="icon iconfont">&#xe601;</i>
+            <h4 class="y-mt-15">对接文档</h4>
+            <a href="#" class="y-btn y-btn-info-outline y-mt-26">点击下载</a>
+        </div>
+    </div>
+
+</div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal bs-modal fade y-mt-120" id="" y-modal="record.order" tabindex="-1" role="dialog"
+     aria-labelledby="myLargeModalLabel" data-backdrop="static">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content y-modal-content">
+            <div class="modal-header y-modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title y-modal-title" id="myLargeModalLabel">手动补单</h3>
+            </div>
+            <div class="modal-body text-center">
+                <form class="form-horizontal">
+                    <div class="form-group y-mt-20">
+                        <label for="" class="col-sm-4 control-label">支付宝订单号:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label for="alipayAccount" class="col-sm-4 control-label">支付金额:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="alipayAccount" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="noopsycheMoney" class="col-sm-4 control-label">支付宝交易备注:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="noopsycheMoney" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="gatheringOrder" class="col-sm-4 control-label">付款人玩家账号:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="gatheringOrder" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-push-4 col-sm-1 y-btn-footer-save">
+                            <button type="submit" class="y-btn y-btn-lg y-btn-info">保&nbsp;&nbsp;存</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="y-footer">
+    <p style="text-align: center">杭州凡伟网络科技有限公司&nbsp;ICP备案号：浙ICP备12040171   版权所有 2016  jubaopay.com   All Rights Reseved</p>
+</div>
+<!--* =============== css ===============-->
+<!--@require bower_components/bootstrap/dist/css/bootstrap.min.css-->
+<!--@require server/author.css-->
+<!--* ================ js ================-->
+<!--@require bower_components/bootstrap/dist/js/bootstrap.min.js-->
+<!--@require server/author.js-->
+
+<script type="text/javascript" src="./static/yhtml5.js"></script>
+<script type="text/javascript" src="./static/index.js"></script>
+</body>
+</html>
