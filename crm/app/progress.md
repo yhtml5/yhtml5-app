@@ -48,6 +48,7 @@
    - [x] 2016.07.21  payee.add、payee.freeze  --开发添加收款账号页面和冻结页面
    - [x] 2016.07.22  record、record.order、userPanel  --开发交易记录页面、手动补单压面
    - [x] 2016.07.22  userPanel  --开发用户中心等UI组件
+   - [x] 2016.07.26  record  --增加日期控件 
         
    
 ### problem

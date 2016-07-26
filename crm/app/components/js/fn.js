@@ -32,7 +32,7 @@ function getStart() {
         $("[y-card='quickLink']").fadeIn(2000)
     });
 }
-function doCarouselScanPayDemo (time){
+function doCarouselScanPayDemo(time) {
     $("[y-carousel='scanPayDemo']").carousel({
         interval: time
     });
@@ -42,14 +42,25 @@ function doCarouselScanPayDemo (time){
         $(".y-breadcrumb-pay li:eq(" + a + ")").addClass("active")
     });
 }
-function yFadeToggle (selector, event,event2,eventObject){
-    $(selector).on(event,function () {
+function yFadeToggle(selector, event, event2, eventObject) {
+    $(selector).on(event, function () {
         $(eventObject).fadeIn();
     });
-    $(selector).on(event2,function () {
+    $(selector).on(event2, function () {
         $(eventObject).fadeOut();
     });
 }
+function initDatetimepicker(selector) {
+    $(selector).datetimepicker({
+        language: 'zh-CN',
+        format: "yyyy-mm-dd hh:ii",
+        autoclose: true,
+        todayBtn: true,
+        minView: 1,
+        inline: true
+    });
+}
+
 // $(".y-pagination li").click(function () {
 //     $(this).removeClass('y-active')
 //     $(this).addClass('y-active')

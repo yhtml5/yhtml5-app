@@ -9,7 +9,11 @@ fis.set('project.files', [
     '/components/**', '/server/*', '/view/**',
     '/bower_components/bootstrap/dist/**/{bootstrap.min.{css,js},glyphicons-halflings-regular.*}',
     '/bower_components/jquery/dist/jquery.min.js',
+    '/bower_components/form.validation/dist/css/formValidation.min.css',
     '/bower_components/form.validation/dist/js/{formValidation.min,framework/bootstrap.min,language/zh_CN}.js',
+    '/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css',
+    '/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js',
+    '/bower_components/bootstrap-datepicker/dist/js/locales/bootstrap-datepicker.zh-CN.min.js'
 ]);
 
 /************************* 目录规范 *****************************/
@@ -43,23 +47,44 @@ fis.match('::package', {
         useInlineMap: true
     })
 });
-/*** public resourse ***/
-fis.match('/bower_components/{jquery,bootstrap,form.validation}/dist{/**/,/}*.js', {
-    packTo: '${project.static}/yhtml5.js',
-});
-fis.match('/bower_components/{jquery,bootstrap}/dist{/**/,/}*.min.js', {
+/*** public js ***/
+fis.match('/bower_components/{jquery,bootstrap,form.validation,bootstrap-datepicker}/dist/**/*.js', {
     packTo: '${project.static}/yhtml5.js',
 });
 fis.match('/bower_components/jquery/dist/*', {
     packOrder: -99
 });
 fis.match('/bower_components/bootstrap/dist/js/*', {
-    packOrder: -98
+    packOrder: -97
 });
-fis.match('/bower_components/bootstrap/dist/css/*', {
+fis.match('/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js', {
+    packOrder: -95
+});
+fis.match('/bower_components/bootstrap-datepicker/dist/locales/bootstrap-datetimepicker.zh-CN.min.js', {
+    packOrder: -93
+});
+fis.match('/bower_components/form.validation/dist/js/formValidation.min.js', {
+    packOrder: -89
+});
+fis.match('/bower_components/form.validation/dist/js/framework/bootstrap.min.js', {
+    packOrder: -87
+});
+fis.match('/bower_components/form.validation/dist/js/language/zh_CN.js', {
+    packOrder: -85
+});
+/*** public css ***/
+fis.match('/bower_components/{bootstrap,bootstrap-datepicker,form.validation}/dist/css/*', {
     packTo: '${project.static}/yhtml5.css'
 });
-
+fis.match('/bower_components/bootstrap/dist/css/*', {
+    packOrder: -99
+});
+fis.match('/bower_components/bootstrap-datepicker/dist/css/*', {
+    packOrder: -97
+});
+fis.match('/bower_components/form.validation/dist/css/*', {
+    packOrder: -95
+});
 /*** custom resourse ***/
 fis.match('{/server/author.js, /components/**/*.js}', {
     packTo: '${project.static}/index.js'
