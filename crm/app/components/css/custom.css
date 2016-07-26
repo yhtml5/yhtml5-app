@@ -195,7 +195,7 @@
     font-weight: 400;
 }
 
-.y-table-default td {
+.y-table-default td,th {
     word-wrap: break-word;
     font-size: 14px;
     color: #3f3f3f;
@@ -235,17 +235,17 @@
 }
 
 .y-navbar-main .y-logo {
-    margin-top: 21px;
-    margin-left: 55px;
-    width: 174px;
-    height: 64px;
+    margin-top: 27px;
+    margin-left: 23px;
+    width: 140px;
+    height: 50px;
+    float: left;
 }
 
 .y-navbar-main .y-navbar-nav {
-    padding-left: 35px;
+    padding-left: 72px;
     margin-top: 28px;
-    margin-left: -33px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .y-navbar-main .y-navbar-nav a {
@@ -255,6 +255,7 @@
 .y-navbar-main .y-navbar-nav .y-active a,
 .y-navbar-main .y-navbar-nav a:hover{
     border-bottom: 6px solid #fff;
+    font-size: 18px;
 }
 
 .y-navbar-main .y-navbar-nav a {
@@ -437,7 +438,7 @@
     box-shadow: -2px 2px 2px #dedede;
     background-color: #ffffff;
     text-align: center;
-    padding-top: 34px;
+    padding-top: 25px;
     position: absolute;
     z-index: 9999;
     right: 0;
@@ -445,14 +446,15 @@
 }
 
 .btn-link {
-    text-decoration: none !important;
     color: #40aaf2 !important;
 }
 
 .y-table-responsive,.y-responsive {
     min-height: 540px;
 }
-
+td,th{
+    border: 1px solid #efefef !important;
+}
 .y-input-file {
     position: absolute;
     right: 0;
@@ -530,4 +532,8 @@
 }
 .y-card a{
     text-decoration: none;
+}
+
+.table-hover:hover{
+    background-color: #e7f4fd;
 }
