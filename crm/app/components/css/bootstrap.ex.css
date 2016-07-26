@@ -109,3 +109,9 @@ body {
     background-color: #ababab !important;
     border-color: #ababab !important;
 }
+
+.y-btn:hover,
+.y-btn:focus,
+.y-btn.focus {
+    text-decoration: none;
+}

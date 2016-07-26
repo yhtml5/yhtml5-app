@@ -1,7 +1,14 @@
 <link rel="import" href="../components/head/index.html?__inline">
 <body class="y-bgc-f3">
+
 <link rel="import" href="../components/ie/index.html?__inline">
 <div class="y-bgfull-lg">
+    <!--<div class="alert alert-warning" style="position: absolute;z-index: 999999;width: 200px;margin-left:43% ">-->
+        <!--<a href="#" class="close" data-dismiss="alert">-->
+            <!--&times;-->
+        <!--</a>-->
+        <!--保存成功！-->
+    <!--</div>-->
     <div class="container-fluid">
         <link rel="import" href="nav/index.html?__inline">
         <div class="center-block y-wt-p-95">
@@ -20,19 +27,35 @@
                     <form class="form-horizontal">
                         <div class="form-group">
                             <p class="col-sm-2">商户名称：</p>
-                            <label class="col-sm-2">飞龙游戏</label>
+                            <label class="col-sm-4">飞龙游戏</label>
+                        </div>
+                        <div class="form-group">
+                            <p class="col-sm-2">联系人：</p>
+                            <label class="col-sm-4">张三</label>
+                        </div>
+                        <div class="form-group">
+                            <p class="col-sm-2">手机号：</p>
+                            <label class="col-sm-4">13585875555</label>
+                        </div>
+                        <div class="form-group">
+                            <p class="col-sm-2">账户状态：</p>
+                            <label class="col-sm-4">正常</label>
+                        </div>
+                        <div class="form-group">
+                            <p class="col-sm-2">手续费：</p>
+                            <label class="col-sm-4">0.6%*交易额</label>
                         </div>
                         <div class="form-group">
                             <p class="col-sm-2">注册邮箱：</p>
-                            <label class="col-sm-2">12535425542qq.com</label>
+                            <label class="col-sm-4">12535425542qq.com</label>
                         </div>
                         <div class="form-group">
                             <p class="col-sm-2">商户号：</p>
-                            <label class="col-sm-2">S001</label>
+                            <label class="col-sm-4">S001</label>
                         </div>
                         <div class="form-group">
                             <p class="col-sm-2">预存款余额：</p>
-                            <label class="col-sm-2">50,000 元</label>
+                            <label class="col-sm-4">50,000 元</label>
                         </div>
                         <div class="form-group">
                             <p class="col-sm-2">密钥(Key)：</p>
@@ -47,7 +70,7 @@
                                 <input type="text" class="form-control" style="height: 41px"
                                        placeholder="http://127.0.0.1/yybpay/post.php">
                             </div>
-                            <button type="button" class="y-btn y-btn-info y-ml-60">保存/修改</button>
+                            <button type="button" class="y-btn y-btn-info y-ml-60">保&nbsp;&nbsp;存</button>
                         </div>
                         <div class="form-group y-form-group-p">
                             <p class="col-sm-7 col-sm-push-2">用户返回商户支付成功页面的URL，例如http://127.0.0.1/yybpay/post.php</p>
@@ -58,39 +81,21 @@
                                 <input type="text" class="form-control" style="height: 41px"
                                        placeholder="http://127.0.0.1/yybpay/post.php">
                             </div>
-                            <button type="button" class="y-btn y-btn-info y-ml-60">保存/修改</button>
+                            <button type="button" class="y-btn y-btn-info y-ml-60">保&nbsp;&nbsp;存</button>
                         </div>
                         <div class="form-group y-form-group-p">
                             <p class="col-sm-8 col-sm-push-2">收款宝服务器向商户服务器通知支付成功的消息URL，例如http://www.shoukuanbao.com</p>
                         </div>
                     </form>
                 </div>
-                <div class="col-sm-4">
-                    <form class="form-horizontal">
-                        <div class="form-group">
-                            <p class="col-sm-3">联系人：</p>
-                            <label class="col-sm-3">张三</label>
-                        </div>
-                        <div class="form-group">
-                            <p class="col-sm-3">手机号：</p>
-                            <label class="col-sm-3">13585875555</label>
-                        </div>
-                        <div class="form-group">
-                            <p class="col-sm-3">账户状态：</p>
-                            <label class="col-sm-3">正常</label>
-                        </div>
-                        <div class="form-group">
-                            <p class="col-sm-3">手续费：</p>
-                            <label class="col-sm-3">0.6%*交易额</label>
-                        </div>
-                    </form>
-                    <div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
+
+
 </div>
+
+
 <link rel="import" href="../view/record/order.html?__inline">
 <link rel="import" href="footer/index.html?__inline">
 <link rel="import" href="../components/required/index.html?__inline">
