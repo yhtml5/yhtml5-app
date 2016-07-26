@@ -48,7 +48,7 @@ fis.match('::package', {
     })
 });
 /*** public js ***/
-fis.match('/bower_components/{jquery,bootstrap,form.validation,bootstrap-datepicker}/dist/**/*.js', {
+fis.match('/bower_components/{jquery,bootstrap,form.validation,bootstrap-datepicker}/dist{/**/,/}*.js', {
     packTo: '${project.static}/yhtml5.js',
 });
 fis.match('/bower_components/jquery/dist/*', {

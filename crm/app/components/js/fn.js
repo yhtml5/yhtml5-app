@@ -51,15 +51,8 @@ function yFadeToggle(selector, event, event2, eventObject) {
     });
 }
 function initDatetimepicker(selector) {
-    $(selector).datetimepicker({
-        language: 'zh-CN',
-        format: "yyyy-mm-dd hh:ii",
-        autoclose: true,
-        todayBtn: true,
-        minView: 1,
-        inline: true
-    });
-}
+    
+    }
 
 // $(".y-pagination li").click(function () {
 //     $(this).removeClass('y-active')
