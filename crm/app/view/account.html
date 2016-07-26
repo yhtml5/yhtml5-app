@@ -3,7 +3,7 @@
 
 <link rel="import" href="../components/ie/index.html?__inline">
 <div class="y-bgfull-lg">
-    <!--<div class="alert alert-warning" style="position: absolute;z-index: 999999;width: 200px;margin-left:43% ">-->
+    <!--<div class="alert alert-warning y-hide" y-alert="save.success" style="position: absolute;z-index: 999999;width: 300px;margin-left:43% ">-->
         <!--<a href="#" class="close" data-dismiss="alert">-->
             <!--&times;-->
         <!--</a>-->
@@ -70,7 +70,7 @@
                                 <input type="text" class="form-control" style="height: 41px"
                                        placeholder="http://127.0.0.1/yybpay/post.php">
                             </div>
-                            <button type="button" class="y-btn y-btn-info y-ml-60">保&nbsp;&nbsp;存</button>
+                            <button type="button" class="y-btn y-btn-info y-ml-60" y-alert="btn.save">保&nbsp;&nbsp;存</button>
                         </div>
                         <div class="form-group y-form-group-p">
                             <p class="col-sm-7 col-sm-push-2">用户返回商户支付成功页面的URL，例如http://127.0.0.1/yybpay/post.php</p>
@@ -94,8 +94,16 @@
 
 
 </div>
-
-
+<!--<script>-->
+    <!--$(function () {-->
+        <!--$("[y-alert='btn.save']").on("click",function () {-->
+            <!--$("[y-alert='save.success']").slideDown("2000");-->
+            <!--setTimeout(function () {-->
+                <!--$("[y-alert='save.success']").fadeOut();-->
+            <!--},5000)-->
+        <!--});-->
+    <!--})-->
+<!--</script>-->
 <link rel="import" href="../view/record/order.html?__inline">
 <link rel="import" href="footer/index.html?__inline">
 <link rel="import" href="../components/required/index.html?__inline">
