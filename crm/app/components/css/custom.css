@@ -185,7 +185,9 @@
     max-width: 324px;
     min-width: 200px;
 }
-
+.table-hover:hover{
+    background-color: #e7f4fd;
+}
 .y-table-default thead {
     background-color: #f3f3f3;
 }
@@ -195,7 +197,7 @@
     font-weight: 400;
 }
 
-.y-table-default td,th {
+.y-table-default td,.y-table-default th {
     word-wrap: break-word;
     font-size: 14px;
     color: #3f3f3f;
@@ -298,10 +300,6 @@
     color: #ff9a2d;
 }
 
-.y-carousel-default {
-
-}
-
 .y-carousel-default img {
     width: 300px;
 }
@@ -330,7 +328,6 @@
     color: #5d5d5d;
 }
 
-
 .y-modal-content label {
     font-weight: 400;
 }
@@ -358,7 +355,6 @@
 }
 .y-form-group-p p{
     text-align: left;
-    /*margin-left: -20px;*/
     margin-top: -10px;
     font-size: 16px;
 }
@@ -378,7 +374,6 @@
     border: 1px solid #d3d3d3;
     list-style: none;
     box-shadow: -2px 2px 2px #e3e3e3;
-
 }
 
 .y-input-wt-150 input {
@@ -482,14 +477,11 @@ td,th{
     text-decoration: none !important;
 }
 
-
 .y-card-default {
     border: solid 2px #555;
     padding: 30px 10px;
     margin: auto;
 }
-
-
 
 .y-card{
     border-radius: 4px;
@@ -511,6 +503,6 @@ td,th{
     text-decoration: none;
 }
 
-.table-hover:hover{
-    background-color: #e7f4fd;
+.y-dis-in-bl{
+    display: inline-block;
 }
