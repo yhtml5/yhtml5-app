@@ -316,4 +316,14 @@
 .y-select ul{
     width: 100%;
 }
-
+.y-alert {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.y-alert-warning {
+    color: #ff0000;
+    background-color: #fff5e7;
+    border-color: #e8c390;
+}

@@ -24,6 +24,9 @@
     margin-top: -40px;
 }
 
+.y-mt-34 {
+    margin-top: -34px !important;
+}
 .y-mt-20 {
     margin-top: -20px;
 }
@@ -144,6 +147,9 @@
 .y-ml30{
     margin-left:30px
 }
+.y-ml88{
+    margin-left:88px
+}
 .y-ml-10{
     margin-left:-10px
 }
@@ -172,7 +178,9 @@
 .y-mr30{
     margin-right: 30px;
 }
-
+.y-mr66 {
+    margin-right: 66px;
+}
 .y-mlr0 {
     margin-left: 0 !important;
     margin-right: 0 !important;
