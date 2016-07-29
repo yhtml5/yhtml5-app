@@ -1,7 +1,8 @@
 /*
- * === costom ===
+ * @require cover.css
  */
 
+/************  Ctrl  ************/
 .y-card-default {
     border: solid 2px #555;
     padding: 30px 10px;

@@ -1,16 +1,13 @@
 <link rel="import" href="components/head/index.html?__inline">
 
 <body>
-<!--[if lt IE 7]>
-<p class="browsehappy">您在使用<strong>上个世纪</strong>浏览器.
-    请<a href="http://browsehappy.com/">升级您的浏览器</a>获取更好的体验</p>
-<![endif]-->
-<header ui-view="nav"></header>
-<div ui-view="nav-right"></div>
+
+<link rel="import" href="components/ie/index.html?__inline">
+
+<header ui-view="header"></header>
+<div ui-view="nav"></div>
 <div ui-view="content"></div>
-<div class="y-footer" ui-view="footer"></div>
+<div ui-view="sidebar"></div>
+<footer ui-view="footer" class="y-footer"></footer>
 
-
-</body>
-
-</html>
+<link rel="import" href="components/required/index.html?__inline">

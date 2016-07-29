@@ -33,6 +33,7 @@
 ### 技术栈
 
   * AngularJS
+  * Angular-animate
   * AngularUI
   * AngularUI-bootstrap
   * AngularUI-Router

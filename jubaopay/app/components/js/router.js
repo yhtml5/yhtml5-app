@@ -1,4 +1,8 @@
-'use strict';
+/*
+ * @require ../../server/author.js
+ */
+
+/************  UI-Router  ************/
 
 angular.module('yhtml5', [
         'ui.router',
@@ -11,14 +15,17 @@ angular.module('yhtml5', [
             .state('index', {
                 url: "/index",
                 views: {
-                    "nav": {
-                        templateUrl: "view/nav/nav.html"
+                    "header": {
+                        templateUrl: "view/header/index.html"
                     },
-                    "nav-right": {
-                        templateUrl: "view/nav-right/nav-right.html"
+                    "nav": {
+                        templateUrl: "view/nav/transparent.html"
+                    },
+                    "sidebar": {
+                        templateUrl: "view/sidebar/qq.html"
                     },
                     "content": {
-                        templateUrl: "view/show/show.html"
+                        templateUrl: "view/display/index.html"
                     },
                     "footer": {
                         templateUrl: "view/footer/footer.html"
@@ -29,7 +36,7 @@ angular.module('yhtml5', [
                 url: "/download",
                 views: {
                     "nav": {
-                        templateUrl: "view/nav-blue/nav-blue.html"
+                        templateUrl: "view/nav/blue.html"
                     },
                     "nav-right": {
                         templateUrl: "view/nav-right/nav-right.html"
@@ -46,7 +53,7 @@ angular.module('yhtml5', [
                 url: "/production",
                 views: {
                     "nav": {
-                        templateUrl: "view/nav-blue/nav-blue.html"
+                        templateUrl: "view/nav/blue.html"
                     },
                     "nav-right": {
                         templateUrl: "view/nav-right/nav-right.html"
@@ -79,7 +86,7 @@ angular.module('yhtml5', [
                 url: "/cost",
                 views: {
                     "nav": {
-                        templateUrl: "view/nav-blue/nav-blue.html"
+                        templateUrl: "view/nav/blue.html"
                     },
                     "nav-right": {
                         templateUrl: "view/nav-right/nav-right.html"
@@ -96,7 +103,7 @@ angular.module('yhtml5', [
                 url: "/contact",
                 views: {
                     "nav": {
-                        templateUrl: "view/nav-blue/nav-blue.html"
+                        templateUrl: "view/nav/blue.html"
                     },
                     "nav-right": {
                         templateUrl: "view/nav-right/nav-right.html"

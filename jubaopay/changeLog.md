@@ -36,6 +36,7 @@
   * view url, 下载链接 都改成__uri()
   * 解决 girl 图片问题
   * 提取所有链接,只需发布index.html
+  * design 放入模块处
 
 
 

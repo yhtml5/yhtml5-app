@@ -1,6 +1,10 @@
 /*
- * === base ===
+ * @require base.css
+ * @require cover.css
+ * @require custom.css
  */
+
+/************  base  ************/
 
 .y-bgc666 {
     background-color: #666;

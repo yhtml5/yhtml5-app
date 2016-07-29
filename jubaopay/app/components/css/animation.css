@@ -1,6 +1,8 @@
 /*
- * === base ===
+ * @require cover.css
  */
+
+/************  animation  ************/
 
 @keyframes bg-generator {
     0% {

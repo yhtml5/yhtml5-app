@@ -1,5 +1,8 @@
-'use strict';
+/*
+ * @require router.js
+ */
 
+/************  Ctrl  ************/
 angular.module('controllers', ['ui.bootstrap', 'ngAnimate'])
     .controller('controllers', function($scope, $http, $uibModal) {
         $scope.downloadRecord = [{
