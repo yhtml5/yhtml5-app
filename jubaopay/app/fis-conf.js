@@ -5,7 +5,7 @@ fis.set('project.name', 'yhtml5');
 fis.set('project.static', '/static');
 fis.set('project.ignore', ['*.test.*', '*.psd', '.git/**', '/**/demo.*']);
 fis.set('project.files', [
-    '/fis-conf.js', '/map.json', '/index.html',
+    '/fis-conf.js', '/map.json', '/index.htm',
     '/components/**', '/server/*', '/view/**',
     '/bower_components/angular/angular.js',
     '/bower_components/angular-animate/angular-animate.js',
@@ -43,10 +43,7 @@ fis.match('::package', {
     })
 });
 /*** public js ***/
-fis.match('/bower_components/{angular/angular,angular-animate/angular-animate,angular-bootstrap/ui-bootstrap-tpls,angular-ui-router/release/angular-ui-router,bootstrap/dist/**/bootstrap.min,html5-boilerplate/dist/**/modernizr-2.8.3.min.}/.js', {
-    packTo: '${project.static}/yhtml5.js',
-});
-fis.match('/components/js/tj.js', {
+fis.match('/bower_components/{angular,angular-animate,angular-bootstrap,angular-ui-router/release,html5-boilerplate/dist/**}/*.js', {
     packTo: '${project.static}/yhtml5.js',
 });
 fis.match('/bower_components/html5-boilerplate/dist/**/modernizr-2.8.3.min.js', {
@@ -64,15 +61,18 @@ fis.match('/bower_components/angular-bootstrap/ui-bootstrap-tpls.js', {
 fis.match('/bower_components/angular-animate/angular-animate.js', {
     packOrder: -83
 });
-fis.match('/components/js/tj.js', {
-    packOrder: -79
-});
 /*** public css ***/
 fis.match('/bower_components/{bootstrap/dist/**/bootstrap.min,angular-bootstrap/ui-bootstrap-csp,html5-boilerplate/dist/**/{normalize,main}}.css', {
     packTo: '${project.static}/yhtml5.css'
 });
+fis.match('/components/iconfont/*.css', {
+    packTo: '${project.static}/yhtml5.css'
+});
 fis.match('/bower_components/html5-boilerplate/dist/**/normalize.css', {
     packOrder: -99
+});
+fis.match('/bower_components/html5-boilerplate/dist/**/main.css', {
+    packOrder: -97
 });
 fis.match('/bower_components/bootstrap/dist/**/bootstrap.min.css', {
     packOrder: -89
@@ -80,6 +80,10 @@ fis.match('/bower_components/bootstrap/dist/**/bootstrap.min.css', {
 fis.match('/bower_components/angular-bootstrap/ui-bootstrap-csp.css', {
     packOrder: -87
 });
+fis.match('/components/iconfont/*.css', {
+    packOrder: -77
+});
+
 /*** custom resourse ***/
 fis.match('{/server/author.js, /components/**/*.js}', {
     packTo: '${project.static}/index.js'

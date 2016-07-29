@@ -10,10 +10,10 @@ angular.module('yhtml5', [
     ])
     .config(function($stateProvider, $urlRouterProvider) {
         $urlRouterProvider
-            .otherwise("/index");
+            .otherwise("/");
         $stateProvider
             .state('index', {
-                url: "/index",
+                url: "/",
                 views: {
                     "header": {
                         templateUrl: "view/header/index.html"
@@ -28,7 +28,7 @@ angular.module('yhtml5', [
                         templateUrl: "view/display/index.html"
                     },
                     "footer": {
-                        templateUrl: "view/footer/footer.html"
+                        templateUrl: "view/footer/index.html"
                     }
                 }
             })
@@ -38,14 +38,14 @@ angular.module('yhtml5', [
                     "nav": {
                         templateUrl: "view/nav/blue.html"
                     },
-                    "nav-right": {
-                        templateUrl: "view/nav-right/nav-right.html"
+                    "sidebar": {
+                        templateUrl: "view/sidebar/qq.html"
                     },
                     "content": {
-                        templateUrl: "view/download/download.html"
+                        templateUrl: "view/download/index.html"
                     },
                     "footer": {
-                        templateUrl: "view/footer/footer.html"
+                        templateUrl: "view/footer/index.html"
                     }
                 }
             })
@@ -55,14 +55,14 @@ angular.module('yhtml5', [
                     "nav": {
                         templateUrl: "view/nav/blue.html"
                     },
-                    "nav-right": {
-                        templateUrl: "view/nav-right/nav-right.html"
+                    "sidebar": {
+                        templateUrl: "view/sidebar/qq.html"
                     },
                     "content": {
-                        templateUrl: "view/production/production.html"
+                        templateUrl: "view/production/index.html"
                     },
                     "footer": {
-                        templateUrl: "view/footer/footer.html"
+                        templateUrl: "view/footer/index.html"
                     }
                 }
             })
@@ -70,7 +70,7 @@ angular.module('yhtml5', [
                 url: "/accounting",
                 views: {
                     "content": {
-                        templateUrl: "view/production.accounting/production.accounting.html"
+                        templateUrl: "view/production/accounting.html"
                     }
                 }
             })
@@ -78,7 +78,7 @@ angular.module('yhtml5', [
                 url: "/credit",
                 views: {
                     "content": {
-                        templateUrl: "view/production.credit/production.credit.html"
+                        templateUrl: "view/production/credit.html"
                     }
                 }
             })
@@ -88,14 +88,14 @@ angular.module('yhtml5', [
                     "nav": {
                         templateUrl: "view/nav/blue.html"
                     },
-                    "nav-right": {
-                        templateUrl: "view/nav-right/nav-right.html"
+                    "sidebar": {
+                        templateUrl: "view/sidebar/qq.html"
                     },
                     "content": {
-                        templateUrl: "view/cost/cost.html"
+                        templateUrl: "view/cost/index.html"
                     },
                     "footer": {
-                        templateUrl: "view/footer/footer.html"
+                        templateUrl: "view/footer/index.html"
                     }
                 }
             })
@@ -105,14 +105,14 @@ angular.module('yhtml5', [
                     "nav": {
                         templateUrl: "view/nav/blue.html"
                     },
-                    "nav-right": {
-                        templateUrl: "view/nav-right/nav-right.html"
+                    "sidebar": {
+                        templateUrl: "view/sidebar/qq.html"
                     },
                     "content": {
-                        templateUrl: "view/contact/contact.html"
+                        templateUrl: "view/contact/index.html"
                     },
                     "footer": {
-                        templateUrl: "view/footer/footer.html"
+                        templateUrl: "view/footer/index.html"
                     }
                 }
             });

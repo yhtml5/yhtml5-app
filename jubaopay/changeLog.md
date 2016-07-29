@@ -37,6 +37,7 @@
   * 解决 girl 图片问题
   * 提取所有链接,只需发布index.html
   * design 放入模块处
+  * 美化url
 
 
 

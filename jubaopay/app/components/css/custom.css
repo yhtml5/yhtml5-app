@@ -72,3 +72,40 @@
 #fp-nav ul li .active span {
     background: #6090b6 none repeat scroll 0 0 !important;
 }
+.y-footer {
+    width: 100%;
+    background: #444;
+    color: #fff;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+.y-footer-bt {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background: #2f2f2f;
+    color: #fff;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+.y-tab a {
+    color: #099fdd;
+    border: solid 2px;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    margin-left: -1px;
+    text-decoration: none;
+}
+
+.y-tab .active {
+    background-color: #099fdd;
+    color: #fff;
+    border-color: #099fdd;
+}
+
+.y-tab .y-hr {
+    border-bottom: solid #099fdd 2px;
+    margin-top: 9px;
+    margin-bottom: 60px;
+}
