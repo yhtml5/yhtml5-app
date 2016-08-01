@@ -7,11 +7,11 @@
   "private": true,
   "dependencies": {
     "bootstrap": "~3.x",
-    "jquery": "~1.x",
-    "html5-boilerplate": "~5.2.0",
-    "smalot-bootstrap-datetimepicker": "^2.3.11",
+    "bootstrap-datepicker": "^1.6.1",
     "blueimp-file-upload": "jquery-file-upload#^9.12.5",
     "form.validation": "*",
-    "bootstrap-datepicker": "^1.6.1"
+    "html5-boilerplate": "~5.2.0",
+    "jquery": "~1.x",
+    "smalot-bootstrap-datetimepicker": "^2.3.11"
   }
 }
