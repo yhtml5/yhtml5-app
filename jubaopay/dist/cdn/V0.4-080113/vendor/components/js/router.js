@@ -79,7 +79,7 @@ angular.module('yhtml5', [
                 url: "/credit",
                 views: {
                     "content": {
-                        templateUrl: "view/production/credit.html"
+                        templateUrl: domainUrl+"view/production/credit.html"
                     }
                 }
             })
@@ -87,16 +87,16 @@ angular.module('yhtml5', [
                 url: "/cost",
                 views: {
                     "nav": {
-                        templateUrl: "view/nav/blue.html"
+                        templateUrl: domainUrl+"view/nav/blue.html"
                     },
                     "sidebar": {
-                        templateUrl: "view/sidebar/qq.html"
+                        templateUrl: domainUrl+"view/sidebar/qq.html"
                     },
                     "content": {
-                        templateUrl: "view/cost/index.html"
+                        templateUrl: domainUrl+"view/cost/index.html"
                     },
                     "footer": {
-                        templateUrl: "view/footer/index.html"
+                        templateUrl: domainUrl+"view/footer/index.html"
                     }
                 }
             })
@@ -104,16 +104,16 @@ angular.module('yhtml5', [
                 url: "/contact",
                 views: {
                     "nav": {
-                        templateUrl: "view/nav/blue.html"
+                        templateUrl: domainUrl+"view/nav/blue.html"
                     },
                     "sidebar": {
-                        templateUrl: "view/sidebar/qq.html"
+                        templateUrl: domainUrl+"view/sidebar/qq.html"
                     },
                     "content": {
-                        templateUrl: "view/contact/index.html"
+                        templateUrl: domainUrl+"view/contact/index.html"
                     },
                     "footer": {
-                        templateUrl: "view/footer/index.html"
+                        templateUrl: domainUrl+"view/footer/index.html"
                     }
                 }
             });
