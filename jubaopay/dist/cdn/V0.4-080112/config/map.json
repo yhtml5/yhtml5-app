@@ -127,7 +127,7 @@
     },
     "pkg": {
         "p0": {
-            "uri": "//static.jubaobar.cn/project/jubaopay/V0.4/static/index.9e9ffef.css",
+            "uri": "//static.jubaobar.cn/project/jubaopay/V0.4/static/index.d501de9.css",
             "type": "css",
             "has": [
                 "components/iconfont/iconfont.css",
@@ -160,7 +160,7 @@
             ]
         },
         "p3": {
-            "uri": "//static.jubaobar.cn/project/jubaopay/V0.4/static/yhtml5.6bbec76.css",
+            "uri": "//static.jubaobar.cn/project/jubaopay/V0.4/static/yhtml5.7b63d7d.css",
             "type": "css",
             "has": [
                 "bower_components/html5-boilerplate/dist/css/normalize.css",

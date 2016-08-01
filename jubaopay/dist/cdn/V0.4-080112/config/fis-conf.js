@@ -99,6 +99,9 @@ fis.media('pro')
         useHash: true,
         domain: '//static.jubaobar.cn/project/jubaopay/V0.4'
     })
+    .match('/**/({glyphicons-halflings-regular.*,iconfont.{eot, svg, ttf, woff}})', {
+        url: '${project.static}/iconfont/$1',
+    })
     //css 自动补充兼容性 https://github.com/ai/browserslist#queries
     .match('/components/**/*.css', {
         preprocessor: fis.plugin('cssprefixer', {
