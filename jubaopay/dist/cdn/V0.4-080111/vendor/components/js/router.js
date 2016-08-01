@@ -9,7 +9,7 @@ angular.module('yhtml5', [
         'controllers'
     ])
     .config(function($stateProvider, $urlRouterProvider) {
-        var domainUrl="//static.jubaobar.cn/project/jubaopay/V0.4"
+        var domainUrl="//static.jubaobar.cn/project/jubaopay/V0.4/"
         $urlRouterProvider
             .otherwise("/");
         $stateProvider
