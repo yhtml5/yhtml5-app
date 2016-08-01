@@ -9,6 +9,7 @@ angular.module('yhtml5', [
         'controllers'
     ])
     .config(function($stateProvider, $urlRouterProvider) {
+        var domainUrl="https://static.jubaobar.cn/project/jubaopay/V0.4"
         $urlRouterProvider
             .otherwise("/");
         $stateProvider
@@ -16,7 +17,7 @@ angular.module('yhtml5', [
                 url: "/",
                 views: {
                     "header": {
-                        templateUrl: "view/header/index.html"
+                        templateUrl: domainUrl+"view/header/index.html"
                     },
                     "nav": {
                         templateUrl: "view/nav/transparent.html"

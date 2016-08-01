@@ -97,8 +97,7 @@ fis.match('{/server/author.css,/components/**/*.css}', {
 fis.media('pro')
     .match('/{static/**,{components,bower_components,view}/**/*.{png,gif,jpg,jpeg,eot,ttf,woff,woff2,svg}}', {
         useHash: true,
-        domain: '.'
-        // domain: 'https://static.jubaobar.cn/project/jubaopay/V0.3-071202'
+        domain: 'https://static.jubaobar.cn/project/jubaopay/V0.4'
     })
     //css 自动补充兼容性 https://github.com/ai/browserslist#queries
     .match('/components/**/*.css', {
