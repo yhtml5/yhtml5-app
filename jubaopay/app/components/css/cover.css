@@ -20,6 +20,7 @@ body {
 
 .y-nav-qq {
     position: fixed;
+    z-index: 2;
     top: 85%;
     right: 1px;
     height: 80px;
@@ -29,6 +30,7 @@ body {
     -webkit-transition: right 2s;
     -moz-transition: right 2s;
     transition: right 2s;
+
 }
 
 .y-nav-qq :hover,
