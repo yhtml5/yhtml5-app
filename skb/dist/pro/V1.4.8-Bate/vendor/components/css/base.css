@@ -1,11 +1,13 @@
 /*
- * @require box.css
+ * @require components/css/box.css
  */
 
 /*================= base ====================*/
 
 .y-bd-3 {
-    border-radius: 3px !important;
+    -webkit-border-radius: 3px !important;
+       -moz-border-radius: 3px !important;
+            border-radius: 3px !important;
 }
 
 .y-bgc-40aaf2 {
@@ -285,5 +287,7 @@
 }
 
 .y-boxsh-cl-ca {
-    box-shadow: -4px -4px 6px #cacaca;
+    -webkit-box-shadow: -4px -4px 6px #cacaca;
+       -moz-box-shadow: -4px -4px 6px #cacaca;
+            box-shadow: -4px -4px 6px #cacaca;
 }
