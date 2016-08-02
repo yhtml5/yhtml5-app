@@ -24,11 +24,13 @@
             </div>
             <hr>
             <form class="form-inline y-form-inline">
-                <div class="form-group y-mb-20 y-fs-14">
-                    <label>交易时间：</label>
-                    <input type="text" class="form-control" placeholder="">
-                    &nbsp;-&nbsp;
-                    <input type="text" class="form-control" placeholder="">
+                <div class="form-group y-mb-20 y-fs-14" y-date="payTime">
+                    <div class="input-daterange">
+                        <label>交易时间：</label>
+                        <input type="text" class="form-control" placeholder="" name="start">
+                        &nbsp;-&nbsp;
+                        <input type="text" class="form-control" placeholder="" name="end">
+                    </div>
                 </div>
                 <div class="form-group y-mb-20 y-ml-20">
                     <label>商户订单号：</label>

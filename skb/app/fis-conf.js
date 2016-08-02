@@ -13,7 +13,7 @@ fis.set('project.files', [
     '/bower_components/form.validation/dist/js/{formValidation.min,framework/bootstrap.min,language/zh_CN}.js',
     '/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css',
     '/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js',
-    '/bower_components/bootstrap-datepicker/dist/js/locales/bootstrap-datepicker.zh-CN.min.js'
+    '/bower_components/bootstrap-datepicker/dist/locales/bootstrap-datepicker.zh-CN.min.js'
 ]);
 
 /************************* 目录规范 *****************************/
@@ -60,7 +60,7 @@ fis.match('/bower_components/bootstrap/dist/js/*', {
 fis.match('/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js', {
     packOrder: -95
 });
-fis.match('/bower_components/bootstrap-datepicker/dist/locales/bootstrap-datetimepicker.zh-CN.min.js', {
+fis.match('/bower_components/bootstrap-datepicker/dist/locales/bootstrap-datepicker.zh-CN.min.js', {
     packOrder: -93
 });
 fis.match('/bower_components/form.validation/dist/js/formValidation.min.js', {

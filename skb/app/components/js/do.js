@@ -17,6 +17,13 @@ $(function () {
     $("[y-close='nav.userPanel']").mouseleave(function () {
         $("[y-navbar='nav.float.window']").fadeOut();
     });
+    $('[y-date="payTime"] .input-daterange').datepicker({
+        format: "yyyy-mm-dd",
+        todayBtn: "linked",
+        clearBtn: true,
+        language: "zh-CN",
+        defaultViewDate: { year: 2016, month: 08, day: 02 }
+    });
 });
 
 
