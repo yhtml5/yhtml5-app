@@ -449,8 +449,11 @@
 .y-table-responsive,.y-responsive {
     min-height: 540px;
 }
-td,th{
+.y-table-responsive td,.y-table-responsive th{
     border: 1px solid #efefef !important;
+}
+.y-table-responsive th{
+    white-space:nowrap;
 }
 .y-input-file {
     position: absolute;
