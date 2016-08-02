@@ -1,5 +1,137 @@
+;/*!server/author.js*/
+/*=============================================================================
+ * Author:Kyle && qichao
+ * Website:http://yhtml5.com
+ * Gihub:https://github.com/yhtml5
+ * Description: A Website disgned by AngularJS Boostrap and NodeJS
+ *              It requires AngularJS 1.5.x or higher and it has been tested
+ *              Do something awesome and have fun !
+ *=============================================================================*/
+'use strict';
+;/*!components/js/router.js*/
 /*
- * @require router.js
+ * @require server/author.js
+ */
+
+/************  UI-Router  ************/
+
+angular.module('yhtml5', [
+        'ui.router',
+        'controllers'
+    ])
+    .config(function($stateProvider, $urlRouterProvider) {
+        var domainUrl="//static.jubaobar.cn/project/jubaopay/V0.4/"
+        $urlRouterProvider
+            .otherwise("/");
+        $stateProvider
+            .state('index', {
+                url: "/",
+                views: {
+                    "header": {
+                        templateUrl: domainUrl+"view/header/index.html"
+                    },
+                    "nav": {
+                        templateUrl: domainUrl+"view/nav/transparent.html"
+                    },
+                    "sidebar": {
+                        templateUrl: domainUrl+"view/sidebar/qq.html"
+                    },
+                    "content": {
+                        templateUrl: domainUrl+"view/display/index.html"
+                    },
+                    "footer": {
+                        templateUrl: domainUrl+"view/footer/index.html"
+                    }
+                }
+            })
+            .state('download', {
+                url: "/download",
+                views: {
+                    "nav": {
+                        templateUrl: domainUrl+"view/nav/blue.html"
+                    },
+                    "sidebar": {
+                        templateUrl: domainUrl+"view/sidebar/qq.html"
+                    },
+                    "content": {
+                        templateUrl: domainUrl+"view/download/index.html"
+                    },
+                    "footer": {
+                        templateUrl: domainUrl+"view/footer/index.html"
+                    }
+                }
+            })
+            .state('production', {
+                url: "/production",
+                views: {
+                    "nav": {
+                        templateUrl: domainUrl+"view/nav/blue.html"
+                    },
+                    "sidebar": {
+                        templateUrl: domainUrl+"view/sidebar/qq.html"
+                    },
+                    "content": {
+                        templateUrl: domainUrl+"view/production/index.html"
+                    },
+                    "footer": {
+                        templateUrl: domainUrl+"view/footer/index.html"
+                    }
+                }
+            })
+            .state('production.accounting', {
+                url: "/accounting",
+                views: {
+                    "content": {
+                        templateUrl: domainUrl+"view/production/accounting.html"
+                    }
+                }
+            })
+            .state('production.credit', {
+                url: "/credit",
+                views: {
+                    "content": {
+                        templateUrl: domainUrl+"view/production/credit.html"
+                    }
+                }
+            })
+            .state('cost', {
+                url: "/cost",
+                views: {
+                    "nav": {
+                        templateUrl: domainUrl+"view/nav/blue.html"
+                    },
+                    "sidebar": {
+                        templateUrl: domainUrl+"view/sidebar/qq.html"
+                    },
+                    "content": {
+                        templateUrl: domainUrl+"view/cost/index.html"
+                    },
+                    "footer": {
+                        templateUrl: domainUrl+"view/footer/index.html"
+                    }
+                }
+            })
+            .state('contact', {
+                url: "/contact",
+                views: {
+                    "nav": {
+                        templateUrl: domainUrl+"view/nav/blue.html"
+                    },
+                    "sidebar": {
+                        templateUrl: domainUrl+"view/sidebar/qq.html"
+                    },
+                    "content": {
+                        templateUrl: domainUrl+"view/contact/index.html"
+                    },
+                    "footer": {
+                        templateUrl: domainUrl+"view/footer/index.html"
+                    }
+                }
+            });
+    });
+;/*!components/js/ctrl.js*/
+/*
+ * @require components/js/router.js
  */
 
 /************  Ctrl  ************/
@@ -168,16 +300,27 @@ angular.module('controllers', ['ui.bootstrap', 'ngAnimate'])
             "name": "杜晓涵",
             "des": "4年产品顾问经验，曾服务过手游、页游、端游和工具类APP等200个多个项目。",
             "emaill": "chenlin.xu@jubaobar.com",
-            "img":  __uri('../../view/contact/girl1.jpg')
+            "img":  '//static.jubaobar.cn/project/jubaopay/V0.4/static/img/girl1.cfed0ee.jpg'
         }, {
             "name": "玲珑",
             "des": "4年产品顾问经验，曾服务过手游、页游、端游和工具类APP等200个多个项目。",
             "emaill": "rong.ling@jubaobar.com",
-            "img": __uri('../../view/contact/girl2.jpg')
+            "img": '//static.jubaobar.cn/project/jubaopay/V0.4/static/img/girl2.22d13c6.jpg'
         }, {
             "name": "杨小佳",
             "des": "5年产品顾问经验，曾服务过手游、页游、端游和工具类APP等300个多个项目，经验丰富，服务到位。",
             "emaill": "yu.duan@jubaobar.com",
-            "img": __uri('../../view/contact/girl3.jpg')
+            "img": '//static.jubaobar.cn/project/jubaopay/V0.4/static/img/girl3.7248741.jpg'
         }]
     });
+;/*!components/js/tj.js*/
+/*
+ * @require components/js/ctrl.js
+ * @require components/js/router.js
+ */
+
+/************  UI-Router  ************/
+// var _hmt = _hmt || [];
+// var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+// document.write(unescape("%3Cscript src='" + _bdhmProtocol +
+//     "hm.baidu.com/h.js%3F01234567890ABCDEF01234567890ABCDEF' type='text/javascript'%3E%3C/script%3E"));
