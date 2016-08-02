@@ -38,6 +38,7 @@
   * 提取所有链接,只需发布index.html
   * design 放入模块处
   * 美化url
+  * 2015.08.01  --优化html连接请求,兼容http,https
 
 
 
