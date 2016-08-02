@@ -1,6 +1,6 @@
 /*
- * @require fn.js
- * @require shape-shifter.js
+ * @require components/js/fn.js
+ * @require components/js/shape-shifter.js
  */
 /************  do  ************/
 $(function () {

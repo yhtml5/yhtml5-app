@@ -24,11 +24,13 @@
             </div>
             <hr>
             <form class="form-inline y-form-inline">
-                <div class="form-group y-mb-20 y-fs-14">
-                    <label>交易时间：</label>
-                    <input type="text" class="form-control" placeholder="">
-                    &nbsp;-&nbsp;
-                    <input type="text" class="form-control" placeholder="">
+                <div class="form-group y-mb-20 y-fs-14" y-date="payTime">
+                    <div class="input-daterange">
+                        <label>交易时间：</label>
+                        <input type="text" class="form-control" placeholder="" name="start">
+                        &nbsp;-&nbsp;
+                        <input type="text" class="form-control y-bd-3" placeholder="" name="end">
+                    </div>
                 </div>
                 <div class="form-group y-mb-20 y-ml-20">
                     <label>商户订单号：</label>
@@ -66,19 +68,19 @@
                 <table class="table table-bordered text-center y-table-default y-table-default-13">
                     <thead>
                     <tr class="y-ht-50">
-                        <th>交易时间</th>
-                        <th>商户订单号</th>
-                        <th>平台订单号</th>
-                        <th>支付宝订单号</th>
-                        <th>支付金额(元)</th>
-                        <th>手续费(元)</th>
-                        <th>收款方支付宝账号</th>
-                        <th>付款方</th>
-                        <th>付款方支付宝账号</th>
-                        <th>订单关联码</th>
-                        <th>支付宝交易备注</th>
-                        <th>订单状态</th>
-                        <th>操作</th>
+                        <td>交易时间</td>
+                        <td>商户订单号</td>
+                        <td>平台订单号</td>
+                        <td>支付宝订单号</td>
+                        <td>支付金额(元)</td>
+                        <td>手续费(元)</td>
+                        <td>收款方支付宝账号</td>
+                        <td>付款方</td>
+                        <td>付款方支付宝账号</td>
+                        <td>订单关联码</td>
+                        <td>支付宝交易备注</td>
+                        <td>订单状态</td>
+                        <td>操作</td>
                     </tr>
                     </thead>
                     <link rel="import" href="../view/record/content.html?__inline">
