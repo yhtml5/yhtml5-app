@@ -1,6 +1,7 @@
-/*!**/
-/**  @require*/
-/**!*/
+/*
+ * @require custom.css
+ */
+
 /*!*==================== box ====================*!*/
 
 /*.y-m-x-auto {*/
@@ -47,26 +48,32 @@
 /*.y-m-t-10 {*/
     /*margin-top: 10px;*/
 /*}*/
+.y-m-t-12{
+    margin-top: 12px;
+}
+.y-m-t-20 {
+    margin-top: 20px;
+}
 
-/*.y-m-t-20 {*/
-    /*margin-top: 20px;*/
-/*}*/
-
-/*.y-m-t-40 {*/
-    /*margin-top: 40px;*/
-/*}*/
-
+.y-m-t-40 {
+    margin-top: 40px;
+}
+.y-m-t-50{
+    margin-top: 50px;
+}
 /*.y-m-t-80 {*/
     /*margin-top: 80px;*/
 /*}*/
-
+.y-m-t-199{
+    margin-top: 196px;
+}
 /*.y-m-t-n-10 {*/
     /*margin-top: -10px;*/
 /*}*/
 
-/*.y-m-t-n-20 {*/
-    /*margin-top: -20px;*/
-/*}*/
+.y-m-t-n-20 {
+    margin-top: -20px;
+}
 
 /*.y-m-r-0 {*/
     /*margin-right: 0;*/
@@ -75,7 +82,9 @@
 /*.y-m-r-10 {*/
     /*margin-right: 10px;*/
 /*}*/
-
+.y-m-r-15{
+    margin-right: 15px;
+}
 /*.y-m-r-20 {*/
     /*margin-right: 20px;*/
 /*}*/
@@ -104,9 +113,9 @@
     /*margin-bottom: 10px;*/
 /*}*/
 
-/*.y-m-b-20 {*/
-    /*margin-bottom: 20px;*/
-/*}*/
+.y-m-b-20 {
+    margin-bottom: 20px;
+}
 
 /*.y-m-b-40 {*/
     /*margin-bottom: 40px;*/
@@ -152,9 +161,9 @@
     /*margin-left: -20px;*/
 /*}*/
 
-/*.y-p-a-0 {*/
-    /*padding: 0;*/
-/*}*/
+.y-p-a-0 {
+    padding: 0;
+}
 
 /*.y-p-a-10 {*/
     /*padding: 10px;*/
@@ -173,7 +182,10 @@
     /*padding-left: 20px;*/
     /*padding-right: 20px;*/
 /*}*/
-
+.y-p-y-p-3{
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
 /*.y-p-y-10 {*/
     /*padding-top: 10px;*/
     /*padding-bottom: 10px;*/
@@ -191,7 +203,9 @@
 /*.y-p-t-10 {*/
     /*padding-top: 10px;*/
 /*}*/
-
+.y-p-t-18{
+    padding-top: 18px;
+}
 /*.y-p-t-20 {*/
     /*padding-top: 20px;*/
 /*}*/
@@ -199,7 +213,9 @@
 /*.y-p-t-40 {*/
     /*padding-top: 40px;*/
 /*}*/
-
+.y-p-t-50{
+    padding-top: 50px;
+}
 /*.y-p-t-80 {*/
     /*padding-top: 80px;*/
 /*}*/
@@ -212,9 +228,9 @@
     /*padding-top: -20px;*/
 /*}*/
 
-/*.y-p-r-0 {*/
-    /*padding-right: 0;*/
-/*}*/
+.y-p-r-0 {
+    padding-right: 0;
+}
 
 /*.y-p-r-10 {*/
     /*padding-right: 10px;*/
@@ -296,13 +312,19 @@
     /*padding-left: -20px;*/
 /*}*/
 
-/*.y-w-100 {*/
+/*.y-w-p-100 {*/
     /*width: 100%;*/
 /*}*/
 
-/*.y-w-95 {*/
+/*.y-w-p-95 {*/
     /*width: 95%;*/
 /*}*/
+.y-h-395{
+    height: 395px;
+}
+.y-h-500{
+    height: 500px;
+}
 
 
 

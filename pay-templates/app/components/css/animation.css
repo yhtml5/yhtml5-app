@@ -1,6 +1,6 @@
-/*!**/
- /** @require bootstrap.ex.css*/
- /**!*/
+/*
+ * @require bootstrap.component
+ */
 
 /*!*==================== animation ====================*!*/
 /*.y-transition-border-info {*/
