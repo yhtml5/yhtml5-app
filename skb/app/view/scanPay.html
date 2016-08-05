@@ -35,8 +35,10 @@
                         输入充值金额和备注内容
                     </li>
                 </ul>
-                <img id="y-qrcode" class="y-qrcode y-hide" src="scanPay/QR-code.jpg" alt="y-qrcode">
-                <h3 id="y-info" class="y-mt-60 y-mb-60 y-cl-3f">亲，正在为您生成二维码，请先记住备注内容&nbsp;&nbsp;<span id="time">4</span></h3>
+                <img y-img="QRcode" class="y-qrcode y-hide" src="scanPay/QR-code.jpg" alt="y-qrcode">
+                <h3 y-notice="QRcode" class="y-mt-60 y-mb-60 y-cl-3f">亲，正在为您生成二维码，请先记住备注内容&nbsp;&nbsp;
+                    <span y-countdown="scanPay.QRcode"></span>
+                </h3>
                 <h4 class="y-cl-ff0000 y-fw-b">填写备注&nbsp;:&nbsp;
                     <span class="y-fs-40">000001</span>
                 </h4>
