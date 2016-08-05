@@ -17,25 +17,7 @@ $(function () {
     $("[y-close='nav.userPanel']").mouseleave(function () {
         $("[y-navbar='nav.float.window']").fadeOut();
     });
-    $('[y-date="payTime"] .input-daterange').datepicker({
-        format: "yyyy-mm-dd",
-        todayBtn: "linked",
-        clearBtn: true,
-        language: "zh-CN",
-        defaultViewDate: {year: 2016, month: 08, day: 02}
-    });
-    function countdown() {
-        var delay = document.getElementById("time").innerHTML;
-        if (delay > 1) {
-            delay--;
-            document.getElementById("time").innerHTML = delay;
-        }
-        else {
-            document.getElementById("y-qrcode").style.display = "inline";
-            document.getElementById("y-info").style.display = "none";
-        }
-        setTimeout("countdown()", 1000);
-    };
-
-    countdown();
 });
+
+
+

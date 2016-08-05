@@ -308,12 +308,12 @@
 
 .y-notice-pay {
     margin-top: 14px;
-    width: 530px;
-    height: 50px;
+    width: 550px;
+    /*height: 50px;*/
     background-color: #ff0000;
     color: #fff;
     padding: 6px;
-    font-size: 32px;
+    /*font-size: 32px;*/
 }
 
 .y-notice-default {

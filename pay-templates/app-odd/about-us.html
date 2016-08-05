@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="HandheldFriendly" content="true">
+		<meta http-equiv="cache-control" content="max-age=0" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<!-- 永不缓存，测试结束后将上面3个meta删除  -->
+		<meta http-equiv="Cache-Control" content="no-transform">
+		<meta http-equiv="Cache-Control" content="no-siteapp">
+		<title>51代充官网</title>
+		<meta name="author" content="yhtml5.com" />
+		<meta name="keywords" content="代充、官网">
+		<meta name="description" content="51代充">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="shortcut icon" href="http://static.jubaobar.cn/51pay/res/img/logo/logo2.png" type="image/x-icon">
+		<link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+		<!--<link href="http://static.jubaobar.cn/framework/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">-->
+		<!--浏览器同源策略,正式环境开启,同时删除上一条link-->
+		<link rel="stylesheet" type="text/css" href="http://static.jubaobar.cn/51pay/res/css/yhtml5.css">
+		<link rel="stylesheet" type="text/css" href="../res/css/yhtml5.css">
+		<!--本地css,测试后删除-->
+		<script src="http://static.jubaobar.cn/framework/jquery/jquery-1.11.3.min.js"></script>
+		<script src="http://static.jubaobar.cn/framework/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="http://static.jubaobar.cn/51pay/res/js/yhtml5.js"></script>
+		<script src="../res/js/yhtml5.js"></script>
+		<!--本地js,测试后删除-->
+		<!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+        <link rel="respond-proxy" id="respond-proxy" href="http://static.sfcdn.org/cross-domain/respond-proxy.html"/>
+        <link rel="respond-redirect" id="respond-redirect" href="/assets/cross-domain/respond.proxy.gif"/>
+        <script src="js/respond.proxy.js"></script>
+        <![endif]-->
+	</head>
+
+	<body>
+		<header>
+			<div id="header-top"></div>
+			<div class="container hidden-xs">
+				<div class="row">
+					<div class="col-sm-4 col-xs-12">
+						<a href="index.html" class="fw-top-bar-logo center-block" onclick="">
+							<img src="http://static.jubaobar.cn/51pay/res/img/logo/51logoHD.png?20160516" class="fw-wt80" alt="51代充" title="51代充">
+						</a>
+					</div>
+					<div class="col-sm-6">
+						<div class="fw-top-bar-search">
+							<form method="GET" action="http://app.shafa.com/search" accept-charset="UTF-8" class="form-inline" onsubmit="">
+								<div class="form-group fw-wt100">
+									<input class="form-control" placeholder="请输入要搜索的内容..." name="kw" type="text">
+									<span class="glyphicon glyphicon-search"></span>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="fw-top-bar-login js-front">
+							<a class="js-turn" href="#" onclick="javascript:return false;">[登录</a>&nbsp;/&nbsp;<a href="login.html">注册]</a>
+						</div>
+						<div class="fw-top-bar-login fw-displayn js-back">
+							<a href="user-center.html" target="_blank">[叶叶叶</a>&nbsp;/&nbsp;<a class="js-turn-back" href="#" onclick="javascript:return false;">登出]</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<nav class="navbar navbar-inverse fw-bd0">
+				<div class="navbar-header">
+					<div class="container">
+						<button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target="#navbarCollapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<div class="pull-right fw-user-nav clearfix visible-xs">
+							<ul class="nav nav-login js-front">
+								<li class="js-turn"><a href="#" onclick="javascript:return false;">登陆</a></li>
+								<li><a href="login.html">注册</a></li>
+							</ul>
+							<ul class="nav nav-login fw-displayn js-back">
+								<li><a href="user-center.html">叶叶</a></li>
+								<li class="js-turn-back"><a href="#" onclick="javascript:return false;">登出</a></li>
+							</ul>
+						</div>
+						<div class="navbar-brand visible-xs fw-logo2">
+							<a href="index.html">
+								<img src="http://static.jubaobar.cn/51pay/res/img/logo/51logo2.png" class="fw-wt100" alt="51代充" title="51代充">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="collapse navbar-collapse" id="navbarCollapse">
+					<div class="container">
+						<ul class="nav navbar-nav">
+							<li>
+								<form class="navbar-form navbar-left visible-xs" role="search">
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Search">
+									</div>
+								</form>
+							</li>
+							<li class="js-header-nav active"><a href="index.html" target="_blank">首页</a></li>
+							<li class="js-header-nav"><a href="pay-info-oversea.html" target="_blank">海外购代充</a></li>
+							<li class="js-header-nav"><a href="http://jubaobar.cn" target="_blank">游戏代充</a></li>
+							<li class="js-header-nav"><a href="http://jubaobar.cn" target="_blank">苹果代充</a></li>
+							<li class="js-header-nav"><a href="http://jubaobar.cn" target="_blank">话费代充</a></li>
+							<li class="js-header-nav"><a href="http://jubaobar.cn" target="_blank">QQ代充</a></li>
+							<li class="js-header-nav"><a href="http://jubaobar.cn" target="_blank">VIP会员</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<ul class="fw-fixed-bar">
+				<li class="fw-qq">
+					<a><i class="iconfont">&#xe606;</i></a>
+				</li>
+				<li class="fw-call" data-toggle="popover" data-placement="left" data-trigger="hover" data-content="123456789">
+					<a href="#">
+						<i class="iconfont">&#xe607;</i></a>
+				</li>
+				<li class="go-top">
+					<a class="" href="#header-top">
+						<i class="iconfont">&#xe604;</i>
+					</a>
+				</li>
+			</ul>
+		</header>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-3">
+					<div class="thumbnail hidden-xs text-center">
+						<span class="icon iconfont fw-font-customer1">&#xe60d;</span><span class="fw-font-customer2">&nbsp;&nbsp;在线客服</span>
+					</div>
+					<div class="list-group text-center">
+						<a href="#fw-about-us1" data-toggle="tab" class="list-group-item active">公司简介</a>
+						<a href="#fw-about-us2" data-toggle="tab" class="list-group-item">联系我们</a>
+						<a href="#fw-about-us3" data-toggle="tab" class="list-group-item">免责声明</a>
+						<a href="#fw-about-us4" data-toggle="tab" class="list-group-item">隐私条款</a>
+						<a href="#fw-about-us5" data-toggle="tab" class="list-group-item">发货须知</a>
+						<a href="#fw-about-us6" data-toggle="tab" class="list-group-item">退货说明</a>
+					</div>
+				</div>
+				<div class="col-xs-9">
+					<div class="tab-content">
+						<div class="panel panel-default tab-pane fade in active" id="fw-about-us1">
+							<div class="panel-heading">
+								<div class="panel-title">
+									<h3><strong>公司简介</strong></h3></div>
+							</div>
+							<div class="panel-body fw-userterms">
+								<p>衢州华创网络科技有限公司是一家从事软件系统、电子商务网站和移动平台开发的技术型公司，起步于2013年，公司正式成立于2015年7月，主要提供包括电子商务网站建设，管理信息系统，软件开发，移动软件开发与后期技术支持服务。</p>
+								<p>团队深刻理解国际前沿和流行的互联网站点和软件应用设计理念，同时在开发领域也拥有着雄厚技术与实战经验。项目承接方面，多火一直为不同客户量身定制符合其需求的设计开发方案，力求提供最稳定可靠的、安全易用的技术产品和优质专业的服务。目前已经为衢州学院、衢州移动公司，等多家大中型企业提供信息系统和网站建设的长期服务。 我们不仅为企业提供卓越的，创新的，迎合潮流的网站、软件的设计开发服务，同时为各类机构提供企业级的信息化解决方案。 自成立以来，一直以“建设面向全中国大中型企业的电子信息化平台”为目标。</p>
+								<p>企业内部积极探索新型的管理模式，在创新创业方面保持高速发展状态；外部通过创新的产品、优质的服务及良好的渠道发掘赢得在互联网建设，软件应用开发与移动平台的市场。 虽然我们是非常注重商业和策略的公司，但我们非常强调团队的概念。我们以卓越、辉煌的成就去吸引同样渴望成功的人才，以宽容、谦卑的的姿态去拉近志同道合的人才。成就每个成员的价值，才能成就整个团队的价值！</p>
+								<p>公司旗下www.51shenzhuang.com平台主要从事代充值业务，为广大有海外购物需求的用户解决了付款难的问题。</p>
+								<p>团队价值观：NOW OR NEVER （要么现在去做，要么永远别做！）</p>
+								<p>团队理念：成就网络的价值。</p>
+							</div>
+						</div>
+						<div class="panel panel-default tab-pane fade" id="fw-about-us2">
+							<div class="panel-heading">
+								<div class="panel-title">
+									<h3><strong>联系我们</strong></h3></div>
+							</div>
+							<div class="panel-body fw-userterms">
+								<p>商店名称：51综合代充平台 衢州华创</p>
+								<p>商店地址：衢州市衢江区振兴中路三巷178四楼</p>
+								<p>客服 QQ：1347257131</p>
+								<p>客服邮箱：service@jubaobar.com</p>
+								<p>客服电话：0571-86800282</p>
+							</div>
+						</div>
+						<div class="panel panel-default tab-pane fade" id="fw-about-us3">
+							<div class="panel-heading">
+								<div class="panel-title">
+									<h3><strong>免责声明</strong></h3></div>
+							</div>
+							<div class="panel-body fw-userterms">
+								<p>本网站在国家相关法律法规规定的范围内，只按现有状况提供虚拟物品在线交易第三方网络平台服务，本网站及其所有者非交易一方，也非交易任何一方之代理人或代表;同时，本网站及其所有者也未授权任何人代表或代理本网站及其所有者从事任何网络交易行为或做出任何承诺、保证或其他类似行为，除非有明确的书面授权。</p>
+								<p>鉴于互联网及网络交易的特殊性，本网站无法鉴别和判断相关交易各主体之民事权利和行为能力、资质、信用等状况，也无法鉴别和判断虚拟交易或正在交易或已交易虚拟物品来源、权属、真伪、性能、规格、质量、数量等权利属性、自然属性及其他各种状况。因此，交易各方在交易前应加以仔细辨明，并慎重考虑和评估交易可能产生的各项风险。</p>
+								<p>本网站不希望出现任何因虚拟物品交易而在用户之间及用户与游戏开发运营商之间产生纠纷，但并不保证不发生该类纠纷。对于因前述各类情形而产生的任何纠纷，将由交易各方依据中华人民共和国现行的有关法律通过适当的方式直接加以解决，本网站及其所有者不参与其中；对于因此类交易而产生的各类纠纷之任何责任和后果，由交易各方承担，本网站及其所有者不承担任何责任及后果。</p>
+								<p>本网站不希望出现任何人利用本网站或因使用本网站而侵犯他人合法权益的行为，但并不保证不会发生此类行为或类似行为。本网站将依据中国法律采取必要的措施防止发生前述各类行为或降低发生这类行为的可能性或者降低由此造成的损失及其后果。对于因前述各类情形而产生的任何纠纷，将由权利受到侵害之人和侵权方依据中华人民共和国现行的有关法律通过适当的方式直接加以解决，本网站及其所有者不参与其中；对于因此类行为产生的各类纠纷之任何责任和后果，由相关责任方承担，本网站及其所有者不承担任何责任及后果。</p>
+								<p>凡有客户投诉涉及不正常交易或疑似诈骗的帐户，公司有权冻结相应帐户。请相应帐户持有人于冻结之日起30日内提供相应证明材料证明交易的真实性或投诉不属实。在相应时间内未提供材料或材料审核未通过的，公司有权进行帐户相应款项退回处理。</p>
+								<p>任何非本网站责任而产生的任何其他纠纷，概由纠纷各方依据中国相关法律以适当的方式直接加以解决，本网站不参与其中；对于因该类行为产生的各类纠纷之任何责任和后果，由相关各方承担，本网站及其所有者不承担任何责任及后果。</p>
+							</div>
+						</div>
+						<div class="panel panel-default tab-pane fade" id="fw-about-us4">
+							<div class="panel-heading">
+								<div class="panel-title">
+									<h3><strong>隐私条款</strong></h3></div>
+							</div>
+							<div class="panel-body fw-userterms">
+								<p>我们保证我们的雇员和我方服务人员依法正确获得、使用和处理用户个人信息。</p>
+								<p>为此，我们保证严格遵守国际通行隐私保护标准。</p>
+								<p>除当地法律对此有更严格的限制条款外，此条款适用于全球范围。</p>
+								<p><strong>我们承诺做到如下几点：</strong></p>
+								<ol>
+									<li>严格遵守正确收集和使用用户个人信息条款；履行法律责任，明确使用用户信息目的；数据特殊保护说明中明确规定要保护用户个人信息；根据网站所需依法正确收集和处理用户个人信息；确保个人信息的正确；审核决定保存用户信息的时间限度；确保用户能依法行使个人权利；实施技术和组织安全措施保护用户个人信息。</li>
+									<li>用户在向网站提前个人信息前，我们努力确保让用户了解以下几点：收集信息的目的；信息的用途；任何接受信息一方的身份和他们使用信息的目的；如何申请复制提交的个人信息。</li>
+									<li>我们对我们所连链接的网站不负隐私保护的责任，此声明只适用于在本网站注册的个人用户。</li>
+									<li>我们的IP地址只用于分析趋势、管理网站、跟踪用户活动和收集信息，不用于可识别个人信息的查询。</li>
+									<li>此外，我们使用cookies用于用户兴趣追踪，以便提高网站的服务水平。即便您的浏览器拒绝cookies，您依然可以登陆我们的网站。</li>
+									<li>用户在所购买平台的用户名与密码不外漏。</li>
+								</ol>
+							</div>
+						</div>
+						<div class="panel panel-default tab-pane fade" id="fw-about-us5">
+							<div class="panel-heading">
+								<div class="panel-title">
+									<h3><strong>发货须知</strong></h3></div>
+							</div>
+							<div class="panel-body fw-userterms">
+								<p>各位会员：</p>
+								<p>您好！因本平台为代充值平台，海外平台代充值存在时差，地区差异以及充值限额等问题，因为下单后充值可能会有延时，本平台承诺在您下单后24小时内发货，给您带来的不便敬请谅解！</p>
+							</div>
+						</div>
+						<div class="panel panel-default tab-pane fade" id="fw-about-us6">
+							<div class="panel-heading">
+								<div class="panel-title">
+									<h3><strong>退货申明</strong></h3></div>
+							</div>
+							<div class="panel-body fw-userterms">
+								<p>各位会员：</p>
+								<p>您好！因本平台为代充值平台，期间发生任何货物质量，大小不合适，本平台无法实现退换货 功能，请各位会员在购买之前仔细确认。</p>
+								<p>因购买货物之后产生的任何纠纷，本平台不承担责任，不参与任何调解。</p>
+								<p class="text-right">——感谢您的配合&nbsp;&nbsp;</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container">
+				<div class="fw-about">
+					<span><a href="about-us.html#fw-about-us1" target="_blank">关于我们</a></span>丨
+					<span><a href="about-us.html#fw-about-us2" target="_blank">联系我们</a></span>丨
+					<span><a href="about-us.html#fw-about-us3" target="_blank">加入我们</a></span>丨
+					<span><a href="about-us.html#fw-about-us4" target="_blank">隐私条款</a></span>丨
+					<span><a href="about-us.html#fw-about-us5" target="_blank">发货须知</a></span>丨
+					<span><a href="about-us.html#fw-about-us6" target="_blank">退货须知</a></span>
+				</div>
+				<div class="fw-copyright">
+					<span>©&nbsp;2005-2016&nbsp;</span>
+					<span>51综合代充平台&nbsp;&nbsp;</span>
+					<span><a href="http://jubaobar.cn" target="_blank">衢州华创</a></span>
+					<span>&nbsp;版权所有，并保留所有权利&nbsp;</span>
+					<span><a href="http://jubaobar.cn" target="_blank">站长统计</a></span>
+				</div>
+				<div class="fw-certified center-block">
+					<div>
+						<a href=""><img src="http://static.jubaobar.cn/51pay/res/img/icon/certified-icon1.png" alt="certified-icon"></a>
+					</div>
+					<div>
+						<a href=""><img src="http://static.jubaobar.cn/51pay/res/img/icon/certified-icon3.png" alt="certified-icon"></a>
+					</div>
+					<div>
+						<a href=""><img src="http://static.jubaobar.cn/51pay/res/img/icon/certified-icon2.png" alt="certified-icon"></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+
+</html>
