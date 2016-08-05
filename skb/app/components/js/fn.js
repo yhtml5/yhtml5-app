@@ -50,37 +50,33 @@ function yFadeToggle(selector, event, event2, eventObject) {
         $(eventObject).fadeOut();
     });
 }
-function initDatetimepicker(selector) {
-    
-    }
 
-// $(".y-pagination li").click(function () {
-//     $(this).removeClass('y-active')
-//     $(this).addClass('y-active')
-// })
-// $('#defaultForm').formValidation({
-//     message: 'This value is not valid',
-//     framework: 'bootstrap',
-//     icon: {
-//         valid: 'glyphicon glyphicon-ok',
-//         invalid: 'glyphicon glyphicon-remove',
-//         validating: 'glyphicon glyphicon-refresh'
-//     },
-//     locale: 'zh_CN',
-//     fields: {
-//         email: {
-//             validators: {
-//                 emailAddress: {}
-//             }
-//         },
-//         phoneNumber: {
-//             validators: {
-//                 notEmpty: {},
-//                 digits: {},
-//                 phone: {
-//                     country: 'CN'
-//                 }
-//             }
-//         }
-//     }
-// });
+function countdown(count) {
+    if (count === 0) {
+        $("[y-notice='QRcode']").hide();
+        $('[y-img="QRcode"]').show();
+        console.log(1)
+    } else {
+        down()
+        var num = count;
+        $('[y-countdown="scanPay.QRcode"]').text(num + 1)
+        function down() {
+
+            if (num === 0) {
+                $("[y-notice='QRcode']").hide();
+                $('[y-img="QRcode"]').fadeIn(2000);
+                return;
+            } else {
+                $('[y-countdown="scanPay.QRcode"]').text(num)
+                num--;
+            }
+            setTimeout(function () {
+                    down();
+                }
+                , 1000)
+        }
+    }
+}
+
+
+

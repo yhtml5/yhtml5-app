@@ -6,7 +6,6 @@
 $(function () {
     getStart();
     doCarouselScanPayDemo(4000)
-    initDatetimepicker("[y-data='record.timeStart'],[y-data='record.timeEnd']")
     toggleValue("[y-menu='record.status'] > li > a", "click", "[y-input='record.status']");
     yFadeToggle("[y-popoper='uploadQRcode'] a", "mouseenter", "mouseleave", "[y-popoper='payee.ewmsml'] img");
     yFadeToggle("[y-popoper='noopsycheMoney']", "mouseenter", "mouseleave", "[y-popoper='infoUl']");
@@ -24,18 +23,5 @@ $(function () {
         language: "zh-CN",
         defaultViewDate: {year: 2016, month: 08, day: 02}
     });
-    function countdown() {
-        var delay = document.getElementById("time").innerHTML;
-        if (delay > 1) {
-            delay--;
-            document.getElementById("time").innerHTML = delay;
-        }
-        else {
-            document.getElementById("y-qrcode").style.display = "inline";
-            document.getElementById("y-info").style.display = "none";
-        }
-        setTimeout("countdown()", 1000);
-    };
-
-    countdown();
+    countdown(2);
 });
