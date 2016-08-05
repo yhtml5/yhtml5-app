@@ -47,7 +47,7 @@
 
 .y-login-bg {
     width: 100%;
-    height: 800px;
+    height: 100%;
     padding-top: 130px;
     background-color: #f8f8f8;
     min-height: 400px;
@@ -248,10 +248,12 @@
     padding-left: 72px;
     margin-top: 28px;
     font-size: 16px;
+    text-align: center;
 }
 
 .y-navbar-main .y-navbar-nav a {
     height: 76px;
+    width: 140px;
 }
 
 .y-navbar-main .y-navbar-nav .y-active a,
@@ -306,12 +308,12 @@
 
 .y-notice-pay {
     margin-top: 14px;
-    width: 530px;
-    height: 50px;
+    width: 550px;
+    /*height: 50px;*/
     background-color: #ff0000;
     color: #fff;
     padding: 6px;
-    font-size: 32px;
+    /*font-size: 32px;*/
 }
 
 .y-notice-default {
