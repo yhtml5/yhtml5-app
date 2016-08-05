@@ -24,7 +24,7 @@ angular.module('controllers', ['ui.bootstrap', 'ngAnimate'])
             "name": "PC",
             "note": "PC端",
             "class": "icon-pc1",
-            "url": "//fwstatic.oss-cn-hangzhou.aliyuncs.com/project/jubaopay/demo/cocs2d/cocos-docking-document.zip"
+            "url": "//fwstatic.oss-cn-hangzhou.aliyuncs.com/project/jubaopay/demo/pc/pc-docking-document.zip"
         }, {
             "name": "WAP",
             "note": "SDK开发包",
