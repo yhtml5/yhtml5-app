@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>商户后台</title>
+    <meta name="description" content="">
+    <meta name="author" content="yhtml5.com"/>
+    <meta name="keywords" content="">
+    <meta name="description" content=" ">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="HandheldFriendly" content="true">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="./static/img/shortcut-icon.png" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="./static/yhtml5.css" />
+    <link rel="stylesheet" type="text/css" href="./static/index.css" />
+</head>
+
+<body class="">
+
+<!--[if lt IE 9]>
+<div class="text-center y-mt80">
+    <h2 class="" style="display: inline">hi,您使用的浏览器版本过低</h2>
+    <h5 class="y-mt20">请<a href="http://browsehappy.com/">升级您的浏览器</a>获取更好的体验</h5>
+</div>
+<![endif]-->
+<div class="y-bgfull-lg">
+    <!--<div class="alert alert-warning y-hide" y-alert="save.success" style="position: absolute;z-index: 999999;width: 300px;margin-left:43% ">-->
+    <!--<a href="#" class="close" data-dismiss="alert">-->
+    <!--&times;-->
+    <!--</a>-->
+    <!--保存成功！-->
+    <!--</div>-->
+    <div class="container-fluid">
+        <nav class="row navbar navbar-default y-navbar-main y-position-relative" y-close="nav.userPanel">
+    <div class="col-sm-10">
+        <img class="y-logo" src="./static/img/sklogo2.png" alt="logo">
+        <ul class="nav navbar-nav y-navbar-nav">
+            <li><a href="record.html">交易记录</a></li>
+            <li><a href="payee.html">收款账号管理</a></li>
+            <li><a href="download.html">对接包下载</a></li>
+            <li><a href="account.html">账户管理</a></li>
+        </ul>
+    </div>
+    <div class="col-sm-2 text-right y-pr-40 y-mt-26">
+        <img src="./static/img/grzx1.png" alt="user" width="56" height="56" y-navbar="nav.user.img">
+    </div>
+    <div class="y-float-window y-hide" y-navbar="nav.float.window">
+    <h5 class="y-cl-666">用户名fdgdfg</h5>
+    <a href="../login.html" class="btn btn-link y-mt-23">退出</a>
+</div>
+</nav>
+        <div class="center-block y-wt-p-95">
+            <div class="row y-mb-30">
+                <div class="col-sm-8">
+                    <h2 class="y-fw-b y-cl-3f y-dis-in-bl">账户管理</h2>
+                    <button type="button" class="y-btn y-btn-lg y-btn-info y-ml-100">充&nbsp;&nbsp;值</button>
+                    <a href="accountDetail.html" class="y-btn y-btn-lg y-btn-info-outline">账户明细</a>
+                </div>
+            </div>
+            <hr>
+            <div class="row y-form-content y-responsive">
+                <div class="col-sm-8">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <p class="col-sm-2">商户名称：</p>
+                            <label class="col-sm-4">飞龙游戏</label>
+                        </div>
+                        <div class="form-group">
+                            <p class="col-sm-2">联系人：</p>
+                            <label class="col-sm-4">张三</label>
+                        </div>
+                        <div class="form-group">
+                            <p class="col-sm-2">手机号：</p>
+                            <label class="col-sm-4">13585875555</label>
+                        </div>
+                        <div class="form-group">
+                            <p class="col-sm-2">账户状态：</p>
+                            <label class="col-sm-4">正常</label>
+                        </div>
+                        <div class="form-group">
+                            <p class="col-sm-2">手续费：</p>
+                            <label class="col-sm-4">0.6%*交易额</label>
+                        </div>
+                        <div class="form-group">
+                            <p class="col-sm-2">注册邮箱：</p>
+                            <label class="col-sm-4">12535425542qq.com</label>
+                        </div>
+                        <div class="form-group">
+                            <p class="col-sm-2">商户号：</p>
+                            <label class="col-sm-4">S001</label>
+                        </div>
+                        <div class="form-group">
+                            <p class="col-sm-2">预存款余额：</p>
+                            <label class="col-sm-4">50,000 元</label>
+                        </div>
+                        <div class="form-group">
+                            <p class="col-sm-2">密钥(Key)：</p>
+                            <label class="col-sm-4">edrh1a3r2t1ja65rt1h3a5r4ya6wrhdfhoirghe8946</label>
+                        </div>
+                        <div class="form-group y-form-group-p y-mt-n-10">
+                            <p class="col-sm-4 col-sm-push-2">密钥是来验证支付结果通知方的身份信息</p>
+                        </div>
+                        <div class="form-group">
+                            <p class="col-sm-2 control-label">页面跳回地址：</p>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" style="height: 41px"
+                                       placeholder="http://127.0.0.1/yybpay/post.php">
+                            </div>
+                            <button type="button" class="y-btn y-btn-info y-ml-60" y-alert="btn.save">保&nbsp;&nbsp;存</button>
+                        </div>
+                        <div class="form-group y-form-group-p">
+                            <p class="col-sm-7 col-sm-push-2">用户返回商户支付成功页面的URL，例如http://127.0.0.1/yybpay/post.php</p>
+                        </div>
+                        <div class="form-group">
+                            <p class="col-sm-2 control-label">通知地址：</p>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" style="height: 41px"
+                                       placeholder="http://127.0.0.1/yybpay/post.php">
+                            </div>
+                            <button type="button" class="y-btn y-btn-info y-ml-60">保&nbsp;&nbsp;存</button>
+                        </div>
+                        <div class="form-group y-form-group-p">
+                            <p class="col-sm-8 col-sm-push-2">收款宝服务器向商户服务器通知支付成功的消息URL，例如http://www.shoukuanbao.com</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal bs-modal fade y-mt-120" id="" y-modal="record.order" tabindex="-1" role="dialog"
+     aria-labelledby="myLargeModalLabel" data-backdrop="static">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content y-modal-content">
+            <div class="modal-header y-modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title y-modal-title" id="myLargeModalLabel">手动补单</h3>
+            </div>
+            <div class="modal-body text-center">
+                <form class="form-horizontal">
+                    <div class="form-group y-mt-20">
+                        <label for="" class="col-sm-4 control-label">支付宝订单号:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label for="alipayAccount" class="col-sm-4 control-label">支付金额:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="alipayAccount" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="noopsycheMoney" class="col-sm-4 control-label">支付宝交易备注:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="noopsycheMoney" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="gatheringOrder" class="col-sm-4 control-label">付款人玩家账号:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="gatheringOrder" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-push-4 col-sm-1 y-btn-footer-save">
+                            <button type="submit" class="y-btn y-btn-lg y-btn-info">保&nbsp;&nbsp;存</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<link rel="import" href="footer/index.html?__inline">-->
+<!--* =============== css ===============-->
+<!--@require bower_components/bootstrap/dist/css/bootstrap.min.css-->
+<!--@require server/author.css-->
+<!--* ================ js ================-->
+<!--@require bower_components/bootstrap/dist/js/bootstrap.min.js-->
+<!--@require server/author.js-->
+
+<script type="text/javascript" src="./static/yhtml5.js"></script>
+<script type="text/javascript" src="./static/index.js"></script>
+</body>
+</html>
