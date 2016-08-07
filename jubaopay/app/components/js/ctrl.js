@@ -29,7 +29,7 @@ angular.module('controllers', ['ui.bootstrap', 'ngAnimate'])
             "name": "WAP",
             "note": "SDK开发包",
             "class": "icon-h5",
-            "url": "//fwstatic.oss-cn-hangzhou.aliyuncs.com/project/jubaopay/res/sdk/java-demo.zip"
+            "url": "//fwstatic.oss-cn-hangzhou.aliyuncs.com/project/jubaopay/demo/wap/wap-docking-document.zip"
         }, {
             "name": "COCOS",
             "note": "SDK开发包",
