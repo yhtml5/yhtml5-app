@@ -3,10 +3,9 @@
  */
 /************  vue  ************/
 
-var imgAlipay = __inline('images/logo.gif');
-var imgWechat = __inline('images/logo.gif');
-var imgCard = __inline('images/logo.gif');
-var imgArrowRight = __inline('images/logo.gif');
+var imgAlipay = __inline('../public/yhklogo.png');
+var imgCard = __inline('../public/zfblogo.png');
+var imgWechat = __inline('../public/wxlogo.png');
 
 new Vue({
     el: '#yhtml5',
@@ -27,7 +26,6 @@ new Vue({
                 name: '信用卡',
                 text: '推荐使用信用卡'
             }],
-        right: imgArrowRight,
         copyright: '该服务由聚宝云计费提供',
         tel: '如果支付问题请拨打 0571-86800282'
     }
