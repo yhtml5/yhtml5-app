@@ -68,6 +68,9 @@
 .y-m-t-20 {
     margin-top: 20px;
 }
+.y-m-t-25 {
+    margin-top: 25px;
+}
 
 .y-m-t-40 {
     margin-top: 40px;
@@ -296,7 +299,9 @@
 .y-p-l-20 {
     padding-left: 20px;
 }
-
+.y-p-l-28 {
+    padding-left: 28px;
+}
 .y-p-l-40 {
     padding-left: 40px;
 }
