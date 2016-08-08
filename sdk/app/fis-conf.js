@@ -7,8 +7,8 @@ fis.set('project.ignore', ['*.test.*', '*.psd', '.git/**', '/**/demo.*']);
 fis.set('project.files', [
     '/fis-conf.js', '/map.json', 'progress.md',
     '/components/**', '/server/*', '/page/**',
-    '/bower_components/bootstrap/dist/**/{bootstrap.min.{css,js},glyphicons-halflings-regular.*}',
-    '/bower_components/jquery/dist/jquery.min.js'
+    '/bower_components/bootstrap/dist/**/bootstrap.min.css',
+    '/bower_components/vue/dist/vue.min.js'
    ]);
 
 /************************* 目录规范 *****************************/
@@ -27,11 +27,6 @@ fis.match('/{components,bower_components,page}/**/(*.{png,gif,jpg,jpeg,svg})', {
 fis.match('/**/(*.design.*)', {
     release: '/vendor/design/$1'
 });
-fis.match('/**/({glyphicons-halflings-regular.*,iconfont.{eot, svg, ttf, woff}})', {
-    release: '${project.static}/iconfont/$1',
-    url: '/iconfont/$1',
-    domain: '.'
-});
 fis.match('/{map.json,fis-conf.*}', {
     release: '/config/$0'
 });
@@ -43,35 +38,39 @@ fis.match('::package', {
     })
 });
 /*** public js ***/
-fis.match('/bower_components/{jquery,bootstrap,form.validation,bootstrap-datepicker}/dist{/**/,/}*.js', {
-    packTo: '${project.static}/yhtml5.js',
-});
-fis.match('/bower_components/jquery/dist/*', {
-    packOrder: -99
-});
-fis.match('/bower_components/bootstrap/dist/js/*', {
-    packOrder: -97
-});
+
 /*** public css ***/
-fis.match('/bower_components/{bootstrap,bootstrap-datepicker,form.validation}/dist/css/*', {
+fis.match('/{bower_components/bootstrap/dist/css, server,components/**}/*.css', {
     packTo: '${project.static}/yhtml5.css'
 });
-fis.match('/bower_components/bootstrap/dist/css/*', {
+fis.match('/server/*.css', {
     packOrder: -99
 });
-/*** custom resourse ***/
-fis.match('{/server/author.js, /components/**/*.js}', {
-    packTo: '${project.static}/index.js'
+fis.match('/bower_components/bootstrap/dist/css/*.css', {
+    packOrder: -89
 });
-fis.match('{/server/author.css,/components/**/*.css}', {
-    packTo: '${project.static}/index.css'
+fis.match('components/**/*.css', {
+    packOrder: -79
+});
+/*** js ***/
+fis.match('/{server, components/**, bower_components/vue/dist}/*.js', {
+    packTo: '${project.static}/yhtml5.js'
+});
+fis.match('/server/*.js', {
+    packOrder: -99
+});
+fis.match('/bower_components/vue/dist/*.js', {
+    packOrder: -89
+});
+fis.match('components/**/*.js', {
+    packOrder: -79
 });
 
 /************************* Pro规范 *****************************/
 
 fis.media('pro')
     .match('/{static/**,{components,bower_components,page}/**/*.{png,gif,jpg,jpeg,eot,ttf,woff,woff2,svg}}', {
-        useHash: false,
+        useHash: true,
         domain: '.'
     })
     //css 自动补充兼容性 https://github.com/ai/browserslist#queries

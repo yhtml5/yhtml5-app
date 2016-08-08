@@ -1,33 +1,21 @@
 <link rel="import" href="../components/head/index.html?__inline">
-<div class="container">
+<div class="container" id="yhtml5">
     <div class="row y-p-t-20">
         <div class="col-xs-12 col-ms-5 y-header text-center">
             <img class="center-block" src="../components/public/wechat.png" alt="" height="65">
-            <h4 class="col-xs-6 col-xs-push-1 col-ms-12">测试商品3</h4>
-            <h3 class="col-xs-6 col-xs-pull-1 col-ms-12">1.00元</h3>
+            <h4 class="col-xs-6 col-xs-push-1 col-ms-12">{{name}}</h4>
+            <h3 class="col-xs-6 col-xs-pull-1 col-ms-12">{{money}}</h3>
         </div>
         <div class="hidden-ms col-ms-1 y-line"></div>
         <div class="col-xs-12 col-ms-6 list-group y-list-group center-block">
-            <a href="#" class="list-group-item">
+            <a v-for="channel in channels"  href="#" class="list-group-item">
                 <div class="row ">
                     <div class="col-xs-2 ">
                         <img class="" src="../components/public/wechat.png" alt="" height="55">
                     </div>
                     <div class="col-xs-8 y-list-group-p">
-                        <p>微信</p>
-                        <p>推荐微信用户</p>
-                    </div>
-                    <div class="glyphicon glyphicon-chevron-right col-xs-2 y-glyphicon"></div>
-                </div>
-            </a>
-            <a href="#" class="list-group-item">
-                <div class="row">
-                    <div class="col-xs-2">
-                        <img class="" src="../components/public/wechat.png" alt="" height="55">
-                    </div>
-                    <div class="col-xs-8 y-list-group-p">
-                        <p>支付宝</p>
-                        <p>推荐支付宝用户</p>
+                        <p>{{channel.name}}</p>
+                        <p>{{channel.text}}</p>
                     </div>
                     <div class="glyphicon glyphicon-chevron-right col-xs-2 y-glyphicon"></div>
                 </div>
@@ -36,10 +24,9 @@
     </div>
     <div class="row">
         <div class="col-xs-12 col-ms-5 text-center y-footer">
-            <p>该服务由聚宝云计费提供</p>
-            <p>如果支付问题请拨打 0571-86800282</p>
+            <p>{{copyright}}</p>
+            <p>{{tel}}</p>
         </div>
     </div>
 </div>
-
 <link rel="import" href="../components/required/index.html?__inline">
