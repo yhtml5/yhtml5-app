@@ -2,14 +2,19 @@
  * @require ../../server/author.js
  */
 /************  vue  ************/
-
+var imgLogo = __inline('../public/jbylogo_58px.png');
 var imgAlipay = __inline('../public/zfblogo.png');
 var imgCard = __inline('../public/yhklogo.png');
 var imgWechat = __inline('../public/wxlogo.png');
+var imgEmpty = __inline('../public/konglogo.png');
+var imgArrowRight = __inline('../public/arrow.png');
 
 new Vue({
     el: '#yhtml5',
     data: {
+        imgLogo: imgLogo,
+        imgEmpty: imgEmpty,
+        imgArrowRight: imgArrowRight,
         name: '测试商品',
         money: '$55.00',
         channels: [
@@ -28,6 +33,6 @@ new Vue({
             }],
         copyright: '该服务由聚宝云计费提供',
         tel: '如果支付问题请拨打 0571-86800282',
-        list: true
+        list: false
     }
-})
+});
