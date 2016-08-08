@@ -3,8 +3,8 @@
  */
 /************  vue  ************/
 
-var imgAlipay = __inline('../public/yhklogo.png');
-var imgCard = __inline('../public/zfblogo.png');
+var imgAlipay = __inline('../public/zfblogo.png');
+var imgCard = __inline('../public/yhklogo.png');
 var imgWechat = __inline('../public/wxlogo.png');
 
 new Vue({

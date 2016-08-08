@@ -178,6 +178,12 @@
     margin: 20px auto;
     border: 1px solid red;
 }
+.y-jbplogo{
+    background: url(../public/jbylogo_58px.png) no-repeat;
+    width: 65px;
+    height: 65px;
+    background-size: contain;
+}
 
 @media (max-width: 480px) {
     .hidden-ms {
