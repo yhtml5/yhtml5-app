@@ -99,7 +99,6 @@
         right: 0;
         max-height: 300px;
         overflow: scroll;
-        /*border-left: 1px solid lightgrey;*/
     }
 
     .y-list-group img:first-child {
@@ -170,6 +169,14 @@
 .y-footer {
     font-size: 16px;
     color: #777777;
+}
+.y-empty{
+    background: url(../public/konglogo.png) no-repeat;
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    margin: 20px auto;
+    border: 1px solid red;
 }
 
 @media (max-width: 480px) {
