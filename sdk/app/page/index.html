@@ -7,7 +7,7 @@
             <h3 class="col-xs-6 col-xs-pull-1 col-ms-12">{{money}}</h3>
         </div>
         <div class="hidden-ms col-ms-1 y-line"></div>
-        <div class="col-xs-12 col-ms-6 list-group y-list-group center-block">
+        <div class="col-xs-12 col-ms-6 list-group y-list-group center-block" v-if="list">
             <a v-for="channel in channels" href="#" class="list-group-item">
                 <div class="row ">
                     <div class="col-xs-2 ">
