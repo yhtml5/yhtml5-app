@@ -9,7 +9,7 @@ fis.set('project.files', [
     '/components/**', '/server/*', '/page/**',
     '/bower_components/bootstrap/dist/**/bootstrap.min.css',
     '/bower_components/vue/dist/vue.min.js'
-]);
+   ]);
 
 /************************* 目录规范 *****************************/
 fis.match('/page/(*.html)', {
@@ -80,21 +80,10 @@ fis.media('pro')
             "cascade": true
         })
     })
-    .match('/components/{**/*.css,head/*.html}', {
+    .match('/{components/**/*.css}', {
         optimizer: fis.plugin('htmlminify', {
             removeComments: true,
             collapseWhitespace: true,
             minifyCSS: true
         })
-    })
-    .match('/page/*.html', {
-
-        optimizer: fis.plugin('htmlminify', {
-            removeComments: true,
-            collapseWhitespace: true,
-            minifyCSS: true
-        }),
-        optimizer: function (content) {
-            return content.replace(/<!--([\s\S]*?)-->/g, '');
-        }
     })

@@ -2,7 +2,6 @@
  * @require ../../server/author.js
  */
 /************  vue  ************/
-
 var imgAlipay = __inline('../public/yhklogo.png');
 var imgCard = __inline('../public/zfblogo.png');
 var imgWechat = __inline('../public/wxlogo.png');

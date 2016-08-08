@@ -73,7 +73,7 @@
     },
     "pkg": {
         "p0": {
-            "uri": "./static/yhtml5.af2afaf.css",
+            "uri": "./static/yhtml5.4696afe.css",
             "type": "css",
             "has": [
                 "server/author.css",
@@ -90,7 +90,7 @@
             ]
         },
         "p1": {
-            "uri": "./static/yhtml5.f884a61.js",
+            "uri": "./static/yhtml5.18c482b.js",
             "type": "js",
             "has": [
                 "server/author.js",

@@ -21,9 +21,6 @@ fis.match('/bower_components/(**)', {
 fis.match('/components/**', {
     release: '/vendor/$0'
 });
-fis.match('/{components,bower_components,page}/**/(*.{png,gif,jpg,jpeg,svg})', {
-    release: '${project.static}/img/$1'
-});
 fis.match('/**/(*.design.*)', {
     release: '/vendor/design/$1'
 });
@@ -80,48 +77,10 @@ fis.media('pro')
             "cascade": true
         })
     })
-    .match('/{components/**/*.css, page/*.html}', {
+    .match('/{bower_compontents/**/*.js,components/**/*.css, page/*.html}', {
         optimizer: fis.plugin('htmlminify', {
             removeComments: true,
             collapseWhitespace: true,
             minifyCSS: true
         })
     })
-
-// .match('/{{components,page}/**/*.{html,css},index.html}', {
-//     optimizer: fis.plugin('htmlminify', {
-//         removeComments: true,
-//         collapseWhitespace: true,
-//         minifyJS: true,
-//         minifyCSS: true
-//     })
-// })
-// .match('/{components,page}/**/init.js', {
-//     optimizer: fis.plugin('htmlminify', {
-//         removeComments: true,
-//         collapseWhitespace: true,
-//         minifyJS: true
-//     })
-// })
-
-// 自动雪碧图
-// .match('::package', {
-//     packager: fis.plugin('map'),
-//     spriter: fis.plugin('csssprites', {
-//         layout: 'matrix',
-//         margin: '15'
-//     })
-// })
-// .match('*.css', {
-//     optimizer: fis.plugin('clean-css', {
-//         'keepBreaks': false,
-//         useSprite: true
-//     })
-// })
-// .match('*.js', {
-//     optimizer: fis.plugin('uglify-js', {
-//         mangle: {
-//             expect: ['require', 'define', 'some string']
-//         }
-//     })
-// })

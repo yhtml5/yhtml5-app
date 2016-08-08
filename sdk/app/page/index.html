@@ -11,7 +11,7 @@
             <a v-for="channel in channels" href="#" class="list-group-item">
                 <div class="row ">
                     <div class="col-xs-2 ">
-                        <img class="" src={{channel.img}} alt="" width="55">
+                        <img class="" :src="channel.img" alt="" width="55">
                     </div>
                     <div class="col-xs-8 y-list-group-p">
                         <p>{{channel.name}}</p>
