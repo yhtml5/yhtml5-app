@@ -2,13 +2,12 @@
 <div class="container" id="yhtml5">
     <div class="row y-p-t-20">
         <div class="col-xs-12 col-ms-6 y-header text-center">
-            <img class="center-block" src="../components/public/wxlogo.png?__inline" alt="" height="65">
+            <img class="y-jbp-logo" :src="imgLogo" alt="" width="65">
             <h4 class="col-xs-6 col-xs-push-1 col-ms-12">{{name}}</h4>
             <h3 class="col-xs-6 col-xs-pull-1 col-ms-12">{{money}}</h3>
         </div>
-        <div class="hidden-ms col-ms-1 y-line"></div>
-        <div class="col-xs-12 col-ms-6 list-group y-list-group center-block" v-if="list">
-            <a v-for="channel in channels" href="#" class="list-group-item">
+        <div class="col-xs-12 col-ms-6 list-group y-list-group center-block text-center">
+            <a v-for="channel in channels" href="#" class="list-group-item" v-if="list">
                 <div class="row ">
                     <div class="col-xs-2 ">
                         <img class="" :src="channel.img" alt="" width="55">
@@ -17,14 +16,14 @@
                         <p>{{channel.name}}</p>
                         <p>{{channel.text}}</p>
                     </div>
-                    <img class="col-xs-2 y-glyphicon" src="../components/public/right.png?__inline" alt="→" width="15">
+                    <img class="col-xs-2 y-arrow" :src="imgArrowRight" alt="" width="15">
                 </div>
             </a>
+            <img class="y-m-t-20" :src="imgEmpty" alt="" width="100">
         </div>
     </div>
-    <div class="y-empty"></div>
     <div class="row">
-        <div class="col-xs-12 col-ms-5 text-center y-footer">
+        <div class="col-xs-12 col-ms-6 text-center y-footer">
             <p>{{copyright}}</p>
             <p>{{tel}}</p>
         </div>

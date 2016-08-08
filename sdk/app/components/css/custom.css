@@ -65,14 +65,12 @@
     text-decoration: none;
 }
 
-
 @media only screen and (min-width: 480px) {
     .y-header {
         margin: 50px auto 10px auto;
     }
 
     .y-header img {
-        padding-left: 13px;
         position: static;
     }
 
@@ -85,11 +83,10 @@
         margin-top: 0;
         position: static;
     }
-
-    .y-footer {
-        margin-left: 4px;
+    .y-jbp-logo{
+        width: 65px;
+        height: 65px;
     }
-
     .y-list-group {
         padding: 30px 20px 50px 20px;
         margin-bottom: 30px;
@@ -99,7 +96,6 @@
         right: 0;
         max-height: 300px;
         overflow: scroll;
-        /*border-left: 1px solid lightgrey;*/
     }
 
     .y-list-group img:first-child {
@@ -143,9 +139,10 @@
     border-radius: 0 !important;
     padding-left: 40px;
 }
-.y-list-group img:first-child{
+
+.y-list-group img:first-child {
     position: relative;
-    top:50%;
+    top: 50%;
 }
 
 .y-list-group-p {
@@ -163,7 +160,7 @@
     color: #777777;
 }
 
-.y-glyphicon {
+.y-arrow {
     padding-top: 20px;
 }
 
@@ -172,10 +169,17 @@
     color: #777777;
 }
 
-@media (max-width: 480px) {
-    .hidden-ms {
-        display: none !important;
-    }
+.y-empty {
+    background: url(../public/konglogo.png) no-repeat;
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    margin: 20px auto;
+}
+
+.y-jbp-logo{
+    display: block;
+    margin: auto;
 }
 
 @media (min-width: 480px) {
