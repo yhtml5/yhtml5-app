@@ -97,7 +97,7 @@
 }
 
 .y-login-invalid {
-    margin-top: 32px;
+    /*margin-top: 32px;*/
     margin-bottom: 8px;
     color: #ff0000;
     padding-left: 16px;
