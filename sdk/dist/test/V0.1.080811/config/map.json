@@ -1,0 +1,108 @@
+{
+    "res": {
+        "fis-conf.js": {
+            "uri": "/config/fis-conf.js",
+            "type": "js"
+        },
+        "components/css/animation.css": {
+            "uri": "/vendor/components/css/animation.css",
+            "type": "css",
+            "deps": [
+                "bootstrap.ex.css"
+            ],
+            "pkg": "p0"
+        },
+        "components/css/base.css": {
+            "uri": "/vendor/components/css/base.css",
+            "type": "css",
+            "pkg": "p0"
+        },
+        "components/css/bootstrap.base.css": {
+            "uri": "/vendor/components/css/bootstrap.base.css",
+            "type": "css",
+            "pkg": "p0"
+        },
+        "components/css/bootstrap.component.css": {
+            "uri": "/vendor/components/css/bootstrap.component.css",
+            "type": "css",
+            "pkg": "p0"
+        },
+        "components/css/box.css": {
+            "uri": "/vendor/components/css/box.css",
+            "type": "css",
+            "pkg": "p0"
+        },
+        "components/css/custom.css": {
+            "uri": "/vendor/components/css/custom.css",
+            "type": "css",
+            "deps": [
+                "components/css/base.css"
+            ],
+            "pkg": "p0"
+        },
+        "components/js/vue.js": {
+            "uri": "/vendor/components/js/vue.js",
+            "type": "js",
+            "deps": [
+                "server/author.js"
+            ],
+            "pkg": "p1"
+        },
+        "server/author.css": {
+            "uri": "/server/author.css",
+            "type": "css",
+            "pkg": "p0"
+        },
+        "server/author.js": {
+            "uri": "/server/author.js",
+            "type": "js",
+            "pkg": "p1"
+        },
+        "server/console.js": {
+            "uri": "/server/console.js",
+            "type": "js",
+            "pkg": "p1"
+        },
+        "bower_components/bootstrap/dist/css/bootstrap.min.css": {
+            "uri": "/vendor/bootstrap/dist/css/bootstrap.min.css",
+            "type": "css",
+            "extras": {},
+            "pkg": "p0"
+        },
+        "bower_components/vue/dist/vue.min.js": {
+            "uri": "/vendor/vue/dist/vue.min.js",
+            "type": "js",
+            "extras": {},
+            "pkg": "p1"
+        }
+    },
+    "pkg": {
+        "p0": {
+            "uri": "./static/yhtml5.1664ff3.css",
+            "type": "css",
+            "has": [
+                "server/author.css",
+                "bower_components/bootstrap/dist/css/bootstrap.min.css",
+                "components/css/animation.css",
+                "components/css/base.css",
+                "components/css/bootstrap.base.css",
+                "components/css/bootstrap.component.css",
+                "components/css/box.css",
+                "components/css/custom.css"
+            ],
+            "deps": [
+                "bootstrap.ex.css"
+            ]
+        },
+        "p1": {
+            "uri": "./static/yhtml5.02584f7.js",
+            "type": "js",
+            "has": [
+                "server/author.js",
+                "server/console.js",
+                "bower_components/vue/dist/vue.min.js",
+                "components/js/vue.js"
+            ]
+        }
+    }
+}
