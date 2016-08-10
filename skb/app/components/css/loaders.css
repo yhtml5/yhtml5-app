@@ -15,8 +15,8 @@
 }
 [data-loader='circle']
 {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
 
     -webkit-animation: circle infinite .75s linear;
        -moz-animation: circle infinite .75s linear;
