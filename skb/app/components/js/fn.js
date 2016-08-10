@@ -78,5 +78,15 @@ function countdown(count) {
     }
 }
 
+$("[y-popoper='uploading']").on("click",function () {
+
+    $("[y-popoper='uploading']").hide();
+    $("[y-popoper='circle']").show();
+});
+$("[y-popoper='test']").on("click",function () {
+    $("[y-popoper='uploading']").show();
+    $("[y-popoper='circle']").hide();
+})
+
 
 
