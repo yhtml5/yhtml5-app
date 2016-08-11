@@ -7,7 +7,7 @@
         </div>
         <div class="col-xs-12 col-ms-6 list-group y-list-group center-block text-center">
             <template v-if="isList">
-                <a v-for="channel in channels" track-by="appId" href="#" class="list-group-item" @click="openChannel($index)">
+                <a v-for="(index,channel) in channels" track-by="appId" href="#" class="list-group-item" @click="openChannel($index)">
                     <div class="row">
                         <div class="col-xs-2 ">
                             <img class="" :src="channel.img" alt="" width="55">
