@@ -7,10 +7,6 @@
 ![downloads total](https://img.shields.io/github/downloads/atom/atom/total.svg)
 ![author](https://img.shields.io/badge/author-yhtml5-blue.svg)
 
-
-
-
-
 ### 快速链接
 - [项目简介](#项目简介)
     - [项目进度](https://github.com/yhtml5/FW-Dashboard/issues?q=%E4%BB%BB%E5%8A%A1+is%3Aopen)

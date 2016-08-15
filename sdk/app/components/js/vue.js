@@ -52,7 +52,7 @@ var yhtml5VM = new Vue({
                 yhtml5Data.isList = true
             }
             return isList
-        }
+        },
     }
 });
 yhtml5VM.isList()

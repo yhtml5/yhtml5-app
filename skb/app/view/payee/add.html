@@ -17,13 +17,23 @@
                     <div class="form-group">
                         <label for="alipayCode" class="col-sm-3 control-label">支付宝二维码：</label>
                         <div class="col-sm-6">
-                            <a href="javascript:void(0)" class="y-file-a">
+                            <a href="javascript:void(0)" class="y-file-a"  y-popoper="uploading">
                                 <input type="file" class="y-input-file" id="alipayCode" placeholder="">上传二维码
                             </a>
+                            <div class="slice y-hide" y-popoper="circle">
+                                <a href="javascript:void(0)" class="y-file-a y-wt-103">
+                                    <span style="float: right">上传中</span>
+                                    <div data-loader="circle" style="float: left"></div>
+                                </a>
+                            </div>
 
                         </div>
                         <div class="col-sm-2 col-sm-pull-4 y-mt-8" y-popoper="uploadQRcode">
                             <a href="#" class="y-cl-45c65d y-fs-14">如何上传？</a>
+                            <div y-popoper="payee.ewmsml" class="y-position-absolute y-mt-14">
+                                <img src="ewmsm1.jpg" alt=""
+                                     class="y-hide y-mt-10 y-boxsh-cl-ca y-position-relative-auto" width="700" height="364">
+                            </div>
                         </div>
                     </div>
                     <div class="form-group">
@@ -33,6 +43,14 @@
                         </div>
                         <div class="col-sm-3 y-mt-5" y-popoper="noopsycheMoney">
                             <a href="#" class="y-cl-45c65d y-fs-14">智能收取款是什么？</a>
+                            <div class="y-popoper-ul y-hide y-mt-10" y-popoper="infoUl">
+                                <ul class="">
+                                    <li>智能收取切换额度;</li>
+                                    <li>当某个支付宝账号收款额度达到设置额度后，自动切换到下一个账号;</li>
+                                    <li>通过实名认证，收款额度不限;</li>
+                                    <li class="y-cl-e54545 y-pt-20">只通过银行卡认证，但未通过实名认证，单笔1万，单月5万;</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="form-group">
@@ -52,22 +70,23 @@
                         <div class="col-sm-push-3 col-sm-1">
                             <button type="button" class="y-btn y-btn-lg y-btn-info">保&nbsp;&nbsp;存</button>
                         </div>
+                        <button type="button" class="y-btn y-btn-lg y-btn-info" y-popoper="test">测试</button>
                     </div>
                 </form>
             </div>
-            <div y-popoper="payee.ewmsml" class="y-position-absolute">
-                <img src="ewmsm1.jpg" alt=""
-                     class="y-hide y-mt-n-300 y-ml-100 y-boxsh-cl-ca" width="700" height="364">
-            </div>
+            <!--<div y-popoper="payee.ewmsml" class="y-position-absolute">-->
+                <!--<img src="ewmsm1.jpg" alt=""-->
+                     <!--class="y-hide y-mt-n-300 y-ml-100 y-boxsh-cl-ca" width="700" height="364">-->
+            <!--</div>-->
 
-            <div class="y-popoper-ul y-hide" y-popoper="infoUl">
-                <ul class="">
-                    <li>智能收取切换额度;</li>
-                    <li>当某个支付宝账号收款额度达到设置额度后，自动切换到下一个账号;</li>
-                    <li>通过实名认证，收款额度不限;</li>
-                    <li class="y-cl-e54545 y-pt-20">只通过银行卡认证，但未通过实名认证，单笔1万，单月5万;</li>
-                </ul>
-            </div>
+            <!--<div class="y-popoper-ul y-hide" y-popoper="infoUl">-->
+                <!--<ul class="">-->
+                    <!--<li>智能收取切换额度;</li>-->
+                    <!--<li>当某个支付宝账号收款额度达到设置额度后，自动切换到下一个账号;</li>-->
+                    <!--<li>通过实名认证，收款额度不限;</li>-->
+                    <!--<li class="y-cl-e54545 y-pt-20">只通过银行卡认证，但未通过实名认证，单笔1万，单月5万;</li>-->
+                <!--</ul>-->
+            <!--</div>-->
         </div>
     </div>
 </div>

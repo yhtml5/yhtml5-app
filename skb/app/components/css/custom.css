@@ -97,7 +97,7 @@
 }
 
 .y-login-invalid {
-    margin-top: 32px;
+    /*margin-top: 32px;*/
     margin-bottom: 8px;
     color: #ff0000;
     padding-left: 16px;
@@ -361,21 +361,20 @@
     font-size: 16px;
 }
 .y-popoper-ul {
-    width: 340px;
-    background-color: #F5F5F5;
-    margin-left: 520px;
-    margin-top: -250px;
     position: absolute;
     z-index: 999
 }
 
 .y-popoper-ul ul {
+    width: 340px;
+    background-color: #F5F5F5;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
     border: 1px solid #d3d3d3;
     list-style: none;
-    box-shadow: -2px 2px 2px #e3e3e3;
+    box-shadow: -2px 2px 2px #e3e3e3;position: relative;
+    margin-left: -50%;
 }
 
 .y-input-wt-150 input {
@@ -511,3 +510,12 @@
 .y-dis-in-bl{
     display: inline-block;
 }
+.y-position-relative-auto{
+    position: relative;
+    margin-left: -50%;
+}
+.slice a,.y-file-a{
+    width: 120px;
+}
+
+
