@@ -49,7 +49,7 @@ fis.match('::package', {
 });
 /*** public js ***/
 fis.match('/bower_components/{jquery,bootstrap,form.validation,bootstrap-datepicker}/dist{/**/,/}*.js', {
-    packTo: '${project.static}/yhtml5.js'
+    packTo: '${project.static}/yhtml5.js',
 });
 fis.match('/bower_components/jquery/dist/*', {
     packOrder: -99
@@ -113,7 +113,7 @@ fis.media('pro')
             collapseWhitespace: true,
             minifyCSS: true
         })
-    });
+    })
 
 // .match('/{{components,view}/**/*.{html,css},index.html}', {
 //     optimizer: fis.plugin('htmlminify', {
