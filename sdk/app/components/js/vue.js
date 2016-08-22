@@ -41,9 +41,9 @@ var yhtml5VM = new Vue({
     el: '#yhtml5',
     data: yhtml5Data,
     methods: {
-        openChannel: function ($index) {
-            this.index=$index;
-            console.log(yhtml5Data.channels[$index].name)
+        openChannel: function (index) {
+            console.log(index)
+            console.log(yhtml5Data.channels[index].name)
         },
         isList: function isList() {
             if (yhtml5Data.channels === '') {
@@ -52,7 +52,7 @@ var yhtml5VM = new Vue({
                 yhtml5Data.isList = true
             }
             return isList
-        }
+        },
     }
 });
 yhtml5VM.isList()
