@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title></title>
+		<!-- 永不缓存，测试结束后，删除下面三个meta  -->
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="expires" content="0">
+		<meta http-equiv="cache-control" content="no-cache">
+
+		<meta charset="utf-8">
+		<meta name="HandheldFriendly" content="true">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../res/css/mui.min.css" rel="stylesheet" />
+		<link href="../../res/css/yhtml5.css" rel="stylesheet" />
+	</head>
+	<style type="text/css">
+
+	</style>
+
+	<body id="fw-bgca43307">
+		<div id="fw-c1e-content" class="mui-content">
+			<div class="fw-c1e-div1">
+				<div class="fw-c1e-div2">
+					<div class="fw-c2e-btn2">
+						<img src="../../res/img/cart2_tip.png" />
+					</div>
+					<div class="fw-c2e-div3 fw-l10 fw-w80 fw-mt80">
+						<div>祝&nbsp;：</div>
+						<div id="fw-c1e-div4">
+							<p style="color: #2AC845;font-size: 20px;">新年了，你该换个速度快的手机了</p>
+						</div>
+						<div class="fw-fr">---&nbsp;你的好友&nbsp;<span class="mui-ellipsis">河神</span>&nbsp;</div>
+					</div>
+
+					<img src="../../res/img/cart2_bg.jpg">
+				</div>
+			</div>
+		</div>
+		<!--祝福层-->
+		<div id="fw-c1e-popover1" class="fw-font-center">
+			<span id="fw-c1e-btn1" class="mui-btn mui-btn-warning">
+					发送祝福
+				</span>
+		</div>
+		<!--编辑层-->
+		<div id="fw-c1e-popover2" class="mui-backdrop">
+			<div id="fw-c1e-popover3" class="fw-font-center">
+				<div id="fw-c1e-div5" class="mui-input-row" style="margin: 10px 5px;">
+					<textarea id="textarea" class="fw-ti" name="textarea" onkeyup="words_deal();" style="border: 0px;color: #acafbf;" rows="5" placeholder="">时间从指间溜走，默默无闻中，又一个新的年头。寒来暑去，春夏冬秋，别在匆匆的奔走。新年将近，此情悠悠，愿你猴年争上游</textarea>
+				</div>
+				<div id="fw-c1e-num1" class="fw-fr fw-w9"><span id="fw-c1e-num2">0</span>/50</div>
+				<span id="fw-c1e-btn5" class="mui-btn mui-btn-success mui-btn-outlined">
+					取消
+				</span>
+				<span id="fw-c1e-btn6" class="mui-btn mui-btn-success">
+					保存
+				</span>
+			</div>
+		</div>
+		<!--分享层-->
+		<div id="fw-c1e-popover4" class="mui-backdrop">
+			<div id="fw-c1e-share-div1">
+				<div id="fw-c1e-share-div2">
+					<span id="fw-c1e-icon-close" class="mui-icon mui-icon-close"></span>
+					<img src="../../res/img/share2_pic.png" />
+				</div>
+				<div id="fw-c1e-share-div3">
+					<img src="../../res/img/bg_icon.png" />
+				</div>
+
+				<div id="fw-c1e-share-div4" class="mui-table">
+					<div class="mui-table-cell mui-col-xs-6 fw-pl1">
+						<div class="fw-mb8">
+							<div class="mui-icon mui-icon-weixin fw-fs50 fw-fc6fc544"></div>
+						</div>
+						<div class="mui-tab-label fw-p1">微信好友</div>
+					</div>
+					<div class="mui-table-cell mui-col-xs-6 fw-pr1">
+						<div class="fw-mb8">
+							<div class="mui-icon mui-icon-pengyouquan fw-fs50 fw-fc43c48f"></div>
+						</div>
+						<div class="mui-tab-label fw-p1">朋友圈</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--分享层微信-->
+		<div id="fw-c2e-share" class="mui-backdrop fw-font-center fw-dn">
+			<div class="fw-c2e-share-div1">
+				<span class="mui-icon mui-icon-paperplane fw-c2e-icon-paperplane"></span>
+				<h3 class="fw-w70">请在右上角打开</h3>
+				<h3 class="fw-w70 fw-mt10">分享到朋友圈</h3>
+			</div>
+		</div>
+
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<!--<script src="../../res/js/mui.min.js"></script>-->
+		<script type="text/javascript" charset="utf-8">
+			function words_deal() {
+				var curLength = $("#textarea").val().length;
+				if (curLength > 50) {
+					var num = $("#textarea").val().substr(0, 50);
+					$("#textarea").val(num);
+				} else {
+					$("#fw-c1e-num2").text(50 - $("#textarea").val().length);
+				}
+			}
+			$(document).ready(function() {
+				setInterval(function() {
+					$(".fw-c2e-btn2").animate({
+						top: '7%'
+					}, 600);
+					$(".fw-c2e-btn2").animate({
+						top: '1%'
+					}, 600);
+				}, 0);
+				$('#fw-c1e-content').click(function() {
+					$('#fw-c1e-popover2').show();
+				});
+				$('#fw-c1e-btn5').click(function() {
+					$('#fw-c1e-popover2').hide();
+				});
+				$("#fw-c1e-div4").text($("#textarea").val())
+				$('#fw-c1e-btn6').click(function() {
+					$("#fw-c1e-div4").text($("#textarea").val());
+					$('#fw-c1e-popover2').hide();
+				});
+				if (/MicroMessenger/i.test(navigator.userAgent)) { //这是微信平台下浏览器
+					$('#fw-c1e-popover1').click(function() {
+						$('#fw-c2e-share').show();
+					});
+				} else { //这是其他平台下浏览器
+					$('#fw-c1e-popover1').click(function() {
+						$('#fw-c1e-popover4').show();
+					});
+					$('#fw-c1e-share-div2').click(function() {
+						$('#fw-c1e-popover4').hide();
+					});
+					$('.mui-icon-weixin').click(function() {
+						$('#fw-c2e-share').show();
+					});
+				}
+				$('#fw-c2e-share').click(function() {
+					$('#fw-c2e-share').hide();
+				});
+				setInterval(function() {
+					$('.fw-c2e-icon-paperplane').animate({
+						fontSize: '50px',
+					}, 600)
+					$('.fw-c2e-icon-paperplane').animate({
+						fontSize: '80px',
+					}, 600)
+				}, 0);
+			});
+		</script>
+	</body>
+
+</html>

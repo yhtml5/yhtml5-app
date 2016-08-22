@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<link rel="stylesheet" type="text/css" href="res/css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="res/css/buttons.min.css" />
+		<link rel="stylesheet" type="text/css" href="res/css/yhtml5-1.12.15.css" />
+		<style type="text/css">
+			#fw-btns {
+				line-height: 1px;
+				max-width: 400px;
+				border-radius: 17px;
+				padding: 6px 16px;
+				/*margin-top: -8px*/
+				;
+				color: #9FC934;
+				border: 1px solid #9FC934;
+			}
+			/*background-color: #9FC934;*/
+			
+			#fw-btns1 {
+				color: #222222;
+				background-color: #fffc00;
+				font-family: "微软雅黑";
+				font-weight: bold;
+				padding: 0 30px;
+				width: 100%;
+				margin: 0 auto;
+			}
+			
+			#fw-btns2 {
+				color: #ff6600;
+				background-color: #f8e57e;
+			}
+			
+			#fw-btns4 {
+				line-height: 1px;
+				max-width: 400px;
+				border-radius: 17px;
+				padding: 6px 16px;
+				margin-top: -8px;
+				color: #ffffff;
+				background-color: #9fc934;
+				border: 1px solid #9FC934;
+			}
+			
+			.fw-div-btns1 {
+				width: 65%;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: -30px;
+			}
+			/*#fw-ul {
+				position: static;
+			}*/
+			
+			#fw-mt1 {
+				margin-top: 10px;
+			}
+			
+			.fw-c7d83a0 {
+				color: #7d83a0;
+			}
+			
+			.fw-body2 {
+				margin-bottom: 70px;
+			}
+			
+			#fw-bgc343746 {
+				background-color: #2b2d3a;
+				margin-top: -2px;
+				padding-top: 29px;
+			}
+			
+			#fw-bgc343746:nth-of-type(odd) {
+				background-color: #343746;
+				/*margin-top: -2px;
+				padding-top: 20px;*/
+			}
+			
+			#fw-content2 {
+				padding-bottom: 30px;
+			}
+			
+			#fw-drh {
+				position: absolute;
+				color: #f2320a;
+				z-index: 10;
+				width: 180px;
+				height: 25px;
+				left: 23%;
+				font-size: 22px;
+				font-family: "微软雅黑";
+			}
+			
+			#fw-msg1 {
+				position: absolute;
+				color: #f2320a;
+				z-index: 10;
+				/*width: 30%;*/
+				left: 60%;
+			}
+			
+			.fw-msg1-img {
+				margin-left: -55px;
+				margin-bottom: 10px;
+			}
+			
+			.fw-msg1-name {
+				margin-left: 15px;
+				margin-top: -55px;
+				color: #ffffff;
+			}
+			/*取消动态放大*/
+			/*#fw-msg1 img {
+				width: 100%;
+				min-width: 30px;
+			}*/
+			
+			#fw-msg2 {
+				position: absolute;
+				color: #f2320a;
+				z-index: 10;
+				/*width: 30%;*/
+				left: 32%;
+			}
+			
+			.fw-msg2-img {
+				margin-left: -50px;
+			}
+			
+			.fw-msg2-name {
+				margin-left: 20px;
+				margin-top: -45px;
+				color: #ffffff;
+			}
+			/*#fw-msg2 img {
+				width: 100%;
+				min-width: 30px;
+			}*/
+			
+			#fw-img22 {
+				position: relative;
+				z-index: 2;
+				margin-bottom: -4px;
+			}
+			
+			#fw-img15 {
+				position: absolute;
+				margin-top: -30px;
+				margin-left: 2px;
+				z-index: 3;
+			}
+			
+			#divcircle {
+				margin: 10px auto;
+			}
+			
+			#divcircle img {
+				border-radius: 50%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--动态悬浮-->
+		<div id="fw-drh">
+			戴仁焕
+		</div>
+
+		<div id="fw-msg1">
+			<img width="120px" src="res/img/msg1.png" />
+			<span id="divcircle">
+			<img class="fw-msg1-img" width="50" height="50" src="res/img/logo-zou.png" /></span>
+			<p class="fw-msg1-name">朱小聪</p>
+		</div>
+
+		<div id="fw-msg2">
+			<img width="120px" src="res/img/msg2.png" />
+			<span id="divcircle">
+			<img class="fw-msg2-img" width="50" height="50" src="res/img/7.png"></span>
+			<p class="fw-msg2-name">戴仁焕</p>
+		</div>
+
+		<nav class="mui-bar mui-bar-tab">
+			<ul id="fw-ul" class="mui-table-view">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;" id="fw-mt1">
+						<img class="mui-media-object mui-pull-left" src="res/img/logo-zou.png">
+						<div class="mui-media-body fw-c343746">
+							没白走
+							<p class='mui-ellipsis fw-c666666'>提升战斗力，帮你射穿朱小聪屁股</p>
+						</div>
+					</a>
+					<button type="button" id="fw-btns4" class="mui-btn mui-btn-success mui-media-object mui-pull-right">
+						立即提升
+					</button>
+				</li>
+			</ul>
+		</nav>
+		<div id="fw-content2" class="fw-content2 mui-content">
+			<div class="fw-head2">
+				<div class="fw-img-box">
+					<img class="img22" src="res/img/bg_img_02.jpg" />
+				</div>
+				<div class="fw-div-btns1">
+					<a href="#" id="fw-btns1" class="button button-highlight button-pill button-large">河神，等你来射</a>
+				</div>
+			</div>
+			<div class="fw-body2">
+				<!--水平图-->
+				<div id="fw-img22" class="fw-img-box fw-mt fw-mb">
+					<img class="img22" src="res/img/bg_img_03.png" />
+				</div>
+				<!--玩家列表-->
+				<ul id="fw-ul" class="mui-table-view fw-bgc343746 ">
+
+					<li id="fw-bgc343746" class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<span class="mui-media-object mui-pull-left fw-c7d83a0">1</span>
+							<span id="fw-img15" class="mui-media-object mui-pull-left">
+								<img src="res/img/15_tinypng.png"/>
+							</span>
+							<span id="divcircle">
+							<span id="divcircle">
+							<img class="mui-media-object mui-pull-left" width="70" height="70" src="res/img/7.png"></span></span>
+							<div class="mui-media-body fw-white">
+								Eric
+								<span id="fw-btns2" class="mui-badge mui-badge-warning ">LV5</span>
+								<p class='mui-ellipsis fw-c7d83a0'>今日步数：178920</p>
+							</div>
+						</a>
+						<button type="button" id="fw-btns" class="mui-btn mui-btn-success mui-btn-outlined mui-media-object mui-pull-right">
+							射 TA
+						</button>
+					</li>
+					<li id="fw-bgc343746" class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<span class="mui-media-object mui-pull-left fw-c7d83a0">2</span>
+							<span id="fw-img15" class="mui-media-object mui-pull-left">
+								<img src="res/img/16_tinypng.png"/>
+							</span>
+							<span id="divcircle">
+							<img class="mui-media-object mui-pull-left" width="70" height="70" src="res/img/7.png"></span>
+							<div class="mui-media-body fw-white">
+								Eric
+								<span id="fw-btns2" class="mui-badge mui-badge-warning ">LV5</span>
+								<p class='mui-ellipsis fw-c7d83a0'>今日步数：178920</p>
+							</div>
+						</a>
+						<button type="button" id="fw-btns" class="mui-btn mui-btn-success mui-btn-outlined mui-media-object mui-pull-right">
+							射 TA
+						</button>
+					</li>
+					<li id="fw-bgc343746" class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<span class="mui-media-object mui-pull-left fw-c7d83a0">3</span>
+							<span id="fw-img15" class="mui-media-object mui-pull-left">
+								<img src="res/img/17_tinypng.png"/>
+							</span>
+							<span id="divcircle">
+							<img class="mui-media-object mui-pull-left" width="70" height="70" src="res/img/7.png"></span>
+							<div class="mui-media-body fw-white">
+								Eric
+								<span id="fw-btns2" class="mui-badge mui-badge-warning ">LV5</span>
+								<p class='mui-ellipsis fw-c7d83a0'>今日步数：178920</p>
+							</div>
+						</a>
+						<button type="button" id="fw-btns" class="mui-btn mui-btn-success mui-btn-outlined mui-media-object mui-pull-right">
+							射 TA
+						</button>
+					</li>
+					<li id="fw-bgc343746" class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<span class="mui-media-object mui-pull-left fw-c7d83a0">4</span>
+							<span id="divcircle">
+							<img class="mui-media-object mui-pull-left" width="70" height="70" src="res/img/7.png"></span>
+							<div class="mui-media-body fw-white">
+								Eric
+								<span id="fw-btns2" class="mui-badge mui-badge-warning ">LV5</span>
+								<p class='mui-ellipsis fw-c7d83a0'>今日步数：178920</p>
+							</div>
+						</a>
+						<button type="button" id="fw-btns" class="mui-btn mui-btn-success mui-btn-outlined mui-media-object mui-pull-right">
+							射 TA
+						</button>
+					</li>
+					<li id="fw-bgc343746" class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<span class="mui-media-object mui-pull-left fw-c7d83a0">5</span>
+							<span id="divcircle">
+							<img class="mui-media-object mui-pull-left" width="70" height="70" src="res/img/7.png"></span>
+							<div class="mui-media-body fw-white">
+								Eric
+								<span id="fw-btns2" class="mui-badge mui-badge-warning ">LV5</span>
+								<p class='mui-ellipsis fw-c7d83a0'>今日步数：178920</p>
+							</div>
+						</a>
+						<button type="button" id="fw-btns" class="mui-btn mui-btn-success mui-btn-outlined mui-media-object mui-pull-right">
+							射 TA
+						</button>
+					</li>
+					<li id="fw-bgc343746" class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<span class="mui-media-object mui-pull-left fw-c7d83a0">6</span>
+							<span id="divcircle">
+							<img class="mui-media-object mui-pull-left" width="70" height="70" src="res/img/7.png"></span>
+							<div class="mui-media-body fw-white">
+								Eric
+								<span id="fw-btns2" class="mui-badge mui-badge-warning ">LV5</span>
+								<p class='mui-ellipsis fw-c7d83a0'>今日步数：178920</p>
+							</div>
+						</a>
+						<button type="button" id="fw-btns" class="mui-btn mui-btn-success mui-btn-outlined mui-media-object mui-pull-right">
+							射 TA
+						</button>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+		<script src="res/js/jquery-1.11.3.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				var heght1 = $(".fw-content2").width();
+				var heght2 = heght1 * 0.66
+				var heght3 = heght1 * 0.3
+				var heght4 = heght1 * 0.05
+				$("#fw-drh").css("marginTop", heght2)
+				$("#fw-msg1").css("marginTop", heght3)
+				$("#fw-msg2").css("marginTop", heght4)
+					//当浏览器宽度改变时
+				$(window).resize(function() {
+					var heght1 = $(".fw-content2").width();
+					var heght2 = heght1 * 0.66
+					var heght3 = heght1 * 0.3
+					var heght4 = heght1 * 0.06
+					$("#fw-drh").css("marginTop", heght2)
+					$("#fw-msg1").css("marginTop", heght3)
+					$("#fw-msg2").css("marginTop", heght4)
+				});
+			});
+		</script>
+	</body>
+
+</html>

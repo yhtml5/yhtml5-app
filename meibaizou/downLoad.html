@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>meibaizou-downLoad</title>
+		<meta name="HandheldFriendly" content="true">
+		<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="expires" content="0">
+		<meta http-equiv="cache-control" content="no-cache">
+		<link rel="stylesheet" type="text/css" href="res/css/buttons.min.css" />
+		<link rel="stylesheet" type="text/css" href="res/css/yhtml5-1.12.15.css" />
+		<style>
+			#down1 {
+				font-family: "微软雅黑";
+				font-size: 16px;
+				width: 35%;
+				padding: 0px;
+			}
+			
+			#down2 {
+				font-family: "微软雅黑";
+				font-size: 16px;
+				width: 100%;
+				padding: 0px;
+			}
+			
+			.fw-div-down2 {
+				width: 35%;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="fw-content3">
+			<button id="down1" class="button button-3d button-action button-pill fw-nz2 ">
+				立即下载
+			</button>
+			<!--<a href="#" class="fw-btn fw-btn-big fw-btn-ffffff fw-nz2 fw-pd3" id="down1">
+				<div class="fw-222222">
+					立即下载
+				</div>
+			</a>-->
+			<div class="fw-img-box">
+				<img class="img22" src="res/img/bg-download2.jpg" />
+			</div>
+			<div id="div3" class="fw-img-box">
+				<img class="img22" src="res/img/bg-down3.png" />
+			</div>
+			<div class="fw-foot3">
+				<!--<a href="#" class="fw-btn fw-btn-big fw-btn-66ac25 fw-down31 fw-pd2">
+					<div class="fw-ffffff">
+						立即下载
+					</div>
+				</a>-->
+				<div class="fw-div-down2">
+					<a href="#" id="down2" class="button button-3d button-action button-pill fw-down31 fw-pd2">
+						立即下载
+					</a>
+				</div>
+				<div class="fw-p2">
+					没白走丨让你每一步都有价值
+				</div>
+			</div>
+		</div>
+		<script src="res/js/jquery-1.11.3.min.js"></script>
+		<script>
+			//			$(document).ready(function() {
+			//				var heght1 = $(".fw-content3").width();
+			//				var heght2 = heght1 * 0.5
+			//				$("#down1").css("marginTop", heght2)
+			//					//当浏览器宽度改变时
+			//				$(window).resize(function() {
+			//					var heght1 = $(".fw-content3").width();
+			//					var heght2 = heght1 * 0.5
+			//					$("#down1").css("marginTop", heght2)
+			//				});
+			//				$("#down1").show();
+			//				$('#down1').click(function() {
+			//					$("#div3").show();
+			//				});
+			//				$('#div3').click(function() {
+			//					$('#div3').hide();
+			//				});
+			//			});
+			$(document).ready(function() {
+				var heght1 = $(".fw-content3").width();
+				var heght2 = heght1 * 0.5
+				$("#down1").css("marginTop", heght2)
+					//当浏览器宽度改变时
+				$(window).resize(function() {
+					var heght1 = $(".fw-content3").width();
+					var heght2 = heght1 * 0.5
+					$("#down1").css("marginTop", heght2)
+				});
+				$("#down1").show();
+				$('#down1').click(function() {//调试请刷新浏览器
+					if (/MicroMessenger/i.test(navigator.userAgent)) { //这是微信平台下浏览器
+						$("#div3").show()
+					} else if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) { //这是iOS平台下浏览器
+						window.location.href = "http://fs.appcan.cn/uploads/2015/10/29//11465342_android_00.15.1029_001_42409_0.apk" //放文件下载链接
+					} else { //这是Android平台下浏览器+其他系统
+						window.location.href = "http://yhtml5.com" //放文件下载链接
+					}
+				})
+				$('#div3').click(function() {
+					$('#div3').hide();
+				});
+			})
+		</script>
+	</body>
+
+</html>
