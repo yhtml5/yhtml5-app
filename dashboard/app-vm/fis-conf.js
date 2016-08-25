@@ -83,17 +83,6 @@ fis.match('404.html', {
     })
 })
 
-/*************************VM 版本*****************************/
-//fis.media('vm')
-//  .match('/components/js/router.js', {
-//      release: false
-//  })
-//  .match('/components/js/router.vm.js', {
-//      release: true
-//  })
-//项目发布 请注释angular-ui
-/*************************CDN规范*****************************/
-
 // optimize
 // fis.media('pro')
 //     .match('::package', {
