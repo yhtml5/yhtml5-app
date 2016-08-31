@@ -67,3 +67,24 @@
 .y-tsc-dark:focus {
     color: #555;
 }
+@keyframes shadow-info {
+    0% {
+        opacity: .5;
+        border: 1px solid rgba(59, 235, 235, .1);
+        box-shadow: 0 1px 2px rgba(255, 255, 255, .1)
+    }
+    50% {
+        opacity: 1;
+        border: 1px solid rgba(59, 235, 235, 1);
+        box-shadow: 0 1px 30px rgba(59, 255, 255, 1)
+    }
+    100% {
+        opacity: .5;
+        border: 1px solid rgba(59, 235, 235, .1);
+        box-shadow: 0 1px 2px rgba(255, 255, 255, .1)
+    }
+}
+
+.y-animation-shadow-info {
+    animation: shadow-info 2s infinite linear;
+}

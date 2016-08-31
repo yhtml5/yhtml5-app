@@ -3,9 +3,9 @@
  */
 
 /************  Ctrl  ************/
-angular.module('controllers', ['ui.bootstrap', 'ngAnimate'])
+angular.module('controllers', ['ui.bootstrap'])
     .controller('controllers', function ($scope, $http, $uibModal) {
-        $scope.downloadRecord =[{
+        $scope.downloadRecord = [{
             "name": "对接文档",
             "note": "商户接入指南",
             "class": "icon-iconshtjrz",
@@ -168,7 +168,7 @@ angular.module('controllers', ['ui.bootstrap', 'ngAnimate'])
             "name": "杜晓涵",
             "des": "4年产品顾问经验，曾服务过手游、页游、端游和工具类APP等200个多个项目。",
             "emaill": "chenlin.xu@jubaobar.com",
-            "img":  __uri('../../view/contact/girl1.jpg')
+            "img": __uri('../../view/contact/girl1.jpg')
         }, {
             "name": "玲珑",
             "des": "4年产品顾问经验，曾服务过手游、页游、端游和工具类APP等200个多个项目。",

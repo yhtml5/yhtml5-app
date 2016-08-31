@@ -1,0 +1,19 @@
+{
+  "name": "jubaopay",
+  "authors": "yhtml5",
+  "description": "a websit design by bootstrap",
+  "version": "0.1.1",
+  "homepage": "yhtml5.com",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.5.x",
+    "angular-bootstrap": "~2.x",
+    "angular-ui-router": "~1.x",
+    "bootstrap": "~3.x",
+    "es5-shim": "^4.5.9",
+    "html5-boilerplate": "~5.x",
+    "html5shiv": "^3.7.3",
+    "JSON-js": "*"
+  },
+  "main": ""
+}
