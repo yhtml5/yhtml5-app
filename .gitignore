@@ -1,10 +1,17 @@
 # custom
-*/node_modules/
-*/app/bower_components/
+logs/*
+/**/node_modules/
+/**/bower_components/
+npm-debug.log
 
 tmp
 .DS_Store
 .idea
+*.swp
+.test.html.swp
+.test.html.swo
+!.gitkeep
+
 
 # Windows image file caches
 Thumbs.db
@@ -54,6 +61,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-
-logs/*
-!.gitkeep
+/npm-debug.log
+/apps/estateManagement/
+/apps/react-dashboard/production/家装官网v1.0后台/
+/node_modules/

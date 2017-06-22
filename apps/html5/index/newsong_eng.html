@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="../css/my.css">
+        <style type="text/css">
+            .playlist_playall2 {
+                text-indent: 1em;
+            }
+            .toolbar{display: none;}
+            .item_more{width:1.5em;}
+            #listview2{background-color: #F8FAF8;}
+            #listview2 .lis {margin:0.5em 0 0 0;padding-left: 1em;}
+            #listview2 .ulev-2{margin:0.2em 0 0.5em -0.2em;color: #999;}
+            #listview2 .lv_subTitle{margin-top:-0.5em;}
+        </style>
+    </head>
+    <body class="um-vp bc-bg newsong playlist" ontouchstart>
+        <div id="page_0" class="up ub ub-ver bc-bg" tabindex="0">
+            <div class="profile">
+                <img src="../css/res/europe_cover.jpg" alt="" class="topheaderbg">
+                <div class="collect">
+                    <img src="../css/res/cm2_pro_head_140.png" alt="" class="border">
+                    <img src="../css/res/cm2_mv_btn_fav.png" alt="" class="inside">
+                </div>
+                <div class="info">
+                    <span class="bigword">欧</span>
+                    <span class="smallword">美
+            
+                    <div>最新单曲</div>
+                    </span>
+                </div>
+            </div>
+            <div class="playall ub">
+                    <div class="ub-f1">
+                        <img src="../css/res/musiclistplay.png" class="playlist_playall playlist_playall1">
+                    </div>
+                    <div class="ub-f1">
+                        <div class="playlist_playall2">
+                            播放全部<span class="totalnum">(共10首)</span>
+                        </div>
+                    </div>
+                    <div class="ub-f1">
+                        <img src="../css/res/musiclistplayarrow.png" class="playlist_playall playlist_playall3 ufr">
+                    </div>
+                </div>
+                <div id="listview2"  class="ubt bc-border sc-bg">
+                </div>
+            </div>
+
+        </div>
+        <script src="../js/appcan.js"></script>
+        <script src="../js/appcan.control.js"></script>
+        <script src="../js/appcan.listview.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+            var toolbar = '<div class="toolbar">'+
+                        '<div class="userinfocol">'+
+                            '<div class="info"><img src="../css/res/musiclisttool01.png" alt="">'+
+                            '</div>'+
+                            '<div class="num">收藏</div>'+
+                        '</div>'+
+                        '<div class="userinfocol download">'+
+                            '<div class="info"><img src="../css/res/musiclisttool02.png" alt="">'+
+                            '</div>'+
+                            '<div class="num">下载</div>'+
+                        '</div>'+
+                        '<div class="userinfocol share">'+
+                            '<div class="info"><img src="../css/res/musiclisttool03.png" alt="">'+
+                            '</div>'+
+                            '<div class="num">分享</div>'+
+                        '</div>'+
+                        '<div class="userinfocol">'+
+                            '<div class="info"><img src="../css/res/musiclisttool04.png" alt="">'+
+                            '</div>'+
+                            '<div class="num">歌手</div>'+
+                        '</div>'+
+                        '<div class="userinfocol">'+
+                            '<div class="info"><img src="../css/res/musiclisttool05.png" alt="">'+
+                            '</div>'+
+                            '<div class="num">专辑</div>'+
+                        '</div>'+
+                    '</div>'
+            $("#listview2 .lis").after(toolbar).clone();
+            $(".toolbar").attr("data-click", 0);
+        })
+       
+        appcan.button(".playall", "btn-act", function() {
+            appcan.window.open({
+                name : 'playnow',
+                data : '../playnow.html',
+                aniId:10
+            })
+        })
+        
+        var lv2 = appcan.listview({
+            selector : "#listview2",
+            type : "thickLine",
+            hasIcon : false,
+            hasAngle : false,
+            hasSubTitle : true,
+            multiLine : 1
+        });
+        lv2.set([{
+            title : "怕寂寞",
+            note:"雁卿 - Magic",
+            subTitle:"<img src='../css/res/musiclistmore.png' class='item_more'>",
+            id:"1"
+        },{
+            title : "暖风",
+            note:"周传雄 - 说不出有多爱",
+            subTitle:"<img src='../css/res/musiclistmore.png' class='item_more'>",
+            id:"2"
+        },{
+            title : "我知道你都知道",
+            note:"薛之谦 - 几个薛之谦",
+            subTitle:"<img src='../css/res/musiclistmore.png' class='item_more'>",
+            id:"3"
+        },{
+            title : "走过的路",
+            note:"蔡健雅 - Goodbye &amp; Hello",
+            subTitle:"<img src='../css/res/musiclistmore.png' class='item_more'>",
+            id:"4"
+        },{
+            title : "恋着多喜欢",
+            note:"梁静茹 - 恋着多喜欢 EP",
+            subTitle:"<img src='../css/res/musiclistmore.png' class='item_more'>",
+            id:"5"
+        },{
+            title : "回到最初",
+            note:"蔡淳佳 - 回到最初",
+            subTitle:"<img src='../css/res/musiclistmore.png' class='item_more'>",
+            id:"6"
+        },{
+            title : "想对你说",
+            note:"杨宗纬 - 初·爱",
+            subTitle:"<img src='../css/res/musiclistmore.png' class='item_more'>",
+            id:"7"
+        },{
+            title : "乘风",
+            note:"王蓝茵 - 想飞 电视原声带",
+            subTitle:"<img src='../css/res/musiclistmore.png' class='item_more'>",
+            id:"8"
+        },{
+            title : "情书",
+            note:"张学友 - 友情歌 1995-2000世纪情歌金选",
+            subTitle:"<img src='../css/res/musiclistmore.png' class='item_more'>",
+            id:"9"
+        },{
+            title : "手套",
+            note:"李泉 - 心世界",
+            subTitle:"<img src='../css/res/musiclistmore.png' class='item_more'>",
+            id:"10"
+        }])
+        
+        var more_btn = document.getElementById("listview2").getElementsByClassName("lv_subTitle");
+        var toolbar = document.getElementsByClassName('toolbar');
+        
+        for(var i=0;i<more_btn.length;i++){
+                more_btn[i].id = i;
+                more_btn[i].onclick = function (){
+                    var click = toolbar[this.id].getAttribute("data-click");
+                    //一开始全部隐藏，之后每次只能显示一个
+                    for(var j=0;j<toolbar.length;j++){
+                        toolbar[j].style.display = "none";
+                        toolbar[j].setAttribute("data-click", 0);
+                        more_btn[j].getElementsByTagName("img")[0].src = "../css/res/musiclistmore.png";
+                    }
+                    if(click==0){
+                        toolbar[this.id].setAttribute("data-click", 1);
+                        more_btn[this.id].getElementsByTagName("img")[0].src = "../css/res/musiclistmore_prs.png";
+                        toolbar[this.id].style.display = '-webkit-box';
+                    }else{
+                        toolbar[this.id].setAttribute("data-click", 0);
+                        more_btn[this.id].getElementsByTagName("img")[0].src = "../css/res/musiclistmore.png";
+                        toolbar[this.id].style.display = 'none';
+                    }
+                }
+            }
+                
+        $(".download").live("click",function(){
+            appcan.window.confirm({
+                title : '下载',
+                content : '下载本首歌？',
+                buttons : ['确定', '取消']
+            });
+        })
+        $(".share").live("click",function(){
+            appcan.window.openPopover({
+                name:'share',
+                dataType:0,
+                url:"../account/share.html",
+                top:0,
+                left:0,
+                width:0,
+                height:0
+           });
+        })
+    </script>
+</html>
+

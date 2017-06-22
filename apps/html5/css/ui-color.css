@@ -1,0 +1,78 @@
+/*****************************************/
+/*基础header颜色*/
+.bc-head {
+    background-color: #dd3030;
+}
+/*****************************************/
+/*基础body背景颜色*/
+.bc-bg {
+    background-color: #f8faf8;
+}
+/*辅助控件背景颜色*/
+.sc-bg {
+    background-color: #FFFFFF;
+}
+/*辅助控件背景颜色*/
+.sc-bg-active {
+    background-color: #EEEEEE;
+}
+/*警告背景色*/
+.sc-bg-alert {
+    background-color: #F16412;
+}
+/*****************************************/
+/*基础字体颜色*/
+.bc-text {
+    color: black;
+}
+/*基础标题字体颜色*/
+.bc-text-head {
+    color: white;
+}
+/*辅助字体颜色*/
+.sc-text {
+    color: #848484;
+}
+/*辅助字体颜色*/
+.sc-text-active {
+    color: #dd3030 !important;
+}
+/*辅助字体颜色*/
+.sc-text-hint {
+    color: #E3E3E3;
+}
+/*辅助字体颜色*/
+.sc-text-warn {
+    color: #FC7800;
+}
+/*辅助字体颜色*/
+.sc-text-tab {
+    color: #636363;
+}
+/*****************************************/
+/*基础边框颜色*/
+.bc-border {
+    border-color: #BABABA;
+}
+/*辅助边框颜色*/
+.sc-border {
+    border-color: #FFFFFF;
+}
+.sc-border-tab {
+    border-color: #dd3030;
+}
+/*****************************************/
+/*基础按钮颜色*/
+.bc-btn {
+    background-color: #DD3030;
+}
+/*辅助按钮颜色*/
+.sc-btn {
+    background-color: #F7CB8C;
+}
+
+
+
+
+
+

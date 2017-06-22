@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <style type="text/css">
+            body{background-color: #F3F3F3 !important;}
+            #tabview{border: 1px solid #C7C7C7;width: 93%;border-radius: 0.3em;background-color: #F3F3F3;margin: 0.6em;height: 1.5em;position: relative;overflow: hidden;}
+            #tabview .ulev-1{
+                border-right: 1px solid #C7C7C7;
+                line-height: 0.5em;
+            }
+            #tabview .t-bla{padding-right: 1px;}
+            #tabview .t-bla .sc-text-active{
+                background-color: #999;
+                position: relative;
+                z-index: 1;
+                color: #fff !important;
+            }
+            .tab_area{border: 1px solid #C7C7C7;}
+            .text{color: #aaa;text-align: center;margin-top: 0.5em;font-size: 0.8em;}
+        </style>
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div class="tab_area"><div id="tabview" class="uf sc-bg">
+        </div>
+        </div>
+        <div class="text">
+            暂无消息
+        </div>
+    </body>
+    <script src="../js/appcan.js"></script>
+    <script src="../js/appcan.control.js"></script>
+   <script src="../js/appcan.tab.js"></script>
+ </body>
+    <script>
+        appcan.ready(function() {
+            $("[data-index='3']").css("border-right","none")
+        });
+
+   var tabview = appcan.tab({
+        selector : "#tabview",
+        hasIcon : false,
+        hasAnim : false,
+        hasLabel : true,
+        hasBadge : false,
+        data : [{
+            label : "@我",
+        }, {
+            label : "私信",
+        }, {
+            label : "评论",
+        }, {
+            label : "通知",
+        }]
+    });
+    tabview.on("click",function(obj, index){
+    })
+ </script>
+</html>

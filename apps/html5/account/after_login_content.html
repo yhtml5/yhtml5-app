@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="../css/my.css">
+        <style type="text/css">
+            .ubt{border: none;}
+            .ubt .lis{border: none;}
+            .userInfo{background-color: rgba(0,0,0,0.4);color: #fff;padding: 0;}
+            .userInfoSec{padding: 0.1em 0;}
+            .userInfo .info{color: #fff !important;margin: 0.1em 0;}
+            .userInfo2{border-left: 1px solid #fff;border-right: 1px solid #fff;}
+            #listview1{background: url("../css/res/usercentercover01.jpg");}
+            #listview1 .lis-icon{border-radius: 3em;margin: 0.8em}
+            #listview1 .line1{color: #fff;}
+        </style>
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div id="listview1"  class="ubt bc-border sc-bg account_lis account_lis1"></div>
+            <div class="userInfo">
+                <div class="userInfoSec">
+                    <div class="num">
+                        0
+                    </div>
+                    <div class="info">
+                        动态
+                    </div>
+                </div>
+                <div class="userInfoSec userInfo2">
+                    <div class="num">
+                        9
+                    </div>
+                    <div class="info">
+                        关注
+                    </div>
+                </div>
+                <div class="userInfoSec">
+                    <div class="num">
+                        0
+                    </div>
+                    <div class="info">
+                        粉丝
+                    </div>
+                </div>
+            </div>
+         <div class="dark_title">我创建的歌单(1)</div>
+        <div id="listview2"  class="ubt bc-border sc-bg">
+</div>
+        <div class="dark_title">我收藏的歌单(1)</div>
+        <div id="listview3"  class="ubt bc-border sc-bg">
+</div>
+    </body>
+    <script src="../js/appcan.js"></script>
+    <script src="../js/appcan.control.js"></script>
+    <script src="../js/appcan.listview.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+        });
+        var lv1 = appcan.listview({
+            selector : "#listview1",
+            type : "thickLine",
+            hasIcon : true,
+            hasAngle : false,
+            hasSubTitle : true,
+            multiLine : 1,
+        });
+        lv1.set([{
+            title : "枕边小宝",
+            icon : "../css/res/default_head.png",
+            id : "1"
+        }])
+        lv1.on("click", function(ele, obj, curEle) {
+        })
+        var lv2 = appcan.listview({
+            selector : "#listview2",
+            type : "thinLine",
+            hasIcon : true,
+            hasAngle : true,
+            hasSubTitle : true,
+            multiLine : 1,
+        });
+        lv2.set([{
+                    icon : '../css/res/frame02cover03.jpg',
+                    title : '<div class="title">最近常听</div>'
+                },{
+                    icon : '../css/res/frame02cover03.jpg',
+                    title : '<div class="title">我喜欢的音乐</div><div class="subtit">2首，已下载1首</div>'
+                }]);
+        lv2.on("click",function(ele,obj,curEle){
+             appcan.window.open({
+                name:"playlist",
+                data:"../playlist.html",
+                aniId:10
+            })
+        })
+        
+        var lv3 = appcan.listview({
+            selector : "#listview3",
+            type : "thinLine",
+            hasIcon : true,
+            hasAngle : true,
+            hasSubTitle : true,
+            multiLine : 1,
+        });
+        
+        lv3.set([{
+                    icon : '../css/res/collectcover.jpg',
+                    title : '<div class="title">一开嗓就瞬间被吸引，根本hold不住</div><div class="subtit">Damores</div>'
+                }]);
+        lv3.on("click",function(ele,obj,curEle){
+             appcan.window.open({
+                name:"playlist",
+                data:"../playlist.html",
+                aniId:10
+            })
+        })
+
+    </script>
+</html>

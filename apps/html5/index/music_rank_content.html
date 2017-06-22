@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="../css/my.css">
+        <style type="text/css">
+            .playlist_playall2 {
+                text-indent: 1em;
+            }
+            .toolbar{display: none;}
+            .listview,.listview .lis{border:none;}
+            .num{position: absolute;top:1em;left:0.5em;color: #bdbdbd;}
+            .new{position: absolute;top:3em;left:0.5em;color: #5e9e5f;;font-size: 0.7em}
+            #listview2 .ub-img{margin-left: 3em;width:3.5em;}
+            #listview2 .lis{margin-bottom: -0.5em}
+            #listview2 .line1{font-size: 0.9em}
+            .note{margin-left: -0.2em}
+            .subtit{margin-top: 0.5em}
+        </style>
+    </head>
+    <body class="um-vp bc-bg playlist" ontouchstart>
+        <div class="ub ub-ver">
+            <div class=" umar-at1" >
+                <div id="listview1"  class="ubt bc-border c-wh listview">
+                </div>
+                <div id="listview2"  class="ubt bc-border sc-bg listview">
+                </div>
+            </div>
+
+        </div>
+        <script src="../js/appcan.js"></script>
+        <script src="../js/appcan.control.js"></script>
+        <script src="../js/appcan.listview.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+            $(".ub-img").parent().append("<div class='num'></div><div class='new'>NEW</div>");
+            
+            var num = 0;
+            var num_rank = document.getElementsByClassName("num");
+            for(var i=0;i<10;i++){
+                num++;
+                 var rank = "0"+num;
+                 if(num>9){
+                    rank = num;
+                }
+                 num_rank[i].innerHTML = rank;
+                if(num<4){
+                    num_rank[i].style.color = "#df3436";
+                }
+                
+            }
+            
+            
+        })
+        var lv1 = appcan.listview({
+            selector : "#listview1",
+            type : "thickLine",
+            hasIcon : true,
+            hasAngle : true,
+            hasSubTitle : false,
+            multiLine : 1
+        });
+        
+        lv1.set([{
+            title : "最新更新:12月5日"
+        }]);
+        lv1.on("click",function(ele,obj,curEle){
+            appcan.window.open({
+                name:"playlist",
+                data:"../playlist.html",
+                aniId:10
+            })
+        })
+        var lv2 = appcan.listview({
+            selector : "#listview2",
+            type : "thickLine",
+            hasIcon : true,
+            hasAngle : false,
+            hasSubTitle : false,
+            multiLine : 1,
+        });
+        lv2.set([{
+            title : "云音乐新歌榜<div class='subtit'>每天更新</div>",
+            icon:"./../css/res/frame0104cover01.jpg",
+            note:"<div class='subtit note'>热度:3767045</div>",
+            id:"1"
+        }, {
+            title : "云音乐新歌榜<div class='subtit'>每天更新</div>",
+            icon:"./../css/res/frame0104cover01.jpg",
+            note:"<div class='subtit note'>热度:3767045</div>",
+            id:"2"
+        }, {
+            title : "云音乐新歌榜<div class='subtit'>每天更新</div>",
+            icon:"./../css/res/frame0104cover01.jpg",
+            note:"<div class='subtit note'>热度:3767045</div>",
+            id:"3"
+        }, {
+            title : "云音乐新歌榜<div class='subtit'>每天更新</div>",
+            icon:"./../css/res/frame0104cover01.jpg",
+            note:"<div class='subtit note'>热度:3767045</div>",
+            id:"4"
+        }, {
+            title : "云音乐新歌榜<div class='subtit'>每天更新</div>",
+            icon:"./../css/res/frame0104cover01.jpg",
+            note:"<div class='subtit note'>热度:3767045</div>",
+            id:"5"
+        },{
+            title : "云音乐新歌榜<div class='subtit'>每天更新</div>",
+            icon:"./../css/res/frame0104cover01.jpg",
+            note:"<div class='subtit note'>热度:3767045</div>",
+            id:"6"
+        }, {
+            title : "云音乐新歌榜<div class='subtit'>每天更新</div>",
+            icon:"./../css/res/frame0104cover01.jpg",
+            note:"<div class='subtit note'>热度:3767045</div>",
+            id:"7"
+        }, {
+            title : "云音乐新歌榜<div class='subtit'>每天更新</div>",
+            icon:"./../css/res/frame0104cover01.jpg",
+            note:"<div class='subtit note'>热度:3767045</div>",
+            id:"8"
+        }, {
+            title : "云音乐新歌榜<div class='subtit'>每天更新</div>",
+            icon:"./../css/res/frame0104cover01.jpg",
+            note:"<div class='subtit note'>热度:3767045</div>",
+            id:"9"
+        }, {
+            title : "云音乐新歌榜<div class='subtit'>每天更新</div>",
+            icon:"./../css/res/frame0104cover01.jpg",
+            note:"<div class='subtit note'>热度:3767045</div>",
+            id:"10"
+        }])
+        lv2.on("click",function(ele,obj,curEle){
+             appcan.window.open({
+                name:"playlist",
+                data:"../playlist.html",
+                aniId:10
+            })
+        })
+        
+        
+
+    </script>
+</html>

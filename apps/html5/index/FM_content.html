@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <style type="text/css">
+        .play-up {position: relative;}
+        .play-up-bg {width: 100%;height: 100%;position: absolute;}
+        .playdisc {position:absolute; width: 50%; left: 50%;margin-left: -5em; top: 5em;}
+        
+        .play-up-toolbar {position: absolute;bottom:3em;width: 80%;margin: 0 10%;}
+        .play-up-toolbar .play-up-tool {-webkit-box-flex:1;text-align: center;}
+        .play-up-toolbar .play-up-tool img {width: 2em;}
+        
+        .play-control {position: absolute;width: 100%;bottom: 0;height: 3em;line-height: 1.8em;background-color: #fff;}
+        .play-control .loopmode {position: absolute;left: 0;padding: 0.7em;font-size: 0.9em}
+        .play-control .controllist {position: absolute;right: 0;padding: 0.7em;font-size: 0.9em}
+        .play-control .play-control-bar {position: absolute;left:3em; right: 3em;height: 3em;}
+        .play-control .play-control-bar img {width: 3em;height:3em;position: absolute;z-index:1}
+        .play-control .play-control-bar .play-control-bar-bg {height: 2em;margin-top: 0.5em;background-color: #D6D6D6;border-radius: 1em;width: 100%;}
+        </style>
+    </head>
+    <body class="um-vp bc-bg FM" ontouchstart>
+        <div class="play-up">
+            
+            <img src="../css/res/fmcover.jpg" alt="" class="playdisc">
+           
+        </div>
+
+        <div class="play-control">
+            <div class="loopmode">00:00</div>
+            <div class="controllist">03:53</div>
+             <div class="play-up-toolbar ub">
+                <div class="play-up-tool"><img src="../css/res/cm2_rdi_btn_love.png" alt="" class="ub-f1"></div>
+                <div class="play-up-tool"><img src="../css/res/cm2_rdi_btn_dlt.png" alt="" class="ub-f1"></div>
+                <div class="play-up-tool"><img src="../css/res/cm2_rdi_btn_next.png" alt="" class="ub-f1"></div>
+            </div>
+            <div class="play-control-bar">
+                <img src="../css/res/play_btn_play.png" alt="" data-click="0" class="play-control-btn" onclick="switchmusic(this)">
+                <div class="play-control-bar-bg"></div>
+            </div>
+        </div>
+    </body>
+    <script src="../js/appcan.js"></script>
+    <script src="../js/appcan.control.js"></script>
+    </body>
+    <script>
+        function playmusic () {
+            uexAudio.play(0);  
+        }
+
+        function stopmusic () {
+            uexAudio.pause();
+        }
+        
+        appcan.ready(function() {
+            uexAudio.open("res://Yes I Do.mp3");
+        });
+        $(".play-control-btn").attr("data-click", 0);
+        
+        appcan.button(".play-control-btn", "btn-act", function() {
+            if($(".play-control-btn").attr("data-click")==0){
+                $(".play-control-btn").attr("src","../css/res/play_btn_pause.png");
+                $(".play-control-btn").attr("data-click", 1);
+                playmusic ();
+            }else{
+                $(".play-control-btn").attr("src","../css/res/play_btn_play.png");
+                $(".play-control-btn").attr("data-click", 0);
+                stopmusic ();
+            }
+            
+        })
+
+    </script>
+</html>

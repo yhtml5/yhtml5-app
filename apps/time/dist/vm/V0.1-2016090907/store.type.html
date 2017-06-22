@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="yhtml5" ng-controller="controllers" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>YHTML5</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="yhtml5.com"/>
+    <meta name="keywords" content="">
+    <meta name="description" content=" ">
+    <meta name="HandheldFriendly" content="true">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <!-- other: default, black, black-translucent-->
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="./static/img/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="./static/yhtml5.css" />
+    <link rel="stylesheet" type="text/css" href="./static/index.css" />
+</head>
+
+
+<body class="y-body">
+<nav class="y-nav">
+    <div class="btn-group">
+        <a href="store.display.html#1" class="btn y-nav-red active">展示中</a>
+        <a href="store.undisplay.html#2" class="btn y-nav-red">已下架</a>
+        <a href="store.type.html#3" class="btn y-nav-red">分类</a>
+        <a href="store.decorate.html#4" class="btn y-nav-red">装饰</a>
+    </div>
+    <a href="store.search.html" class="y-cl-000"><i class="iconfont y-fs-20 y-m-l-10">&#xe600;</i></a>
+</nav>
+
+<div class="list-group y-m-t-10">
+    <a href="#" class="list-group-item y-list-group-item-none">
+        <div class="row">
+            <div class="col-xs-8 y-p-l-30 y-m-t-10">
+                <p class="list-group-item-heading y-fs-14 y-fw-b">未分类</p>
+                <p class="list-group-item-text y-fs-8">共2件商品</p>
+            </div>
+        </div>
+    </a>
+    <div class="row y-list-group-item y-m-t-2">
+        <a href="../store.detail.html" class="list-group-item y-list-group-item-none col-xs-6">
+            <div class="y-p-l-30 y-m-t-10">
+                <p class="list-group-item-heading y-fs-14 y-fw-b">毛绒玩具</p>
+                <p class="list-group-item-text y-fs-8">共12件商品</p>
+            </div>
+        </a>
+        <div class="col-xs-6 y-hide y-m-t-15" y-div="store.typeEdit">
+            <div href="#" class="col-xs-5 y-m-l-10" data-toggle="modal" y-btn="store.typeEdit">
+                <i class="iconfont y-m-l-6">&#xe608;</i>
+                <p>编辑</p>
+            </div>
+            <div class="y-y-line-30"></div>
+            <div href="#" class="col-xs-5" data-toggle="modal" y-modal="typeDeleteInfo">
+                <i class="iconfont y-m-l-6">&#xe601;</i>
+                <p>删除</p>
+            </div>
+        </div>
+    </div>
+    <div class="row y-list-group-item y-m-t-2">
+        <a href="#" class="col-xs-6 list-group-item y-list-group-item-none">
+            <div class="y-p-l-30 y-m-t-10">
+                <p class="list-group-item-heading y-fs-14 y-fw-b">益智类</p>
+                <p class="list-group-item-text y-fs-8">共2件新品</p>
+            </div>
+        </a>
+        <div class="col-xs-6 y-hide y-m-t-15" y-div="store.typeEdit">
+            <div href="#" class="col-xs-5 y-m-l-10">
+                <i class="iconfont y-m-l-6">&#xe608;</i>
+                <p>编辑</p>
+            </div>
+            <div class="y-y-line-30"></div>
+            <div href="#" class="col-xs-5" data-toggle="modal" y-modal="typeDeleteInfo">
+                <i class="iconfont y-m-l-6">&#xe601;</i>
+                <p>删除</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade y-type-modal" id="typeAdd">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header y-modal-header text-center">
+                <h4 class="modal-title y-fw-b">新建分类名称</h4>
+            </div>
+            <div class="modal-body" >
+                <input type="text" class="form-control" placeholder="建议不超过15字">
+            </div>
+            <div class="container y-m-t-30" >
+                <div class="row">
+                    <input type="button" class="btn btn-default col-xs-6 y-btn-left" data-dismiss="modal" value="取消">
+                    <input type="button" class="btn btn-default col-xs-6 y-cl-00CC00 y-btn-right" y-store="type.add.true" value="确定">
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade y-type-modal" id="typeEdit">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header y-modal-header text-center">
+                <h4 class="modal-title y-fw-b">编辑分类</h4>
+            </div>
+            <div class="modal-body" >
+                <input type="text" class="form-control" placeholder="巴拉巴拉小魔仙">
+            </div>
+            <div class="container y-m-t-30" >
+                <div class="row">
+                    <input type="button" class="btn btn-default col-xs-6 y-btn-left" data-dismiss="modal" value="取消">
+                    <input type="button" class="btn btn-default col-xs-6 y-cl-00CC00 y-btn-right" value="确定">
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="modal fade y-type-modal" id="typeDelete">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title y-fw-b">确定删除？</h4>
+            </div>
+            <div class="modal-body">
+                <p class="text-center">删除后，该分类下的商品不会被删除</p>
+            </div>
+            <div class="container y-m-t-30" >
+                <div class="row">
+                    <input type="button" class="btn btn-default col-xs-6 y-btn-left" data-dismiss="modal" value="取消">
+                    <input type="button" class="btn btn-default col-xs-6 y-btn-left y-cl-00CC00 y-btn-right" value="确定">
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<footer class="navbar navbar-inverse navbar-fixed-bottom" y-footer="store.type"  role="navigation">
+    <div class="row y-navbar-fixed-bottom">
+        <div class="col-xs-6" data-toggle="modal" y-modal="typeAddInfo">
+            <i class="iconfont y-m-r-10">&#xe602;</i>
+            <span>新建分类</span>
+        </div>
+        <div y-btn="store.typeEdit" class="col-xs-6">
+            <i class="iconfont y-m-r-10">&#xe604;</i>
+            <span>编辑分类</span>
+        </div>
+    </div>
+</footer>
+<footer class="navbar navbar-inverse navbar-fixed-bottom v-footer" y-footer="store.finish" role="navigation">
+    <div class="v-block" y-btn="store.finish">完成</div>
+</footer>
+<div y-modal="simple" class="y-hide v-modal-simple">
+    <p y-text="simple"></p>
+</div>
+<!--@require bower_components/bootstrap/dist/css/bootstrap.min.css-->
+<!--@require bower_components/bootstrap/dist/js/bootstrap.min.js-->
+<!--@require server/author.css-->
+<!--@require server/author.js-->
+
+<script type="text/javascript" src="./static/yhtml5.js"></script>
+<script type="text/javascript" src="./static/index.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

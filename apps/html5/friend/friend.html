@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="../css/my.css">
+        <style type="text/css">
+            #tabview{margin-left: 0.4em;width:100% !important;}
+        </style>
+    </head>
+    <body class="um-vp " ontouchstart>
+        <div id="page_0" class="up ub ub-ver bc-bg" tabindex="0">
+            <!--header开始-->
+            <div id="header" class="uh bc-text-head ub bc-head">
+                <div class="nav-btn" id="nav-left"><img src="../css/res/cm2_top_icn_invite_prs.png" class="addFr"/></div>
+                <h1 class="ut ub-f1 ulev-3 ut-s tx-c multab" tabindex="0"><div id="tabview" class="uf sc-bg">
+</div>
+</h1>
+                <div class="nav-btn nav-bt" id="nav-right"></div>
+            </div>
+            <!--header结束--><!--content开始-->
+            <div id="content" class="ub-f1 tx-l">
+
+            </div>
+            <!--content结束-->
+            <div id="footer" class="ub">
+                <div class="index ub-ver">
+                    <img src="../css/icons/main_index01.png" />
+                    <div>
+                        主页
+                    </div>
+                </div>
+                <div class="mymusic ub-ver">
+                    <img src="../css/icons/main_index02.png" />
+                    <div>
+                        收藏
+                    </div>
+                </div>
+                <div class="friend ub-ver focus">
+                    <img src="../css/icons/main_index03.png" />
+                    <div>
+                        交流
+                    </div>
+                </div>
+                <div class="account ub-ver">
+                    <img src="../css/icons/main_index04.png" />
+                    <div>
+                        账号
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <script src="../js/appcan.js"></script>
+        <script src="../js/appcan.control.js"></script>
+   <script src="../js/appcan.tab.js"></script>
+   <!-- <script src="../js/my.js"></script> -->
+ </body>
+    <script>
+        appcan.ready(function() {
+            var titHeight = $('#header').offset().height;
+            window.onorientationchange = window.onresize = function() {
+                appcan.frame.resize("content", 0, titHeight);
+            }
+             appcan.frame.open({
+                    id : "content",
+                    url : [{
+                        "inPageName" : "follow",
+                        "inUrl" : "friend_follow.html"
+                    }, {
+                        "inPageName" : "around",
+                        "inUrl" : "friend_around.html"
+                    }],
+                    top : titHeight,
+                    left : 0,
+                    index : 0,
+                    change : function(err, res) {//标点
+                        tabview.moveTo(res.multiPopSelectedIndex);
+                    }
+                });
+        });
+        appcan.button(".addFr", "btn-act", function() {
+            appcan.window.open({
+                    name : 'addfriend',
+                    data : 'add_friend.html'
+                })
+        })
+         appcan.button(".index", 'btn-act', function() {
+                appcan.window.open({
+                    name : 'index',
+                    data : '../index/index.html'
+                })
+            })
+
+            appcan.button(".mymusic", 'btn-act', function() {
+                appcan.window.open({
+                    name : 'mymusic',
+                    data : '../yhtml5/online.html'
+                })
+            })
+            appcan.button(".account", 'btn-act', function() {
+                appcan.window.open({
+                    name : 'account',
+                    data : '../account/account.html'
+                })
+            })
+            
+
+   var tabview = appcan.tab({
+        selector : "#tabview",
+        hasIcon : false,
+        hasAnim : false,
+        hasLabel : true,
+        hasBadge : false,
+        data : [{
+            label : "关注"
+            }, {
+            label : "身边"
+        }]
+    });
+    tabview.on("click",function(obj, index){
+        appcan.window.selectMultiPopover("content", index);
+    })
+ </script>
+</html>

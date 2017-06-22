@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="yhtml5" ng-controller="controllers" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>YHTML5</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="yhtml5.com"/>
+    <meta name="keywords" content="">
+    <meta name="description" content=" ">
+    <meta name="HandheldFriendly" content="true">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <!-- other: default, black, black-translucent-->
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="./static/img/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="./static/yhtml5.css" />
+    <link rel="stylesheet" type="text/css" href="./static/index.css" />
+</head>
+
+
+<body class="y-body">
+<nav class="text-center y-nav">
+    <h4 class="y-cl-ff0000">批量管理</h4>
+</nav>
+<div class="y-p-t-20">
+    <div class="list-group y-click-a y-m-b-n-1">
+    <a href="#" class="list-group-item y-list-group-item-top" y-radio="goodManager">
+        <div class="row">
+            <div class="col-xs-1 y-m-t-15">
+                <div class="y-empty" name="y-click-radio"></div>
+            </div>
+            <div class="col-xs-1">
+                <img src="./static/img/shortcut-icon.png" alt="" width="50">
+            </div>
+            <div class="col-xs-9 y-m-l-20 y-p-l-30">
+                <div class="y-manage-put" y-list="testTotalPut"></div>
+                <p class="list-group-item-heading y-fs-16 y-fw-b y-text-ellipsis">C&A女士白色银丝雪纺纱笼裙</p>
+                <p class="list-group-item-text y-fs-8 y-m-t-n-5">库存：<span>200</span>件&nbsp;进价：<span>80</span>元<br>商品来源：自己上传&nbsp;</p>
+            </div>
+        </div>
+    </a>
+</div>
+
+
+    <div class="list-group y-click-a y-m-b-n-1">
+    <a href="#" class="list-group-item y-list-group-item-top" y-radio="goodManager">
+        <div class="row">
+            <div class="col-xs-1 y-m-t-15">
+                <div class="y-empty" name="y-click-radio"></div>
+            </div>
+            <div class="col-xs-1">
+                <img src="./static/img/shortcut-icon.png" alt="" width="50">
+            </div>
+            <div class="col-xs-9 y-m-l-20 y-p-l-30">
+                <div class="y-manage-put" y-list="testTotalPut"></div>
+                <p class="list-group-item-heading y-fs-16 y-fw-b y-text-ellipsis">C&A女士白色银丝雪纺纱笼裙</p>
+                <p class="list-group-item-text y-fs-8 y-m-t-n-5">库存：<span>200</span>件&nbsp;进价：<span>80</span>元<br>商品来源：自己上传&nbsp;</p>
+            </div>
+        </div>
+    </a>
+</div>
+
+
+    <div class="list-group y-click-a y-m-b-n-1">
+    <a href="#" class="list-group-item y-list-group-item-top" y-radio="goodManager">
+        <div class="row">
+            <div class="col-xs-1 y-m-t-15">
+                <div class="y-empty" name="y-click-radio"></div>
+            </div>
+            <div class="col-xs-1">
+                <img src="./static/img/shortcut-icon.png" alt="" width="50">
+            </div>
+            <div class="col-xs-9 y-m-l-20 y-p-l-30">
+                <div class="y-manage-put" y-list="testTotalPut"></div>
+                <p class="list-group-item-heading y-fs-16 y-fw-b y-text-ellipsis">C&A女士白色银丝雪纺纱笼裙</p>
+                <p class="list-group-item-text y-fs-8 y-m-t-n-5">库存：<span>200</span>件&nbsp;进价：<span>80</span>元<br>商品来源：自己上传&nbsp;</p>
+            </div>
+        </div>
+    </a>
+</div>
+
+
+</div>
+<div class="text-center y-m-t-40">
+    <button type="button" class="btn btn-info" y-btn="testTotalPut">测试</button>
+</div>
+<footer class="navbar navbar-inverse navbar-fixed-bottom" role="navigation" y-btn="manage.put">
+    <div class="row y-navbar-fixed-bottom-none">
+        <div class="col-xs-12" data-toggle="modal" y-modal="classifyInfo">
+            取消分类
+        </div>
+    </div>
+</footer>
+
+<div class="modal fade y-modal" id="classifyInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog y-modal-dialog">
+        <div class="modal-content" style="border-radius: 0;border: none">
+            <div class="modal-header y-bgc-eee">
+                <h4 class="modal-title" id="myModalLabel">分类至</h4>
+            </div>
+            <div class="modal-body">
+                <ul class="list-group y-list-group">
+                    <li class="list-group-item">
+                        <div class="row">
+                            <label class="radio-inline col-xs-8">
+                                <div  class="y-radio-success y-success y-float-left y-m-t-5"></div>
+                                <span class="y-m-l-10">毛绒玩具</span>
+                            </label>
+                            <small class="col-xs-4 text-right">共12件商品</small>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <label class="radio-inline col-xs-8">
+                                <div class="y-radio-success y-success y-float-left y-m-t-5"></div>
+                                <span class="y-m-l-10">益智类</span>
+                            </label>
+                            <small class="col-xs-4 text-right">共5件商品</small>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <label class="radio-inline col-xs-8">
+                                <div class="y-radio-success y-success y-float-left y-m-t-5"></div>
+                                <span class="y-m-l-10">赛车类</span>
+                            </label>
+                            <small class="col-xs-4 text-right">共0件商品</small>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="text-center">
+                            <i class="iconfont y-fs-20">&#xe602;</i>
+                            <span>新建分类</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <div class="container">
+                    <div class="row center-block text-center">
+                        <button type="button" class="btn col-xs-6 y-btn-classify block-center" data-dismiss="modal">取消</button>
+                        <a href="store.display.html" class="btn btn-success y-btn-classify">确定</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div y-modal="simple" class="y-hide v-modal-simple">
+    <p y-text="simple"></p>
+</div>
+<!--@require bower_components/bootstrap/dist/css/bootstrap.min.css-->
+<!--@require bower_components/bootstrap/dist/js/bootstrap.min.js-->
+<!--@require server/author.css-->
+<!--@require server/author.js-->
+
+<script type="text/javascript" src="./static/yhtml5.js"></script>
+<script type="text/javascript" src="./static/index.js"></script>
+</body>
+</html>
+
+
+
+

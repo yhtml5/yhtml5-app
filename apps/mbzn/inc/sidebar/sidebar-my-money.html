@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title></title>
+		<!-- 永不缓存，测试结束后，删除下面三个meta  -->
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="expires" content="0">
+		<meta http-equiv="cache-control" content="no-cache">
+
+		<meta charset="utf-8">
+		<meta name="HandheldFriendly" content="true">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../res/css/mui.min.css" rel="stylesheet" />
+		<link href="../../res/css/yhtml5.css" rel="stylesheet" />
+	</head>
+
+	<body id="fw-smg-body">
+		<div id="fw-bgcd0d1d8" class="mui-content">
+			<div class="mui-content-padded fw-m0">
+				<span id="fw-smg-icon-info" class="mui-icon mui-icon-info"></span>
+				<div class="fw-bgc191b22">
+					<div id="fw-smm-div2" class="fw-font-center">
+						<div class="fw-smg-div3">
+							<img src="../../res/img/meney_pic.png" />
+						</div>
+						<div class="fw-smm-div1">
+							<h1 class="">120</h1>
+							<h5 class="fw-smg-h1">今日已赚（元）</h5>
+						</div>
+
+						<p class="fw-smm-p">100步=1元</p>
+
+					</div>
+				</div>
+
+				<div id="" class="fw-mt15 fw-font-center fw-smg-div2">
+					<h5 id="fw-smg-h2">累计可消费金额（元）</h5>
+					<div class="mui-table fw-smg-count">
+						<div class="fw-smg-div5 mui-table-cell mui-col-xs-3">
+							<div class="fw-smg-div3">
+								<img src="../../res/img/bg-icon3.png" />
+							</div>
+							<div class="fw-smg-div4">
+								0
+							</div>
+						</div>
+						<div class="fw-smg-div5 mui-table-cell mui-col-xs-3">
+							<div class="fw-smg-div3">
+								<img src="../../res/img/bg-icon3.png" />
+							</div>
+							<div class="fw-smg-div4">
+								0
+							</div>
+						</div>
+						<div class="fw-smg-div5 mui-table-cell mui-col-xs-3">
+							<div class="fw-smg-div3">
+								<img src="../../res/img/bg-icon3.png" />
+							</div>
+							<div class="fw-smg-div4">
+								0
+							</div>
+						</div>
+						<div class="fw-smg-div5 mui-table-cell mui-col-xs-3">
+							<div class="fw-smg-div3">
+								<img src="../../res/img/bg-icon3.png" />
+							</div>
+							<div class="fw-smg-div4">
+								0
+							</div>
+						</div>
+						<div class="fw-smg-div5 mui-table-cell mui-col-xs-3">
+							<div class="fw-smg-div3">
+								<img src="../../res/img/bg-icon3.png" />
+							</div>
+							<div class="fw-smg-div4">
+								0
+							</div>
+						</div>
+						<div class="fw-smg-div5 mui-table-cell mui-col-xs-3">
+							<div class="fw-smg-div3">
+								<img src="../../res/img/bg-icon3.png" />
+							</div>
+							<div class="fw-smg-div4">
+								0
+							</div>
+						</div>
+						<div class="fw-smg-div5 mui-table-cell mui-col-xs-3">
+							<div class="fw-smg-div3">
+								<img src="../../res/img/bg-icon3.png" />
+							</div>
+							<div class="fw-smg-div4">
+								0
+							</div>
+						</div>
+						<div class="fw-smg-div5 mui-table-cell mui-col-xs-3">
+							<div class="fw-smg-div3">
+								<img src="../../res/img/bg-icon3.png" />
+							</div>
+							<div class="fw-smg-div4">
+								0
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--解说层1-->
+		<div id="fw-smm-popover1" class="mui-backdrop fw-dn">
+			<div id="fw-smg-popover2" class="">
+				<h4 class="fw-smg-h4">什么是可消费金额?</h4>
+				<p>可消费金额是指当您每天通过走路所赚到的金额，每走100步，立赚一块钱。</p>
+				<h4 class="fw-smg-h4">可消费金额的用途?</h4>
+				<p>1、购买新年福袋，给朋友送祝福 </p>
+				<p>2、可消费金额可用于抽奖，免费兑换商品（正在开发中）</p>
+				<div class="fw-font-center">
+					<span id="fw-ctt-btn2" class="mui-btn mui-btn-success">
+					朕知道了
+				</span>
+				</div>
+			</div>
+		</div>
+		<script src="../../res/js/jquery-2.2.0.min.js"></script>
+		<!--<script src="../../res/js/mui.min.js"></script>-->
+		<script type="text/javascript" charset="utf-8">
+			if (/MicroMessenger/i.test(navigator.userAgent)) { //这是微信平台下浏览器
+				//nothing
+			} else if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) { //这是iOS平台下浏览器
+				$(".fw-bgc191b22").css("paddingTop", "40px")
+				$("#fw-smg-icon-info").css("paddingTop", "40px")
+			} else { //这是Android平台下浏览器+其他系统
+				//I don't know
+			}
+			$(document).ready(function() {
+				$('#fw-smg-icon-info').click(function() {
+					$('#fw-smm-popover1').show();
+				});
+				$('#fw-smm-popover1').click(function() {
+					$('#fw-smm-popover1').hide();
+				});
+			})
+		</script>
+	</body>
+
+</html>

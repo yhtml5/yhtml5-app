@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>应用商店丨编辑环境</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="res/css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="res/css/yhtml5-sas.css" />
+		<script src="res/js/iscroll.js"></script>
+		<script src="res/js/pullToRefresh.js"></script>
+	</head>
+
+	<body>
+		<div class="y-head">
+			<h3 class="">Best Apps</h3>
+		</div>
+		<div id="wrapper" class="mui-content y-bgc333333">
+			<ul class="y-app-ul mui-table-view mui-table-view-chevron">
+				<li class="mui-table-view-cell mui-media">
+					<img class="mui-media-object mui-pull-left" src="res/img/game10.png">
+					<div class="mui-media-body">
+						美白走 <span class="y-hot">HOT!</span>
+						<p class='pr5'>下载就送新年红包</p>
+						<h6 class="y-mtf5"><span class="mui-badge mui-badge-primary">健康运动</span>&nbsp;<span class="mui-badge mui-badge-warning">10M</span>&nbsp;<span class="mui-badge mui-badge-purple mui-push-left">160W+下载</span></h6>
+					</div>
+					<span class="mui-btn mui-btn-success mui-right mui-btn-outlined"><a href="res/mbzn.apk">GET</a></span>
+
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<img class="mui-media-object mui-pull-left" src="res/img/game11.png">
+					<div class="mui-media-body">
+						Pop Star&nbsp;
+						<!--<span class="y-hot">HOT!</span>-->
+						<p class="pr5">Pop Star is a game with funny box and clear the box</p>
+						<h6 class="y-mtf5"><span class="mui-badge mui-badge-success">Action</span>&nbsp;<span class="mui-badge mui-badge-warning">16M</span>&nbsp;<span class="mui-badge mui-badge-purple mui-push-left">16W+  downloads</span></h6>
+					</div>
+					<span class="mui-btn mui-btn-success mui-right mui-btn-outlined">GET</span>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<img class="mui-media-object mui-pull-left" src="res/img/game1.png">
+					<div class="mui-media-body">
+						Pop Star&nbsp;
+						<!--<span class="y-hot">HOT!</span>-->
+						<p class="pr5">Pop Star is a game with funny box and clear the box</p>
+						<h6 class="y-mtf5"><span class="mui-badge mui-badge-primary">War</span>&nbsp;<span class="mui-badge mui-badge-warning">16M</span>&nbsp;<span class="mui-badge mui-badge-purple mui-push-left">16W+  GETloads</span></h6>
+					</div>
+					<span class="mui-btn mui-btn-success mui-right mui-btn-outlined">GET</span>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<img class="mui-media-object mui-pull-left" src="res/img/game2.png">
+					<div class="mui-media-body">
+						Pop Star&nbsp;
+						<!--<span class="y-hot">HOT!</span>-->
+						<p class="pr5">Pop Star is a game with funny box and clear the box</p>
+						<h6 class="y-mtf5"><span class="mui-badge mui-badge-danger">RPG</span>&nbsp;<span class="mui-badge mui-badge-warning">16M</span>&nbsp;<span class="mui-badge mui-badge-purple mui-push-left">16W+  downloads</span></h6>
+					</div>
+					<span class="mui-btn mui-btn-success mui-right mui-btn-outlined">GET</span>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<img class="mui-media-object mui-pull-left" src="res/img/game3.png">
+					<div class="mui-media-body">
+						Pop Star&nbsp;
+						<!--<span class="y-hot">HOT!</span>-->
+						<p class="pr5">Pop Star is a game with funny box and clear the box</p>
+						<h6 class="y-mtf5"><span class="mui-badge mui-badge-success">Action</span>&nbsp;<span class="mui-badge mui-badge-warning">16M</span>&nbsp;<span class="mui-badge mui-badge-purple mui-push-left">16W+  downloads</span></h6>
+					</div>
+					<span class="mui-btn mui-btn-success mui-right mui-btn-outlined">GET</span>
+				</li>
+			</ul>
+		</div>
+		<script>
+			refresher.init({
+				id: "wrapper",
+				pullDownAction: Refresh,
+				pullUpAction: Load
+			});
+
+			function Refresh() { //下拉刷新
+				setTimeout(function() { // 模拟3G网络信号，实际中删除setTimeout
+					var el, li, i;
+					el = document.querySelector("#wrapper ul");
+					for (i = 0; i < 3; i++) {
+						var j = Math.ceil(Math.random() * 10);
+						li = document.createElement('li');
+						li.className = "mui-table-view-cell mui-media";
+						li.innerHTML = "<img class='mui-media-object mui-pull-left' src='res/img/game" + j + ".png'><div class='mui-media-body'>Pop Star&nbsp;<span class='y-new'>NEW!</span><p class='pr5'>Pop Star is a game with funny box and clear the box</p><h6 class='y-mtf5'><span class='mui-badge mui-badge-danger'>RPG</span>&nbsp;<span class='mui-badge mui-badge-warning'>16M</span>&nbsp;<span class='mui-badge mui-badge-purple mui-push-left'>16W+&nbsp;downloads</span></h6></div><span class='mui-btn mui-btn-success mui-right mui-btn-outlined'>GET</span>"
+						el.insertBefore(li, el.childNodes[0]);
+					}
+					document.getElementById("wrapper").querySelector(".pullDownIcon").style.display = "none";
+					document.getElementById("wrapper").querySelector(".pullDownLabel").innerHTML = '<span class="mui-icon mui-icon-checkmarkempty y-checkmarkempty"></span><span>刷新成功</span>';
+					setTimeout(function() {
+						wrapper.refresh();
+						document.getElementById("wrapper").querySelector(".pullDownLabel").innerHTML = "";
+					}, 1000); //模拟qq下拉刷新显示成功效果
+					//记得在动作完成后刷新！ ---yourId.refresh()
+				}, 500);
+			}
+
+			function Load() {
+				setTimeout(function() { // 模拟3G网络信号，实际中删除setTimeout
+					var el, li, i;
+					el = document.querySelector("#wrapper ul");
+					for (i = 0; i < 3; i++) {
+						var j = Math.ceil(Math.random() * 10);
+						li = document.createElement('li');
+						li.className = "mui-table-view-cell mui-media";
+						li.innerHTML = "<img class='mui-media-object mui-pull-left' src='res/img/game" + j + ".png'><div class='mui-media-body'>Pop Star&nbsp;<span class='y-hot'>HOT!</span><p class='pr5'>Pop Star is a game with funny box and clear the box</p><h6 class='y-mtf5'><span class='mui-badge mui-badge-primary'>War</span>&nbsp;<span class='mui-badge mui-badge-warning'>16M</span>&nbsp;<span class='mui-badge mui-badge-purple mui-push-left'>16W+  downloads</span></h6></div><span class='mui-btn mui-btn-success mui-right mui-btn-outlined'>GET</span>"
+						el.appendChild(li, el.childNodes[0]);
+					}
+					wrapper.refresh(); //记得在动作完成后刷新！ ---yourId.refresh()
+				}, 500);
+			}
+
+			function RefreshContentAdd() {}
+
+			function RefreshContentDown() {}
+
+			function RefreshContentUp() {}
+		</script>
+	</body>
+
+</html>

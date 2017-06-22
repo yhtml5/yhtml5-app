@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="../css/my.css">
+        <style type="text/css">
+            #header{height: 3em;}
+            #nav-left{font-size: 2em;margin:-0.5em -30% -0.4em -35%}
+            #tabview1{top:-0.2em;}
+            #tabview2{height: 2.4em}
+            .tab_l .focus{width:35% !important;}
+        </style>
+    </head>
+    <body class="um-vp " ontouchstart>
+        <div id="page_0" class="up ub ub-ver bc-bg" tabindex="0">
+            <!--header开始-->
+            <div id="header" class="uh bc-text-head ub bc-head">
+                <div class="nav-btn fa fa-angle-left ub-f1" id="nav-left"></div>
+                <h1 class="ut ub-f1 ulev-3 ut-s tx-c multab" tabindex="0"><div id="tabview1" class="uf sc-bg">
+</div>
+
+                <div class="nav-btn nav-bt" id="nav-right"></div>
+            </div>
+            <!--header结束--><!--content开始-->
+            <div id="content" class="ub-f1 tx-l">
+                <div id="tabview2" class="uf sc-bg">
+</div>
+
+            </div>
+            <!--content结束-->
+
+        </div>
+        <script src="../js/appcan.js"></script>
+        <script src="../js/appcan.control.js"></script>
+   <script src="../js/appcan.tab.js"></script>
+ </body>
+    <script>
+        appcan.ready(function() {
+            var titHeight = $('#header').offset().height + $('#tabview2').offset().height;
+            window.onorientationchange = window.onresize = function() {
+                appcan.frame.resize("content", 0, titHeight);
+            }
+            appcan.frame.open({
+                    id : "content",
+                    url : [{
+                        "inPageName" : "download_music",
+                        "inUrl" : "download_music.html"
+                    }, {
+                        "inPageName" : "download_singer",
+                        "inUrl" : "download_singer.html"
+                    }, {
+                        "inPageName" : "download_disc",
+                        "inUrl" : "download_disc.html"
+                    }],
+                    top : titHeight,
+                    left : 0,
+                    index : 0,
+                    change : function(err, res) {//标点
+                        tabview2.moveTo(res.multiPopSelectedIndex);
+                    }
+                });
+        });
+        appcan.button(".nav-btn", "btn-act", function() {
+            appcan.window.close(-1);
+        })
+
+   var tabview1 = appcan.tab({
+        selector : "#tabview1",
+        hasIcon : false,
+        hasAnim : true,
+        hasLabel : true,
+        hasBadge : false,
+        data : [{
+            label : "已下载"
+        }, {
+            label : "下载中"
+        }]
+    });
+    tabview1.on("click",function(obj, index){
+    })
+    var tabview2 = appcan.tab({
+        selector : "#tabview2",
+        hasIcon : false,
+        hasAnim : true,
+        hasLabel : true,
+        hasBadge : false,
+        data : [{
+            label : "歌曲",
+        }, {
+            label : "歌手 ",
+        }, {
+            label : "专辑",
+        }]
+    });
+    tabview2.on("click",function(obj, index){
+        appcan.window.selectMultiPopover("content", index);
+    })
+    
+    $("#tabview1 .ulev-1").on("click",function(){
+        var titHeight = $('#header').offset().height;
+        var index = $(this).attr("data-index");
+        if(index==1){
+        appcan.frame.open({
+            name:"download_ing",
+            url:"download_ing.html",
+            top:titHeight
+        })
+        }else{
+            appcan.frame.close('download_ing');
+        }
+    })
+ </script>
+</html>

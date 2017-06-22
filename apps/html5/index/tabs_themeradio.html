@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <!--<link rel="stylesheet" href="../css/fonts/font-awesome.min.css">-->
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="../css/my.css">
+        <link rel="stylesheet" href="../css/table.css">
+        <link rel="stylesheet" href="../res/font-awesome-master/css/font-awesome.min.css">    
+         <style type="text/css">
+             .radio_pic{height: 8.5em;width: 100%;margin-bottom: 1em}
+         </style>
+    </head>
+    <body class="um-vp " ontouchstart>
+        <div id="page_0" class="up ub ub-ver bc-bg radio" tabindex="0">
+            <!--header开始-->
+            <!--header结束-->
+            <img src="../css/res/frame0101cover03.png" class="radio_pic"/>
+            <!--content开始-->
+            <div id="content" class="ub-f1 tx-l">
+                <div class="sec_tit">
+                    <div class="title_bar"></div><span>HTML5全属性</span></div><br />
+      <table id="y-table" class="y-font-center">
+       <tr id="y-tr-green">
+         <th colspan="5" id="y-th-green">浏览器支持</th></tr>
+         <tr id="y-tr-green">
+         <td id="y-td"><i class="fa fa-internet-explorer fa-3x"></i></td>
+         <td id="y-td"><i class="fa fa-safari fa-3x fa-spin"></i></td>
+         <td id="y-td"><i class="fa fa-firefox fa-3x"></i></td>
+         <td id="y-td"><i class="fa fa-chrome fa-3x fa-spin"></i></td>
+         <td id="y-td"><i class="fa fa-opera fa-3x"></i></td>
+       </tr>
+       <tr id="y-tr-green">
+         <td id="y-td">Explorer</td>
+         <td id="y-td">Safari</td>
+         <td id="y-td">Firefox</td>
+         <td id="y-td">Chrome</td>
+         <td id="y-td">Opera</td></tr>
+       <tr id="y-tr-green">
+         <td id="y-td">IE 9+</td>
+         <td id="y-td">&radic;</td>
+         <td id="y-td">&radic;</td>
+         <td id="y-td">&radic;</td>
+         <td id="y-td">&radic;</td></tr>
+       </table><br /><br /><br />
+           <div class="sec_tit">
+                  <div class="title_bar"></div><span>我是来测试的，写点音乐</span></div><br />
+                <div id="listview"  class="ubt bc-border sc-bg"></div>
+
+            </div>
+            <!--content结束-->
+        </div>
+        <script src="../js/appcan.js"></script>
+        <script src="../js/appcan.control.js"></script>
+        <script src="../js/appcan.slider.js"></script>
+   <script src="../js/appcan.listview.js"></script>
+ </body>
+    <script>
+       appcan.ready(function() {
+           
+        })
+   var lv = appcan.listview({
+        selector : "#listview",
+        type : "thinLine",
+        hasIcon : true,
+        hasAngle : true,
+        hasSubTitle : true,
+        multiLine : 1,
+    });
+    
+    lv.set([{
+        title : "节目排行榜<div class='subtit'>田园牧歌 - Vol.3</div>",
+        icon:"../css/res/frame0103cover12.jpg",
+        id:"1"
+    }, {
+        title : "流行未满<div class='subtit'><span class='redtit'>音乐故事</span>田园牧歌 - Vol.3</div>",
+        icon:"../css/res/frame0103cover02.jpg",
+        id:"2"
+    }, {
+        title : "楚乔漫生活 #18_ 不上要癌症的当<div class='subtit'><span class='redtit'>音乐故事</span>全明星Radio</div>",
+        icon:"../css/res/frame0103cover03.jpg",
+        id:"3"
+    }, {
+        title : "鬼台第259期：热带巴士欢乐指南<div class='subtit'><span class='redtit'>音乐故事</span>鬼台</div>",
+        icon:"../css/res/frame0103cover04.jpg",
+        id:"4"
+    }, {
+        title : "【就爱听老歌】The Beatles<div class='subtit'><span class='redtit'>音乐故事</span>夏小薇的音乐时代</div>",
+        icon:"../css/res/frame0103cover05.jpg",
+        id:"5"
+    }, {
+        title : "【聼voice】她、梦<div class='subtit'><span class='redtit'>音乐故事</span>聼voice</div>",
+        icon:"../css/res/frame0103cover06.jpg",
+        id:"6"
+    },{
+        title : "极致感受LaLaLa<div class='subtit'><span class='redtit'>音乐故事</span>王东电台</div>",
+        icon:"../css/res/frame0103cover07.jpg",
+        id:"7"
+    },{
+        title : "傻子才悲伤<div class='subtit'><span class='redtit'>音乐故事</span>嘎电台Radio GaGa</div>",
+        icon:"../css/res/frame0103cover08.jpg",
+        id:"8"
+    },{
+        title : "教会你爱与被爱<div class='subtit'><span class='redtit'>音乐故事</span>穿越繁华与落寞，只愿与你相遇。</div>",
+        icon:"../css/res/frame0103cover09.jpg",
+        id:"9"
+    }, {
+        title : "星星的密室<div class='subtit'><span class='redtit'>音乐故事</span>在这里，听到明星密室中的秘密</div>",
+        icon:"../css/res/frame0103cover10.jpg",
+        id:"10"
+    },{
+        title : "爵士当铺<div class='subtit'><span class='redtit'>音乐故事</span>媒体人 原创歌手</div>",
+        icon:"../css/res/frame0103cover11.jpg",
+        id:"11"
+    }])
+    lv.on("click",function(ele,obj,curEle){
+        if(obj.id==1){
+            appcan.window.open({
+                name:"music_rank",
+                data:"music_rank.html",
+                aniId:10
+        })
+        }else{
+            appcan.window.open({
+                name : 'playnow',
+                data : '../playnow.html',
+                aniId:10
+        })
+        }
+    })
+ </script>
+</html>

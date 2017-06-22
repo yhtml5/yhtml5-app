@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="../css/my.css">
+        <style type="text/css">
+            body{background-color: #F3F3F3 !important;}
+            .search-bg{background-color: #E7E8EC;margin-top: -0.5em;height: 2em;padding: 0.5em 1em;}
+            .uinput {
+                height: 1.5em;
+                border: 1px solid #E7E8EC;
+                border-radius: 0.4em;
+                margin: 0.5em 0 0;
+                background-color: #fff;
+            }
+            .uinput input {
+                font-size: 0.8em;
+            }
+            .uinput .sc-text {
+                color: #C7C7C7;
+                font-size: 1.2em;
+                line-height: 0.7em;
+            }
+            .uinput .sc-text::before{display: none;}
+            .playall{padding: 0.5em 0 0.2em;border-bottom: 1px solid #e0e0e0;}
+            .item-content{text-indent: -4em;}
+            .toolbar{display: none;}
+        </style>
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div class="search-bg">
+            <div class="sc-bg-active uinput ub ub-f1  bc-border uba">
+            <div class="uinn fa fa-search sc-text"></div>
+            <input placeholder="搜索下载歌曲" type="text" class="ub-f1">
+        </div>
+        </div>
+        <div class="playall ub">
+                    <div class="ub-f1">
+                        <img src="../css/res/musiclistplay.png" class="playlist_playall playlist_playall1">
+                    </div>
+                    <div class="ub-f1">
+                        <div class="playlist_playall2">
+                            播放全部
+                        </div>
+                    </div>
+        </div>
+        <div class="musiclist-item ub">
+                    <div class="item ub-f1">
+                        <div class="item-content">
+                            <div class="music-name">
+                                怕寂寞
+                            </div>
+                            <div class="singer-name">
+                                3.1M 以莉.高露 - 轻快的生活
+                            </div>
+                        </div>
+                        <div class="item-arrow" onclick="openBar(0,this)">
+                            <img src="../css/res/musiclistmore.png" >
+                        </div>
+                    </div>
+        </div>
+    </body>
+    <script src="../js/appcan.js"></script>
+    <script src="../js/appcan.control.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+            var toolbar = '<div class="toolbar">'+
+                        '<div class="userinfocol">'+
+                            '<div class="info"><img src="../css/res/musiclisttool01.png" alt="">'+
+                            '</div>'+
+                            '<div class="num">收藏</div>'+
+                        '</div>'+
+                        '<div class="userinfocol download">'+
+                            '<div class="info"><img src="../css/res/musiclisttool02.png" alt="">'+
+                            '</div>'+
+                            '<div class="num">下载</div>'+
+                        '</div>'+
+                        '<div class="userinfocol share">'+
+                            '<div class="info"><img src="../css/res/musiclisttool03.png" alt="">'+
+                            '</div>'+
+                            '<div class="num">分享</div>'+
+                        '</div>'+
+                        '<div class="userinfocol">'+
+                            '<div class="info"><img src="../css/res/musiclisttool04.png" alt="">'+
+                            '</div>'+
+                            '<div class="num">歌手</div>'+
+                        '</div>'+
+                        '<div class="userinfocol">'+
+                            '<div class="info"><img src="../css/res/musiclisttool05.png" alt="">'+
+                            '</div>'+
+                            '<div class="num">专辑</div>'+
+                        '</div>'+
+                    '</div>'
+            $(".musiclist-item").after(toolbar);
+            $(".toolbar").attr("data-click", 0);
+        })
+        appcan.button(".playall", "btn-act", function() {
+            appcan.window.open({
+                name : 'playnow',
+                data : '../playnow.html',
+                aniId:10
+            })
+        })
+        
+        function openBar(index,obj){
+            var toolbarlist = document.getElementsByClassName('toolbar');
+            var toolbarimg = obj.getElementsByTagName("img")[0];
+            var clicktoolitem = toolbarlist[index];
+            var click = clicktoolitem.getAttribute("data-click");
+            var item_arrow = document.getElementsByClassName("item-arrow");
+            // 一次只打开一个tool
+            for (var i = 0; i < toolbarlist.length; i++) {
+                toolbarlist[i].setAttribute("data-click", 0);
+                toolbarlist[i].style.display = 'none';
+                item_arrow[i].getElementsByTagName("img")[0].src = "../css/res/musiclistmore.png";
+            }
+        
+            if (click == 0) {
+                // 点开
+                clicktoolitem.setAttribute("data-click", 1);
+                toolbarimg.src = "../css/res/musiclistmore_prs.png";
+                clicktoolitem.style.display = '-webkit-box';
+            }else {
+                // 关闭
+                clicktoolitem.setAttribute("data-click", 0);
+                toolbarimg.src = "../css/res/musiclistmore.png";
+                clicktoolitem.style.display = 'none';
+            }
+        }
+        
+        $(".download").live("click",function(){
+            appcan.window.confirm({
+                title : '下载',
+                content : '下载本首歌？',
+                buttons : ['确定', '取消']
+            });
+        })
+        $(".share").live("click",function(){
+            appcan.window.openPopover({
+                name:'share',
+                dataType:0,
+                url:"../account/share.html",
+                top:0,
+                left:0,
+                width:0,
+                height:0
+           });
+        })
+
+       
+ </script>
+</html>

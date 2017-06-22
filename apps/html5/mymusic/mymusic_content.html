@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="../css/my.css">
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div id="listview1"  class="ubt bc-border sc-bg">
+</div>
+        <div class="dark_title">我创建的歌单(1)</div>
+        <div id="listview2"  class="ubt bc-border sc-bg">
+</div>
+        <div class="dark_title">我收藏的歌单(1)</div>
+        <div id="listview3"  class="ubt bc-border sc-bg">
+</div>
+
+
+        <script src="../js/appcan.js"></script>
+        <script src="../js/appcan.control.js"></script>
+        <script src="../js/appcan.listview.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+        })
+   
+   var lv1 = appcan.listview({
+    selector : "#listview1",
+    type : "thinLine",
+    hasIcon : true,
+    hasAngle : true,
+    hasSubTitle : true,
+    multiLine : 1,
+});
+lv1.set([{
+            icon : '../css/res/frame02cover01.png',
+            title : '下载音乐',
+            id:"1"
+        }, {
+            icon : '../css/res/frame02cover02.png',
+            title : '最近播放',
+            id:"2"
+        }]);
+lv1.on("click",function(ele,obj,curEle){
+    if(obj.id==1){
+        appcan.window.open({
+            name:"download",
+            data:"download.html",
+            aniId:10
+        })
+    }else{
+        appcan.window.open({
+                name:"newsong",
+                data:"recentplay.html",
+                aniId:10
+        })
+    }
+})
+var lv2 = appcan.listview({
+    selector : "#listview2",
+    type : "thinLine",
+    hasIcon : true,
+    hasAngle : true,
+    hasSubTitle : true,
+    multiLine : 1,
+});
+lv2.set([{
+            icon : '../css/res/frame02cover03.jpg',
+            title : '<div class="title">我喜欢的音乐</div><div class="subtit">2首，已下载1首</div>'
+        }]);
+lv2.on("click",function(ele,obj,curEle){
+     appcan.window.open({
+        name:"playlist",
+        data:"../playlist.html",
+        aniId:10
+    })
+})
+
+var lv3 = appcan.listview({
+    selector : "#listview3",
+    type : "thinLine",
+    hasIcon : true,
+    hasAngle : true,
+    hasSubTitle : true,
+    multiLine : 1,
+});
+
+lv3.set([{
+            icon : '../css/res/collectcover.jpg',
+            title : '<div class="title">一开嗓就瞬间被吸引，根本hold不住</div><div class="subtit">Damores</div>'
+        }]);
+lv3.on("click",function(ele,obj,curEle){
+     appcan.window.open({
+        name:"playlist",
+        data:"../playlist.html",
+        aniId:10
+    })
+})
+ </script>
+</html>

@@ -1,0 +1,207 @@
+{
+    "res": {
+        "fis-conf.js": {
+            "uri": "/config/fis-conf.js",
+            "type": "js"
+        },
+        "components/css/animation.css": {
+            "uri": "/vendor/components/css/animation.css",
+            "type": "css",
+            "deps": [
+                "components/css/bootstrap.base.css",
+                "components/css/bootstrap.component.css"
+            ],
+            "pkg": "p0"
+        },
+        "components/css/base.css": {
+            "uri": "/vendor/components/css/base.css",
+            "type": "css",
+            "deps": [
+                "components/css/animation.css",
+                "components/css/box.css",
+                "components/css/custom.css"
+            ],
+            "pkg": "p0"
+        },
+        "components/css/bootstrap.base.css": {
+            "uri": "/vendor/components/css/bootstrap.base.css",
+            "type": "css",
+            "deps": [
+                "components/css/bootstrap.component.css"
+            ],
+            "pkg": "p0"
+        },
+        "components/css/bootstrap.component.css": {
+            "uri": "/vendor/components/css/bootstrap.component.css",
+            "type": "css",
+            "deps": [
+                "server/author.css"
+            ],
+            "pkg": "p0"
+        },
+        "components/css/box.css": {
+            "uri": "/vendor/components/css/box.css",
+            "type": "css",
+            "deps": [
+                "components/css/animation.css",
+                "components/css/bootstrap.base.css",
+                "components/css/bootstrap.component.css",
+                "components/css/custom.css"
+            ],
+            "pkg": "p0"
+        },
+        "components/css/custom.css": {
+            "uri": "/vendor/components/css/custom.css",
+            "type": "css",
+            "deps": [
+                "components/css/animation.css",
+                "components/css/bootstrap.base.css",
+                "components/css/bootstrap.component.css"
+            ],
+            "pkg": "p0"
+        },
+        "components/iconfont/iconfont.css": {
+            "uri": "/vendor/components/iconfont/iconfont.css",
+            "type": "css",
+            "pkg": "p0"
+        },
+        "components/js/do.js": {
+            "uri": "/vendor/components/js/do.js",
+            "type": "js",
+            "deps": [
+                "components/js/fn.js",
+                "shape-shifter.js"
+            ],
+            "pkg": "p1"
+        },
+        "components/js/fn.js": {
+            "uri": "/vendor/components/js/fn.js",
+            "type": "js",
+            "deps": [
+                "../../../server/author.js"
+            ],
+            "pkg": "p1"
+        },
+        "server/author.css": {
+            "uri": "/server/author.css",
+            "type": "css",
+            "pkg": "p0"
+        },
+        "server/author.js": {
+            "uri": "/server/author.js",
+            "type": "js",
+            "pkg": "p1"
+        },
+        "server/console.js": {
+            "uri": "/server/console.js",
+            "type": "js",
+            "deps": [
+                "server/author.js"
+            ],
+            "pkg": "p1"
+        },
+        "page/footer/footer.css": {
+            "uri": "/page/footer/footer.css",
+            "type": "css",
+            "pkg": "p0"
+        },
+        "page/modal/modal.css": {
+            "uri": "/page/modal/modal.css",
+            "type": "css",
+            "deps": [
+                "server/author.css",
+                "components/css/bootstrap.base.css",
+                "components/css/base.css",
+                "components/css/custom.css"
+            ],
+            "pkg": "p0"
+        },
+        "page/nav/nav.css": {
+            "uri": "/page/nav/nav.css",
+            "type": "css",
+            "pkg": "p0"
+        },
+        "page/store/store.css": {
+            "uri": "/page/store/store.css",
+            "type": "css",
+            "deps": [
+                "server/author.css",
+                "components/css/bootstrap.base.css",
+                "components/css/base.css",
+                "components/css/custom.css"
+            ],
+            "pkg": "p0"
+        },
+        "page/usercenter/usercenter.css": {
+            "uri": "/page/usercenter/usercenter.css",
+            "type": "css",
+            "pkg": "p0"
+        },
+        "bower_components/bootstrap/dist/css/bootstrap.min.css": {
+            "uri": "/vendor/bootstrap/dist/css/bootstrap.min.css",
+            "type": "css",
+            "extras": {},
+            "pkg": "p2"
+        },
+        "bower_components/bootstrap/dist/js/bootstrap.min.js": {
+            "uri": "/vendor/bootstrap/dist/js/bootstrap.min.js",
+            "type": "js",
+            "pkg": "p3"
+        },
+        "bower_components/jquery/dist/jquery.min.js": {
+            "uri": "/vendor/jquery/dist/jquery.min.js",
+            "type": "js",
+            "pkg": "p3"
+        }
+    },
+    "pkg": {
+        "p0": {
+            "uri": "./static/index.css",
+            "type": "css",
+            "has": [
+                "server/author.css",
+                "components/iconfont/iconfont.css",
+                "components/css/bootstrap.component.css",
+                "components/css/bootstrap.base.css",
+                "components/css/animation.css",
+                "components/css/custom.css",
+                "components/css/box.css",
+                "components/css/base.css",
+                "page/footer/footer.css",
+                "page/modal/modal.css",
+                "page/nav/nav.css",
+                "page/store/store.css",
+                "page/usercenter/usercenter.css"
+            ]
+        },
+        "p1": {
+            "uri": "./static/index.js",
+            "type": "js",
+            "has": [
+                "server/author.js",
+                "components/js/fn.js",
+                "components/js/do.js",
+                "server/console.js"
+            ],
+            "deps": [
+                "../../../server/author.js",
+                "shape-shifter.js"
+            ]
+        },
+        "p2": {
+            "uri": "./static/yhtml5.css",
+            "type": "css",
+            "has": [
+                "bower_components/bootstrap/dist/css/bootstrap.min.css"
+            ]
+        },
+        "p3": {
+            "uri": "./static/yhtml5.js",
+            "type": "js",
+            "has": [
+                "bower_components/jquery/dist/jquery.min.js",
+                "bower_components/bootstrap/dist/js/bootstrap.min.js"
+            ]
+        }
+    }
+}

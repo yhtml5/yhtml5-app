@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="yhtml5" ng-controller="controllers" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>YHTML5</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="yhtml5.com"/>
+    <meta name="keywords" content="">
+    <meta name="description" content=" ">
+    <meta name="HandheldFriendly" content="true">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <!-- other: default, black, black-translucent-->
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="static/img/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="static/yhtml5.css" />
+    <link rel="stylesheet" type="text/css" href="static/index.css" />
+</head>
+
+
+<div class="container y-border-000">
+    <h3 class="y-w-120 y-p-b-14 y-border-bottom-ddd">上传新产品</h3>
+    <form  class="form-horizontal" role="form">
+        <div class="list-group-item y-border-radius-0 y-border-x-0 y-border-top-none">
+            <div class="form-group y-m-b-4">
+                <span class="col-xs-4 y-fs-18 y-p-a-0 y-m-t-4">产品名称</span>
+                <div class="col-xs-8 y-p-a-0">
+                    <input type="text" class="form-control" style="border: transparent;" placeholder="客户会根据产品名称搜索">
+                </div>
+            </div>
+        </div>
+        <div class="list-group-item y-border-radius-0 y-border-x-0">
+            <div class="form-group y-m-b-4 y-m-t-10">
+                <span class="col-xs-4 y-fs-18 y-p-a-0 y-m-t-4">产品货号</span>
+                <div class="col-xs-8 y-p-a-0">
+                    <input type="text" class="form-control" style="border: transparent;">
+                </div>
+            </div>
+        </div>
+        <div class="list-group-item y-border-radius-0 y-border-x-0">
+            <div class="row">
+                <p class="y-fs-18 y-m-t-14 col-xs-4 y-p-l-0">外箱规格</p>
+                <p class="col-xs-8 y-m-t-14 text-right y-fs-8">长 ____ 宽 ____ 高 ____</p>
+            </div>
+            <!--<div class="col-xs-8">-->
+            <!--<div class="col-xs-4"><span class="float-left">长</span><input type="text" class="form-control" style="border: ;width: 30px"></div>-->
+            <!--<div class="col-xs-4"><span>宽</span><input type="text" class="form-control" style="border: transparent;"></div>-->
+            <!--<div class="col-xs-4"><span>高</span><input type="text" class="form-control" style="border: transparent;"></div>-->
+            <!--</div>-->
+        </div>
+        <div class="list-group-item y-border-radius-0 y-border-x-0">
+            <div class="form-group y-m-b-4 y-m-t-10">
+                <span class="col-xs-4 y-fs-18 y-p-a-0 y-m-t-4">装箱数量</span>
+                <div class="col-xs-8 y-p-a-0">
+                    <input type="text" class="form-control" style="border: transparent;">
+                </div>
+            </div>
+        </div>
+        <div class="list-group-item y-border-radius-0 y-border-x-0">
+            <div class="form-group y-m-b-4 y-m-t-10">
+                <span class="col-xs-4 y-fs-18 y-p-a-0 y-m-t-4">内盒数量</span>
+                <div class="col-xs-8 y-p-a-0">
+                    <input type="text" class="form-control" style="border: transparent;">
+                </div>
+            </div>
+        </div>
+        <div class="list-group-item y-border-radius-0 y-border-x-0">
+            <div class="form-group y-m-b-4 y-m-t-10">
+                <span class="col-xs-4 y-fs-18 y-p-a-0 y-m-t-4">产品包装</span>
+                <div class="col-xs-8 y-p-a-0">
+                    <input type="text" class="form-control" style="border: transparent;">
+                </div>
+            </div>
+        </div>
+        <div class="list-group-item y-border-radius-0 y-border-x-0">
+            <div class="form-group y-m-b-4 y-m-t-10">
+                <span class="col-xs-4 y-fs-18 y-p-a-0 y-m-t-4">毛重</span>
+                <div class="col-xs-8 y-p-a-0">
+                    <input type="text" class="form-control" style="border: transparent;">
+                </div>
+            </div>
+        </div>
+        <div class="list-group-item y-border-radius-0 y-border-x-0">
+            <div class="form-group y-m-b-4 y-m-t-10">
+                <span class="col-xs-4 y-fs-18 y-p-a-0 y-m-t-4">净重</span>
+                <div class="col-xs-8 y-p-a-0">
+                    <input type="text" class="form-control" style="border: transparent;">
+                </div>
+            </div>
+        </div>
+        <div class="list-group-item y-border-radius-0 y-border-x-0 y-border-bottom-0">
+            <div class="row text-center">
+                <p class="y-fs-18">收起</p>
+                <i class="iconfont y-fs-18 y-display-b y-m-t-n-10">&#xe614;</i>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="container y-border-000 y-m-t-10">
+    <div class="y-display-i y-position-r">
+        <i class="iconfont y-m-t-15 y-fs-18 y-mistake">&#xe60e;</i>
+        <p class="y-display-i y-master-map">主图</p>
+        <img src="static/img/shortcut-icon.png" alt="" width="50" class="y-m-a-10">
+    </div>
+    <div class="y-display-i">
+        <img src="static/img/shortcut-icon.png" alt="" width="50" class="y-m-a-10">
+    </div>
+    <div class="y-display-i">
+        <img src="static/img/shortcut-icon.png" alt="" width="50" class="y-m-a-10">
+    </div>
+</div>
+<div class="container y-border-000 y-m-t-10">
+    <div class="list-group-item y-border-radius-0 y-border-x-0">
+        <div class="row">
+            <p class="y-fs-18 y-m-t-14 col-xs-4 y-p-l-0">产品售价</p>
+            <input class="col-xs-8 y-m-t-14 text-right y-fs-8 y-p-a-0" placeholder="售价所有人可见（选填）" style="border: transparent;height: 26px">
+        </div>
+    </div>
+    <div class="list-group-item y-border-radius-0 y-border-x-0">
+        <div class="row">
+            <p class="y-fs-18 y-m-t-14 col-xs-4 y-p-l-0">产品进价</p>
+            <!--<p class="col-xs-8 y-m-t-14 text-right y-fs-8 y-p-a-0">进价仅自己可见（选填）</p>-->
+            <input class="col-xs-8 y-m-t-14 text-right y-fs-8 y-p-a-0" placeholder="进价仅自己可见（选填）" style="border: transparent;height: 26px">
+
+        </div>
+    </div>
+    <div class="list-group-item y-border-radius-0 y-border-x-0">
+        <div class="row">
+            <p class="y-fs-18 y-m-t-14 col-xs-4 y-p-l-0">产品分类</p>
+            <!--<p class="col-xs-7 y-m-t-14 text-right y-fs-8">请选择展示分类（选填）</p>-->
+            <input class="col-xs-7 y-m-t-14 text-right y-fs-8 y-p-a-0" placeholder="请选择展示分类（选填）" style="border: transparent;height: 26px">
+            <i class="iconfont y-m-l-n-12 y-m-t-16 y-fs-18 col-xs-1">&#xe606;</i>
+        </div>
+    </div>
+    <div class="list-group-item y-border-radius-0 y-border-x-0">
+        <div class="row">
+            <p class="y-fs-18 y-m-t-14 col-xs-4 y-p-l-0">产品库存</p>
+            <!--<p class="col-xs-8 y-m-t-14 text-right y-fs-8 y-p-a-0">请填写产品库存（选填）</p>-->
+            <input class="col-xs-8 y-m-t-14 text-right y-fs-8 y-p-a-0" placeholder="售价所有人可见（选填）" style="border: transparent;height: 26px">
+
+
+        </div>
+    </div>
+</div>
+<div>
+    <textarea placeholder="描述您的产品优势，如CTI认证（选填）" class="y-h-80 y-w-p-100 y-m-t-10 y-p-l-10"></textarea>
+</div>
+<br>
+<br>
+<br>
+<footer class="navbar  navbar-inverse navbar-fixed-bottom" role="navigation">
+    <div class="row y-navbar-fixed-bottom-none">
+        <div class="col-xs-12">
+            <a href="#"><span>确认上传新产品</span></a>
+        </div>
+    </div>
+</footer>
+
+<!--@require bower_components/bootstrap/dist/css/bootstrap.min.css-->
+<!--@require bower_components/bootstrap/dist/js/bootstrap.min.js-->
+<!--@require server/author.css-->
+<!--@require server/author.js-->
+
+<script type="text/javascript" src="static/yhtml5.js"></script>
+<script type="text/javascript" src="static/index.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="../css/my.css">
+    </head>
+    <body class="um-vp " ontouchstart>
+        <div id="page_0" class="up ub ub-ver bc-bg" tabindex="0">
+            <!--header开始-->
+            <div id="header" class="uh bc-text-head ub bc-head">
+                <div class="nav-btn" id="nav-left">
+                    更多
+                </div>
+                <div class="ut ub-f1 ut-s tx-c htit" tabindex="0">
+                    我的音乐
+                </div>
+                <div class="nav-btn nav-bt" id="nav-right"></div>
+            </div>
+            <!--header结束--><!--content开始-->
+            <div id="content" class="ub-f1 tx-l">
+
+            </div>
+            <div id="footer" class="ub">
+                <div class="index ub-ver">
+                    <img src="../css/icons/main_index01.png" />
+                    <div>
+                        主页
+                    </div>
+                </div>
+                <div class="mymusic ub-ver focus">
+                    <img src="../css/icons/main_index02.png" />
+                    <div>
+                        收藏
+                    </div>
+                </div>
+                <div class="friend ub-ver">
+                    <img src="../css/icons/main_index03.png" />
+                    <div>
+                        交流
+                    </div>
+                </div>
+                <div class="account ub-ver">
+                    <img src="../css/icons/main_index04.png" />
+                    <div>
+                        账号
+                    </div>
+                </div>
+
+            </div>
+            <!--content结束-->
+
+        </div>
+        <script src="../js/appcan.js"></script>
+        <script src="../js/appcan.control.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            var titHeight = $('#header').offset().height;
+            appcan.frame.open("content", "mymusic_content.html", 0, titHeight);
+            window.onorientationchange = window.onresize = function() {
+                appcan.frame.resize("content", 0, titHeight);
+            }
+            appcan.locStorage.setVal("more",0);  //菜单默认关闭
+        });
+        
+        var titHeight = $('#header').offset().height;
+        appcan.button("#nav-left", "btn-act", function() {
+            if(appcan.locStorage.val("more")==0){  //判断菜单状态
+                appcan.window.openPopover({
+                     name:'more',
+                     dataType:0,
+                     url:"mymusic_more.html",
+                     top:titHeight,  //真机测试正常
+                     left:0,
+                     width:0,
+                     height:0,
+                });
+                appcan.locStorage.setVal("more",1);
+            }
+            else if(appcan.locStorage.val("more")==1){
+                appcan.window.publish("more",0);
+                appcan.locStorage.setVal("more",0);
+            }
+        })
+        appcan.button(".index", 'btn-act', function() {
+            appcan.window.open({
+                name : 'index',
+                data : '../index/index.html'
+            })
+        })
+
+        appcan.button(".friend", 'btn-act', function() {
+            appcan.window.open({
+                name : 'friend',
+                data : '../friend/friend.html'
+            })
+        })
+        appcan.button(".account", 'btn-act', function() {
+            appcan.window.open({
+                name : 'account',
+                data : '../account/account.html'
+            })
+        })
+
+    </script>
+</html>

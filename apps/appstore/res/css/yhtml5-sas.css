@@ -1,0 +1,211 @@
+/*
+ * 
+ * 洋葱网络工作室提供技术支持（yhtml5.com）
+ * 
+ */
+
+html,
+body {
+	background-color: #00d29b;
+}
+
+.y-bgc333333 {
+	background: #333333;
+}
+
+.pr5 {
+	padding-right: 5%;
+}
+
+a {
+	color: #4cd964;
+}
+
+.y-mtf5 {
+	margin-top: -5px;
+	color:#fdd239
+}
+
+.y-head {
+	background-color: ;
+	color: #ffffff;
+	font-family: arial;
+	padding: 2% 4%;
+	/*padding-top: 2%;
+	padding-left: 5%;*/
+}
+
+.y-checkmarkempty {
+	font-size: 25px;
+}
+
+.y-down {}
+
+.y-app-ul li {
+	background-color: #f5f5f5;
+}
+
+.y-app-ul li:nth-of-type(odd) {
+	background-color: #fafafa;
+}
+
+.y-hot {
+	color: red;
+	font-family: "微软雅黑";
+	font-weight: bold;
+}
+
+.y-new {
+	color: #0062CC;
+	font-family: "微软雅黑";
+	font-weight: bold;
+}
+
+.mui-table-view .mui-media-object {
+	line-height: 60px;
+	max-width: 60px;
+	height: 60px;
+}
+
+.mui-badge {
+	margin-top: 3%;
+}
+
+.mui-table-view-cell>.mui-badge,
+.mui-table-view-cell>.mui-btn,
+.mui-table-view-cell>.mui-switch,
+.mui-table-view-cell>a>.mui-badge,
+.mui-table-view-cell>a>.mui-btn,
+.mui-table-view-cell>a>.mui-switch {
+	right: 5px;
+	font-weight: bold;
+}
+
+.mui-push-left:after {
+	left: 0px;
+	content: '';
+}
+
+
+/*
+ * pull to refresh v3.0
+ *author:kyle
+ */
+
+#wrapper {
+	position: absolute;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+}
+
+.scroller {
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	padding: 0;
+}
+
+.scroller ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	text-align: left;
+}
+
+.pullDown,
+.pullUp {
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	color: white;
+	font-family: Arial, Microsoft YaHei;
+	background-color: #333;
+}
+
+.pullDown .pullDownIcon,
+.pullUp .pullUpIcon {
+	background: url("../../res/img/arrow.png") no-repeat;
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	background-position: center;
+	margin-left: 25%;
+	background-size: auto 100%;
+	-webkit-background-size: auto 100%;
+	-webkit-transition-property: -webkit-transform;
+	-webkit-transition-duration: 250ms;
+	-moz-background-size: auto 100%;
+	-moz-transition-property: -moz-transform;
+	-moz-transition-duration: 250ms;
+}
+
+.pullDown .pullDownIcon {
+	display: none;
+	-webkit-transform: rotate(0deg) translateZ(0);
+	-moz-transform: rotate(0deg) translateZ(0);
+}
+
+.pullUp .pullUpIcon {
+	-webkit-transform: rotate(-180deg) translateZ(0);
+	-moz-transform: rotate(-180deg) translateZ(0);
+}
+
+.pullDown.flip .pullDownIcon {
+	-webkit-transform: rotate(-180deg) translateZ(0);
+	-moz-transform: rotate(-180deg) translateZ(0);
+}
+
+.pullUp.flip .pullUpIcon {
+	-webkit-transform: rotate(0deg) translateZ(0);
+	-moz-transform: rotate(0deg) translateZ(0);
+}
+
+.pullDown.loading .pullDownIcon,
+.pullUp.loading .pullUpIcon {
+	background-image: url("../../res/img/loader.png");
+	background-size: 100% auto;
+	background-position: 0 100%;
+	-webkit-transform: rotate(0deg) translateZ(0);
+	-webkit-transition-duration: 0ms;
+	-webkit-animation-name: loading;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	-moz-transform: rotate(0deg) translateZ(0);
+	-moz-transition-duration: 0ms;
+	-moz-animation-name: loading;
+	-moz-animation-duration: 2s;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: linear;
+}
+
+@-webkit-keyframes loading {
+	from {
+		-webkit-transform: rotate(0deg) translateZ(0);
+	}
+	to {
+		-webkit-transform: rotate(360deg) translateZ(0);
+	}
+}
+
+@-moz-keyframes loading {
+	from {
+		-moz-transform: rotate(0deg) translateZ(0);
+	}
+	to {
+		-moz-transform: rotate(360deg) translateZ(0);
+	}
+}
+
+.pullDownLabel img {
+	width: 13px;
+	height: 13px;
+	margin-top: -1px;
+	vertical-align: -2px;
+	margin-right: 5px;
+}

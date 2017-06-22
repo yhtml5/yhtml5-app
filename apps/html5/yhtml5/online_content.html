@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <!--<link rel="stylesheet" href="../css/fonts/font-awesome.min.css">-->
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="../css/my.css">
+        <link rel="stylesheet" href="../css/table.css">
+        <link rel="stylesheet" href="../css/xiangmu.css">  
+        <link rel="stylesheet" href="../res/font-awesome-master/css/font-awesome.min.css">
+       </head>
+    <body class="um-vp" ontouchstart>
+        <div class="background-dark"><br /><br /><br />
+              <div align="center"><img src="../res/image/icon/YHTML5.png"/>
+                  </div><br /><br /><br />
+              <h1 style="text-align: center;">洋葱工作室官网即将上线
+              <i class="fa fa-cog fa-spin"></i></h1><br />
+                  <div style="text-align: center;">前端工程师正在努力找工作ing，很多界面都完成丨点击查看我的简历</p><br />
+                     <table class="y-center"><tr>
+                     <td class="y-red">&nbsp;&nbsp;<i class="fa fa-html5 fa-3x"></i>&nbsp;&nbsp;<br/>&nbsp;&nbsp;软件版&nbsp;&nbsp;</td>
+                     <td class="y-khaki">&nbsp;&nbsp;<i class="fa fa-book fa-3x y-yellow"></i>&nbsp;&nbsp;<br/>&nbsp;&nbsp;纸质版&nbsp;&nbsp;</td>
+                     <td class="y-blue">&nbsp;&nbsp;<i class="fa fa-internet-explorer fa-3x"></i>&nbsp;&nbsp;<br/>&nbsp;&nbsp;网站版&nbsp;&nbsp;</td>
+                     <td class="y-green">&nbsp;&nbsp;<i class="fa fa-weixin fa-3x"></i>&nbsp;&nbsp;<br/>&nbsp;&nbsp;微信版&nbsp;&nbsp;</td>
+                     </tr></table><br />
+                  <p style="text-align: center;">联系电话:18758302302</p>
+                  <p style="text-align: center;">Copyright © YHTML5.com. All Rights Reserved</p>
+                  <p style="text-align: center;"> original YHTML5 Logo by <a href="http://www.w3.org/" target="_blank">
+                  <abbr title="World Wide Web Consortium">W3C</abbr></a>.</p>
+        </div></div>
+       <script src="js/appcan.js"></script>
+        <script src="js/appcan.control.js"></script>
+        <script>
+        appcan.ready(function() {
+            var titHeight = $('#header').offset().height;
+            appcan.frame.open("content", "playlist_content.html", 0, titHeight);
+            window.onorientationchange = window.onresize = function() {
+                appcan.frame.resize("content", 0, titHeight);
+            }
+        });
+        appcan.button(".nav-btn", "btn-act", function() {
+            appcan.window.close(-1);
+        })
+
+   appcan.button(".btn", "ani-act", function() {
+            
+})
+ </script> 
+    </body>
+</html>
