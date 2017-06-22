@@ -1,6 +1,6 @@
 {
   "name": "yhtml5-app",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": "yhtml5 <1417376255@qq.com>",
   "description": "The web's scaffolding tool for modern webapps",
   "main": "apps",
