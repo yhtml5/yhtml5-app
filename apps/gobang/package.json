@@ -1,23 +1,13 @@
 {
-  "name": "yhtml5-app",
-  "version": "1.2.1",
+  "name": "yhtml5-gobang",
+  "version": "0.0.1",
   "author": "yhtml5 <1417376255@qq.com>",
-  "description": "The web's scaffolding tool for modern webapps",
+  "description": "",
   "main": "apps",
   "license": "MIT",
   "repository": "git@github.com:yhtml5/YHTML5-Seed.git",
   "keywords": [
-    "component",
-    "framework",
-    "frontend",
-    "mobile",
-    "react",
-    "redux",
-    "scaffold",
-    "vue",
-    "web",
-    "webpack",
-    "weui"
+    "javascript"
   ],
   "peerDependencies": {},
   "dependencies": {
