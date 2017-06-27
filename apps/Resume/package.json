@@ -1,10 +1,19 @@
 {
-  "name": "yhtml5-gobang",
-  "version": "0.0.1",
+  "name": "resume",
+  "version": "1.2.6",
   "author": "yhtml5 <1417376255@qq.com>",
   "main": "app/",
   "license": "MIT",
-  "description": "gobang",
+  "description": "kyle's resume",
+  "repository": "git@github.com:yhtml5/YHTML5-Seed.git",
+  "keywords": [
+    "resume",
+    "yhtml5"
+  ],
+  "dependencies": {
+    "normalize.css": "^7.0.0",
+    "reqwest": "^2.0.5"
+  },
   "devDependencies": {
     "autoprefixer": "^7.1.1",
     "babel-core": "^6.24.0",

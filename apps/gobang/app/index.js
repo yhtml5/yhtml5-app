@@ -1,5 +1,15 @@
+import { yhtml5 } from '../build/template/author'
+import renderChessboard from '../app/Components/Chessboard/index'
+import './Components/index.css'
+
+yhtml5()
+renderChessboard('canvas')
+
 var chessboard = document.getElementById('chessboard');
 var context = chessboard.getContext('2d');
+var width = 450
+var interval = width / 15
+var pieceWidth = width / 15 - 2  //26
 var chessPos = [];
 for (var i = 0; i < 15; i++) {
   chessPos[i] = [];
@@ -7,10 +17,45 @@ for (var i = 0; i < 15; i++) {
     chessPos[i][j] = 0;
   }
 }
+
 var lineColor = '#afafaf';
 var lineNum = 15;
 var chessColor = true;
 var over = false;
+
+function drawChessBoard() {
+  context.strokeStyle = lineColor;
+  for (var i = 0; i < lineNum; i++) {
+    context.moveTo(interval + i * interval * 2, interval);
+    context.lineTo(interval + i * interval * 2, interval * 29);
+    context.stroke();
+    context.moveTo(interval, interval + i * interval * 2);
+    context.lineTo(interval * 29, interval + i * interval * 2);
+    context.stroke();
+  }
+}
+
+drawChessBoard()
+
+function drawCircle(i, j, color) {
+  context.beginPath();
+  context.arc(interval + i * 2 * interval, interval + j * 2 * interval, pieceWidth, 0, 2 * Math.PI);
+  context.closePath();
+  var gradient = context.createRadialGradient(interval + i * 2 * interval + width / 15 / 15 * 2, interval + j * 2 * interval - width / 15 / 15 * 2, width / 15 / 15 * 13, interval + i * 2 * interval, interval + j * 2 * interval, 0);
+  // var gradient = context.createRadialGradient(interval + i * 2 * interval + 4, interval + j * 2 * interval - 4, 26, interval + i * 2 * interval, interval + j * 2 * interval, 0);
+  if (color) {
+    gradient.addColorStop(0, '#0a0a0a');
+    gradient.addColorStop(1, '#636363');
+  } else {
+    gradient.addColorStop(0, '#d1d1d1');
+    gradient.addColorStop(1, '#f9f9f9');
+  }
+  context.fillStyle = gradient;
+  context.fill();
+}
+
+
+
 //赢发数组
 var wins = [];
 //赢法统数组
@@ -66,41 +111,6 @@ for (var i = 0; i < count; i++) {
   aiWin[i] = 0;
 }
 
-/*var logo = new Image();
-logo.src='http://cdn.duitang.com/uploads/item/201508/14/20150814173104_Mc8Ah.thumb.700_0.png';
-logo.onload=function(){
-	context.drawImage(logo,15,15,435,435);
-	drawChessBoard();	
-	
-}*/
-drawChessBoard();
-function drawChessBoard() {
-  context.strokeStyle = lineColor;
-  for (var i = 0; i < lineNum; i++) {
-    context.moveTo(15 + i * 30, 15);
-    context.lineTo(15 + i * 30, 435);
-    context.stroke();
-    context.moveTo(15, 15 + i * 30);
-    context.lineTo(435, 15 + i * 30);
-    context.stroke();
-  }
-}
-
-function drawCircle(i, j, color) {
-  context.beginPath();
-  context.arc(15 + i * 30, 15 + j * 30, 13, 0, 2 * Math.PI);
-  context.closePath();
-  var gradient = context.createRadialGradient(15 + i * 30 + 2, 15 + j * 30 - 2, 13, 15 + i * 30, 15 + j * 30, 0);
-  if (color) {
-    gradient.addColorStop(0, '#0a0a0a');
-    gradient.addColorStop(1, '#636363');
-  } else {
-    gradient.addColorStop(0, '#d1d1d1');
-    gradient.addColorStop(1, '#f9f9f9');
-  }
-  context.fillStyle = gradient;
-  context.fill();
-}
 function AI() {
   var myScore = [];
   var aiScore = [];
@@ -192,6 +202,7 @@ function AI() {
   }
 
 }
+
 chessboard.onclick = function (e) {
   if (over) {
     return;
@@ -221,5 +232,4 @@ chessboard.onclick = function (e) {
       AI();
     }
   }
-
 }

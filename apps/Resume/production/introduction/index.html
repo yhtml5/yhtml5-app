@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>YHTML5</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="yhtml5.com"/>
+    <meta name="keywords" content="">
+    <meta name="description" content=" ">
+    <meta name="HandheldFriendly" content="true">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <!-- other: default, black, black-translucent-->
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/app.css">
+    <style>
+        @keyframes blink {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .actor__content--typing::after {
+            content: '|';
+            animation: blink 1000ms infinite;
+        }
+    </style>
+</head>
+<body>
+<div class="container" onclick="writeIntroduction()">
+    <div class="header">
+        <div class="dot red js-close"></div>
+        <div class="dot yellow"></div>
+        <div class="dot green"></div>
+    </div>
+    <div class="panel">
+        <div class="action">
+            <!--<div class="command"><span class="symbol">$</span>-->
+            <!--<input type="text" placeholder="Welcome to NodeJS" autofocus="" class="in"/>-->
+            <!--</div>-->
+            <div class="output actor__content--typing" id="output"></div>
+        </div>
+    </div>
+</div>
+<script src="js/theater.min.js"></script>
+<script type="text/javascript">
+    function writeIntroduction() {
+        var theater = theaterJS()
+        theater.addActor('output', {speed: 0.1, accuracy: 0.8})
+            .addScene('output:大家好, 我叫xxx, xx年, 浙江温州人 <br><br>', 2000)
+            .addScene('平时喜欢健健身,敲敲代码,学习新技术,玩玩LOL<br><br>', 2000)
+            .addScene('从2004年开始接触FrontPage;一直断断续续与Web技术有接触直到毕业正式投入前端大坑. <br><br>', 1000)
+            .addScene('现在前端开发已经是我所热爱职业, 编程是我的信仰,<br>', 1200)
+            .addScene('做一款完整的从前端UI,数据交互到服务与数据的产品, 是我目前的追求<br><br>', 2000)
+            .addScene('最后, 很开心与大伙成为同事, 上班我们一起联调接口, 下班我们可以一起玩游戏<br><br>')
+            .addScene('谢谢大家! ')
+            .addScene(theater.stop)
+    }
+</script>
+</body>
+</html>
