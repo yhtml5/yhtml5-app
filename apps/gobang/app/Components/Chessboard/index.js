@@ -1,13 +1,26 @@
-import canvas from './canvas.js'
+import {
+  createChessboard as createChessboardCanvas,
+  drawChessBoard as drawChessBoardCanvas
+} from './canvas.js'
 import dom from './dom.js'
 
-function render(value) {
+function createChessboard(value) {
   if (value === 'canvas') {
-    return canvas()
+    return createChessboardCanvas()
   } else {
-    return dom()
+    return createChessboardCanvas()
   }
 }
 
+function drawChessBoard(value) {
+  if (value === 'canvas') {
+    return drawChessBoardCanvas()
+  } else {
+    return drawChessBoardCanvas()
+  }
+}
 
-export default render
+export {
+  createChessboard,
+  drawChessBoard
+}

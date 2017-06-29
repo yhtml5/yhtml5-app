@@ -1,10 +1,8 @@
-import createStore from './createStore'
-// import combineReducers from './combineReducers'
-// import bindActionCreators from './bindActionCreators'
-// import applyMiddleware from './applyMiddleware'
-// import compose from './compose'
-// import warning from './utils/warning'
+import store from './store'
+
+const state = store.getState()
 
 export {
-  createStore
+  store,
+  state,
 }

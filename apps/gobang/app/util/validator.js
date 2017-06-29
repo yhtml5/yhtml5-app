@@ -14,7 +14,7 @@ export {
   isUndefined,
   isNumber,
   isFunction,
-  isArray, isArrayEmpty,
+  isObject, isObjectEmpty,
+  isArray, isArrayEmpty, isArrayNotEmpty,
   isString, isStringEmpty, isStringNotEmpty,
-  isObject, isObjectEmpty, isArrayNotEmpty
 }

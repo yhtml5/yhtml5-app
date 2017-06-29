@@ -11,4 +11,16 @@ function createChessboard(params) {
   body.appendChild(canvas)
 }
 
-export default createChessboard
+function drawChessBoard() {
+  context.strokeStyle = lineColor;
+  for (var i = 0; i < lineNum; i++) {
+    context.moveTo(interval + i * interval * 2, interval);
+    context.lineTo(interval + i * interval * 2, interval * 29);
+    context.stroke();
+    context.moveTo(interval, interval + i * interval * 2);
+    context.lineTo(interval * 29, interval + i * interval * 2);
+    context.stroke();
+  }
+}
+
+export { createChessboard, drawChessBoard }
