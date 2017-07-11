@@ -18,4 +18,14 @@ function drawChessman({ i, j, color }) {
   context.fill()
 }
 
-export { drawChessman } 
+function clearChessman({ i, j }) {
+  process.env.NODE_ENV === 'production' || console.log({ i, j })
+  const context = state.chessboard.getContext('2d')
+  context.beginPath()
+  context.arc(state.interval + i * 2 * state.interval, state.interval + j * 2 * state.interval, state.pieceWidth, 0, 2 * Math.PI)
+  context.closePath()
+  context.fillStyle = context.createRadialGradient(0, 0, 0, 0, 0, 0)
+  context.fill()
+}
+
+export { drawChessman, clearChessman } 

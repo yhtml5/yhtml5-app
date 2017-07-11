@@ -1,6 +1,7 @@
 import { yhtml5 } from '../build/template/author'
 import { createChessboard, drawChessBoard } from './Components/Chessboard/index'
 import { playChess } from './Components/rules/play'
+import { addDashboardListener } from './Components/Dashboard/Dashboard'
 import { ai } from './Components/rules/ai'
 import { initView } from './Components/view/index';
 import state from './state';
@@ -16,4 +17,6 @@ createChessboard('canvas')
 state.chessboard = document.getElementById('chessboard')
 drawChessBoard('canvas')
 state.chessboard.addEventListener("click", (e) => playChess(e, ai))
+addDashboardListener(state)
+
 
