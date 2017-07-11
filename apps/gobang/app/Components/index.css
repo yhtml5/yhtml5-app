@@ -3,13 +3,23 @@
     margin: 0;
 }
 
+html {
+    font-size: 10px;
+}
+
+@media only screen and (min-width: 450px) {
+    html {
+        font-size: 15px !important;
+    }
+}
+
 body {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    user-select: none
 }
 
 canvas {
     display: block;
-    margin: 50px auto;
+    margin: 20px auto;
     box-shadow: -2px -2px 5px #efeffe, 5px 5px 5px #cdcdcd;
-    user-select: none
 }

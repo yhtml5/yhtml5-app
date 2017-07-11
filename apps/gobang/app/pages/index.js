@@ -1,8 +1,9 @@
-// const chessboard = require('../Components/Chessboard/index.js')
+const header = require('../Components/Header/Header.html')
 
 function html() {
   return (
     `
+    ${header}
     <div id='body'></div>
     `
   )

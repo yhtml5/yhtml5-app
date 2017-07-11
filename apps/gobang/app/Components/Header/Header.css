@@ -1,0 +1,21 @@
+header {
+    text-align: center;
+    margin-top: 2rem
+}
+
+header .title {
+    position: relative;
+    height: 5rem;
+    color: #ffcb60;
+    font-size: 3.6rem;
+    line-height: 5rem;
+    font-weight: bold;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(255, 232, 184, 1)), to(rgba(175, 133, 48, 1)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header .slogan {
+    color: #d1ab57;
+    padding-left: 10%;
+}
