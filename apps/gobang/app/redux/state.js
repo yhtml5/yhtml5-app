@@ -1,5 +1,5 @@
 const state = {
-  chessboard: document.getElementById('chessboard'),
+  chessboard: null,
   chessType: 'canvas',
   chessPositons: (() => {
     var arr = [];

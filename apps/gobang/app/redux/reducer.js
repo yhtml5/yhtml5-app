@@ -5,6 +5,8 @@ export default function reduce(state = initialState, action = {}) {
   switch (action.type) {
     case UpdateState:
       return {...state, ...action.payload}
+    case 'getChessboard':
+      return {...state, ...action.payload}
     default:
       return state
   }

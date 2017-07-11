@@ -1,7 +1,7 @@
 function createStore(reducer, initialState) {
     var currentReducer = reducer
     var currentState = initialState
-    var listener = () => {}
+    var listener = () => { }
 
     return {
         getState() {
@@ -17,3 +17,5 @@ function createStore(reducer, initialState) {
         }
     }
 }
+
+export { createStore }

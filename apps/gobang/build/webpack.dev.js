@@ -21,11 +21,14 @@ module.exports = function (env) {
       compress: true,
       host: "0.0.0.0",
       port: port,
-      hot: true,
+      hot: false,
       inline: true,
       publicPath: '/',
       quiet: false,
-      watchContentBase: false,
+      watchContentBase: true,
+      watchOptions: {
+        poll: true
+      },
       historyApiFallback: true,
       noInfo: false,
       stats: 'minimal',
