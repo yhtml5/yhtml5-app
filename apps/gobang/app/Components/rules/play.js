@@ -7,8 +7,8 @@ function playChess(e, callback) {
   }
   var x = e.offsetX
   var y = e.offsetY
-  var i = Math.floor(x / 30)
-  var j = Math.floor(y / 30)
+  var i = Math.floor(x / state.interval)
+  var j = Math.floor(y / state.interval)
   if (state.chessPositons[i][j] == 0) {
     drawChessman('canvas', { i, j, color: state.players[0].color })
     state.chessPositons[i][j] = 1

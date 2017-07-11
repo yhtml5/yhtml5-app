@@ -50,10 +50,10 @@ function getState(params) {
     chessboard: null,
     chessType: 'canvas',
     chessPositons: createChessPositons(15),
-    width: 450,
-    lineNum: 15,
-    interval: 30,//width / 15
-    pieceWidth: 26, //width / 15 - 2
+    width: 0, //450
+    lineNum: 15,//15
+    interval: 0,//width / 15 ,30
+    pieceWidth: 0, //width / 15 - 2,16
     lineColor: '#afafaf',
     chessColor: true,
     gameOver: false,
