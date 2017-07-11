@@ -3,7 +3,7 @@ import {
 } from './canvas.js'
 
 function drawChessman(type, value) {
-  if (value === 'canvas') {
+  if (type === 'canvas') {
     return drawChessmanCanvas(value)
   } else {
     return drawChessmanCanvas(value)

@@ -1,6 +1,7 @@
 import state from '../../state'
 
 function drawChessman({ i, j, color }) {
+  process.env.NODE_ENV === 'production' || console.log({ i, j, color })
   const context = state.chessboard.getContext('2d')
   context.beginPath()
   context.arc(state.interval + i * 2 * state.interval, state.interval + j * 2 * state.interval, state.pieceWidth, 0, 2 * Math.PI)
