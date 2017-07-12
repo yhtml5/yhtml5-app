@@ -1,6 +1,6 @@
 {
   "name": "yhtml5-gobang",
-  "version": "0.0.1",
+  "version": "0.1.11",
   "author": "yhtml5 <1417376255@qq.com>",
   "main": "app/",
   "license": "MIT",

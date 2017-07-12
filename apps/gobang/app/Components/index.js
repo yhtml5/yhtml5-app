@@ -1,6 +1,6 @@
 import './index.css'
 import './Header/Header.css'
+import './Footer/Footer.css'
 import './Botton/index.css'
 import './Dashboard/Dashboard.css'
 import './Modal/index.css'
-

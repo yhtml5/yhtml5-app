@@ -20,3 +20,12 @@ header .slogan {
     font-size: 1.6rem;
     padding-left: 10%;
 }
+
+header .slogan a{
+    color:#d1ab57;
+    text-decoration :none;
+}
+header .slogan a:link {color:#d1ab57;} 
+header .slogan a:visited {color:#d1ab57;}
+header .slogan a:hover {color:#d1ab57;} 
+header .slogan a:active {color:#d1ab57;} 
