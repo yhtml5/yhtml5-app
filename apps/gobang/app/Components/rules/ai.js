@@ -82,7 +82,7 @@ function ai() {
     }
     if (aiWin[k] == 5) {
       alert('电脑赢了.');
-      over = true;
+      gameOver = true;
     }
   }
   if (!over) {
