@@ -21,7 +21,7 @@ canvas {
     display: block;
     margin: 20px auto;
     box-shadow: -2px -2px 5px #efeffe, 5px 5px 5px #cdcdcd;
-    cursor: none;
+    /*cursor: none;*/
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;

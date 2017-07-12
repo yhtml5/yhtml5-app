@@ -1,4 +1,47 @@
 function getState(params) {
+
+  return {
+    chessboard: null,
+    chessType: 'canvas',
+    chessPositons: createChessPositons(15),
+    chessPositonsHistory: [],
+    count: createWins(),
+    wins: createWins('wins'),
+    myWin: createWins('myWin'),
+    aiWin: createWins('aiWin'),
+    width: 0, //450
+    lineNum: 15,//15
+    interval: 0,//width / 15 ,30
+    pieceWidth: 0, //width / 15 - 2,16
+    lineColor: '#afafaf',
+    chessColor: true,
+    gameOver: false,
+    createChessPositons: createChessPositons,
+    createWins:createWins,
+    players: [{
+      name: '玩家',
+      type: true, //[true:player, false:ai]
+      color: true //[black:true, white:false]
+    }, {
+      name: 'AlphaGo',
+      type: false,
+      color: false
+    }],
+  }
+}
+
+const createChessPositons = (num) => {
+  let arr = []
+  for (let i = 0; i < num; i++) {
+    arr[i] = []
+    for (let j = 0; j < num; j++) {
+      arr[i][j] = 0
+    }
+  }
+  return arr
+}
+
+const createWins = (type) => {
   let wins = [];
   let myWin = []
   let aiWin = []
@@ -46,44 +89,15 @@ function getState(params) {
     myWin[i] = 0
     aiWin[i] = 0
   }
-  return {
-    chessboard: null,
-    chessType: 'canvas',
-    chessPositons: createChessPositons(15),
-    chessPositonsInit: createChessPositons(15),
-    chessPositonsHistory: [],
-    width: 0, //450
-    lineNum: 15,//15
-    interval: 0,//width / 15 ,30
-    pieceWidth: 0, //width / 15 - 2,16
-    lineColor: '#afafaf',
-    chessColor: true,
-    gameOver: false,
-    wins: wins,
-    myWin: myWin,
-    aiWin: aiWin,
-    count: count,
-    players: [{
-      name: '玩家',
-      type: true, //[true:player, false:ai]
-      color: true //[black:true, white:false]
-    }, {
-      name: 'AlphaGo',
-      type: false,
-      color: false
-    }],
+  if (type === 'wins') {
+    return wins
+  } else if (type === 'aiWin') {
+    return aiWin
+  } else if (type === 'myWin') {
+    return myWin
+  } else {
+    return count
   }
-}
-
-const createChessPositons = (num) => {
-  let arr = []
-  for (let i = 0; i < num; i++) {
-    arr[i] = []
-    for (let j = 0; j < num; j++) {
-      arr[i][j] = 0
-    }
-  }
-  return arr
 }
 
 let state = getState()

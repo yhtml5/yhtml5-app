@@ -26,4 +26,9 @@ function drawChessBoard() {
   }
 }
 
-export { createChessboard, drawChessBoard }
+function clearChessBoard() {
+  const context = state.chessboard.getContext('2d')
+  state.chessboard.height = state.chessboard.height
+}
+
+export { createChessboard, drawChessBoard, clearChessBoard }

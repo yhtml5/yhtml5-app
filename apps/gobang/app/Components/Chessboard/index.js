@@ -1,6 +1,7 @@
 import {
   createChessboard as createChessboardCanvas,
-  drawChessBoard as drawChessBoardCanvas
+  drawChessBoard as drawChessBoardCanvas,
+  clearChessBoard as clearChessBoardCanvas
 } from './canvas.js'
 import dom from './dom.js'
 
@@ -20,7 +21,16 @@ function drawChessBoard(value) {
   }
 }
 
+function clearChessBoard(value) {
+  if (value === 'canvas') {
+    return clearChessBoardCanvas()
+  } else {
+    return clearChessBoardCanvas()
+  }
+}
+
 export {
   createChessboard,
-  drawChessBoard
+  drawChessBoard,
+  clearChessBoard
 }

@@ -21,7 +21,7 @@ function ai() {
       if (chessPositons[i][j] == 0) {
         for (let k = 0; k < count; k++) {
           if (wins[i][j][k]) {
-            //电脑拦截
+            //defend
             if (myWin[k] == 1) {
               myScore[i][j] += 200;
             }
@@ -34,7 +34,7 @@ function ai() {
             else if (myWin[k] == 4) {
               myScore[i][j] += 10000;
             }
-            //电脑攻击
+            //attack
             if (aiWin[k] == 1) {
               aiScore[i][j] += 220;
             }

@@ -19,7 +19,7 @@ function playChess(e, callback) {
       }
       if (state.myWin[k] == 5) {
         state.gameOver = true
-        console.log('你赢了.')
+        alert('你赢了.')
       }
     }
     if (!state.gameOver) {

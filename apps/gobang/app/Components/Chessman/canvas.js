@@ -24,8 +24,19 @@ function clearChessman({ i, j }) {
   context.beginPath()
   context.arc(state.interval + i * 2 * state.interval, state.interval + j * 2 * state.interval, state.pieceWidth, 0, 2 * Math.PI)
   context.closePath()
-  context.fillStyle = context.createRadialGradient(0, 0, 0, 0, 0, 0)
+  // var gradient = context.createRadialGradient(state.interval + i * 2 * state.interval + state.width / 15 / 15 * 2, state.interval + j * 2 * state.interval - state.width / 15 / 15 * 2, state.width / 15 / 15 * 13, state.interval + i * 2 * state.interval, state.interval + j * 2 * state.interval, 0)
+  // gradient.addColorStop(0, '#d1d1d1')
+  // gradient.addColorStop(1, '#f9f9f9')
+  context.fillStyle = '#fff'
   context.fill()
+  context.beginPath()
+  context.strokeStyle = state.lineColor//state.lineColor
+  context.moveTo((2 * i - 1) * state.interval, (2 * j + 1) * state.interval)
+  context.lineTo((2 * i + 3) * state.interval, (2 * j + 1) * state.interval)
+  context.stroke()
+  context.moveTo((2 * i + 1) * state.interval, (2 * j - 1) * state.interval)
+  context.lineTo((2 * i + 1) * state.interval, (2 * j + 3) * state.interval)
+  context.stroke()
 }
 
 export { drawChessman, clearChessman } 
