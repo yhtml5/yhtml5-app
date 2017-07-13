@@ -1,3 +1,0 @@
-### this
-
-#### call && bind && apply
