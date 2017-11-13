@@ -22,7 +22,8 @@
   "peerDependencies": {},
   "dependencies": {
     "lodash": "^4.17.4",
-    "moment": "^2.17.1"
+    "moment": "^2.17.1",
+    "qr-image": "^3.2.0"
   },
   "devDependencies": {},
   "engines": {
@@ -32,6 +33,7 @@
   "scripts": {
     "git": "clear && git status && git add . && git commit -m",
     "postgit": "git pull && git push && git push origin dev:master",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "update": "rimraf site && cd site/static && mkdir vendors  && cp CNAME site/"
   }
 }
