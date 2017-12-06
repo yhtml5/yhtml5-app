@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    transition: all 0.3s;
+}
+
+body {
+    font-family: sans-serif;
+    /* -webkit-overflow: hidden; */
+    /* overflow: hidden; */
+}
+
+
+/*移动端iframe 滑动问题 */
+
+
+/*
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+} */
+
+body {
+    overflow: hidden;
+    /* -webkit-overflow-scrolling: touch;
+    overflow-y: scroll; */
+}
+
+.postcss {
+    font-size: 18px
+}
+
+.global-class-name {
+    color: green;
+}
+
+
+

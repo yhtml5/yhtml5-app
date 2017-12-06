@@ -1,0 +1,20 @@
+{
+  "name": "yhtml5-scripts-demo-spa",
+  "version": "1.0.1",
+  "private": true,
+  "dependencies": {
+    "antd-mobile": "^2.1.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "yhtml5-scripts": "^0.2.9"
+  },
+  "scripts": {
+    "start": "yhtml5-scripts start",
+    "dev": "yhtml5-scripts start",
+    "build": "clear && yhtml5-scripts build",
+    "build:pre": "clear && yhtml5-scripts build pre",
+    "update": "npm i yhtml5-dev-utils@latest -P"
+  }
+}
