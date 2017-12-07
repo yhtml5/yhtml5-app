@@ -15,6 +15,11 @@ class Content extends React.Component {
   componentDidMount() {
     console.log(this.state)
   }
+  // shouldComponentUpdate(nextProps, nextState) {
+    // alert(isSrcChange)
+    // isSrcChange = this.state.src !== nextState.src
+    // return false
+  // }
   iFrameHeight() {
     console.log('iFrameHeight')
     // var ifm = document.getElementById("iframepage");

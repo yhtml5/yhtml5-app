@@ -9,7 +9,7 @@ const outputPath = `dist/${getVersion(packageJson.version)}`
 
 const envVar = {
   base: {
-    APP_TITLE: 'SPA'
+    APP_TITLE: 'Testing Tools'
   },
   development: {
     customNodeEnv: 'development',
@@ -63,21 +63,9 @@ const config = {
   envVar: envVar,
   outputPath: outputPath,
   // host: './',
-
   entry: 'src/index.js',
   distributePort: 9993,
-  pages: [{
-    title: '测试1',
-    key: 'index',
-    filename: 'index.html',
-    path: 'src/pages/resume.js'
-  }, {
-    key: 'luyan',
-    title: '测试2',
-    filename: 'luyan.html',
-    path: 'src/pages/luyan.js'
-  }],
-  type: '',
+  // type: 'SPA',
   test: {
     // testMatch: ['demo/__test__/**/*.js?(x)'],
     // transformIgnorePatterns: ["node_modules/(?!(yhtml5-test|react-redux|react-native-button)/)"],
@@ -85,6 +73,7 @@ const config = {
     // collectCoverageFrom: ['src/**/*.{js,jsx}'],
   }
 }
+
 
 module.exports = config
 

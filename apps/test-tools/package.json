@@ -4,10 +4,16 @@
   "private": true,
   "dependencies": {
     "antd-mobile": "^2.1.0",
+    "history": "^4.7.2",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.8",
+    "redux": "^3.7.2"
   },
   "devDependencies": {
+    "redux-devtools": "^3.4.1",
     "yhtml5-scripts": "^0.2.9"
   },
   "scripts": {

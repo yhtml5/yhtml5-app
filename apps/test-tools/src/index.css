@@ -4,9 +4,15 @@
     transition: all 0.3s;
 }
 
+html{
+  font-size: 50px;
+}
+
 body {
     font-family: sans-serif;
+    user-select: none;
     /* -webkit-overflow: hidden; */
+    /* iframe 需要设置 */
     /* overflow: hidden; */
 }
 
@@ -21,12 +27,12 @@ body {
     height: 100%;
     overflow: hidden;
 } */
-
+/*
 body {
     overflow: hidden;
-    /* -webkit-overflow-scrolling: touch;
-    overflow-y: scroll; */
-}
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+} */
 
 .postcss {
     font-size: 18px

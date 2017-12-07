@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Content from '../Content/index';
 import logo from './logo.svg';
-import style from './App.pcss';
+import style from './index.pcss';
+import { Link } from 'react-router-dom'
+import { Button } from 'antd-mobile';
 
 // const loadPrint = () => import(/* webpackChunkName: "print" */ './features/lazyload.js')
 //   .then((result) => result.default)
@@ -20,7 +21,7 @@ const loadPrint2 = () => lazilyLoad(import(/* webpackChunkName: "print2" */ '../
 
 const timer = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 
-class App extends Component {
+class Home extends Component {
   constructor(props) {
     super()
     this.handleClick = this.handleClick.bind(this)
@@ -66,29 +67,24 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <div className={style.app}>
+      <div className={style.app}>
+        <Link to="/about">
           <header className={style.appHeader} onClick={this.handleClick}>
             <img src={logo} className={style.appLogo} alt="logo" />
             <h1 className={style.appTitle}>Testing Tools</h1>
           </header>
-          <p className={style.appIntro}>
-            To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-          <button
-            id="J_btn_scanQR"
-            className="btn btn-default"
-            onClick={this.scanQrcode}
-          >扫一扫二维码</button>
-          {/* <button id="J_btn_scanBAR" className="btn btn-default">扫一扫条形码</button> */}
-        </div>
+        </Link>
         <br/>
-        <hr/>
         <br/>
-        <Content />
+        <Button
+          className={`btn ${style.scanBtn}`}
+          type="primary"
+          onClick={this.scanQrcode}
+        >扫一扫</Button>
+        {/* <button id="J_btn_scanBAR" className="btn btn-default">扫一扫条形码</button> */}
       </div>
     );
   }
 }
 
-export default App;
+export default Home;
