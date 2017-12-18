@@ -1,13 +1,13 @@
 import React from 'react';
 import style from './index.pcss';
 
-class Content extends React.Component {
+class AnalysisFrame extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       width: '400',
       height: '100%',
-      src: '//2df.2dfire-pre.com/na'
+      src: 'https://2df.me/PQZcj-jqsaz4'
     }
     this.handleClick = this.handleClick.bind(this)
     this.iFrameHeight = this.iFrameHeight.bind(this)
@@ -65,4 +65,4 @@ class Content extends React.Component {
 }
 
 
-export default Content
+export default AnalysisFrame
