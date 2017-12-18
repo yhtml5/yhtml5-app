@@ -27,6 +27,8 @@ const Store = createStore(
   applyMiddleware(historyMiddleware)
 )
 
+window.Store = Store
+
 // Now you can dispatch navigation actions from anywhere!
 // store.dispatch(push('/foo'))
 
