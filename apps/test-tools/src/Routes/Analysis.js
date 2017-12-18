@@ -1,12 +1,14 @@
 import React from 'react';
 import TabBarNav from '../Containers/TabBarNav';
 import Banner from '../Containers/Banner';
-import Content from '../Containers/Content';
+import AnalysisFrame from '../Containers/AnalysisFrame';
+import TestDashboard from '../Containers/TestDashboard';
 
 function Analysis(params) {
   return (
     <div>
-      <Content />
+      <TestDashboard/>
+      <AnalysisFrame />
       <TabBarNav />
     </div>
   )
