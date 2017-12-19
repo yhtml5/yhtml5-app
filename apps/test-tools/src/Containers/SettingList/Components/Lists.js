@@ -10,42 +10,22 @@ let Lists = ({ form }) => {
     >
       <List.Item
         extra={<Switch
-          {...getFieldProps('Switch1', {
+          {...getFieldProps('vConsole', {
             initialValue: true,
             valuePropName: 'checked',
           }) }
           onClick={(checked) => { console.log(checked); }}
         />}
-      >On</List.Item>
+      >vConsole</List.Item>
       <List.Item
         extra={<Switch
-          {...getFieldProps('Switch2', {
-            initialValue: false,
-            valuePropName: 'checked',
-          }) }
-          onClick={(checked) => { console.log(checked); }}
-        />}
-      >Off</List.Item>
-      <List.Item
-        extra={<Switch
-          {...getFieldProps('Switch3', {
-            initialValue: false,
-            valuePropName: 'checked',
-          }) }
-          onClick={(checked) => { console.log(checked); }}
-          disabled
-        />}
-      >Disabled off</List.Item>
-      <List.Item
-        extra={<Switch
-          {...getFieldProps('Switch4', {
+          {...getFieldProps('eruda', {
             initialValue: true,
             valuePropName: 'checked',
           }) }
           onClick={(checked) => { console.log(checked); }}
-          disabled
         />}
-      >Disabled on</List.Item>
+      >eruda</List.Item>
       <List.Item
         extra={<Switch
           {...getFieldProps('Switch5', {
@@ -65,25 +45,6 @@ let Lists = ({ form }) => {
           color="red"
         />}
       >Color for Android</List.Item>
-      <List.Item
-        extra={<Switch
-          {...getFieldProps('Switch7', {
-            initialValue: true,
-            valuePropName: 'checked',
-          }) }
-          platform="ios"
-        />}
-      >Style for iOS</List.Item>
-      <List.Item
-        extra={<Switch
-          {...getFieldProps('Switch8', {
-            initialValue: true,
-            valuePropName: 'checked',
-          }) }
-          platform="ios"
-          color="red"
-        />}
-      >Color for iOS</List.Item>
     </List>
   );
 }
