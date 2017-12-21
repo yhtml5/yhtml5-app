@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'antd-mobile';
-import styles from './index.pcss';
+import styles from './TestButton.pcss';
 
 const TestButton = ({
   onClick = function () { }

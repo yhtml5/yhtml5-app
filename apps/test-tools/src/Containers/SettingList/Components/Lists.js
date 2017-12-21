@@ -6,6 +6,7 @@ let Lists = ({ form }) => {
   const { getFieldProps } = form;
   return (
     <List
+      style={{fontSize:'.14px'}}
       renderHeader={() => '设置'}
     >
       <List.Item
