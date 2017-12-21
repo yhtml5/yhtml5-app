@@ -1,9 +1,9 @@
 'use strict';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.css'
 import Router from './Router';
 import init from './utils/init';
-import './index.css'
 
 ReactDOM.render(
   <Router />,

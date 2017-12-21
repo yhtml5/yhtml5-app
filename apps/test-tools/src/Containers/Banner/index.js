@@ -35,16 +35,16 @@ class Home extends Component {
     // const print2 = await loadPrint2()
     // print2(2)
 
-    const [print3, print4] = await Promise.all([loadPrint(), loadPrint2()]);
-    await timer(1000)
-    print3(1)
-    print4(2)
+    // const [print3, print4] = await Promise.all([loadPrint(), loadPrint2()]);
+    // await timer(1000)
+    // print3(1)
+    // print4(2)
 
-    console.log('\nApp.js\n', {})
+    // console.log('\nApp.js\n', {})
   }
 
   scanQrcode() {
-    console.log('scanQrcode')
+    console.log('scanQrcodeStart')
     ap.scan(function (res) {
       ap.alert(res.code);
     });
@@ -72,7 +72,7 @@ class Home extends Component {
           <div className={style.appLogoBackground}>
             <img src={logo} className={style.appLogo} alt="logo" />
           </div>
-          <h1 className={style.appTitle}>Testing Tools</h1>
+          <h1 className={style.appTitle}>无线前端调试工具集</h1>
         </header>
         <Button
           className={`btn ${style.scanBtn}`}

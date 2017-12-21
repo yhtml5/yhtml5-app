@@ -7,8 +7,6 @@ const initFastClick = () => {
       FastClick.attach(document.body);
     }, false);
   }
-
-  console.log('\nFastClick', FastClick)
 }
 
 
