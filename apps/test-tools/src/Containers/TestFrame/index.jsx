@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './index.pcss';
 
-class AnalysisFrame extends React.Component {
+class TestFrame extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -13,13 +13,22 @@ class AnalysisFrame extends React.Component {
     this.iFrameHeight = this.iFrameHeight.bind(this)
   }
   componentDidMount() {
-    console.log(this.state)
+    console.log('componentDidMount',this.state)
   }
   // shouldComponentUpdate(nextProps, nextState) {
-    // alert(isSrcChange)
-    // isSrcChange = this.state.src !== nextState.src
-    // return false
+  //   const isSrcChange = this.state.src !== nextState.src
+  //   console.warn('shouldComponentUpdate',isSrcChange)
+  //   return false
   // }
+  componentWillUpdate(){
+    console.log('componentWillUpdate')
+  }
+  componentDidUpdate(){
+    console.log('componentDidUpdate')
+  }
+  componentWillUnmount(){
+    console.log('componentWillUnmount')
+  }
   iFrameHeight() {
     console.log('iFrameHeight')
     // var ifm = document.getElementById("iframepage");
@@ -45,6 +54,7 @@ class AnalysisFrame extends React.Component {
   }
 
   render() {
+    console.log('render')
     return (
       <div className={style.content}>
         <iframe
@@ -65,4 +75,4 @@ class AnalysisFrame extends React.Component {
 }
 
 
-export default AnalysisFrame
+export default TestFrame

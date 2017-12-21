@@ -6,9 +6,9 @@ import TabBarNav from './Containers/TabBarNav/index';
 import history from './Redux/history';
 import Store from './Redux/Store';
 import Home from './Routes/Home';
-import Demo from './Routes/Demo';
-import Analysis from './Routes/Analysis';
-import Setting from './Routes/Setting';
+// import Demo from './Routes/Demo';
+// import Analysis from './Routes/Analysis';
+// import Setting from './Routes/Setting';
 
 
 const App = () => {
@@ -18,9 +18,9 @@ const App = () => {
     <ConnectedRouter history={history}>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/analysis" component={Analysis} />
+        {/* <Route path="/analysis" component={Analysis} />
         <Route path="/demo" component={Demo} />
-        <Route path="/setting" component={Setting} />
+        <Route path="/setting" component={Setting} /> */}
       </Switch>
     </ConnectedRouter>
   </Provider>)

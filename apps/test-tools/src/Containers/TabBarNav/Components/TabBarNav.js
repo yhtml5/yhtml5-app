@@ -98,17 +98,16 @@ class TabBarNav extends React.Component {
               }}
               />
             }
-            title="分析"
-            key="analysis"
-            // badge={'new'}
-            selected={selectedTab === 'analysis'}
+            title="view"
+            key="view"
+            dot
+            selected={selectedTab === 'view'}
             onPress={() => onPress({
-              selectedTab: 'analysis',
-              path: '/analysis'
+              selectedTab: 'view',
+              path: '/view'
             })}
-            data-seed="logId1"
           >
-            {/* {this.renderContent('口碑')} */}
+            {/* {this.renderContent('朋友')} */}
           </TabBar.Item>
           <TabBar.Item
             icon={
@@ -127,16 +126,17 @@ class TabBarNav extends React.Component {
               }}
               />
             }
-            title="demo"
-            key="demo"
-            dot
-            selected={selectedTab === 'demo'}
+            title="分析"
+            key="analysis"
+            // badge={'new'}
+            selected={selectedTab === 'analysis'}
             onPress={() => onPress({
-              selectedTab: 'demo',
-              path: '/demo'
+              selectedTab: 'analysis',
+              path: '/analysis'
             })}
+            data-seed="logId1"
           >
-            {/* {this.renderContent('朋友')} */}
+            {/* {this.renderContent('口碑')} */}
           </TabBar.Item>
           <TabBar.Item
             icon={{ uri: 'https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg' }}

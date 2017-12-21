@@ -7,7 +7,7 @@ function Component(props) {
   const { dispatch } = props
   const { selectedTab, hidden } = props.tabBarNav
   const tabBarNavProps = {
-    selectedTab: selectedTab || 'redTab',
+    selectedTab: selectedTab || 'home',
     hidden: hidden || false,
     onPress: onPress || function () { },
   }

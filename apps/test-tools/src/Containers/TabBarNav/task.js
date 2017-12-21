@@ -7,14 +7,14 @@ const { dispatch, getState } = Store
 const onPress = ({ selectedTab = '', path = '' }) => {
   const oldPathname = getState().router.location.pathname
 
-  if (path !== oldPathname) {
-    dispatch(push(path))
-  }
+  // if (path !== oldPathname) {
+  //   dispatch(push(path))
+  // }
 
   dispatch(updateState({ selectedTab }))
 
   console.log('\nonPress', {
-    oldPathname
+    // oldPathname
   })
 }
 

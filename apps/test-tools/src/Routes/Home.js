@@ -1,12 +1,13 @@
 import React from 'react';
 import TabBarNav from '../Containers/TabBarNav';
 import Banner from '../Containers/Banner';
+import Content from '../Containers/Content';
 
 function Home(params) {
 
   return (
     <div>
-      <Banner />
+      <Content />
       <TabBarNav />
     </div>
   )
