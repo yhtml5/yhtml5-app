@@ -1,11 +1,12 @@
 * {
     padding: 0;
     margin: 0;
+    font-size: 14px;
     transition: all 0.3s;
 }
 
-html{
-  /* font-size: 50px; */
+html {
+    /* font-size: 50px; */
 }
 
 body {
@@ -14,6 +15,10 @@ body {
     /* -webkit-overflow: hidden; */
     /* iframe 需要设置 */
     /* overflow: hidden; */
+}
+
+br {
+    font-size: 12px;
 }
 
 
@@ -27,6 +32,8 @@ body {
     height: 100%;
     overflow: hidden;
 } */
+
+
 /*
 body {
     overflow: hidden;
@@ -42,10 +49,6 @@ body {
     color: green;
 }
 
-
-.vc-switch{
-  /* display: none !important; */
+.vc-switch {
+    /* display: none !important; */
 }
-
-
-

@@ -68,14 +68,12 @@ class Home extends Component {
   render() {
     return (
       <div className={style.app}>
-        <Link to="/about">
-          <header className={style.appHeader} onClick={this.handleClick}>
+        <header className={style.appHeader} onClick={this.handleClick}>
+          <div className={style.appLogoBackground}>
             <img src={logo} className={style.appLogo} alt="logo" />
-            <h1 className={style.appTitle}>Testing Tools</h1>
-          </header>
-        </Link>
-        <br/>
-        <br/>
+          </div>
+          <h1 className={style.appTitle}>Testing Tools</h1>
+        </header>
         <Button
           className={`btn ${style.scanBtn}`}
           type="primary"

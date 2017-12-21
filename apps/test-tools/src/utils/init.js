@@ -3,7 +3,7 @@ import dealHtmlFontSize from './dealHtmlFontSize';
 
 function init(params) {
   initFastClick()
-  dealHtmlFontSize(window)
+  dealHtmlFontSize({window:window,designWidth:375})
 }
 
 
