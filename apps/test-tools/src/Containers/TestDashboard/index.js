@@ -13,10 +13,10 @@ import task from './task';
 
 
 const tabs = [
-  { title: <Badge text={'new'}>Eruda</Badge> },
+  { title: <Badge dot>Eruda</Badge> },
   { title: <Badge>vConsole</Badge> },
-  { title: <Badge>HTML5 test</Badge> },
-  { title: <Badge dot>more</Badge> },
+  { title: <Badge text={'new'}>HTML5 test</Badge> },
+  { title: <Badge>more</Badge> },
 ];
 
 function Component({
