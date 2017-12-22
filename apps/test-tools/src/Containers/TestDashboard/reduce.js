@@ -2,6 +2,7 @@ import { APP_TEST_UPDATE_STATE, APP_TEST_TOGGLE_DASHBOARD } from './action';
 
 const initialState = {
   dashboardVisibility: false,
+  page: 0,
 }
 
 const reduce = (state = initialState, action = {}) => {

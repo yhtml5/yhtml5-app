@@ -7,6 +7,7 @@ import Dashboard from './Components/Dashboard';
 // import Tabs from './Components/Tabs';
 import Html5test from './Components/Html5test';
 import Vconsole from './Components/Vconsole';
+import Eruda from './Components/Eruda';
 import styles from './Components/index.pcss';
 import task from './task';
 
@@ -22,8 +23,17 @@ function Component({
   dispatch,
   testDashboard
 }) {
-  const { dashboardVisibility = false } = testDashboard
+  const {
+    dashboardVisibility = false,
+    page = 0
+  } = testDashboard
 
+  const ErudaProps = {
+    page: page || 0,
+  }
+  const VconsoleProps = {
+    page: page || 0,
+  }
   // const dashboardProps = {
   //   visibility: dashboardVisibility || false,
   // }
@@ -35,22 +45,23 @@ function Component({
     <div
       className={styles.testDashboard}
     >
-      <Tabs tabs={tabs}
-        initialPage={2}
+      <Tabs
+        tabs={tabs}
+        // initialPage={page}
+        page={page}
+        swipeable={true}
+        prerenderingSiblingsNumber={4}
         onChange={(tab, index) => task.tabChange({ tab, index })}
       // onTabClick={(tab, index) => { console.log('onTabClick', index, tab); }}
       >
-        <div>
-          Content of first tab
-        </div>
-        <Vconsole/>
-        <div>
-          <Button
-            className={`btn ${styles.testBtn}`}
-            type="primary"
-            onClick={task.goToHtml5Test}
-          >HTML5 Test</Button>
-        </div>
+        <Eruda  {...ErudaProps} />
+        <Vconsole {...VconsoleProps} />
+        <Button
+          // key='goToHtml5Test'
+          className={`btn ${styles.testBtn}`}
+          type="primary"
+          onClick={task.goToHtml5Test}
+        >HTML5 Test</Button>
         <div>
           即将支持更多调试工具
         </div>

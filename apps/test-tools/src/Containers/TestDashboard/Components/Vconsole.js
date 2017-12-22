@@ -2,29 +2,31 @@ import React from 'react';
 import VConsole from 'vconsole';
 import styles from './Vconsole.pcss';
 
-class Vconsole extends React.Component {
+const vConsole = new VConsole();
+class Vconsole extends React.PureComponent {
   constructor(props) {
     super(props)
-    this.state = {
-      width: '400',
-      height: '100%',
-      src: 'https://2df.me/PQZcj-jqsaz4'
-    }
-    // this.handleClick = this.handleClick.bind(this)
-    // this.iFrameHeight = this.iFrameHeight.bind(this)
+    this.state = {}
+    this.toggleVconsole = this.toggleVconsole.bind(this)
+    console.log('Vconsole.constructor')
   }
   componentWillMount() {
     console.log('Vconsole.componentWillMount')
   }
   componentDidMount() {
-    window.vConsole = new VConsole();
+    window.APP.vConsole = vConsole
+    if (this.props.page === 1) {
+      vConsole.show()
+    }
     console.log('Vconsole.componentDidMount')
   }
-  shouldComponentUpdate(nextProps, nextState) {
-    const isSrcChange = this.state.src !== nextState.src
-    console.warn('Vconsole.shouldComponentUpdate')
-    return true
+  componentWillReceiveProps() {
+    console.log('Vconsole.componentWillReceiveProps')
   }
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   console.log('Vconsole.shouldComponentUpdate')
+  //   return true
+  // }
   componentWillUpdate() {
     console.log('Vconsole.componentWillUpdate')
   }
@@ -32,12 +34,23 @@ class Vconsole extends React.Component {
     console.log('Vconsole.componentDidUpdate')
   }
   componentWillUnmount() {
-    window.vConsole.hide()
-    window.vConsole.destroy()
-    window.vConsole = undefined
+    vConsole.hide()
+    // window.APP.vConsole.destroy()
+    // window.APP.vConsole = undefined
     console.log('Vconsole.componentWillUnmount')
   }
+  componentDidCatch(error, info) {
+    console.log('Vconsole.componentDidCatch', error, info)
+  }
+  toggleVconsole(bool) {
+    if (this.props.page === 1) {
+      vConsole.show()
+    } else {
+      vConsole.hide()
+    }
+  }
   render() {
+    this.toggleVconsole()
     console.log('Vconsole.render')
     return (
       <div></div>
