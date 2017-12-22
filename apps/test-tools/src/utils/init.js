@@ -2,8 +2,12 @@ import initFastClick from './fastclick';
 import dealHtmlFontSize from './dealHtmlFontSize';
 
 function init(params) {
+  window.APP = {
+    vConsole:{},
+    eruda:{}
+  }
   initFastClick()
-  dealHtmlFontSize({window:window,designWidth:375})
+  dealHtmlFontSize({ window: window, designWidth: 375 })
 }
 
 

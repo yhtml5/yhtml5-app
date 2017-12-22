@@ -21,18 +21,9 @@ export const tabChange = ({
   tab = ''
 }) => {
   console.log('onChange', index, tab);
-
-  switch (index) {
-    case 1:
-      window.vConsole.show()
-      break;
-    case 0:
-      window.vConsole.hide()
-      break
-    default:
-      window.vConsole.hide()
-      break;
-  }
+  dispatch(updateState({
+    page: index
+  }))
 }
 
 export default {

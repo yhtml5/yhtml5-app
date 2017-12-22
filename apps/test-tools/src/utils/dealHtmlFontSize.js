@@ -9,7 +9,6 @@ function dealHtmlFontSize({
     reEvt = "orientationchange" in window ? "orientationchange" : "resize",
     reFontSize = function () {
       var clientW = window.document.documentElement.clientWidth || window.document.body.clientWidth;
-      console.log(clientW)
       if (!clientW) {
         return;
       }

@@ -1,7 +1,8 @@
 import React from 'react';
 import style from './index.pcss';
 
-class TestFrame extends React.Component {
+class TestFrame extends React.PureComponent {
+// class TestFrame extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -13,24 +14,24 @@ class TestFrame extends React.Component {
     this.iFrameHeight = this.iFrameHeight.bind(this)
   }
   componentDidMount() {
-    console.log('componentDidMount',this.state)
+    console.log('TestFrame.componentDidMount', this.state)
   }
   // shouldComponentUpdate(nextProps, nextState) {
   //   const isSrcChange = this.state.src !== nextState.src
   //   console.warn('shouldComponentUpdate',isSrcChange)
   //   return false
   // }
-  componentWillUpdate(){
-    console.log('componentWillUpdate')
+  componentWillUpdate() {
+    console.log('TestFrame.componentWillUpdate')
   }
-  componentDidUpdate(){
-    console.log('componentDidUpdate')
+  componentDidUpdate() {
+    console.log('TestFrame.componentDidUpdate')
   }
-  componentWillUnmount(){
-    console.log('componentWillUnmount')
+  componentWillUnmount() {
+    console.log('TestFrame.componentWillUnmount')
   }
   iFrameHeight() {
-    console.log('iFrameHeight')
+    // console.log('iFrameHeight')
     // var ifm = document.getElementById("iframepage");
     // var subWeb = document.frames ? document.frames["iframepage"].document : ifm.contentDocument;
     // if (ifm != null && subWeb != null) {
