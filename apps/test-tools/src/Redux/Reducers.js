@@ -1,6 +1,7 @@
 
 import tabBarNav from '../Containers/TabBarNav/reduce';
 import testDashboard from '../Containers/TestDashboard/reduce';
+import testFrame from '../Containers/TestFrame/reduce';
 
 /**
  *
@@ -13,4 +14,5 @@ import testDashboard from '../Containers/TestDashboard/reduce';
 export default {
   tabBarNav,
   testDashboard,
+  testFrame
 }

@@ -4,7 +4,7 @@ import { push } from 'react-router-redux'
 
 const { dispatch, getState } = Store
 
-const onPress = ({ selectedTab = '', path = '' }) => {
+export const onPress = ({ selectedTab = '', path = '' }) => {
   const oldPathname = getState().router.location.pathname
 
   // if (path !== oldPathname) {
@@ -16,10 +16,6 @@ const onPress = ({ selectedTab = '', path = '' }) => {
   console.log('\nonPress', {
     // oldPathname
   })
-}
-
-export {
-  onPress
 }
 
 export default {
