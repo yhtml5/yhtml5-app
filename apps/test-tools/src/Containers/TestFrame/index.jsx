@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import connect from 'react-redux/es/connect/connect'
 import Frame from './Components/Frame.jsx';
+import ScanButton from '../Home/Components/ScanButton';
 import task from './task';
+import homeTask from '../Home/task';
 
 function TestFrame({
   dispatch = function () { },
@@ -9,9 +11,14 @@ function TestFrame({
 }) {
   const { src = '' } = testFrame
   const FrameProps = { src }
+  const ScanButtonProps = {
+    onClick: homeTask.scanQrcode || function () { }
+  }
 
   return (
-    <Frame {...FrameProps} />
+    src
+      ? <Frame {...FrameProps} />
+      : <ScanButton />
   )
 }
 

@@ -2,9 +2,8 @@ import React from 'react';
 import connect from 'react-redux/es/connect/connect'
 import { Button, Tabs, WhiteSpace, Badge } from 'antd-mobile';
 import { toggleTestDashboard } from './task'
-import TestButton from './Components/TestButton.jsx';
-import Dashboard from './Components/Dashboard.jsx';
-// import Tabs from './Components/Tabs.jsx';
+import More from './Components/More.jsx';
+// import Dashboard from './Components/Dashboard.jsx';
 import Html5test from './Components/Html5test.jsx';
 import Vconsole from './Components/Vconsole.jsx';
 import Eruda from './Components/Eruda.jsx';
@@ -62,9 +61,7 @@ function Component({
           type="primary"
           onClick={task.goToHtml5Test}
         >HTML5 Test</Button>
-        <div>
-          即将支持更多调试工具
-        </div>
+        <More/>
       </Tabs>
       <WhiteSpace />
     </div>

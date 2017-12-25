@@ -1,16 +1,14 @@
 import React from 'react';
 import styles from './Frame.pcss';
 
-class TestFrame extends React.PureComponent {
-  // class TestFrame extends React.Component {
+// class TestFrame extends React.PureComponent {
+class TestFrame extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      width: '400',
-      height: '100%',
-      src: props.src || 'https://2df.me/PQZcj-jqsaz4' //外卖码
+      // width: '400',
+      // height: '100%',
     }
-    this.handleClick = this.handleClick.bind(this)
     this.iFrameHeight = this.iFrameHeight.bind(this)
   }
   componentDidMount() {
@@ -39,27 +37,14 @@ class TestFrame extends React.PureComponent {
     //   ifm.width = subWeb.body.scrollWidth;
     // }
   }
-  async handleClick() {
-    // const print1 = await loadPrint()
-    // await timer(1000)
-    // print1(1)
-    // const print2 = await loadPrint2()
-    // print2(2)
-
-    const [print3, print4] = await Promise.all([loadPrint(), loadPrint2()]);
-    await timer(1000)
-    print3(1)
-    print4(2)
-
-    console.log('\nApp.js\n', {})
-  }
 
   render() {
-    console.log('render')
+    console.log('TestFrame.render', this.props)
+
     return (
       <div className={styles.content}>
         <iframe
-          src={this.state.src}
+          src={this.props.src}
           // width='400 !important'
           // height='600'
           frameBorder="0"

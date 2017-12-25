@@ -1,7 +1,7 @@
 import { updateState, toggleDashboard } from './action';
 import { UpdateSrc } from '../TestFrame/action';
+import TabBarNavAction from '../TabBarNav/action';
 import Store from '../../Redux/Store';
-// import { push } from 'react-router-redux'
 
 const { dispatch, getState } = Store
 
@@ -12,6 +12,9 @@ export const scanQrcode = () => {
     console.log('\nscanQrcodeSuccess', res)
     const src = res.code || ''
     dispatch(UpdateSrc(src))
+    dispatch(TabBarNavAction.updateState({
+      selectedTab: 'view'
+    }))
   });
   // var btnScanQR = document.querySelector('#J_btn_scanQR');
   // var btnScanBAR = document.querySelector('#J_btn_scanBAR');
