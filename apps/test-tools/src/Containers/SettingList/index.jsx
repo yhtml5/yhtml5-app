@@ -1,18 +1,18 @@
 import React from 'react';
 import connect from 'react-redux/es/connect/connect'
-import { onPress } from './task'
-import TabBarNav from './Components/TabBarNav';
+// import { onPress } from './task'
+import Lists from './Components/Lists.jsx';
 
 function Component(props) {
   const { dispatch } = props
   const { selectedTab, hidden } = props.tabBarNav
-  const tabBarNavProps = {
-    selectedTab: selectedTab || 'home',
+  const listsProps = {
+    selectedTab: selectedTab || 'redTab',
     hidden: hidden || false,
-    onPress: onPress || function () { },
+    // onPress: onPress || function () { },
   }
   return (
-    <TabBarNav {...tabBarNavProps} />
+    <Lists {...listsProps} />
   )
 }
 
@@ -22,14 +22,6 @@ const mapStateToProps = (state) => {
     router: state.router,
   }
 }
-
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     onPress: (selectedTab) => {
-//       dispatch(updateState(selectedTab))
-//     }
-//   }
-// }
 
 export default connect(
   mapStateToProps,

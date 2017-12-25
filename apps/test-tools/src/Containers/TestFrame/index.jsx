@@ -1,79 +1,31 @@
-import React from 'react';
-import style from './index.pcss';
+import React, { Component } from 'react';
+import connect from 'react-redux/es/connect/connect'
+import Frame from './Components/Frame.jsx';
+import task from './task';
 
-class TestFrame extends React.PureComponent {
-// class TestFrame extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      width: '400',
-      height: '100%',
-      src: 'https://2df.me/PQZcj-jqsaz4'
-    }
-    this.handleClick = this.handleClick.bind(this)
-    this.iFrameHeight = this.iFrameHeight.bind(this)
-  }
-  componentDidMount() {
-    console.log('TestFrame.componentDidMount', this.state)
-  }
-  // shouldComponentUpdate(nextProps, nextState) {
-  //   const isSrcChange = this.state.src !== nextState.src
-  //   console.warn('shouldComponentUpdate',isSrcChange)
-  //   return false
-  // }
-  componentWillUpdate() {
-    console.log('TestFrame.componentWillUpdate')
-  }
-  componentDidUpdate() {
-    console.log('TestFrame.componentDidUpdate')
-  }
-  componentWillUnmount() {
-    console.log('TestFrame.componentWillUnmount')
-  }
-  iFrameHeight() {
-    // console.log('iFrameHeight')
-    // var ifm = document.getElementById("iframepage");
-    // var subWeb = document.frames ? document.frames["iframepage"].document : ifm.contentDocument;
-    // if (ifm != null && subWeb != null) {
-    //   ifm.height = subWeb.body.scrollHeight;
-    //   ifm.width = subWeb.body.scrollWidth;
-    // }
-  }
-  async handleClick() {
-    // const print1 = await loadPrint()
-    // await timer(1000)
-    // print1(1)
-    // const print2 = await loadPrint2()
-    // print2(2)
+function TestFrame({
+  dispatch = function () { },
+  testFrame = {}
+}) {
+  const { src = '' } = testFrame
+  const FrameProps = { src }
 
-    const [print3, print4] = await Promise.all([loadPrint(), loadPrint2()]);
-    await timer(1000)
-    print3(1)
-    print4(2)
+  return (
+    <Frame {...FrameProps} />
+  )
+}
 
-    console.log('\nApp.js\n', {})
-  }
-
-  render() {
-    console.log('render')
-    return (
-      <div className={style.content}>
-        <iframe
-          src={this.state.src}
-          // width='400 !important'
-          // height='600'
-          frameBorder="0"
-          marginHeight='0'
-          marginWidth='0'
-          scrolling='no'
-          onLoad={this.iFrameHeight()}
-        >
-          <p>Your browser does not support iframes.</p>
-        </iframe>
-      </div>
-    )
+const mapStateToProps = (state) => {
+  return {
+    testFrame: state.testFrame,
+    router: state.router,
   }
 }
 
+export default connect(
+  mapStateToProps,
+  // mapDispatchToProps
+)(TestFrame)
 
-export default TestFrame
+
+

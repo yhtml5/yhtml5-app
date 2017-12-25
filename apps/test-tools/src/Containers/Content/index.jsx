@@ -1,7 +1,7 @@
 import React from 'react';
 import connect from 'react-redux/es/connect/connect'
 import TabBarNav from '../TabBarNav/index';
-import Banner from '../Banner';
+import Home from '../Home';
 import TestFrame from '../TestFrame';
 import SettingList from '../SettingList';
 import Demo from '../Demo';
@@ -13,7 +13,7 @@ function Component(props) {
   let Content = null
   switch (selectedTab) {
     case 'home':
-      Content = Banner
+      Content = Home
       break;
     case 'view':
       Content = TestFrame
@@ -28,7 +28,7 @@ function Component(props) {
       Content = Demo
       break;
     default:
-      Content = Banner
+      Content = Home
       break;
   }
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import TabBarNav from '../Containers/TabBarNav';
-import Banner from '../Containers/Banner';
 import TestDashboard from '../Containers/TestDashboard';
 
 function Analysis(params) {
