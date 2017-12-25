@@ -8,10 +8,10 @@ const initialState = {
 const reduce = (state = initialState, action = {}) => {
   switch (action.type) {
     case APP_TEST_UPDATE_STATE:
-      console.log('\nAction', action)
+      process.env.NODE_ENV === "production" || console.log('\nAction', action)
       return { ...state, ...action.payload }
     case APP_TEST_TOGGLE_DASHBOARD:
-      console.log('\nAction', action)
+      process.env.NODE_ENV === "production" || console.log('\nAction', action)
       const visibility = action.payload
       let newVisibility;
       if (visibility === undefined) {
@@ -21,7 +21,7 @@ const reduce = (state = initialState, action = {}) => {
       }
       return { ...state, dashboardVisibility: newVisibility }
     default:
-      console.log('\nAction', action)
+      process.env.NODE_ENV === "production" || console.log('\nAction', action)
       return state
   }
 }

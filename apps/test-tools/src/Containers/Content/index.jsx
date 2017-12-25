@@ -34,9 +34,6 @@ function Component(props) {
 
   const isView = selectedTab === 'view'
 
-  console.warn('Content', {
-    selectedTab
-  })
   return (
     <div>
       {isView ? null : <Content />}

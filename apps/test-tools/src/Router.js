@@ -12,7 +12,6 @@ import TabBarNav from './Containers/TabBarNav/index.jsx';
 
 
 const App = () => {
-  // console.log(Store.getState())
   return (<Provider store={Store}>
     { /* ConnectedRouter will use the store from Provider automatically */}
     <ConnectedRouter history={history}>

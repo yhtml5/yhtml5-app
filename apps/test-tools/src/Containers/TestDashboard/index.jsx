@@ -51,7 +51,6 @@ function Component({
         swipeable={true}
         prerenderingSiblingsNumber={4}
         onChange={(tab, index) => task.tabChange({ tab, index })}
-      // onTabClick={(tab, index) => { console.log('onTabClick', index, tab); }}
       >
         <Eruda  {...ErudaProps} />
         <Vconsole {...VconsoleProps} />

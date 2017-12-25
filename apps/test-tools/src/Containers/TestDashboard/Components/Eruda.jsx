@@ -17,28 +17,28 @@ class Eruda extends React.Component {
     super(props)
     this.state = {}
     this.toggleEruda = this.toggleEruda.bind(this)
-    console.log('Eruda.constructor')
+    process.env.NODE_ENV === "production" || console.log('Eruda.constructor')
   }
   componentWillMount() {
-    console.log('Eruda.componentWillMount')
+    process.env.NODE_ENV === "production" || console.log('Eruda.componentWillMount')
   }
   componentDidMount() {
     window.APP.eruda = eruda
     if (this.props.page === 0) {
       eruda.show()
     }
-    console.log('Eruda.componentDidMount')
+    process.env.NODE_ENV === "production" || console.log('Eruda.componentDidMount')
   }
   shouldComponentUpdate(nextProps, nextState) {
     // const isSrcChange = this.state.src !== nextState.src
-    console.log('Eruda.shouldComponentUpdate')
+    process.env.NODE_ENV === "production" || console.log('Eruda.shouldComponentUpdate')
     return true
   }
   componentWillUpdate() {
-    console.log('Eruda.componentWillUpdate')
+    process.env.NODE_ENV === "production" || console.log('Eruda.componentWillUpdate')
   }
   componentDidUpdate() {
-    console.log('Eruda.componentDidUpdate')
+    process.env.NODE_ENV === "production" || console.log('Eruda.componentDidUpdate')
   }
   componentWillUnmount() {
     eruda.hide()
@@ -46,7 +46,7 @@ class Eruda extends React.Component {
     // }
     // eruda.destroy()
     // eruda = undefined
-    console.log('Eruda.componentWillUnmount')
+    process.env.NODE_ENV === "production" || console.log('Eruda.componentWillUnmount')
   }
   toggleEruda(bool) {
     if (this.props.page === 0) {
@@ -57,7 +57,7 @@ class Eruda extends React.Component {
   }
   render() {
     this.toggleEruda()
-    console.log('Eruda.render', this.props)
+    process.env.NODE_ENV === "production" || console.log('Eruda.render', this.props)
     return (
       <div></div>
     )

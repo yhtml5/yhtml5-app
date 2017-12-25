@@ -8,39 +8,39 @@ class Vconsole extends React.PureComponent {
     super(props)
     this.state = {}
     this.toggleVconsole = this.toggleVconsole.bind(this)
-    console.log('Vconsole.constructor')
+    process.env.NODE_ENV === "production" || console.log('Vconsole.constructor')
   }
   componentWillMount() {
-    console.log('Vconsole.componentWillMount')
+    process.env.NODE_ENV === "production" || console.log('Vconsole.componentWillMount')
   }
   componentDidMount() {
     window.APP.vConsole = vConsole
     if (this.props.page === 1) {
       vConsole.show()
     }
-    console.log('Vconsole.componentDidMount')
+    process.env.NODE_ENV === "production" || console.log('Vconsole.componentDidMount')
   }
   componentWillReceiveProps() {
-    console.log('Vconsole.componentWillReceiveProps')
+    process.env.NODE_ENV === "production" || console.log('Vconsole.componentWillReceiveProps')
   }
   // shouldComponentUpdate(nextProps, nextState) {
-  //   console.log('Vconsole.shouldComponentUpdate')
+  //   process.env.NODE_ENV === "production" || console.log('Vconsole.shouldComponentUpdate')
   //   return true
   // }
   componentWillUpdate() {
-    console.log('Vconsole.componentWillUpdate')
+    process.env.NODE_ENV === "production" || console.log('Vconsole.componentWillUpdate')
   }
   componentDidUpdate() {
-    console.log('Vconsole.componentDidUpdate')
+    process.env.NODE_ENV === "production" || console.log('Vconsole.componentDidUpdate')
   }
   componentWillUnmount() {
     vConsole.hide()
     // window.APP.vConsole.destroy()
     // window.APP.vConsole = undefined
-    console.log('Vconsole.componentWillUnmount')
+    process.env.NODE_ENV === "production" || console.log('Vconsole.componentWillUnmount')
   }
   componentDidCatch(error, info) {
-    console.log('Vconsole.componentDidCatch', error, info)
+    process.env.NODE_ENV === "production" || console.log('Vconsole.componentDidCatch', error, info)
   }
   toggleVconsole(bool) {
     if (this.props.page === 1) {
@@ -51,7 +51,7 @@ class Vconsole extends React.PureComponent {
   }
   render() {
     this.toggleVconsole()
-    console.log('Vconsole.render')
+    process.env.NODE_ENV === "production" || console.log('Vconsole.render')
     return (
       <div></div>
     )

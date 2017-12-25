@@ -6,10 +6,9 @@ const initialState = {
 const reduce = (state = initialState, action = {}) => {
   switch (action.type) {
     case 'App-TabBarNav-UpdateState':
-      console.log('\nAction', action)
+      process.env.NODE_ENV === "production" || console.log('\nAction', action)
       return { ...state, ...action.payload }
     default:
-      // console.log('\nAction', action)
       return state
   }
 }

@@ -6,10 +6,10 @@ import Store from '../../Redux/Store';
 const { dispatch, getState } = Store
 
 export const scanQrcode = () => {
-  console.log('scanQrcodeStart')
+  process.env.NODE_ENV === "production" || console.log('scanQrcodeStart')
   ap.scan(function (res) {
     ap.alert(res.code);
-    console.log('\nscanQrcodeSuccess', res)
+    process.env.NODE_ENV === "production" || console.log('\nscanQrcodeSuccess', res)
     const src = res.code || ''
     dispatch(UpdateSrc(src))
     dispatch(TabBarNavAction.updateState({

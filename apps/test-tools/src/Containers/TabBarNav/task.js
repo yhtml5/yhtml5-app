@@ -13,7 +13,7 @@ export const onPress = ({ selectedTab = '', path = '' }) => {
 
   dispatch(updateState({ selectedTab }))
 
-  console.log('\nonPress', {
+  process.env.NODE_ENV === "production" || console.log('\nonPress', {
     // oldPathname
   })
 }

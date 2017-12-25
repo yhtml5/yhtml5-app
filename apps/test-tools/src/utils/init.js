@@ -21,11 +21,11 @@ function createScript(src) {
   script.setAttribute("type", "text/javascript")
   script.src = src
   document.body.appendChild(script)
-  // console.log(script)
+  // process.env.NODE_ENV === "production" || console.log(script)
 }
 // 判断支付宝引入
 createScript('https://a.alipayobjects.com/g/h5-lib/alipayjsapi/3.0.6/alipayjsapi.inc.min.js')
 
-// console.log('done!')
+// process.env.NODE_ENV === "production" || console.log('done!')
 
 export default init

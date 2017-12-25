@@ -34,12 +34,12 @@ window.Store = Store
 
 
 // 打印初始状态
-console.log(Store.getState())
+process.env.NODE_ENV === "production" || console.log(Store.getState())
 
 // 每次 state 更新时，打印日志
 // 注意 subscribe() 返回一个函数用来注销监听器
 // let unsubscribe = Store.subscribe(() =>
-// console.log('\nnew state',Store.getState())
+// process.env.NODE_ENV === "production" || console.log('\nnew state',Store.getState())
 // )
 
 

@@ -12,7 +12,7 @@ ReactDOM.render(
 
 init()
 
-console.log('\nindex.js', {
+process.env.NODE_ENV === "production" || console.log('\nindex.js', {
   process: process,
   'process.env': process.env,
 })

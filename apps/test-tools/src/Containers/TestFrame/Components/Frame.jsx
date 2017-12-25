@@ -12,24 +12,24 @@ class TestFrame extends React.Component {
     this.iFrameHeight = this.iFrameHeight.bind(this)
   }
   componentDidMount() {
-    console.log('TestFrame.componentDidMount', this.state)
+    process.env.NODE_ENV === "production" || console.log('TestFrame.componentDidMount', this.state)
   }
   // shouldComponentUpdate(nextProps, nextState) {
   //   const isSrcChange = this.state.src !== nextState.src
-  //   console.warn('shouldComponentUpdate',isSrcChange)
+  //   process.env.NODE_ENV === "production" || console.warn('shouldComponentUpdate',isSrcChange)
   //   return false
   // }
   componentWillUpdate() {
-    console.log('TestFrame.componentWillUpdate')
+    process.env.NODE_ENV === "production" || console.log('TestFrame.componentWillUpdate')
   }
   componentDidUpdate() {
-    console.log('TestFrame.componentDidUpdate')
+    process.env.NODE_ENV === "production" || console.log('TestFrame.componentDidUpdate')
   }
   componentWillUnmount() {
-    console.log('TestFrame.componentWillUnmount')
+    process.env.NODE_ENV === "production" || console.log('TestFrame.componentWillUnmount')
   }
   iFrameHeight() {
-    // console.log('iFrameHeight')
+    // process.env.NODE_ENV === "production" || console.log('iFrameHeight')
     // var ifm = document.getElementById("iframepage");
     // var subWeb = document.frames ? document.frames["iframepage"].document : ifm.contentDocument;
     // if (ifm != null && subWeb != null) {
@@ -39,7 +39,7 @@ class TestFrame extends React.Component {
   }
 
   render() {
-    console.log('TestFrame.render', this.props)
+    process.env.NODE_ENV === "production" || console.log('TestFrame.render', this.props)
 
     return (
       <div className={styles.content}>

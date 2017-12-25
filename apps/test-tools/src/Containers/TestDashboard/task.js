@@ -9,7 +9,7 @@ export const toggleTestDashboard = ({ }) => {
   // dashboardVisibility ? vConsole.hide() : vConsole.show()
 
   dispatch(toggleDashboard())
-  console.log('\ntoggleTestDashboard')
+  process.env.NODE_ENV === "production" || console.log('\ntoggleTestDashboard')
 }
 
 export const goToHtml5Test = () => {
@@ -20,7 +20,7 @@ export const tabChange = ({
   index = '',
   tab = ''
 }) => {
-  console.log('onChange', index, tab);
+  process.env.NODE_ENV === "production" || console.log('onChange', index, tab);
   dispatch(updateState({
     page: index
   }))

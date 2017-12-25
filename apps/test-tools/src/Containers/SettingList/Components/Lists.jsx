@@ -15,7 +15,7 @@ let Lists = ({ form }) => {
             initialValue: true,
             valuePropName: 'checked',
           }) }
-          onClick={(checked) => { console.log(checked); }}
+          onClick={(checked) => {  }}
         />}
       >vConsole</List.Item>
       <List.Item
@@ -24,7 +24,7 @@ let Lists = ({ form }) => {
             initialValue: true,
             valuePropName: 'checked',
           }) }
-          onClick={(checked) => { console.log(checked); }}
+          onClick={(checked) => {  }}
         />}
       >eruda</List.Item>
       <List.Item
