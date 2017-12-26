@@ -42,8 +42,9 @@ class TestFrame extends React.Component {
     process.env.NODE_ENV === "production" || console.log('TestFrame.render', this.props)
 
     return (
-      <div className={styles.content}>
+      <div id='testFrame' className={styles.content}>
         <iframe
+          // id="iframe"
           src={this.props.src}
           // width='400 !important'
           // height='600'

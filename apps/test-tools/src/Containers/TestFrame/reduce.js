@@ -1,8 +1,9 @@
 import { APP_TEST_UPDATE_STATE, APP_TEST_TOGGLE_DASHBOARD, APP_TEST_UPDATE_SRC } from './action';
 
 const initialState = {
-  // src: '',
-  src: '//baidu.com',
+  src: '',
+  // src: 'http://10.1.133.60:2001/',
+  // src: '//baidu.com',
   // src: 'https://2df.me/PQZcj-jqsaz4', // 线上外卖码
   // src: 'https://2df.me/nR', // 线上店码
   // src: 'https://2df.me/PHshP-7bhkPn', // 线上桌码

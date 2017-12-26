@@ -31,7 +31,7 @@ const config = {
   isAnalyze: true,
   analyzerPort: 2002,
   envVar: envVar,
-  outputPath: outputPath,
+  outputPath: 'dist/',
   // host: './',
   entry: 'src/index.js',
   distributePort: 9993,

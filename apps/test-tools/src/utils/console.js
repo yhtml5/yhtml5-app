@@ -1,3 +1,9 @@
+/**
+ *
+ *  https://stackoverflow.com/questions/16259711/how-can-i-override-console-log-and-append-a-word-at-the-beginning-of-the-outpu
+ */
+
+
 let filter = window.localStorage.debug || '';
 let enable = !!filter
 let count = 0;
