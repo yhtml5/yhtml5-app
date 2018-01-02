@@ -2,6 +2,7 @@
 import tabBarNav from '../Containers/TabBarNav/reduce';
 import testDashboard from '../Containers/TestDashboard/reduce';
 import testFrame from '../Containers/TestFrame/reduce';
+import cases from '../Containers/Cases/reduce';
 
 /**
  *
@@ -14,5 +15,6 @@ import testFrame from '../Containers/TestFrame/reduce';
 export default {
   tabBarNav,
   testDashboard,
-  testFrame
+  testFrame,
+  cases
 }

@@ -6,6 +6,7 @@ import history from './Redux/history';
 import Store from './Redux/Store';
 import Home from './Routes/Home.jsx';
 import TabBarNav from './Containers/TabBarNav/index.jsx';
+import Cases from './Routes/Cases.jsx';
 // import Demo from './Routes/Demo.jsx';
 // import Analysis from './Routes/Analysis.jsx';
 // import Setting from './Routes/Setting.jsx';
@@ -17,6 +18,7 @@ const App = () => {
     <ConnectedRouter history={history}>
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route path="/cases" component={Cases} />
         {/* <Route path="/analysis" component={Analysis} />
         <Route path="/demo" component={Demo} />
         <Route path="/setting" component={Setting} /> */}

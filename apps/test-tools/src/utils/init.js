@@ -10,7 +10,7 @@ function init(params) {
   dealHtmlFontSize({ window: window, designWidth: 375 })
 }
 
-
+`javascript:(function () { var script = document.createElement('script'); script.src="http://eruda.liriliri.io/eruda.min.js"; document.body.appendChild(script); script.onload = function () { eruda.init() } })();`
 
 // if(!window.Promise) {
 //   document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"'+'>'+'<'+'/'+'script>');
