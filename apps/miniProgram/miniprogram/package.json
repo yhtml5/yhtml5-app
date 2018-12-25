@@ -1,0 +1,13 @@
+{
+  "name": "miniprogram",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "i2": "npm install --production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yhtml5 <1417376255@qq.com>",
+  "license": "MIT",
+  "dependencies": {}
+}
