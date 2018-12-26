@@ -1,0 +1,30 @@
+<!--pages/chooseLib/chooseLib.wxml-->
+<view class="container">
+  <!-- <view>用户信息</view> -->
+
+  <view class='white'></view>
+
+  <view class="navigator-group">
+    <view class="money">余额: 9999.99元</view>
+    <block wx:for="{{list}}" wx:key="*item">
+      <navigator url="pages/{{item.url}}/{{item.url}}" class="navigator">
+        <view class="navigator-text">{{item.name}}</view>
+        <view class="navigator-arrow"></view>
+      </navigator>
+    </block>
+  </view>
+
+  <view class='white'></view>
+
+  <view class="pay">
+    <button
+      type="primary"
+      size="{{primarySize}}"
+      loading="{{loading}}"
+      plain="{{plain}}"
+      disabled="{{disabled}}"
+      bindtap="pay"
+    > 充值 </button>
+  </view>
+</view>
+
