@@ -1,7 +1,8 @@
 # custom
-logs/*
-/**/node_modules/
-/**/bower_components/
+logs
+node_modules
+bower_components
+study/demo
 npm-debug.log
 
 tmp
