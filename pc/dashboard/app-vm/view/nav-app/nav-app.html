@@ -1,0 +1,61 @@
+<nav class="navbar y-navbar-info navbar-fixed-top" ng-controller="yhtml5.nav" y-close="card">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+            <a class="navbar-brand y-header-logo" ui-sref="dashboard">
+                <img src="../../components/nav/logo-sdk.png?__inline">
+            </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse y-mt15 y-dashboard-header-navbar" id="bs-example-navbar-collapse-1">
+            <ul class="breadcrumb hidden-xs y-mb10" role="tablist">
+                <li class="active">
+                    <a ui-sref="dashboard">
+                        <i class="iconfont y-dashboard-iconfont-home">&#xe606;</i>首页
+                    </a>
+                </li>
+                <li>
+                    <span uib-dropdown on-toggle="toggled(open)">
+                        <a href id="simple-dropdown" uib-dropdown-toggle>
+                            <span class="y-ellipsis">应用&nbsp;</span><b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+                        <li ng-repeat="choice in items">
+                            <a href="">{{choice}}</a>
+                        </li>
+                    </ul>
+                    </span>
+                </li>
+                <li>
+                    <span uib-dropdown on-toggle="toggled(open)">
+                        <a href id="simple-dropdown" uib-dropdown-toggle>
+                            <span class="y-ellipsis">功能&nbsp;</span><b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                        <li role="menuitem"><a ui-sref="payment">支付</a></li>
+                        <li role="menuitem"><a ui-sref="###">分析</a></li>
+                        <li role="menuitem"><a ui-sref="appsetting.info">设置</a></li>
+                    </ul>
+                    </span>
+                </li>
+            </ul>
+            <a class="nav navbar-brand navbar-right y-header-close" y-open="card" href="#" onclick="javascript:return false;">
+                <i class="iconfont">&#xe608;</i>
+            </a>
+            <form class="navbar-form pull-right" role="search" action="" method="">
+                <link rel="import" href="../../components/search-order/search-order.html?__inline">
+            </form>
+            <link rel="import" href="../../components/userPanel/userPanel.html?__inline">
+
+
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>

@@ -1,0 +1,81 @@
+<link rel="import" href="../components/head/index.html?__inline">
+
+<body>
+<link rel="import" href="../components/nav/nav.html?__inline">
+<div class="js-header-nav-active">0</div>
+<div class="container fw-pay-info fw-mh500">
+    <div id="fw-pay-game" class="panel panel-default js-pay-info">
+        <div class="panel-heading">
+            <h3 class="pull-left">植物大战僵尸充值</h3>
+            <h3 class="fw-pay-info-price">需支付：<b class="y-cl-ff5151">￥88元</b></h3>
+            <div class="clearfix"></div>
+        </div>
+        <div class="panel-body">
+            <form class="bs-example bs-example-form" role="form">
+                <div class="input-group">
+                    <span class="input-group-addon">游戏账号</span>
+                    <input type="text" class="form-control" placeholder="请输入您的账号...">
+                </div>
+                <br/>
+                <div class="input-group">
+                    <span class="input-group-addon">游戏密码</span>
+                    <input type="text" class="form-control" placeholder="请输入您的密码...">
+                </div>
+                <br>
+                <div class="input-group">
+                    <span class="input-group-addon">确认密码</span>
+                    <input type="text" class="form-control" placeholder="请再次确认密码...">
+                </div>
+                <br/>
+                <div class="input-group">
+                    <span class="input-group-addon">区域名称</span>
+                    <input type="text" class="form-control" placeholder="请输入游戏区服...">
+                </div>
+                <br>
+                <p class="y-cl-ff5151">重要提醒:卖家通过登录帐号完成内充，期间需要提供正确密码 </p>
+            </form>
+        </div>
+        <div class="panel-footer">
+            <button class="btn btn-default pull-left">&larr;上一步</button>
+            <button class="btn btn-danger pull-right js-goto-detail">提交订单</button>
+        </div>
+    </div>
+    <div class="panel panel-default js-pay-detail y-hide">
+        <div class="panel-heading">
+            <h3><strong>商品信息</strong></h3>
+        </div>
+        <div class="panel-body">
+            <div class="center-block">
+                <p>商品名称：<span>植物大战僵尸100元充值</span></p>
+                <p>商品价格：<span class="fw-font-price">¥99.00</span></p>
+                <p>游戏账号：<span>kyle</span></p>
+                <p>游戏密码：<span>123456</span></p>
+                <p>区服名称：<span>华东一区</span></p>
+            </div>
+            <hr/>
+            <h3>付款方式</h3>
+            <ul id="" class="nav nav-pills">
+                <li class="active"><a class="y-bd-1-d9524e" href="#balance" data-toggle="tab">余额支付</a></li>
+                <li><a class="y-bd-1-d9524e" href="#alipay" data-toggle="tab">支付宝</a></li>
+            </ul>
+            <div id="" class="tab-content">
+                <div class="tab-pane fade in active" id="balance">
+                    <h3>余额：<span class="fw-font-price">¥99.00</span></h3>
+                </div>
+                <div class="tab-pane fade" id="alipay">
+                    <br/>
+                    <div class="">
+                        <input type="checkbox" checked="checked">
+                        <img src="http://static.jubaobar.cn/51pay/res/img/logo/alipaylogo1.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <button class="btn btn-default js-goto-info">&larr;上一步</button>
+            <button class="btn btn-danger pull-right">去付款</button>
+        </div>
+    </div>
+</div>
+<link rel="import" href="footer/index.html?__inline">
+<link rel="import" href="../components/required/index.html?__inline">

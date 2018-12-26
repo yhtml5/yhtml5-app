@@ -1,0 +1,22 @@
+<link rel="import" href="components/head/index.html?__inline">
+<!--[if lte IE 8]>
+<script src="../../bower_components/es5-shim/es5-shim.js"></script>
+<script src="../../bower_components/JSON-js/json2.js"></script>
+<script src="../../bower_components/html5shiv/dist/html5shiv.min.js"></script>
+<div class="text-center y-mt80">
+    <h2 class="" style="display: inline">hi,您使用的浏览器版本过低</h2>
+    <h5 class="y-mt20">请<a href="http://browsehappy.com/">升级您的浏览器</a>获取更好的体验</h5>
+</div>
+<link rel="import" href="view/header/index.html?__inline">
+<link rel="import" href="view/nav/transparent.html?__inline">
+<link rel="import" href="view/sidebar/qq.html?__inline">
+<link rel="import" href="view/display/index.html?__inline">
+<link rel="import" href="view/footer/index.html?__inline">
+<![endif]-->
+
+<div ui-view="nav"></div>
+<header ui-view="header"></header>
+<div ui-view="content"></div>
+<div ui-view="sidebar"></div>
+<footer ui-view="footer" class="y-footer"></footer>
+<link rel="import" href="components/required/index.html?__inline">

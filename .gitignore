@@ -4,6 +4,8 @@ node_modules
 bower_components
 study/demo
 npm-debug.log
+dist
+production
 
 tmp
 .DS_Store

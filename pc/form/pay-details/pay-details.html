@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="table.css" />
+		<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.css" />
+	</head>
+
+	<body>
+		<!--test-->
+		<div class="y-div-btn">
+			<button id="y-click" class="y-click">查看详情1</button>
+			<button id="y-click2">查看详情2</button>
+		</div>
+
+		<!--放在原来弹层下面-->
+		<div id="y-table-div" class="y-table-div">
+			<table id="y-table" class="y-tac">
+				<tr id="y-tr-blue">
+					<th colspan="4" id="y-th-blue">交易详情
+						<i class="fa fa-lg fa-times y-fr" onmouseover="this.style.color='#fff82c';" onmouseout="this.style.color='#ffffff';"></i></th>
+				</tr>
+				<tr id="y-tr-blue2" onmouseover="this.style.backgroundColor='#dbeef9';" onmouseout="this.style.backgroundColor='#fbfbfb';">
+					<td id="y-td" class="y-tar">创建时间：</td>
+					<td id="y-td" class="y-tal">2016-01-18&nbsp;&nbsp;18:22:11</td>
+					<td id="y-td" class="y-tar">完成时间：</td>
+					<td id="y-td" class="y-tal">2016-01-18&nbsp;&nbsp;18:22:49</td>
+				</tr>
+				<tr id="y-tr-blue2" onmouseover="this.style.backgroundColor='#dbeef9';" onmouseout="this.style.backgroundColor='#f6f6f6';">
+					<td id="y-td" class="y-tar">流水号：</td>
+					<td id="y-td" class="y-tal">16011818222098471141</td>
+					<td id="y-td" class="y-tar">商户订单号：</td>
+					<td id="y-td" class="y-tal">----</td>
+				</tr>
+				<tr id="y-tr-blue2" onmouseover="this.style.backgroundColor='#dbeef9';" onmouseout="this.style.backgroundColor='#fbfbfb';">
+					<td id="y-td" class="y-tar">支付状态：</td>
+					<td id="y-td" class="y-tal">支付成功</td>
+					<td id="y-td" class="y-tar">交易类型：</td>
+					<td id="y-td" class="y-tal">提现</td>
+				</tr>
+				<tr id="y-tr-blue2" onmouseover="this.style.backgroundColor='#dbeef9';" onmouseout="this.style.backgroundColor='#f6f6f6';">
+					<td id="y-td" class="y-tar">收款方：</td>
+					<td id="y-td" class="y-tal">张三</td>
+					<td id="y-td" class="y-tar">支付方式：</td>
+					<td id="y-td" class="y-tal">----</td>
+				</tr>
+				<tr id="y-tr-blue2" onmouseover="this.style.backgroundColor='#dbeef9';" onmouseout="this.style.backgroundColor='#fbfbfb';">
+					<td id="y-td" class="y-tar">提现金额：</td>
+					<td id="y-td" class="y-tal" colspan="3">-1,000.00</td>
+				</tr>
+				<tr id="y-tr-blue2" onmouseover="this.style.backgroundColor='#dbeef9';" onmouseout="this.style.backgroundColor='#f6f6f6';">
+					<td id="y-td" class="y-tar">备注：</td>
+					<td id="y-td" class="y-tal" colspan="3">显示退款原因（数据来自于OA后台人工录入），如果为空，则用“----”表示</td>
+
+				</tr>
+			</table>
+		</div>
+	</body>
+
+	<!--链接为自己jquery地址-->
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script>
+		//原生js写法，github预览不允许js执行
+		window.onload = function() {
+			var btn2 = document.getElementById('y-click2');
+			var div = document.getElementById("y-table-div")
+			btn2.onclick = function() {
+				if (div.style.display == 'block') { // == 判断div.display是否为显示
+					div.style.display = 'none'; //= 赋值也可了解成改变
+				} else {
+					div.style.display = 'block';
+				}
+			}
+		};
+		//jquery
+		$(document).ready(function() {
+			$('.y-click').click(function() {
+				$('.y-table-div').toggle();
+			});
+			$('.fa-times').click(function() {
+				$('.y-table-div').hide();
+			});
+		});
+	</script>
+
+</html>

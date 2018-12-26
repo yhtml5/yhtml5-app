@@ -1,0 +1,28 @@
+/*
+ * @require ../head/head.css
+ */
+
+/* help-center style
+ * ================= */
+
+.y-help-center .list-group {
+	text-align: center;
+	width: 80%;
+	margin: 10px auto 20px auto;
+	max-width: 320px;
+}
+
+.y-help-center .list-group-item {
+	border-radius: 4px;
+	border-radius: 4px;
+	margin-bottom: 18px;
+	padding: 6px 16px;
+}
+
+.y-help-center .list-group-item i {
+	font-size: 30px;
+}
+
+.y-help-center .col-xs-9 {
+	line-height: 42px;
+}
