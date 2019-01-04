@@ -6,6 +6,7 @@ study/demo
 npm-debug.log
 dist
 production
+ignore
 
 tmp
 .DS_Store
