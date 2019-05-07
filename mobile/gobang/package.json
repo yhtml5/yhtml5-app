@@ -65,6 +65,7 @@
     "npm": ">= 3.0.0"
   },
   "scripts": {
+    "start":"npm run dev",
     "dev": "clear && node ./build/dev.server.js",
     "dev-debug": "clear && webpack-dashboard -- node ./build/dev.server.js",
     "build": "clear && node ./build/build.js",

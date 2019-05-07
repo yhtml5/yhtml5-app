@@ -1,22 +1,34 @@
-import { clearChessman } from '../Chessman/canvas'
-import { createChessboard, drawChessBoard, clearChessBoard } from '../Chessboard/index'
+// import { clearChessman } from '../Chessman/canvas'
+import {
+  // createChessboard,
+  drawChessBoard,
+  clearChessBoard,
+} from '../Chessboard/index'
 
 function addDashboardListener(state) {
-  document.getElementById('dashboardModel').addEventListener("click", alertAd)
-  document.getElementById('dashboardStart').addEventListener("click", () => resetChessPositons(state))
-  document.getElementById('dashboardGiveup').addEventListener("click", alertAd)
-  document.getElementById('dashboardHistory').addEventListener("click", alertAd)
-  document.getElementById('dashboardUndo').addEventListener("click", alertAd)
-  document.getElementById('dashboardRedo').addEventListener("click", alertAd)
+  document.getElementById('dashboard').addEventListener("click", event => {
+    const { id = '' } = event.target
+    if (id === 'dashboardStart') {
+      resetChessPositons(state)
+    } else {
+      alertAd()
+    }
+  })
+  // document.getElementById('dashboardStart').addEventListener("click", () => resetChessPositons(state))
+  // document.getElementById('dashboardModel').addEventListener("click", alertAd)
+  // document.getElementById('dashboardGiveup').addEventListener("click", alertAd)
+  // document.getElementById('dashboardHistory').addEventListener("click", alertAd)
+  // document.getElementById('dashboardUndo').addEventListener("click", alertAd)
+  // document.getElementById('dashboardRedo').addEventListener("click", alertAd)
   // document.getElementById('dashboardBig').addEventListener("click", alertAd)
   // document.getElementById('dashboardSmall').addEventListener("click", alertAd)
   // document.getElementById('dashboardOther').addEventListener("click", alertAd)
 }
 
-function alertAd(params) {
-  const r = confirm('检测您未安装王者荣耀, 请下载以解锁更多玩法!')
+function alertAd() {
+  const r = confirm('关注XXX公众号, 解锁更多玩法!')
   if (r) {
-    window.location.href = 'http://pvp.qq.com/'
+    window.location.href = 'https://github.com/yhtml5'
   }
 }
 
