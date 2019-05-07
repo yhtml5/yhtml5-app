@@ -5,6 +5,7 @@ bower_components
 study/demo
 npm-debug.log
 dist
+!mobile/gobang/dist
 production
 ignore
 
@@ -15,6 +16,7 @@ tmp
 .test.html.swp
 .test.html.swo
 !.gitkeep
+.tea
 
 
 # Windows image file caches
