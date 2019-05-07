@@ -1,6 +1,7 @@
 import state from '../../state'
 
 function createChessboard(params) {
+  // console.log(state)
   const body = document.getElementById('body')
   const canvas = document.createElement('canvas')
   const text = document.createTextNode("Your browser does not support Html5 canvas, please change a browser.")

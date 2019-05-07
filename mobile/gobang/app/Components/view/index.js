@@ -1,8 +1,8 @@
 const initView = (state) => {
   if (document.body.clientWidth < 500) {
-    setChessboard(state, 300)
+    setChessboard(state, 400)
   } else {
-    setChessboard(state, 450)
+    setChessboard(state, 500)
   }
 }
 
