@@ -70,6 +70,7 @@
     "dev-debug": "clear && webpack-dashboard -- node ./build/dev.server.js",
     "build": "clear && node ./build/build.js",
     "build-debug": "clear && webpack-dashboard -- node ./build/build.debug.js",
+    "deploy": "sh ./scripts/deploy.sh",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --ext .js,.jsx ./app/Containers",
     "precommit": "npm run test",

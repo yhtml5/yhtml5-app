@@ -34,7 +34,8 @@ module.exports = function (env) {
     output: {
       filename: 'static/[name].js',
       chunkFilename: `static/[name]-[id]${(env === 'production') ? '.[chunkhash:6]' : ''}.js`,
-      path: path.resolve(__dirname, `../dist/${process.env.NODE_ENV === 'production' ? version : ''}`),
+      path: path.resolve(__dirname, `../dist/`),
+      // path: path.resolve(__dirname, `../dist/${process.env.NODE_ENV === 'production' ? version : ''}`),
     },
     module: {
       rules: [

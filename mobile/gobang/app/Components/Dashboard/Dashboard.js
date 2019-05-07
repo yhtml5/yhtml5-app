@@ -26,10 +26,12 @@ function addDashboardListener(state) {
 }
 
 function alertAd() {
-  const r = confirm('关注XXX公众号, 解锁更多玩法!')
-  if (r) {
-    window.location.href = 'https://github.com/yhtml5'
-  }
+  const text = '关注XXX公众号, 解锁更多玩法!'
+  alert(text)
+  // const r = confirm(text)
+  // if (r) {
+  //   window.location.href = 'https://github.com/yhtml5'
+  // }
 }
 
 function resetChessPositons(state) {
