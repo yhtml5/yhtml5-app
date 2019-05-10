@@ -1,8 +1,0 @@
-<navigator
-    id="nav"
-    url="plugin://hello-plugin/hello-page"
->plugin page</navigator>
-
-<button id="add" bindtap="addItem">Add item</button>
-
-<hello-list items="{{ items }}" />
