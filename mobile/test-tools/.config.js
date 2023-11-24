@@ -15,7 +15,7 @@ const envVar = {
     customNodeEnv: 'development',
     fileBaseUrl: '../../file',
     shareApiBaeUrl: 'http://api.l.whereask.com',
-    gatewayApiBase: '//gateway.2dfire-daily.com',
+    gatewayApiBase: '//gateway.domain.com',
     gatewayApiEnv: '13cccf8b7b58467da82163d3cf540ef7'
   },
   production: {},
